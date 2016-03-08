@@ -1,0 +1,5 @@
+2 files required per university
+
+1. all sensors in a buildings, how to parse the metadata of those sensors, and a file capturing every relationship within that building (e.g which temp sensor is connected to which setpoint, etc).
+2. a file describing the extent to which the building's sensors can be represented in haystack.
+

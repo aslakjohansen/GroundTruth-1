@@ -1,0 +1,11 @@
+Name of building : Soda Hall
+Number of Sensors : 1586
+
+< Format of *_MetadataParseKey file>
+
+Sensor Tag => List ( [tag substring] -> [haystack-ish key] )
+
+< Format of *_relationships file>
+
+Entities (room, zone, equipment, sensors):
+description and relationships to other sensors, equipment
