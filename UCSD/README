@@ -5,18 +5,30 @@ We provide both the native information obtained from BACnet and ground truth inf
 The file consists of a list of points in a building. The columns indicate different metadata attributes.
 
 BACnet Device ID: The address of middlebox in the BACnet network. In our university, buildings can be associated with 1 to 8 middleboxes. A middlebox device can contain information of approximately 2000 points.
+
 BACnet Object Type: The data type assigned to a point by BACnet. These indicate both the data type as well as if the point is an input (sensor) or output (actuator/configuation parameter).
+
 BACnet Object ID: The ID assigned by BACnet to each point in the middlebox device
 Unique Identifier: We concatenate BACnet Device ID, Object Type and Object ID to obtain a unique ID for every point.
+
 BACnet Name: The name field in BACnet object
+
 Johnson Controls Name: A proprietary field in BACnet object used by UCSD vendor Johnson Controls
+
 BACnet Description: A generic description field inside BACnet object. Our building vendors typically describe the type of point in this field.
+
 BACnet Unit: Unit field in BACnet object. Each number indicates a unique unit such as %, kW, etc.
+
 Ground Truth Point Type: Our manually interpreted ground point type from the metadata available.
+
 Point Ref: Some points are provided references such as PID 1, Temperature 25. We assign this to Point Ref.
+
 Location: Location of equipment. Typically room numbers in the building.
+
 Equipment Type: Our manually interpreted equipment type from metadata. This field tries to include equipment which might be nested together. For example, an AHU has supply and return fans. We use Equipment Subsystems to express this hierarchy.
+
 Equipment Ref: Number assigned to equipment. If there are two supply fans, their corresponding references may be 1 and 2.
+
 Equipment Subsystem: The hierarchical relationship between equipment. For example, AHU contains supply and return fans.
 Building: Building name. There are a few spurious points which may belong to other buildings.
 
