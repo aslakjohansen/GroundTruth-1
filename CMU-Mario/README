@@ -1,1 +1,7 @@
-'CMU_GHC.csv' contains the original BAS tags and renamed Haystack tags. The tags are used in the Gates Center for Computer Science and Hillman Center for Future Technology, which is a 217,000 sq.ft. facility with nine floors, built in 2009 at Carnegie Mellon University, Pittsburgh, Pennsylvania, USA. It contains approximately 310 offices, 11 conference rooms, 32 laboratories and a number of other spaces.
+'CMU_GHC.csv' contains the original BAS tags, point types and renamed Haystack tags. 
+
+These BAS tags are used in the Gates Center for Computer Science and Hillman Center for Future Technology, which is a 217,000 sq.ft. facility with nine floors, built in 2009 at Carnegie Mellon University, Pittsburgh, Pennsylvania, USA. It contains approximately 310 offices, 11 conference rooms, 32 laboratories and a number of other spaces.
+
+Point types are extracted from the last suffix part of the BAS tags.
+
+Haystack tags are generated based on the point types.
