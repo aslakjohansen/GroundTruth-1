@@ -3,3 +3,4 @@ We are experimenting with JSON-LD format (http://json-ld.org) for representing b
 In our representation, we have used tags defined in Project Haystack (http://project-haystack.org/tag/) as much as possible. We have also referred to BACnet Ontology standard (http://bacowl.sourceforge.net/) for representing some of the native BACnet information available to us. When Haystack tags were insufficient to describe metadata of interest, we created our own tags which are defined in ucsd-generated-tags.jsonld. 
 
 In the current jsonld file, we have only represented VAV points in EBU3B building at UCSD. However, these can be extended to all points and equipment in HVAC.
+
