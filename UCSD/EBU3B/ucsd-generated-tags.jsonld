@@ -1,0 +1,57 @@
+#UCSD Generated Tags to Augment Haystack Tags
+{
+	"@context":{
+		"xsd":"http://www.w3.org/2001/XMLSchema#"
+	},
+
+
+	"pointType": {
+		"description":"Can be one of sensor, actuator or setpoint. Haystack does not specify hierarchy between point and point types."
+	},
+	"operation": {
+		"description":"Specifies tags related operation of equipment. For example, a VAV can be of type hotWaterReheat."
+	},
+	"ductType":{
+		"description":"The type of ducts being used by the HVAC equipment. These could be singleDuct, dualDuct."
+	},
+	"location":{
+		"description":"Specifies location within the building. Typically breaks down to floor, room."
+	},
+	"floor":{
+		"description":"Floor of a building. Can be roof, basement or numeric values."
+	},
+	"room":{
+		"description":"Room number in a building. Is of type string to account for room numbers like A340",
+		"@type":"xsd:string"
+	},
+	"roomList":{
+		"description":"List of rooms in a building."
+	},
+	"zoneCoverage":{
+		"description":"Portion of building covered by an HVAC zone. Typically, list of rooms."
+	},
+	"zoneDelivery":{
+		"description":"The type of delivery mechanism used by AHU."
+	},
+	"containsPoints":{
+		"description":"List of points attributed to an equipment."
+	},
+	"containsEquip":{
+		"description":"List of equipment attributed to an equipment. Used for hierarchical representation of the system"
+	},
+	"number": {
+		"description":"Data type used by Haystack for representing integer and floating point numbers. Associated with Haystack tag *number*."
+	},
+	"markers": {
+		"description":"Haystack term associated with stand-alone tags as opposed to name-value pairs. It represents a type or is-a relationship. E.g. effective, min, max."
+	},
+	"what": {
+		"description": "Haystack term associated with points that describes the entity being measured/controlled. Values can be air, water."
+	},
+	"where": {
+		"description": "Haystack term associated with points that describe the point of measurement. Values can be discharge, return, exhaust, zone."
+	},
+	"measurement":{
+		"description": "Haystack term used for quantity of measurement. E.g. temp, pressure."
+	}
+}
