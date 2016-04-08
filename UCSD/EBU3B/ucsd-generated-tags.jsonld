@@ -3,8 +3,6 @@
 	"@context":{
 		"xsd":"http://www.w3.org/2001/XMLSchema#"
 	},
-
-
 	"pointType": {
 		"description":"Can be one of sensor, actuator or setpoint. Haystack does not specify hierarchy between point and point types."
 	},
@@ -39,19 +37,34 @@
 	"containsEquip":{
 		"description":"List of equipment attributed to an equipment. Used for hierarchical representation of the system"
 	},
-	"number": {
-		"description":"Data type used by Haystack for representing integer and floating point numbers. Associated with Haystack tag *number*."
+	"thermostat":{
+		"description": ""
 	},
-	"markers": {
-		"description":"Haystack term associated with stand-alone tags as opposed to name-value pairs. It represents a type or is-a relationship. E.g. effective, min, max."
+	"economizer":{
+		"description": ""
 	},
-	"what": {
-		"description": "Haystack term associated with points that describes the entity being measured/controlled. Values can be air, water."
+	"rate":{
+		"description": "A type of measurement. E.g., 20% or 100%. Mostly used for command or sp."
 	},
-	"where": {
-		"description": "Haystack term associated with points that describe the point of measurement. Values can be discharge, return, exhaust, zone."
+	"maintenance":{
+		"description": ""
 	},
-	"measurement":{
-		"description": "Haystack term used for quantity of measurement. E.g. temp, pressure."
+	"dc":{
+		"description": ""
+	},
+	"alarm":{
+		"description": ""
+	},
+	"pid":{
+		"description": ""
+	},
+	"motor":{
+		"description": ""
+	",
+	"period":{
+		"description": "Period, but it does not have to be periodical. 'Time' can be used, but confusing."
+	},
+	"drive":{
+		"description": ""
 	}
 }
