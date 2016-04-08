@@ -1,0 +1,15 @@
+[
+  {
+    "display_name": "OAT",
+    "ref_id": "uuid",
+    "asset_ref": "asset_uuid",
+    "loc_ref": "loc_uuid",
+    "category": "valve",
+    "functionality": "outside air temperature",
+    "acronym": "OAT",
+    "value": "define legitimate range of values",
+    "unit": "Fahrenheit",
+    "IOType": "AI",
+    "other": "..."
+  }
+]

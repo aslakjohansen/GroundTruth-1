@@ -1,0 +1,35 @@
+{
+  "Building": {
+    "building_meta": "on hold (building description, consruction year etc.)",
+    "ref_id": "uuid",
+    "structure": {
+      "Floor1": {
+        "floor_meta": "on hold (floor map, description, etc.)",
+        "ref_id": "uuid",
+        "structure": [
+          {
+            "zone": "102",
+            "zone_meta": "classroom",
+            "ref_id": "uuid"
+          },
+          {
+            "zone": "113",
+            "zone-meta": "office",
+            "ref_id": "uuid"
+          }
+        ]
+      },
+      "Floor2": {
+        "floor_meta": "on hold (floor map, description, etc.)",
+        "ref_id": "uuid",
+        "structure": [
+          {
+            "zone": "212",
+            "zone_meta": "auditorium",
+            "ref_id": "uuid"
+          }
+        ]
+      }
+    }
+  }
+}

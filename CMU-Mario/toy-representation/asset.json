@@ -1,0 +1,42 @@
+{
+  "AHU": {
+    "AHU_meta": "on hold (ahu description, consruction year etc.)",
+    "ref_id": "uuid",
+    "loc_ref": "uuid",
+    "fun_ref": [
+      {
+        "id": "uuid_1",
+        "notes": "supplying air to the VAV"
+      },
+      {
+        "id": "uuid_2",
+        "notes": "supplying air to the zone"
+      }
+    ],
+    "point_ref": ["uuid1","uuid2"]
+  },
+  "VAV": {
+    "VAV_meta": "on hold",
+    "ref_id": "uuid",
+    "loc_ref": "uuid",
+    "fun_ref": [
+      {
+        "id": "uuid_1",
+        "notes": "draw air from this AHU unit"
+      }
+    ],
+    "point_ref": ["uuid1","uuid2"]
+  },
+  "FCU": {
+    "FCU_meta": "on hold",
+    "ref_id": "uuid",
+    "loc_ref": "uuid",
+    "fun_ref": [
+      {
+        "id": "uuid_1",
+        "notes": "supplying air to this zone"
+      }
+    ],
+    "point_ref": ["uuid1","uuid2"]
+  }
+}
