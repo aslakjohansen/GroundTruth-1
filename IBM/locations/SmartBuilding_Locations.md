@@ -1,6 +1,7 @@
 ---
-output: html_document
+output: pdf_document
 ---
+
 
 
 IFC Spatial Elements
@@ -28,7 +29,7 @@ The IFC spatial hierachy is therefore represenatable as:
 
 The spatial elements may have additional properties defining attributes such as dimensions, size, label, etc.
 
-Beside these spacial elements also other concrete build elements can be defined in IFC such as floor, wall, columns, doors, windows, etc.. They are subconcepts of the generic type [*IfcBuildingElement*](http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcproductextension/lexical/ifcbuildingelement.htm). 
+Beside these spatial elements also other concrete build elements can be defined in IFC such as floor, wall, columns, doors, windows, etc.. They are subconcepts of the generic type [*IfcBuildingElement*](http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcproductextension/lexical/ifcbuildingelement.htm). 
 
 The IFC elements may be referenced by device instances in different ways. A device may directly refer to a [*IfcDistributionControlElement*](http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelement.htm). The location of the device is then implicitly defined by linking it to other structural elements.
 
@@ -55,24 +56,34 @@ The IFC spatial hierachy in gbXML is therefore defined as:
 
 gbXML is not specific in the definition of build elements. Instead of defining walls, doors, or windows explicitely it only has geometrical concepts such as [*PlanarGeometry*](http://www.gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd#element_PlanarGeometry), [*ShellGeometries*](http://www.gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd#element_ShellGeometry) and [*SpaceBoundary*](http://www.gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd#element_SpaceBoundary).
 
+
+Haystack Spatial Elements
+------------------
+
+The spatial definition in Haystack is rudimentary. There are only two spatial concepts:
+
+* [*Site*](http://project-haystack.org/doc/Structure#site): Site: single building
+* [*Zone*](http://project-haystack.org/tag/zone): Associated with a conditioned zone of a building.
+
+
 Location Ontology
 -----------------
 
 To combine the different concepts a location ontology was defined that merges the different concepts from IFC and gbXML and extend them by some geospatial and post-design concepts.
 
-The spatial hierachy is adding city to the geospatial level and concrete concepts for room and zone as subconcepts of Space. The related IFC and gbXML concepts are listed
+The spatial hierachy is adding city to the geospatial level and concrete concepts for room and zone as subconcepts of Space. The related IFC, gbXML, and Haystack concepts are listed
 
 * *Project*: A project name space (ifc:Project)
 
-* *City*: A municipal concept
+* *City*: A metropolitan concept
 
 * *Site*: A campus (ifc:Site, gbXML:Campus)
 
-* *Building*: A building (ifc:Building, gbXML:Building)
+* *Building*: A building (ifc:Building, gbXML:Building, haystack:Building)
 
 * *BuildingStorey*: A building storey (ifc:BuildingStorey, gbXML:BuildingStorey)
 
-* *Space*/*Room*: A enclosed space (ifc:Space, gbXML:Space)
+* *Space*/*Room*: An enclosed space (ifc:Space, gbXML:Space, haystack:Space)
 
 * *Zone*: A subconcept of a space (gmXML:Zone)
 

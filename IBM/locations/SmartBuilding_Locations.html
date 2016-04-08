@@ -75,7 +75,7 @@ img {
 </ul>
 <p>The IFC spatial hierachy is therefore represenatable as: <em>IfcProject</em> &gt; <em>IfcSite</em> &gt; <em>IfcBuilding</em> &gt; <em>IfcBuildingStorey</em> &gt; <em>IfcSpace1</em> &gt; <em>IfcSpace2</em> &gt; <em>IfcSpace3</em></p>
 <p>The spatial elements may have additional properties defining attributes such as dimensions, size, label, etc.</p>
-<p>Beside these spacial elements also other concrete build elements can be defined in IFC such as floor, wall, columns, doors, windows, etc.. They are subconcepts of the generic type <a href="http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcproductextension/lexical/ifcbuildingelement.htm"><em>IfcBuildingElement</em></a>.</p>
+<p>Beside these spatial elements also other concrete build elements can be defined in IFC such as floor, wall, columns, doors, windows, etc.. They are subconcepts of the generic type <a href="http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcproductextension/lexical/ifcbuildingelement.htm"><em>IfcBuildingElement</em></a>.</p>
 <p>The IFC elements may be referenced by device instances in different ways. A device may directly refer to a <a href="http://www.buildingsmart-tech.org/ifc/IFC2x3/TC1/html/ifcsharedbldgserviceelements/lexical/ifcdistributioncontrolelement.htm"><em>IfcDistributionControlElement</em></a>. The location of the device is then implicitly defined by linking it to other structural elements.</p>
 </div>
 <div id="gbxml-spatial-elements" class="section level2">
@@ -91,17 +91,25 @@ img {
 <p>The IFC spatial hierachy in gbXML is therefore defined as: <em>Campus</em> &gt; <em>Building</em> &gt; <em>BuildingStorey</em> &gt; <em>Space</em> &gt; <em>Zone</em></p>
 <p>gbXML is not specific in the definition of build elements. Instead of defining walls, doors, or windows explicitely it only has geometrical concepts such as <a href="http://www.gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd#element_PlanarGeometry"><em>PlanarGeometry</em></a>, <a href="http://www.gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd#element_ShellGeometry"><em>ShellGeometries</em></a> and <a href="http://www.gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd#element_SpaceBoundary"><em>SpaceBoundary</em></a>.</p>
 </div>
+<div id="haystack-spatial-elements" class="section level2">
+<h2>Haystack Spatial Elements</h2>
+<p>The spatial definition in Haystack is rudimentary. There are only two spatial concepts:</p>
+<ul>
+<li><a href="http://project-haystack.org/doc/Structure#site"><em>Site</em></a>: Site: single building</li>
+<li><a href="http://project-haystack.org/tag/zone"><em>Zone</em></a>: Associated with a conditioned zone of a building.</li>
+</ul>
+</div>
 <div id="location-ontology" class="section level2">
 <h2>Location Ontology</h2>
 <p>To combine the different concepts a location ontology was defined that merges the different concepts from IFC and gbXML and extend them by some geospatial and post-design concepts.</p>
-<p>The spatial hierachy is adding city to the geospatial level and concrete concepts for room and zone as subconcepts of Space. The related IFC and gbXML concepts are listed</p>
+<p>The spatial hierachy is adding city to the geospatial level and concrete concepts for room and zone as subconcepts of Space. The related IFC, gbXML, and Haystack concepts are listed</p>
 <ul>
 <li><p><em>Project</em>: A project name space (ifc:Project)</p></li>
-<li><p><em>City</em>: A municipal concept</p></li>
+<li><p><em>City</em>: A metropolitan concept</p></li>
 <li><p><em>Site</em>: A campus (ifc:Site, gbXML:Campus)</p></li>
-<li><p><em>Building</em>: A building (ifc:Building, gbXML:Building)</p></li>
+<li><p><em>Building</em>: A building (ifc:Building, gbXML:Building, haystack:Building)</p></li>
 <li><p><em>BuildingStorey</em>: A building storey (ifc:BuildingStorey, gbXML:BuildingStorey)</p></li>
-<li><p><em>Space</em>/<em>Room</em>: A enclosed space (ifc:Space, gbXML:Space)</p></li>
+<li><p><em>Space</em>/<em>Room</em>: An enclosed space (ifc:Space, gbXML:Space, haystack:Space)</p></li>
 <li><p><em>Zone</em>: A subconcept of a space (gmXML:Zone)</p></li>
 </ul>
 <p>The resulting spatial hierachy is: <em>Project</em> &gt; <em>City</em> &gt; <em>Site</em> &gt; <em>Building</em> &gt; <em>BuildingStorey</em> &gt; <em>Space</em> &gt; <em>Zone</em></p>
