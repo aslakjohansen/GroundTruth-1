@@ -1,0 +1,1414 @@
+"TagSet","ANY1","ANY2","CMU GHC","IBM","SDU","UCB SDH","UCB SODA","UCSD","UVA","TOTAL"
+"acceleration time",0,0,0,0,0,0,0,2,0,2
+"actual cooling setpoint",3,0,0,0,0,0,0,238,0,241
+"actual heating setpoint",4,0,0,0,0,0,0,222,0,226
+"ahu",0,0,0,0,0,0,1354,0,0,1354
+"ahu air temperature heating setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu automatic mode setpoint",0,1,0,2,0,0,0,0,0,3
+"ahu automatic mode site building room",0,0,0,0,0,1,0,0,0,1
+"ahu bypass air flow sensor",0,0,11,0,0,0,0,0,0,11
+"ahu bypass damper setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu chilled water loop accumulated powerunit meter",0,1,0,1,0,0,0,0,0,2
+"ahu chilled water loop accumulated volume meter",0,1,0,1,0,0,0,0,0,2
+"ahu chilled water loop flow meter",0,1,0,1,0,0,0,0,0,2
+"ahu chilled water loop return temperature sensor",0,1,0,1,0,0,0,0,0,2
+"ahu chilled water loop supply temperature sensor",0,1,0,1,0,0,0,0,0,2
+"ahu chilled water valve setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu chilled water valve vfd",0,0,11,0,0,0,0,0,0,11
+"ahu cool setpoint",0,0,19,0,0,0,0,0,0,19
+"ahu cool stage setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu cooling coolingcapacity",0,0,3,0,0,0,0,0,0,3
+"ahu cooling off coil temperature sensor",0,1,0,2,0,0,0,0,0,3
+"ahu cooling stage setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu cooling valve control",1,0,0,0,0,0,0,0,0,1
+"ahu cooling valve perc setpoint site building room",0,0,0,0,0,1,0,0,0,1
+"ahu cooling valve percentage setpoint",0,1,0,36,0,0,0,0,0,37
+"ahu cur cool setpoint",0,0,9,0,0,0,0,0,0,9
+"ahu cur exhaust fan air flow setpoint",0,0,4,0,0,0,0,0,0,4
+"ahu cur max return air co2 setpoint",0,0,9,0,0,0,0,0,0,9
+"ahu cur return fan air flow setpoint",0,0,4,0,0,0,0,0,0,4
+"ahu discharge air fan sensor",0,1,0,0,0,0,0,0,0,1
+"ahu discharge air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu discharge air fan vfd setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu discharge air flow sensor",0,1,11,0,0,0,0,0,0,12
+"ahu discharge air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"ahu discharge air pressure sensor",0,1,11,0,0,0,0,0,0,12
+"ahu discharge air sp site building room",0,0,0,0,0,1,0,0,0,1
+"ahu discharge air temperature sensor",0,1,21,0,0,0,0,0,0,22
+"ahu discharge air temperature site building",0,0,0,0,0,1,0,0,0,1
+"ahu discharge fan flow status site building room",0,0,0,0,0,1,0,0,0,1
+"ahu discharge fan variable speed sensor site building room",0,0,0,0,0,1,0,0,0,1
+"ahu discharge fan variable speed sp site building room",0,0,0,0,0,1,0,0,0,1
+"ahu elec meter site building room zone",0,0,0,0,0,3,0,0,0,3
+"ahu enable setpoint",0,1,0,3,0,0,0,0,0,4
+"ahu entering air bypass damper",0,0,4,0,0,0,0,0,0,4
+"ahu entering air setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu entering air temperature",0,0,9,0,0,0,0,0,0,9
+"ahu entering fan",0,0,11,0,0,0,0,0,0,11
+"ahu entering vfd volt",0,0,11,0,0,0,0,0,0,11
+"ahu exhaust air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu exhaust air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu exhaust air flow sensor",0,0,11,0,0,0,0,0,0,11
+"ahu exhaust fan vfd",0,0,11,0,0,0,0,0,0,11
+"ahu exhaust setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu exhaust temperature",0,0,9,0,0,0,0,0,0,9
+"ahu exhaust vfd volt",0,0,11,0,0,0,0,0,0,11
+"ahu fan damper position setpoint",0,1,0,2,0,0,0,0,0,3
+"ahu fan percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu fan speed sensor",0,1,0,0,0,0,0,0,0,1
+"ahu fan speed setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu filter sensor",0,1,0,0,0,0,0,0,0,1
+"ahu freeze status sensor",0,1,0,0,0,0,0,0,0,1
+"ahu frost open sensor",0,1,0,2,0,0,0,0,0,3
+"ahu frost open site building room",0,0,0,0,0,1,0,0,0,1
+"ahu heat hot water valve",0,0,10,0,0,0,0,0,0,10
+"ahu heat setpoint",0,0,10,0,0,0,0,0,0,10
+"ahu heat stage setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu heat vfd",0,0,11,0,0,0,0,0,0,11
+"ahu heating setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu heating valve percentage setpoint",0,1,0,35,0,0,0,0,0,36
+"ahu heatwheel",0,0,4,0,0,0,0,0,0,4
+"ahu heatwheel elec unit",0,0,8,0,0,0,0,0,0,8
+"ahu heatwheel energy",0,0,8,0,0,0,0,0,0,8
+"ahu heatwheel setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu heatwheel unit",0,0,34,0,0,0,0,0,0,34
+"ahu heatwheel vfd",0,0,9,0,0,0,0,0,0,9
+"ahu high static alarm",1,0,0,0,0,0,0,0,0,1
+"ahu hot water loop accumulated powerunit meter",0,1,0,1,0,0,0,0,0,2
+"ahu hot water loop accumulated volume meter",0,1,0,1,0,0,0,0,0,2
+"ahu hot water loop flow meter",0,1,0,1,0,0,0,0,0,2
+"ahu hot water loop return temperature sensor",0,1,0,1,0,0,0,0,0,2
+"ahu hot water loop supply temperature sensor",0,1,0,1,0,0,0,0,0,2
+"ahu hotwaterheat entering air temperature sensor",0,0,11,0,0,0,0,0,0,11
+"ahu humidifier setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu minimum fan setpoint",0,1,0,1,0,0,0,0,0,2
+"ahu minimum fresh air setpoint",0,1,0,1,0,0,0,0,0,2
+"ahu mixed air temperature sensor",0,1,0,1,0,0,0,0,0,2
+"ahu occupancy setpoint",0,1,0,32,0,0,0,0,0,33
+"ahu outside air co2",0,0,9,0,0,0,0,0,0,9
+"ahu outside air damper",0,0,20,0,0,0,0,0,0,20
+"ahu outside air damper minimum percentage sensor",0,1,0,24,0,0,0,0,0,25
+"ahu outside air damper percentage sensor",0,1,0,28,0,0,0,0,0,29
+"ahu outside air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu outside air flow",0,0,8,0,0,0,0,0,0,8
+"ahu outside air flow sensor",0,1,0,0,0,0,0,0,0,1
+"ahu outside air flow setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu outside air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"ahu outside air humidity temperature energy sensor",0,0,11,0,0,0,0,0,0,11
+"ahu outside air humidity temperature sensor",0,0,22,0,0,0,0,0,0,22
+"ahu outside air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"ahu outside air setpoint",0,0,9,0,0,0,0,0,0,9
+"ahu outside air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"ahu outside humidity",0,0,9,0,0,0,0,0,0,9
+"ahu phase elec meter site building",0,0,0,0,0,6,0,0,0,6
+"ahu phase elec meter site building room",0,0,0,0,0,3,0,0,0,3
+"ahu pre heat off coil temperature sensor",0,1,0,2,0,0,0,0,0,3
+"ahu pre heat setpoint",0,1,0,2,0,0,0,0,0,3
+"ahu pre heat valve setpoint",0,1,0,2,0,0,0,0,0,3
+"ahu recirculate air damper",0,0,9,0,0,0,0,0,0,9
+"ahu recirculate air damper setpoint",0,0,9,0,0,0,0,0,0,9
+"ahu recirculation mode sensor",0,1,0,1,0,0,0,0,0,2
+"ahu return air bypass damper",0,0,4,0,0,0,0,0,0,4
+"ahu return air co2 sensor",0,1,11,0,0,0,0,0,0,12
+"ahu return air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu return air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu return air flow sensor",0,1,11,0,0,0,0,0,0,12
+"ahu return air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"ahu return air humidity temperature energy sensor",0,0,11,0,0,0,0,0,0,11
+"ahu return air humidity temperature sensor",0,0,22,0,0,0,0,0,0,22
+"ahu return air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"ahu return air reheat valve setpoint",0,0,11,0,0,0,0,0,0,11
+"ahu return air temperature sensor",0,1,11,31,0,0,0,0,0,43
+"ahu return fan flow status sensor",0,1,0,2,0,0,0,0,0,3
+"ahu return fan variable speed percentage setpoint",0,1,0,2,0,0,0,0,0,3
+"ahu return fan variable speed speed sensor",0,1,0,1,0,0,0,0,0,2
+"ahu return fan variable speed status sensor",0,1,0,1,0,0,0,0,0,2
+"ahu return heat valve setpoint",0,1,0,3,0,0,0,0,0,4
+"ahu return heat valve site building room",0,0,0,0,0,1,0,0,0,1
+"ahu setpoint",0,1,25,0,0,0,0,0,0,26
+"ahu supply air temperature sensor",0,1,0,36,0,0,0,0,0,37
+"ahu supply air temperature setpoint",0,1,0,6,0,0,0,0,0,7
+"ahu supply fan flow status sensor",0,1,0,7,0,0,0,0,0,8
+"ahu supply fan speed velocityunit sensor",0,1,0,1,0,0,0,0,0,2
+"ahu supply fan status sensor",0,1,0,33,0,0,0,0,0,34
+"ahu supply fan variable speed percentage setpoint",0,1,0,3,0,0,0,0,0,4
+"ahu supply fan variable speed sensor",0,1,0,1,0,0,0,0,0,2
+"ahu supply fan variable speed setpoint",0,1,0,3,0,0,0,0,0,4
+"ahu supply fan variable speed status sensor",0,1,0,1,0,0,0,0,0,2
+"ahu thermalwheel effective sensor",0,1,0,2,0,0,0,0,0,3
+"ahu time zone sensor",0,1,0,2,0,0,0,0,0,3
+"ahu trace heat sensor",0,1,0,3,0,0,0,0,0,4
+"ahu unit",0,0,8,0,0,0,0,0,0,8
+"ahu vfd air exhaust damper",0,0,9,0,0,0,0,0,0,9
+"ahu water meter",0,0,2,0,0,0,0,0,0,2
+"ahu zone air co2 sensor",0,1,0,0,0,0,0,0,0,1
+"ahu zone air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"ahu zone air temperature cooling setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu zone air temperature effective setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu zone air temperature heating setpoint",0,1,0,0,0,0,0,0,0,1
+"ahu zone air temperature sensor",0,1,0,28,0,0,0,0,0,29
+"ai actual",0,0,0,0,0,0,0,24,0,24
+"air",0,0,0,0,0,0,22,0,0,22
+"air co2 sensor",0,1,0,0,0,0,0,0,0,1
+"air conditioner",0,0,0,0,0,0,22,0,0,22
+"air flow sensor",0,0,280,0,0,0,0,0,0,280
+"air flow setpoint",0,1,463,0,0,0,0,0,0,464
+"air flow volume",0,0,0,0,0,0,0,0,14,14
+"air humidity",0,0,0,0,0,0,0,0,54,54
+"air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"air meanradianttemperature sensor",0,1,0,0,0,0,0,0,0,1
+"air speed sensor",0,1,0,0,0,0,0,0,0,1
+"air suction vent openness",0,0,0,0,54,0,0,0,0,54
+"air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"air temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"air volume",0,0,0,0,0,0,7,0,0,7
+"alarm present",0,0,0,0,0,0,0,4,0,4
+"alarm variable",0,0,0,0,0,0,29,0,0,29
+"ao command point",0,0,0,0,0,0,0,12,0,12
+"attic fcu cooling valve",1,0,0,0,0,0,0,0,0,1
+"attic fcu fan command",1,0,0,0,0,0,0,0,0,1
+"attic fcu zone temperature",1,0,0,0,0,0,0,0,0,1
+"attic fcu zone temperature setpoint",1,0,0,0,0,0,0,0,0,1
+"average cooling demand",0,0,0,0,0,0,0,6,0,6
+"average floor cooling pid",0,0,0,0,0,0,0,22,0,22
+"average supply flow",0,0,0,0,0,0,0,5,0,5
+"average vav zone temperature",3,0,0,0,0,0,0,0,0,3
+"avg discharge air pressure sensor",0,0,0,0,0,0,5,0,0,5
+"battery voltage",0,0,0,0,0,0,0,3,0,3
+"biomass consumption",0,1,0,0,0,0,0,0,0,1
+"bldg fire alarm",4,0,0,0,0,0,0,0,0,4
+"bldg hot water flow",1,0,0,0,0,0,0,0,0,1
+"bldg hot water return temperature",1,0,0,0,0,0,0,0,0,1
+"bldg hot water supply temperature",1,0,0,0,0,0,0,0,0,1
+"blowdown water meter",0,1,0,0,0,0,0,0,0,1
+"boiler condensator setpoint",0,1,0,2,0,0,0,0,0,3
+"boiler flow temperature sensor",0,1,0,6,0,0,0,0,0,7
+"boiler main drive output meter",0,1,0,6,0,0,0,0,0,7
+"boiler meter",0,1,0,2,0,0,0,0,0,3
+"boiler return temperature sensor",0,1,0,2,0,0,0,0,0,3
+"boiler run meter",0,1,0,11,0,0,0,0,0,12
+"boiler runtime sensor",0,2,0,6,0,0,0,0,0,8
+"boiler setpoint conditioned",0,1,0,2,0,0,0,0,0,3
+"boiler start number sensor",0,1,0,6,0,0,0,0,0,7
+"boiler status sensor",0,1,0,12,0,0,0,0,0,13
+"booster fan command",0,0,0,0,0,0,0,5,0,5
+"box mode",0,0,0,0,0,0,0,2,0,2
+"box reheat valve control",4,0,0,0,0,0,0,0,0,4
+"building chilled water flow",1,0,0,0,0,0,0,0,0,1
+"building chilled water instant btu",1,0,0,0,0,0,0,0,0,1
+"building chilled water return temperature",1,0,0,0,0,0,0,0,0,1
+"building chilled water supply temperature",1,0,0,0,0,0,0,0,0,1
+"building fire alarm",2,0,0,0,0,0,0,0,0,2
+"building static pressure",2,0,0,0,0,0,0,0,0,2
+"building static pressure setpoint",1,0,0,0,0,0,0,0,0,1
+"building wide sensor",0,0,0,0,0,0,30,0,0,30
+"bypass valve",0,0,0,0,0,0,2,0,0,2
+"ch. wtr diff. press setpt",1,0,0,0,0,0,0,0,0,1
+"change filters",0,0,0,0,0,0,0,4,0,4
+"chilled",0,1,0,0,0,0,0,0,0,1
+"chilled condensor water",0,0,0,0,0,0,137,0,0,137
+"chilled condensor water loop",0,0,0,0,0,0,137,0,0,137
+"chilled water",0,1,0,0,0,0,0,0,0,1
+"chilled water bypass",0,1,0,0,0,0,0,0,0,1
+"chilled water bypass valve setpoint",0,1,0,0,0,0,0,0,0,1
+"chilled water delta",0,1,0,0,0,0,0,0,0,1
+"chilled water delta flow sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water delta pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water delta pressure setpoint",0,1,0,0,0,0,0,0,0,1
+"chilled water delta temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water differential pressure",1,0,0,0,0,0,0,2,0,3
+"chilled water differential pressure load shed",0,0,0,0,0,0,0,1,0,1
+"chilled water differential pressure setpoint",0,0,0,0,0,0,0,1,0,1
+"chilled water differential pressure setpoint load shed",0,0,0,0,0,0,0,1,0,1
+"chilled water entering",0,1,0,0,0,0,0,0,0,1
+"chilled water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water entering pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water leaving",0,1,0,0,0,0,0,0,0,1
+"chilled water leaving flow sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water leaving pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water leaving temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"chilled water loop accumulated powerunit meter",0,1,0,2,0,0,0,0,0,3
+"chilled water loop accumulated powerunit site building room",0,0,0,0,0,1,0,0,0,1
+"chilled water loop accumulated volume meter",0,1,0,2,0,0,0,0,0,3
+"chilled water loop accumulated volume site building room",0,0,0,0,0,1,0,0,0,1
+"chilled water loop ahu demand meter",0,1,0,1,0,0,0,0,0,2
+"chilled water loop average powerunit meter",0,1,0,4,0,0,0,0,0,5
+"chilled water loop discharge temperature sensor site building",0,0,0,0,0,1,0,0,0,1
+"chilled water loop discharge temperature site building room",0,0,0,0,0,1,0,0,0,1
+"chilled water loop flow meter",0,1,0,3,0,0,0,0,0,4
+"chilled water loop flow site building room",0,0,0,0,0,1,0,0,0,1
+"chilled water loop frequency sensor",0,1,0,2,0,0,0,0,0,3
+"chilled water loop hour meter",0,1,0,2,0,0,0,0,0,3
+"chilled water loop instantations powerunit meter",0,1,0,2,0,0,0,0,0,3
+"chilled water loop maximum powerunit meter",0,1,0,4,0,0,0,0,0,5
+"chilled water loop phase electriccharge meter",0,1,0,6,0,0,0,0,0,7
+"chilled water loop power factor meter",0,1,0,2,0,0,0,0,0,3
+"chilled water loop return temperature sensor",0,1,0,10,0,0,0,0,0,11
+"chilled water loop return temperature site building room",0,0,0,0,0,1,0,0,0,1
+"chilled water loop status sensor",0,1,0,3,0,0,0,0,0,4
+"chilled water loop supply pump status sensor",0,1,0,8,0,0,0,0,0,9
+"chilled water loop supply pump variable speed percentage setpoint",0,1,0,5,0,0,0,0,0,6
+"chilled water loop supply temperature sensor",0,1,0,9,0,0,0,0,0,10
+"chilled water loop usage powerunit meter",0,1,0,1,0,0,0,0,0,2
+"chilled water loop usage sensor",0,1,0,1,0,0,0,0,0,2
+"chilled water meter",0,1,0,0,0,0,0,0,0,1
+"chilled water pressure setpoint",0,0,0,0,0,0,0,1,0,1
+"chilled water return temperature",4,0,0,0,0,0,2,4,0,10
+"chilled water sensor",0,1,0,0,0,0,0,0,0,1
+"chilled water setpoint",0,1,0,0,0,0,0,0,0,1
+"chilled water supply temperature",0,0,0,0,0,0,2,1,0,3
+"chilled water valve",0,1,0,0,0,0,0,0,0,1
+"chilled water valve isolation setpoint",0,1,0,0,0,0,0,0,0,1
+"chilled water valve pressure",0,0,0,0,0,0,10,0,0,10
+"chiller",0,0,0,0,0,0,33,0,0,33
+"chiller average powerunit meter",0,1,0,4,0,0,0,0,0,5
+"chiller chilled water delta flow sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water delta pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water delta temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water entering pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water leaving flow sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water leaving pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water leaving temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water sensor",0,1,0,0,0,0,0,0,0,1
+"chiller chilled water valve isolation setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller condenser refrigerated pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser refrigerated temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water entering pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water leaving flow sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water leaving pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller condenser water valve isolation setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller efficiency sensor",0,1,0,0,0,0,0,0,0,1
+"chiller enable setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller energy sensor",0,1,0,0,0,0,0,0,0,1
+"chiller evaporator refrigerated pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chiller evaporator refrigerated temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chiller frequency sensor",0,1,0,2,0,0,0,0,0,3
+"chiller hour meter",0,1,0,2,0,0,0,0,0,3
+"chiller instantations powerunit meter",0,1,0,2,0,0,0,0,0,3
+"chiller load sensor",0,1,0,0,0,0,0,0,0,1
+"chiller load setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller maximum powerunit meter",0,1,0,4,0,0,0,0,0,5
+"chiller phase electriccharge meter",0,1,0,6,0,0,0,0,0,7
+"chiller power factor meter",0,1,0,2,0,0,0,0,0,3
+"chiller power sensor",0,1,0,0,0,0,0,0,0,1
+"chiller run meter",0,1,0,2,0,0,0,0,0,3
+"chiller run sensor",0,1,0,0,0,0,0,0,0,1
+"chiller run setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller sensor",0,1,0,0,0,0,0,0,0,1
+"chiller setpoint",0,1,0,0,0,0,0,0,0,1
+"chiller status sensor",0,1,0,4,0,0,0,0,0,5
+"chiller usage powerunit meter",0,1,0,2,0,0,0,0,0,3
+"chillerpant sensor",0,1,0,0,0,0,0,0,0,1
+"chillerpant setpoint",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water bypass valve setpoint",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water delta flow sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water delta pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water delta pressure setpoint",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water delta temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water entering pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water leaving flow sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water leaving pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"chillerplant chilled water leaving temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"chillerplant condenser water bypass valve setpoint",0,1,0,0,0,0,0,0,0,1
+"chillerplant condenser water delta pressure sensor",0,1,0,0,0,0,0,0,0,1
+"chw pump command",2,0,0,0,0,0,0,0,0,2
+"chw pump status",2,0,0,0,0,0,0,0,0,2
+"chw pump vfd control",2,0,0,0,0,0,0,0,0,2
+"co2",0,0,0,0,0,0,0,0,16,16
+"co2 differential",0,0,0,0,0,0,0,1,0,1
+"co2 hi alarm",0,0,0,0,0,0,0,6,0,6
+"co2 high alarm",0,0,0,0,0,0,0,1,0,1
+"co2 level",0,0,0,0,57,0,0,8,0,65
+"co2 level setpoint",0,0,0,0,57,0,0,0,0,57
+"co2 sensor",0,1,0,0,0,0,0,0,0,1
+"co2 sensor site building",0,0,0,0,0,5,0,0,0,5
+"co2 sensor site building room",0,0,0,0,0,1,0,0,0,1
+"co2 sensor site building room zone",0,0,0,0,0,6,0,0,0,6
+"cold water return temperature",0,0,0,0,0,0,0,0,15,15
+"cold water storage booster pump phase meter",0,1,0,3,0,0,0,0,0,4
+"cold water supply temperature",0,0,0,0,0,0,0,0,18,18
+"comfort temperature setpoint",0,0,0,0,114,0,0,0,0,114
+"common setpoint",9,0,0,0,0,0,0,0,0,9
+"compressor",0,0,0,0,0,0,4,0,0,4
+"compressor overload",0,0,0,0,0,0,0,8,0,8
+"computed outside enthalpy",0,0,0,0,0,0,0,3,0,3
+"condensate leak dectection alarm",0,0,0,0,0,0,0,1,0,1
+"condensate water meter",0,1,0,0,0,0,0,0,0,1
+"condensed water",0,1,0,0,0,0,0,0,0,1
+"condensed water bypass",0,1,0,0,0,0,0,0,0,1
+"condensed water bypass valve setpoint",0,1,0,0,0,0,0,0,0,1
+"condensed water delta",0,1,0,0,0,0,0,0,0,1
+"condensed water delta pressure sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water entering",0,1,0,0,0,0,0,0,0,1
+"condensed water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water entering pressure sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water leaving",0,1,0,0,0,0,0,0,0,1
+"condensed water leaving flow sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water leaving pressure sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water sensor",0,1,0,0,0,0,0,0,0,1
+"condensed water setpoint",0,1,0,0,0,0,0,0,0,1
+"condensed water valve",0,1,0,0,0,0,0,0,0,1
+"condensed water valve isolation setpoint",0,1,0,0,0,0,0,0,0,1
+"condenser refrigerated pressure sensor",0,1,0,0,0,0,0,0,0,1
+"condenser refrigerated temperature sensor",0,1,0,0,0,0,0,0,0,1
+"condenser setpoint",0,1,0,0,0,0,0,0,0,1
+"condenser water meter",0,1,0,0,0,0,0,0,0,1
+"condensor",0,0,0,0,0,0,1,0,0,1
+"condensor pump",0,0,0,0,0,0,1,0,0,1
+"condensor return water temperature",0,0,0,0,0,0,2,0,0,2
+"condensor water flow variable",0,0,0,0,0,0,1,0,0,1
+"condensor water supply water temperature",0,0,0,0,0,0,1,0,0,1
+"cooing command",0,0,0,0,0,0,0,1,0,1
+"cool stage setpoint",0,1,0,0,0,0,0,0,0,1
+"cool water storage booster pump phase elec meter site building",0,0,0,0,0,3,0,0,0,3
+"cooling",0,0,0,0,0,0,10,0,0,10
+"cooling air temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"cooling capacity",0,1,0,0,0,0,2,0,0,3
+"cooling coil temperature",2,0,0,0,0,0,0,0,0,2
+"cooling command",0,0,0,0,0,0,0,235,0,235
+"cooling degreedays sensor",0,1,0,0,0,0,0,0,0,1
+"cooling on-off",0,0,0,0,0,0,0,4,0,4
+"cooling span",0,0,0,0,57,0,0,0,0,57
+"cooling tower",0,0,0,0,0,0,10,0,0,10
+"cooling valve ahu site building room",0,0,0,0,0,1,0,0,0,1
+"cooling valve command",0,0,0,0,0,0,0,4,0,4
+"cooling valve contol",3,0,0,0,0,0,0,0,0,3
+"cooling valve control",2,0,0,0,0,0,0,0,0,2
+"cooling valve output",9,0,0,0,0,0,0,0,0,9
+"cooling valve percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water entering pressure sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water leaving flow sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water leaving pressure sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower condenser water leaving temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"coolingtower fan sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower fan setpoint",0,1,0,0,0,0,0,0,0,1
+"coolingtower sensor",0,1,0,0,0,0,0,0,0,1
+"coolingtower setpoint",0,1,0,0,0,0,0,0,0,1
+"crac capacity",0,0,0,0,0,0,0,4,0,4
+"crac status",0,0,0,0,0,0,0,1,0,1
+"current",0,0,0,0,0,0,0,14,0,14
+"current limit",0,0,0,0,0,0,0,14,0,14
+"current reading",0,0,0,0,0,0,6,0,0,6
+"curtailment override variable",0,0,0,0,0,0,5,0,0,5
+"damper command",0,0,0,0,0,0,0,236,0,236
+"damper economize flag",0,0,0,0,0,0,4,0,0,4
+"damper position",0,0,0,0,0,0,0,236,0,236
+"day start time sensor",0,0,0,0,0,0,1,0,0,1
+"daytime setpoint",0,0,0,0,0,0,1,0,0,1
+"dc bus voltage",0,0,0,0,0,0,0,2,0,2
+"deceleration time",0,0,0,0,0,0,0,2,0,2
+"degreedays sensor",0,1,0,0,0,0,0,0,0,1
+"dehumidification on-off",0,0,0,0,0,0,0,4,0,4
+"differential pressure reading",0,0,0,0,0,0,3,0,0,3
+"differential pressure setpoint",0,0,0,0,0,0,3,0,0,3
+"differential pressure status sensor",0,0,0,0,0,0,14,0,0,14
+"direction sensor",0,1,0,0,0,0,0,0,0,1
+"discharge air cooling demand high",0,0,0,0,0,0,0,1,0,1
+"discharge air cooling demand low",0,0,0,0,0,0,0,1,0,1
+"discharge air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"discharge air fan sensor",0,1,0,0,0,0,0,0,0,1
+"discharge air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"discharge air flow sensor",0,1,0,0,0,0,0,0,0,1
+"discharge air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"discharge air pressure sensor",0,1,0,0,0,0,98,0,0,99
+"discharge air reset high",0,0,0,0,0,0,0,1,0,1
+"discharge air reset low",0,0,0,0,0,0,0,1,0,1
+"discharge air setpoint",1,0,0,0,0,0,0,1,0,2
+"discharge air smoke alarm",1,0,0,0,0,0,0,0,0,1
+"discharge air temperature",0,0,0,0,0,0,0,2,0,2
+"discharge air temperature ahu site building room",0,0,0,0,0,1,0,0,0,1
+"discharge air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"discharge elec meter site building room",0,0,0,0,0,1,0,0,0,1
+"discharge fan variable speed speed ahu site building room",0,0,0,0,0,1,0,0,0,1
+"do command",0,0,0,0,0,0,0,24,0,24
+"domestic hot water control valve",0,0,0,0,0,0,0,1,0,1
+"domestic hot water flow sensor",0,1,0,0,0,0,0,0,0,1
+"domestic hot water setpoint",0,0,0,0,0,0,0,1,0,1
+"domestic hot water supply temperature",0,0,0,0,0,0,0,1,0,1
+"domestic hot water system enable",0,0,0,0,0,0,0,1,0,1
+"domestic water meter",0,1,0,0,0,0,0,0,0,1
+"door open sensor",0,1,0,0,0,0,0,0,0,1
+"drive ready status",0,0,0,0,0,0,0,2,0,2
+"drive temperature",0,0,0,0,0,0,0,2,0,2
+"duct static pressure setpoint",1,0,0,0,0,0,0,0,0,1
+"east filtered static pressure sensor",0,0,0,0,0,0,1,0,0,1
+"east static pressure sensor",0,0,0,0,0,0,2,0,0,2
+"econ-o-cycle on-off",0,0,0,0,0,0,0,4,0,4
+"economizer",0,0,0,0,0,0,0,2,0,2
+"economizer available",1,0,0,0,0,0,0,0,0,1
+"economizer outside air switch setpoint",1,0,0,0,0,0,0,0,0,1
+"economizer setpoint",0,0,0,0,0,0,0,1,0,1
+"effective cooling setpoint",5,0,0,0,0,0,0,0,0,5
+"effective heating setpoint",5,0,0,0,0,0,0,0,0,5
+"elec meter fcu site building",0,0,0,0,0,3,0,0,0,3
+"elec meter lighting site building",0,0,0,0,0,3,0,0,0,3
+"elec meter srvc site building",0,0,0,0,0,4,0,0,0,4
+"electric load",0,1,0,0,0,0,0,0,0,1
+"electric load meter",0,1,0,0,0,0,0,0,0,1
+"electric meter",0,1,0,73,0,0,0,0,0,74
+"electric meter ahu phase",0,1,0,9,0,0,0,0,0,10
+"electric meter current phase sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter current sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter energy sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter fcu",0,1,0,15,0,0,0,0,0,16
+"electric meter frequency sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter light",0,1,0,2,0,0,0,0,0,3
+"electric meter power factor phase sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter power factor sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter power sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter srvc",0,1,0,2,0,0,0,0,0,3
+"electric meter voltage phase sensor",0,1,0,0,0,0,0,0,0,1
+"electric meter voltage sensor",0,1,0,0,0,0,0,0,0,1
+"electrical consumption",0,1,0,0,0,0,0,0,0,1
+"elevator power consumption",0,0,0,0,1,0,0,0,0,1
+"elevator power consumption accumulation",0,0,0,0,1,0,0,0,0,1
+"enable ahu site building room",0,0,0,0,0,1,0,0,0,1
+"enegy max meter",0,0,7,0,0,0,0,0,0,7
+"energy",0,0,0,0,0,0,0,4,0,4
+"energy elec meter",0,0,2,0,0,0,0,0,0,2
+"energy meter",0,1,0,0,0,0,2,0,0,3
+"engine throttle",0,0,0,0,3,0,0,0,0,3
+"entering static pressure setpoint",0,0,0,0,0,0,1,0,0,1
+"epo activated by high temperature",0,0,0,0,0,0,0,1,0,1
+"epo activated by leak detection system",0,0,0,0,0,0,0,1,0,1
+"equip chiller coolingcapacity",0,0,8,0,0,0,0,0,0,8
+"evaporator refrigerated pressure sensor",0,1,0,0,0,0,0,0,0,1
+"evaporator refrigerated temperature sensor",0,1,0,0,0,0,0,0,0,1
+"event sensor",0,0,0,0,0,0,5,0,0,5
+"exhaust",0,0,0,0,0,0,32,0,0,32
+"exhaust air damper output",1,0,0,0,0,0,0,0,0,1
+"exhaust air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"exhaust air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"exhaust air filter status",1,0,0,0,0,0,0,0,0,1
+"exhaust air humidity",2,0,0,0,0,0,0,0,0,2
+"exhaust air static pressure",2,0,0,0,0,0,0,0,0,2
+"exhaust air static pressure setpoint",2,0,0,0,0,0,0,0,0,2
+"exhaust air temperature",2,0,0,0,0,0,0,0,0,2
+"exhaust fan",0,0,0,0,0,0,32,0,0,32
+"exhaust fan command",6,0,0,0,0,0,0,5,0,11
+"exhaust fan command switch",1,0,0,0,0,0,0,0,0,1
+"exhaust fan speed control",2,0,0,0,0,0,0,0,0,2
+"exhaust fan status",6,0,0,0,0,0,0,5,0,11
+"exhaust fan vfd control",1,0,0,0,0,0,0,0,0,1
+"exhaust static pressure high alarm",1,0,0,0,0,0,0,0,0,1
+"external fan status sensor",0,1,0,5,0,0,0,0,0,6
+"external fan variable speed setpoint",0,1,0,1,0,0,0,0,0,2
+"extract fan elec meter site building",0,0,0,0,0,1,0,0,0,1
+"extract fan elec meter site building  zone",0,0,0,0,0,1,0,0,0,1
+"extract fan elec meter site building room",0,0,0,0,0,2,0,0,0,2
+"extract fan elec meter site building room zone",0,0,0,0,0,1,0,0,0,1
+"extract fan phase elec meter site building room",0,0,0,0,0,3,0,0,0,3
+"extract fan phase meter",0,1,0,8,0,0,0,0,0,9
+"facade sunblind sensor",0,1,0,3,0,0,0,0,0,4
+"facade sunblind site building",0,0,0,0,0,3,0,0,0,3
+"facility operation status",0,0,0,0,0,0,0,0,59,59
+"failure flag",0,0,0,0,0,0,6,0,0,6
+"fan command",0,0,0,0,0,0,0,16,0,16
+"fan control",0,0,0,0,0,0,4,0,0,4
+"fan control unit",0,0,0,0,0,0,4,0,0,4
+"fan curstatus",0,0,23,0,0,0,0,0,0,23
+"fan output",0,0,0,0,0,0,0,1,0,1
+"fan percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"fan setpoint",0,0,23,0,0,0,0,0,0,23
+"fan speed",0,0,0,0,0,0,6,0,0,6
+"fan speed reset",0,0,0,0,0,0,13,0,0,13
+"fan speed sensor",0,1,0,0,0,0,0,0,0,1
+"fan vfd equip run setpoint",0,0,8,0,0,0,0,0,0,8
+"fault indicator",0,0,0,0,0,0,0,12,0,12
+"fault reset",0,0,0,0,0,0,0,2,0,2
+"fault sensor",0,0,0,0,0,0,11,0,0,11
+"fault status",0,0,0,0,0,0,0,2,0,2
+"fcu air temperature cooling setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu air temperature heating setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu air temperature setpoint",0,1,0,166,0,0,0,0,0,167
+"fcu air temperature sp fcu air temp cooling sp site building room",0,0,0,0,0,38,0,0,0,38
+"fcu air temperature sp site building room",0,0,0,0,0,118,0,0,0,118
+"fcu alarm",0,0,40,0,0,0,0,0,0,40
+"fcu chilled water loop accumulated powerunit meter",0,1,0,1,0,0,0,0,0,2
+"fcu chilled water loop accumulated volume meter",0,1,0,1,0,0,0,0,0,2
+"fcu chilled water loop flow meter",0,1,0,1,0,0,0,0,0,2
+"fcu chilled water loop return temperature sensor",0,1,0,1,0,0,0,0,0,2
+"fcu chilled water loop supply temperature sensor",0,1,0,1,0,0,0,0,0,2
+"fcu cooling valve perc setpoint site building room",0,0,0,0,0,157,0,0,0,157
+"fcu cooling valve percentage setpoint",0,1,0,157,0,0,0,0,0,158
+"fcu discharge air fan sensor",0,1,0,0,0,0,0,0,0,1
+"fcu discharge air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu discharge air flow sensor",0,1,0,0,0,0,0,0,0,1
+"fcu discharge air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"fcu discharge air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"fcu discharge air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"fcu discharge air temperature sensor site building room",0,0,0,0,0,157,0,0,0,157
+"fcu elec meter site building room",0,0,0,0,0,3,0,0,0,3
+"fcu fan chilled water valve setpoint",0,0,20,0,0,0,0,0,0,20
+"fcu fan percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu fan run time sensor",0,1,0,1,0,0,0,0,0,2
+"fcu fan speed sensor",0,1,0,0,0,0,0,0,0,1
+"fcu fan speed sensor setpoint",0,0,0,118,0,0,0,0,0,118
+"fcu fan speed sensor site building room",0,0,0,0,0,118,0,0,0,118
+"fcu fan speed setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu fault sensor",0,1,0,118,0,0,0,0,0,119
+"fcu fault site building room",0,0,0,0,0,118,0,0,0,118
+"fcu freq elec meter site building",0,0,0,0,0,2,0,0,0,2
+"fcu frequency electric meter",0,1,0,2,0,0,0,0,0,3
+"fcu heating valve perc setpoint site building room",0,0,0,0,0,157,0,0,0,157
+"fcu heating valve percentage setpoint",0,1,0,157,0,0,0,0,0,158
+"fcu hot water loop accumulated powerunit meter",0,1,0,1,0,0,0,0,0,2
+"fcu hot water loop accumulated volume meter",0,1,0,1,0,0,0,0,0,2
+"fcu hot water loop flow meter",0,1,0,1,0,0,0,0,0,2
+"fcu hot water loop return temperature sensor",0,1,0,1,0,0,0,0,0,2
+"fcu hot water loop supply temperature sensor",0,1,0,1,0,0,0,0,0,2
+"fcu line voltage elec meter site building",0,0,0,0,0,2,0,0,0,2
+"fcu line voltage electric meter",0,1,0,2,0,0,0,0,0,3
+"fcu mixed air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"fcu phase average powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"fcu phase average powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"fcu phase current elec meter site building",0,0,0,0,0,6,0,0,0,6
+"fcu phase current electric meter",0,1,0,6,0,0,0,0,0,7
+"fcu phase instantations powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"fcu phase instantations powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"fcu phase maximum powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"fcu phase maxval powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"fcu power factor elec meter site building",0,0,0,0,0,2,0,0,0,2
+"fcu power factor electric meter",0,1,0,2,0,0,0,0,0,3
+"fcu return air co2 sensor",0,1,0,0,0,0,0,0,0,1
+"fcu return air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu return air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu return air flow sensor",0,1,0,0,0,0,0,0,0,1
+"fcu return air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"fcu return air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"fcu return air temperature sensor",0,1,0,157,0,0,0,0,0,158
+"fcu return air temperature sensor site building room",0,0,0,0,0,157,0,0,0,157
+"fcu setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu status sensor",0,1,0,5,0,0,0,0,0,6
+"fcu supply air temperature sensor",0,1,0,157,0,0,0,0,0,158
+"fcu vfd hot water valve",0,0,5,0,0,0,0,0,0,5
+"fcu zone air co2 sensor",0,1,0,0,0,0,0,0,0,1
+"fcu zone air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"fcu zone air temperature cooling setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu zone air temperature effective setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu zone air temperature heating setpoint",0,1,0,0,0,0,0,0,0,1
+"fcu zone air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"file server emergency power off switch",0,0,0,0,0,0,0,1,0,1
+"file server room epo system enable",0,0,0,0,0,0,0,1,0,1
+"file server room humidity",0,0,0,0,0,0,0,1,0,1
+"file server room temperature",0,0,0,0,0,0,0,1,0,1
+"filter differential pressure",0,0,0,0,0,0,0,1,0,1
+"filter reset",0,0,0,0,0,0,0,12,0,12
+"filter sensor",0,1,0,0,0,0,0,0,0,1
+"filtered air volume",0,0,0,0,0,0,3,0,0,3
+"filtered flow sensor",0,0,0,0,0,0,2,0,0,2
+"filtered static pressure sensor",0,0,0,0,0,0,1,0,0,1
+"final filter status",1,0,0,0,0,0,0,0,0,1
+"fintube heating valve output",2,0,0,0,0,0,0,0,0,2
+"floor",0,0,0,0,0,0,15,0,0,15
+"flow consumption",0,1,0,0,0,0,0,0,0,1
+"flow meter",0,1,0,0,0,0,0,0,0,1
+"flow rate sensor",0,0,0,0,0,0,2,0,0,2
+"flow sensor",0,1,0,0,0,0,0,0,0,1
+"footfall in sensor",0,1,0,9,0,0,0,0,0,10
+"footfall in site building",0,0,0,0,0,3,0,0,0,3
+"footfall in site building room",0,0,0,0,0,4,0,0,0,4
+"footfall in site building room zone",0,0,0,0,0,1,0,0,0,1
+"footfall out sensor",0,1,0,9,0,0,0,0,0,10
+"footfall out site building",0,0,0,0,0,3,0,0,0,3
+"footfall out site building room",0,0,0,0,0,4,0,0,0,4
+"footfall out site building room zone",0,0,0,0,0,1,0,0,0,1
+"freeze pump command",3,0,0,0,0,0,0,0,0,3
+"freeze pump status",3,0,0,0,0,0,0,0,0,3
+"freeze status sensor",0,1,0,0,0,0,0,0,0,1
+"frequency output",0,0,0,0,0,0,0,12,0,12
+"gas consumption",0,1,0,0,0,0,0,0,0,1
+"gas flow meter pulse",0,1,0,0,0,0,0,0,0,1
+"gas load",0,1,0,0,0,0,0,0,0,1
+"gas load meter",0,1,0,0,0,0,0,0,0,1
+"gas meter",0,1,0,5,0,0,0,0,0,6
+"hand auto status",0,0,0,0,0,0,0,2,0,2
+"heat consumption",0,0,0,0,1,0,0,0,0,1
+"heat exchanger control enable",1,0,0,0,0,0,0,0,0,1
+"heat exchanger iso valve command",0,0,0,0,0,0,0,2,0,2
+"heat exchanger osa reset high setpoint",0,0,0,0,0,0,0,1,0,1
+"heat exchanger osa reset low setpoint",0,0,0,0,0,0,0,1,0,1
+"heat exchanger osa reset osa high span",0,0,0,0,0,0,0,1,0,1
+"heat exchanger osa reset osa low span",0,0,0,0,0,0,0,1,0,1
+"heat exchanger supply temperature setpoint",0,0,0,0,0,0,0,2,0,2
+"heat exchanger valve command",0,0,0,0,0,0,0,3,0,3
+"heat exchanger valve control",1,0,0,0,0,0,0,0,0,1
+"heat exchanger valve status",0,0,0,0,0,0,0,2,0,2
+"heat flow meter pulse",0,1,0,0,0,0,0,0,0,1
+"heat inlet temperature",0,0,0,0,1,0,0,0,0,1
+"heat outlet temperature",0,0,0,0,1,0,0,0,0,1
+"heat pump power meter pulse",0,1,0,0,0,0,0,0,0,1
+"heat recovery exhaust air temperature",2,0,0,0,0,0,0,0,0,2
+"heat recovery low limit setpoint",2,0,0,0,0,0,0,0,0,2
+"heat recovery outdoor air temperature",2,0,0,0,0,0,0,0,0,2
+"heat recovery supply air temperature",2,0,0,0,0,0,0,0,0,2
+"heat recovery unit supply air temperature",1,0,0,0,0,0,0,0,0,1
+"heat recovery wheel command",3,0,0,0,0,0,0,0,0,3
+"heat recovery wheel exhaust air temperature",1,0,0,0,0,0,0,0,0,1
+"heat recovery wheel status",3,0,0,0,0,0,0,0,0,3
+"heat recovery wheel supply air temperature",1,0,0,0,0,0,0,0,0,1
+"heat stage setpoint",0,1,0,0,0,0,0,0,0,1
+"heat wheel bypass damper output",2,0,0,0,0,0,0,0,0,2
+"heatexchanger chilled water entering temperature sensor",0,1,0,0,0,0,0,0,0,1
+"heatexchanger chilled water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"heatexchanger condenser water entering flow sensor",0,1,0,0,0,0,0,0,0,1
+"heatexchanger condenser water leaving temperature sensor",0,1,0,0,0,0,0,0,0,1
+"heatexchanger sensor",0,1,0,0,0,0,0,0,0,1
+"heating",0,0,3,0,0,0,0,0,0,3
+"heating air temperature setpoint",0,1,0,0,0,0,0,0,0,1
+"heating command",0,0,0,0,0,0,0,220,0,220
+"heating degreedays sensor",0,1,0,0,0,0,0,0,0,1
+"heating on-off",0,0,0,0,0,0,0,4,0,4
+"heating span",0,0,0,0,57,0,0,0,0,57
+"heating supply airflow",0,0,0,0,0,0,0,1,0,1
+"heating valve ahu site building room",0,0,0,0,0,1,0,0,0,1
+"heating valve control",2,0,0,0,0,0,0,0,0,2
+"heating valve output",5,0,0,0,0,0,0,0,0,5
+"heating valve percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"heatwheel setpoint",0,1,0,0,0,0,0,0,0,1
+"high-high temperature alarm setpoint",0,0,0,0,0,0,0,1,0,1
+"high duct air static alarm",3,0,0,0,0,0,0,0,0,3
+"high duct air static pressure",2,0,0,0,0,0,0,0,0,2
+"high head pressure",0,0,0,0,0,0,0,8,0,8
+"high humidity",0,0,0,0,0,0,0,4,0,4
+"high humidity setpoint",0,0,0,0,0,0,0,4,0,4
+"high temperature",0,0,0,0,0,0,0,4,0,4
+"high temperature alarm",0,0,0,0,0,0,0,1,0,1
+"high temperature alarm setpoint",0,0,0,0,0,0,0,1,0,1
+"high temperature setpoint",0,0,0,0,0,0,0,4,0,4
+"hot water",0,0,0,0,0,0,24,0,0,24
+"hot water differential pressure",1,0,0,0,0,0,0,1,0,2
+"hot water differential pressure setpoint",0,0,0,0,0,0,0,1,0,1
+"hot water energy usage",1,0,0,0,0,0,0,0,0,1
+"hot water flow sensor",0,1,0,0,0,0,0,0,0,1
+"hot water loop",0,0,0,0,0,0,24,0,0,24
+"hot water loop accumulated powerunit meter",0,1,0,2,0,0,0,0,0,3
+"hot water loop accumulated powerunit site building room",0,0,0,0,0,1,0,0,0,1
+"hot water loop accumulated volume meter",0,1,0,2,0,0,0,0,0,3
+"hot water loop accumulated volume site building room",0,0,0,0,0,1,0,0,0,1
+"hot water loop ahu demand meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop ahu meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop average powerunit meter",0,1,0,2,0,0,0,0,0,3
+"hot water loop discharge temperature site building room",0,0,0,0,0,1,0,0,0,1
+"hot water loop external fan status sensor",0,1,0,2,0,0,0,0,0,3
+"hot water loop fcu meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop flow meter",0,1,0,2,0,0,0,0,0,3
+"hot water loop flow site building room",0,0,0,0,0,1,0,0,0,1
+"hot water loop frequency sensor",0,1,0,1,0,0,0,0,0,2
+"hot water loop hour meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop instantations powerunit meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop maximum powerunit meter",0,1,0,2,0,0,0,0,0,3
+"hot water loop meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop phase electriccharge meter",0,1,0,3,0,0,0,0,0,4
+"hot water loop power factor meter",0,1,0,1,0,0,0,0,0,2
+"hot water loop return temperature sensor",0,1,0,14,0,0,0,0,0,15
+"hot water loop return temperature site building room",0,0,0,0,0,1,0,0,0,1
+"hot water loop supply pump status sensor",0,1,0,5,0,0,0,0,0,6
+"hot water loop supply pump variable speed percentage setpoint",0,1,0,7,0,0,0,0,0,8
+"hot water loop supply temperature sensor",0,1,0,10,0,0,0,0,0,11
+"hot water loop usage powerunit meter",0,1,0,1,0,0,0,0,0,2
+"hot water meter",0,1,0,0,0,0,0,0,0,1
+"hot water meter setpoint",0,0,2,0,0,0,0,0,0,2
+"hot water pump command",2,0,0,0,0,0,0,0,0,2
+"hot water pump status",2,0,0,0,0,0,0,0,0,2
+"hot water return temperature",2,0,0,0,0,0,0,0,15,17
+"hot water sensor",0,1,0,0,0,0,0,0,0,1
+"hot water supply setpoint",1,0,0,0,0,0,0,0,0,1
+"hot water supply temperature",0,0,0,0,0,0,0,0,27,27
+"hot water valve position",0,0,0,0,0,0,2,0,0,2
+"hps",0,0,0,0,0,0,1,0,0,1
+"hpsteam sensor",0,0,0,0,0,0,1,0,0,1
+"hru cooling valve control",1,0,0,0,0,0,0,0,0,1
+"hru heating valve control",1,0,0,0,0,0,0,0,0,1
+"hru high static alarm",1,0,0,0,0,0,0,0,0,1
+"hru outside air temperature lockout for htg clg",1,0,0,0,0,0,0,0,0,1
+"hru supply air temperature setpoint",1,0,0,0,0,0,0,0,0,1
+"hrw outdoor air temperature",1,0,0,0,0,0,0,0,0,1
+"hrw relief air temperature",1,0,0,0,0,0,0,0,0,1
+"humidification on-off",0,0,0,0,0,0,0,4,0,4
+"humidifier problem",0,0,0,0,0,0,0,4,0,4
+"humidifier run setpoint",0,0,8,0,0,0,0,0,0,8
+"humidifier setpoint",0,1,0,0,0,0,0,0,0,1
+"humidity",0,0,0,0,1,0,0,4,0,5
+"humidity sensor",0,1,5,0,0,0,0,0,0,6
+"humidity setpoint",0,0,0,0,0,0,0,4,0,4
+"humidity tolerance",0,0,0,0,0,0,0,4,0,4
+"hw differential pressure setpoint",1,0,0,0,0,0,0,0,0,1
+"hw pump command",2,0,0,0,0,0,0,0,0,2
+"hw pump runtime",2,0,0,0,0,0,0,0,0,2
+"hw pump speed control",2,0,0,0,0,0,0,0,0,2
+"hw pump stageup setpoint",1,0,0,0,0,0,0,0,0,1
+"hw pump status",2,0,0,0,0,0,0,0,0,2
+"ice tank enter temperature",0,0,0,0,0,0,0,0,1,1
+"ice tank leave temperature",0,0,0,0,0,0,0,0,1,1
+"illuminance",0,0,0,0,55,0,0,0,0,55
+"illuminance east",0,0,0,0,1,0,0,0,0,1
+"illuminance south",0,0,0,0,1,0,0,0,0,1
+"illuminance west",0,0,0,0,1,0,0,0,0,1
+"illumination sensor",0,1,0,0,0,0,0,0,0,1
+"incoming water meter",0,1,0,1,0,0,0,0,0,2
+"incoming water meter site building",0,0,0,0,0,1,0,0,0,1
+"indoor co2 level",0,0,0,0,10,0,0,0,0,10
+"indoor humidity",0,0,0,0,10,0,0,0,0,10
+"indoor temperature",0,0,0,0,10,0,0,0,0,10
+"internal building variable",0,0,0,0,0,0,14,0,0,14
+"inverter on bypass",0,0,0,0,0,0,0,4,0,4
+"last fault",0,0,0,0,0,0,0,2,0,2
+"lead lag sensor",0,0,0,0,0,0,4,0,0,4
+"lead lag switch",1,0,0,0,0,0,0,0,0,1
+"leaving status sensor",0,0,0,0,0,0,1,0,0,1
+"light load electric meter",0,1,0,91,0,0,0,0,0,92
+"light load frequency electric meter",0,1,0,2,0,0,0,0,0,3
+"light load line voltage electric meter",0,1,0,2,0,0,0,0,0,3
+"light load phase average powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"light load phase current electric meter",0,1,0,6,0,0,0,0,0,7
+"light load phase instantations powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"light load phase maximum powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"light load power factor electric meter",0,1,0,2,0,0,0,0,0,3
+"light percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"lighting fault site building",0,0,0,0,0,140,0,0,0,140
+"lighting load elec meter site building",0,0,0,0,0,23,0,0,0,23
+"lighting load elec meter site building  zone",0,0,0,0,0,1,0,0,0,1
+"lighting load elec meter site building room",0,0,0,0,0,13,0,0,0,13
+"lighting load elec meter site building room zone",0,0,0,0,0,54,0,0,0,54
+"lighting load freq elec meter site building",0,0,0,0,0,2,0,0,0,2
+"lighting load line voltage elec meter site building",0,0,0,0,0,2,0,0,0,2
+"lighting load phase average powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"lighting load phase current elec meter site building",0,0,0,0,0,6,0,0,0,6
+"lighting load phase instantations powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"lighting load phase maxval powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"lighting load power factor elec meter site building",0,0,0,0,0,2,0,0,0,2
+"lighting power meter pulse",0,1,0,0,0,0,0,0,0,1
+"lightlevel site building",0,0,0,0,0,60,0,0,0,60
+"lights site building",0,0,0,0,0,146,0,0,0,146
+"liquid detected",0,0,0,0,0,0,0,4,0,4
+"load shed command",0,0,0,0,0,0,0,1,0,1
+"local alarm",0,0,0,0,0,0,0,8,0,8
+"loss of airflow",0,0,0,0,0,0,0,4,0,4
+"loss of communications",0,0,0,0,0,0,0,4,0,4
+"loss of emergency power",0,0,0,0,0,0,0,4,0,4
+"loss of power",0,0,0,0,0,0,0,4,0,4
+"loss of water",0,0,0,0,0,0,0,4,0,4
+"low duct air static pressure",1,0,0,0,0,0,0,0,0,1
+"low humidity",0,0,0,0,0,0,0,4,0,4
+"low humidity setpoint",0,0,0,0,0,0,0,4,0,4
+"low return air temperature alarm",0,0,0,0,0,0,13,0,0,13
+"low suction pressure",0,0,0,0,0,0,0,4,0,4
+"low temperature",0,0,0,0,0,0,0,4,0,4
+"low temperature alarm",6,0,0,0,0,0,0,0,0,6
+"low temperature setpoint",0,0,0,0,0,0,0,4,0,4
+"lphw return temperature sensor",0,1,0,3,0,0,0,0,0,4
+"lphw status sensor",0,1,0,1,0,0,0,0,0,2
+"lphw supply temperature sensor",0,1,0,1,0,0,0,0,0,2
+"main fan overload",0,0,0,0,0,0,0,4,0,4
+"main hot water return temperature",0,0,0,0,0,0,0,1,0,1
+"main hot water supply temperature",0,0,0,0,0,0,0,1,0,1
+"makeup water meter",0,1,0,0,0,0,0,0,0,1
+"manual override",0,0,0,0,0,0,0,4,0,4
+"max co2",0,0,66,0,0,0,0,0,0,66
+"max discharge air pressure sensor",0,0,0,0,0,0,5,0,0,5
+"max load sensor",0,0,0,0,0,0,1,0,0,1
+"max outside air temperature",0,0,0,0,0,0,1,0,0,1
+"maximum supply airflow",0,0,0,0,0,0,0,237,0,237
+"mech room temperature setpoint",1,0,0,0,0,0,0,0,0,1
+"mechanical room temperature",1,0,0,0,0,0,0,0,0,1
+"mens fintube heating valve output",1,0,0,0,0,0,0,0,0,1
+"mens restroom",1,0,0,0,0,0,0,0,0,1
+"min discharge air pressure sensor",0,0,0,0,0,0,5,0,0,5
+"min outdoor air damper setpoint",1,0,0,0,0,0,0,0,0,1
+"minimum occupied cooling supply airflow",0,0,0,0,0,0,0,236,0,236
+"minimum occupied heating supply airflow",0,0,0,0,0,0,0,221,0,221
+"minimum supply cooling airflow",0,0,0,0,0,0,0,1,0,1
+"mixed air damper",0,0,0,0,0,0,4,0,0,4
+"mixed air damper control",1,0,0,0,0,0,0,0,0,1
+"mixed air damper output",1,0,0,0,0,0,0,0,0,1
+"mixed air temperature",5,0,0,0,0,0,4,1,5,15
+"mixed air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"motor direction command",0,0,0,0,0,0,0,2,0,2
+"motor direction status",0,0,0,0,0,0,0,2,0,2
+"motor speed",0,0,0,0,0,0,0,2,0,2
+"motor start stop status",0,0,0,0,0,0,0,2,0,2
+"mtw-dp load shed",0,0,0,0,0,0,0,1,0,1
+"mtw-t load shed",0,0,0,0,0,0,0,2,0,2
+"mtwdp-sp load shed",0,0,0,0,0,0,0,1,0,1
+"mtwt-sp load shed",0,0,0,0,0,0,0,2,0,2
+"na discharge elec meter site building room",0,0,0,0,0,1,0,0,0,1
+"na elec meter site building room zone",0,0,0,0,0,4,0,0,0,4
+"na external fan status site building",0,0,0,0,0,5,0,0,0,5
+"na external fan variable speed site building",0,0,0,0,0,1,0,0,0,1
+"na outside air temperature site building",0,0,0,0,0,3,0,0,0,3
+"na site building room",0,0,0,0,0,2,0,0,0,2
+"na solar radiation site building",0,0,0,0,0,1,0,0,0,1
+"na sun azimuth site building",0,0,0,0,0,1,0,0,0,1
+"na sun elevation site building",0,0,0,0,0,1,0,0,0,1
+"night cooling setpoint",2,0,0,0,0,0,0,0,0,2
+"night heating setpoint",2,0,0,0,0,0,0,0,0,2
+"night start time sensor",0,0,0,0,0,0,1,0,0,1
+"night temperature setpoint",0,0,0,0,114,0,0,0,0,114
+"nighttime setpoint",0,0,0,0,0,0,1,0,0,1
+"no water in humidifier pan",0,0,0,0,0,0,0,4,0,4
+"occupancy",0,0,0,0,0,0,0,0,25,25
+"occupancy command",0,0,0,0,0,0,0,237,0,237
+"occupancy mode",8,0,0,0,0,0,0,0,0,8
+"occupancy schedule",1,0,0,0,0,0,0,0,0,1
+"occupancy sensor",0,0,304,0,0,0,4,13,0,321
+"occupied mode command",10,0,0,0,0,0,0,0,0,10
+"occupied site building",0,0,0,0,0,26,0,0,0,26
+"occupied site building room",0,0,0,0,0,130,0,0,0,130
+"oil consumption",0,1,0,0,0,0,0,0,0,1
+"open sensor",0,1,0,0,0,0,0,0,0,1
+"outdoor air dew point",2,0,0,0,0,0,0,0,0,2
+"outdoor air dew point switch",2,0,0,0,0,0,0,0,0,2
+"outdoor air fan command",1,0,0,0,0,0,0,0,0,1
+"outdoor air fan speed control",1,0,0,0,0,0,0,0,0,1
+"outdoor air fan status",1,0,0,0,0,0,0,0,0,1
+"outdoor air flow",2,0,0,0,0,0,0,0,0,2
+"outdoor air flow setpoint",1,0,0,0,0,0,0,0,0,1
+"outdoor air humidity",3,0,0,0,0,0,0,0,0,3
+"outdoor air temperature",6,0,0,0,0,0,0,0,0,6
+"output voltage",0,0,0,0,0,0,0,2,0,2
+"outside air co2",0,0,2,0,0,0,0,0,0,2
+"outside air co2 sensor",0,1,0,0,0,0,0,0,0,1
+"outside air damper calc. cfm setpoint",1,0,0,0,0,0,0,0,0,1
+"outside air damper minimum cfm setpoint",1,0,0,0,0,0,0,0,0,1
+"outside air damper minimum percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"outside air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"outside air flow sensor",0,1,5,0,0,0,0,0,0,6
+"outside air flow setpoint",0,1,0,0,0,0,0,0,0,1
+"outside air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"outside air meanradianttemperature sensor",0,1,0,0,0,0,0,0,0,1
+"outside air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"outside air setpoint to disable hot water system",0,0,0,0,0,0,0,1,0,1
+"outside air shutdown of hot water when unoccupied",0,0,0,0,0,0,0,1,0,1
+"outside air temperature",0,0,2,0,0,0,2,4,0,8
+"outside air temperature sensor",0,1,178,5,0,0,0,0,0,184
+"outside air temperature site building",0,0,0,0,0,2,0,0,0,2
+"outside diffuseillumination sensor",0,1,0,0,0,0,0,0,0,1
+"outside directillumination sensor",0,1,0,0,0,0,0,0,0,1
+"outside illumination lux sensor",0,1,0,2,0,0,0,0,0,3
+"outside illumination sensor",0,1,0,0,0,0,0,0,0,1
+"outside lightlevel lightlevel site building",0,0,0,0,0,2,0,0,0,2
+"outside occupied sensor",0,1,0,0,0,0,0,0,0,1
+"outside radiation sensor",0,1,0,1,0,0,0,0,0,2
+"outside radiation site building",0,0,0,0,0,1,0,0,0,1
+"outside relative humidity",0,0,0,0,0,0,1,0,0,1
+"outside sunrise sensor",0,1,0,0,0,0,0,0,0,1
+"outside sunshinehour sensor",0,1,0,0,0,0,0,0,0,1
+"outside weather condition sensor",0,1,0,0,0,0,0,0,0,1
+"outside wind direction sensor",0,1,0,0,0,0,0,0,0,1
+"outside wind speed sensor",0,1,0,0,0,0,0,0,0,1
+"override mode",0,0,0,0,56,0,0,0,0,56
+"pager test point for server room",0,0,0,0,0,0,0,1,0,1
+"pan lock",0,0,0,0,0,0,0,12,0,12
+"person in room",0,0,0,0,57,0,0,0,0,57
+"phase meter",0,1,0,4,0,0,0,0,0,5
+"pid control",0,0,0,0,0,0,0,12,0,12
+"pid gain",0,0,0,0,0,0,0,12,0,12
+"pid loop gain",0,0,0,0,0,0,225,0,0,225
+"pid loop i variable",0,0,0,0,0,0,3,0,0,3
+"pid loop p variable",0,0,0,0,0,0,4,0,0,4
+"pid loop variable",0,0,0,0,0,0,2,0,0,2
+"power",0,0,0,0,0,0,1,2,0,3
+"power consumption",0,0,0,0,11,0,0,0,0,11
+"power demand",0,0,0,0,0,0,2,0,0,2
+"power meter",0,1,0,0,0,0,4,0,0,5
+"power meter pulse",0,1,0,0,0,0,0,0,0,1
+"prefilter status",3,0,0,0,0,0,0,0,0,3
+"preheat pump command",2,0,0,0,0,0,0,0,0,2
+"preheat pump status",2,0,0,0,0,0,0,0,0,2
+"preheat temperature",4,0,0,0,0,0,0,0,0,4
+"preheat valve output",4,0,0,0,0,0,0,0,0,4
+"pressure",0,1,0,0,0,0,0,0,0,1
+"pressure sensor",0,1,0,0,0,0,0,0,0,1
+"pump",0,0,0,0,0,0,59,0,0,59
+"pump alarm",0,0,0,0,0,0,0,6,0,6
+"pump alarm delay",0,0,0,0,0,0,0,2,0,2
+"pump command output",0,0,0,0,0,0,0,1,0,1
+"pump dead band",0,0,0,0,0,0,0,1,0,1
+"pump enable",0,0,0,0,0,0,0,2,0,2
+"pump integration time",0,0,0,0,0,0,0,1,0,1
+"pump lead lag",0,0,0,0,0,0,0,3,0,3
+"pump proportional band",0,0,0,0,0,0,0,1,0,1
+"pump run duration",1,0,0,0,0,0,0,0,0,1
+"pump run sensor",0,1,0,0,0,0,0,0,0,1
+"pump run setpoint",0,1,0,0,0,0,0,0,0,1
+"pump sensor",0,1,0,0,0,0,0,0,0,1
+"pump setpoint",0,1,0,0,0,0,0,0,0,1
+"pump start stop",0,0,0,0,0,0,0,6,0,6
+"pump status",0,0,0,0,0,0,0,6,0,6
+"pump vfd command",0,0,0,0,0,0,0,6,0,6
+"pv system output",0,0,0,0,0,0,0,3,0,3
+"quality sensor",0,1,0,0,0,0,0,0,0,1
+"radiator valve openness",0,0,0,0,57,0,0,0,0,57
+"rain indicator",0,0,0,0,1,0,0,0,0,1
+"rain water circualation pump phase elec meter site building",0,0,0,0,0,3,0,0,0,3
+"rain water circualation pump phase meter",0,1,0,3,0,0,0,0,0,4
+"rain water control pump elec meter site building",0,0,0,0,0,1,0,0,0,1
+"rain water control pump meter",0,1,0,1,0,0,0,0,0,2
+"rated speed",0,0,0,0,0,0,0,14,0,14
+"reference",0,0,0,0,0,0,0,24,0,24
+"reference input ai",0,0,0,0,0,0,0,2,0,2
+"reheat valve command",0,0,0,0,0,0,0,222,0,222
+"reheat valve output",2,0,0,0,0,0,0,0,0,2
+"reheat valve position",0,0,0,0,0,0,4,0,0,4
+"relative humidity",0,0,0,0,0,0,0,3,0,3
+"relief air flow total",1,0,0,0,0,0,0,0,0,1
+"relief air velocity pressure",1,0,0,0,0,0,0,0,0,1
+"relief airflow rate",1,0,0,0,0,0,0,0,0,1
+"relief fan cfm setpoint",1,0,0,0,0,0,0,0,0,1
+"relief fan command",1,0,0,0,0,0,0,0,0,1
+"relief fan enable",1,0,0,0,0,0,0,0,0,1
+"relief fan flow",4,0,0,0,0,0,0,0,0,4
+"relief fan speed control",2,0,0,0,0,0,0,0,0,2
+"relief fan status",5,0,0,0,0,0,0,0,0,5
+"relief fan velocity pressure",4,0,0,0,0,0,0,0,0,4
+"relief fans command",1,0,0,0,0,0,0,0,0,1
+"relief flow differential setpoint",1,0,0,0,0,0,0,0,0,1
+"reset variable",0,0,0,0,0,0,4,0,0,4
+"return air co2",1,0,0,0,0,0,0,0,0,1
+"return air co2 level",2,0,0,0,0,0,0,0,0,2
+"return air co2 sensor",0,1,0,0,0,0,0,0,0,1
+"return air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"return air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"return air flow sensor",0,1,0,0,0,0,0,0,0,1
+"return air high limit",0,0,0,0,0,0,0,1,0,1
+"return air humidity",4,0,0,0,0,0,0,0,0,4
+"return air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"return air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"return air temperature",6,0,0,0,0,0,4,1,6,17
+"return air temperature ahu site building room",0,0,0,0,0,1,0,0,0,1
+"return air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"return fan command",0,0,0,0,0,0,0,4,0,4
+"return fan differential speed",0,0,0,0,0,0,0,1,0,1
+"return fan flow",0,0,0,0,0,0,0,8,0,8
+"return fan status",0,0,0,0,0,0,0,4,0,4
+"return fan variable speed speed ahu site building room",0,0,0,0,0,1,0,0,0,1
+"return fan vfd command",0,0,0,0,0,0,0,1,0,1
+"return filter status",1,0,0,0,0,0,0,0,0,1
+"return water temperature",0,0,0,0,0,0,4,0,0,4
+"room air temperature",0,0,0,0,0,0,0,0,159,159
+"room temperature",0,0,0,0,57,0,0,0,0,57
+"room temperature setpoint",0,0,0,0,57,0,0,0,0,57
+"rotate hot water pumps",1,0,0,0,0,0,0,0,0,1
+"run direction command",0,0,0,0,0,0,0,12,0,12
+"run direction status",0,0,0,0,0,0,0,12,0,12
+"run enable",0,0,0,0,0,0,0,12,0,12
+"run status",0,0,0,0,0,0,0,14,0,14
+"run time hours",0,0,0,0,0,0,0,2,0,2
+"setpoint",0,0,1461,0,0,0,0,0,140,1601
+"shading device state east",0,0,0,0,1,0,0,0,0,1
+"shading device state south",0,0,0,0,1,0,0,0,0,1
+"shading device state west",0,0,0,0,1,0,0,0,0,1
+"short cycle",0,0,0,0,0,0,0,4,0,4
+"singletontagset",0,1,0,0,0,0,0,0,0,1
+"site",0,0,0,0,0,1,1586,0,0,1587
+"site ahu",0,0,0,0,0,12,0,0,0,12
+"site ahu  vav reheat discharge air pressure sensor",0,0,0,0,0,1,0,0,0,1
+"site ahu curtailment override variable",0,0,0,0,0,4,0,0,0,4
+"site ahu event sensor",0,0,0,0,0,4,0,0,0,4
+"site ahu exhaust fan air volume",0,0,0,0,0,4,0,0,0,4
+"site ahu exhaust fan differential pressure status sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu exhaust fan filtered air volume",0,0,0,0,0,2,0,0,0,2
+"site ahu exhaust fan return air temperature",0,0,0,0,0,4,0,0,0,4
+"site ahu exhaust fan speed reset",0,0,0,0,0,4,0,0,0,4
+"site ahu exhaust fan start stop sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu floor avg discharge air pressure sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu floor max discharge air pressure sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu floor min discharge air pressure sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu low return air temperature alarm",0,0,0,0,0,13,0,0,0,13
+"site ahu occupancy sensor",0,0,0,0,0,4,0,0,0,4
+"site ahu outside air temperature",0,0,0,0,0,1,0,0,0,1
+"site ahu pid loop variable",0,0,0,0,0,1,0,0,0,1
+"site ahu smoke alarm",0,0,0,0,0,9,0,0,0,9
+"site ahu start stop sensor",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan",0,0,0,0,0,8,0,0,0,8
+"site ahu supply fan air sp flag",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan air temperature",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan air temperature sp",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan air volume",0,0,0,0,0,3,0,0,0,3
+"site ahu supply fan chilled water valve pressure",0,0,0,0,0,5,0,0,0,5
+"site ahu supply fan damper economize flag",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan differential pressure status sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu supply fan east filtered static pressure sensor",0,0,0,0,0,1,0,0,0,1
+"site ahu supply fan east static pressure sensor",0,0,0,0,0,2,0,0,0,2
+"site ahu supply fan entering static pressure sp",0,0,0,0,0,1,0,0,0,1
+"site ahu supply fan fault sensor",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan filtered air volume",0,0,0,0,0,1,0,0,0,1
+"site ahu supply fan filtered static pressure sensor",0,0,0,0,0,1,0,0,0,1
+"site ahu supply fan hot water valve position",0,0,0,0,0,2,0,0,0,2
+"site ahu supply fan internal building variable",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan mixed air damper",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan mixed air temperature",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan pid loop i variable",0,0,0,0,0,3,0,0,0,3
+"site ahu supply fan pid loop p variable",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan smoke alarm",0,0,0,0,0,4,0,0,0,4
+"site ahu supply fan speed",0,0,0,0,0,2,0,0,0,2
+"site ahu supply fan speed reset",0,0,0,0,0,3,0,0,0,3
+"site ahu supply fan start stop sensor",0,0,0,0,0,5,0,0,0,5
+"site ahu supply fan static pressure alarm",0,0,0,0,0,3,0,0,0,3
+"site ahu supply fan static pressure sensor",0,0,0,0,0,3,0,0,0,3
+"site ahu supply fan static pressure sp",0,0,0,0,0,3,0,0,0,3
+"site ahu supply fan west filtered static pressure sensor",0,0,0,0,0,1,0,0,0,1
+"site ahu vav zone alarm variable",0,0,0,0,0,6,0,0,0,6
+"site ahu vav zone day start time sensor",0,0,0,0,0,1,0,0,0,1
+"site ahu vav zone daytime sp",0,0,0,0,0,1,0,0,0,1
+"site ahu vav zone discharge air pressure sensor",0,0,0,0,0,98,0,0,0,98
+"site ahu vav zone night start time sensor",0,0,0,0,0,1,0,0,0,1
+"site ahu vav zone nighttime sp",0,0,0,0,0,1,0,0,0,1
+"site ahu vav zone pid loop gain",0,0,0,0,0,225,0,0,0,225
+"site ahu vav zone reheat discharge air pressure sensor",0,0,0,0,0,134,0,0,0,134
+"site ahu vav zone reheat valve position",0,0,0,0,0,4,0,0,0,4
+"site ahu vav zone temperature",0,0,0,0,0,229,0,0,0,229
+"site ahu vav zone temperature sp",0,0,0,0,0,228,0,0,0,228
+"site ahu vav zone temperature sp off",0,0,0,0,0,224,0,0,0,224
+"site ahu vav zone timer variable",0,0,0,0,0,6,0,0,0,6
+"site ahu zone temperature sp",0,0,0,0,0,12,0,0,0,12
+"site alarm variable",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor alarm variable",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor curtailment override variable",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor energy meter",0,0,0,0,0,2,0,0,0,2
+"site building wide sensor event",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor hps",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor hpsteam",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor internal variable",0,0,0,0,0,10,0,0,0,10
+"site building wide sensor outside relative humidity",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor power demand",0,0,0,0,0,2,0,0,0,2
+"site building wide sensor power meter",0,0,0,0,0,2,0,0,0,2
+"site building wide sensor power outside air temperature",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor reset variable",0,0,0,0,0,4,0,0,0,4
+"site building wide sensor steam on off indicator",0,0,0,0,0,1,0,0,0,1
+"site building wide sensor supply air temperature sp",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop air conditioner alarm variable",0,0,0,0,0,11,0,0,0,11
+"site chilled condenser water loop air conditioner status sensor",0,0,0,0,0,11,0,0,0,11
+"site chilled condenser water loop alarm variable",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop bypass valve",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop chiller",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop chiller alarm variable",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop chiller compressor",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop chiller fault sensor",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop chiller max load sensor",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop chiller power meter",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop chiller pump start stop sensor",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop chiller pump status sensor",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop chiller return temperature",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop chiller start stop sensor",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop chiller supply sp",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop chiller supply temperature",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop chiller system start stop sensor",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop chiller timer variable",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop chiller valve position",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop cooling capacity",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop coolingtower leaving status sensor",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop coolingtower start stop sensor",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop coolingtower status sensor",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop coolingtower valve position",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop differential pressure reading",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop differential pressure sp",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop filtered flow sensor",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop flow rate sensor",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop flow variable",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop lead lag sensor",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop pid variable",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop pump",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop pump alarm variable",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop pump current reading",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop pump differential pressure status sensor",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop pump failure flag",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop pump fan speed",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop pump fan speed reset",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop pump fault sensor",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop pump lead lag sensor",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop pump start stop sensor",0,0,0,0,0,5,0,0,0,5
+"site chilled condenser water loop pump status sensor",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop pump timer variable",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop return temperature",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop start stop sensor",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop status sensor",0,0,0,0,0,3,0,0,0,3
+"site chilled condenser water loop supply sp",0,0,0,0,0,2,0,0,0,2
+"site chilled condenser water loop supply temperature",0,0,0,0,0,4,0,0,0,4
+"site chilled condenser water loop temperature sensor",0,0,0,0,0,1,0,0,0,1
+"site chilled condenser water loop valve position",0,0,0,0,0,2,0,0,0,2
+"site chilled water valve pressure",0,0,0,0,0,3,0,0,0,3
+"site chiller chilled water return temperature",0,0,0,0,0,2,0,0,0,2
+"site chiller chilled water supply temperature",0,0,0,0,0,2,0,0,0,2
+"site condenser pump alarm variable",0,0,0,0,0,1,0,0,0,1
+"site exhaust fan start stop sensor",0,0,0,0,0,6,0,0,0,6
+"site exhaust fan status sensor",0,0,0,0,0,2,0,0,0,2
+"site fcu chilled water valve pressure",0,0,0,0,0,2,0,0,0,2
+"site fcu start stop sensor",0,0,0,0,0,2,0,0,0,2
+"site hot water loop alarm variable",0,0,0,0,0,2,0,0,0,2
+"site hot water loop differential pressure reading",0,0,0,0,0,1,0,0,0,1
+"site hot water loop differential pressure sp",0,0,0,0,0,1,0,0,0,1
+"site hot water loop lead lag sensor",0,0,0,0,0,1,0,0,0,1
+"site hot water loop pump current reading",0,0,0,0,0,2,0,0,0,2
+"site hot water loop pump differential pressure status sensor",0,0,0,0,0,2,0,0,0,2
+"site hot water loop pump failure flag",0,0,0,0,0,2,0,0,0,2
+"site hot water loop pump fan speed reset",0,0,0,0,0,2,0,0,0,2
+"site hot water loop pump fault sensor",0,0,0,0,0,2,0,0,0,2
+"site hot water loop pump start stop sensor",0,0,0,0,0,2,0,0,0,2
+"site hot water loop pump timer variable",0,0,0,0,0,2,0,0,0,2
+"site hot water loop return temperature",0,0,0,0,0,1,0,0,0,1
+"site hot water loop start stop sensor",0,0,0,0,0,1,0,0,0,1
+"site hot water loop status sensor",0,0,0,0,0,1,0,0,0,1
+"site hot water loop supply sp",0,0,0,0,0,1,0,0,0,1
+"site hot water loop supply temperature",0,0,0,0,0,1,0,0,0,1
+"site max outside air temperature",0,0,0,0,0,1,0,0,0,1
+"site status sensor",0,0,0,0,0,4,0,0,0,4
+"site supply fan vav zone start stop sensor",0,0,0,0,0,4,0,0,0,4
+"site supply fan vav zone temperature",0,0,0,0,0,3,0,0,0,3
+"site supply fan vav zone temperature sp",0,0,0,0,0,3,0,0,0,3
+"site timer variable",0,0,0,0,0,4,0,0,0,4
+"smoke alarm",1,0,0,0,0,0,13,0,0,14
+"smoke alarm status",1,0,0,0,0,0,0,0,0,1
+"smoke detected",0,0,0,0,0,0,0,4,0,4
+"socket load blind elec meter site building",0,0,0,0,0,6,0,0,0,6
+"socket load blind electric meter",0,1,0,6,0,0,0,0,0,7
+"socket load elec meter site building",0,0,0,0,0,44,0,0,0,44
+"socket load elec meter site building  zone",0,0,0,0,0,12,0,0,0,12
+"socket load elec meter site building room",0,0,0,0,0,42,0,0,0,42
+"socket load elec meter site building room zone",0,0,0,0,0,92,0,0,0,92
+"socket load electric meter",0,1,0,191,0,0,0,0,0,192
+"socket load freq elec meter site building",0,0,0,0,0,2,0,0,0,2
+"socket load frequency electric meter",0,1,0,2,0,0,0,0,0,3
+"socket load line voltage elec meter site building",0,0,0,0,0,2,0,0,0,2
+"socket load line voltage electric meter",0,1,0,2,0,0,0,0,0,3
+"socket load phase average powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"socket load phase average powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"socket load phase current elec meter site building",0,0,0,0,0,6,0,0,0,6
+"socket load phase current electric meter",0,1,0,6,0,0,0,0,0,7
+"socket load phase elec meter site building room",0,0,0,0,0,3,0,0,0,3
+"socket load phase elec meter site building room zone",0,0,0,0,0,2,0,0,0,2
+"socket load phase electric meter",0,1,0,5,0,0,0,0,0,6
+"socket load phase instantations powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"socket load phase instantations powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"socket load phase maximum powerunit electric meter",0,1,0,2,0,0,0,0,0,3
+"socket load phase maxval powerunit elec meter site building",0,0,0,0,0,2,0,0,0,2
+"socket load power factor elec meter site building",0,0,0,0,0,2,0,0,0,2
+"socket load power factor electric meter",0,1,0,2,0,0,0,0,0,3
+"socket load wireless elec meter site building",0,0,0,0,0,1,0,0,0,1
+"socket load wireless electric meter",0,1,0,1,0,0,0,0,0,2
+"solar azimuth angle",0,0,0,0,0,0,0,1,0,1
+"solar radiation sensor",0,1,0,1,0,0,0,0,0,2
+"solar zenith angle",0,0,0,0,0,0,0,1,0,1
+"speed sensor",0,1,0,0,0,0,0,0,0,1
+"stages",0,0,0,0,0,0,0,4,0,4
+"standby fan on",0,0,0,0,0,0,0,4,0,4
+"standby temperature setpoint",0,0,0,0,114,0,0,0,0,114
+"standby unit on",0,0,0,0,0,0,0,4,0,4
+"standy glycool unit on",0,0,0,0,0,0,0,4,0,4
+"start stop sensor",0,0,0,0,0,0,46,0,0,46
+"static pressure alarm",0,0,0,0,0,0,3,0,0,3
+"static pressure sensor",0,0,0,0,0,0,3,0,0,3
+"static pressure setpoint",0,0,0,0,0,0,3,1,0,4
+"status sensor",0,0,0,0,0,0,30,0,0,30
+"steam flow meter",0,0,30,0,0,0,0,0,0,30
+"steam meter",0,1,0,0,0,0,0,0,0,1
+"steam on off indicator",0,0,0,0,0,0,1,0,0,1
+"stndby load shed switch",0,0,0,0,0,0,0,1,0,1
+"sun azimuth sensor",0,1,0,1,0,0,0,0,0,2
+"sun elevation sensor",0,1,0,1,0,0,0,0,0,2
+"sunbeams are good!",0,0,0,0,0,0,0,3,0,3
+"sunblind percentage setpoint",0,1,0,0,0,0,0,0,0,1
+"supply",0,0,0,0,0,0,102,0,0,102
+"supply air damper control",4,0,0,0,0,0,0,0,0,4
+"supply air dew point",2,0,0,0,0,0,0,0,0,2
+"supply air dew point setpoint",2,0,0,0,0,0,0,0,0,2
+"supply air flow",5,0,0,0,0,0,0,0,0,5
+"supply air flow setpoint",4,0,0,0,0,0,0,0,0,4
+"supply air high duct pressure",1,0,0,0,0,0,0,0,0,1
+"supply air high limit",0,0,0,0,0,0,0,1,0,1
+"supply air humidity",2,0,0,0,0,0,0,0,0,2
+"supply air setpoint",3,0,0,0,0,0,0,0,0,3
+"supply air setpoint flag",0,0,0,0,0,0,4,0,0,4
+"supply air static pressure",8,0,0,0,0,0,0,0,0,8
+"supply air static pressure low alarm",1,0,0,0,0,0,0,0,0,1
+"supply air static pressure setpoint",2,0,0,0,0,0,0,0,0,2
+"supply air temperature",19,0,0,0,0,0,4,2,20,45
+"supply air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"supply air temperature setpoint",6,0,0,0,0,0,5,0,0,11
+"supply air velocity pressure",1,0,0,0,0,0,0,0,0,1
+"supply airflow",0,0,0,0,0,0,0,237,0,237
+"supply airflow setpoint",0,0,0,0,0,0,0,237,0,237
+"supply duct static pressure",1,0,0,0,0,0,0,0,0,1
+"supply fan",0,0,0,0,0,0,102,0,0,102
+"supply fan command",15,0,0,0,0,0,0,4,0,19
+"supply fan current",0,1,0,0,0,0,0,0,0,1
+"supply fan flow",0,0,0,0,0,0,0,8,0,8
+"supply fan in maintenance mode",0,0,0,0,0,0,0,4,0,4
+"supply fan output",1,1,0,0,0,0,0,0,0,2
+"supply fan speed control",4,0,0,0,0,0,0,0,0,4
+"supply fan speed setpoint",1,0,0,0,0,0,0,0,0,1
+"supply fan status",15,1,0,0,0,0,0,4,0,20
+"supply fan vfd command",0,0,0,0,0,0,0,1,0,1
+"supply fan vfd control",4,0,0,0,0,0,0,0,0,4
+"supply fan vfd setpoint",1,0,0,0,0,0,0,0,0,1
+"supply static press",0,0,0,0,0,0,0,1,0,1
+"supply static pressure high alarm",1,0,0,0,0,0,0,0,0,1
+"supply static pressure setpoint",6,0,0,0,0,0,0,0,0,6
+"supply water setpoint",0,0,0,0,0,0,4,0,0,4
+"supply water temperature",0,0,0,0,0,0,7,0,0,7
+"switch emergency elec meter site building",0,0,0,0,0,1,0,0,0,1
+"switch emergency setpoint",0,1,0,1,0,0,0,0,0,2
+"system enable",7,0,0,0,0,0,0,4,0,11
+"system start stop sensor",0,0,0,0,0,0,1,0,0,1
+"temperature",0,0,0,0,1,0,0,4,0,5
+"temperature sensor",0,1,5,1,0,0,1,0,0,8
+"temperature setpoint",0,1,0,0,0,0,0,241,0,242
+"temperature setpoint off",0,0,0,0,0,0,224,0,0,224
+"temperature tolerance",0,0,0,0,0,0,0,4,0,4
+"temporary occupancy status",0,0,0,0,0,0,0,54,0,54
+"thermalwheel effective ahu site building room",0,0,0,0,0,1,0,0,0,1
+"timer variable",0,0,0,0,0,0,18,0,0,18
+"torque",0,0,0,0,0,0,0,14,0,14
+"total power meter pulse",0,1,0,0,0,0,0,0,0,1
+"tuning points",0,0,0,0,0,0,0,21,0,21
+"unit run command",0,0,0,0,0,0,0,4,0,4
+"unit run status",0,0,0,0,0,0,0,4,0,4
+"unit turned off locally",0,0,0,0,0,0,0,4,0,4
+"unit turned off remotely",0,0,0,0,0,0,0,4,0,4
+"unocc cooling setpoint",13,0,0,0,0,0,0,0,0,13
+"unocc heating setpoint",13,0,0,0,0,0,0,0,0,13
+"unoccupied load shed switch",0,0,0,0,0,0,0,1,0,1
+"valve position",0,0,0,0,0,0,5,0,0,5
+"vav air flow sensor",0,0,462,0,0,0,0,0,0,462
+"vav air flow setpoint",0,0,462,0,0,0,0,0,0,462
+"vav cool setpoint",0,0,471,0,0,0,0,0,0,471
+"vav damper sensor",0,0,463,0,0,0,0,0,0,463
+"vav discharge air damper setpoint",0,1,0,0,0,0,0,0,0,1
+"vav discharge air fan sensor",0,1,0,0,0,0,0,0,0,1
+"vav discharge air fan setpoint",0,1,0,0,0,0,0,0,0,1
+"vav discharge air flow sensor",0,1,0,0,0,0,0,0,0,1
+"vav discharge air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"vav discharge air temperature sensor",0,1,464,0,0,0,0,0,0,465
+"vav discharge temperature setpoint",0,0,9,0,0,0,0,0,0,9
+"vav entering air temperature sensor",0,1,0,0,0,0,0,0,0,1
+"vav heat setpoint",0,1,473,0,0,0,0,0,0,474
+"vav hot water valve setpoint",0,0,463,0,0,0,0,0,0,463
+"vav perimeter heat setpoint",0,1,0,0,0,0,0,0,0,1
+"vav perimeterheat valve setpoint",0,0,70,0,0,0,0,0,0,70
+"vav reheat discharge air pressure sensor",0,0,0,0,0,0,135,0,0,135
+"vav reheat valve setpoint",0,0,69,0,0,0,0,0,0,69
+"vav sensor",0,1,0,0,0,0,0,0,0,1
+"vav setpoint",0,1,0,0,0,0,0,0,0,1
+"vav zone air co2 sensor",0,1,65,0,0,0,0,0,0,66
+"vav zone air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"vav zone air temperature cooling setpoint",0,1,0,0,0,0,0,0,0,1
+"vav zone air temperature effective setpoint",0,1,0,0,0,0,0,0,0,1
+"vav zone air temperature heating setpoint",0,1,0,0,0,0,0,0,0,1
+"vav zone air temperature sensor",0,1,3,0,0,0,0,0,0,4
+"ventilation inlet temperature",0,0,0,0,1,0,0,0,0,1
+"ventilation mode",0,0,0,0,1,0,0,0,0,1
+"ventilation power consumption",0,0,0,0,1,0,0,0,0,1
+"vfd alarm",0,0,0,0,0,0,0,2,0,2
+"vfd current phase sensor",0,1,0,0,0,0,0,0,0,1
+"vfd current sensor",0,1,0,0,0,0,0,0,0,1
+"vfd enable",0,0,0,0,0,0,0,2,0,2
+"vfd enable setpoint",0,1,0,0,0,0,0,0,0,1
+"vfd energy sensor",0,1,0,0,0,0,0,0,0,1
+"vfd frequency sensor",0,1,0,0,0,0,0,0,0,1
+"vfd frequency setpoint",0,1,0,0,0,0,0,0,0,1
+"vfd power factor phase sensor",0,1,0,0,0,0,0,0,0,1
+"vfd power factor sensor",0,1,0,0,0,0,0,0,0,1
+"vfd power sensor",0,1,0,0,0,0,0,0,0,1
+"vfd run sensor",0,1,0,0,0,0,0,0,0,1
+"vfd run setpoint",0,1,0,0,0,0,0,0,0,1
+"vfd sensor",0,1,0,0,0,0,0,0,0,1
+"vfd setpoint",0,1,0,0,0,0,0,0,0,1
+"vfd speed setpoint",0,1,0,0,0,0,0,0,0,1
+"vfd start stop",0,0,0,0,0,0,0,2,0,2
+"vfd voltage phase sensor",0,1,0,0,0,0,0,0,0,1
+"vfd voltage sensor",0,1,0,0,0,0,0,0,0,1
+"voltage sensor",0,1,0,0,0,0,0,0,0,1
+"warm cool adjust",0,0,0,0,0,0,0,238,0,238
+"warmer cooler adjust",7,0,0,0,0,0,0,0,0,7
+"warmest zone temperature",3,0,0,0,0,0,0,0,0,3
+"water consumption",0,1,0,0,0,0,0,0,0,1
+"water flow meter pulse",0,1,0,0,0,0,0,0,0,1
+"water meter",0,1,0,10,0,0,0,0,0,11
+"water meter coolingtower",0,1,0,1,0,0,0,0,0,2
+"water meter rain",0,1,0,3,0,0,0,0,0,4
+"water meter rain output",0,1,0,1,0,0,0,0,0,2
+"water meter rain site building",0,0,0,0,0,3,0,0,0,3
+"water meter rain topup",0,1,0,1,0,0,0,0,0,2
+"water meter site building",0,0,0,0,0,2,0,0,0,2
+"water rate",0,1,0,0,0,0,0,0,0,1
+"weather hail sensor",0,1,0,1,0,0,0,0,0,2
+"weather hail sensor site building",0,0,0,0,0,1,0,0,0,1
+"weather outside air temperature sensor",0,1,0,1,0,0,0,0,0,2
+"weather outside air temperature site building",0,0,0,0,0,1,0,0,0,1
+"weather pressure sensor",0,1,0,1,0,0,0,0,0,2
+"weather pressure site building",0,0,0,0,0,1,0,0,0,1
+"weather rain duration sensor",0,1,0,1,0,0,0,0,0,2
+"weather rain duration site building",0,0,0,0,0,1,0,0,0,1
+"weather rain sensor",0,1,0,1,0,0,0,0,0,2
+"weather rain sensor site building",0,0,0,0,0,1,0,0,0,1
+"weather relative humidity sensor",0,1,0,1,0,0,0,0,0,2
+"weather relative humidity site building",0,0,0,0,0,1,0,0,0,1
+"weather wind speed average sensor",0,1,0,2,0,0,0,0,0,3
+"weather wind speed average site building",0,0,0,0,0,2,0,0,0,2
+"weather wind speed direction sensor",0,1,0,2,0,0,0,0,0,3
+"weather wind speed direction site building",0,0,0,0,0,2,0,0,0,2
+"weather wind speed maximum sensor",0,1,0,3,0,0,0,0,0,4
+"weather wind speed maxval site building",0,0,0,0,0,2,0,0,0,2
+"west filtered static pressure sensor",0,0,0,0,0,0,1,0,0,1
+"wind direction",0,0,0,0,1,0,0,3,0,4
+"wind direction sensor",0,1,0,0,0,0,0,0,0,1
+"wind speed",0,0,0,0,1,0,0,3,0,4
+"wind speed maxval site building",0,0,0,0,0,1,0,0,0,1
+"window open sensor",0,1,0,0,0,0,0,0,0,1
+"womens fintube heating valve output",1,0,0,0,0,0,0,0,0,1
+"womens restroom",1,0,0,0,0,0,0,0,0,1
+"zone",0,0,0,0,0,0,1168,0,0,1168
+"zone air co2 sensor",0,1,0,20,0,0,0,0,0,21
+"zone air co2 setpoint",0,1,0,0,0,0,0,0,0,1
+"zone air humidity sensor",0,1,0,0,0,0,0,0,0,1
+"zone air humidity setpoint",0,1,0,0,0,0,0,0,0,1
+"zone air meanradianttemperature sensor",0,1,0,0,0,0,0,0,0,1
+"zone air pressure sensor",0,1,0,0,0,0,0,0,0,1
+"zone air quality sensor",0,1,0,0,0,0,0,0,0,1
+"zone air temperature cooling setpoint",0,1,0,0,0,0,0,0,0,1
+"zone air temperature effective setpoint",0,1,0,0,0,0,0,0,0,1
+"zone air temperature heating setpoint",0,1,0,0,0,0,0,0,0,1
+"zone air temperature max",0,0,481,0,0,0,0,0,0,481
+"zone air temperature min",0,0,481,0,0,0,0,0,0,481
+"zone air temperature sensor",0,1,308,302,0,0,0,0,0,611
+"zone air temperature sensor wireless",0,1,0,50,0,0,0,0,0,51
+"zone co2",1,0,0,0,0,0,0,0,0,1
+"zone co2 level",1,0,0,0,0,0,0,0,0,1
+"zone co2 max",0,0,66,0,0,0,0,0,0,66
+"zone co2 setpoint",1,0,0,0,0,0,0,0,0,1
+"zone diffuseillumination sensor",0,1,0,0,0,0,0,0,0,1
+"zone directillumination sensor",0,1,0,0,0,0,0,0,0,1
+"zone highest co2 sensor",1,0,0,0,0,0,0,0,0,1
+"zone illumination fault sensor",0,1,0,140,0,0,0,0,0,141
+"zone illumination sensor",0,1,0,60,0,0,0,0,0,61
+"zone illumination setpoint",0,1,0,146,0,0,0,0,0,147
+"zone occupied sensor",0,1,0,0,0,0,0,0,0,1
+"zone presence sensor",0,1,0,156,0,0,0,0,0,157
+"zone return air flow sensor",0,1,0,0,0,0,0,0,0,1
+"zone setpoint",1,0,0,0,0,0,0,0,0,1
+"zone temperature",11,0,0,0,0,0,0,239,0,250
+"zone temperature sensor",0,0,0,0,0,0,232,0,0,232
+"zone temperature setpoint",0,0,0,0,0,0,243,0,0,243
+"zone temperature site building room",0,0,0,0,0,1,0,0,0,1
+"zone volatileorganiccompound air quality sensor",0,1,0,0,0,0,0,0,0,1
