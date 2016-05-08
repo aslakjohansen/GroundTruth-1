@@ -1,0 +1,534 @@
+# baseURI: http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema
+
+@prefix : <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema>
+  rdf:type owl:Ontology ;
+.
+:AC
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Adjustment
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Air
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Alarm
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Booster
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Booster_Fan_Command
+  rdf:type owl:Class ;
+  :hasTag :Booster ;
+  :hasTag :Command ;
+  :hasTag :Fan ;
+  rdfs:subClassOf :TagSet ;
+.
+:Box
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:CO2
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:CO2_High_Alarm
+  rdf:type owl:Class ;
+  :hasTag :Alarm ;
+  :hasTag :CO2 ;
+  :hasTag :High ;
+  rdfs:subClassOf :TagSet ;
+.
+:CO2_Sensor
+  rdf:type owl:Class ;
+  :hasTag :CO2 ;
+  :hasTag :Sensor ;
+  rdfs:subClassOf :TagSet ;
+.
+:Chilled
+  rdf:type owl:Class ;
+  rdfs:label "Chilled"^^xsd:string ;
+  rdfs:subClassOf :Tag ;
+.
+:Chilled_Water_Pump
+  rdf:type owl:Class ;
+  rdfs:label "Chilled Water Pump"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Chilled_Water_System
+  rdf:type owl:Class ;
+  rdfs:label "Chilled Water System"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Command
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Control
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Cooling
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Cooling_Coil
+  rdf:type owl:Class ;
+  rdfs:label "Cooling Coil"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Cooling_Command
+  rdf:type owl:Class ;
+  :hasTag :Command ;
+  :hasTag :Cooling ;
+  rdfs:subClassOf :TagSet ;
+.
+:Cooling_Setpoint
+  rdf:type owl:Class ;
+  :hasTag :Cooling ;
+  :hasTag :Setpoint ;
+  rdfs:subClassOf :TagSet ;
+.
+:Cooling_Tower
+  rdf:type owl:Class ;
+  rdfs:label "Cooling Tower"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Cooling_Tower_Fan
+  rdf:type owl:Class ;
+  rdfs:label "Cooling Tower Fan"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Cooling_Tower_Fan_Setpoint
+  rdf:type owl:Class ;
+  rdfs:label "Cooling Tower Fan Setpoint"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Current
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:DC
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Damper
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Damper_Command
+  rdf:type owl:Class ;
+  :hasTag :Command ;
+  :hasTag :Damper ;
+  rdfs:subClassOf :TagSet ;
+.
+:Damper_Position
+  rdf:type owl:Class ;
+  :hasTag :Damper ;
+  :hasTag :Position ;
+  rdfs:subClassOf :TagSet ;
+.
+:Dataset
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Taggable ;
+.
+:DatasetEntry
+  rdf:type owl:Class ;
+  :isPartOf :Dataset ;
+  rdfs:subClassOf :Taggable ;
+.
+:Differential_Pressure_Setpoint
+  rdf:type owl:Class ;
+  rdfs:label "Differential Pressure Setpoint"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Discharge
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Discharge_Air
+  rdf:type owl:Class ;
+  :hasTag :Air ;
+  :hasTag :Discharge ;
+  rdfs:subClassOf :TagSet ;
+.
+:Discharge_Air_Flow_Sensor
+  rdf:type owl:Class ;
+  :hasTag :Air ;
+  :hasTag :Command ;
+  :hasTag :Discharge ;
+  :hasTag :Flow ;
+  rdfs:subClassOf :TagSet ;
+.
+:Discharge_Air_Sensor
+  rdf:type owl:Class ;
+  rdfs:label "Discharge Air Sensor"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Discharge_Air_Setpoint
+  rdf:type owl:Class ;
+  :hasTag :Air ;
+  :hasTag :Discharge ;
+  :hasTag :Setpoint ;
+  rdfs:subClassOf :TagSet ;
+.
+:Enable
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Energy
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Fan
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Fault
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Flow
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Freeze_Status
+  rdf:type owl:Class ;
+  rdfs:label "Freeze Status"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Heating
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Heating_Command
+  rdf:type owl:Class ;
+  :hasTag :Command ;
+  :hasTag :Heating ;
+  rdfs:subClassOf :TagSet ;
+.
+:Heating_Setpoint
+  rdf:type owl:Class ;
+  :hasTag :Heating ;
+  :hasTag :Setpoint ;
+  rdfs:subClassOf :TagSet ;
+.
+:High
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Hot
+  rdf:type owl:Class ;
+  rdfs:label "Hot"^^xsd:string ;
+  rdfs:subClassOf :Tag ;
+.
+:Hot_Water_Pump
+  rdf:type owl:Class ;
+  rdfs:label "Hot Water Pump"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Hot_Water_System
+  rdf:type owl:Class ;
+  rdfs:label "Hot Water System"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Indicator
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Label
+  rdf:type owl:Class ;
+  :isLabelOf :Dataset ;
+  rdfs:subClassOf :Taggable ;
+.
+:Lowerbound
+  rdf:type owl:Class ;
+  rdfs:label "Lowerbound"^^xsd:string ;
+  rdfs:subClassOf :Tag ;
+.
+:Max
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Min
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Occupancy
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Occupancy_Command
+  rdf:type owl:Class ;
+  :hasTag :Command ;
+  :hasTag :Occupancy ;
+  rdfs:subClassOf :TagSet ;
+.
+:Occupancy_Sensor
+  rdf:type owl:Class ;
+  :hasTag :Occupancy ;
+  :hasTag :Sensor ;
+  rdfs:subClassOf :TagSet ;
+.
+:Occupied
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Occupied_Cooling_Min_Discharge_Air_Flow
+  rdf:type owl:Class ;
+  :hasTag :Air ;
+  :hasTag :Cooling ;
+  :hasTag :Discharge ;
+  :hasTag :Flow ;
+  :hasTag :Min ;
+  :hasTag :Occupied ;
+  rdfs:subClassOf :TagSet ;
+.
+:Occupied_Heating_Discharge_Air_Flow
+  rdf:type owl:Class ;
+  :hasTag :Air ;
+  :hasTag :Discharge ;
+  :hasTag :Heating ;
+  :hasTag :Occupied ;
+  rdfs:subClassOf :TagSet ;
+.
+:PID
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Position
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Power
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Reheat
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Reheat_Valve
+  rdf:type owl:Class ;
+  :hasTag :Reheat ;
+  :hasTag :Valve ;
+  rdfs:subClassOf :TagSet ;
+.
+:Reheat_Valve_Command
+  rdf:type owl:Class ;
+  :hasTag :Command ;
+  :hasTag :Reheat ;
+  :hasTag :Valve ;
+  rdfs:subClassOf :TagSet ;
+.
+:Reset
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Sensor
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Setpoint
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Start
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Status
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Stop
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Tag
+  rdf:type owl:Class ;
+.
+:TagSet
+  rdf:type owl:Class ;
+  :hasTag :Tag ;
+  rdfs:subClassOf owl:Thing ;
+.
+:Taggable
+  rdf:type owl:Class ;
+  :hasTag :Tag ;
+  :hasTagSet :TagSet ;
+.
+:Temperature
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Temperature_Adjustment
+  rdf:type owl:Class ;
+  :hasTag :Temperature ;
+  rdfs:subClassOf :TagSet ;
+.
+:Thermostat
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Time
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Token
+  rdf:type owl:Class ;
+  :isPartOf :Label ;
+  rdfs:subClassOf :Taggable ;
+.
+:Upperbound
+  rdf:type owl:Class ;
+  rdfs:label "Upperbound"^^xsd:string ;
+  rdfs:subClassOf :Tag ;
+.
+:Valve
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Variable
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Variable_Air_Volume_Box
+  rdf:type owl:Class ;
+  :hasPoints :Booster_Fan_Command ;
+  :hasPoints :CO2_High_Alarm ;
+  :hasPoints :CO2_Sensor ;
+  :hasPoints :Cooling_Command ;
+  :hasPoints :Damper_Command ;
+  :hasPoints :Damper_Position ;
+  :hasPoints :Discharge_Air_Sensor ;
+  :hasPoints :Discharge_Air_Setpoint ;
+  :hasPoints :Heating_Command ;
+  :hasPoints :Occupancy_Command ;
+  :hasPoints :Occupancy_Sensor ;
+  :hasPoints :Reheat_Valve_Command ;
+  :hasSubAsset :Reheat_Valve ;
+  :hasSubAsset :Thermostat ;
+  :hasTag :Air ;
+  :hasTag :Box ;
+  :hasTag :Variable ;
+  :hasTag :Volume ;
+  rdfs:subClassOf :TagSet ;
+.
+:Variable_Frequency_Drive
+  rdf:type owl:Class ;
+  rdfs:label "Variable Frequency Drive"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Voltage
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Volume
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Water_Differential_Pressure
+  rdf:type owl:Class ;
+  rdfs:label "Water Differential Pressure"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Water_Discharge_Temperature
+  rdf:type owl:Class ;
+  rdfs:label "Water Discharge Temperature"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Water_Pump
+  rdf:type owl:Class ;
+  rdfs:label "Water Pump"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Water_Pump_Stop_Start_Command
+  rdf:type owl:Class ;
+  rdfs:label "Water Pump Stop Start Command"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Water_Return_Temperature
+  rdf:type owl:Class ;
+  rdfs:label "Water Return Temperature"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Water_System
+  rdf:type owl:Class ;
+  :hasSubAsset :Variable_Frequency_Drive ;
+  rdfs:label "Water System"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Zone
+  rdf:type owl:Class ;
+  rdfs:subClassOf :Tag ;
+.
+:Zone_Temperature
+  rdf:type owl:Class ;
+  :hasTag :Temperature ;
+  :hasTag :Zone ;
+  rdfs:subClassOf :TagSet ;
+.
+:Zone_Temperature_Lowerbound_Setpoint
+  rdf:type owl:Class ;
+  rdfs:label "Zone Temperature Lowerbound Setpoint"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:Zone_Temperature_Sensor
+  rdf:type owl:Class ;
+  :hasTag :Sensor ;
+  :hasTag :Temperature ;
+  :hasTag :Zone ;
+  rdfs:subClassOf :TagSet ;
+.
+:Zone_Temperature_Setpoint
+  rdf:type owl:Class ;
+  :hasTag :Setpoint ;
+  :hasTag :Temperature ;
+  :hasTag :Zone ;
+  rdfs:subClassOf :TagSet ;
+.
+:Zone_Temperature_Upperbound_Setpoint
+  rdf:type owl:Class ;
+  :hasTag "Setpoint"^^xsd:string ;
+  :hasTag "Temperature"^^xsd:string ;
+  :hasTag "Upperbound"^^xsd:string ;
+  :hasTag "Zone"^^xsd:string ;
+  rdfs:label "Zone Temperature Upperbound Setpoint"^^xsd:string ;
+  rdfs:subClassOf :TagSet ;
+.
+:hasPoints
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has points"^^xsd:string ;
+.
+:hasSubAsset
+  rdf:type owl:ObjectProperty ;
+.
+:hasTag
+  rdf:type owl:AnnotationProperty ;
+.
+:hasTagSet
+  rdf:type owl:AnnotationProperty ;
+.
+:isLabelOf
+  rdf:type owl:AnnotationProperty ;
+.
+:isPartOf
+  rdf:type owl:AnnotationProperty ;
+.
+owl:Thing
+  :isPartOf "" ;
+.
