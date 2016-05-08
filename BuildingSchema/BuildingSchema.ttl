@@ -1,534 +1,766 @@
-# baseURI: http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema
-
 @prefix : <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema>
-  rdf:type owl:Ontology ;
-.
-:AC
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Adjustment
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Air
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Alarm
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Booster
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Booster_Fan_Command
-  rdf:type owl:Class ;
-  :hasTag :Booster ;
-  :hasTag :Command ;
-  :hasTag :Fan ;
-  rdfs:subClassOf :TagSet ;
-.
-:Box
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:CO2
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:CO2_High_Alarm
-  rdf:type owl:Class ;
-  :hasTag :Alarm ;
-  :hasTag :CO2 ;
-  :hasTag :High ;
-  rdfs:subClassOf :TagSet ;
-.
-:CO2_Sensor
-  rdf:type owl:Class ;
-  :hasTag :CO2 ;
-  :hasTag :Sensor ;
-  rdfs:subClassOf :TagSet ;
-.
-:Chilled
-  rdf:type owl:Class ;
-  rdfs:label "Chilled"^^xsd:string ;
-  rdfs:subClassOf :Tag ;
-.
-:Chilled_Water_Pump
-  rdf:type owl:Class ;
-  rdfs:label "Chilled Water Pump"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Chilled_Water_System
-  rdf:type owl:Class ;
-  rdfs:label "Chilled Water System"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Command
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Control
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Cooling
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Cooling_Coil
-  rdf:type owl:Class ;
-  rdfs:label "Cooling Coil"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Cooling_Command
-  rdf:type owl:Class ;
-  :hasTag :Command ;
-  :hasTag :Cooling ;
-  rdfs:subClassOf :TagSet ;
-.
-:Cooling_Setpoint
-  rdf:type owl:Class ;
-  :hasTag :Cooling ;
-  :hasTag :Setpoint ;
-  rdfs:subClassOf :TagSet ;
-.
-:Cooling_Tower
-  rdf:type owl:Class ;
-  rdfs:label "Cooling Tower"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Cooling_Tower_Fan
-  rdf:type owl:Class ;
-  rdfs:label "Cooling Tower Fan"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Cooling_Tower_Fan_Setpoint
-  rdf:type owl:Class ;
-  rdfs:label "Cooling Tower Fan Setpoint"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Current
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:DC
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Damper
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Damper_Command
-  rdf:type owl:Class ;
-  :hasTag :Command ;
-  :hasTag :Damper ;
-  rdfs:subClassOf :TagSet ;
-.
-:Damper_Position
-  rdf:type owl:Class ;
-  :hasTag :Damper ;
-  :hasTag :Position ;
-  rdfs:subClassOf :TagSet ;
-.
-:Dataset
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Taggable ;
-.
-:DatasetEntry
-  rdf:type owl:Class ;
-  :isPartOf :Dataset ;
-  rdfs:subClassOf :Taggable ;
-.
-:Differential_Pressure_Setpoint
-  rdf:type owl:Class ;
-  rdfs:label "Differential Pressure Setpoint"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Discharge
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Discharge_Air
-  rdf:type owl:Class ;
-  :hasTag :Air ;
-  :hasTag :Discharge ;
-  rdfs:subClassOf :TagSet ;
-.
-:Discharge_Air_Flow_Sensor
-  rdf:type owl:Class ;
-  :hasTag :Air ;
-  :hasTag :Command ;
-  :hasTag :Discharge ;
-  :hasTag :Flow ;
-  rdfs:subClassOf :TagSet ;
-.
-:Discharge_Air_Sensor
-  rdf:type owl:Class ;
-  rdfs:label "Discharge Air Sensor"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Discharge_Air_Setpoint
-  rdf:type owl:Class ;
-  :hasTag :Air ;
-  :hasTag :Discharge ;
-  :hasTag :Setpoint ;
-  rdfs:subClassOf :TagSet ;
-.
-:Enable
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Energy
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Fan
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Fault
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Flow
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Freeze_Status
-  rdf:type owl:Class ;
-  rdfs:label "Freeze Status"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Heating
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Heating_Command
-  rdf:type owl:Class ;
-  :hasTag :Command ;
-  :hasTag :Heating ;
-  rdfs:subClassOf :TagSet ;
-.
-:Heating_Setpoint
-  rdf:type owl:Class ;
-  :hasTag :Heating ;
-  :hasTag :Setpoint ;
-  rdfs:subClassOf :TagSet ;
-.
-:High
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Hot
-  rdf:type owl:Class ;
-  rdfs:label "Hot"^^xsd:string ;
-  rdfs:subClassOf :Tag ;
-.
-:Hot_Water_Pump
-  rdf:type owl:Class ;
-  rdfs:label "Hot Water Pump"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Hot_Water_System
-  rdf:type owl:Class ;
-  rdfs:label "Hot Water System"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Indicator
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Label
-  rdf:type owl:Class ;
-  :isLabelOf :Dataset ;
-  rdfs:subClassOf :Taggable ;
-.
-:Lowerbound
-  rdf:type owl:Class ;
-  rdfs:label "Lowerbound"^^xsd:string ;
-  rdfs:subClassOf :Tag ;
-.
-:Max
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Min
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Occupancy
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Occupancy_Command
-  rdf:type owl:Class ;
-  :hasTag :Command ;
-  :hasTag :Occupancy ;
-  rdfs:subClassOf :TagSet ;
-.
-:Occupancy_Sensor
-  rdf:type owl:Class ;
-  :hasTag :Occupancy ;
-  :hasTag :Sensor ;
-  rdfs:subClassOf :TagSet ;
-.
-:Occupied
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Occupied_Cooling_Min_Discharge_Air_Flow
-  rdf:type owl:Class ;
-  :hasTag :Air ;
-  :hasTag :Cooling ;
-  :hasTag :Discharge ;
-  :hasTag :Flow ;
-  :hasTag :Min ;
-  :hasTag :Occupied ;
-  rdfs:subClassOf :TagSet ;
-.
-:Occupied_Heating_Discharge_Air_Flow
-  rdf:type owl:Class ;
-  :hasTag :Air ;
-  :hasTag :Discharge ;
-  :hasTag :Heating ;
-  :hasTag :Occupied ;
-  rdfs:subClassOf :TagSet ;
-.
-:PID
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Position
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Power
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Reheat
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Reheat_Valve
-  rdf:type owl:Class ;
-  :hasTag :Reheat ;
-  :hasTag :Valve ;
-  rdfs:subClassOf :TagSet ;
-.
-:Reheat_Valve_Command
-  rdf:type owl:Class ;
-  :hasTag :Command ;
-  :hasTag :Reheat ;
-  :hasTag :Valve ;
-  rdfs:subClassOf :TagSet ;
-.
-:Reset
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Sensor
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Setpoint
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Start
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Status
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Stop
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Tag
-  rdf:type owl:Class ;
-.
-:TagSet
-  rdf:type owl:Class ;
-  :hasTag :Tag ;
-  rdfs:subClassOf owl:Thing ;
-.
-:Taggable
-  rdf:type owl:Class ;
-  :hasTag :Tag ;
-  :hasTagSet :TagSet ;
-.
-:Temperature
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Temperature_Adjustment
-  rdf:type owl:Class ;
-  :hasTag :Temperature ;
-  rdfs:subClassOf :TagSet ;
-.
-:Thermostat
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Time
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Token
-  rdf:type owl:Class ;
-  :isPartOf :Label ;
-  rdfs:subClassOf :Taggable ;
-.
-:Upperbound
-  rdf:type owl:Class ;
-  rdfs:label "Upperbound"^^xsd:string ;
-  rdfs:subClassOf :Tag ;
-.
-:Valve
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Variable
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Variable_Air_Volume_Box
-  rdf:type owl:Class ;
-  :hasPoints :Booster_Fan_Command ;
-  :hasPoints :CO2_High_Alarm ;
-  :hasPoints :CO2_Sensor ;
-  :hasPoints :Cooling_Command ;
-  :hasPoints :Damper_Command ;
-  :hasPoints :Damper_Position ;
-  :hasPoints :Discharge_Air_Sensor ;
-  :hasPoints :Discharge_Air_Setpoint ;
-  :hasPoints :Heating_Command ;
-  :hasPoints :Occupancy_Command ;
-  :hasPoints :Occupancy_Sensor ;
-  :hasPoints :Reheat_Valve_Command ;
-  :hasSubAsset :Reheat_Valve ;
-  :hasSubAsset :Thermostat ;
-  :hasTag :Air ;
-  :hasTag :Box ;
-  :hasTag :Variable ;
-  :hasTag :Volume ;
-  rdfs:subClassOf :TagSet ;
-.
-:Variable_Frequency_Drive
-  rdf:type owl:Class ;
-  rdfs:label "Variable Frequency Drive"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Voltage
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Volume
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Water_Differential_Pressure
-  rdf:type owl:Class ;
-  rdfs:label "Water Differential Pressure"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Water_Discharge_Temperature
-  rdf:type owl:Class ;
-  rdfs:label "Water Discharge Temperature"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Water_Pump
-  rdf:type owl:Class ;
-  rdfs:label "Water Pump"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Water_Pump_Stop_Start_Command
-  rdf:type owl:Class ;
-  rdfs:label "Water Pump Stop Start Command"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Water_Return_Temperature
-  rdf:type owl:Class ;
-  rdfs:label "Water Return Temperature"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Water_System
-  rdf:type owl:Class ;
-  :hasSubAsset :Variable_Frequency_Drive ;
-  rdfs:label "Water System"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Zone
-  rdf:type owl:Class ;
-  rdfs:subClassOf :Tag ;
-.
-:Zone_Temperature
-  rdf:type owl:Class ;
-  :hasTag :Temperature ;
-  :hasTag :Zone ;
-  rdfs:subClassOf :TagSet ;
-.
-:Zone_Temperature_Lowerbound_Setpoint
-  rdf:type owl:Class ;
-  rdfs:label "Zone Temperature Lowerbound Setpoint"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:Zone_Temperature_Sensor
-  rdf:type owl:Class ;
-  :hasTag :Sensor ;
-  :hasTag :Temperature ;
-  :hasTag :Zone ;
-  rdfs:subClassOf :TagSet ;
-.
-:Zone_Temperature_Setpoint
-  rdf:type owl:Class ;
-  :hasTag :Setpoint ;
-  :hasTag :Temperature ;
-  :hasTag :Zone ;
-  rdfs:subClassOf :TagSet ;
-.
-:Zone_Temperature_Upperbound_Setpoint
-  rdf:type owl:Class ;
-  :hasTag "Setpoint"^^xsd:string ;
-  :hasTag "Temperature"^^xsd:string ;
-  :hasTag "Upperbound"^^xsd:string ;
-  :hasTag "Zone"^^xsd:string ;
-  rdfs:label "Zone Temperature Upperbound Setpoint"^^xsd:string ;
-  rdfs:subClassOf :TagSet ;
-.
-:hasPoints
-  rdf:type owl:ObjectProperty ;
-  rdfs:label "has points"^^xsd:string ;
-.
-:hasSubAsset
-  rdf:type owl:ObjectProperty ;
-.
-:hasTag
-  rdf:type owl:AnnotationProperty ;
-.
-:hasTagSet
-  rdf:type owl:AnnotationProperty ;
-.
-:isLabelOf
-  rdf:type owl:AnnotationProperty ;
-.
-:isPartOf
-  rdf:type owl:AnnotationProperty ;
-.
-owl:Thing
-  :isPartOf "" ;
-.
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasTag
+
+:hasTag a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasTagSet
+
+:hasTagSet a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isLabelOf
+
+:isLabelOf a owl:AnnotationProperty .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isPartOf
+
+:isPartOf a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasPoints
+
+:hasPoints a owl:ObjectProperty ;
+	rdfs:label "has points"^^xsd:string .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasSubAsset
+
+:hasSubAsset a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#AC
+
+:AC a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Adjustment
+
+:Adjustment a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Air
+
+:Air a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Alarm
+
+:Alarm a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Booster
+
+:Booster a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Booster_Fan_Command
+
+:Booster_Fan_Command a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Box
+
+:Box a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2
+
+:CO2 a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2_High_Alarm
+
+:CO2_High_Alarm a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2_Sensor
+
+:CO2_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled
+
+:Chilled a owl:Class ;
+	rdfs:subClassOf :Tag ;
+	rdfs:label "Chilled"^^xsd:string .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Pump
+
+:Chilled_Water_Pump a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Pump , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_System
+
+:Chilled_Water_System a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :System , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Coil
+
+:Coil a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Command
+
+:Command a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Control
+
+:Control a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling
+
+:Cooling a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Coil
+
+:Cooling_Coil a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Coil , :Cooling .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Command
+
+:Cooling_Command a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Setpoint
+
+:Cooling_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Cooling , :Setpoint .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower
+
+:Cooling_Tower a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Cooling , :Tower .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower_Fan
+
+:Cooling_Tower_Fan a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Cooling , :Fan , :Tower .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower_Fan_Setpoint
+
+:Cooling_Tower_Fan_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Cooling , :Fan , :Setpoint , :Tower .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Current
+
+:Current a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#DC
+
+:DC a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper
+
+:Damper a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Command
+
+:Damper_Command a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Position
+
+:Damper_Position a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Dataset
+
+:Dataset a owl:Class ;
+	rdfs:subClassOf :Taggable .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#DatasetEntry
+
+:DatasetEntry a owl:Class ;
+	rdfs:subClassOf :Taggable ;
+	:isPartOf :Dataset .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Differential
+
+:Differential a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge
+
+:Discharge a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air
+
+:Discharge_Air a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Discharge .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Flow_Sensor
+
+:Discharge_Air_Flow_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Command , :Discharge , :Flow .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Flow_Setpoint
+
+:Discharge_Air_Flow_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Discharge , :Flow , :Setpoint .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Drive
+
+:Drive a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Enable
+
+:Enable a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Energy
+
+:Energy a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Fan
+
+:Fan a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Fault
+
+:Fault a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Flow
+
+:Flow a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Freeze
+
+:Freeze a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Freeze_Status
+
+:Freeze_Status a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Freeze , :Status .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Frequency
+
+:Frequency a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating
+
+:Heating a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating_Command
+
+:Heating_Command a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating_Setpoint
+
+:Heating_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Heating , :Setpoint .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#High
+
+:High a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot
+
+:Hot a owl:Class ;
+	rdfs:subClassOf :Tag ;
+	rdfs:label "Hot"^^xsd:string .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Pump
+
+:Hot_Water_Pump a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Hot , :System , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_System
+
+:Hot_Water_System a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Hot , :System , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Indicator
+
+:Indicator a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Label
+
+:Label a owl:Class ;
+	rdfs:subClassOf :Taggable ;
+	:isLabelOf :Dataset .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Lowerbound
+
+:Lowerbound a owl:Class ;
+	rdfs:subClassOf :Tag ;
+	rdfs:label "Lowerbound"^^xsd:string .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Max
+
+:Max a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Min
+
+:Min a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy
+
+:Occupancy a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy_Command
+
+:Occupancy_Command a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy_Sensor
+
+:Occupancy_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupied
+
+:Occupied a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupied_Cooling_Min_Discharge_Air_Flow
+
+:Occupied_Cooling_Min_Discharge_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Cooling , :Discharge , :Flow , :Min , :Occupied .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupied_Heating_Discharge_Air_Flow
+
+:Occupied_Heating_Discharge_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Discharge , :Heating , :Occupied .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#PID
+
+:PID a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Position
+
+:Position a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Power
+
+:Power a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Pressure
+
+:Pressure a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Pump
+
+:Pump a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat
+
+:Reheat a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat_Valve
+
+:Reheat_Valve a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat_Valve_Command
+
+:Reheat_Valve_Command a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reset
+
+:Reset a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Return
+
+:Return a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Sensor
+
+:Sensor a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Setpoint
+
+:Setpoint a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Start
+
+:Start a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Status
+
+:Status a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Stop
+
+:Stop a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#System
+
+:System a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Tag
+
+:Tag a owl:Class .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#TagSet
+
+:TagSet a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	:hasTag :Tag , :Tower .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Taggable
+
+:Taggable a owl:Class ;
+	:hasTag :Tag ;
+	:hasTagSet :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Temperature
+
+:Temperature a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Temperature_Adjustment
+
+:Temperature_Adjustment a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Adjustment , :Temperature .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Thermostat
+
+:Thermostat a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Time
+
+:Time a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Token
+
+:Token a owl:Class ;
+	rdfs:subClassOf :Taggable ;
+	:isPartOf :Label .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Tower
+
+:Tower a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Upperbound
+
+:Upperbound a owl:Class ;
+	rdfs:subClassOf :Tag ;
+	rdfs:label "Upperbound"^^xsd:string .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Valve
+
+:Valve a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable
+
+:Variable a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Air_Volume_Box
+
+:Variable_Air_Volume_Box a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Frequency_Drive
+
+:Variable_Frequency_Drive a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Voltage
+
+:Voltage a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Volume
+
+:Volume a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water
+
+:Water a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Differential_Pressure
+
+:Water_Differential_Pressure a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Differential , :Pressure , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Discharge_Temperature
+
+:Water_Discharge_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Discharge , :Temperature , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Pump
+
+:Water_Pump a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Pump , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Pump_Start_Stop_Command
+
+:Water_Pump_Start_Stop_Command a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Command , :Pump , :Start , :Stop , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Return_Temperature
+
+:Water_Return_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Return , :Temperature , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_System
+
+:Water_System a owl:Class ;
+	rdfs:subClassOf :TagSet .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone
+
+:Zone a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature
+
+:Zone_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Lowerbound_Setpoint
+
+:Zone_Temperature_Lowerbound_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Lowerbound , :Setpoint , :Temperature , :Upperbound , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Sensor
+
+:Zone_Temperature_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Sensor , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Setpoint
+
+:Zone_Temperature_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Setpoint , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Upperbound_Setpoint
+
+:Zone_Temperature_Upperbound_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Setpoint , :Temperature , :Upperbound , :Zone .
+# 
+# http://www.w3.org/2002/07/owl#Thing
+
+owl:Thing :isPartOf "" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Booster_Fan_Command
+
+:Booster_Fan_Command a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2_High_Alarm
+
+:CO2_High_Alarm a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2_Sensor
+
+:CO2_Sensor a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Command
+
+:Cooling_Command a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Command
+
+:Damper_Command a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Position
+
+:Damper_Position a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Sensor
+
+:Discharge_Air_Sensor a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Setpoint
+
+:Discharge_Air_Setpoint a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating_Command
+
+:Heating_Command a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy_Command
+
+:Occupancy_Command a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy_Sensor
+
+:Occupancy_Sensor a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat_Valve
+
+:Reheat_Valve a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat_Valve_Command
+
+:Reheat_Valve_Command a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Thermostat
+
+:Thermostat a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Air_Volume_Box
+
+:Variable_Air_Volume_Box a owl:NamedIndividual ;
+	:hasPoints :Booster_Fan_Command , :CO2_High_Alarm , :CO2_Sensor , :Cooling_Command , :Damper_Command , :Damper_Position , :Discharge_Air_Sensor , :Discharge_Air_Setpoint , :Heating_Command , :Occupancy_Command , :Occupancy_Sensor , :Reheat_Valve_Command ;
+	:hasSubAsset :Reheat_Valve , :Thermostat .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Frequency_Drive
+
+:Variable_Frequency_Drive a owl:NamedIndividual .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_System
+
+:Water_System a owl:NamedIndividual ;
+	:hasSubAsset :Variable_Frequency_Drive .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Annotations
+# #
+# #################################################################
+# 
+# 
+
+:Booster_Fan_Command :hasTag :Booster , :Fan , :Command .
+# 
+
+:CO2_High_Alarm :hasTag :CO2 , :Alarm , :High .
+# 
+
+:CO2_Sensor :hasTag :CO2 , :Sensor .
+# 
+
+:Cooling_Command :hasTag :Command , :Cooling .
+# 
+
+:Damper_Command :hasTag :Damper , :Command .
+# 
+
+:Damper_Position :hasTag :Damper , :Position .
+# 
+
+:Heating_Command :hasTag :Command , :Heating .
+# 
+
+:Occupancy_Command :hasTag :Command , :Occupancy .
+# 
+
+:Occupancy_Sensor :hasTag :Sensor , :Occupancy .
+# 
+
+:Reheat_Valve :hasTag :Valve , :Reheat .
+# 
+
+:Reheat_Valve_Command :hasTag :Reheat , :Valve , :Command .
+# 
+
+:Variable_Air_Volume_Box :hasTag :Volume , :Variable , :Box , :Air .
+# 
+
+:Variable_Frequency_Drive :hasTag :Frequency , :Drive , :Variable .
+# 
+
+:Water_System :hasTag :System , :Water .
+# 
+# Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi
