@@ -63,6 +63,11 @@
 :AC a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Acceleration
+
+:Acceleration a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Adjustment
 
 :Adjustment a owl:Class ;
@@ -114,17 +119,53 @@
 	rdfs:subClassOf :Tag ;
 	rdfs:label "Chilled"^^xsd:string .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Differential_Pressure
+
+:Chilled_Water_Differential_Pressure a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Differential , :Pressure , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Differential_Pressure_Setpoint
+
+:Chilled_Water_Differential_Pressure_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Differential , :Pressure , :Setpoint , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Flow
+
+:Chilled_Water_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Flow , :Water .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Pump
 
 :Chilled_Water_Pump a owl:Class ;
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Chilled , :Pump , :Water .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Return_Temperature
+
+:Chilled_Water_Return_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Return , :Temperature , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Supply_Temperature
+
+:Chilled_Water_Supply_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Supply , :Temperature , :Water .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_System
 
 :Chilled_Water_System a owl:Class ;
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Chilled , :System , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Valve
+
+:Chilled_Water_Valve a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Chilled , :Valve , :Water .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Coil
 
@@ -157,6 +198,12 @@
 :Cooling_Command a owl:Class ;
 	rdfs:subClassOf :TagSet .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Max_Discharge_Air_Flow
+
+:Cooling_Max_Discharge_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Cooling , :Discharge , :Flow , :Max .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Setpoint
 
 :Cooling_Setpoint a owl:Class ;
@@ -175,11 +222,11 @@
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Cooling , :Fan , :Tower .
 # 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower_Fan_Setpoint
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower_Fan_Speed_Setpoint
 
-:Cooling_Tower_Fan_Setpoint a owl:Class ;
+:Cooling_Tower_Fan_Speed_Setpoint a owl:Class ;
 	rdfs:subClassOf :TagSet ;
-	:hasTag :Cooling , :Fan , :Setpoint , :Tower .
+	:hasTag :Cooling , :Fan , :Setpoint , :Speed , :Tower .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Current
 
@@ -217,9 +264,19 @@
 	rdfs:subClassOf :Taggable ;
 	:isPartOf :Dataset .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Deceleration
+
+:Deceleration a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Differential
 
 :Differential a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Direction
+
+:Direction a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge
@@ -245,9 +302,26 @@
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Air , :Discharge , :Flow , :Setpoint .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Temperature
+
+:Discharge_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Discharge , :Temperature .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Temperature_Setpoint
+
+:Discharge_Air_Temperature_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Discharge , :Setpoint , :Temperature .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Drive
 
 :Drive a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Effective
+
+:Effective a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Enable
@@ -260,6 +334,23 @@
 :Energy a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Exhaust
+
+:Exhaust a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Exhaust_Air_Flow
+
+:Exhaust_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Exhaust , :Flow .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Exhaust_Air_Temperature
+
+:Exhaust_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Exhaust , :Temperature .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Fan
 
 :Fan a owl:Class ;
@@ -268,6 +359,11 @@
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Fault
 
 :Fault a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Filter
+
+:Filter a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Flow
@@ -318,17 +414,57 @@
 	rdfs:subClassOf :Tag ;
 	rdfs:label "Hot"^^xsd:string .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Differential_Pressure
+
+:Hot_Water_Differential_Pressure a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Differential , :Hot , :Pressure , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Differential_Pressure_Setpoint
+
+:Hot_Water_Differential_Pressure_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Differential , :Hot , :Pressure , :Setpoint , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Flow
+
+:Hot_Water_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Flow , :Hot , :Water .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Pump
 
 :Hot_Water_Pump a owl:Class ;
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Hot , :System , :Water .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Return_Temperature
+
+:Hot_Water_Return_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Hot , :Return , :Temperature , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Supply_Temperature
+
+:Hot_Water_Supply_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Hot , :Supply , :Temperature , :Water .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_System
 
 :Hot_Water_System a owl:Class ;
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Hot , :System , :Water .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Humidity
+
+:Humidity a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Illumination
+
+:Illumination a owl:Class ;
+	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Indicator
 
@@ -355,6 +491,22 @@
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Min
 
 :Min a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Mixed
+
+:Mixed a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Mixed_Air_Temperature
+
+:Mixed_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Mixed , :Temperature .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Motor
+
+:Motor a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy
@@ -388,6 +540,53 @@
 :Occupied_Heating_Discharge_Air_Flow a owl:Class ;
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Air , :Discharge , :Heating , :Occupied .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside
+
+:Outside a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_CO2_Sensor
+
+:Outside_Air_CO2_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :CO2 , :Outside , :Sensor .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Damper_Position
+
+:Outside_Air_Damper_Position a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Damper , :Outside , :Position .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Flow
+
+:Outside_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Flow , :Outside .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Humidity
+
+:Outside_Air_Humidity a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Humidity , :Outside .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Min_Damper_Position
+
+:Outside_Air_Min_Damper_Position a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Damper , :Min , :Outside , :Position .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Temperature
+
+:Outside_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Outside , :Temperature .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Min_Air_Flow
+
+:Outside_Min_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Flow , :Min , :Outside .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#PID
 
@@ -439,6 +638,18 @@
 :Return a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Return_Air_Flow
+
+:Return_Air_Flow a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Flow , :Return .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Return_Air_Temperature
+
+:Return_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Air , :Return , :Temperature .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Sensor
 
 :Sensor a owl:Class ;
@@ -447,6 +658,16 @@
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Setpoint
 
 :Setpoint a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Speed
+
+:Speed a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Standby
+
+:Standby a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Start
@@ -462,6 +683,11 @@
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Stop
 
 :Stop a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Supply
+
+:Supply a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#System
@@ -515,6 +741,11 @@
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Tower
 
 :Tower a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Unoccupied
+
+:Unoccupied a owl:Class ;
 	rdfs:subClassOf :Tag .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Upperbound
@@ -593,10 +824,57 @@
 :Water_System a owl:Class ;
 	rdfs:subClassOf :TagSet .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Wind
+
+:Wind a owl:Class ;
+	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Wind_Direction
+
+:Wind_Direction a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Direction , :Wind .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Wind_Speed
+
+:Wind_Speed a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Speed , :Wind .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone
 
 :Zone a owl:Class ;
 	rdfs:subClassOf :Tag .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_CO2_Setpoint
+
+:Zone_CO2_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :CO2 , :Setpoint , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Humidity_Sensor
+
+:Zone_Humidity_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Humidity , :Sensor , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Humidity_Setpoint
+
+:Zone_Humidity_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Humidity , :Setpoint , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Illumination_Sensor
+
+:Zone_Illumination_Sensor a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Illumination , :Sensor , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Illumination_Setpoint
+
+:Zone_Illumination_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Illumination , :Setpoint , :Zone .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature
 
@@ -604,11 +882,35 @@
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Temperature , :Zone .
 # 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Lowerbound_Setpoint
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Effective_Cooling_Setpoint
 
-:Zone_Temperature_Lowerbound_Setpoint a owl:Class ;
+:Zone_Temperature_Effective_Cooling_Setpoint a owl:Class ;
 	rdfs:subClassOf :TagSet ;
-	:hasTag :Lowerbound , :Setpoint , :Temperature , :Upperbound , :Zone .
+	:hasTag :Cooling , :Effective , :Setpoint , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Effective_Heating_Setpoint
+
+:Zone_Temperature_Effective_Heating_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Effective , :Heating , :Setpoint , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Effective_Setpoint
+
+:Zone_Temperature_Effective_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Setpoint , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Occupied_Cooling_Setpoint
+
+:Zone_Temperature_Occupied_Cooling_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Cooling , :Occupied , :Setpoint , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Occupied_Heating_Setpoint
+
+:Zone_Temperature_Occupied_Heating_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Heating , :Occupied , :Setpoint , :Temperature , :Zone .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Sensor
 
@@ -622,11 +924,29 @@
 	rdfs:subClassOf :TagSet ;
 	:hasTag :Setpoint , :Temperature , :Zone .
 # 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Upperbound_Setpoint
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Standby_Cooling_Setpoint
 
-:Zone_Temperature_Upperbound_Setpoint a owl:Class ;
+:Zone_Temperature_Standby_Cooling_Setpoint a owl:Class ;
 	rdfs:subClassOf :TagSet ;
-	:hasTag :Setpoint , :Temperature , :Upperbound , :Zone .
+	:hasTag :Cooling , :Setpoint , :Standby , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Standby_Heating_Setpoint
+
+:Zone_Temperature_Standby_Heating_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Heating , :Setpoint , :Standby , :Temperature , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Unoccupied_Cooling_Setpoint
+
+:Zone_Temperature_Unoccupied_Cooling_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Cooling , :Setpoint , :Temperature , :Unoccupied , :Zone .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Unoccupied_Heating_Setpoint
+
+:Zone_Temperature_Unoccupied_Heating_Setpoint a owl:Class ;
+	rdfs:subClassOf :TagSet ;
+	:hasTag :Heating , :Setpoint , :Temperature , :Unoccupied , :Zone .
 # 
 # http://www.w3.org/2002/07/owl#Thing
 
@@ -761,6 +1081,6 @@ owl:Thing :isPartOf "" .
 :Variable_Frequency_Drive :hasTag :Frequency , :Drive , :Variable .
 # 
 
-:Water_System :hasTag :System , :Water .
+:Water_System :hasTag :Water , :System .
 # 
-# Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi
+# Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi
