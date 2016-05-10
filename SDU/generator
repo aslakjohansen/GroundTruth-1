@@ -49,6 +49,33 @@ def flow_meter (prefix):
     }
     return ports
 
+def heat_exchanger (prefix):
+    # actors
+    primary_surface = URIRef(prefix+'/primary')
+    secondary_surface = URIRef(prefix+'/secondary')
+    exchanger = URIRef(prefix+'/exchanger')
+    
+    # types
+    g.add( (primary_surface, RDF.type, BS['Coil']) )
+    g.add( (secondary_surface, RDF.type, BS['Coil']) )
+    g.add( (exchanger, RDF.type, BS['System']) )
+    
+    # relationships
+    g.add( (primary_surface, BS.feeds, exchanger) )
+    g.add( (secondary_surface, BS.feeds, exchanger) )
+    g.add( (exchanger, BS.feeds, primary_surface) )
+    g.add( (exchanger, BS.feeds, secondary_surface) )
+    
+    # ports
+    ports = {
+        'primary input': [primary_surface],
+        'primary output': [primary_surface],
+        'control': [exchanger],
+        'secondary input': [secondary_surface],
+        'secondary output': [secondary_surface],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -60,6 +87,7 @@ building = URIRef(prefix)
 g.add( (building, RDF.type, BS['Building']) )
 
 fm = flow_meter(prefix+'/flowmeter')
+he = heat_exchanger(prefix+'/heatexchanger')
 
 ################################################################################
 ############################################################### back matter ####
