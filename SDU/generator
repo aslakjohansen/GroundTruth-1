@@ -2,6 +2,10 @@
 
 from rdflib import Graph, Namespace, URIRef
 
+################################################################################
+############################################################## front matter ####
+################################################################################
+
 BS = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 
@@ -9,9 +13,65 @@ g = Graph()
 g.bind('rdf', RDF)
 g.bind('bs', BS)
 
+################################################################################
+################################################################ constructs ####
+################################################################################
+
+def flow_meter (prefix):
+    global g
+    
+    # actors
+    flow_sensor = URIRef(prefix+'/flow_sensor')
+    supply_temperature_sensor = URIRef(prefix+'/supply_temperature_sensor')
+    return_temperature_sensor = URIRef(prefix+'/return_temperature_sensor')
+    power_calculator = URIRef(prefix+'/power_calculator')
+    
+    # types
+    g.add( (flow_sensor, RDF.type, BS['Flow']) )
+    g.add( (flow_sensor, RDF.type, BS['Sensor']) )
+    g.add( (supply_temperature_sensor, RDF.type, BS['Supply']) )
+    g.add( (supply_temperature_sensor, RDF.type, BS['Hot']) )
+    g.add( (supply_temperature_sensor, RDF.type, BS['Water']) )
+    g.add( (supply_temperature_sensor, RDF.type, BS['Temperature']) )
+    g.add( (supply_temperature_sensor, RDF.type, BS['Sensor']) )
+    g.add( (return_temperature_sensor, RDF.type, BS['Return']) )
+    g.add( (return_temperature_sensor, RDF.type, BS['Hot']) )
+    g.add( (return_temperature_sensor, RDF.type, BS['Water']) )
+    g.add( (return_temperature_sensor, RDF.type, BS['Temperature']) )
+    g.add( (return_temperature_sensor, RDF.type, BS['Sensor']) )
+    g.add( (power_calculator, RDF.type, BS['Power']) )
+    g.add( (power_calculator, RDF.type, BS['Sensor']) )
+    
+    # relationships
+    g.add( (flow_sensor, BS.feeds, supply_temperature_sensor) )
+    g.add( (flow_sensor, BS.feeds, power_calculator) )
+    g.add( (supply_temperature_sensor, BS.feeds, power_calculator) )
+    g.add( (return_temperature_sensor, BS.feeds, power_calculator) )
+    
+    # ports
+    ports = {
+      'supply': [flow_sensor],
+      'metered supply': [supply_temperature_sensor],
+      'return': [return_temperature_sensor],
+      'metered return': [return_temperature_sensor],
+    }
+    return ports
+
+################################################################################
+###################################################################### main ####
+################################################################################
+
+prefix = 'building:gtc'
+
 # building
-building_id = URIRef('building:gtc')
-g.add( (building_id, RDF.type, BS['Building']) )
+building = URIRef(prefix)
+g.add( (building, RDF.type, BS['Building']) )
+
+fm = flow_meter(prefix+'/flowmeter')
+
+################################################################################
+############################################################### back matter ####
+################################################################################
 
 g.serialize('sdu_gtc.ttl', 'turtle')
 
