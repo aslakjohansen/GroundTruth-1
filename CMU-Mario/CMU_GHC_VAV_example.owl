@@ -1,0 +1,3222 @@
+@prefix : <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema> .
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema> rdf:type owl:Ontology .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isLabelOf
+
+:isLabelOf rdf:type owl:AnnotationProperty .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isPartOf
+
+:isPartOf rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#feeds
+
+:feeds rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasPoint
+
+:hasPoint rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasSubAsset
+
+:hasSubAsset rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasTag
+
+:hasTag rdf:type owl:ObjectProperty ;
+        
+        rdfs:domain :Taggable ;
+        
+        rdfs:range :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasTagSet
+
+:hasTagSet rdf:type owl:ObjectProperty ;
+           
+           rdfs:subPropertyOf :hasTag ;
+           
+           rdfs:domain :Taggable ;
+           
+           rdfs:range :TagSet .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#hasToken
+
+:hasToken rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isLocatedIn
+
+:isLocatedIn rdf:type owl:ObjectProperty .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isTokenOf
+
+:isTokenOf rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#AC
+
+:AC rdf:type owl:Class ;
+    
+    rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Acceleration
+
+:Acceleration rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Adjustment
+
+:Adjustment rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Air
+
+:Air rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Alarm
+
+:Alarm rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Booster
+
+:Booster rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Booster_Fan_Command
+
+:Booster_Fan_Command rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :TagSet ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTag ;
+                                       owl:someValuesFrom :Booster
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTag ;
+                                       owl:someValuesFrom :Command
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTag ;
+                                       owl:someValuesFrom :Fan
+                                     ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Box
+
+:Box rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Building
+
+:Building rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2
+
+:CO2 rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2_High_Alarm
+
+:CO2_High_Alarm rdf:type owl:Class ;
+                
+                rdfs:subClassOf :TagSet ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Alarm
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :CO2
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :High
+                                ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CO2_Sensor
+
+:CO2_Sensor rdf:type owl:Class ;
+            
+            rdfs:subClassOf :TagSet ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTag ;
+                              owl:someValuesFrom :CO2
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTag ;
+                              owl:someValuesFrom :Sensor
+                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled
+
+:Chilled rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag ;
+         
+         rdfs:label "Chilled"^^xsd:string .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Differential_Pressure
+
+:Chilled_Water_Differential_Pressure rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :TagSet ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Chilled
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Differential
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Pressure
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Water
+                                                     ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Differential_Pressure_Setpoint
+
+:Chilled_Water_Differential_Pressure_Setpoint rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf :TagSet ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Chilled
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Differential
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Pressure
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Setpoint
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Water
+                                                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Flow
+
+:Chilled_Water_Flow rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :TagSet ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom :Chilled
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom :Flow
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom :Water
+                                    ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Pump
+
+:Chilled_Water_Pump rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :TagSet ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom :Chilled
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom :Pump
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom :Water
+                                    ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Return_Temperature
+
+:Chilled_Water_Return_Temperature rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :TagSet ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Chilled
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Return
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Temperature
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Water
+                                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Supply_Temperature
+
+:Chilled_Water_Supply_Temperature rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :TagSet ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Chilled
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Supply
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Temperature
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Water
+                                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_System
+
+:Chilled_Water_System rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :TagSet ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Chilled
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :System
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Water
+                                      ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Chilled_Water_Valve
+
+:Chilled_Water_Valve rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :TagSet ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTag ;
+                                       owl:someValuesFrom :Chilled
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTag ;
+                                       owl:someValuesFrom :Valve
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :hasTag ;
+                                       owl:someValuesFrom :Water
+                                     ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Coil
+
+:Coil rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Command
+
+:Command rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Control
+
+:Control rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling
+
+:Cooling rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Coil
+
+:Cooling_Coil rdf:type owl:Class ;
+              
+              rdfs:subClassOf :TagSet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Coil
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Cooling
+                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Command
+
+:Cooling_Command rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :TagSet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Command
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Cooling
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Max_Discharge_Air_Flow
+
+:Cooling_Max_Discharge_Air_Flow rdf:type owl:Class ;
+                                
+                                rdfs:subClassOf :TagSet ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasTag ;
+                                                  owl:someValuesFrom :Air
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasTag ;
+                                                  owl:someValuesFrom :Cooling
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasTag ;
+                                                  owl:someValuesFrom :Discharge
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasTag ;
+                                                  owl:someValuesFrom :Flow
+                                                ] ,
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :hasTag ;
+                                                  owl:someValuesFrom :Max
+                                                ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Setpoint
+
+:Cooling_Setpoint rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Cooling
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Setpoint
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower
+
+:Cooling_Tower rdf:type owl:Class ;
+               
+               rdfs:subClassOf :TagSet ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTag ;
+                                 owl:someValuesFrom :Cooling
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTag ;
+                                 owl:someValuesFrom :Tower
+                               ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower_Fan
+
+:Cooling_Tower_Fan rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :TagSet ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Cooling
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Fan
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Tower
+                                   ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cooling_Tower_Fan_Speed_Setpoint
+
+:Cooling_Tower_Fan_Speed_Setpoint rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :TagSet ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Cooling
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Fan
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Setpoint
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Speed
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty :hasTag ;
+                                                    owl:someValuesFrom :Tower
+                                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Current
+
+:Current rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#DC
+
+:DC rdf:type owl:Class ;
+    
+    rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper
+
+:Damper rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Command
+
+:Damper_Command rdf:type owl:Class ;
+                
+                rdfs:subClassOf :TagSet ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Command
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Damper
+                                ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Position
+
+:Damper_Position rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :TagSet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Damper
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Position
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Dataset
+
+:Dataset rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Taggable .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#DatasetEntry
+
+:DatasetEntry rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Taggable ;
+              
+              :isPartOf :Dataset .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Deceleration
+
+:Deceleration rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Differential
+
+:Differential rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Direction
+
+:Direction rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge
+
+:Discharge rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air
+
+:Discharge_Air rdf:type owl:Class ;
+               
+               rdfs:subClassOf :TagSet ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTag ;
+                                 owl:someValuesFrom :Air
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTag ;
+                                 owl:someValuesFrom :Discharge
+                               ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Flow_Request
+
+:Discharge_Air_Flow_Request rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :TagSet ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Air
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Discharge
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Flow
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Request
+                                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Flow_Sensor
+
+:Discharge_Air_Flow_Sensor rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :TagSet ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Air
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Command
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Discharge
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Flow
+                                           ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Flow_Setpoint
+
+:Discharge_Air_Flow_Setpoint rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :TagSet ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Air
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Discharge
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Flow
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Setpoint
+                                             ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Temperature
+
+:Discharge_Air_Temperature rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :TagSet ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Air
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Discharge
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Temperature
+                                           ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Air_Temperature_Setpoint
+
+:Discharge_Air_Temperature_Setpoint rdf:type owl:Class ;
+                                    
+                                    rdfs:subClassOf :TagSet ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasTag ;
+                                                      owl:someValuesFrom :Air
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasTag ;
+                                                      owl:someValuesFrom :Discharge
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasTag ;
+                                                      owl:someValuesFrom :Setpoint
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty :hasTag ;
+                                                      owl:someValuesFrom :Temperature
+                                                    ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Drive
+
+:Drive rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Effective
+
+:Effective rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Enable
+
+:Enable rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Energy
+
+:Energy rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Exhaust
+
+:Exhaust rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Exhaust_Air_Flow
+
+:Exhaust_Air_Flow rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Air
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Exhaust
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Flow
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Exhaust_Air_Temperature
+
+:Exhaust_Air_Temperature rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :TagSet ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Air
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Exhaust
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Temperature
+                                         ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Fan
+
+:Fan rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Fault
+
+:Fault rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Filter
+
+:Filter rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Floor
+
+:Floor rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Flow
+
+:Flow rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Freeze
+
+:Freeze rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Freeze_Status
+
+:Freeze_Status rdf:type owl:Class ;
+               
+               rdfs:subClassOf :TagSet ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTag ;
+                                 owl:someValuesFrom :Freeze
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :hasTag ;
+                                 owl:someValuesFrom :Status
+                               ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Frequency
+
+:Frequency rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heater
+
+:Heater rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating
+
+:Heating rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating_Command
+
+:Heating_Command rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :TagSet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Command
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Heating
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating_Setpoint
+
+:Heating_Setpoint rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Heating
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Setpoint
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#High
+
+:High rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot
+
+:Hot rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag ;
+     
+     rdfs:label "Hot"^^xsd:string .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Differential_Pressure
+
+:Hot_Water_Differential_Pressure rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :TagSet ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Differential
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Hot
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Pressure
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Water
+                                                 ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Differential_Pressure_Setpoint
+
+:Hot_Water_Differential_Pressure_Setpoint rdf:type owl:Class ;
+                                          
+                                          rdfs:subClassOf :TagSet ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasTag ;
+                                                            owl:someValuesFrom :Differential
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasTag ;
+                                                            owl:someValuesFrom :Hot
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasTag ;
+                                                            owl:someValuesFrom :Pressure
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasTag ;
+                                                            owl:someValuesFrom :Setpoint
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty :hasTag ;
+                                                            owl:someValuesFrom :Water
+                                                          ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Flow
+
+:Hot_Water_Flow rdf:type owl:Class ;
+                
+                rdfs:subClassOf :TagSet ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Flow
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Hot
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Water
+                                ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Pump
+
+:Hot_Water_Pump rdf:type owl:Class ;
+                
+                rdfs:subClassOf :TagSet ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Hot
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :System
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Water
+                                ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Return_Temperature
+
+:Hot_Water_Return_Temperature rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :TagSet ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Hot
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Return
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Temperature
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Water
+                                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_Supply_Temperature
+
+:Hot_Water_Supply_Temperature rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :TagSet ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Hot
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Supply
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Temperature
+                                              ] ,
+                                              [ rdf:type owl:Restriction ;
+                                                owl:onProperty :hasTag ;
+                                                owl:someValuesFrom :Water
+                                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Hot_Water_System
+
+:Hot_Water_System rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Hot
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :System
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Water
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Humidity
+
+:Humidity rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Illumination
+
+:Illumination rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Indicator
+
+:Indicator rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Label
+
+:Label rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Taggable ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasToken ;
+                         owl:someValuesFrom :Token
+                       ] ;
+       
+       :isLabelOf :Dataset .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Lowerbound
+
+:Lowerbound rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Tag ;
+            
+            rdfs:label "Lowerbound"^^xsd:string .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Max
+
+:Max rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Min
+
+:Min rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Mixed
+
+:Mixed rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Mixed_Air_Temperature
+
+:Mixed_Air_Temperature rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :TagSet ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTag ;
+                                         owl:someValuesFrom :Air
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTag ;
+                                         owl:someValuesFrom :Mixed
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTag ;
+                                         owl:someValuesFrom :Temperature
+                                       ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Motor
+
+:Motor rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy
+
+:Occupancy rdf:type owl:Class ;
+           
+           rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy_Command
+
+:Occupancy_Command rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :TagSet ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Command
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Occupancy
+                                   ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupancy_Sensor
+
+:Occupancy_Sensor rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Occupancy
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Sensor
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupied
+
+:Occupied rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupied_Cooling_Min_Discharge_Air_Flow
+
+:Occupied_Cooling_Min_Discharge_Air_Flow rdf:type owl:Class ;
+                                         
+                                         rdfs:subClassOf :TagSet ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTag ;
+                                                           owl:someValuesFrom :Air
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTag ;
+                                                           owl:someValuesFrom :Cooling
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTag ;
+                                                           owl:someValuesFrom :Discharge
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTag ;
+                                                           owl:someValuesFrom :Flow
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTag ;
+                                                           owl:someValuesFrom :Min
+                                                         ] ,
+                                                         [ rdf:type owl:Restriction ;
+                                                           owl:onProperty :hasTag ;
+                                                           owl:someValuesFrom :Occupied
+                                                         ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Occupied_Heating_Discharge_Air_Flow
+
+:Occupied_Heating_Discharge_Air_Flow rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :TagSet ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Air
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Discharge
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Heating
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Occupied
+                                                     ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Organization
+
+:Organization rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside
+
+:Outside rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_CO2_Sensor
+
+:Outside_Air_CO2_Sensor rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :TagSet ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Air
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :CO2
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Outside
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Sensor
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Damper_Position
+
+:Outside_Air_Damper_Position rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :TagSet ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Air
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Damper
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Outside
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Position
+                                             ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Flow
+
+:Outside_Air_Flow rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Air
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Flow
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Outside
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Humidity
+
+:Outside_Air_Humidity rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :TagSet ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Air
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Humidity
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Outside
+                                      ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Min_Damper_Position
+
+:Outside_Air_Min_Damper_Position rdf:type owl:Class ;
+                                 
+                                 rdfs:subClassOf :TagSet ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Air
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Damper
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Min
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Outside
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty :hasTag ;
+                                                   owl:someValuesFrom :Position
+                                                 ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Air_Temperature
+
+:Outside_Air_Temperature rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :TagSet ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Air
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Outside
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Temperature
+                                         ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Outside_Min_Air_Flow
+
+:Outside_Min_Air_Flow rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :TagSet ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Air
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Flow
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Min
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Outside
+                                      ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#PID
+
+:PID rdf:type owl:Class ;
+     
+     rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Position
+
+:Position rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Power
+
+:Power rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Pressure
+
+:Pressure rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Pump
+
+:Pump rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat
+
+:Reheat rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat_Valve
+
+:Reheat_Valve rdf:type owl:Class ;
+              
+              rdfs:subClassOf :TagSet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Reheat
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Valve
+                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reheat_Valve_Command
+
+:Reheat_Valve_Command rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :TagSet ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Command
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Reheat
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Valve
+                                      ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Request
+
+:Request rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Reset
+
+:Reset rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Return
+
+:Return rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Return_Air_Flow
+
+:Return_Air_Flow rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :TagSet ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Air
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Flow
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom :Return
+                                 ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Return_Air_Temperature
+
+:Return_Air_Temperature rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :TagSet ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Air
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Return
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Temperature
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Room
+
+:Room rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Sensor
+
+:Sensor rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Setpoint
+
+:Setpoint rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Space
+
+:Space rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Space_Heater
+
+:Space_Heater rdf:type owl:Class ;
+              
+              rdfs:subClassOf :TagSet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Heater
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Space
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isLocatedIn ;
+                                owl:someValuesFrom :Room
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isLocatedIn ;
+                                owl:someValuesFrom :Zone
+                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Speed
+
+:Speed rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Standby
+
+:Standby rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Start
+
+:Start rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Status
+
+:Status rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Stop
+
+:Stop rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Supply
+
+:Supply rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#System
+
+:System rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Tag
+
+:Tag rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#TagSet
+
+:TagSet rdf:type owl:Class ;
+        
+        rdfs:subClassOf owl:Thing .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Taggable
+
+:Taggable rdf:type owl:Class .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Temperature
+
+:Temperature rdf:type owl:Class ;
+             
+             rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Temperature_Adjustment
+
+:Temperature_Adjustment rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :TagSet ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Adjustment
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Temperature
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Thermostat
+
+:Thermostat rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Time
+
+:Time rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Token
+
+:Token rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Taggable ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTag ;
+                         owl:someValuesFrom :Token
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasTagSet ;
+                         owl:someValuesFrom :TagSet
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :isTokenOf ;
+                         owl:someValuesFrom :Label
+                       ] ;
+       
+       :isPartOf :Label .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Tower
+
+:Tower rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Unoccupied
+
+:Unoccupied rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Upperbound
+
+:Upperbound rdf:type owl:Class ;
+            
+            rdfs:subClassOf :Tag ;
+            
+            rdfs:label "Upperbound"^^xsd:string .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Valve
+
+:Valve rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable
+
+:Variable rdf:type owl:Class ;
+          
+          rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Air_Volume_Box
+
+:Variable_Air_Volume_Box rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :TagSet ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :feeds ;
+                                           owl:someValuesFrom :Room
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :feeds ;
+                                           owl:someValuesFrom :Zone
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Booster_Fan_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :CO2_High_Alarm
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :CO2_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Cooling_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Cooling_Max_Discharge_Air_Flow
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Damper_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Damper_Position
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Flow_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Flow_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Temperature
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Temperature_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Heating_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupancy_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupancy_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupied_Cooling_Min_Discharge_Air_Flow
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupied_Heating_Discharge_Air_Flow
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Reheat_Valve
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Reheat_Valve_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_CO2_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Humidity_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Humidity_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Illumination_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Illumination_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Effective_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Effective_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Effective_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Occupied_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Occupied_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Standby_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Standby_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Unoccupied_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Unoccupied_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Air
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Box
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Variable
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Volume
+                                         ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Frequency_Drive
+
+:Variable_Frequency_Drive rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :TagSet ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Drive
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Frequency
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Variable
+                                          ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Voltage
+
+:Voltage rdf:type owl:Class ;
+         
+         rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Volume
+
+:Volume rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water
+
+:Water rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Differential_Pressure
+
+:Water_Differential_Pressure rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :TagSet ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Differential
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Pressure
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Water
+                                             ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Discharge_Temperature
+
+:Water_Discharge_Temperature rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :TagSet ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Discharge
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Temperature
+                                             ] ,
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty :hasTag ;
+                                               owl:someValuesFrom :Water
+                                             ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Pump
+
+:Water_Pump rdf:type owl:Class ;
+            
+            rdfs:subClassOf :TagSet ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTag ;
+                              owl:someValuesFrom :Pump
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTag ;
+                              owl:someValuesFrom :Water
+                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Pump_Start_Stop_Command
+
+:Water_Pump_Start_Stop_Command rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :TagSet ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasTag ;
+                                                 owl:someValuesFrom :Command
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasTag ;
+                                                 owl:someValuesFrom :Pump
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasTag ;
+                                                 owl:someValuesFrom :Start
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasTag ;
+                                                 owl:someValuesFrom :Stop
+                                               ] ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :hasTag ;
+                                                 owl:someValuesFrom :Water
+                                               ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_Return_Temperature
+
+:Water_Return_Temperature rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :TagSet ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Return
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Temperature
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Water
+                                          ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Water_System
+
+:Water_System rdf:type owl:Class ;
+              
+              rdfs:subClassOf :TagSet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :System
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Water
+                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Wind
+
+:Wind rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Wind_Direction
+
+:Wind_Direction rdf:type owl:Class ;
+                
+                rdfs:subClassOf :TagSet ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Direction
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom :Wind
+                                ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Wind_Speed
+
+:Wind_Speed rdf:type owl:Class ;
+            
+            rdfs:subClassOf :TagSet ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTag ;
+                              owl:someValuesFrom :Speed
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty :hasTag ;
+                              owl:someValuesFrom :Wind
+                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone
+
+:Zone rdf:type owl:Class ;
+      
+      rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_CO2_Setpoint
+
+:Zone_CO2_Setpoint rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :TagSet ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :CO2
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Setpoint
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom :Zone
+                                   ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Humidity_Sensor
+
+:Zone_Humidity_Sensor rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :TagSet ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Humidity
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Sensor
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom :Zone
+                                      ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Humidity_Setpoint
+
+:Zone_Humidity_Setpoint rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :TagSet ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Humidity
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Setpoint
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom :Zone
+                                        ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Illumination_Sensor
+
+:Zone_Illumination_Sensor rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :TagSet ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Illumination
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Sensor
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty :hasTag ;
+                                            owl:someValuesFrom :Zone
+                                          ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Illumination_Setpoint
+
+:Zone_Illumination_Setpoint rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :TagSet ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Illumination
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Setpoint
+                                            ] ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :hasTag ;
+                                              owl:someValuesFrom :Zone
+                                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature
+
+:Zone_Temperature rdf:type owl:Class ;
+                  
+                  rdfs:subClassOf :TagSet ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Temperature
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty :hasTag ;
+                                    owl:someValuesFrom :Zone
+                                  ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Effective_Cooling_Setpoint
+
+:Zone_Temperature_Effective_Cooling_Setpoint rdf:type owl:Class ;
+                                             
+                                             rdfs:subClassOf :TagSet ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Cooling
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Effective
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Setpoint
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Temperature
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Zone
+                                                             ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Effective_Heating_Setpoint
+
+:Zone_Temperature_Effective_Heating_Setpoint rdf:type owl:Class ;
+                                             
+                                             rdfs:subClassOf :TagSet ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Effective
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Heating
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Setpoint
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Temperature
+                                                             ] ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty :hasTag ;
+                                                               owl:someValuesFrom :Zone
+                                                             ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Effective_Setpoint
+
+:Zone_Temperature_Effective_Setpoint rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :TagSet ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Setpoint
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Temperature
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :hasTag ;
+                                                       owl:someValuesFrom :Zone
+                                                     ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Occupied_Cooling_Setpoint
+
+:Zone_Temperature_Occupied_Cooling_Setpoint rdf:type owl:Class ;
+                                            
+                                            rdfs:subClassOf :TagSet ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Cooling
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Occupied
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Setpoint
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Temperature
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Zone
+                                                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Occupied_Heating_Setpoint
+
+:Zone_Temperature_Occupied_Heating_Setpoint rdf:type owl:Class ;
+                                            
+                                            rdfs:subClassOf :TagSet ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Heating
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Occupied
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Setpoint
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Temperature
+                                                            ] ,
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty :hasTag ;
+                                                              owl:someValuesFrom :Zone
+                                                            ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Sensor
+
+:Zone_Temperature_Sensor rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :TagSet ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Temperature
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasTag ;
+                                           owl:someValuesFrom :Zone
+                                         ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Setpoint
+
+:Zone_Temperature_Setpoint rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :TagSet ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Setpoint
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Temperature
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom :Zone
+                                           ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Standby_Cooling_Setpoint
+
+:Zone_Temperature_Standby_Cooling_Setpoint rdf:type owl:Class ;
+                                           
+                                           rdfs:subClassOf :TagSet ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Cooling
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Setpoint
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Standby
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Temperature
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Zone
+                                                           ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Standby_Heating_Setpoint
+
+:Zone_Temperature_Standby_Heating_Setpoint rdf:type owl:Class ;
+                                           
+                                           rdfs:subClassOf :TagSet ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Heating
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Setpoint
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Standby
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Temperature
+                                                           ] ,
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :hasTag ;
+                                                             owl:someValuesFrom :Zone
+                                                           ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Unoccupied_Cooling_Setpoint
+
+:Zone_Temperature_Unoccupied_Cooling_Setpoint rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf :TagSet ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Cooling
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Setpoint
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Temperature
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Unoccupied
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Zone
+                                                              ] .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Unoccupied_Heating_Setpoint
+
+:Zone_Temperature_Unoccupied_Heating_Setpoint rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf :TagSet ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Heating
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Setpoint
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Temperature
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Unoccupied
+                                                              ] ,
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty :hasTag ;
+                                                                owl:someValuesFrom :Zone
+                                                              ] .
+
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+
+owl:Thing :isPartOf "" .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Airflow
+
+:Airflow rdf:type owl:NamedIndividual ,
+                  :Token ;
+         
+         :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Airflow_Request
+
+:Airflow_Request rdf:type owl:NamedIndividual ,
+                          :Token ;
+                 
+                 :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Airflow_Setpoint
+
+:Airflow_Setpoint rdf:type owl:NamedIndividual ,
+                           :Token ;
+                  
+                  :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Building_CMU_GHC
+
+:Building_CMU_GHC rdf:type owl:NamedIndividual ,
+                           :Building .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU
+
+:CMU rdf:type owl:NamedIndividual ,
+              :Token ;
+     
+     :hasTag :Carnegie_Mellon_University .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Carnegie_Mellon_University
+
+:Carnegie_Mellon_University rdf:type owl:NamedIndividual ,
+                                     :Organization .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cool_Request
+
+:Cool_Request rdf:type owl:NamedIndividual ,
+                       :Token ;
+              
+              :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Corridor_8100_Central
+
+:Corridor_8100_Central rdf:type owl:NamedIndividual ,
+                                :Token ;
+                       
+                       :hasTag :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Position
+
+:Damper_Position rdf:type owl:NamedIndividual ,
+                          :Token ;
+                 
+                 :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Temp
+
+:Discharge_Temp rdf:type owl:NamedIndividual ,
+                         :Token ;
+                
+                :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Eighth_Floor
+
+:Eighth_Floor rdf:type owl:NamedIndividual ,
+                       :Token ;
+              
+              :hasTag :CMU/SCSC_Gates:Eighth_Floor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#HWV_Command
+
+:HWV_Command rdf:type owl:NamedIndividual ,
+                      :Token ;
+             
+             :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heat_Request
+
+:Heat_Request rdf:type owl:NamedIndividual ,
+                       :Token ;
+              
+              :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#SCSC_Gates
+
+:SCSC_Gates rdf:type owl:NamedIndividual ,
+                     :Token ;
+            
+            :hasTag :Building_CMU_GHC .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#VAV
+
+:VAV rdf:type owl:NamedIndividual ,
+              :Token ;
+     
+     :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#ZTMP_HI
+
+:ZTMP_HI rdf:type owl:NamedIndividual ,
+                  :Token ;
+         
+         :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#ZTMP_LO
+
+:ZTMP_LO rdf:type owl:NamedIndividual ,
+                  :Token ;
+         
+         :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temp___Zone_Temp
+
+:Zone_Temp___Zone_Temp rdf:type owl:NamedIndividual ,
+                                :Token ;
+                       
+                       :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow rdf:type owl:NamedIndividual ,
+                                                                        :Label ;
+                                                               
+                                                               :hasToken :Airflow ,
+                                                                         :CMU ,
+                                                                         :Corridor_8100_Central ,
+                                                                         :Eighth_Floor ,
+                                                                         :SCSC_Gates ,
+                                                                         :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Request
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Request rdf:type owl:NamedIndividual ,
+                                                                                :Label ;
+                                                                       
+                                                                       :hasToken :Airflow_Request ,
+                                                                                 :CMU ,
+                                                                                 :Corridor_8100_Central ,
+                                                                                 :Eighth_Floor ,
+                                                                                 :SCSC_Gates ,
+                                                                                 :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Setpoint
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Setpoint rdf:type owl:NamedIndividual ,
+                                                                                 :Label ;
+                                                                        
+                                                                        :hasToken :Airflow_Setpoint ,
+                                                                                  :CMU ,
+                                                                                  :Corridor_8100_Central ,
+                                                                                  :Eighth_Floor ,
+                                                                                  :SCSC_Gates ,
+                                                                                  :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Cool_Request
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Cool_Request rdf:type owl:NamedIndividual ,
+                                                                             :Label ;
+                                                                    
+                                                                    :hasToken :CMU ,
+                                                                              :Cool_Request ,
+                                                                              :Corridor_8100_Central ,
+                                                                              :Eighth_Floor ,
+                                                                              :SCSC_Gates ,
+                                                                              :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Damper_Position
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Damper_Position rdf:type owl:NamedIndividual ,
+                                                                                :Label ;
+                                                                       
+                                                                       :hasToken :CMU ,
+                                                                                 :Corridor_8100_Central ,
+                                                                                 :Damper_Position ,
+                                                                                 :Eighth_Floor ,
+                                                                                 :SCSC_Gates ,
+                                                                                 :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Discharge_Temp
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Discharge_Temp rdf:type owl:NamedIndividual ,
+                                                                               :Label ;
+                                                                      
+                                                                      :hasToken :CMU ,
+                                                                                :Corridor_8100_Central ,
+                                                                                :Discharge_Temp ,
+                                                                                :Eighth_Floor ,
+                                                                                :SCSC_Gates ,
+                                                                                :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/HWV_Command
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/HWV_Command rdf:type owl:NamedIndividual ,
+                                                                            :Label ;
+                                                                   
+                                                                   :hasToken :CMU ,
+                                                                             :Corridor_8100_Central ,
+                                                                             :Eighth_Floor ,
+                                                                             :HWV_Command ,
+                                                                             :SCSC_Gates ,
+                                                                             :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Heat_Request
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Heat_Request rdf:type owl:NamedIndividual ,
+                                                                             :Label ;
+                                                                    
+                                                                    :hasToken :CMU ,
+                                                                              :Corridor_8100_Central ,
+                                                                              :Eighth_Floor ,
+                                                                              :Heat_Request ,
+                                                                              :SCSC_Gates ,
+                                                                              :VAV .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_HI
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_HI rdf:type owl:NamedIndividual ,
+                                                                        :Label ;
+                                                               
+                                                               :hasToken :CMU ,
+                                                                         :Corridor_8100_Central ,
+                                                                         :Eighth_Floor ,
+                                                                         :SCSC_Gates ,
+                                                                         :VAV ,
+                                                                         :ZTMP_HI .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_LO
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_LO rdf:type owl:NamedIndividual ,
+                                                                        :Label ;
+                                                               
+                                                               :hasToken :CMU ,
+                                                                         :Corridor_8100_Central ,
+                                                                         :Eighth_Floor ,
+                                                                         :SCSC_Gates ,
+                                                                         :VAV ,
+                                                                         :ZTMP_LO .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Zone_Temp___Zone_Temp
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Zone_Temp___Zone_Temp rdf:type owl:NamedIndividual ,
+                                                                                      :Label ;
+                                                                             
+                                                                             :hasToken :CMU ,
+                                                                                       :Corridor_8100_Central ,
+                                                                                       :Eighth_Floor ,
+                                                                                       :SCSC_Gates ,
+                                                                                       :VAV ,
+                                                                                       :Zone_Temp___Zone_Temp .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow:Discharge_Air_Flow_Sensor
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow:Discharge_Air_Flow_Sensor rdf:type owl:NamedIndividual ;
+                                                                                         
+                                                                                         :hasTagSet :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command rdf:type owl:NamedIndividual ,
+                                                                                :Cooling_Command .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central rdf:type owl:NamedIndividual ,
+                                                                                      :Room .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position rdf:type owl:NamedIndividual ,
+                                                                                :Damper_Position .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request rdf:type owl:NamedIndividual ,
+                                                                                           :Discharge_Air_Flow_Request .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor rdf:type owl:NamedIndividual ,
+                                                                                          :Discharge_Air_Flow_Sensor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint rdf:type owl:NamedIndividual ,
+                                                                                            :Discharge_Air_Flow_Setpoint .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature rdf:type owl:NamedIndividual ,
+                                                                                          :Discharge_Air_Temperature .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command rdf:type owl:NamedIndividual ,
+                                                                                :Heating_Command .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command rdf:type owl:NamedIndividual ,
+                                                                                     :Reheat_Valve_Command .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box rdf:type owl:NamedIndividual ,
+                                                                                        :Variable_Air_Volume_Box ;
+                                                                               
+                                                                               :feeds :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central ;
+                                                                               
+                                                                               :hasPoint :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint ,
+                                                                                         :CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint rdf:type owl:NamedIndividual ,
+                                                                                                            :Zone_Temperature_Effective_Cooling_Setpoint .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint rdf:type owl:NamedIndividual ,
+                                                                                                            :Zone_Temperature_Effective_Heating_Setpoint .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor
+
+:CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor rdf:type owl:NamedIndividual ,
+                                                                                        :Zone_Temperature_Sensor .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates:Eighth_Floor
+
+:CMU/SCSC_Gates:Eighth_Floor rdf:type owl:NamedIndividual ,
+                                      :Floor .
+
+
+
+
+###  Generated by the OWL API (version 4.2.1.20160306-0033) https://github.com/owlcs/owlapi
+
