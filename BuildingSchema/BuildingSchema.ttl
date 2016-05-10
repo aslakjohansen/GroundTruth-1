@@ -83,6 +83,12 @@
 
 
 
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isLocatedIn
+
+:isLocatedIn rdf:type owl:ObjectProperty .
+
+
+
 ###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#isTokenOf
 
 :isTokenOf rdf:type owl:ObjectProperty .
@@ -946,6 +952,14 @@
 
 
 
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heater
+
+:Heater rdf:type owl:Class ;
+        
+        rdfs:subClassOf :Tag .
+
+
+
 ###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heating
 
 :Heating rdf:type owl:Class ;
@@ -1700,6 +1714,38 @@
 
 
 
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Space
+
+:Space rdf:type owl:Class ;
+       
+       rdfs:subClassOf :Tag .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Space_Heater
+
+:Space_Heater rdf:type owl:Class ;
+              
+              rdfs:subClassOf :TagSet ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Heater
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom :Space
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isLocatedIn ;
+                                owl:someValuesFrom :Room
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :isLocatedIn ;
+                                owl:someValuesFrom :Zone
+                              ] .
+
+
+
 ###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Speed
 
 :Speed rdf:type owl:Class ;
@@ -1885,6 +1931,14 @@
 :Variable_Air_Volume_Box rdf:type owl:Class ;
                          
                          rdfs:subClassOf :TagSet ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :feeds ;
+                                           owl:someValuesFrom :Room
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :feeds ;
+                                           owl:someValuesFrom :Zone
+                                         ] ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTag ;
                                            owl:someValuesFrom :Air
@@ -2531,12 +2585,51 @@ owl:Thing :isPartOf "" .
 #################################################################
 
 
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Building_EBU3B
+
+:Building_EBU3B rdf:type owl:NamedIndividual ,
+                         :Building .
+
+
+
 ###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#EBU3B
 
 :EBU3B rdf:type owl:NamedIndividual ,
                 :Token ;
        
-       :hasTag :tag:EBU3B .
+       :hasTag :Building_EBU3B .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#EBU3B_RM2150
+
+:EBU3B_RM2150 rdf:type owl:NamedIndividual ,
+                       :Label ;
+              
+              :hasToken :EBU3B ,
+                        :RM2150 .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#EBU3B_SH2TSR2150
+
+:EBU3B_SH2TSR2150 rdf:type owl:NamedIndividual ,
+                           :Label ;
+                  
+                  :hasToken :EBU3B ,
+                            :R2150 ,
+                            :SH2 ,
+                            :TS .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#EBU3B_VAV1
+
+:EBU3B_VAV1 rdf:type owl:NamedIndividual ,
+                     :Label ;
+            
+            :hasToken :EBU3B ,
+                      :VAV1 .
 
 
 
@@ -2549,6 +2642,15 @@ owl:Thing :isPartOf "" .
                                 :RM2150 ,
                                 :TS ,
                                 :VAV1 .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#R2150
+
+:R2150 rdf:type owl:NamedIndividual ,
+                :Token ;
+       
+       :hasTagSet :Room_2150 .
 
 
 
@@ -2565,6 +2667,24 @@ owl:Thing :isPartOf "" .
 
 :Room_2150 rdf:type owl:NamedIndividual ,
                     :Room .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#SH2
+
+:SH2 rdf:type owl:NamedIndividual ,
+              :Token ;
+     
+     :hasTagSet :Space_Heater_1 .
+
+
+
+###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Space_Heater_1
+
+:Space_Heater_1 rdf:type owl:NamedIndividual ,
+                         :Space_Heater ;
+                
+                :isLocatedIn :Room_2150 .
 
 
 
@@ -2589,7 +2709,9 @@ owl:Thing :isPartOf "" .
 ###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Air_Volume_Box_1
 
 :Variable_Air_Volume_Box_1 rdf:type owl:NamedIndividual ,
-                                    :Variable_Air_Volume_Box .
+                                    :Variable_Air_Volume_Box ;
+                           
+                           :feeds :Room_2150 .
 
 
 
@@ -2597,13 +2719,6 @@ owl:Thing :isPartOf "" .
 
 :Zone_Temperature_Setpoint_1 rdf:type owl:NamedIndividual ,
                                       :Zone_Temperature_Setpoint .
-
-
-
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#tag:EBU3B
-
-:tag:EBU3B rdf:type owl:NamedIndividual ,
-                    :Building .
 
 
 
