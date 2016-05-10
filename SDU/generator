@@ -18,8 +18,6 @@ g.bind('bs', BS)
 ################################################################################
 
 def flow_meter (prefix):
-    global g
-    
     # actors
     flow_sensor = URIRef(prefix+'/flow_sensor')
     supply_temperature_sensor = URIRef(prefix+'/supply_temperature_sensor')
