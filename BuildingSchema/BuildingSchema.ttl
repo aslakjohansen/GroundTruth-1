@@ -1940,6 +1940,158 @@
                                            owl:someValuesFrom :Zone
                                          ] ,
                                          [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Booster_Fan_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :CO2_High_Alarm
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :CO2_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Cooling_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Cooling_Max_Discharge_Air_Flow
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Damper_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Damper_Position
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Flow_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Flow_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Temperature
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Discharge_Air_Temperature_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Heating_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupancy_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupancy_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupied_Cooling_Min_Discharge_Air_Flow
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Occupied_Heating_Discharge_Air_Flow
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Reheat_Valve
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Reheat_Valve_Command
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_CO2_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Humidity_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Humidity_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Illumination_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Illumination_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Effective_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Effective_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Effective_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Occupied_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Occupied_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Sensor
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Standby_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Standby_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Unoccupied_Cooling_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty :hasPoint ;
+                                           owl:someValuesFrom :Zone_Temperature_Unoccupied_Heating_Setpoint
+                                         ] ,
+                                         [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTag ;
                                            owl:someValuesFrom :Air
                                          ] ,
@@ -2711,7 +2863,9 @@ owl:Thing :isPartOf "" .
 :Variable_Air_Volume_Box_1 rdf:type owl:NamedIndividual ,
                                     :Variable_Air_Volume_Box ;
                            
-                           :feeds :Room_2150 .
+                           :feeds :Room_2150 ;
+                           
+                           :hasPoint :Zone_Temperature_Setpoint_1 .
 
 
 
