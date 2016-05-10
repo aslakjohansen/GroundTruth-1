@@ -1,0 +1,10 @@
+#!/usr/bin/env python
+
+from rdflib import Graph, Namespace
+
+SCHEMA = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
+
+g = Graph()
+
+g.serialize('sdu_gtc.ttl', 'turtle')
+
