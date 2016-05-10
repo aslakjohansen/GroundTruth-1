@@ -143,6 +143,35 @@ def central_heating_group (prefix):
     }
     return ports
 
+def filter_element (prefix):
+    # actors
+    filter_obj = URIRef(prefix+'/filter')
+    pressure_before = URIRef(prefix+'/pressure_before')
+    pressure_after  = URIRef(prefix+'/pressure_after')
+    dpt = URIRef(prefix+'/dpt')
+    
+    # types
+    g.add( (filter_obj, RDF.type, BS['Filter']) )
+    g.add( (pressure_before, RDF.type, BS['Pressure']) )
+    g.add( (pressure_before, RDF.type, BS['Sensor']) )
+    g.add( (pressure_after, RDF.type, BS['Pressure']) )
+    g.add( (pressure_after, RDF.type, BS['Sensor']) )
+    g.add( (dpt, RDF.type, BS['Differential']) )
+    g.add( (dpt, RDF.type, BS['Pressure']) )
+    
+    # relationships
+    g.add( (pressure_before, BS.feeds, filter_obj) )
+    g.add( (filter_obj, BS.feeds, pressure_after) )
+    g.add( (pressure_before, BS.feeds, dpt) )
+    g.add( (pressure_after, BS.feeds, dpt) )
+    
+    # ports
+    ports = {
+        'input':  [pressure_before],
+        'output': [pressure_after],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -157,6 +186,7 @@ g.add( (building, RDF.type, BS['Building']) )
 #he = heat_exchanger(prefix+'/heatexchanger')
 #htg = heat_transfer_group (prefix+'/htg')
 chg = central_heating_group(prefix+'/chg')
+fe = filter_element(prefix+'/fe')
 
 ################################################################################
 ############################################################### back matter ####
