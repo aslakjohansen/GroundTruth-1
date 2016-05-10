@@ -116,6 +116,33 @@ def heat_transfer_group (prefix):
     }
     return ports
 
+def central_heating_group (prefix):
+    # actors
+    fm = flow_meter(prefix+'/flowmeter')
+    htg_radiator = heat_transfer_group(prefix+'/radiator')
+    htg_floor = heat_transfer_group(prefix+'/floor')
+    
+    # types
+    
+    # relationships
+    m2m_add(fm['metered supply'], BS.feeds, htg_radiator['primary input'])
+    m2m_add(fm['metered supply'], BS.feeds, htg_floor['primary input'])
+    m2m_add(htg_radiator['primary output'], BS.feeds, fm['metered return'])
+    m2m_add(htg_floor['primary output'], BS.feeds, fm['metered return'])
+    
+    # ports
+    ports = {
+        'central input':  fm['supply'],
+        'central output': fm['return'],
+        'metered central input':  fm['metered return'],
+        'metered central output': fm['metered supply'],
+        'radiator input':  htg_radiator['secondary input'],
+        'radiator output': htg_radiator['secondary output'],
+        'floor input':  htg_floor['secondary input'],
+        'floor output': htg_floor['secondary output'],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -128,7 +155,8 @@ g.add( (building, RDF.type, BS['Building']) )
 
 #fm = flow_meter(prefix+'/flowmeter')
 #he = heat_exchanger(prefix+'/heatexchanger')
-htg = heat_transfer_group (prefix+'/htg')
+#htg = heat_transfer_group (prefix+'/htg')
+chg = central_heating_group(prefix+'/chg')
 
 ################################################################################
 ############################################################### back matter ####
