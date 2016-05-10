@@ -2708,18 +2708,157 @@ owl:Thing :isPartOf "" .
 # #################################################################
 # 
 # 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Damper_Position
+
+:Damper_Position a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Damper_Position
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Damper_Position> a owl:NamedIndividual , :Label ;
+	:hasToken :Damper_Position , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position> a owl:NamedIndividual , :Damper_Position .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Discharge_Temp
+
+:Discharge_Temp a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Discharge_Temp
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Discharge_Temp> a owl:NamedIndividual , :Label ;
+	:hasToken :Discharge_Temp , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature> a owl:NamedIndividual , :Discharge_Air_Temperature .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Heat_Request
+
+:Heat_Request a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Heat_Request
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Heat_Request> a owl:NamedIndividual , :Label ;
+	:hasToken :Heat_Request , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command> a owl:NamedIndividual , :Heating_Command .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#HWV_Command
+
+:HWV_Command a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/HWV_Command
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/HWV_Command> a owl:NamedIndividual , :Label ;
+	:hasToken :HWV_Command , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command> a owl:NamedIndividual , :Reheat_Valve_Command .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temp___Zone_Temp
+
+:Zone_Temp___Zone_Temp a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Zone_Temp___Zone_Temp
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Zone_Temp___Zone_Temp> a owl:NamedIndividual , :Label ;
+	:hasToken :Zone_Temp___Zone_Temp , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor> a owl:NamedIndividual , :Zone_Temperature_Sensor .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#ZTMP_HI
+
+:ZTMP_HI a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_HI
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_HI> a owl:NamedIndividual , :Label ;
+	:hasToken :ZTMP_HI , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint> a owl:NamedIndividual , :Zone_Temperature_Effective_Heating_Setpoint .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#ZTMP_LO
+
+:ZTMP_LO a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_LO
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/ZTMP_LO> a owl:NamedIndividual , :Label ;
+	:hasToken :ZTMP_LO , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint> a owl:NamedIndividual , :Zone_Temperature_Effective_Cooling_Setpoint .
+# 
+##############
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Cool_Request
+
+:Cool_Request a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command> .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Cool_Request
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Cool_Request> a owl:NamedIndividual , :Label ;
+	:hasToken :Cool_Request , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command> a owl:NamedIndividual , :Cooling_Command .
+# 
+
+################
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Airflow
 
 :Airflow a owl:NamedIndividual , :Token ;
 	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor> .
 # 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Airflow_Request
+
+:Airflow_Request a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request> .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Airflow_Setpoint
+
+:Airflow_Setpoint a owl:NamedIndividual , :Token ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint> .
+# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Building_CMU_GHC
 
 :Building_CMU_GHC a owl:NamedIndividual , :Building .
-# 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Building_EBU3B
-
-:Building_EBU3B a owl:NamedIndividual , :Building .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU
 
@@ -2740,38 +2879,51 @@ owl:Thing :isPartOf "" .
 :Eighth_Floor a owl:NamedIndividual , :Token ;
 	:hasTag <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates:Eighth_Floor> .
 # 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Room_2150
-
-:Room_2150 a owl:NamedIndividual , :Room .
-# 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#SCSC_Gates
 
 :SCSC_Gates a owl:NamedIndividual , :Token ;
 	:hasTag :Building_CMU_GHC .
-# 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Space_Heater_1
-
-:Space_Heater_1 a owl:NamedIndividual , :Space_Heater ;
-	:isLocatedIn :Room_2150 .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#VAV
 
 :VAV a owl:NamedIndividual , :Token ;
 	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box> .
 # 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Variable_Air_Volume_Box_1
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow
 
-:Variable_Air_Volume_Box_1 a owl:NamedIndividual , :Variable_Air_Volume_Box ;
-	:feeds :Room_2150 ;
-	:hasPoint :Zone_Temperature_Setpoint_1 .
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow> a owl:NamedIndividual , :Label ;
+	:hasToken :Airflow , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
 # 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#Zone_Temperature_Setpoint_1
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Request
 
-:Zone_Temperature_Setpoint_1 a owl:NamedIndividual , :Zone_Temperature_Setpoint .
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Request> a owl:NamedIndividual , :Label ;
+	:hasToken :Airflow_Request , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Setpoint
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Setpoint> a owl:NamedIndividual , :Label ;
+	:hasToken :Airflow_Setpoint , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Request
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow_Request> a owl:NamedIndividual , :Label .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow:Discharge_Air_Flow_Sensor
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow:Discharge_Air_Flow_Sensor> a owl:NamedIndividual ;
+	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor> .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central
 
 <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central> a owl:NamedIndividual , :Room .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request> a owl:NamedIndividual , :Discharge_Air_Flow_Request .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint
+
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint> a owl:NamedIndividual , :Discharge_Air_Flow_Setpoint .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor
 
@@ -2779,17 +2931,10 @@ owl:Thing :isPartOf "" .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box
 
-<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box> a owl:NamedIndividual , :Variable_Air_Volume_Box .
-# 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow
 
-<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow> a owl:NamedIndividual , :Label ;
-	:hasToken :Airflow , :CMU , :Corridor_8100_Central , :Eighth_Floor , :SCSC_Gates , :VAV .
-# 
-# http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow:Discharge_Air_Flow_Sensor
-
-<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central/Airflow:Discharge_Air_Flow_Sensor> a owl:NamedIndividual ;
-	:hasTagSet <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor> .
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Variable_Air_Volume_Box> a owl:NamedIndividual , :Variable_Air_Volume_Box ;
+	:feeds <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Corridor_8100_Central> ;
+	:hasPoint <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Request> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Sensor> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Flow_Setpoint> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Cooling_Command> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Damper_Position> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Discharge_Air_Temperature> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Heating_Command> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Reheat_Valve_Command> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Sensor> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Heating_Setpoint> , <http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates/Eighth_Floor/VAV/Corridor_8100_Central:Zone_Temperature_Effective_Cooling_Setpoint> .
 # 
 # http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#CMU/SCSC_Gates:Eighth_Floor
 
