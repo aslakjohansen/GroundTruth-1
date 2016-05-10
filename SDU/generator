@@ -14,6 +14,15 @@ g.bind('rdf', RDF)
 g.bind('bs', BS)
 
 ################################################################################
+################################################################### helpers ####
+################################################################################
+
+def m2m_add (o1s, verb, o2s):
+    for o1 in o1s:
+        for o2 in o2s:
+            g.add( (o1, verb, o2) )
+
+################################################################################
 ################################################################ constructs ####
 ################################################################################
 
@@ -76,6 +85,37 @@ def heat_exchanger (prefix):
     }
     return ports
 
+def heat_transfer_group (prefix):
+    # actors
+    fm = flow_meter(prefix+'/flowmeter')
+    he = heat_exchanger(prefix+'/heatexchanger')
+    pump = URIRef(prefix+'/pump')
+    supply_temperature = URIRef(prefix+'/supply_temperature')
+    return_temperature = URIRef(prefix+'/return_temperature')
+    
+    # types
+    g.add( (supply_temperature, RDF.type, BS['Hot_Water_Supply_Temperature']) )
+    g.add( (supply_temperature, RDF.type, BS['Sensor']) )
+    g.add( (return_temperature, RDF.type, BS['Hot_Water_Return_Temperature']) )
+    g.add( (return_temperature, RDF.type, BS['Sensor']) )
+    g.add( (pump, RDF.type, BS['Hot_Water_Pump']) )
+    
+    # relationships
+    m2m_add(fm['metered supply'], BS.feeds, he['primary input'])
+    m2m_add(he['primary output'], BS.feeds, fm['metered return'])
+    m2m_add(he['secondary output'], BS.feeds, [pump])
+    g.add( (pump, BS.feeds, supply_temperature) )
+    m2m_add([return_temperature], BS.feeds, he['secondary input'])
+    
+    # ports
+    ports = {
+        'primary input': fm['supply'],
+        'primary output': fm['return'],
+        'secondary input': [return_temperature],
+        'secondary output': [supply_temperature],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -86,8 +126,9 @@ prefix = 'building:gtc'
 building = URIRef(prefix)
 g.add( (building, RDF.type, BS['Building']) )
 
-fm = flow_meter(prefix+'/flowmeter')
-he = heat_exchanger(prefix+'/heatexchanger')
+#fm = flow_meter(prefix+'/flowmeter')
+#he = heat_exchanger(prefix+'/heatexchanger')
+htg = heat_transfer_group (prefix+'/htg')
 
 ################################################################################
 ############################################################### back matter ####
