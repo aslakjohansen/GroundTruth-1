@@ -287,6 +287,52 @@ def heat_exchanger_group (prefix):
     }
     return ports
 
+def zone (prefix):
+    # actors
+    he = heat_exchanger(prefix+'/he')
+    return_valve = URIRef(prefix+'/return_valve')
+    supply_valve = URIRef(prefix+'/supply_valve')
+    cool_valve = URIRef(prefix+'/cool_valve')
+    flow = URIRef(prefix+'/flow')
+    pre_he_temperature  = URIRef(prefix+'/pre_he_temperature')
+    post_he_temperature = URIRef(prefix+'/post_he_temperature')
+    
+    # types
+    g.add( (return_valve, RDF.type, BS['Valve']) )
+    g.add( (supply_valve, RDF.type, BS['Valve']) )
+    g.add( (cool_valve, RDF.type, BS['Valve']) )
+    g.add( (flow, RDF.type, BS['Chilled_Water_Flow']) )
+    g.add( (flow, RDF.type, BS['Sensor']) )
+    g.add( (pre_he_temperature, RDF.type, BS['Supply']) )
+    g.add( (pre_he_temperature, RDF.type, BS['Air']) )
+    g.add( (pre_he_temperature, RDF.type, BS['Temperature']) )
+    g.add( (pre_he_temperature, RDF.type, BS['Sensor']) )
+    g.add( (post_he_temperature, RDF.type, BS['Supply']) )
+    g.add( (post_he_temperature, RDF.type, BS['Air']) )
+    g.add( (post_he_temperature, RDF.type, BS['Zone']) )
+    g.add( (post_he_temperature, RDF.type, BS['Temperature']) )
+    g.add( (post_he_temperature, RDF.type, BS['Sensor']) )
+    
+    # relationships
+    m2m_add([flow], BS.feeds, he['primary input'])
+    m2m_add(he['primary output'], BS.feeds, [cool_valve])
+    m2m_add([pre_he_temperature], BS.feeds, he['secondary input'])
+    m2m_add(he['secondary output'], BS.feeds, [post_he_temperature])
+    g.add( (flow, BS.feeds, cool_valve) )
+    g.add( (pre_he_temperature, BS.feeds, supply_valve) )
+    g.add( (pre_he_temperature, BS.feeds, return_valve) )
+    
+    # ports
+    ports = {
+        'supply air': [supply_valve],
+        'return air': [return_valve],
+        'zone supply air': [post_he_temperature],
+        'zone return air': [return_valve],
+        'cooled water supply': [flow],
+        'cooled water return': [cool_valve],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -303,6 +349,7 @@ g.add( (building, RDF.type, BS['Building']) )
 chg = central_heating_group(prefix+'/chg')
 #fe = filter_element(prefix+'/fe')
 heg = heat_exchanger_group(prefix+'/heg')
+z1 = zone(prefix+'/z1')
 
 ################################################################################
 ############################################################### back matter ####
