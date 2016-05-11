@@ -172,6 +172,121 @@ def filter_element (prefix):
     }
     return ports
 
+def heat_exchanger_group (prefix):
+    # actors
+    fe_outside  = filter_element(prefix+'/fe_outside')
+    fe_recovery = filter_element(prefix+'/fe_recovery')
+    he_recovery = heat_exchanger(prefix+'/he_recovery')
+    he_heat     = heat_exchanger(prefix+'/he_heat')
+    fm          = flow_meter(prefix+'/flowmeter')
+    temperature_outside = URIRef(prefix+'/temperature_outside')
+    temperature_he_rec_prim_in  = URIRef(prefix+'/temperature_he_recovery_prim_in')
+    temperature_he_rec_prim_out = URIRef(prefix+'/temperature_he_recovery_prim_out')
+    temperature_he_rec_sec_in  = URIRef(prefix+'/temperature_he_recovery_sec_in')
+    temperature_he_rec_sec_out = URIRef(prefix+'/temperature_he_recovery_sec_out')
+    temperature_he_heat_prim_in  = URIRef(prefix+'/temperature_he_heat_prim_in')
+    temperature_he_heat_prim_out = URIRef(prefix+'/temperature_he_heat_prim_out')
+    temperature_he_heat_sec_out = URIRef(prefix+'/temperature_he_heat_sec_out')
+    valve = URIRef(prefix+'/valve')
+    pump = URIRef(prefix+'/pump')
+    rectifier = URIRef(prefix+'/rectifier')
+    pressure_ret_south = URIRef(prefix+'/pressure_return_south')
+    pressure_ret_north = URIRef(prefix+'/pressure_return_north')
+    pressure_sup_south = URIRef(prefix+'/pressure_supply_south')
+    pressure_sup_north = URIRef(prefix+'/pressure_supply_north')
+    damper = URIRef(prefix+'/damper')
+    damper_setpoint = URIRef(prefix+'/damper_setpoint')
+    fan_exhaust = URIRef(prefix+'/fan_exhaust')
+    fan_exhaust_setpoint = URIRef(prefix+'/fan_exhaust_setpoint')
+    fan_inter = URIRef(prefix+'/fan_inter')
+    fan_inter_setpoint = URIRef(prefix+'/fan_inter_setpoint')
+    
+    # types
+    g.add( (temperature_outside, RDF.type, BS['Outside_Air_Temperature']) )
+    g.add( (temperature_outside, RDF.type, BS['Sensor']) )
+    g.add( (temperature_he_rec_prim_in, RDF.type, BS['Air']) )
+    g.add( (temperature_he_rec_prim_in, RDF.type, BS['Temperature']) )
+    g.add( (temperature_he_rec_prim_in, RDF.type, BS['Sensor']) )
+    g.add( (temperature_he_rec_prim_out, RDF.type, BS['Air']) )
+    g.add( (temperature_he_rec_prim_out, RDF.type, BS['Temperature']) )
+    g.add( (temperature_he_rec_prim_out, RDF.type, BS['Sensor']) )
+    g.add( (temperature_he_rec_sec_in, RDF.type, BS['Air']) )
+    g.add( (temperature_he_rec_sec_in, RDF.type, BS['Temperature']) )
+    g.add( (temperature_he_rec_sec_in, RDF.type, BS['Sensor']) )
+    g.add( (temperature_he_rec_sec_out, RDF.type, BS['Air']) )
+    g.add( (temperature_he_rec_sec_out, RDF.type, BS['Temperature']) )
+    g.add( (temperature_he_rec_sec_out, RDF.type, BS['Sensor']) )
+    g.add( (temperature_he_heat_prim_in, RDF.type, BS['Hot_Water_Supply_Temperature']) )
+    g.add( (temperature_he_heat_prim_in, RDF.type, BS['Sensor']) )
+    g.add( (temperature_he_heat_sec_out, RDF.type, BS['Hot_Water_Return_Temperature']) )
+    g.add( (temperature_he_heat_sec_out, RDF.type, BS['Sensor']) )
+    g.add( (valve, RDF.type, BS['Valve']) )
+    g.add( (pump, RDF.type, BS['Hot_Water_Pump']) )
+    g.add( (rectifier, RDF.type, BS['System']) )
+    g.add( (pressure_ret_south, RDF.type, BS['Return_Air_Temperature']) )
+    g.add( (pressure_ret_south, RDF.type, BS['Sensor']) )
+    g.add( (pressure_ret_north, RDF.type, BS['Return_Air_Temperature']) )
+    g.add( (pressure_ret_north, RDF.type, BS['Sensor']) )
+    g.add( (pressure_sup_south, RDF.type, BS['Supply']) )
+    g.add( (pressure_sup_south, RDF.type, BS['Air']) )
+    g.add( (pressure_sup_south, RDF.type, BS['Pressure']) )
+    g.add( (pressure_sup_south, RDF.type, BS['Sensor']) )
+    g.add( (pressure_sup_north, RDF.type, BS['Supply']) )
+    g.add( (pressure_sup_north, RDF.type, BS['Air']) )
+    g.add( (pressure_sup_north, RDF.type, BS['Pressure']) )
+    g.add( (pressure_sup_north, RDF.type, BS['Sensor']) )
+    g.add( (damper, RDF.type, BS['Damper']) )
+    g.add( (damper_setpoint, RDF.type, BS['Setpoint']) )
+    g.add( (fan_exhaust, RDF.type, BS['Exhaust']) )
+    g.add( (fan_exhaust, RDF.type, BS['Air']) )
+    g.add( (fan_exhaust, RDF.type, BS['Fan']) )
+    g.add( (fan_exhaust_setpoint, RDF.type, BS['Setpoint']) )
+    g.add( (fan_inter, RDF.type, BS['Air']) )
+    g.add( (fan_inter, RDF.type, BS['Fan']) )
+    g.add( (fan_inter_setpoint, RDF.type, BS['Setpoint']) )
+    
+    # relationships
+    g.add( (fan_exhaust_setpoint, BS.feeds, fan_exhaust) )
+    g.add( (fan_inter_setpoint, BS.feeds, fan_inter) )
+    g.add( (damper_setpoint, BS.feeds, damper) )
+    g.add( (temperature_he_rec_prim_out, BS.feeds, fan_exhaust) )
+    m2m_add(he_recovery['primary output'], BS.feeds, [temperature_he_rec_prim_out])
+    m2m_add([temperature_he_rec_prim_in], BS.feeds, he_recovery['primary input'])
+    m2m_add([temperature_he_rec_sec_in], BS.feeds, he_recovery['secondary input'])
+    m2m_add(he_recovery['secondary output'], BS.feeds, [temperature_he_rec_sec_out])
+    g.add( (temperature_he_rec_sec_out, BS.feeds, fan_inter) )
+    m2m_add([fan_inter], BS.feeds, he_heat['secondary input'])
+    m2m_add(he_heat['secondary output'], BS.feeds, [temperature_he_heat_sec_out])
+    m2m_add([pump], BS.feeds, he_heat['primary input'])
+    m2m_add(he_heat['primary output'], BS.feeds, [temperature_he_heat_prim_out])
+    g.add( (temperature_he_heat_prim_in, BS.feeds, pump) )
+    g.add( (temperature_he_heat_prim_out, BS.feeds, valve) )
+    g.add( (temperature_he_heat_prim_out, BS.feeds, rectifier) )
+    g.add( (rectifier, BS.feeds, temperature_he_heat_prim_in) )
+    g.add( (pressure_ret_south, BS.feeds, damper) )
+    g.add( (pressure_ret_north, BS.feeds, damper) )
+    g.add( (temperature_he_heat_sec_out, BS.feeds, pressure_sup_south) )
+    g.add( (temperature_he_heat_sec_out, BS.feeds, pressure_sup_north) )
+    m2m_add([temperature_outside], BS.feeds, fe_outside['input'])
+    m2m_add(fe_outside['output'], BS.feeds, [temperature_he_rec_sec_in])
+    m2m_add([damper], BS.feeds, fe_recovery['input'])
+    m2m_add(fe_recovery['output'], BS.feeds, [temperature_he_rec_prim_in])
+    m2m_add([valve], BS.feeds, fm['metered return'])
+    m2m_add(fm['metered supply'], BS.feeds, [temperature_he_heat_prim_in])
+    
+    # ports
+    ports = {
+        'exhaust air': [fan_exhaust],
+        'outside air': [temperature_outside],
+        'heated water input': fm['supply'],
+        'heated water output': fm['return'],
+        'output north': [pressure_sup_north],
+        'output south': [pressure_sup_south],
+        'input north': [pressure_ret_north],
+        'input south': [pressure_ret_south],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -186,7 +301,8 @@ g.add( (building, RDF.type, BS['Building']) )
 #he = heat_exchanger(prefix+'/heatexchanger')
 #htg = heat_transfer_group (prefix+'/htg')
 chg = central_heating_group(prefix+'/chg')
-fe = filter_element(prefix+'/fe')
+#fe = filter_element(prefix+'/fe')
+heg = heat_exchanger_group(prefix+'/heg')
 
 ################################################################################
 ############################################################### back matter ####
