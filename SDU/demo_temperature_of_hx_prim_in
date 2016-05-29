@@ -1,0 +1,21 @@
+#!/usr/bin/env python
+
+import rdflib
+
+g = rdflib.Graph()
+g.parse('sdu_gtc.ttl', format='n3')
+
+r = g.query(
+    """SELECT DISTINCT ?temp ?hx_prim
+       WHERE {
+          ?temp a bs:Temperature,bs:Sensor .
+          ?hx_prim a bs:Coil .
+          ?temp bs:feeds ?hx_prim .
+       }""")
+
+print('Temperature sensors which directly feeds into the primary coil')
+print('of a heat exchanger:')
+for pair in r:
+    print(' - %s -> %s' % pair)
+print('Note: Due to a lag of tags the result is actually: Temperature')
+print('      sensors which directly feeds into a coil')
