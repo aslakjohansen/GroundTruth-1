@@ -4,192 +4,887 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27> .
 
-<http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27> rdf:type owl:Ontology .
+<http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#hasPoint
 
+:hasPoint a owl:ObjectProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#AHU
 
-#################################################################
-#
-#    Classes
-#
-#################################################################
+:AHU a owl:Class ;
+	rdfs:subClassOf :Equipment , _:genid1 .
 
+_:genid1 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Bypass_Air_Flow_Sensor .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#AHU
+:AHU rdfs:subClassOf _:genid2 .
 
-:AHU rdf:type owl:Class ;
-     
-     rdfs:subClassOf :Equipment .
+_:genid2 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Change_Filter_Alarm .
 
+:AHU rdfs:subClassOf _:genid3 .
 
+_:genid3 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Dead_Band .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Boiler
+:AHU rdfs:subClassOf _:genid4 .
 
-:Boiler rdf:type owl:Class ;
-        
-        rdfs:subClassOf :Equipment .
+_:genid4 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Integral_Time .
 
+:AHU rdfs:subClassOf _:genid5 .
 
+_:genid5 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Proportional_Band .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Booster_Fan
+:AHU rdfs:subClassOf _:genid6 .
 
-:Booster_Fan rdf:type owl:Class ;
-             
-             rdfs:subClassOf :Fan .
+_:genid6 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Cooling_Demand_High .
 
+:AHU rdfs:subClassOf _:genid7 .
 
+_:genid7 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Cooling_Demand_Low .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Chilled_Water_Pump
+:AHU rdfs:subClassOf _:genid8 .
 
-:Chilled_Water_Pump rdf:type owl:Class ;
-                    
-                    rdfs:subClassOf :Pump .
+_:genid8 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Smoke_Detected .
 
+:AHU rdfs:subClassOf _:genid9 .
 
+_:genid9 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Dead_Band .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Chiller
+:AHU rdfs:subClassOf _:genid10 .
 
-:Chiller rdf:type owl:Class ;
-         
-         rdfs:subClassOf :Equipment .
+_:genid10 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Increase_Decrease_Step .
 
+:AHU rdfs:subClassOf _:genid11 .
 
+_:genid11 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Integral_Time .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Tower
+:AHU rdfs:subClassOf _:genid12 .
 
-:Cooling_Tower rdf:type owl:Class ;
-               
-               rdfs:subClassOf :Equipment .
+_:genid12 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Proportional_Band .
 
+:AHU rdfs:subClassOf _:genid13 .
 
+_:genid13 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Sensor .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Valve
+:AHU rdfs:subClassOf _:genid14 .
 
-:Cooling_Valve rdf:type owl:Class ;
-               
-               rdfs:subClassOf :Valve .
+_:genid14 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Setpoint .
 
+:AHU rdfs:subClassOf _:genid15 .
 
+_:genid15 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Temperature_Dead_Band .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer
+:AHU rdfs:subClassOf _:genid16 .
 
-:Economizer rdf:type owl:Class ;
-            
-            rdfs:subClassOf :Equipment .
+_:genid16 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Temperature_High_Limit_Alarm .
 
+:AHU rdfs:subClassOf _:genid17 .
 
+_:genid17 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Temperature_Integral_Time .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Equipment
+:AHU rdfs:subClassOf _:genid18 .
 
-:Equipment rdf:type owl:Class .
+_:genid18 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Temperature_Proportional_Band .
 
+:AHU rdfs:subClassOf _:genid19 .
 
+_:genid19 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Temperature_Setpoint .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Exhaust_Fan
+:AHU rdfs:subClassOf _:genid20 .
 
-:Exhaust_Fan rdf:type owl:Class ;
-             
-             rdfs:subClassOf :Fan .
+_:genid20 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step .
 
+:AHU rdfs:subClassOf _:genid21 .
 
+_:genid21 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Economizer_Damper_Command .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Fan
+:AHU rdfs:subClassOf _:genid22 .
 
-:Fan rdf:type owl:Class ;
-     
-     rdfs:subClassOf :Equipment .
+_:genid22 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Economizer_Differential_Air_Temperature_Setpoint .
 
+:AHU rdfs:subClassOf _:genid23 .
 
+_:genid23 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Dead_Band .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Fan_Coil_Unit
+:AHU rdfs:subClassOf _:genid24 .
 
-:Fan_Coil_Unit rdf:type owl:Class ;
-               
-               rdfs:subClassOf :Terminal_Unit .
+_:genid24 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Proportional_Band .
 
+:AHU rdfs:subClassOf _:genid25 .
 
+_:genid25 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Economizer_Mode .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Heating_Valve
+:AHU rdfs:subClassOf _:genid26 .
 
-:Heating_Valve rdf:type owl:Class ;
-               
-               rdfs:subClassOf :Valve .
+_:genid26 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Filter_Differential_Pressure_Sensor .
 
+:AHU rdfs:subClassOf _:genid27 .
 
+_:genid27 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Filter_Status .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Hot_Water_Pump
+:AHU rdfs:subClassOf _:genid28 .
 
-:Hot_Water_Pump rdf:type owl:Class ;
-                
-                rdfs:subClassOf :Pump .
+_:genid28 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Dead_Band .
 
+:AHU rdfs:subClassOf _:genid29 .
 
+_:genid29 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Integral_Time .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Pump
+:AHU rdfs:subClassOf _:genid30 .
 
-:Pump rdf:type owl:Class ;
-      
-      rdfs:subClassOf :Equipment .
+_:genid30 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Proportional_Band .
 
+:AHU rdfs:subClassOf _:genid31 .
 
+_:genid31 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Differential .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Fan
+:AHU rdfs:subClassOf _:genid32 .
 
-:Return_Fan rdf:type owl:Class ;
-            
-            rdfs:subClassOf :Fan .
+_:genid32 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Setpoint .
 
+:AHU rdfs:subClassOf _:genid33 .
 
+_:genid33 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Max_Discharge_Air_Static_Pressure_Setpoint .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Space_Heater
+:AHU rdfs:subClassOf _:genid34 .
 
-:Space_Heater rdf:type owl:Class ;
-              
-              rdfs:subClassOf :Terminal_Unit .
+_:genid34 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Max_Discharge_Air_Temperature .
 
+:AHU rdfs:subClassOf _:genid35 .
 
+_:genid35 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Max_Return_Air_CO2_Setpoint .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Supply_Fan
+:AHU rdfs:subClassOf _:genid36 .
 
-:Supply_Fan rdf:type owl:Class ;
-            
-            rdfs:subClassOf :Fan .
+_:genid36 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Max_Static_Pressure .
 
+:AHU rdfs:subClassOf _:genid37 .
 
+_:genid37 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Min_Discharge_Air_Static_Pressure_Setpoint .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Terminal_Unit
+:AHU rdfs:subClassOf _:genid38 .
 
-:Terminal_Unit rdf:type owl:Class ;
-               
-               rdfs:subClassOf :Equipment .
+_:genid38 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Min_Discharge_Air_Temperature .
 
+:AHU rdfs:subClassOf _:genid39 .
 
+_:genid39 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Min_Static_Pressure .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Thermal_Energy_Storage
+:AHU rdfs:subClassOf _:genid40 .
 
-:Thermal_Energy_Storage rdf:type owl:Class ;
-                        
-                        rdfs:subClassOf :Equipment .
+_:genid40 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Mixed_Air_Damper_Position_Command .
 
+:AHU rdfs:subClassOf _:genid41 .
 
+_:genid41 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Mixed_Air_Temperature_Sensor .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#VAV
+:AHU rdfs:subClassOf _:genid42 .
 
-:VAV rdf:type owl:Class ;
-     
-     rdfs:subClassOf :Terminal_Unit .
+_:genid42 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Mixed_Air_Temperature_Setpoint .
 
+:AHU rdfs:subClassOf _:genid43 .
 
+_:genid43 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_CO2_Sensor .
 
-###  http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Valve
+:AHU rdfs:subClassOf _:genid44 .
 
-:Valve rdf:type owl:Class ;
-       
-       rdfs:subClassOf :Equipment .
+_:genid44 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Damper_Min_Position_Setpoint .
 
+:AHU rdfs:subClassOf _:genid45 .
 
+_:genid45 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Damper_Position_Command .
 
+:AHU rdfs:subClassOf _:genid46 .
 
-###  Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi
+_:genid46 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Dewpoint_Sensor .
 
+:AHU rdfs:subClassOf _:genid47 .
+
+_:genid47 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Enthalpy_Sensor .
+
+:AHU rdfs:subClassOf _:genid48 .
+
+_:genid48 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Flow_Sensor .
+
+:AHU rdfs:subClassOf _:genid49 .
+
+_:genid49 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Humidity_Sensor .
+
+:AHU rdfs:subClassOf _:genid50 .
+
+_:genid50 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Lockout_Temperature_Differential .
+
+:AHU rdfs:subClassOf _:genid51 .
+
+_:genid51 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Lockout_Temperature_Setpoint .
+
+:AHU rdfs:subClassOf _:genid52 .
+
+_:genid52 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Temperature_High_Reset_Setpoint .
+
+:AHU rdfs:subClassOf _:genid53 .
+
+_:genid53 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Temperature_Low_Reset_Setpoint .
+
+:AHU rdfs:subClassOf _:genid54 .
+
+_:genid54 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Air_Temperature_Sensor .
+
+:AHU rdfs:subClassOf _:genid55 .
+
+_:genid55 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Outside_Min_Air_Flow .
+
+:AHU rdfs:subClassOf _:genid56 .
+
+_:genid56 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_CO2_Sensor .
+
+:AHU rdfs:subClassOf _:genid57 .
+
+_:genid57 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_Dewpoint_Sensor .
+
+:AHU rdfs:subClassOf _:genid58 .
+
+_:genid58 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_Enthalpy_Sensor .
+
+:AHU rdfs:subClassOf _:genid59 .
+
+_:genid59 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_Humidity_Sensor .
+
+:AHU rdfs:subClassOf _:genid60 .
+
+_:genid60 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_Preheat_Valve_Command .
+
+:AHU rdfs:subClassOf _:genid61 .
+
+_:genid61 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_Temperature_High_Limit_Alarm .
+
+:AHU rdfs:subClassOf _:genid62 .
+
+_:genid62 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Air_Temperature_Sensor .
+
+:AHU rdfs:subClassOf _:genid63 .
+
+_:genid63 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Fan_Start_Stop_Command .
+
+:AHU rdfs:subClassOf _:genid64 .
+
+_:genid64 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Return_Fan_Status .
+
+:AHU rdfs:subClassOf _:genid65 .
+
+_:genid65 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Static_Pressure_Sensor .
+
+:AHU rdfs:subClassOf _:genid66 .
+
+_:genid66 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Fan_Piezoelectric_Sensor .
+
+:AHU rdfs:subClassOf _:genid67 .
+
+_:genid67 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Fan_Start_Stop_Command .
+
+:AHU rdfs:subClassOf _:genid68 .
+
+_:genid68 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Fan_Status .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Boiler
+
+:Boiler a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Booster_Fan
+
+:Booster_Fan a owl:Class ;
+	rdfs:subClassOf :Fan .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Bypass_Air_Flow_Sensor
+
+:Bypass_Air_Flow_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Change_Filter_Alarm
+
+:Change_Filter_Alarm a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Chilled_Water_Pump
+
+:Chilled_Water_Pump a owl:Class ;
+	rdfs:subClassOf :Pump .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Chiller
+
+:Chiller a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Discharge_Air_Temperature_Dead_Band
+
+:Cooling_Discharge_Air_Temperature_Dead_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Discharge_Air_Temperature_Integral_Time
+
+:Cooling_Discharge_Air_Temperature_Integral_Time a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Discharge_Air_Temperature_Proportional_Band
+
+:Cooling_Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Tower
+
+:Cooling_Tower a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Cooling_Valve
+
+:Cooling_Valve a owl:Class ;
+	rdfs:subClassOf :Valve .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Cooling_Demand_High
+
+:Discharge_Air_Cooling_Demand_High a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Cooling_Demand_Low
+
+:Discharge_Air_Cooling_Demand_Low a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Smoke_Detected
+
+:Discharge_Air_Smoke_Detected a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Static_Pressure_Dead_Band
+
+:Discharge_Air_Static_Pressure_Dead_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Static_Pressure_Increase_Decrease_Step
+
+:Discharge_Air_Static_Pressure_Increase_Decrease_Step a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Static_Pressure_Integral_Time
+
+:Discharge_Air_Static_Pressure_Integral_Time a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Static_Pressure_Proportional_Band
+
+:Discharge_Air_Static_Pressure_Proportional_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Static_Pressure_Sensor
+
+:Discharge_Air_Static_Pressure_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Static_Pressure_Setpoint
+
+:Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Temperature_Dead_Band
+
+:Discharge_Air_Temperature_Dead_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Temperature_High_Limit_Alarm
+
+:Discharge_Air_Temperature_High_Limit_Alarm a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Temperature_Integral_Time
+
+:Discharge_Air_Temperature_Integral_Time a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Temperature_Proportional_Band
+
+:Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Temperature_Setpoint
+
+:Discharge_Air_Temperature_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step
+
+:Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer
+
+:Economizer a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer_Damper_Command
+
+:Economizer_Damper_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer_Differential_Air_Temperature_Setpoint
+
+:Economizer_Differential_Air_Temperature_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer_Discharge_Air_Temperature_Dead_Band
+
+:Economizer_Discharge_Air_Temperature_Dead_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer_Discharge_Air_Temperature_Proportional_Band
+
+:Economizer_Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Economizer_Mode
+
+:Economizer_Mode a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Equipment
+
+:Equipment a owl:Class .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Exhaust_Fan
+
+:Exhaust_Fan a owl:Class ;
+	rdfs:subClassOf :Fan .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Fan
+
+:Fan a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Fan_Coil_Unit
+
+:Fan_Coil_Unit a owl:Class ;
+	rdfs:subClassOf :Terminal_Unit .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Filter_Differential_Pressure_Sensor
+
+:Filter_Differential_Pressure_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Filter_Status
+
+:Filter_Status a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Heating_Discharge_Air_Temperature_Dead_Band
+
+:Heating_Discharge_Air_Temperature_Dead_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Heating_Discharge_Air_Temperature_Integral_Time
+
+:Heating_Discharge_Air_Temperature_Integral_Time a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Heating_Discharge_Air_Temperature_Proportional_Band
+
+:Heating_Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Heating_Valve
+
+:Heating_Valve a owl:Class ;
+	rdfs:subClassOf :Valve .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Hot_Water_Pump
+
+:Hot_Water_Pump a owl:Class ;
+	rdfs:subClassOf :Pump .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Low_Outside_Air_Temperature_Enable_Differential
+
+:Low_Outside_Air_Temperature_Enable_Differential a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Low_Outside_Air_Temperature_Enable_Setpoint
+
+:Low_Outside_Air_Temperature_Enable_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Max_Discharge_Air_Static_Pressure_Setpoint
+
+:Max_Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Max_Discharge_Air_Temperature
+
+:Max_Discharge_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Max_Return_Air_CO2_Setpoint
+
+:Max_Return_Air_CO2_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Max_Static_Pressure
+
+:Max_Static_Pressure a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Min_Discharge_Air_Static_Pressure_Setpoint
+
+:Min_Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Min_Discharge_Air_Temperature
+
+:Min_Discharge_Air_Temperature a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Min_Static_Pressure
+
+:Min_Static_Pressure a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Mixed_Air_Damper_Position_Command
+
+:Mixed_Air_Damper_Position_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Mixed_Air_Temperature_Sensor
+
+:Mixed_Air_Temperature_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Mixed_Air_Temperature_Setpoint
+
+:Mixed_Air_Temperature_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_CO2_Sensor
+
+:Outside_Air_CO2_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Damper_Min_Position_Setpoint
+
+:Outside_Air_Damper_Min_Position_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Damper_Position_Command
+
+:Outside_Air_Damper_Position_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Dewpoint_Sensor
+
+:Outside_Air_Dewpoint_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Enthalpy_Sensor
+
+:Outside_Air_Enthalpy_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Flow_Sensor
+
+:Outside_Air_Flow_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Humidity_Sensor
+
+:Outside_Air_Humidity_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Lockout_Temperature_Differential
+
+:Outside_Air_Lockout_Temperature_Differential a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Lockout_Temperature_Setpoint
+
+:Outside_Air_Lockout_Temperature_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Temperature_High_Reset_Setpoint
+
+:Outside_Air_Temperature_High_Reset_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Temperature_Low_Reset_Setpoint
+
+:Outside_Air_Temperature_Low_Reset_Setpoint a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Air_Temperature_Sensor
+
+:Outside_Air_Temperature_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Outside_Min_Air_Flow
+
+:Outside_Min_Air_Flow a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Point
+
+:Point a owl:Class .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Pump
+
+:Pump a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_CO2_Sensor
+
+:Return_Air_CO2_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_Dewpoint_Sensor
+
+:Return_Air_Dewpoint_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_Enthalpy_Sensor
+
+:Return_Air_Enthalpy_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_Humidity_Sensor
+
+:Return_Air_Humidity_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_Preheat_Valve_Command
+
+:Return_Air_Preheat_Valve_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_Temperature_High_Limit_Alarm
+
+:Return_Air_Temperature_High_Limit_Alarm a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Air_Temperature_Sensor
+
+:Return_Air_Temperature_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Fan
+
+:Return_Fan a owl:Class ;
+	rdfs:subClassOf :Fan .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Fan_Start_Stop_Command
+
+:Return_Fan_Start_Stop_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Return_Fan_Status
+
+:Return_Fan_Status a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Space_Heater
+
+:Space_Heater a owl:Class ;
+	rdfs:subClassOf :Terminal_Unit .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Static_Pressure_Sensor
+
+:Static_Pressure_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Supply_Fan
+
+:Supply_Fan a owl:Class ;
+	rdfs:subClassOf :Fan .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Supply_Fan_Piezoelectric_Sensor
+
+:Supply_Fan_Piezoelectric_Sensor a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Supply_Fan_Start_Stop_Command
+
+:Supply_Fan_Start_Stop_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Supply_Fan_Status
+
+:Supply_Fan_Status a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Terminal_Unit
+
+:Terminal_Unit a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Thermal_Energy_Storage
+
+:Thermal_Energy_Storage a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#VAV
+
+:VAV a owl:Class ;
+	rdfs:subClassOf :Terminal_Unit .
+# 
+# http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#Valve
+
+:Valve a owl:Class ;
+	rdfs:subClassOf :Equipment .
+# 
+# Generated by the OWL API (version 4.2.3.20160319-0906) https://github.com/owlcs/owlapi
