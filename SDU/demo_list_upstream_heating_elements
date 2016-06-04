@@ -1,0 +1,29 @@
+#!/usr/bin/env python
+
+import rdflib
+
+g = rdflib.Graph()
+g.parse('sdu_gtc.ttl', format='n3')
+
+source = '2.A.11'
+
+r = g.query(
+    """SELECT DISTINCT ?heating_element
+       WHERE {
+          ?room ns1:hasName '"""+source+"""' .
+          {
+             ?heating_element a bs:Coil .
+             ?heating_element bs:feeds+ ?room
+          } UNION {
+             {
+                ?heating_element a bs:Radiator
+             } UNION {
+                ?heating_element a ns1:Floorheater
+             } .
+             ?heating_element ns1:affects+ ?room
+          } .
+       }""")
+
+print('Heating elements upstream of '+source+':')
+for pair in r:
+    print(' - %s' % pair)
