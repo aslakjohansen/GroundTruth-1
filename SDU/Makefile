@@ -11,7 +11,7 @@ clean:
 mrproper: clean
 	rm -f *~
 
-sdu_gtc.ttl: generator
+sdu_gtc.ttl: generator rooms.json
 	./generator
 
 demos: ${TARGETS}
