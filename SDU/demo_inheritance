@@ -2,7 +2,9 @@
 
 from rdflib import Graph, Namespace, URIRef, Literal
 
-BS = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
+#BS = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
+#BS = Namespace('../BuildingSchema/BuildingSchema.ttl')
+BS = Namespace('../BuildingSchema/Brick.owl')
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 
 ################################################################################
