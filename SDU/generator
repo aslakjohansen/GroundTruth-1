@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-from rdflib import Graph, Namespace, URIRef
+from rdflib import Graph, Namespace, URIRef, Literal
+import json
 
 ################################################################################
 ############################################################## front matter ####
@@ -8,6 +9,7 @@ from rdflib import Graph, Namespace, URIRef
 
 BS = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+XTRA = Namespace('extras/')
 
 g = Graph()
 g.bind('rdf', RDF)
@@ -333,6 +335,145 @@ def zone (prefix):
     }
     return ports
 
+def construct_zonename (floor, zone):
+    return str(floor)+str(zone)
+
+def zones (prefix, data):
+    zs = {}
+    
+    for room_name in data:
+        r = data[room_name]
+        zoneid  = r['zone']
+        floor = r['floor']
+        zone_name = construct_zonename(floor, zoneid)
+        if not zone_name in zs:
+            z = zone(prefix+'/'+zone_name)
+            zs[zone_name] = z
+        r['zone object'] = zs[zone_name]
+    
+    return zs
+
+def room (prefix, r):
+    # actors
+    room = URIRef(prefix+'/room')
+    temperature_sensor = URIRef(prefix+'/temperature')
+    co2_sensor = URIRef(prefix+'/co2')
+    pir_sensor = URIRef(prefix+'/pir')
+    radiators = []
+    for i in range(int(r['radiators']['count'])):
+        radiators.append(URIRef(prefix+'/radiators/'+str(i+1)))
+    floorheaters = []
+    for i in range(int(r['floorheating']['count'])):
+        floorheaters.append(URIRef(prefix+'/floorheaters/'+str(i+1)))
+    idampeners = []
+    for i in range(int(r['input dampeners']['count'])):
+        idampeners.append(URIRef(prefix+'/input_dampeners/'+str(i+1)))
+    odampeners = []
+    for i in range(int(r['output dampeners']['count'])):
+        idampeners.append(URIRef(prefix+'/output_dampeners/'+str(i+1)))
+    
+    # types
+    g.add( (room, RDF.type, BS['Room']) )
+    g.add( (temperature_sensor, RDF.type, BS['Air']) )
+    g.add( (temperature_sensor, RDF.type, BS['Temperature']) )
+    g.add( (temperature_sensor, RDF.type, BS['Sensor']) )
+    g.add( (co2_sensor, RDF.type, BS['CO2']) )
+    g.add( (co2_sensor, RDF.type, BS['Sensor']) )
+    g.add( (pir_sensor, RDF.type, BS['PIR']) )
+    g.add( (pir_sensor, RDF.type, BS['Sensor']) )
+    for radiator in radiators:
+        g.add( (radiator, RDF.type, BS['Radiator']) )
+    for floorheater in floorheaters:
+        g.add( (floorheater, RDF.type, XTRA['Floorheater']) )
+    for dampener in idampeners:
+        g.add( (dampener, RDF.type, XTRA['Dampener']) )
+        g.add( (dampener, BS.feeds, room) )
+    for dampener in odampeners:
+        g.add( (dampener, RDF.type, XTRA['Dampener']) )
+        g.add( (room, BS.feeds, dampener) )
+    
+    # properties
+    g.add( (room, XTRA['hasName'], Literal(r['name'])) )
+    g.add( (temperature_sensor, XTRA['hasPoint'], Literal(r['tr1'])) )
+    g.add( (co2_sensor, XTRA['hasPoint'], Literal(r['co2'])) )
+    g.add( (pir_sensor, XTRA['hasPoint'], Literal(r['pir'])) )
+    for radiator in radiators:
+        g.add( (radiator, XTRA['hasPoint'], Literal(r['radiators']['id'])) )
+    for floorheater in floorheaters:
+        g.add( (floorheater, XTRA['hasPoint'], Literal(r['floorheating']['id'])) )
+    for dampener in idampeners:
+        g.add( (dampener, XTRA['hasPoint'], Literal(r['input dampeners']['id'])) )
+    for dampener in odampeners:
+        g.add( (dampener, XTRA['hasPoint'], Literal(r['output dampeners']['id'])) )
+    
+    # relationships
+    for radiator in radiators:
+        g.add( (radiator, XTRA.affects, room) )
+    for floorheater in floorheaters:
+        g.add( (floorheater, XTRA.affects, room) )
+    for dampener in idampeners:
+        g.add( (dampener, XTRA.affects, room) )
+    for dampener in odampeners:
+        g.add( (dampener, XTRA.affects, room) )
+    
+    # ports
+    ports = {
+        'radiators': radiators,
+        'floorheaters': floorheaters,
+        'idampeners': idampeners,
+        'odampeners': odampeners,
+    }
+    return ports
+
+def rooms (prefix, data):
+    rs = {}
+    
+    for room_name in data:
+        r = data[room_name]
+        r['name'] = room_name
+        rs[room_name] = room(prefix+'/'+room_name, r)
+    
+    return rs
+
+def building (prefix):
+    with open('rooms.json') as fo:
+        room_data = json.loads(''.join(fo.readlines()))
+    
+    # actors
+    building = URIRef(prefix)
+    chg = central_heating_group(prefix+'/chg')
+    heg = heat_exchanger_group(prefix+'/heg')
+    zs = zones(prefix+'/zones', room_data)
+    rs = rooms(prefix+'/rooms', room_data)
+    
+    # types
+    g.add( (building, RDF.type, BS['Building']) )
+    
+    # relationships
+    m2m_add(chg['metered central output'], BS.feeds, heg['heated water input'])
+    m2m_add(heg['heated water output'], BS.feeds, chg['metered central input'])
+    for room_name in rs:
+        r = rs[room_name]
+        radiators = r['radiators']
+        m2m_add(radiators, BS.feeds, chg['radiator input'])
+        m2m_add(chg['radiator output'], BS.feeds, radiators)
+        floorheaters = r['floorheaters']
+        m2m_add(floorheaters, BS.feeds, chg['radiator input'])
+        m2m_add(chg['radiator output'], BS.feeds, floorheaters)
+        idampeners = r['idampeners']
+        m2m_add(heg[{'N': 'output north', 'S': 'output south'}[room_data[room_name]['side']]], BS.feeds, idampeners)
+        odampeners = r['odampeners']
+        m2m_add(odampeners, BS.feeds, heg[{'N': 'input north', 'S': 'input south'}[room_data[room_name]['side']]])
+    
+    # ports
+    ports = {
+        'heated water supply': chg['central input'],
+        'heated water return': chg['central output'],
+        'outside air': heg['outside air'],
+        'exhaust air': heg['exhaust air'],
+    }
+    return ports
+
 ################################################################################
 ###################################################################### main ####
 ################################################################################
@@ -340,16 +481,7 @@ def zone (prefix):
 prefix = 'building:gtc'
 
 # building
-building = URIRef(prefix)
-g.add( (building, RDF.type, BS['Building']) )
-
-#fm = flow_meter(prefix+'/flowmeter')
-#he = heat_exchanger(prefix+'/heatexchanger')
-#htg = heat_transfer_group (prefix+'/htg')
-chg = central_heating_group(prefix+'/chg')
-#fe = filter_element(prefix+'/fe')
-heg = heat_exchanger_group(prefix+'/heg')
-z1 = zone(prefix+'/z1')
+b = building(prefix)
 
 ################################################################################
 ############################################################### back matter ####
