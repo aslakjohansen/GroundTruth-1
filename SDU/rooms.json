@@ -581,6 +581,343 @@
         "zone": 1,
         "floor": 1,
         "side": "N"
+    },
+    "2.A.19": {
+        "tr1": "-02-ZVNV-2A19-TR01",
+        "co2": "-02-ZVNV-2A19-CO2",
+        "pir": "-02-ZVNV-2A19-PIR",
+        "radiators": {
+            "count": 1,
+            "id": "-02-ZVNV-2A19-MV01"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 4,
+            "id": "-02-ZVNV-2A19-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2A19-MSU"
+        },
+        "zone": 2,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.A.22a": {
+        "tr1": "-02-ZVNV-2A22a-TR01",
+        "co2": "-02-ZVNV-2A22a-CO2",
+        "pir": "-02-ZVNV-2A22a-PIR",
+        "radiators": {
+            "count": 1,
+            "id": "-02-ZVNV-2A22a-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 4,
+            "id": "-02-ZVNV-2A22a-MSI"
+        },
+        "output dampeners": {
+            "count": 2,
+            "id": "-02-ZVNV-2A22a-MSU"
+        },
+        "zone": 2,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.A.22b": {
+        "tr1": "",
+        "co2": "",
+        "pir": "",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2A22b-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 4,
+            "id": "-02-ZVNV-2A22b-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2A22b-MSU"
+        },
+        "zone": 2,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.A.30": {
+        "tr1": "-02-ZVNV-2A30-TR01",
+        "co2": "-02-ZVNV-2A30-CO2",
+        "pir": "-02-ZVNV-2A30-PIR",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2A30-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2A30-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2A30-MSU"
+        },
+        "zone": 2,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.C.30": {
+        "tr1": "-02-ZVNV-2C30-TR01",
+        "co2": "-02-ZVNV-2C30-CO2",
+        "pir": "-02-ZVNV-2C30-PIR",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2C30-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2C30-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2C30-MSU"
+        },
+        "zone": 2,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.H.30": {
+        "tr1": "-02-ZVNV-2H30-TR01",
+        "co2": "-02-ZVNV-2H30-CO2",
+        "pir": "-02-ZVNV-2H30-PIR",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2H30-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2H30-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2H30-MSU"
+        },
+        "zone": 3,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.I.18a": {
+        "tr1": "-02-ZVNV-2I18a-TR01",
+        "co2": "-02-ZVNV-2I18a-CO2",
+        "pir": "-02-ZVNV-2I18a-PIR",
+        "radiators": {
+            "count": 3,
+            "id": "-02-ZVNV-2I18a-MV01-03"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 5,
+            "id": "-02-ZVNV-2I18a-MSI"
+        },
+        "output dampeners": {
+            "count": 2,
+            "id": "-02-ZVNV-2I18a-MSU"
+        },
+        "zone": 3,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.I.18b": {
+        "tr1": "",
+        "co2": "",
+        "pir": "",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2I18b-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 4,
+            "id": "-02-ZVNV-2I18b-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2I18b-MSU"
+        },
+        "zone": 3,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.L.30": {
+        "tr1": "-02-ZVNV-2L30-TR01",
+        "co2": "-02-ZVNV-2L30-CO2",
+        "pir": "-02-ZVNV-2L30-PIR",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2L30-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2L30-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2L30-MSU"
+        },
+        "zone": 3,
+        "floor": 1,
+        "side": "S"
+    },
+    "2.F.6b": {
+        "tr1": "-02-ZVNV-2F6b-TR01",
+        "co2": "-02-ZVNV-2F6b-CO2",
+        "pir": "-02-ZVNV-2F6b-PIR",
+        "radiators": {
+            "count": 1,
+            "id": "-02-ZVNV-2F6b-MV01"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2F6b-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2F6b-MSU"
+        },
+        "zone": 4,
+        "floor": 1,
+        "side": "N"
+    },
+    "2.H.1a": {
+        "tr1": "-02-ZVNV-2H1a-TR01",
+        "co2": "-02-ZVNV-2H1a-CO2",
+        "pir": "-02-ZVNV-2H1a-PIR",
+        "radiators": {
+            "count": 5,
+            "id": "-02-ZVNV-2H1a-MV01-05"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 4,
+            "id": "-02-ZVNV-2H1a-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2H1a-MSU"
+        },
+        "zone": 4,
+        "floor": 1,
+        "side": "N"
+    },
+    "2.H.1b": {
+        "tr1": "",
+        "co2": "",
+        "pir": "",
+        "radiators": {
+            "count": 2,
+            "id": "-02-ZVNV-2H1b-MV01-02"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 3,
+            "id": "-02-ZVNV-2H1b-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2H1b-MSU"
+        },
+        "zone": 4,
+        "floor": 1,
+        "side": "N"
+    },
+    "2.J.11": {
+        "tr1": "-02-ZVNV-2J11-TR01",
+        "co2": "-02-ZVNV-2J11-CO2",
+        "pir": "-02-ZVNV-2J11-PIR",
+        "radiators": {
+            "count": 1,
+            "id": "-02-ZVNV-2J11-MV01"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 2,
+            "id": "-02-ZVNV-2J11-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2J11-MSU"
+        },
+        "zone": 4,
+        "floor": 1,
+        "side": "N"
+    },
+    "2.J.13": {
+        "tr1": "-02-ZVNV-2J13-TR01",
+        "co2": "-02-ZVNV-2J13-CO2",
+        "pir": "-02-ZVNV-2J13-PIR",
+        "radiators": {
+            "count": 5,
+            "id": "-02-ZVNV-2J13-MV01",
+            "note": "The id format does not agree with the count"
+        },
+        "floorheating": {
+            "count": 0,
+            "id": ""
+        },
+        "input dampeners": {
+            "count": 2,
+            "id": "-02-ZVNV-2J13-MSI"
+        },
+        "output dampeners": {
+            "count": 1,
+            "id": "-02-ZVNV-2J13-MSU"
+        },
+        "zone": 4,
+        "floor": 1,
+        "side": "N"
     }
 }
 
