@@ -1,0 +1,68 @@
+#!/usr/bin/env python
+
+from rdflib import Graph, Namespace, URIRef, Literal
+
+BS = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
+RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+
+################################################################################
+##################################################################### setup ####
+
+g = Graph()
+g.bind('rdf', RDF)
+g.bind('bs', BS)
+
+cooling_tower = URIRef('ct')
+g.add( (cooling_tower, RDF.type, BS['Cooling_Tower']) )
+
+water_pump = URIRef('wp')
+g.add( (water_pump, RDF.type, BS['Water_Pump']) )
+
+g.add( (cooling_tower, BS.feeds, water_pump) )
+
+print '          [Tagset]'
+print '              ^'
+print '              |'
+print '      +-------+------+ inherits'
+print '      |              |'
+print '[Cooling_Tower] [Water_Pump]'
+print '      |              |'
+print '      | instance     | instance'
+print '      |              |'
+print '    (ct) --feeds--> (wp)'
+print ''
+
+################################################################################
+############################################################## direct query ####
+
+r = g.query(
+    """SELECT DISTINCT ?ct ?wp
+       WHERE {
+          ?ct a bs:Cooling_Tower .
+          ?wp a bs:Water_Pump .
+          ?ct bs:feeds ?wp .
+       }""")
+
+print 'Matches for [Cooling_Tower feeds Water_Pump]:'
+for pair in r:
+    print('  %s -> %s' % pair)
+print 'total: '+str(len(r))
+print ''
+
+################################################################################
+########################################################### inherited query ####
+
+r = g.query(
+    """SELECT DISTINCT ?ct ?wp
+       WHERE {
+          ?ct a bs:Cooling_Tower .
+          ?wp a bs:TagSet .
+          ?ct bs:feeds ?wp .
+       }""")
+
+print 'Matches for [Cooling_Tower feeds TagSet]:'
+for pair in r:
+    print('  %s -> %s' % pair)
+print 'total: '+str(len(r))
+print ''
+

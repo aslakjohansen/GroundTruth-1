@@ -1,4 +1,5 @@
 TARGETS = \
+	demo_inheritance.txt \
 	demo_list_upstream_heating_elements.txt \
 	demo_temperature_of_hx_prim_in.txt \
 
@@ -14,6 +15,9 @@ sdu_gtc.ttl: generator
 	./generator
 
 demos: ${TARGETS}
+
+demo_inheritance.txt: ./demo_inheritance sdu_gtc.ttl
+	./demo_inheritance > demo_inheritance.txt
 
 demo_list_upstream_heating_elements.txt: ./demo_list_upstream_heating_elements sdu_gtc.ttl
 	./demo_list_upstream_heating_elements > demo_list_upstream_heating_elements.txt
