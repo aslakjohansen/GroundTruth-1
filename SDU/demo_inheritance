@@ -22,7 +22,7 @@ g.add( (water_pump, RDF.type, BS['Water_Pump']) )
 
 g.add( (cooling_tower, BS.feeds, water_pump) )
 
-print '          [Tagset]'
+print '          [TagSet]'
 print '              ^'
 print '              |'
 print '      +-------+------+ inherits'
