@@ -1378,6 +1378,82 @@
         "floor": 2,
         "side": "N",
         "note": "id's indicate that this room should have been called 3.J.13"
+    },
+    
+    "1.E.5Gang": {
+        "tr1": "-01-1E5-TR01",
+        "co2": "",
+        "pir": "",
+        "radiators": {
+            "count": 0,
+            "id": ""
+        },
+        "floorheating": {
+            "count": 1,
+            "id": "-01-1E5-MV01"
+        },
+        "input dampeners": {
+            "count": 0,
+            "id": ""
+        },
+        "output dampeners": {
+            "count": 0,
+            "id": ""
+        },
+        "zone": -1,
+        "floor": 0,
+        "side": "N",
+        "note": "this is neither N nor S"
+    },
+    "1.I.5Gang": {
+        "tr1": "-01-1I5-TR01",
+        "co2": "",
+        "pir": "",
+        "radiators": {
+            "count": 0,
+            "id": ""
+        },
+        "floorheating": {
+            "count": 1,
+            "id": "-01-1I5-MV01"
+        },
+        "input dampeners": {
+            "count": 0,
+            "id": ""
+        },
+        "output dampeners": {
+            "count": 0,
+            "id": ""
+        },
+        "zone": -1,
+        "floor": 0,
+        "side": "N",
+        "note": "this is neither N nor S"
+    },
+    "1.I.20Gang": {
+        "tr1": "-01-1I20-TR01",
+        "co2": "",
+        "pir": "",
+        "radiators": {
+            "count": 0,
+            "id": ""
+        },
+        "floorheating": {
+            "count": 1,
+            "id": "-01-1I20-MV01"
+        },
+        "input dampeners": {
+            "count": 0,
+            "id": ""
+        },
+        "output dampeners": {
+            "count": 0,
+            "id": ""
+        },
+        "zone": -1,
+        "floor": 0,
+        "side": "N",
+        "note": "this is neither N nor S"
     }
 }
 
