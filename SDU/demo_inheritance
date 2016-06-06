@@ -68,3 +68,21 @@ for pair in r:
 print 'total: '+str(len(r))
 print ''
 
+################################################################################
+################################################## unrolled inherited query ####
+
+r = g.query(
+    """SELECT DISTINCT ?ct ?wp
+       WHERE {
+          ?ct a bs:Cooling_Tower .
+          ?wp a ?subclass .
+          ?subclass rdfs:subClassOf* bs:TagSet .
+          ?ct bs:feeds ?wp .
+       }""")
+
+print 'Matches for [Cooling_Tower feeds TagSet]:'
+for pair in r:
+    print('  %s -> %s' % pair)
+print 'total: '+str(len(r))
+print ''
+
