@@ -75,12 +75,12 @@ r = g.query(
     """SELECT DISTINCT ?ct ?wp
        WHERE {
           ?ct a bs:Cooling_Tower .
-          ?wp a ?subclass .
-          ?subclass rdfs:subClassOf* bs:TagSet .
+          ?wp a ?someclass .
           ?ct bs:feeds ?wp .
+          ?someclass rdfs:subClassOf* bs:TagSet .
        }""")
 
-print 'Matches for [Cooling_Tower feeds TagSet]:'
+print 'Matches for [Cooling_Tower feeds (?) rdfs:subClassOf* bs:TagSet]:'
 for pair in r:
     print('  %s -> %s' % pair)
 print 'total: '+str(len(r))
