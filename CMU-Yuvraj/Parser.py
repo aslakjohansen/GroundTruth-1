@@ -77,19 +77,23 @@ def main():
 					location=location+ListBasTag[i]
 
 				location = re.sub(' ','_',location)
+				g.add((GHC[location],RDF.type,OWL.NamedIndividual))
+				g.add((GHC[location],RDF.type,BRICK["Location"]))
 				g.add((x,BRICK.hasLocation,GHC[location]))
 				if 'AHU' in ListBasTag[3+y]:
-					Equip="Air_Handler_Unit"
+					Equip="AHU"
 				elif 'VAV' in ListBasTag[3+y]:
 				#	print ListBasTag[3+y]
-					Equip="Variable_Air_Volume_Box"
+					Equip="VAV"
 				elif 'CRAC' in ListBasTag[3+y]:
-					Equip="Computer_Room_Air_Conditioning"
+					Equip="CRAC"
 				elif 'FCU' in ListBasTag[3+y]:
+					print "HELLO"
 					Equip="Fan_Coil_Unit"
 				blank = re.sub(' ','_',ListBasTag[3+y])
 		#		print blank, ListBasTag[3+y]
-				if not (blank in Equipment):
+				if not (blank in Equipment) and not 'Interface' in ListBasTag[3+y] and Equip!="":
+					
 					Equipment[blank] = 1
 					g.add((GHC[blank],RDF.type, OWL.NamedIndividual))
 					g.add((GHC[blank],RDF.type, BRICK[Equip]))
@@ -100,7 +104,7 @@ def main():
 					
 			else:
 				Total[Key]=1
-				print Key
+			#	print Key
 				count2+=1
 			#	print Key
 		#	if ('AHU' in ListBasTag[3]):
@@ -112,11 +116,11 @@ def main():
 			#for value in TagsetsToTags[item]:
 			#	g.add((x,BRICK.hasTag,BRICK[value]))
 				
-	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,OWL.NamedIndividual))
+#	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,OWL.NamedIndividual))
 	if((BRICK["Run_Request"],None,None) in g):
 		print "Hi"
-	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,BRICK["Zone_Temp"]))
-	g.add((GHC["VAV1"], BRICK.hasPoint, GHC["AHU-1_Zone-Temperature"]))
+#	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,BRICK["Zone_Temp"]))
+#	g.add((GHC["VAV1"], BRICK.hasPoint, GHC["AHU-1_Zone-Temperature"]))
 	g.serialize(destination='GHCYuvraj_brick.ttl', format='turtle')
 	print count1
 	print count2
