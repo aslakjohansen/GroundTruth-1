@@ -3283,6 +3283,11 @@ _:genid267 a owl:Restriction ;
 :Unoccupied_Mode a owl:Class ;
 	rdfs:subClassOf :Point .
 # 
+# http://buildsys.org/ontologies/brick#VAV
+
+:VAV a owl:Class ;
+	rdfs:subClassOf :Terminal_Unit .
+# 
 # http://buildsys.org/ontologies/brick#VAV_Box_Mode
 
 :VAV_Box_Mode a owl:Class ;
