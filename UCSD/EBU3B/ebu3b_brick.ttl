@@ -1,0 +1,2021 @@
+@prefix : <http://buildsys.org/ontologies/brick#> .
+@prefix brick: <http://buildsys.org/ontologies/brick#> .
+@prefix ebu3b: <http://ucsd.edu/building/ontology/ebu3b#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://buildsys.org/ontologies/brick> a owl:Ontology .
+
+:Boiler a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Booster_Fan a owl:Class ;
+    rdfs:subClassOf :Fan .
+
+:Booster_Fan_Air_Flow_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Booster_Fan_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Booster_Fan_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:CO2_High_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:CO2_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:CRAC a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Air_Flow_Loss_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :CRAC_Capacity ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :CRAC_Pump_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :CRAC_Stages ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Communication_Loss_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Condensate_Leak_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Cooling_On_Off_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Dehumidification_On_Off_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Econ-O-Cycle_On_Off_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Emergency_Power_Loss_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Emergency_Power_Off_Activated_by_High_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Emergency_Power_Off_Activated_by_Leak_Detection_System ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Emergency_Power_Off_Enable_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Emergency_Power_Off_Switch ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Emergency_Power_Off_System_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fan_Overload_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heating_On_Off_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Head_Pressure_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Humidity_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Humidity_Alarm_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Temperature_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Temperature_Alarm_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidification_On_Off_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidifier_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidifier_Fault_Indicator ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidify_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidity_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidity_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Humidity_Tolerance ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Liquid_Detected_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Humidity_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Humidity_Alarm_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Suction_Pressure_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Temperature_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Temperature_Alarm_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Power_Loss_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Short_Cycle_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Smoke_Detected_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Standby_Fan_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Standby_Unit_On_Off_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :System_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Temperature_Tolerance ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unit_Failed_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unit_Hold ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unit_Run_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unit_Run_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unit_Turned_Off_Locally ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unit_Turned_Off_Remotely ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Water_Loss_Alarm ],
+        :Equipment .
+
+:Chilled_Water_Pump a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :feeds ;
+            owl:someValuesFrom :AHU ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Bypass_Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Differential_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Differential_Pressure_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Differential_Pressure_Increase_Decrease_Step ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Differential_Pressure_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Differential_Pressure_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Differential_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Discharge_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Alarm_Delay ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Integration_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Lead_Lag ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Pump_VFD_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Return_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Supply_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Chilled_Water_Temperature_Differential ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deionised_Water_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deionised_Water_Conductivity ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deionised_Water_Level_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Freeze_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_System_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Valve_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_Chilled_Water_Differential_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Min_Chilled_Water_Differential_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Open_Heating_Valve_Outside_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Lead_Lag_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Water_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Water_Discharge_Temperature ],
+        :Pump .
+
+:Chiller a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Cooling_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Max_Discharge_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Tower a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Cooling_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Damper a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Damper_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Damper_Position a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Discharge_Air_Flow_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Flow_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Domestic_Hot_Water_Supply_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Effective_Heating_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Exhaust_Fan a owl:Class ;
+    rdfs:subClassOf :Fan .
+
+:Fan_Coil_Unit a owl:Class ;
+    rdfs:subClassOf :Terminal_Unit .
+
+:Filter_Differential_Pressure a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_Supply_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Pump a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :feeds ;
+            owl:someValuesFrom :AHU ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Domestic_Hot_Water_Supply_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Domestic_Hot_Water_System_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Domestic_Hot_Water_System_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Domestic_Hot_Water_Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_System_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Exchanger_Valve_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Temperature_Hot_Water_Return_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :High_Temperature_Hot_Water_Supply_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Differential_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Differential_Pressure_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Differential_Pressure_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Differential_Pressure_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Differential_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Discharge_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Pump_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Pump_Lead_Lag_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Pump_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Pump_VFD_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Return_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Hot_Water_Static_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Medium_Temperature_Hot_Water_Discharge_Temperature_High_Reset_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Medium_Temperature_Hot_Water_Discharge_Temperature_Low_Reset_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Medium_Temperature_Hot_Water_Return_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Medium_Temperature_Water_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Shutdown_Hot_Water_When_Unoccupied ],
+        :Pump .
+
+:Occupancy_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupancy_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupied_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupied_Cooling_Max_Discharge_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupied_Cooling_Min_Discharge_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupied_Heating_Max_Discharge_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupied_Heating_Min_Discharge_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Occupied_Heating_Supply_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Pre_Filter_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Preheat_Demand a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Reheat_Valve a owl:Class ;
+    rdfs:subClassOf :Valve .
+
+:Reheat_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Room_Temperature_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Room_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Space_Heater a owl:Class ;
+    rdfs:subClassOf :Terminal_Unit .
+
+:Supply_Air_Flow_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Temperature_Adjustment a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Temporary_Occupancy_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Thermal_Energy_Storage a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:VAV_Box_Mode a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Zone_Temperature_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Zone_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+ebu3b:EBU3B_VAV_RM-1100A a :VAV,
+        owl:NamedIndividual ;
+    :hasPoint ebu3b:EBU3B_RM-1100A_ACTCLGSP .
+
+:AHU_Auto_Cooling_Setpoint a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:AHU_Fire_Control_Panel_Off a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:AHU_Fire_Control_Panel_On a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:AHU_Overridden_Off a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:AHU_Overridden_On a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:AHU_System_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Acceleration_Time_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Air_Flow_Loss_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Alarm_Delay a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Average_Supply_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Bypass_Air_Flow_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:CO2_Differential a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:CRAC_Capacity a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:CRAC_Pump_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:CRAC_Stages a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Change_Filter_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Bypass_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Differential_Pressure a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Chilled_Water_Differential_Pressure_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Differential_Pressure_Increase_Decrease_Step a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Differential_Pressure_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Differential_Pressure_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Differential_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Discharge_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Chilled_Water_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Alarm_Delay a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Differential_Pressure_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Differential_Pressure_Integration_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Differential_Pressure_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Lead_Lag a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Pump_VFD_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Chilled_Water_Return_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Chilled_Water_Supply_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Chilled_Water_Temperature_Differential a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Communication_Loss_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Condensate_Leak_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Discharge_Air_Temperature_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Discharge_Air_Temperature_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Tower_Fan_Speed_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Cooling_Valve a owl:Class ;
+    rdfs:subClassOf :Valve .
+
+:Current_Limit a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:DC_Bus_Voltage a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Deceleration_Time_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Dehumidification_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Cooling_Demand_High a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Cooling_Demand_Low a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Flow_Demand a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Flow_Reset_High_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Flow_Reset_Low_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Smoke_Detected a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Increase_Decrease_Step a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Discharge_Air_Temperature_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature_High_Limit_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature_Reset_Differential a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Domestic_Hot_Water_Supply_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Domestic_Hot_Water_System_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Domestic_Hot_Water_System_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Domestic_Hot_Water_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Drive_Ready_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Drive_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:DualBand_Mode a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Econ-O-Cycle_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Economizer a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Economizer_Damper_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Economizer_Differential_Air_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Economizer_Discharge_Air_Temperature_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Economizer_Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Economizer_Mode a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Economizer_Outside_Air_Flow_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Effective_Cooling_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Emergency_Power_Loss_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Emergency_Power_Off_Activated_by_High_Temperature a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Emergency_Power_Off_Activated_by_Leak_Detection_System a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Emergency_Power_Off_Enable_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Emergency_Power_Off_Switch a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Emergency_Power_Off_System_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Energy a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Fan_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Fan_Air_Flow_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Fan_Overload_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Fan_Start_Stop_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Fault_Indicator a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Fault_Reset a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Fault_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Filter_Differential_Pressure_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Filter_Reset a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Filter_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Freeze_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Frequency_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Wheel_Differential_Pressure a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Heat_Wheel_Speed a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Heat_Wheel_Supply_Air_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Heat_Wheel_Voltage a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Heating_Discharge_Air_Temperature_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_Discharge_Air_Temperature_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_Discharge_Air_Temperature_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heating_Valve a owl:Class ;
+    rdfs:subClassOf :Valve .
+
+:High_Head_Pressure_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:High_Humidity a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:High_Humidity_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:High_Humidity_Alarm_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:High_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:High_Temperature_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:High_Temperature_Alarm_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:High_Temperature_Hot_Water_Return_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:High_Temperature_Hot_Water_Supply_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Highest_Floor_Demand a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Differential_Pressure a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Hot_Water_Differential_Pressure_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Differential_Pressure_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Differential_Pressure_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Differential_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Discharge_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Hot_Water_Pump_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Pump_Lead_Lag_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Pump_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Pump_VFD_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Hot_Water_Return_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Hot_Water_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidification_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidifier_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidifier_Fault_Indicator a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidify_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidity_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidity_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidity_Tolerance a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Liquid_Detected_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Humidity_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Humidity_Alarm_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Outside_Air_Temperature_Enable_Differential a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Outside_Air_Temperature_Enable_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Suction_Pressure_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Low_Temperature_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Low_Temperature_Alarm_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Maintenance_Mode a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Maintenance_Required_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Manual_Auto_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_Chilled_Water_Differential_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_Discharge_Air_Temperature a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_Frequency_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_Return_Air_CO2_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_Static_Pressure a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Max_VFD_Speed_To_Increase_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Medium_Temperature_Hot_Water_Discharge_Temperature_High_Reset_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Medium_Temperature_Hot_Water_Discharge_Temperature_Low_Reset_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Medium_Temperature_Hot_Water_Return_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Medium_Temperature_Hot_Water_Supply_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Medium_Temperature_Water_Pressure a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Min_Chilled_Water_Differential_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Min_Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Min_Discharge_Air_Temperature a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Min_Static_Pressure a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Min_VFD_Speed_To_Increase_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Mixed_Air_Damper_Position a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Mixed_Air_Damper_Position_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Mixed_Air_Temperature_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Mixed_Air_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Motor_Current a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Motor_Power a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Motor_Speed a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Motor_Torque a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Occupied_Mode a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Open_Heating_Valve_Outside_Air_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Output_Frequency a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Output_Voltage a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_CO2_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Damper_Min_Position_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Damper_Position a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_Damper_Position_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Dewpoint a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_Dewpoint_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Enthalpy a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_Enthalpy_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_Flow_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Humidity a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_Humidity_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Lockout_Temperature_Differential a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Lockout_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Temperature_High_Reset_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Temperature_Low_Reset_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Temperature_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Min_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Panel_Lockout_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Power_Loss_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Preheat_Supply_Air_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Pump_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Pump_Alarm_Delay a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Pump_Enable_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Pump_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Pump_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Rated_Speed a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_CO2 a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_CO2_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Dewpoint a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Dewpoint_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Enthalpy a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Enthalpy_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Flow_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Humidity a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Humidity_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Preheat_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Temperature_High_Limit_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Air_Temperature_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Fan a owl:Class ;
+    rdfs:subClassOf :Fan .
+
+:Return_Fan_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Fan_Differential_Speed_from_Supply_Fan a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Fan_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Fan_Start_Stop_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Fan_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Run_Direction_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Run_Direction_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Run_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Run_Enable_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Run_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Short_Cycle_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Shutdown_Hot_Water_When_Unoccupied a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Smoke_Detected_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Speed_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Standby_Fan_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Standby_Unit_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Static_Pressure a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Static_Pressure_Max_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Static_Pressure_Min_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Static_Pressure_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Supply_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Supply_Fan a owl:Class ;
+    rdfs:subClassOf :Fan .
+
+:Supply_Fan_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Supply_Fan_Piezoelectric_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Supply_Fan_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Supply_Fan_Start_Stop_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Supply_Fan_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:System_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:System_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Temperature_Tolerance a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Underfloor_Temperature_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unit_Failed_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unit_Hold a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unit_Run_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unit_Run_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unit_Turned_Off_Locally a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unit_Turned_Off_Remotely a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Unoccupied_Mode a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:VAV a owl:Class ;
+    rdfs:subClassOf :Terminal_Unit .
+
+:VFD_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:VFD_Run_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:VFD_Start_Stop_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:VFD_Start_Stop_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Water_Loss_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+ebu3b:EBU3B_RM-1100A_ACTCLGSP a :Effective_Cooling_Temperature_Setpoint,
+        owl:NamedIndividual .
+
+:AHU a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Cooling_Valve ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_Overridden_On ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Flow_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Humidity_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Preheat_Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Temperature_High_Limit_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Temperature_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Fan_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Fan_Differential_Speed_from_Supply_Fan ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Fan_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Fan_Start_Stop_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_System_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Fan_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Static_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Static_Pressure_Max_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Static_Pressure_Min_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Static_Pressure_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Fan_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Fan_Piezoelectric_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Fan_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Fan_Start_Stop_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Bypass_Air_Flow_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Fan_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Underfloor_Temperature_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Unoccupied_Mode ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :CO2_Differential ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Change_Filter_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Cooling_Demand_High ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Cooling_Demand_Low ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Economizer ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Flow_Demand ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Flow_Reset_High_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Flow_Reset_Low_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Smoke_Detected ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Static_Pressure_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Static_Pressure_Increase_Decrease_Step ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Static_Pressure_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Static_Pressure_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Static_Pressure_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Static_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Heating_Valve ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_High_Limit_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_Reset_Differential ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :DualBand_Mode ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Economizer_Damper_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Return_Fan ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Economizer_Differential_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Economizer_Mode ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Economizer_Outside_Air_Flow_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fan_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fan_Air_Flow_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fan_Start_Stop_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Filter_Differential_Pressure_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Filter_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Supply_Fan ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Wheel_Differential_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Wheel_Speed ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Wheel_Supply_Air_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heat_Wheel_Voltage ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heating_Discharge_Air_Temperature_Dead_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heating_Discharge_Air_Temperature_Integral_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Heating_Discharge_Air_Temperature_Proportional_Band ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Highest_Floor_Demand ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Differential ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_Auto_Cooling_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_Discharge_Air_Static_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_Discharge_Air_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_Return_Air_CO2_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_Static_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_VFD_Speed_To_Increase_Static_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Min_Discharge_Air_Static_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Min_Discharge_Air_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Min_Static_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Min_VFD_Speed_To_Increase_Static_Pressure_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Mixed_Air_Damper_Position ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_Fire_Control_Panel_Off ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Mixed_Air_Damper_Position_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Mixed_Air_Temperature_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Mixed_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Occupied_Mode ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_CO2_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Damper_Min_Position_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Damper_Position ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Damper_Position_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Dewpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Dewpoint_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_Fire_Control_Panel_On ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Enthalpy ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Enthalpy_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Flow_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Humidity ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Humidity_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Lockout_Temperature_Differential ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Lockout_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Temperature_High_Reset_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Temperature_Low_Reset_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_Overridden_Off ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Air_Temperature_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Outside_Min_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Preheat_Supply_Air_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_CO2 ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_CO2_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Dewpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Dewpoint_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Enthalpy ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Enthalpy_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Flow ],
+        :Equipment .
+
+:Deionised_Water_Alarm a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Deionised_Water_Conductivity a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Deionised_Water_Level_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_Supply_Water_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Heat_Exchanger_Supply_Water_Temperature_Dead_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_Supply_Water_Temperature_Integral_Time a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_Supply_Water_Temperature_Proportional_Band a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_Supply_Water_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_System_Enable a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Heat_Exchanger_Valve_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Pump a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :VFD ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Alarm_Delay ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Cooling_Tower_Fan_Speed_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deionised_Water_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deionised_Water_Conductivity ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deionised_Water_Level_Sensor ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Alarm_Delay ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Enable_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Lead_Lag_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Pump_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Supply_Water_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Valve_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Water_Discharge_Temperature ],
+        :Equipment .
+
+:Pump_Lead_Lag_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Supply_Water_Temperature_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:VFD a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Acceleration_Time_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Average_Supply_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Current_Limit ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :DC_Bus_Voltage ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Deceleration_Time_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Drive_Ready_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Drive_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Energy ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fault_Indicator ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fault_Reset ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Fault_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Filter_Reset ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Frequency_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Maintenance_Mode ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Maintenance_Required_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Manual_Auto_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Max_Frequency_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Motor_Current ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Motor_Power ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Motor_Speed ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Motor_Torque ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Output_Frequency ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Output_Voltage ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Panel_Lockout_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Rated_Speed ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Run_Direction_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Run_Direction_Status ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Run_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Run_Enable_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Run_Time ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Speed_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :System_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :VFD_Alarm ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :VFD_Run_Enable ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :VFD_Start_Stop_Command ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :VFD_Start_Stop_Status ],
+        :Equipment .
+
+:Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Water_Discharge_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:feeds a owl:ObjectProperty .
+
+:Terminal_Unit a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Valve a owl:Class ;
+    rdfs:subClassOf :Equipment .
+
+:Fan a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :VFD ],
+        :Equipment .
+
+:contains a owl:ObjectProperty .
+
+:Equipment a owl:Class .
+
+:Measurement_Property a owl:Class .
+
+:hasPoint a owl:ObjectProperty .
+
+:Point a owl:Class .
+
