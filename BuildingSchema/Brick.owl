@@ -43,731 +43,725 @@
 
 _:genid1 a owl:Restriction ;
 	owl:onProperty :contains ;
-	owl:someValuesFrom :Cooling_Valve .
+	owl:someValuesFrom :Economizer .
 
 :AHU rdfs:subClassOf _:genid2 .
 
 _:genid2 a owl:Restriction ;
 	owl:onProperty :contains ;
-	owl:someValuesFrom :Economizer .
+	owl:someValuesFrom :Heating_Valve .
 
 :AHU rdfs:subClassOf _:genid3 .
 
 _:genid3 a owl:Restriction ;
 	owl:onProperty :contains ;
-	owl:someValuesFrom :Heating_Valve .
+	owl:someValuesFrom :Return_Fan .
 
 :AHU rdfs:subClassOf _:genid4 .
 
 _:genid4 a owl:Restriction ;
 	owl:onProperty :contains ;
-	owl:someValuesFrom :Return_Fan .
+	owl:someValuesFrom :Supply_Fan .
 
 :AHU rdfs:subClassOf _:genid5 .
 
 _:genid5 a owl:Restriction ;
-	owl:onProperty :contains ;
-	owl:someValuesFrom :Supply_Fan .
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :AHU_Auto_Cooling_Setpoint .
 
 :AHU rdfs:subClassOf _:genid6 .
 
 _:genid6 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :AHU_Auto_Cooling_Setpoint .
+	owl:someValuesFrom :AHU_Fire_Control_Panel_Off .
 
 :AHU rdfs:subClassOf _:genid7 .
 
 _:genid7 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :AHU_Fire_Control_Panel_Off .
+	owl:someValuesFrom :AHU_Fire_Control_Panel_On .
 
 :AHU rdfs:subClassOf _:genid8 .
 
 _:genid8 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :AHU_Fire_Control_Panel_On .
+	owl:someValuesFrom :AHU_Overridden_Off .
 
 :AHU rdfs:subClassOf _:genid9 .
 
 _:genid9 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :AHU_Overridden_Off .
+	owl:someValuesFrom :AHU_Overridden_On .
 
 :AHU rdfs:subClassOf _:genid10 .
 
 _:genid10 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :AHU_Overridden_On .
+	owl:someValuesFrom :AHU_System_Enable .
 
 :AHU rdfs:subClassOf _:genid11 .
 
 _:genid11 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :AHU_System_Enable .
+	owl:someValuesFrom :Bypass_Air_Flow_Sensor .
 
 :AHU rdfs:subClassOf _:genid12 .
 
 _:genid12 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Bypass_Air_Flow_Sensor .
+	owl:someValuesFrom :CO2_Differential .
 
 :AHU rdfs:subClassOf _:genid13 .
 
 _:genid13 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CO2_Differential .
+	owl:someValuesFrom :Change_Filter_Alarm .
 
 :AHU rdfs:subClassOf _:genid14 .
 
 _:genid14 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Change_Filter_Alarm .
+	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Dead_Band .
 
 :AHU rdfs:subClassOf _:genid15 .
 
 _:genid15 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Dead_Band .
+	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Integral_Time .
 
 :AHU rdfs:subClassOf _:genid16 .
 
 _:genid16 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Integral_Time .
+	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Proportional_Band .
 
 :AHU rdfs:subClassOf _:genid17 .
 
 _:genid17 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Discharge_Air_Temperature_Proportional_Band .
+	owl:someValuesFrom :Discharge_Air_Cooling_Demand_High .
 
 :AHU rdfs:subClassOf _:genid18 .
 
 _:genid18 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Cooling_Demand_High .
+	owl:someValuesFrom :Discharge_Air_Cooling_Demand_Low .
 
 :AHU rdfs:subClassOf _:genid19 .
 
 _:genid19 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Cooling_Demand_Low .
+	owl:someValuesFrom :Discharge_Air_Flow_Demand .
 
 :AHU rdfs:subClassOf _:genid20 .
 
 _:genid20 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Flow_Demand .
+	owl:someValuesFrom :Discharge_Air_Flow_Reset_High_Sensor .
 
 :AHU rdfs:subClassOf _:genid21 .
 
 _:genid21 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Flow_Reset_High_Sensor .
+	owl:someValuesFrom :Discharge_Air_Flow_Reset_Low_Sensor .
 
 :AHU rdfs:subClassOf _:genid22 .
 
 _:genid22 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Flow_Reset_Low_Sensor .
+	owl:someValuesFrom :Discharge_Air_Smoke_Detected .
 
 :AHU rdfs:subClassOf _:genid23 .
 
 _:genid23 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Smoke_Detected .
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Dead_Band .
 
 :AHU rdfs:subClassOf _:genid24 .
 
 _:genid24 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Static_Pressure_Dead_Band .
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Increase_Decrease_Step .
 
 :AHU rdfs:subClassOf _:genid25 .
 
 _:genid25 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Static_Pressure_Increase_Decrease_Step .
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Integral_Time .
 
 :AHU rdfs:subClassOf _:genid26 .
 
 _:genid26 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Static_Pressure_Integral_Time .
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Proportional_Band .
 
 :AHU rdfs:subClassOf _:genid27 .
 
 _:genid27 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Static_Pressure_Proportional_Band .
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Sensor .
 
 :AHU rdfs:subClassOf _:genid28 .
 
 _:genid28 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Static_Pressure_Sensor .
+	owl:someValuesFrom :Discharge_Air_Static_Pressure_Setpoint .
 
 :AHU rdfs:subClassOf _:genid29 .
 
 _:genid29 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Discharge_Air_Temperature .
 
 :AHU rdfs:subClassOf _:genid30 .
 
 _:genid30 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature .
+	owl:someValuesFrom :Discharge_Air_Temperature_Dead_Band .
 
 :AHU rdfs:subClassOf _:genid31 .
 
 _:genid31 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_Dead_Band .
+	owl:someValuesFrom :Discharge_Air_Temperature_High_Limit_Alarm .
 
 :AHU rdfs:subClassOf _:genid32 .
 
 _:genid32 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_High_Limit_Alarm .
+	owl:someValuesFrom :Discharge_Air_Temperature_Integral_Time .
 
 :AHU rdfs:subClassOf _:genid33 .
 
 _:genid33 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_Integral_Time .
+	owl:someValuesFrom :Discharge_Air_Temperature_Proportional_Band .
 
 :AHU rdfs:subClassOf _:genid34 .
 
 _:genid34 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_Proportional_Band .
+	owl:someValuesFrom :Discharge_Air_Temperature_Reset_Differential .
 
 :AHU rdfs:subClassOf _:genid35 .
 
 _:genid35 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_Reset_Differential .
+	owl:someValuesFrom :Discharge_Air_Temperature_Setpoint .
 
 :AHU rdfs:subClassOf _:genid36 .
 
 _:genid36 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_Setpoint .
+	owl:someValuesFrom :Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step .
 
 :AHU rdfs:subClassOf _:genid37 .
 
 _:genid37 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step .
+	owl:someValuesFrom :DualBand_Mode .
 
 :AHU rdfs:subClassOf _:genid38 .
 
 _:genid38 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :DualBand_Mode .
+	owl:someValuesFrom :Economizer_Damper_Command .
 
 :AHU rdfs:subClassOf _:genid39 .
 
 _:genid39 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Economizer_Damper_Command .
+	owl:someValuesFrom :Economizer_Differential_Air_Temperature_Setpoint .
 
 :AHU rdfs:subClassOf _:genid40 .
 
 _:genid40 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Economizer_Differential_Air_Temperature_Setpoint .
+	owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Dead_Band .
 
 :AHU rdfs:subClassOf _:genid41 .
 
 _:genid41 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Dead_Band .
+	owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Proportional_Band .
 
 :AHU rdfs:subClassOf _:genid42 .
 
 _:genid42 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Proportional_Band .
+	owl:someValuesFrom :Economizer_Mode .
 
 :AHU rdfs:subClassOf _:genid43 .
 
 _:genid43 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Economizer_Mode .
+	owl:someValuesFrom :Economizer_Outside_Air_Flow_Setpoint .
 
 :AHU rdfs:subClassOf _:genid44 .
 
 _:genid44 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Economizer_Outside_Air_Flow_Setpoint .
+	owl:someValuesFrom :Fan_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid45 .
 
 _:genid45 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fan_Air_Flow .
+	owl:someValuesFrom :Fan_Air_Flow_Sensor .
 
 :AHU rdfs:subClassOf _:genid46 .
 
 _:genid46 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fan_Air_Flow_Sensor .
+	owl:someValuesFrom :Fan_Start_Stop_Status .
 
 :AHU rdfs:subClassOf _:genid47 .
 
 _:genid47 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fan_Start_Stop_Status .
+	owl:someValuesFrom :Filter_Differential_Pressure_Sensor .
 
 :AHU rdfs:subClassOf _:genid48 .
 
 _:genid48 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Filter_Differential_Pressure_Sensor .
+	owl:someValuesFrom :Filter_Status .
 
 :AHU rdfs:subClassOf _:genid49 .
 
 _:genid49 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Filter_Status .
+	owl:someValuesFrom :Heat_Wheel_Differential_Pressure .
 
 :AHU rdfs:subClassOf _:genid50 .
 
 _:genid50 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Wheel_Differential_Pressure .
+	owl:someValuesFrom :Heat_Wheel_Speed .
 
 :AHU rdfs:subClassOf _:genid51 .
 
 _:genid51 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Wheel_Speed .
+	owl:someValuesFrom :Heat_Wheel_Supply_Air_Temperature .
 
 :AHU rdfs:subClassOf _:genid52 .
 
 _:genid52 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Wheel_Supply_Air_Temperature .
+	owl:someValuesFrom :Heat_Wheel_Voltage .
 
 :AHU rdfs:subClassOf _:genid53 .
 
 _:genid53 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Wheel_Voltage .
+	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Dead_Band .
 
 :AHU rdfs:subClassOf _:genid54 .
 
 _:genid54 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Dead_Band .
+	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Integral_Time .
 
 :AHU rdfs:subClassOf _:genid55 .
 
 _:genid55 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Integral_Time .
+	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Proportional_Band .
 
 :AHU rdfs:subClassOf _:genid56 .
 
 _:genid56 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heating_Discharge_Air_Temperature_Proportional_Band .
+	owl:someValuesFrom :Highest_Floor_Demand .
 
 :AHU rdfs:subClassOf _:genid57 .
 
 _:genid57 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Highest_Floor_Demand .
+	owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Differential .
 
 :AHU rdfs:subClassOf _:genid58 .
 
 _:genid58 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Differential .
+	owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Setpoint .
 
 :AHU rdfs:subClassOf _:genid59 .
 
 _:genid59 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Setpoint .
+	owl:someValuesFrom :Max_Discharge_Air_Static_Pressure_Setpoint .
 
 :AHU rdfs:subClassOf _:genid60 .
 
 _:genid60 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Discharge_Air_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Max_Discharge_Air_Temperature .
 
 :AHU rdfs:subClassOf _:genid61 .
 
 _:genid61 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Discharge_Air_Temperature .
+	owl:someValuesFrom :Max_Return_Air_CO2_Setpoint .
 
 :AHU rdfs:subClassOf _:genid62 .
 
 _:genid62 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Return_Air_CO2_Setpoint .
+	owl:someValuesFrom :Max_Static_Pressure .
 
 :AHU rdfs:subClassOf _:genid63 .
 
 _:genid63 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Static_Pressure .
+	owl:someValuesFrom :Max_VFD_Speed_To_Increase_Static_Pressure_Setpoint .
 
 :AHU rdfs:subClassOf _:genid64 .
 
 _:genid64 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_VFD_Speed_To_Increase_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Min_Discharge_Air_Static_Pressure_Setpoint .
 
 :AHU rdfs:subClassOf _:genid65 .
 
 _:genid65 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_Discharge_Air_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Min_Discharge_Air_Temperature .
 
 :AHU rdfs:subClassOf _:genid66 .
 
 _:genid66 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_Discharge_Air_Temperature .
+	owl:someValuesFrom :Min_Static_Pressure .
 
 :AHU rdfs:subClassOf _:genid67 .
 
 _:genid67 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_Static_Pressure .
+	owl:someValuesFrom :Min_VFD_Speed_To_Increase_Static_Pressure_Setpoint .
 
 :AHU rdfs:subClassOf _:genid68 .
 
 _:genid68 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_VFD_Speed_To_Increase_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Mixed_Air_Damper_Position .
 
 :AHU rdfs:subClassOf _:genid69 .
 
 _:genid69 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Mixed_Air_Damper_Position .
+	owl:someValuesFrom :Mixed_Air_Damper_Position_Command .
 
 :AHU rdfs:subClassOf _:genid70 .
 
 _:genid70 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Mixed_Air_Damper_Position_Command .
+	owl:someValuesFrom :Mixed_Air_Temperature_Sensor .
 
 :AHU rdfs:subClassOf _:genid71 .
 
 _:genid71 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Mixed_Air_Temperature_Sensor .
+	owl:someValuesFrom :Mixed_Air_Temperature_Setpoint .
 
 :AHU rdfs:subClassOf _:genid72 .
 
 _:genid72 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Mixed_Air_Temperature_Setpoint .
+	owl:someValuesFrom :Occupied_Mode .
 
 :AHU rdfs:subClassOf _:genid73 .
 
 _:genid73 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Occupied_Mode .
+	owl:someValuesFrom :Outside_Air_CO2_Sensor .
 
 :AHU rdfs:subClassOf _:genid74 .
 
 _:genid74 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_CO2_Sensor .
+	owl:someValuesFrom :Outside_Air_Damper_Min_Position_Setpoint .
 
 :AHU rdfs:subClassOf _:genid75 .
 
 _:genid75 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Damper_Min_Position_Setpoint .
+	owl:someValuesFrom :Outside_Air_Damper_Position .
 
 :AHU rdfs:subClassOf _:genid76 .
 
 _:genid76 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Damper_Position .
+	owl:someValuesFrom :Outside_Air_Damper_Position_Command .
 
 :AHU rdfs:subClassOf _:genid77 .
 
 _:genid77 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Damper_Position_Command .
+	owl:someValuesFrom :Outside_Air_Dewpoint .
 
 :AHU rdfs:subClassOf _:genid78 .
 
 _:genid78 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Dewpoint .
+	owl:someValuesFrom :Outside_Air_Dewpoint_Sensor .
 
 :AHU rdfs:subClassOf _:genid79 .
 
 _:genid79 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Dewpoint_Sensor .
+	owl:someValuesFrom :Outside_Air_Enthalpy .
 
 :AHU rdfs:subClassOf _:genid80 .
 
 _:genid80 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Enthalpy .
+	owl:someValuesFrom :Outside_Air_Enthalpy_Sensor .
 
 :AHU rdfs:subClassOf _:genid81 .
 
 _:genid81 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Enthalpy_Sensor .
+	owl:someValuesFrom :Outside_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid82 .
 
 _:genid82 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Flow .
+	owl:someValuesFrom :Outside_Air_Flow_Sensor .
 
 :AHU rdfs:subClassOf _:genid83 .
 
 _:genid83 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Flow_Sensor .
+	owl:someValuesFrom :Outside_Air_Humidity .
 
 :AHU rdfs:subClassOf _:genid84 .
 
 _:genid84 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Humidity .
+	owl:someValuesFrom :Outside_Air_Humidity_Sensor .
 
 :AHU rdfs:subClassOf _:genid85 .
 
 _:genid85 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Humidity_Sensor .
+	owl:someValuesFrom :Outside_Air_Lockout_Temperature_Differential .
 
 :AHU rdfs:subClassOf _:genid86 .
 
 _:genid86 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Lockout_Temperature_Differential .
+	owl:someValuesFrom :Outside_Air_Lockout_Temperature_Setpoint .
 
 :AHU rdfs:subClassOf _:genid87 .
 
 _:genid87 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Lockout_Temperature_Setpoint .
+	owl:someValuesFrom :Outside_Air_Temperature_High_Reset_Setpoint .
 
 :AHU rdfs:subClassOf _:genid88 .
 
 _:genid88 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Temperature_High_Reset_Setpoint .
+	owl:someValuesFrom :Outside_Air_Temperature_Low_Reset_Setpoint .
 
 :AHU rdfs:subClassOf _:genid89 .
 
 _:genid89 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Temperature_Low_Reset_Setpoint .
+	owl:someValuesFrom :Outside_Air_Temperature_Sensor .
 
 :AHU rdfs:subClassOf _:genid90 .
 
 _:genid90 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Air_Temperature_Sensor .
+	owl:someValuesFrom :Outside_Min_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid91 .
 
 _:genid91 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Outside_Min_Air_Flow .
+	owl:someValuesFrom :Preheat_Supply_Air_Temperature .
 
 :AHU rdfs:subClassOf _:genid92 .
 
 _:genid92 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Preheat_Supply_Air_Temperature .
+	owl:someValuesFrom :Return_Air_CO2 .
 
 :AHU rdfs:subClassOf _:genid93 .
 
 _:genid93 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_CO2 .
+	owl:someValuesFrom :Return_Air_CO2_Sensor .
 
 :AHU rdfs:subClassOf _:genid94 .
 
 _:genid94 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_CO2_Sensor .
+	owl:someValuesFrom :Return_Air_Dewpoint .
 
 :AHU rdfs:subClassOf _:genid95 .
 
 _:genid95 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Dewpoint .
+	owl:someValuesFrom :Return_Air_Dewpoint_Sensor .
 
 :AHU rdfs:subClassOf _:genid96 .
 
 _:genid96 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Dewpoint_Sensor .
+	owl:someValuesFrom :Return_Air_Enthalpy .
 
 :AHU rdfs:subClassOf _:genid97 .
 
 _:genid97 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Enthalpy .
+	owl:someValuesFrom :Return_Air_Enthalpy_Sensor .
 
 :AHU rdfs:subClassOf _:genid98 .
 
 _:genid98 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Enthalpy_Sensor .
+	owl:someValuesFrom :Return_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid99 .
 
 _:genid99 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Flow .
+	owl:someValuesFrom :Return_Air_Flow_Sensor .
 
 :AHU rdfs:subClassOf _:genid100 .
 
 _:genid100 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Flow_Sensor .
+	owl:someValuesFrom :Return_Air_Humidity .
 
 :AHU rdfs:subClassOf _:genid101 .
 
 _:genid101 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Humidity .
+	owl:someValuesFrom :Return_Air_Humidity_Sensor .
 
 :AHU rdfs:subClassOf _:genid102 .
 
 _:genid102 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Humidity_Sensor .
+	owl:someValuesFrom :Return_Air_Preheat_Valve_Command .
 
 :AHU rdfs:subClassOf _:genid103 .
 
 _:genid103 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Preheat_Valve_Command .
+	owl:someValuesFrom :Return_Air_Temperature_High_Limit_Alarm .
 
 :AHU rdfs:subClassOf _:genid104 .
 
 _:genid104 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Temperature_High_Limit_Alarm .
+	owl:someValuesFrom :Return_Air_Temperature_Sensor .
 
 :AHU rdfs:subClassOf _:genid105 .
 
 _:genid105 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Air_Temperature_Sensor .
+	owl:someValuesFrom :Return_Fan_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid106 .
 
 _:genid106 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Fan_Air_Flow .
+	owl:someValuesFrom :Return_Fan_Differential_Speed_from_Supply_Fan .
 
 :AHU rdfs:subClassOf _:genid107 .
 
 _:genid107 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Fan_Differential_Speed_from_Supply_Fan .
+	owl:someValuesFrom :Return_Fan_Start_Stop_Command .
 
 :AHU rdfs:subClassOf _:genid108 .
 
 _:genid108 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Fan_Start_Stop_Command .
+	owl:someValuesFrom :Return_Fan_Start_Stop_Status .
 
 :AHU rdfs:subClassOf _:genid109 .
 
 _:genid109 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Fan_Start_Stop_Status .
+	owl:someValuesFrom :Return_Fan_Status .
 
 :AHU rdfs:subClassOf _:genid110 .
 
 _:genid110 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Return_Fan_Status .
+	owl:someValuesFrom :Static_Pressure .
 
 :AHU rdfs:subClassOf _:genid111 .
 
 _:genid111 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Static_Pressure .
+	owl:someValuesFrom :Static_Pressure_Max_Setpoint .
 
 :AHU rdfs:subClassOf _:genid112 .
 
 _:genid112 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Static_Pressure_Max_Setpoint .
+	owl:someValuesFrom :Static_Pressure_Min_Setpoint .
 
 :AHU rdfs:subClassOf _:genid113 .
 
 _:genid113 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Static_Pressure_Min_Setpoint .
+	owl:someValuesFrom :Static_Pressure_Sensor .
 
 :AHU rdfs:subClassOf _:genid114 .
 
 _:genid114 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Static_Pressure_Sensor .
+	owl:someValuesFrom :Supply_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid115 .
 
 _:genid115 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Air_Flow .
+	owl:someValuesFrom :Supply_Fan_Air_Flow .
 
 :AHU rdfs:subClassOf _:genid116 .
 
 _:genid116 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Fan_Air_Flow .
+	owl:someValuesFrom :Supply_Fan_Piezoelectric_Sensor .
 
 :AHU rdfs:subClassOf _:genid117 .
 
 _:genid117 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Fan_Piezoelectric_Sensor .
+	owl:someValuesFrom :Supply_Fan_Start_Stop_Command .
 
 :AHU rdfs:subClassOf _:genid118 .
 
 _:genid118 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Fan_Start_Stop_Command .
+	owl:someValuesFrom :Supply_Fan_Start_Stop_Status .
 
 :AHU rdfs:subClassOf _:genid119 .
 
 _:genid119 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Fan_Start_Stop_Status .
+	owl:someValuesFrom :Supply_Fan_Status .
 
 :AHU rdfs:subClassOf _:genid120 .
 
 _:genid120 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Fan_Status .
+	owl:someValuesFrom :Underfloor_Temperature_Sensor .
 
 :AHU rdfs:subClassOf _:genid121 .
 
 _:genid121 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Underfloor_Temperature_Sensor .
-
-:AHU rdfs:subClassOf _:genid122 .
-
-_:genid122 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Unoccupied_Mode .
 # 
@@ -869,321 +863,321 @@ _:genid122 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#CRAC
 
 :CRAC a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid123 .
+	rdfs:subClassOf :Equipment , _:genid122 .
+
+_:genid122 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Air_Flow_Loss_Alarm .
+
+:CRAC rdfs:subClassOf _:genid123 .
 
 _:genid123 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Air_Flow_Loss_Alarm .
+	owl:someValuesFrom :CRAC_Capacity .
 
 :CRAC rdfs:subClassOf _:genid124 .
 
 _:genid124 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CRAC_Capacity .
+	owl:someValuesFrom :CRAC_Pump_Start_Stop_Command .
 
 :CRAC rdfs:subClassOf _:genid125 .
 
 _:genid125 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CRAC_Pump_Start_Stop_Command .
+	owl:someValuesFrom :CRAC_Stages .
 
 :CRAC rdfs:subClassOf _:genid126 .
 
 _:genid126 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CRAC_Stages .
+	owl:someValuesFrom :Communication_Loss_Alarm .
 
 :CRAC rdfs:subClassOf _:genid127 .
 
 _:genid127 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Communication_Loss_Alarm .
+	owl:someValuesFrom :Condensate_Leak_Alarm .
 
 :CRAC rdfs:subClassOf _:genid128 .
 
 _:genid128 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Condensate_Leak_Alarm .
+	owl:someValuesFrom :Cooling_On_Off_Status .
 
 :CRAC rdfs:subClassOf _:genid129 .
 
 _:genid129 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_On_Off_Status .
+	owl:someValuesFrom :Dehumidification_On_Off_Status .
 
 :CRAC rdfs:subClassOf _:genid130 .
 
 _:genid130 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Dehumidification_On_Off_Status .
+	owl:someValuesFrom :Econ-O-Cycle_On_Off_Status .
 
 :CRAC rdfs:subClassOf _:genid131 .
 
 _:genid131 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Econ-O-Cycle_On_Off_Status .
+	owl:someValuesFrom :Emergency_Power_Loss_Alarm .
 
 :CRAC rdfs:subClassOf _:genid132 .
 
 _:genid132 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Emergency_Power_Loss_Alarm .
+	owl:someValuesFrom :Emergency_Power_Off_Activated_by_High_Temperature .
 
 :CRAC rdfs:subClassOf _:genid133 .
 
 _:genid133 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Emergency_Power_Off_Activated_by_High_Temperature .
+	owl:someValuesFrom :Emergency_Power_Off_Activated_by_Leak_Detection_System .
 
 :CRAC rdfs:subClassOf _:genid134 .
 
 _:genid134 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Emergency_Power_Off_Activated_by_Leak_Detection_System .
+	owl:someValuesFrom :Emergency_Power_Off_Enable_Status .
 
 :CRAC rdfs:subClassOf _:genid135 .
 
 _:genid135 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Emergency_Power_Off_Enable_Status .
+	owl:someValuesFrom :Emergency_Power_Off_Switch .
 
 :CRAC rdfs:subClassOf _:genid136 .
 
 _:genid136 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Emergency_Power_Off_Switch .
+	owl:someValuesFrom :Emergency_Power_Off_System_Enable .
 
 :CRAC rdfs:subClassOf _:genid137 .
 
 _:genid137 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Emergency_Power_Off_System_Enable .
+	owl:someValuesFrom :Fan_Overload_Alarm .
 
 :CRAC rdfs:subClassOf _:genid138 .
 
 _:genid138 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fan_Overload_Alarm .
+	owl:someValuesFrom :Heating_On_Off_Status .
 
 :CRAC rdfs:subClassOf _:genid139 .
 
 _:genid139 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heating_On_Off_Status .
+	owl:someValuesFrom :High_Head_Pressure_Alarm .
 
 :CRAC rdfs:subClassOf _:genid140 .
 
 _:genid140 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Head_Pressure_Alarm .
+	owl:someValuesFrom :High_Humidity .
 
 :CRAC rdfs:subClassOf _:genid141 .
 
 _:genid141 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Humidity .
+	owl:someValuesFrom :High_Humidity_Alarm .
 
 :CRAC rdfs:subClassOf _:genid142 .
 
 _:genid142 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Humidity_Alarm .
+	owl:someValuesFrom :High_Humidity_Alarm_Setpoint .
 
 :CRAC rdfs:subClassOf _:genid143 .
 
 _:genid143 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Humidity_Alarm_Setpoint .
+	owl:someValuesFrom :High_Temperature .
 
 :CRAC rdfs:subClassOf _:genid144 .
 
 _:genid144 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature .
+	owl:someValuesFrom :High_Temperature_Alarm .
 
 :CRAC rdfs:subClassOf _:genid145 .
 
 _:genid145 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature_Alarm .
+	owl:someValuesFrom :High_Temperature_Alarm_Setpoint .
 
 :CRAC rdfs:subClassOf _:genid146 .
 
 _:genid146 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature_Alarm_Setpoint .
+	owl:someValuesFrom :Humidification_On_Off_Status .
 
 :CRAC rdfs:subClassOf _:genid147 .
 
 _:genid147 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidification_On_Off_Status .
+	owl:someValuesFrom :Humidifier_Alarm .
 
 :CRAC rdfs:subClassOf _:genid148 .
 
 _:genid148 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidifier_Alarm .
+	owl:someValuesFrom :Humidifier_Fault_Indicator .
 
 :CRAC rdfs:subClassOf _:genid149 .
 
 _:genid149 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidifier_Fault_Indicator .
+	owl:someValuesFrom :Humidify_Command .
 
 :CRAC rdfs:subClassOf _:genid150 .
 
 _:genid150 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidify_Command .
+	owl:someValuesFrom :Humidity_Sensor .
 
 :CRAC rdfs:subClassOf _:genid151 .
 
 _:genid151 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidity_Sensor .
+	owl:someValuesFrom :Humidity_Setpoint .
 
 :CRAC rdfs:subClassOf _:genid152 .
 
 _:genid152 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidity_Setpoint .
+	owl:someValuesFrom :Humidity_Tolerance .
 
 :CRAC rdfs:subClassOf _:genid153 .
 
 _:genid153 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Humidity_Tolerance .
+	owl:someValuesFrom :Liquid_Detected_Alarm .
 
 :CRAC rdfs:subClassOf _:genid154 .
 
 _:genid154 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Liquid_Detected_Alarm .
+	owl:someValuesFrom :Low_Humidity_Alarm .
 
 :CRAC rdfs:subClassOf _:genid155 .
 
 _:genid155 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Humidity_Alarm .
+	owl:someValuesFrom :Low_Humidity_Alarm_Setpoint .
 
 :CRAC rdfs:subClassOf _:genid156 .
 
 _:genid156 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Humidity_Alarm_Setpoint .
+	owl:someValuesFrom :Low_Suction_Pressure_Alarm .
 
 :CRAC rdfs:subClassOf _:genid157 .
 
 _:genid157 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Suction_Pressure_Alarm .
+	owl:someValuesFrom :Low_Temperature .
 
 :CRAC rdfs:subClassOf _:genid158 .
 
 _:genid158 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Temperature .
+	owl:someValuesFrom :Low_Temperature_Alarm .
 
 :CRAC rdfs:subClassOf _:genid159 .
 
 _:genid159 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Temperature_Alarm .
+	owl:someValuesFrom :Low_Temperature_Alarm_Setpoint .
 
 :CRAC rdfs:subClassOf _:genid160 .
 
 _:genid160 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Low_Temperature_Alarm_Setpoint .
+	owl:someValuesFrom :Power_Loss_Alarm .
 
 :CRAC rdfs:subClassOf _:genid161 .
 
 _:genid161 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Power_Loss_Alarm .
+	owl:someValuesFrom :Short_Cycle_Alarm .
 
 :CRAC rdfs:subClassOf _:genid162 .
 
 _:genid162 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Short_Cycle_Alarm .
+	owl:someValuesFrom :Smoke_Detected_Alarm .
 
 :CRAC rdfs:subClassOf _:genid163 .
 
 _:genid163 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Smoke_Detected_Alarm .
+	owl:someValuesFrom :Standby_Fan_Status .
 
 :CRAC rdfs:subClassOf _:genid164 .
 
 _:genid164 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Standby_Fan_Status .
+	owl:someValuesFrom :Standby_Unit_On_Off_Status .
 
 :CRAC rdfs:subClassOf _:genid165 .
 
 _:genid165 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Standby_Unit_On_Off_Status .
+	owl:someValuesFrom :System_Status .
 
 :CRAC rdfs:subClassOf _:genid166 .
 
 _:genid166 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :System_Status .
+	owl:someValuesFrom :Temperature_Setpoint .
 
 :CRAC rdfs:subClassOf _:genid167 .
 
 _:genid167 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Temperature_Setpoint .
+	owl:someValuesFrom :Temperature_Tolerance .
 
 :CRAC rdfs:subClassOf _:genid168 .
 
 _:genid168 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Temperature_Tolerance .
+	owl:someValuesFrom :Unit_Failed_Alarm .
 
 :CRAC rdfs:subClassOf _:genid169 .
 
 _:genid169 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Unit_Failed_Alarm .
+	owl:someValuesFrom :Unit_Hold .
 
 :CRAC rdfs:subClassOf _:genid170 .
 
 _:genid170 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Unit_Hold .
+	owl:someValuesFrom :Unit_Run_Command .
 
 :CRAC rdfs:subClassOf _:genid171 .
 
 _:genid171 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Unit_Run_Command .
+	owl:someValuesFrom :Unit_Run_Status .
 
 :CRAC rdfs:subClassOf _:genid172 .
 
 _:genid172 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Unit_Run_Status .
+	owl:someValuesFrom :Unit_Turned_Off_Locally .
 
 :CRAC rdfs:subClassOf _:genid173 .
 
 _:genid173 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Unit_Turned_Off_Locally .
+	owl:someValuesFrom :Unit_Turned_Off_Remotely .
 
 :CRAC rdfs:subClassOf _:genid174 .
 
 _:genid174 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Unit_Turned_Off_Remotely .
-
-:CRAC rdfs:subClassOf _:genid175 .
-
-_:genid175 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Water_Loss_Alarm .
 # 
@@ -1255,249 +1249,249 @@ _:genid175 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Chilled_Water_Pump
 
 :Chilled_Water_Pump a owl:Class ;
-	rdfs:subClassOf :Pump , _:genid176 .
+	rdfs:subClassOf :Pump , _:genid175 .
 
-_:genid176 a owl:Restriction ;
+_:genid175 a owl:Restriction ;
 	owl:onProperty :feeds ;
 	owl:someValuesFrom :AHU .
+
+:Chilled_Water_Pump rdfs:subClassOf _:genid176 .
+
+_:genid176 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Chilled_Water_Bypass_Valve_Command .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid177 .
 
 _:genid177 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Bypass_Valve_Command .
+	owl:someValuesFrom :Chilled_Water_Differential_Pressure .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid178 .
 
 _:genid178 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Differential_Pressure .
+	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Dead_Band .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid179 .
 
 _:genid179 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Dead_Band .
+	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Increase_Decrease_Step .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid180 .
 
 _:genid180 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Increase_Decrease_Step .
+	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Integral_Time .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid181 .
 
 _:genid181 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Integral_Time .
+	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Proportional_Band .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid182 .
 
 _:genid182 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Proportional_Band .
+	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid183 .
 
 _:genid183 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Differential_Pressure_Setpoint .
+	owl:someValuesFrom :Chilled_Water_Discharge_Temperature .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid184 .
 
 _:genid184 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Discharge_Temperature .
+	owl:someValuesFrom :Chilled_Water_Pressure_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid185 .
 
 _:genid185 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pressure_Setpoint .
+	owl:someValuesFrom :Chilled_Water_Pump_Alarm_Delay .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid186 .
 
 _:genid186 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Alarm_Delay .
+	owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Dead_Band .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid187 .
 
 _:genid187 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Dead_Band .
+	owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Integration_Time .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid188 .
 
 _:genid188 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Integration_Time .
+	owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Proportional_Band .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid189 .
 
 _:genid189 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Differential_Pressure_Proportional_Band .
+	owl:someValuesFrom :Chilled_Water_Pump_Enable .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid190 .
 
 _:genid190 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Enable .
+	owl:someValuesFrom :Chilled_Water_Pump_Lead_Lag .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid191 .
 
 _:genid191 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Lead_Lag .
+	owl:someValuesFrom :Chilled_Water_Pump_Start_Stop_Command .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid192 .
 
 _:genid192 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Start_Stop_Command .
+	owl:someValuesFrom :Chilled_Water_Pump_Status .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid193 .
 
 _:genid193 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_Status .
+	owl:someValuesFrom :Chilled_Water_Pump_VFD_Command .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid194 .
 
 _:genid194 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Pump_VFD_Command .
+	owl:someValuesFrom :Chilled_Water_Return_Temperature .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid195 .
 
 _:genid195 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Return_Temperature .
+	owl:someValuesFrom :Chilled_Water_Supply_Flow .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid196 .
 
 _:genid196 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Supply_Flow .
+	owl:someValuesFrom :Chilled_Water_Temperature_Differential .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid197 .
 
 _:genid197 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Chilled_Water_Temperature_Differential .
+	owl:someValuesFrom :Deionised_Water_Alarm .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid198 .
 
 _:genid198 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Alarm .
+	owl:someValuesFrom :Deionised_Water_Conductivity .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid199 .
 
 _:genid199 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Conductivity .
+	owl:someValuesFrom :Deionised_Water_Level_Sensor .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid200 .
 
 _:genid200 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Level_Sensor .
+	owl:someValuesFrom :Freeze_Status .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid201 .
 
 _:genid201 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Freeze_Status .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid202 .
 
 _:genid202 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid203 .
 
 _:genid203 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid204 .
 
 _:genid204 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid205 .
 
 _:genid205 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid206 .
 
 _:genid206 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
+	owl:someValuesFrom :Heat_Exchanger_System_Enable .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid207 .
 
 _:genid207 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_System_Enable .
+	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid208 .
 
 _:genid208 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
+	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid209 .
 
 _:genid209 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
+	owl:someValuesFrom :Max_Chilled_Water_Differential_Pressure_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid210 .
 
 _:genid210 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Chilled_Water_Differential_Pressure_Setpoint .
+	owl:someValuesFrom :Min_Chilled_Water_Differential_Pressure_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid211 .
 
 _:genid211 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_Chilled_Water_Differential_Pressure_Setpoint .
+	owl:someValuesFrom :Open_Heating_Valve_Outside_Air_Temperature_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid212 .
 
 _:genid212 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Open_Heating_Valve_Outside_Air_Temperature_Setpoint .
+	owl:someValuesFrom :Pump_Lead_Lag_Command .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid213 .
 
 _:genid213 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Lead_Lag_Command .
+	owl:someValuesFrom :Supply_Water_Temperature_Setpoint .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid214 .
 
 _:genid214 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Water_Temperature_Setpoint .
+	owl:someValuesFrom :Valve_Command .
 
 :Chilled_Water_Pump rdfs:subClassOf _:genid215 .
 
 _:genid215 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Valve_Command .
-
-:Chilled_Water_Pump rdfs:subClassOf _:genid216 .
-
-_:genid216 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Water_Discharge_Temperature .
 # 
@@ -1933,9 +1927,9 @@ _:genid216 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Fan
 
 :Fan a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid217 .
+	rdfs:subClassOf :Equipment , _:genid216 .
 
-_:genid217 a owl:Restriction ;
+_:genid216 a owl:Restriction ;
 	owl:onProperty :contains ;
 	owl:someValuesFrom :VFD .
 # 
@@ -2192,213 +2186,213 @@ _:genid217 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Hot_Water_Pump
 
 :Hot_Water_Pump a owl:Class ;
-	rdfs:subClassOf :Pump , _:genid218 .
+	rdfs:subClassOf :Pump , _:genid217 .
 
-_:genid218 a owl:Restriction ;
+_:genid217 a owl:Restriction ;
 	owl:onProperty :feeds ;
 	owl:someValuesFrom :AHU .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid218 .
+
+_:genid218 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid219 .
 
 _:genid219 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
+	owl:someValuesFrom :Domestic_Hot_Water_Supply_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid220 .
 
 _:genid220 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_Supply_Temperature_Setpoint .
+	owl:someValuesFrom :Domestic_Hot_Water_System_Enable .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid221 .
 
 _:genid221 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_System_Enable .
+	owl:someValuesFrom :Domestic_Hot_Water_System_Start_Stop_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid222 .
 
 _:genid222 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_System_Start_Stop_Command .
+	owl:someValuesFrom :Domestic_Hot_Water_Valve_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid223 .
 
 _:genid223 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_Valve_Command .
+	owl:someValuesFrom :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid224 .
 
 _:genid224 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid225 .
 
 _:genid225 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid226 .
 
 _:genid226 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid227 .
 
 _:genid227 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid228 .
 
 _:genid228 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid229 .
 
 _:genid229 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
+	owl:someValuesFrom :Heat_Exchanger_System_Enable .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid230 .
 
 _:genid230 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_System_Enable .
+	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid231 .
 
 _:genid231 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
+	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid232 .
 
 _:genid232 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
+	owl:someValuesFrom :High_Temperature_Hot_Water_Return_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid233 .
 
 _:genid233 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature_Hot_Water_Return_Temperature .
+	owl:someValuesFrom :High_Temperature_Hot_Water_Supply_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid234 .
 
 _:genid234 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature_Hot_Water_Supply_Temperature .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid235 .
 
 _:genid235 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Dead_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid236 .
 
 _:genid236 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Dead_Band .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Integral_Time .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid237 .
 
 _:genid237 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Integral_Time .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Proportional_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid238 .
 
 _:genid238 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Proportional_Band .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid239 .
 
 _:genid239 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Setpoint .
+	owl:someValuesFrom :Hot_Water_Discharge_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid240 .
 
 _:genid240 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Discharge_Temperature .
+	owl:someValuesFrom :Hot_Water_Pump_Alarm .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid241 .
 
 _:genid241 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_Alarm .
+	owl:someValuesFrom :Hot_Water_Pump_Lead_Lag_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid242 .
 
 _:genid242 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_Lead_Lag_Command .
+	owl:someValuesFrom :Hot_Water_Pump_Start_Stop_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid243 .
 
 _:genid243 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_Start_Stop_Command .
+	owl:someValuesFrom :Hot_Water_Pump_VFD_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid244 .
 
 _:genid244 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_VFD_Command .
+	owl:someValuesFrom :Hot_Water_Return_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid245 .
 
 _:genid245 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Return_Temperature .
+	owl:someValuesFrom :Hot_Water_Static_Pressure_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid246 .
 
 _:genid246 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Discharge_Temperature_High_Reset_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid247 .
 
 _:genid247 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Discharge_Temperature_High_Reset_Setpoint .
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Discharge_Temperature_Low_Reset_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid248 .
 
 _:genid248 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Discharge_Temperature_Low_Reset_Setpoint .
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Return_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid249 .
 
 _:genid249 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Return_Temperature .
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid250 .
 
 _:genid250 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature .
+	owl:someValuesFrom :Medium_Temperature_Water_Pressure .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid251 .
 
 _:genid251 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Water_Pressure .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid252 .
-
-_:genid252 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Shutdown_Hot_Water_When_Unoccupied .
 # 
@@ -2838,93 +2832,93 @@ _:genid252 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Pump
 
 :Pump a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid253 .
+	rdfs:subClassOf :Equipment , _:genid252 .
 
-_:genid253 a owl:Restriction ;
+_:genid252 a owl:Restriction ;
 	owl:onProperty :contains ;
 	owl:someValuesFrom :VFD .
+
+:Pump rdfs:subClassOf _:genid253 .
+
+_:genid253 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Alarm_Delay .
 
 :Pump rdfs:subClassOf _:genid254 .
 
 _:genid254 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Alarm_Delay .
+	owl:someValuesFrom :Cooling_Tower_Fan_Speed_Setpoint .
 
 :Pump rdfs:subClassOf _:genid255 .
 
 _:genid255 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Tower_Fan_Speed_Setpoint .
+	owl:someValuesFrom :Deionised_Water_Alarm .
 
 :Pump rdfs:subClassOf _:genid256 .
 
 _:genid256 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Alarm .
+	owl:someValuesFrom :Deionised_Water_Conductivity .
 
 :Pump rdfs:subClassOf _:genid257 .
 
 _:genid257 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Conductivity .
+	owl:someValuesFrom :Deionised_Water_Level_Sensor .
 
 :Pump rdfs:subClassOf _:genid258 .
 
 _:genid258 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Level_Sensor .
+	owl:someValuesFrom :Pump_Alarm .
 
 :Pump rdfs:subClassOf _:genid259 .
 
 _:genid259 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Alarm .
+	owl:someValuesFrom :Pump_Alarm_Delay .
 
 :Pump rdfs:subClassOf _:genid260 .
 
 _:genid260 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Alarm_Delay .
+	owl:someValuesFrom :Pump_Enable_Status .
 
 :Pump rdfs:subClassOf _:genid261 .
 
 _:genid261 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Enable_Status .
+	owl:someValuesFrom :Pump_Lead_Lag_Command .
 
 :Pump rdfs:subClassOf _:genid262 .
 
 _:genid262 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Lead_Lag_Command .
+	owl:someValuesFrom :Pump_Start_Stop_Command .
 
 :Pump rdfs:subClassOf _:genid263 .
 
 _:genid263 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Start_Stop_Command .
+	owl:someValuesFrom :Pump_Status .
 
 :Pump rdfs:subClassOf _:genid264 .
 
 _:genid264 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Status .
+	owl:someValuesFrom :Supply_Water_Temperature_Setpoint .
 
 :Pump rdfs:subClassOf _:genid265 .
 
 _:genid265 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Water_Temperature_Setpoint .
+	owl:someValuesFrom :Valve_Command .
 
 :Pump rdfs:subClassOf _:genid266 .
 
 _:genid266 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Valve_Command .
-
-:Pump rdfs:subClassOf _:genid267 .
-
-_:genid267 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Water_Discharge_Temperature .
 # 
@@ -3296,219 +3290,219 @@ _:genid267 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#VFD
 
 :VFD a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid268 .
+	rdfs:subClassOf :Equipment , _:genid267 .
+
+_:genid267 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Acceleration_Time_Setpoint .
+
+:VFD rdfs:subClassOf _:genid268 .
 
 _:genid268 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Acceleration_Time_Setpoint .
+	owl:someValuesFrom :Average_Supply_Air_Flow .
 
 :VFD rdfs:subClassOf _:genid269 .
 
 _:genid269 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Average_Supply_Air_Flow .
+	owl:someValuesFrom :Current_Limit .
 
 :VFD rdfs:subClassOf _:genid270 .
 
 _:genid270 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Current_Limit .
+	owl:someValuesFrom :DC_Bus_Voltage .
 
 :VFD rdfs:subClassOf _:genid271 .
 
 _:genid271 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :DC_Bus_Voltage .
+	owl:someValuesFrom :Deceleration_Time_Setpoint .
 
 :VFD rdfs:subClassOf _:genid272 .
 
 _:genid272 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deceleration_Time_Setpoint .
+	owl:someValuesFrom :Drive_Ready_Status .
 
 :VFD rdfs:subClassOf _:genid273 .
 
 _:genid273 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Drive_Ready_Status .
+	owl:someValuesFrom :Drive_Temperature .
 
 :VFD rdfs:subClassOf _:genid274 .
 
 _:genid274 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Drive_Temperature .
+	owl:someValuesFrom :Energy .
 
 :VFD rdfs:subClassOf _:genid275 .
 
 _:genid275 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Energy .
+	owl:someValuesFrom :Fault_Indicator .
 
 :VFD rdfs:subClassOf _:genid276 .
 
 _:genid276 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fault_Indicator .
+	owl:someValuesFrom :Fault_Reset .
 
 :VFD rdfs:subClassOf _:genid277 .
 
 _:genid277 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fault_Reset .
+	owl:someValuesFrom :Fault_Status .
 
 :VFD rdfs:subClassOf _:genid278 .
 
 _:genid278 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fault_Status .
+	owl:someValuesFrom :Filter_Reset .
 
 :VFD rdfs:subClassOf _:genid279 .
 
 _:genid279 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Filter_Reset .
+	owl:someValuesFrom :Frequency_Command .
 
 :VFD rdfs:subClassOf _:genid280 .
 
 _:genid280 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Frequency_Command .
+	owl:someValuesFrom :Maintenance_Mode .
 
 :VFD rdfs:subClassOf _:genid281 .
 
 _:genid281 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Maintenance_Mode .
+	owl:someValuesFrom :Maintenance_Required_Alarm .
 
 :VFD rdfs:subClassOf _:genid282 .
 
 _:genid282 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Maintenance_Required_Alarm .
+	owl:someValuesFrom :Manual_Auto_Status .
 
 :VFD rdfs:subClassOf _:genid283 .
 
 _:genid283 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Manual_Auto_Status .
+	owl:someValuesFrom :Max_Frequency_Command .
 
 :VFD rdfs:subClassOf _:genid284 .
 
 _:genid284 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Frequency_Command .
+	owl:someValuesFrom :Motor_Current .
 
 :VFD rdfs:subClassOf _:genid285 .
 
 _:genid285 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Current .
+	owl:someValuesFrom :Motor_Power .
 
 :VFD rdfs:subClassOf _:genid286 .
 
 _:genid286 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Power .
+	owl:someValuesFrom :Motor_Speed .
 
 :VFD rdfs:subClassOf _:genid287 .
 
 _:genid287 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Speed .
+	owl:someValuesFrom :Motor_Torque .
 
 :VFD rdfs:subClassOf _:genid288 .
 
 _:genid288 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Torque .
+	owl:someValuesFrom :Output_Frequency .
 
 :VFD rdfs:subClassOf _:genid289 .
 
 _:genid289 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Output_Frequency .
+	owl:someValuesFrom :Output_Voltage .
 
 :VFD rdfs:subClassOf _:genid290 .
 
 _:genid290 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Output_Voltage .
+	owl:someValuesFrom :Panel_Lockout_Command .
 
 :VFD rdfs:subClassOf _:genid291 .
 
 _:genid291 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Panel_Lockout_Command .
+	owl:someValuesFrom :Rated_Speed .
 
 :VFD rdfs:subClassOf _:genid292 .
 
 _:genid292 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Rated_Speed .
+	owl:someValuesFrom :Run_Direction_Command .
 
 :VFD rdfs:subClassOf _:genid293 .
 
 _:genid293 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Direction_Command .
+	owl:someValuesFrom :Run_Direction_Status .
 
 :VFD rdfs:subClassOf _:genid294 .
 
 _:genid294 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Direction_Status .
+	owl:someValuesFrom :Run_Enable .
 
 :VFD rdfs:subClassOf _:genid295 .
 
 _:genid295 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Enable .
+	owl:someValuesFrom :Run_Enable_Command .
 
 :VFD rdfs:subClassOf _:genid296 .
 
 _:genid296 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Enable_Command .
+	owl:someValuesFrom :Run_Time .
 
 :VFD rdfs:subClassOf _:genid297 .
 
 _:genid297 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Time .
+	owl:someValuesFrom :Speed_Command .
 
 :VFD rdfs:subClassOf _:genid298 .
 
 _:genid298 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Speed_Command .
+	owl:someValuesFrom :System_Enable .
 
 :VFD rdfs:subClassOf _:genid299 .
 
 _:genid299 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :System_Enable .
+	owl:someValuesFrom :VFD_Alarm .
 
 :VFD rdfs:subClassOf _:genid300 .
 
 _:genid300 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Alarm .
+	owl:someValuesFrom :VFD_Run_Enable .
 
 :VFD rdfs:subClassOf _:genid301 .
 
 _:genid301 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Run_Enable .
+	owl:someValuesFrom :VFD_Start_Stop_Command .
 
 :VFD rdfs:subClassOf _:genid302 .
 
 _:genid302 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Start_Stop_Command .
-
-:VFD rdfs:subClassOf _:genid303 .
-
-_:genid303 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :VFD_Start_Stop_Status .
 # 
