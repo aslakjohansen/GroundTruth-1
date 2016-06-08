@@ -327,8 +327,14 @@
 :Cooling_Tower a owl:Class ;
     rdfs:subClassOf :Equipment .
 
+:Cooling_Valve a owl:Class ;
+    rdfs:subClassOf :Valve .
+
 :Cooling_Valve_Command a owl:Class ;
     rdfs:subClassOf :Point .
+
+:Damper a owl:Class ;
+    rdfs:subClassOf :Equipment .
 
 :Damper_Command a owl:Class ;
     rdfs:subClassOf :Point .
@@ -515,12 +521,11 @@
 :Thermal_Energy_Storage a owl:Class ;
     rdfs:subClassOf :Equipment .
 
+:VAV a owl:Class ;
+    rdfs:subClassOf :Terminal_Unit .
+
 :VAV_Box_Mode a owl:Class ;
     rdfs:subClassOf :Point .
-
-:VAV_Heat_Request :hasTag :Heating,
-        :Request,
-        :VAV .
 
 :Zone_Temperature_Setpoint a owl:Class ;
     rdfs:subClassOf :Point .
@@ -10977,9 +10982,6 @@ GHC:VAV_Room_9233_Future_Use a :Variable_Air_Volume_Box,
 :Cooling_Tower_Fan_Speed_Setpoint a owl:Class ;
     rdfs:subClassOf :Point .
 
-:Cooling_Valve a owl:Class ;
-    rdfs:subClassOf :Valve .
-
 :Current_Limit a owl:Class ;
     rdfs:subClassOf :Point .
 
@@ -11107,6 +11109,10 @@ GHC:VAV_Room_9233_Future_Use a :Variable_Air_Volume_Box,
 
 :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint a owl:Class ;
     rdfs:subClassOf :Point .
+
+:Energy a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
 
 :Fan_Air_Flow a owl:Class ;
     rdfs:subClassOf :Measurement_Property,
@@ -11590,9 +11596,6 @@ GHC:VAV_Room_9233_Future_Use a :Variable_Air_Volume_Box,
 
 :Unoccupied_Mode a owl:Class ;
     rdfs:subClassOf :Point .
-
-:VAV a owl:Class ;
-    rdfs:subClassOf :Terminal_Unit .
 
 :VFD_Alarm a owl:Class ;
     rdfs:subClassOf :Point .
@@ -44307,13 +44310,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
 :AHU a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:onProperty :contains ;
-            owl:someValuesFrom :Cooling_Valve ],
+            owl:someValuesFrom :Economizer ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :AHU_Overridden_On ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Return_Air_Flow_Sensor ],
+            owl:someValuesFrom :AHU_System_Enable ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Return_Air_Humidity ],
@@ -44343,10 +44343,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :Return_Fan_Start_Stop_Status ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :AHU_System_Enable ],
+            owl:someValuesFrom :Return_Fan_Status ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Return_Fan_Status ],
+            owl:someValuesFrom :Bypass_Air_Flow_Sensor ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Static_Pressure ],
@@ -44376,19 +44376,16 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :Supply_Fan_Start_Stop_Status ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Bypass_Air_Flow_Sensor ],
+            owl:someValuesFrom :Supply_Fan_Status ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Supply_Fan_Status ],
+            owl:someValuesFrom :CO2_Differential ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Underfloor_Temperature_Sensor ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Unoccupied_Mode ],
-        [ a owl:Restriction ;
-            owl:onProperty :hasPoint ;
-            owl:someValuesFrom :CO2_Differential ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Change_Filter_Alarm ],
@@ -44408,11 +44405,11 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Discharge_Air_Cooling_Demand_Low ],
         [ a owl:Restriction ;
-            owl:onProperty :contains ;
-            owl:someValuesFrom :Economizer ],
-        [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Discharge_Air_Flow_Demand ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Heating_Valve ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Discharge_Air_Flow_Reset_High_Sensor ],
@@ -44441,11 +44438,11 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Discharge_Air_Static_Pressure_Setpoint ],
         [ a owl:Restriction ;
-            owl:onProperty :contains ;
-            owl:someValuesFrom :Heating_Valve ],
-        [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Discharge_Air_Temperature ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Return_Fan ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Discharge_Air_Temperature_Dead_Band ],
@@ -44474,11 +44471,11 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Economizer_Damper_Command ],
         [ a owl:Restriction ;
-            owl:onProperty :contains ;
-            owl:someValuesFrom :Return_Fan ],
-        [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Economizer_Differential_Air_Temperature_Setpoint ],
+        [ a owl:Restriction ;
+            owl:onProperty :contains ;
+            owl:someValuesFrom :Supply_Fan ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Economizer_Discharge_Air_Temperature_Dead_Band ],
@@ -44507,11 +44504,11 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Filter_Status ],
         [ a owl:Restriction ;
-            owl:onProperty :contains ;
-            owl:someValuesFrom :Supply_Fan ],
-        [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Heat_Wheel_Differential_Pressure ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :AHU_Auto_Cooling_Setpoint ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Heat_Wheel_Speed ],
@@ -44541,10 +44538,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :Low_Outside_Air_Temperature_Enable_Setpoint ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :AHU_Auto_Cooling_Setpoint ],
+            owl:someValuesFrom :Max_Discharge_Air_Static_Pressure_Setpoint ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Max_Discharge_Air_Static_Pressure_Setpoint ],
+            owl:someValuesFrom :AHU_Fire_Control_Panel_Off ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Max_Discharge_Air_Temperature ],
@@ -44574,10 +44571,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :Mixed_Air_Damper_Position ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :AHU_Fire_Control_Panel_Off ],
+            owl:someValuesFrom :Mixed_Air_Damper_Position_Command ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Mixed_Air_Damper_Position_Command ],
+            owl:someValuesFrom :AHU_Fire_Control_Panel_On ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Mixed_Air_Temperature_Sensor ],
@@ -44607,10 +44604,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :Outside_Air_Dewpoint_Sensor ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :AHU_Fire_Control_Panel_On ],
+            owl:someValuesFrom :Outside_Air_Enthalpy ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Outside_Air_Enthalpy ],
+            owl:someValuesFrom :AHU_Overridden_Off ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Outside_Air_Enthalpy_Sensor ],
@@ -44640,10 +44637,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :Outside_Air_Temperature_Low_Reset_Setpoint ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :AHU_Overridden_Off ],
+            owl:someValuesFrom :Outside_Air_Temperature_Sensor ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
-            owl:someValuesFrom :Outside_Air_Temperature_Sensor ],
+            owl:someValuesFrom :AHU_Overridden_On ],
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Outside_Min_Air_Flow ],
@@ -44671,10 +44668,10 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
         [ a owl:Restriction ;
             owl:onProperty :hasPoint ;
             owl:someValuesFrom :Return_Air_Flow ],
+        [ a owl:Restriction ;
+            owl:onProperty :hasPoint ;
+            owl:someValuesFrom :Return_Air_Flow_Sensor ],
         :Equipment .
-
-:Current_Usage :hasTag :Demand,
-        :Steam .
 
 :Deionised_Water_Alarm a owl:Class ;
     rdfs:subClassOf :Point .
@@ -44685,10 +44682,6 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
 
 :Deionised_Water_Level_Sensor a owl:Class ;
     rdfs:subClassOf :Point .
-
-:Energy a owl:Class ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
 
 :Heat_Exchanger_Supply_Water_Temperature a owl:Class ;
     rdfs:subClassOf :Measurement_Property,
@@ -44768,52 +44761,6 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
 
 :Supply_Water_Temperature_Setpoint a owl:Class ;
     rdfs:subClassOf :Point .
-
-:Valve_Command a owl:Class ;
-    rdfs:subClassOf :Point .
-
-:Water_Discharge_Temperature a owl:Class ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:feeds a owl:ObjectProperty .
-
-:Terminal_Unit a owl:Class ;
-    rdfs:subClassOf :Equipment .
-
-:Exhaust_Fan_Airflow_Setpoint :hasTag :Airflow,
-        :Exhaust,
-        :Fan,
-        :Setpoint .
-
-:Outside_Air_Flow a owl:Class ;
-    :hasTag :Airflow,
-        :Outside,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Damper a owl:Class ;
-    rdfs:subClassOf :Equipment .
-
-:Heat_Wheel_Differential_Pressure a owl:Class ;
-    :hasTag :DifferntialPressure,
-        :Enthalpy,
-        :Heating,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Humidity_Sensor a owl:Class ;
-    :hasTag :Air,
-        :Humidity,
-        :Sensor ;
-    rdfs:subClassOf :Point .
-
-:Peak_Energy_Today :hasTag :Energy,
-        :Sensor .
-
-:contains a owl:ObjectProperty .
 
 :VFD a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -44926,278 +44873,20 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :VFD_Start_Stop_Status ],
         :Equipment .
 
-:Valve a owl:Class ;
+:Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Water_Discharge_Temperature a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:feeds a owl:ObjectProperty .
+
+:Terminal_Unit a owl:Class ;
     rdfs:subClassOf :Equipment .
 
-:AHU_auto_cooling_setpoint :hasTag :Cooling,
-        :Setpoint,
-        :Temperature .
-
-:AHU_current_cooling_setpoint :hasTag :Cooling,
-        :Setpoint,
-        :Temperature .
-
-:CRAC_Capacity a owl:Class ;
-    :hasTag :Air,
-        :Capacity,
-        :Cooling,
-        :Temperature ;
-    rdfs:subClassOf :Point .
-
-:Discharge_Air_Flow_Demand a owl:Class ;
-    :hasTag :Air,
-        :Airflow,
-        :Command,
-        :Discharge ;
-    rdfs:subClassOf :Point .
-
-:Exhaust_Air_Temperature :hasTag :Airflow,
-        :Exhuast,
-        :Sensor,
-        :Temperature .
-
-:Exhaust_air_Damper :hasTag :Air,
-        :Damper,
-        :Exhaust .
-
-:Heat_Wheel_Supply_Air_Temp :hasTag :Air,
-        :Enthalpy,
-        :Heating,
-        :Sensor,
-        :Temperature .
-
-:Heat_wheel_RPM :hasTag :Enthalpy,
-        :Heating,
-        :RPM,
-        :Sensor .
-
-:Heat_wheel_VFD :hasTag :Enthalpy,
-        :Heating,
-        :Sensor,
-        :VFD .
-
-:Heat_wheel_Volts :hasTag :Enthalpy,
-        :Heating,
-        :Sensor,
-        :Volts .
-
-:Humidification_On_Off_Status a owl:Class ;
-    :hasTag :Air,
-        :Command,
-        :Humidity ;
-    rdfs:subClassOf :Point .
-
-:Max_Return_Air_CO2_SP :hasTag :CO2,
-        :Return,
-        :Setpoint,
-        :air .
-
-:Mixed_Air_Damper_Position a owl:Class ;
-    :hasTag :Air,
-        :Damper,
-        :Mixed,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Mixed_Air_Damper_Position_Command a owl:Class ;
-    :hasTag :Air,
-        :Command,
-        :Damper,
-        :Mixed ;
-    rdfs:subClassOf :Point .
-
-:Monthly_Usage_to_Date :hasTag :Estimation,
-        :Sensor,
-        :Steam .
-
-:Outside_Air_CO2_Sensor a owl:Class ;
-    :hasTag :Air,
-        :CO2,
-        :Outside,
-        :Sensor ;
-    rdfs:subClassOf :Point .
-
-:Outside_Air_Damper_Position_Command a owl:Class ;
-    :hasTag :Airflow,
-        :Command,
-        :Damper,
-        :Outside ;
-    rdfs:subClassOf :Point .
-
-:Outside_Air_Humidity a owl:Class ;
-    :hasTag :Air,
-        :Humidigy,
-        :Outside,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Usage_Today :hasTag :Estimation,
-        :Sensor,
-        :Steam .
-
-:Yearly_Usage_To_Date :hasTag :Estimation,
-        :Sensor,
-        :Steam .
-
-:Bypass_Airflow_Sensor :hasTag :Airflow,
-        :Bypass,
-        :Sensor .
-
-:Chilled_Water_Valve :hasTag :Chilled,
-        :Command,
-        :Valve,
-        :Water .
-
-:Chilled_Water_Valve_VFD :hasTag :Chilled,
-        :Sensor,
-        :Valve,
-        :Water .
-
-:Cool_Request_Percent :hasTag :Cooling .
-
-:Dischage_Air_Flow_Command :hasTag :Airflow,
-        :Discharge,
-        :Sensor .
-
-:Exhaust_Air_Flow :hasTag :Airflow,
-        :Exhaust,
-        :Fan,
-        :Sensor .
-
-:Exhaust_Fan_Command :hasTag :Airflow,
-        :Command,
-        :Exhaust,
-        :Fan .
-
-:Exhaust_Fan_Piezoelectric :hasTag :Exaust,
-        :Fan,
-        :Piezoelectric,
-        :Sensor .
-
-:Exhaust_Fan_VFD :hasTag :Exhaust,
-        :Fan,
-        :Sensor,
-        :VFD .
-
-:Exhaust_VFD_Volt :hasTag :Exhaust,
-        :Sensor,
-        :VFD,
-        :Volts .
-
-:Heat_Request_Demand :hasTag :,
-        :Demand,
-        :Heating,
-        :Request .
-
-:Outside_Air_enthalpy :hasTag :Air,
-        :Enthalpy,
-        :Outside,
-        :Sensor .
-
-:Outside_Air_grains :hasTag :Air,
-        :Grains,
-        :Outside,
-        :Sensor .
-
-:Prehat_Supply_Air_Temp :hasTag :Air,
-        :Heating,
-        :Sensor,
-        :Temperature .
-
-:Preheat_Demand a owl:Class ;
-    :hasTag :,
-        :Demand,
-        :Heating ;
-    rdfs:subClassOf :Point .
-
-:Preheat_VFD :hasTag :Heating,
-        :Sensor,
-        :VFD .
-
-:Return_Air_Temperature :hasTag :Air,
-        :Return,
-        :Sensor,
-        :Temperature .
-
-:Return_Air_grains :hasTag :Air,
-        :Return,
-        :Sensor,
-        :grains .
-
-:Discharge_Air_Static_Pressure_Sensor a owl:Class ;
-    :hasTag :Air,
-        :Discharge,
-        :Pressure,
-        :Sensor ;
-    rdfs:subClassOf :Point .
-
-:Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
-    :hasTag :Air,
-        :Command,
-        :Discharge,
-        :Fan,
-        :VFD ;
-    rdfs:subClassOf :Point .
-
-:Outside_Air_Damper_Position a owl:Class ;
-    :hasTag :Airflow,
-        :Damper,
-        :Outside,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Outside_Air_Dewpoint a owl:Class ;
-    :hasTag :Air,
-        :Humidity,
-        :Outside,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Return_Air_CO2 a owl:Class ;
-    :hasTag :Air,
-        :CO2,
-        :Return,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Return_Air_Dewpoint a owl:Class ;
-    :hasTag :Air,
-        :Humidity,
-        :Return,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Return_Air_Enthalpy a owl:Class ;
-    :hasTag :Air,
-        :Enthalpy,
-        :Return,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Return_Air_Preheat_Valve_Command a owl:Class ;
-    :hasTag :Air,
-        :Command,
-        :Heating,
-        :Return,
-        :Valve ;
-    rdfs:subClassOf :Point .
-
-:Return_Fan_Air_Flow a owl:Class ;
-    :hasTag :Airflow,
-        :Fan,
-        :Return,
-        :Sensor ;
-    rdfs:subClassOf :Measurement_Property,
-        :Point .
-
-:Equipment a owl:Class .
+:Valve a owl:Class ;
+    rdfs:subClassOf :Equipment .
 
 :Fan a owl:Class ;
     rdfs:subClassOf [ a owl:Restriction ;
@@ -45205,151 +44894,128 @@ GHC:AHU-1_Zone-Temperature a :Zone_Temp,
             owl:someValuesFrom :VFD ],
         :Equipment .
 
+:Outside_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Heat_Wheel_Differential_Pressure a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Humidity_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:contains a owl:ObjectProperty .
+
+:CRAC_Capacity a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Flow_Demand a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Humidification_On_Off_Status a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Mixed_Air_Damper_Position a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Mixed_Air_Damper_Position_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_CO2_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Damper_Position_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Humidity a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Preheat_Demand a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Sensor a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Discharge_Air_Static_Pressure_Setpoint a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Outside_Air_Damper_Position a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Outside_Air_Dewpoint a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_CO2 a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Dewpoint a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Enthalpy a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Return_Air_Preheat_Valve_Command a owl:Class ;
+    rdfs:subClassOf :Point .
+
+:Return_Fan_Air_Flow a owl:Class ;
+    rdfs:subClassOf :Measurement_Property,
+        :Point .
+
+:Equipment a owl:Class .
+
 :Fan_Coil_Unit a owl:Class ;
     rdfs:subClassOf :Terminal_Unit .
 
 :Fan_Overload_Alarm a owl:Class ;
-    :hasTag :,
-        :Alarm,
-        :Fan ;
     rdfs:subClassOf :Point .
 
 :Discharge_Air_Temperature a owl:Class ;
-    :hasTag :Air,
-        :Discharge,
-        :Sensor,
-        :Temperature ;
     rdfs:subClassOf :Measurement_Property,
         :Point .
 
-:Supply_Fan_Piezoelectric :hasTag :Fan,
-        :Supply,
-        :VFD,
-        :Volt .
-
-:Fan_Status :hasTag :Air,
-        :Fan,
-        :Sensor .
-
 :Supply_Fan_Start_Stop_Command a owl:Class ;
-    :hasTag :Air,
-        :Command,
-        :Fan ;
     rdfs:subClassOf :Point .
 
 :Measurement_Property a owl:Class .
 
-:Zone_CO2 :hasTag :,
-        :Air,
-        :CO2,
-        :Sensor .
-
 :Reheat_Valve_Command a owl:Class ;
-    :hasTag :Command,
-        :Reheat,
-        :Valve ;
     rdfs:subClassOf :Point .
-
-:Perimeter_HeatValve_Command :hasTag :Command,
-        :Heat,
-        :Valve .
 
 :CO2_High_Alarm a owl:Class ;
-    :hasTag :Air,
-        :Alarm,
-        :C02,
-        :Setpoint ;
     rdfs:subClassOf :Point .
 
-:Outside_Air_Temperature :hasTag :Air,
-        :Outside,
-        :Sensor,
-        :Temperature .
-
 :Supply_Fan_Air_Flow a owl:Class ;
-    :hasTag :Air,
-        :Airflow,
-        :Command,
-        :Fan ;
     rdfs:subClassOf :Measurement_Property,
         :Point .
 
 :hasPoint a owl:ObjectProperty .
 
 :Occupancy_Sensor a owl:Class ;
-    :hasTag :Occupancy,
-        :Sensor ;
     rdfs:subClassOf :Point .
 
 :Zone_Temperature_Sensor a owl:Class ;
-    :hasTag :Air,
-        :Sensor,
-        :Temperature ;
     rdfs:subClassOf :Point .
 
 :Point a owl:Class .
 
-:Discharge_Air_Flow :hasTag :Air,
-        :Airflow,
-        :Discharge,
-        :Sensor .
-
 :Discharge_Air_Flow_Setpoint a owl:Class ;
-    :hasTag :Air,
-        :Airflow,
-        :Discharge,
-        :Setpoint ;
     rdfs:subClassOf :Point .
 
 :Damper_Position a owl:Class ;
-    :hasTag :Air,
-        :Damper,
-        :Sensor ;
     rdfs:subClassOf :Measurement_Property,
         :Point .
 
-:Discharge_Air_Flow_Command :hasTag :Air,
-        :Airflow,
-        :Command,
-        :Discharge .
-
-:Discharge_Air_Temperature_Sensor :hasTag :Air,
-        :Disrchage,
-        :Sensor,
-        :Temperature .
-
 :Domestic_Hot_Water_Valve_Command a owl:Class ;
-    :hasTag :Command,
-        :Heating,
-        :Water ;
     rdfs:subClassOf :Point .
-
-:Run_Request :hasTag :Command,
-        :Run .
-
-:VAV_Cool_Request :hasTag :Air,
-        :Command,
-        :Cooling,
-        :Temperature .
 
 :Heating_Command a owl:Class ;
-    :hasTag :,
-        :Command,
-        :Heating ;
     rdfs:subClassOf :Point .
-
-:Zone_Temp_High_ :hasTag :Air,
-        :Alarm,
-        :SetPoint,
-        :Temperature .
-
-:Zone_Temp_Low :hasTag :Air,
-        :Alarm,
-        :SetPoint,
-        :Temperature .
-
-:Schedule :hasTag :Command .
-
-:Run :hasTag :Run,
-        :Sensor .
 

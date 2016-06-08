@@ -109,8 +109,8 @@ def main():
 		#		print "4",ListBasTag[4]	
 		for item in TagsetsToTags.keys():
 			x = BRICK[item]
-			for value in TagsetsToTags[item]:
-				g.add((x,BRICK.hasTag,BRICK[value]))
+			#for value in TagsetsToTags[item]:
+			#	g.add((x,BRICK.hasTag,BRICK[value]))
 				
 	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,OWL.NamedIndividual))
 	if((BRICK["Run_Request"],None,None) in g):
