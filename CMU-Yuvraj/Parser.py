@@ -115,7 +115,12 @@ def main():
 			x = BRICK[item]
 			#for value in TagsetsToTags[item]:
 			#	g.add((x,BRICK.hasTag,BRICK[value]))
-				
+	with open('relationship.csv', 'rU') as relations:
+		reader = csv.DictReader(relations)
+		for row in reader:
+			new = re.sub('_','-',row['First'])
+			g.add((GHC[new+'_I'],BRICK.feeds,GHC[row['Third']]))
+	
 #	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,OWL.NamedIndividual))
 	if((BRICK["Run_Request"],None,None) in g):
 		print "Hi"
