@@ -2042,6 +2042,63 @@ _:genid237 a owl:Restriction ;
 :Frequency_Command a owl:Class ;
 	rdfs:subClassOf :Point .
 # 
+# http://buildsys.org/ontologies/brick#Heat_Exchanger
+
+:Heat_Exchanger a owl:Class ;
+	rdfs:subClassOf :Equipment , _:genid238 .
+
+_:genid238 a owl:Restriction ;
+	owl:onProperty :contains ;
+	owl:someValuesFrom :Valve .
+
+:Heat_Exchanger rdfs:subClassOf _:genid239 .
+
+_:genid239 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
+
+:Heat_Exchanger rdfs:subClassOf _:genid240 .
+
+_:genid240 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
+
+:Heat_Exchanger rdfs:subClassOf _:genid241 .
+
+_:genid241 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
+
+:Heat_Exchanger rdfs:subClassOf _:genid242 .
+
+_:genid242 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
+
+:Heat_Exchanger rdfs:subClassOf _:genid243 .
+
+_:genid243 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
+
+:Heat_Exchanger rdfs:subClassOf _:genid244 .
+
+_:genid244 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_System_Enable .
+
+:Heat_Exchanger rdfs:subClassOf _:genid245 .
+
+_:genid245 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
+
+:Heat_Exchanger rdfs:subClassOf _:genid246 .
+
+_:genid246 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
+# 
 # http://buildsys.org/ontologies/brick#Heat_Exchanger_Supply_Water_Temperature
 
 :Heat_Exchanger_Supply_Water_Temperature a owl:Class ;
@@ -2135,9 +2192,9 @@ _:genid237 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Heating_Valve
 
 :Heating_Valve a owl:Class ;
-	rdfs:subClassOf :Valve , _:genid238 .
+	rdfs:subClassOf :Valve , _:genid247 .
 
-_:genid238 a owl:Restriction ;
+_:genid247 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Heating_Valve_Command .
 # 
@@ -2224,207 +2281,207 @@ _:genid238 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Hot_Water_Pump
 
 :Hot_Water_Pump a owl:Class ;
-	rdfs:subClassOf :Pump , _:genid239 .
-
-_:genid239 a owl:Restriction ;
-	owl:onProperty :feeds ;
-	owl:someValuesFrom :AHU .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid240 .
-
-_:genid240 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid241 .
-
-_:genid241 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_Supply_Temperature_Setpoint .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid242 .
-
-_:genid242 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_System_Enable .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid243 .
-
-_:genid243 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_System_Start_Stop_Command .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid244 .
-
-_:genid244 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Domestic_Hot_Water_Valve_Command .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid245 .
-
-_:genid245 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid246 .
-
-_:genid246 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid247 .
-
-_:genid247 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
-
-:Hot_Water_Pump rdfs:subClassOf _:genid248 .
+	rdfs:subClassOf :Pump , _:genid248 .
 
 _:genid248 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
+	owl:onProperty :feeds ;
+	owl:someValuesFrom :AHU .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid249 .
 
 _:genid249 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
+	owl:someValuesFrom :Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid250 .
 
 _:genid250 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
+	owl:someValuesFrom :Domestic_Hot_Water_Supply_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid251 .
 
 _:genid251 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_System_Enable .
+	owl:someValuesFrom :Domestic_Hot_Water_System_Enable .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid252 .
 
 _:genid252 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
+	owl:someValuesFrom :Domestic_Hot_Water_System_Start_Stop_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid253 .
 
 _:genid253 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
+	owl:someValuesFrom :Domestic_Hot_Water_Valve_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid254 .
 
 _:genid254 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature_Hot_Water_Return_Temperature .
+	owl:someValuesFrom :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid255 .
 
 _:genid255 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :High_Temperature_Hot_Water_Supply_Temperature .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid256 .
 
 _:genid256 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Dead_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid257 .
 
 _:genid257 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Dead_Band .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Integral_Time .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid258 .
 
 _:genid258 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Integral_Time .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid259 .
 
 _:genid259 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Proportional_Band .
+	owl:someValuesFrom :Heat_Exchanger_Supply_Water_Temperature_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid260 .
 
 _:genid260 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Differential_Pressure_Setpoint .
+	owl:someValuesFrom :Heat_Exchanger_System_Enable .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid261 .
 
 _:genid261 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_Alarm .
+	owl:someValuesFrom :Heat_Exchanger_Valve_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid262 .
 
 _:genid262 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_Lead_Lag_Command .
+	owl:someValuesFrom :Heat_Exchanger_Valve_Status .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid263 .
 
 _:genid263 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Pump_Start_Stop_Command .
+	owl:someValuesFrom :High_Temperature_Hot_Water_Return_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid264 .
 
 _:genid264 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Return_Temperature .
+	owl:someValuesFrom :High_Temperature_Hot_Water_Supply_Temperature .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid265 .
 
 _:genid265 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid266 .
 
 _:genid266 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Hot_Water_Supply_Temperature .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Dead_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid267 .
 
 _:genid267 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Return_Temperature .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Integral_Time .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid268 .
 
 _:genid268 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Proportional_Band .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid269 .
 
 _:genid269 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature_High_Reset_Setpoint .
+	owl:someValuesFrom :Hot_Water_Differential_Pressure_Setpoint .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid270 .
 
 _:genid270 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature_Low_Reset_Setpoint .
+	owl:someValuesFrom :Hot_Water_Pump_Alarm .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid271 .
 
 _:genid271 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Medium_Temperature_Water_Pressure .
+	owl:someValuesFrom :Hot_Water_Pump_Lead_Lag_Command .
 
 :Hot_Water_Pump rdfs:subClassOf _:genid272 .
 
 _:genid272 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Hot_Water_Pump_Start_Stop_Command .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid273 .
+
+_:genid273 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Hot_Water_Return_Temperature .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid274 .
+
+_:genid274 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Hot_Water_Static_Pressure_Setpoint .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid275 .
+
+_:genid275 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Hot_Water_Supply_Temperature .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid276 .
+
+_:genid276 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Return_Temperature .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid277 .
+
+_:genid277 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid278 .
+
+_:genid278 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature_High_Reset_Setpoint .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid279 .
+
+_:genid279 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Medium_Temperature_Hot_Water_Supply_Temperature_Low_Reset_Setpoint .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid280 .
+
+_:genid280 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Medium_Temperature_Water_Pressure .
+
+:Hot_Water_Pump rdfs:subClassOf _:genid281 .
+
+_:genid281 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Shutdown_Hot_Water_When_Unoccupied .
 # 
@@ -2864,93 +2921,93 @@ _:genid272 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Pump
 
 :Pump a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid273 .
-
-_:genid273 a owl:Restriction ;
-	owl:onProperty :contains ;
-	owl:someValuesFrom :VFD .
-
-:Pump rdfs:subClassOf _:genid274 .
-
-_:genid274 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Alarm_Delay .
-
-:Pump rdfs:subClassOf _:genid275 .
-
-_:genid275 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Tower_Fan_Speed_Setpoint .
-
-:Pump rdfs:subClassOf _:genid276 .
-
-_:genid276 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Alarm .
-
-:Pump rdfs:subClassOf _:genid277 .
-
-_:genid277 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Conductivity .
-
-:Pump rdfs:subClassOf _:genid278 .
-
-_:genid278 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deionised_Water_Level_Sensor .
-
-:Pump rdfs:subClassOf _:genid279 .
-
-_:genid279 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Alarm .
-
-:Pump rdfs:subClassOf _:genid280 .
-
-_:genid280 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Alarm_Delay .
-
-:Pump rdfs:subClassOf _:genid281 .
-
-_:genid281 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Enable_Status .
-
-:Pump rdfs:subClassOf _:genid282 .
+	rdfs:subClassOf :Equipment , _:genid282 .
 
 _:genid282 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Lead_Lag_Command .
+	owl:onProperty :contains ;
+	owl:someValuesFrom :VFD .
 
 :Pump rdfs:subClassOf _:genid283 .
 
 _:genid283 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Start_Stop_Command .
+	owl:someValuesFrom :Alarm_Delay .
 
 :Pump rdfs:subClassOf _:genid284 .
 
 _:genid284 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Pump_Status .
+	owl:someValuesFrom :Cooling_Tower_Fan_Speed_Setpoint .
 
 :Pump rdfs:subClassOf _:genid285 .
 
 _:genid285 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Water_Temperature_Setpoint .
+	owl:someValuesFrom :Deionised_Water_Alarm .
 
 :Pump rdfs:subClassOf _:genid286 .
 
 _:genid286 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Valve_Command .
+	owl:someValuesFrom :Deionised_Water_Conductivity .
 
 :Pump rdfs:subClassOf _:genid287 .
 
 _:genid287 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Deionised_Water_Level_Sensor .
+
+:Pump rdfs:subClassOf _:genid288 .
+
+_:genid288 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Pump_Alarm .
+
+:Pump rdfs:subClassOf _:genid289 .
+
+_:genid289 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Pump_Alarm_Delay .
+
+:Pump rdfs:subClassOf _:genid290 .
+
+_:genid290 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Pump_Enable_Status .
+
+:Pump rdfs:subClassOf _:genid291 .
+
+_:genid291 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Pump_Lead_Lag_Command .
+
+:Pump rdfs:subClassOf _:genid292 .
+
+_:genid292 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Pump_Start_Stop_Command .
+
+:Pump rdfs:subClassOf _:genid293 .
+
+_:genid293 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Pump_Status .
+
+:Pump rdfs:subClassOf _:genid294 .
+
+_:genid294 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Water_Temperature_Setpoint .
+
+:Pump rdfs:subClassOf _:genid295 .
+
+_:genid295 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Valve_Command .
+
+:Pump rdfs:subClassOf _:genid296 .
+
+_:genid296 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Water_Supply_Temperature .
 # 
@@ -2992,9 +3049,9 @@ _:genid287 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Reheat_Valve
 
 :Reheat_Valve a owl:Class ;
-	rdfs:subClassOf :Valve , _:genid288 .
+	rdfs:subClassOf :Valve , _:genid297 .
 
-_:genid288 a owl:Restriction ;
+_:genid297 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Reheat_Valve_Command .
 # 
@@ -3071,33 +3128,33 @@ _:genid288 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Return_Fan
 
 :Return_Fan a owl:Class ;
-	rdfs:subClassOf :Fan , _:genid289 .
+	rdfs:subClassOf :Fan , _:genid298 .
 
-_:genid289 a owl:Restriction ;
+_:genid298 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Return_Fan_Air_Flow .
 
-:Return_Fan rdfs:subClassOf _:genid290 .
+:Return_Fan rdfs:subClassOf _:genid299 .
 
-_:genid290 a owl:Restriction ;
+_:genid299 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Return_Fan_Differential_Speed_from_Supply_Fan .
 
-:Return_Fan rdfs:subClassOf _:genid291 .
+:Return_Fan rdfs:subClassOf _:genid300 .
 
-_:genid291 a owl:Restriction ;
+_:genid300 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Return_Fan_Start_Stop_Command .
 
-:Return_Fan rdfs:subClassOf _:genid292 .
+:Return_Fan rdfs:subClassOf _:genid301 .
 
-_:genid292 a owl:Restriction ;
+_:genid301 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Return_Fan_Start_Stop_Status .
 
-:Return_Fan rdfs:subClassOf _:genid293 .
+:Return_Fan rdfs:subClassOf _:genid302 .
 
-_:genid293 a owl:Restriction ;
+_:genid302 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Return_Fan_Status .
 # 
@@ -3334,33 +3391,33 @@ _:genid293 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Supply_Fan
 
 :Supply_Fan a owl:Class ;
-	rdfs:subClassOf :Fan , _:genid294 .
+	rdfs:subClassOf :Fan , _:genid303 .
 
-_:genid294 a owl:Restriction ;
+_:genid303 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Supply_Fan_Air_Flow .
 
-:Supply_Fan rdfs:subClassOf _:genid295 .
+:Supply_Fan rdfs:subClassOf _:genid304 .
 
-_:genid295 a owl:Restriction ;
+_:genid304 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Supply_Fan_Piezoelectric_Sensor .
 
-:Supply_Fan rdfs:subClassOf _:genid296 .
+:Supply_Fan rdfs:subClassOf _:genid305 .
 
-_:genid296 a owl:Restriction ;
+_:genid305 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Supply_Fan_Start_Stop_Command .
 
-:Supply_Fan rdfs:subClassOf _:genid297 .
+:Supply_Fan rdfs:subClassOf _:genid306 .
 
-_:genid297 a owl:Restriction ;
+_:genid306 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Supply_Fan_Start_Stop_Status .
 
-:Supply_Fan rdfs:subClassOf _:genid298 .
+:Supply_Fan rdfs:subClassOf _:genid307 .
 
-_:genid298 a owl:Restriction ;
+_:genid307 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Supply_Fan_Status .
 # 
@@ -3482,171 +3539,171 @@ _:genid298 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#VAV
 
 :VAV a owl:Class ;
-	rdfs:subClassOf :Terminal_Unit , _:genid299 .
-
-_:genid299 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CO2_Differential .
-
-:VAV rdfs:subClassOf _:genid300 .
-
-_:genid300 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CO2_High_Alarm .
-
-:VAV rdfs:subClassOf _:genid301 .
-
-_:genid301 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :CO2_Sensor .
-
-:VAV rdfs:subClassOf _:genid302 .
-
-_:genid302 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Command .
-
-:VAV rdfs:subClassOf _:genid303 .
-
-_:genid303 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Cooling_Max_Supply_Air_Flow .
-
-:VAV rdfs:subClassOf _:genid304 .
-
-_:genid304 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Effective_Cooling_Temperature_Setpoint .
-
-:VAV rdfs:subClassOf _:genid305 .
-
-_:genid305 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Effective_Heating_Temperature_Setpoint .
-
-:VAV rdfs:subClassOf _:genid306 .
-
-_:genid306 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heating_Command .
-
-:VAV rdfs:subClassOf _:genid307 .
-
-_:genid307 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Heating_Supply_Air_Flow_Setpoint .
-
-:VAV rdfs:subClassOf _:genid308 .
+	rdfs:subClassOf :Terminal_Unit , _:genid308 .
 
 _:genid308 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Static_Pressure .
+	owl:someValuesFrom :CO2_Differential .
 
 :VAV rdfs:subClassOf _:genid309 .
 
 _:genid309 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Supply_Air_Static_Pressure_Setpoint .
+	owl:someValuesFrom :CO2_High_Alarm .
 
 :VAV rdfs:subClassOf _:genid310 .
 
 _:genid310 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Supply_Air_Temperature .
+	owl:someValuesFrom :CO2_Sensor .
 
 :VAV rdfs:subClassOf _:genid311 .
 
 _:genid311 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_Supply_Air_Static_Pressure_Setpoint .
+	owl:someValuesFrom :Cooling_Command .
 
 :VAV rdfs:subClassOf _:genid312 .
 
 _:genid312 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Min_Supply_Air_Temperature .
+	owl:someValuesFrom :Cooling_Max_Supply_Air_Flow .
 
 :VAV rdfs:subClassOf _:genid313 .
 
 _:genid313 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Occupancy_Command .
+	owl:someValuesFrom :Effective_Cooling_Temperature_Setpoint .
 
 :VAV rdfs:subClassOf _:genid314 .
 
 _:genid314 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Occupancy_Sensor .
+	owl:someValuesFrom :Effective_Heating_Temperature_Setpoint .
 
 :VAV rdfs:subClassOf _:genid315 .
 
 _:genid315 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Occupied_Command .
+	owl:someValuesFrom :Heating_Command .
 
 :VAV rdfs:subClassOf _:genid316 .
 
 _:genid316 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Room_Temperature_Sensor .
+	owl:someValuesFrom :Heating_Supply_Air_Flow_Setpoint .
 
 :VAV rdfs:subClassOf _:genid317 .
 
 _:genid317 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Room_Temperature_Setpoint .
+	owl:someValuesFrom :Max_Static_Pressure .
 
 :VAV rdfs:subClassOf _:genid318 .
 
 _:genid318 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Air_Flow_Sensor .
+	owl:someValuesFrom :Max_Supply_Air_Static_Pressure_Setpoint .
 
 :VAV rdfs:subClassOf _:genid319 .
 
 _:genid319 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Air_Flow_Setpoint .
+	owl:someValuesFrom :Max_Supply_Air_Temperature .
 
 :VAV rdfs:subClassOf _:genid320 .
 
 _:genid320 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Supply_Air_Temperature .
+	owl:someValuesFrom :Min_Supply_Air_Static_Pressure_Setpoint .
 
 :VAV rdfs:subClassOf _:genid321 .
 
 _:genid321 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Temperature_Adjustment .
+	owl:someValuesFrom :Min_Supply_Air_Temperature .
 
 :VAV rdfs:subClassOf _:genid322 .
 
 _:genid322 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Temperature_Setpoint .
+	owl:someValuesFrom :Occupancy_Command .
 
 :VAV rdfs:subClassOf _:genid323 .
 
 _:genid323 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Temporary_Occupancy_Status .
+	owl:someValuesFrom :Occupancy_Sensor .
 
 :VAV rdfs:subClassOf _:genid324 .
 
 _:genid324 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VAV_Box_Mode .
+	owl:someValuesFrom :Occupied_Command .
 
 :VAV rdfs:subClassOf _:genid325 .
 
 _:genid325 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Zone_Temperature_Sensor .
+	owl:someValuesFrom :Room_Temperature_Sensor .
 
 :VAV rdfs:subClassOf _:genid326 .
 
 _:genid326 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Room_Temperature_Setpoint .
+
+:VAV rdfs:subClassOf _:genid327 .
+
+_:genid327 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Air_Flow_Sensor .
+
+:VAV rdfs:subClassOf _:genid328 .
+
+_:genid328 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Air_Flow_Setpoint .
+
+:VAV rdfs:subClassOf _:genid329 .
+
+_:genid329 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Supply_Air_Temperature .
+
+:VAV rdfs:subClassOf _:genid330 .
+
+_:genid330 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Temperature_Adjustment .
+
+:VAV rdfs:subClassOf _:genid331 .
+
+_:genid331 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Temperature_Setpoint .
+
+:VAV rdfs:subClassOf _:genid332 .
+
+_:genid332 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Temporary_Occupancy_Status .
+
+:VAV rdfs:subClassOf _:genid333 .
+
+_:genid333 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :VAV_Box_Mode .
+
+:VAV rdfs:subClassOf _:genid334 .
+
+_:genid334 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Zone_Temperature_Sensor .
+
+:VAV rdfs:subClassOf _:genid335 .
+
+_:genid335 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Zone_Temperature_Setpoint .
 # 
@@ -3658,225 +3715,225 @@ _:genid326 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#VFD
 
 :VFD a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid327 .
-
-_:genid327 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Acceleration_Time_Setpoint .
-
-:VFD rdfs:subClassOf _:genid328 .
-
-_:genid328 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Average_Supply_Air_Flow .
-
-:VFD rdfs:subClassOf _:genid329 .
-
-_:genid329 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Current_Limit .
-
-:VFD rdfs:subClassOf _:genid330 .
-
-_:genid330 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :DC_Bus_Voltage .
-
-:VFD rdfs:subClassOf _:genid331 .
-
-_:genid331 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Deceleration_Time_Setpoint .
-
-:VFD rdfs:subClassOf _:genid332 .
-
-_:genid332 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Drive_Ready_Status .
-
-:VFD rdfs:subClassOf _:genid333 .
-
-_:genid333 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Drive_Temperature .
-
-:VFD rdfs:subClassOf _:genid334 .
-
-_:genid334 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Energy .
-
-:VFD rdfs:subClassOf _:genid335 .
-
-_:genid335 a owl:Restriction ;
-	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fault_Indicator .
-
-:VFD rdfs:subClassOf _:genid336 .
+	rdfs:subClassOf :Equipment , _:genid336 .
 
 _:genid336 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fault_Reset .
+	owl:someValuesFrom :Acceleration_Time_Setpoint .
 
 :VFD rdfs:subClassOf _:genid337 .
 
 _:genid337 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Fault_Status .
+	owl:someValuesFrom :Average_Supply_Air_Flow .
 
 :VFD rdfs:subClassOf _:genid338 .
 
 _:genid338 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Filter_Reset .
+	owl:someValuesFrom :Current_Limit .
 
 :VFD rdfs:subClassOf _:genid339 .
 
 _:genid339 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Frequency_Command .
+	owl:someValuesFrom :DC_Bus_Voltage .
 
 :VFD rdfs:subClassOf _:genid340 .
 
 _:genid340 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Maintenance_Mode .
+	owl:someValuesFrom :Deceleration_Time_Setpoint .
 
 :VFD rdfs:subClassOf _:genid341 .
 
 _:genid341 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Maintenance_Required_Alarm .
+	owl:someValuesFrom :Drive_Ready_Status .
 
 :VFD rdfs:subClassOf _:genid342 .
 
 _:genid342 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Manual_Auto_Status .
+	owl:someValuesFrom :Drive_Temperature .
 
 :VFD rdfs:subClassOf _:genid343 .
 
 _:genid343 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Max_Frequency_Command .
+	owl:someValuesFrom :Energy .
 
 :VFD rdfs:subClassOf _:genid344 .
 
 _:genid344 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Current .
+	owl:someValuesFrom :Fault_Indicator .
 
 :VFD rdfs:subClassOf _:genid345 .
 
 _:genid345 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Power .
+	owl:someValuesFrom :Fault_Reset .
 
 :VFD rdfs:subClassOf _:genid346 .
 
 _:genid346 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Speed .
+	owl:someValuesFrom :Fault_Status .
 
 :VFD rdfs:subClassOf _:genid347 .
 
 _:genid347 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Motor_Torque .
+	owl:someValuesFrom :Filter_Reset .
 
 :VFD rdfs:subClassOf _:genid348 .
 
 _:genid348 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Output_Frequency .
+	owl:someValuesFrom :Frequency_Command .
 
 :VFD rdfs:subClassOf _:genid349 .
 
 _:genid349 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Output_Voltage .
+	owl:someValuesFrom :Maintenance_Mode .
 
 :VFD rdfs:subClassOf _:genid350 .
 
 _:genid350 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Panel_Lockout_Command .
+	owl:someValuesFrom :Maintenance_Required_Alarm .
 
 :VFD rdfs:subClassOf _:genid351 .
 
 _:genid351 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Rated_Speed .
+	owl:someValuesFrom :Manual_Auto_Status .
 
 :VFD rdfs:subClassOf _:genid352 .
 
 _:genid352 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Direction_Command .
+	owl:someValuesFrom :Max_Frequency_Command .
 
 :VFD rdfs:subClassOf _:genid353 .
 
 _:genid353 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Direction_Status .
+	owl:someValuesFrom :Motor_Current .
 
 :VFD rdfs:subClassOf _:genid354 .
 
 _:genid354 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Enable .
+	owl:someValuesFrom :Motor_Power .
 
 :VFD rdfs:subClassOf _:genid355 .
 
 _:genid355 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Enable_Command .
+	owl:someValuesFrom :Motor_Speed .
 
 :VFD rdfs:subClassOf _:genid356 .
 
 _:genid356 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Run_Time .
+	owl:someValuesFrom :Motor_Torque .
 
 :VFD rdfs:subClassOf _:genid357 .
 
 _:genid357 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :Speed_Command .
+	owl:someValuesFrom :Output_Frequency .
 
 :VFD rdfs:subClassOf _:genid358 .
 
 _:genid358 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :System_Enable .
+	owl:someValuesFrom :Output_Voltage .
 
 :VFD rdfs:subClassOf _:genid359 .
 
 _:genid359 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Alarm .
+	owl:someValuesFrom :Panel_Lockout_Command .
 
 :VFD rdfs:subClassOf _:genid360 .
 
 _:genid360 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Command .
+	owl:someValuesFrom :Rated_Speed .
 
 :VFD rdfs:subClassOf _:genid361 .
 
 _:genid361 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Run_Enable .
+	owl:someValuesFrom :Run_Direction_Command .
 
 :VFD rdfs:subClassOf _:genid362 .
 
 _:genid362 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
-	owl:someValuesFrom :VFD_Start_Stop_Command .
+	owl:someValuesFrom :Run_Direction_Status .
 
 :VFD rdfs:subClassOf _:genid363 .
 
 _:genid363 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Run_Enable .
+
+:VFD rdfs:subClassOf _:genid364 .
+
+_:genid364 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Run_Enable_Command .
+
+:VFD rdfs:subClassOf _:genid365 .
+
+_:genid365 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Run_Time .
+
+:VFD rdfs:subClassOf _:genid366 .
+
+_:genid366 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Speed_Command .
+
+:VFD rdfs:subClassOf _:genid367 .
+
+_:genid367 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :System_Enable .
+
+:VFD rdfs:subClassOf _:genid368 .
+
+_:genid368 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :VFD_Alarm .
+
+:VFD rdfs:subClassOf _:genid369 .
+
+_:genid369 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :VFD_Command .
+
+:VFD rdfs:subClassOf _:genid370 .
+
+_:genid370 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :VFD_Run_Enable .
+
+:VFD rdfs:subClassOf _:genid371 .
+
+_:genid371 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :VFD_Start_Stop_Command .
+
+:VFD rdfs:subClassOf _:genid372 .
+
+_:genid372 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :VFD_Start_Stop_Status .
 # 
@@ -3908,15 +3965,26 @@ _:genid363 a owl:Restriction ;
 # http://buildsys.org/ontologies/brick#Valve
 
 :Valve a owl:Class ;
-	rdfs:subClassOf :Equipment , _:genid364 .
+	rdfs:subClassOf :Equipment , _:genid373 .
 
-_:genid364 a owl:Restriction ;
+_:genid373 a owl:Restriction ;
 	owl:onProperty :hasPoint ;
 	owl:someValuesFrom :Valve_Command .
+
+:Valve rdfs:subClassOf _:genid374 .
+
+_:genid374 a owl:Restriction ;
+	owl:onProperty :hasPoint ;
+	owl:someValuesFrom :Valve_Status .
 # 
 # http://buildsys.org/ontologies/brick#Valve_Command
 
 :Valve_Command a owl:Class ;
+	rdfs:subClassOf :Point .
+# 
+# http://buildsys.org/ontologies/brick#Valve_Status
+
+:Valve_Status a owl:Class ;
 	rdfs:subClassOf :Point .
 # 
 # http://buildsys.org/ontologies/brick#Water_Loss_Alarm
