@@ -8,10 +8,9 @@ BRICK = Namespace(rdflib.term.URIRef('http://www.semanticweb.org/jbkoh/ontologie
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 
 g = Graph()
-s = g.parse('../Brick.owl', format='turtle', publicID='brick')
+s = g.parse('../Brick.ttl', format='turtle', publicID='brick')
 g.bind('rdf', RDF)
-g.bind('rdfs', RDFS)
-g.bind('bs', BS)
+g.bind('brick', BRICK)
 
 # actors
 entity_vav                = URIRef('/vav')
