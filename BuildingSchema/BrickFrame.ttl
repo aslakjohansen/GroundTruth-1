@@ -1,398 +1,227 @@
-@prefix : <http://buildsys.org/ontologies/BuildingSchema#> .
+@prefix : <http://buildsys.org/ontologies/BrickFrame#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://buildsys.org/ontologies/BricksFrame> .
 
-<http://buildsys.org/ontologies/BricksFrame> rdf:type owl:Ontology .
-
-
-#################################################################
-#
-#    Object Properties
-#
-#################################################################
-
-
-###  http://buildsys.org/ontologies/BricksFrame#feeds
-
-:feeds rdf:type owl:ObjectProperty ;
-       
-       owl:inverseOf :isFeedBy ;
-       
-       rdf:type owl:AsymmetricProperty ,
-                owl:IrreflexiveProperty .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasInput
-
-:hasInput rdf:type owl:ObjectProperty ;
-          
-          owl:inverseOf :isInputOf ;
-          
-          rdf:type owl:AsymmetricProperty ,
-                   owl:IrreflexiveProperty ;
-          
-          rdfs:domain :FunctionBlock ;
-          
-          rdfs:range :Signal .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasOutput
-
-:hasOutput rdf:type owl:ObjectProperty ;
-           
-           owl:inverseOf :isOutputOf ;
-           
-           rdf:type owl:AsymmetricProperty ,
-                    owl:IrreflexiveProperty ;
-           
-           rdfs:domain :FunctionBlock ;
-           
-           rdfs:range :Signal .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasPart
-
-:hasPart rdf:type owl:ObjectProperty ;
-         
-         owl:inverseOf :isPartOf ;
-         
-         rdf:type owl:AsymmetricProperty ,
-                  owl:TransitiveProperty ,
-                  owl:IrreflexiveProperty .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasPoint
-
-:hasPoint rdf:type owl:ObjectProperty ;
-          
-          owl:inverseOf :isPointOf ;
-          
-          rdf:type owl:AsymmetricProperty ,
-                   owl:IrreflexiveProperty ;
-          
-          rdfs:range :Point .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasSubAsset
-
-:hasSubAsset rdf:type owl:ObjectProperty ,
-                      owl:AsymmetricProperty ,
-                      owl:TransitiveProperty ,
-                      owl:IrreflexiveProperty .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasTag
-
-:hasTag rdf:type owl:ObjectProperty ;
-        
-        owl:inverseOf :isTagOf ;
-        
-        rdf:type owl:AsymmetricProperty ,
-                 owl:IrreflexiveProperty ;
-        
-        rdfs:domain :Taggable ;
-        
-        rdfs:range :Tag .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasTagSet
-
-:hasTagSet rdf:type owl:ObjectProperty ;
-           
-           owl:inverseOf :isTagSetOf ;
-           
-           rdf:type owl:AsymmetricProperty ,
-                    owl:IrreflexiveProperty ;
-           
-           rdfs:domain :Taggable ;
-           
-           rdfs:range :TagSet .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#hasToken
-
-:hasToken rdf:type owl:ObjectProperty ;
-          
-          owl:inverseOf :isTokenOf ;
-          
-          rdf:type owl:AsymmetricProperty ,
-                   owl:IrreflexiveProperty ;
-          
-          rdfs:domain :Label ;
-          
-          rdfs:range :Token .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isFeedBy
-
-:isFeedBy rdf:type owl:ObjectProperty ,
-                   owl:AsymmetricProperty ,
-                   owl:IrreflexiveProperty .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isInputOf
-
-:isInputOf rdf:type owl:ObjectProperty ;
-           
-           rdfs:domain :Signal ;
-           
-           rdfs:range :FunctionBlock .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isLocatedIn
-
-:isLocatedIn rdf:type owl:ObjectProperty ,
-                      owl:AsymmetricProperty ,
-                      owl:TransitiveProperty ,
-                      owl:IrreflexiveProperty .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isOutputOf
-
-:isOutputOf rdf:type owl:ObjectProperty ,
-                     owl:AsymmetricProperty ,
-                     owl:IrreflexiveProperty ;
-            
-            rdfs:domain :Signal ;
-            
-            rdfs:range :FunctionBlock .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isPartOf
-
-:isPartOf rdf:type owl:ObjectProperty ,
-                   owl:AsymmetricProperty ,
-                   owl:TransitiveProperty ,
-                   owl:IrreflexiveProperty .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isPointOf
-
-:isPointOf rdf:type owl:ObjectProperty ,
-                    owl:AsymmetricProperty ,
-                    owl:IrreflexiveProperty ;
-           
-           rdfs:range :Point .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isTagOf
-
-:isTagOf rdf:type owl:ObjectProperty ,
-                  owl:AsymmetricProperty ,
-                  owl:IrreflexiveProperty ;
-         
-         rdfs:domain :Tag ;
-         
-         rdfs:range :Taggable .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isTagSetOf
-
-:isTagSetOf rdf:type owl:ObjectProperty ,
-                     owl:AsymmetricProperty ,
-                     owl:IrreflexiveProperty ;
-            
-            rdfs:domain :TagSet ;
-            
-            rdfs:range :Taggable .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#isTokenOf
-
-:isTokenOf rdf:type owl:ObjectProperty ,
-                    owl:AsymmetricProperty ,
-                    owl:IrreflexiveProperty ;
-           
-           rdfs:domain :Token ;
-           
-           rdfs:range :Label .
-
-
-
-
-
-#################################################################
-#
-#    Classes
-#
-#################################################################
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Equipment
-
-:Equipment rdf:type owl:Class ;
-           
-           rdfs:subClassOf :Taggable .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#EquipmentDimension
-
-:EquipmentDimension rdf:type owl:Class ;
-                    
-                    rdfs:subClassOf :InformationDimension .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#FunctionBlock
-
-:FunctionBlock rdf:type owl:Class .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#InformationDimension
-
-:InformationDimension rdf:type owl:Class ;
-                      
-                      rdfs:subClassOf :TagSet .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Label
-
-:Label rdf:type owl:Class ;
-       
-       rdfs:subClassOf :Taggable ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasToken ;
-                         owl:someValuesFrom :Token
-                       ] .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Location
-
-:Location rdf:type owl:Class ;
-          
-          rdfs:subClassOf :Taggable .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#LocationDimension
-
-:LocationDimension rdf:type owl:Class ;
-                   
-                   rdfs:subClassOf :InformationDimension .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#MeasurementDimension
-
-:MeasurementDimension rdf:type owl:Class ;
-                      
-                      rdfs:subClassOf :InformationDimension .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#ObservedSignal
-
-:ObservedSignal rdf:type owl:Class ;
-                
-                rdfs:subClassOf :Signal .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#OrganisationDimension
-
-:OrganisationDimension rdf:type owl:Class ;
-                       
-                       rdfs:subClassOf :InformationDimension .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#PersonDimension
-
-:PersonDimension rdf:type owl:Class ;
-                 
-                 rdfs:subClassOf :InformationDimension .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Point
-
-:Point rdf:type owl:Class ;
-       
-       rdfs:subClassOf :Taggable .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#ResourceDimension
-
-:ResourceDimension rdf:type owl:Class ;
-                   
-                   rdfs:subClassOf :InformationDimension .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Signal
-
-:Signal rdf:type owl:Class .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Tag
-
-:Tag rdf:type owl:Class .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#TagSet
-
-:TagSet rdf:type owl:Class .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Taggable
-
-:Taggable rdf:type owl:Class .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#Token
-
-:Token rdf:type owl:Class ;
-       
-       rdfs:subClassOf :Taggable ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasTag ;
-                         owl:someValuesFrom :Token
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasTagSet ;
-                         owl:someValuesFrom :TagSet
-                       ] .
-
-
-
-###  http://buildsys.org/ontologies/BricksFrame#UnobservedSignal
-
-:UnobservedSignal rdf:type owl:Class ;
-                  
-                  rdfs:subClassOf :Signal .
-
-
-
-
-###  Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi
-
+<http://buildsys.org/ontologies/BrickFrame> a owl:Ontology .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://buildsys.org/ontologies/BrickFrame#isHierarchical
+
+:isHierarchical a owl:AnnotationProperty .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://buildsys.org/ontologies/BrickFrame#controls
+
+:controls a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#feeds
+
+:feeds a owl:ObjectProperty ;
+	owl:inverseOf :isFeedBy ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasInput
+
+:hasInput a owl:ObjectProperty ;
+	owl:inverseOf :isInputOf ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :FunctionBlock ;
+	rdfs:range :Signal .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasOutput
+
+:hasOutput a owl:ObjectProperty ;
+	owl:inverseOf :isOutputOf ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :FunctionBlock ;
+	rdfs:range :Signal .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasPart
+
+:hasPart a owl:ObjectProperty ;
+	owl:inverseOf :isPartOf ;
+	a owl:AsymmetricProperty , owl:TransitiveProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasPoint
+
+:hasPoint a owl:ObjectProperty ;
+	owl:inverseOf :isPointOf ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:range :Point .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasSubAsset
+
+:hasSubAsset a owl:ObjectProperty , owl:AsymmetricProperty , owl:TransitiveProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasTag
+
+:hasTag a owl:ObjectProperty ;
+	owl:inverseOf :isTagOf ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :Taggable ;
+	rdfs:range :Tag .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasTagSet
+
+:hasTagSet a owl:ObjectProperty ;
+	owl:inverseOf :isTagSetOf ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :Taggable ;
+	rdfs:range :TagSet .
+# 
+# http://buildsys.org/ontologies/BrickFrame#hasToken
+
+:hasToken a owl:ObjectProperty ;
+	owl:inverseOf :isTokenOf ;
+	a owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :Label ;
+	rdfs:range :Token .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isControlledBy
+
+:isControlledBy a owl:ObjectProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isFeedBy
+
+:isFeedBy a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isInputOf
+
+:isInputOf a owl:ObjectProperty ;
+	rdfs:domain :Signal ;
+	rdfs:range :FunctionBlock .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isLocatedIn
+
+:isLocatedIn a owl:ObjectProperty , owl:AsymmetricProperty , owl:TransitiveProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isOutputOf
+
+:isOutputOf a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :Signal ;
+	rdfs:range :FunctionBlock .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isPartOf
+
+:isPartOf a owl:ObjectProperty , owl:AsymmetricProperty , owl:TransitiveProperty , owl:IrreflexiveProperty .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isPointOf
+
+:isPointOf a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:range :Point .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isTagOf
+
+:isTagOf a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :Tag ;
+	rdfs:range :Taggable .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isTagSetOf
+
+:isTagSetOf a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :TagSet ;
+	rdfs:range :Taggable .
+# 
+# http://buildsys.org/ontologies/BrickFrame#isTokenOf
+
+:isTokenOf a owl:ObjectProperty , owl:AsymmetricProperty , owl:IrreflexiveProperty ;
+	rdfs:domain :Token ;
+	rdfs:range :Label .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://buildsys.org/ontologies/BrickFrame#Equipment
+
+:Equipment a owl:Class ;
+	rdfs:subClassOf :Taggable .
+# 
+# http://buildsys.org/ontologies/BrickFrame#FunctionBlock
+
+:FunctionBlock a owl:Class .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Label
+
+:Label a owl:Class ;
+	rdfs:subClassOf :Taggable , _:genid1 .
+
+_:genid1 a owl:Restriction ;
+	owl:onProperty :hasToken ;
+	owl:someValuesFrom :Token .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Location
+
+:Location a owl:Class ;
+	rdfs:subClassOf :Taggable .
+# 
+# http://buildsys.org/ontologies/BrickFrame#ObservedSignal
+
+:ObservedSignal a owl:Class ;
+	rdfs:subClassOf :Signal .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Point
+
+:Point a owl:Class ;
+	rdfs:subClassOf :Taggable .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Signal
+
+:Signal a owl:Class .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Tag
+
+:Tag a owl:Class .
+# 
+# http://buildsys.org/ontologies/BrickFrame#TagSet
+
+:TagSet a owl:Class .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Taggable
+
+:Taggable a owl:Class .
+# 
+# http://buildsys.org/ontologies/BrickFrame#Token
+
+:Token a owl:Class ;
+	rdfs:subClassOf :Taggable , _:genid2 .
+
+_:genid2 a owl:Restriction ;
+	owl:onProperty :hasTag ;
+	owl:someValuesFrom :Token .
+
+:Token rdfs:subClassOf _:genid3 .
+
+_:genid3 a owl:Restriction ;
+	owl:onProperty :hasTagSet ;
+	owl:someValuesFrom :TagSet .
+# 
+# http://buildsys.org/ontologies/BrickFrame#UnobservedSignal
+
+:UnobservedSignal a owl:Class ;
+	rdfs:subClassOf :Signal .
+# 
+# Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi

@@ -1,0 +1,853 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix unit: <http://qudt.org/vocab/unit#> .
+@prefix gbXML: <http://www.gbxml.org/schema#> .
+@prefix haystack: <http://project-haystack.org/tag/> .
+@prefix bf:  <http://buildsys.org/ontologies/BrickFrame#> .
+@prefix : <http://buildsys.org/ontologies/BrickTag#> .
+
+<http://buildsys.org/ontologies/BrickTag>  a owl:Ontology ;
+	owl:imports <http://buildsys.org/ontologies/BrickFrame> ;
+	rdfs:comment "Domain Tag Definition"@en .
+
+
+ :Equipment  rdfs:subClassOf   bf:Tag;
+			 bf:isHierarchical  "";
+			 rdfs:label "Equipment"@en .
+
+ :Energy  rdfs:subClassOf   :Equipment;
+			 bf:isHierarchical  "";
+			 rdfs:label "Energy"@en .
+
+ :Power  rdfs:subClassOf   :Energy;
+			 bf:isHierarchical  "";
+			 rdfs:label "Power"@en .
+
+ :HVAC  rdfs:subClassOf   :Equipment;
+			 bf:isHierarchical  "";
+			 rdfs:label "HVAC"@en .
+
+ :AHU  rdfs:subClassOf   :HVAC;
+			 bf:isHierarchical  "";
+			 rdfs:label "AHU"@en .
+
+ :Misc  rdfs:subClassOf   :HVAC;
+			 bf:isHierarchical  "";
+			 rdfs:label "Misc"@en .
+
+ :VAV  rdfs:subClassOf   :HVAC;
+			 bf:isHierarchical  "";
+			 rdfs:label "VAV"@en .
+
+ :VFD  rdfs:subClassOf   :HVAC;
+			 bf:isHierarchical  "";
+			 rdfs:label "VFD"@en .
+
+ :Water  rdfs:subClassOf   :HVAC;
+			 bf:isHierarchical  "";
+			 rdfs:label "Water"@en .
+
+ :Lighting  rdfs:subClassOf   :Equipment;
+			 bf:isHierarchical  "";
+			 rdfs:label "Lighting"@en .
+
+ :Location  rdfs:subClassOf   bf:Tag;
+			 bf:isHierarchical  "";
+			 rdfs:label "Location"@en .
+
+ :MeasurementProperty  rdfs:subClassOf   bf:Tag;
+			 bf:isHierarchical  "";
+			 rdfs:label "MeasurementProperty"@en .
+
+ :Modifier  rdfs:subClassOf   :MeasurementProperty;
+			 bf:isHierarchical  "";
+			 rdfs:label "Modifier"@en .
+
+ :PhysicalProperties  rdfs:subClassOf   :MeasurementProperty;
+			 bf:isHierarchical  "";
+			 rdfs:label "PhysicalProperties"@en .
+
+ :Unit  rdfs:subClassOf   :MeasurementProperty;
+			 bf:isHierarchical  "";
+			 rdfs:label "Unit"@en .
+
+ :Point  rdfs:subClassOf   bf:Tag;
+			 bf:isHierarchical  "";
+			 rdfs:label "Point"@en .
+
+ :SolarPanel  rdfs:subClassOf   :Energy;
+			 bf:isHierarchical  "";
+			 rdfs:label "SolarPanel"@en .
+
+ :HVAC  rdfs:subClassOf   :Equipment;
+			 rdfs:label "HVAC"@en .
+
+ :Load  rdfs:subClassOf   :Power;
+			 rdfs:label "Load"@en .
+
+ :Bus  rdfs:subClassOf   :Power;
+			 rdfs:label "Bus"@en .
+
+ :Battery  rdfs:subClassOf   :Power;
+			 rdfs:label "Battery"@en .
+
+ :Solar  rdfs:subClassOf   :Power;
+			 rdfs:label "Solar"@en .
+
+ :PV  rdfs:subClassOf   :Power;
+			 rdfs:label "PV"@en .
+
+ :AHU  rdfs:subClassOf   :HVAC;
+			 rdfs:label "AHU"@en .
+
+ :CRAC  rdfs:subClassOf   :HVAC;
+			 rdfs:label "CRAC"@en .
+
+ :VFD  rdfs:subClassOf   :HVAC;
+			 rdfs:label "VFD"@en .
+
+ :Compressor  rdfs:subClassOf   :HVAC;
+			 rdfs:label "Compressor"@en .
+
+ :VAV  rdfs:subClassOf   :HVAC;
+			 rdfs:label "VAV"@en .
+
+ :Heating  rdfs:subClassOf   :AHU;
+			 rdfs:label "Heating"@en .
+
+ :Cooling  rdfs:subClassOf   :AHU;
+			 rdfs:label "Cooling"@en .
+
+ :Coil  rdfs:subClassOf   :AHU;
+			 rdfs:label "Coil"@en .
+
+ :Hot  rdfs:subClassOf   :AHU;
+			 rdfs:label "Hot"@en .
+
+ :Steam  rdfs:subClassOf   :AHU;
+			 rdfs:label "Steam"@en .
+
+ :Exhaust  rdfs:subClassOf   :AHU;
+			 rdfs:label "Exhaust"@en .
+
+ :Return  rdfs:subClassOf   :AHU;
+			 rdfs:label "Return"@en .
+
+ :Mixed  rdfs:subClassOf   :AHU;
+			 rdfs:label "Mixed"@en .
+
+ :Chilled  rdfs:subClassOf   :AHU;
+			 rdfs:label "Chilled"@en .
+
+ :Water  rdfs:subClassOf   :AHU;
+			 rdfs:label "Water"@en .
+
+ :Outside  rdfs:subClassOf   :AHU;
+			 rdfs:label "Outside"@en .
+
+ :Bypass  rdfs:subClassOf   :AHU;
+			 rdfs:label "Bypass"@en .
+
+ :Dehumidification  rdfs:subClassOf   :AHU;
+			 rdfs:label "Dehumidification"@en .
+
+ :Humidification  rdfs:subClassOf   :AHU;
+			 rdfs:label "Humidification"@en .
+
+ :Condensate  rdfs:subClassOf   :AHU;
+			 rdfs:label "Condensate"@en .
+
+ :Head  rdfs:subClassOf   :Misc;
+			 rdfs:label "Head"@en .
+
+ :Computer  rdfs:subClassOf   :Misc;
+			 rdfs:label "Computer"@en .
+
+ :Humidifier  rdfs:subClassOf   :Misc;
+			 rdfs:label "Humidifier"@en .
+
+ :Variable  rdfs:subClassOf   :VAV;
+			 rdfs:label "Variable"@en .
+
+ :Air  rdfs:subClassOf   :VAV;
+			 rdfs:label "Air"@en .
+
+ :Volume  rdfs:subClassOf   :VAV;
+			 rdfs:label "Volume"@en .
+
+ :Box  rdfs:subClassOf   :VAV;
+			 rdfs:label "Box"@en .
+
+ :Reheat  rdfs:subClassOf   :VAV;
+			 rdfs:label "Reheat"@en .
+
+ :Discharge  rdfs:subClassOf   :VAV;
+			 rdfs:label "Discharge"@en .
+
+ :Damper  rdfs:subClassOf   :VAV;
+			 rdfs:label "Damper"@en .
+
+ :Position  rdfs:subClassOf   :VAV;
+			 rdfs:label "Position"@en .
+
+ :Booster  rdfs:subClassOf   :VAV;
+			 rdfs:label "Booster"@en .
+
+ :Fan  rdfs:subClassOf   :VAV;
+			 rdfs:label "Fan"@en .
+
+ :Thermostat  rdfs:subClassOf   :VAV;
+			 rdfs:label "Thermostat"@en .
+
+ :Adjustment  rdfs:subClassOf   :VAV;
+			 rdfs:label "Adjustment"@en .
+
+ :Static  rdfs:subClassOf   :VAV;
+			 rdfs:label "Static"@en .
+
+ :Heater  rdfs:subClassOf   :VAV;
+			 rdfs:label "Heater"@en .
+
+ :Mixed  rdfs:subClassOf   :VAV;
+			 rdfs:label "Mixed"@en .
+
+ :Drive  rdfs:subClassOf   :VFD;
+			 rdfs:label "Drive"@en .
+
+ :Speed  rdfs:subClassOf   :VFD;
+			 rdfs:label "Speed"@en .
+
+ :Torque  rdfs:subClassOf   :VFD;
+			 rdfs:label "Torque"@en .
+
+ :Acceleration  rdfs:subClassOf   :VFD;
+			 rdfs:label "Acceleration"@en .
+
+ :Deceleration  rdfs:subClassOf   :VFD;
+			 rdfs:label "Deceleration"@en .
+
+ :Limit  rdfs:subClassOf   :VFD;
+			 rdfs:label "Limit"@en .
+
+ :Run  rdfs:subClassOf   :VFD;
+			 rdfs:label "Run"@en .
+
+ :Enable  rdfs:subClassOf   :VFD;
+			 rdfs:label "Enable"@en .
+
+ :Manual  rdfs:subClassOf   :VFD;
+			 rdfs:label "Manual"@en .
+
+ :Auto  rdfs:subClassOf   :VFD;
+			 rdfs:label "Auto"@en .
+
+ :Direction  rdfs:subClassOf   :VFD;
+			 rdfs:label "Direction"@en .
+
+ :Maintenance  rdfs:subClassOf   :VFD;
+			 rdfs:label "Maintenance"@en .
+
+ :Required  rdfs:subClassOf   :VFD;
+			 rdfs:label "Required"@en .
+
+ :Filter  rdfs:subClassOf   :VFD;
+			 rdfs:label "Filter"@en .
+
+ :Panel  rdfs:subClassOf   :VFD;
+			 rdfs:label "Panel"@en .
+
+ :Lockout  rdfs:subClassOf   :VFD;
+			 rdfs:label "Lockout"@en .
+
+ :Output  rdfs:subClassOf   :VFD;
+			 rdfs:label "Output"@en .
+
+ :Economizer  rdfs:subClassOf   :VFD;
+			 rdfs:label "Economizer"@en .
+
+ :Reference  rdfs:subClassOf   :VFD;
+			 rdfs:label "Reference"@en .
+
+ :Motor  rdfs:subClassOf   :VFD;
+			 rdfs:label "Motor"@en .
+
+ :Rated  rdfs:subClassOf   :VFD;
+			 rdfs:label "Rated"@en .
+
+ :Dead  rdfs:subClassOf   :VFD;
+			 rdfs:label "Dead"@en .
+
+ :Band  rdfs:subClassOf   :VFD;
+			 rdfs:label "Band"@en .
+
+ :Hot  rdfs:subClassOf   :Water;
+			 rdfs:label "Hot"@en .
+
+ :Medium  rdfs:subClassOf   :Water;
+			 rdfs:label "Medium"@en .
+
+ :Chilled  rdfs:subClassOf   :Water;
+			 rdfs:label "Chilled"@en .
+
+ :Water  rdfs:subClassOf   :Water;
+			 rdfs:label "Water"@en .
+
+ :Pump  rdfs:subClassOf   :Water;
+			 rdfs:label "Pump"@en .
+
+ :Heat  rdfs:subClassOf   :Water;
+			 rdfs:label "Heat"@en .
+
+ :Exchanger  rdfs:subClassOf   :Water;
+			 rdfs:label "Exchanger"@en .
+
+ :Valve  rdfs:subClassOf   :Water;
+			 rdfs:label "Valve"@en .
+
+ :Stream  rdfs:subClassOf   :Water;
+			 rdfs:label "Stream"@en .
+
+ :Differential  rdfs:subClassOf   :Water;
+			 rdfs:label "Differential"@en .
+
+ :Freeze  rdfs:subClassOf   :Water;
+			 rdfs:label "Freeze"@en .
+
+ :LED  rdfs:subClassOf   :Lighting;
+			 rdfs:label "LED"@en .
+
+ :Zone  rdfs:subClassOf   :Location;
+			 rdfs:label "Zone"@en .
+
+ :Room  rdfs:subClassOf   :Location;
+			 rdfs:label "Room"@en .
+
+ :Floor  rdfs:subClassOf   :Location;
+			 rdfs:label "Floor"@en .
+
+ :Building  rdfs:subClassOf   :Location;
+			 rdfs:label "Building"@en .
+
+ :Space  rdfs:subClassOf   :Location;
+			 rdfs:label "Space"@en .
+
+ :Wing  rdfs:subClassOf   :Location;
+			 rdfs:label "Wing"@en .
+
+ :Outside  rdfs:subClassOf   :Location;
+			 rdfs:label "Outside"@en .
+
+ :City  rdfs:subClassOf   :Location;
+			 rdfs:label "City"@en .
+
+ :Liquid  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Liquid"@en .
+
+ :Smoke  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Smoke"@en .
+
+ :Domestic  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Domestic"@en .
+
+ :Zenith  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Zenith"@en .
+
+ :Azimuth  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Azimuth"@en .
+
+ :Request  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Request"@en .
+
+ :Indicator  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Indicator"@en .
+
+ :Reset  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Reset"@en .
+
+ :PID  rdfs:subClassOf   :Modifier;
+			 rdfs:label "PID"@en .
+
+ :Control  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Control"@en .
+
+ :High  rdfs:subClassOf   :Modifier;
+			 rdfs:label "High"@en .
+
+ :Low  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Low"@en .
+
+ :Disable  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Disable"@en .
+
+ :Enable  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Enable"@en .
+
+ :Mode  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Mode"@en .
+
+ :Start  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Start"@en .
+
+ :Stop  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Stop"@en .
+
+ :Max  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Max"@en .
+
+ :Min  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Min"@en .
+
+ :System  rdfs:subClassOf   :Modifier;
+			 rdfs:label "System"@en .
+
+ :Ready  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Ready"@en .
+
+ :Emergency  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Emergency"@en .
+
+ :Tolerance  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Tolerance"@en .
+
+ :Delay  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Delay"@en .
+
+ :Input  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Input"@en .
+
+ :Output  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Output"@en .
+
+ :Leak  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Leak"@en .
+
+ :Standby  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Standby"@en .
+
+ :Conditioning  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Conditioning"@en .
+
+ :Overload  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Overload"@en .
+
+ :Detected  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Detected"@en .
+
+ :Communication  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Communication"@en .
+
+ :Loss  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Loss"@en .
+
+ :Suction  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Suction"@en .
+
+ :Relative  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Relative"@en .
+
+ :Estimation  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Estimation"@en .
+
+ :Capacity  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Capacity"@en .
+
+ :No  rdfs:subClassOf   :Modifier;
+			 rdfs:label "No"@en .
+
+ :Wind  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Wind"@en .
+
+ :Auto  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Auto"@en .
+
+ :Storage  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Storage"@en .
+
+ :Activated  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Activated"@en .
+
+ :Hood  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Hood"@en .
+
+ :Yearly  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Yearly"@en .
+
+ :Off  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Off"@en .
+
+ :Generator  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Generator"@en .
+
+ :Cold  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Cold"@en .
+
+ :Underfloor  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Underfloor"@en .
+
+ :Supply  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Supply"@en .
+
+ :Change  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Change"@en .
+
+ :Stage  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Stage"@en .
+
+ :Face  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Face"@en .
+
+ :Radiance  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Radiance"@en .
+
+ :Short  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Short"@en .
+
+ :Deionised  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Deionised"@en .
+
+ :When  rdfs:subClassOf   :Modifier;
+			 rdfs:label "When"@en .
+
+ :Stack  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Stack"@en .
+
+ :Failed  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Failed"@en .
+
+ :From  rdfs:subClassOf   :Modifier;
+			 rdfs:label "From"@en .
+
+ :Push  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Push"@en .
+
+ :Hold  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Hold"@en .
+
+ :Increase  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Increase"@en .
+
+ :Locally  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Locally"@en .
+
+ :Demand  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Demand"@en .
+
+ :Humidify  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Humidify"@en .
+
+ :DualBand  rdfs:subClassOf   :Modifier;
+			 rdfs:label "DualBand"@en .
+
+ :Dewpoint  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Dewpoint"@en .
+
+ :Average  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Average"@en .
+
+ :Thermal  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Thermal"@en .
+
+ :Tower  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Tower"@en .
+
+ :Temporary  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Temporary"@en .
+
+ :Lead  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Lead"@en .
+
+ :Stages  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Stages"@en .
+
+ :Effective  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Effective"@en .
+
+ :Fire  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Fire"@en .
+
+ :Turned  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Turned"@en .
+
+ :Velocity  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Velocity"@en .
+
+ :Meter  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Meter"@en .
+
+ :Grains  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Grains"@en .
+
+ :Shutdown  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Shutdown"@en .
+
+ :Integration  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Integration"@en .
+
+ :Freezer  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Freezer"@en .
+
+ :Lag  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Lag"@en .
+
+ :Percent  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Percent"@en .
+
+ :Fans  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Fans"@en .
+
+ :Highest  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Highest"@en .
+
+ :Conductivity  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Conductivity"@en .
+
+ :Sash  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Sash"@en .
+
+ :Piezoelectric  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Piezoelectric"@en .
+
+ :EconCycle  rdfs:subClassOf   :Modifier;
+			 rdfs:label "EconCycle"@en .
+
+ :Handler  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Handler"@en .
+
+ :Lowest  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Lowest"@en .
+
+ :Cycle  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Cycle"@en .
+
+ :Overridden  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Overridden"@en .
+
+ :Level  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Level"@en .
+
+ :Turn  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Turn"@en .
+
+ :Last  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Last"@en .
+
+ :Month  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Month"@en .
+
+ :Proportional  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Proportional"@en .
+
+ :Shed  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Shed"@en .
+
+ :Monthly  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Monthly"@en .
+
+ :Digital  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Digital"@en .
+
+ :Decrease  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Decrease"@en .
+
+ :Cooling  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Cooling"@en .
+
+ :Integral  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Integral"@en .
+
+ :Short  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Short"@en .
+
+ :Step  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Step"@en .
+
+ :Pre  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Pre"@en .
+
+ :Even  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Even"@en .
+
+ :Detection  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Detection"@en .
+
+ :Peak  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Peak"@en .
+
+ :To  rdfs:subClassOf   :Modifier;
+			 rdfs:label "To"@en .
+
+ :Fume  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Fume"@en .
+
+ :Usage  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Usage"@en .
+
+ :Date  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Date"@en .
+
+ :Today  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Today"@en .
+
+ :Preheat  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Preheat"@en .
+
+ :Alarm  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Alarm"@en .
+
+ :Code  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Code"@en .
+
+ :Cycle  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Cycle"@en .
+
+ :Button  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Button"@en .
+
+ :Analog  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Analog"@en .
+
+ :Open  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Open"@en .
+
+ :Wheel  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Wheel"@en .
+
+ :On  rdfs:subClassOf   :Modifier;
+			 rdfs:label "On"@en .
+
+ :Perimeter  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Perimeter"@en .
+
+ :Remotely  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Remotely"@en .
+
+ :Schedule  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Schedule"@en .
+
+ :By  rdfs:subClassOf   :Modifier;
+			 rdfs:label "By"@en .
+
+ :Environment  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Environment"@en .
+
+ :Enthalpy  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Enthalpy"@en .
+
+ :Glycool  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Glycool"@en .
+
+ :Current  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Current"@en .
+
+ :Time  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Time"@en .
+
+ :Voltage  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Voltage"@en .
+
+ :Power  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Power"@en .
+
+ :Current  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Current"@en .
+
+ :Energy  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Energy"@en .
+
+ :DC  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "DC"@en .
+
+ :Temperature  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Temperature"@en .
+
+ :Flow  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Flow"@en .
+
+ :Pressure  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Pressure"@en .
+
+ :Humidity  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Humidity"@en .
+
+ :Enthalpy  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Enthalpy"@en .
+
+ :Angle  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Angle"@en .
+
+ :Fault  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Fault"@en .
+
+ :Switch  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Switch"@en .
+
+ :Status  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Status"@en .
+
+ :Alarm  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Alarm"@en .
+
+ :CO2  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "CO2"@en .
+
+ :Occupancy  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Occupancy"@en .
+
+ :Occupied  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Occupied"@en .
+
+ :Unoccupied  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Unoccupied"@en .
+
+ :Frequency  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Frequency"@en .
+
+ :Luminance  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Luminance"@en .
+
+ :Fahrenheit  rdfs:subClassOf   :Unit;
+			 rdfs:label "Fahrenheit"@en .
+
+ :CFM  rdfs:subClassOf   :Unit;
+			 rdfs:label "CFM"@en .
+
+ :Setpoint  rdfs:subClassOf   :Point;
+			 rdfs:label "Setpoint"@en .
+
+ :Sensor  rdfs:subClassOf   :Point;
+			 rdfs:label "Sensor"@en .
+
+ :Status  rdfs:subClassOf   :Point;
+			 rdfs:label "Status"@en .
+
+ :Command  rdfs:subClassOf   :Point;
+			 rdfs:label "Command"@en .
+
+ :Alarm  rdfs:subClassOf   :Point;
+			 rdfs:label "Alarm"@en .
+
+ :Unit  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Unit"@en .
+
+ :Grains  rdfs:subClassOf   :Modifier;
+			 rdfs:label "Grains"@en .
+
+ :Photovoltaic  rdfs:subClassOf   :Grains;
+			 rdfs:label "Photovoltaic"@en .
+
+ :Terminal  rdfs:subClassOf   :HVAC;
+			 rdfs:label "Terminal"@en .
+
+ :Laboratory  rdfs:subClassOf   :Location;
+			 rdfs:label "Laboratory"@en .
+
+ :Adjust  rdfs:subClassOf   :VAV;
+			 rdfs:label "Adjust"@en .
