@@ -834,6 +834,9 @@
  :Alarm  rdfs:subClassOf   :Point;
 			 rdfs:label "Alarm"@en .
 
+ :Meter  rdfs:subClassOf   :Point;
+			 rdfs:label "Meter"@en .
+
  :Unit  rdfs:subClassOf   :Modifier;
 			 rdfs:label "Unit"@en .
 
@@ -851,3 +854,9 @@
 
  :Adjust  rdfs:subClassOf   :VAV;
 			 rdfs:label "Adjust"@en .
+
+ :Rain  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Rain"@en .
+
+ :Hail  rdfs:subClassOf   :PhysicalProperties;
+			 rdfs:label "Hail"@en .

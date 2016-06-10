@@ -29,7 +29,11 @@
 			 bf:isHierarchical  "";
 			 rdfs:label "HVAC"@en .
 
- :Energy  rdfs:subClassOf   :Equipment;
+ :Point  rdfs:subClassOf   bf:TagSet;
+			 bf:isHierarchical  "";
+			 rdfs:label "Point"@en .
+
+ :Energy  rdfs:subClassOf   :Point;
 			 bf:isHierarchical  "";
 			 rdfs:label "Energy"@en .
 
@@ -101,10 +105,6 @@
 			 bf:isHierarchical  "";
 			 rdfs:label "Weather"@en .
 
- :Point  rdfs:subClassOf   bf:TagSet;
-			 bf:isHierarchical  "";
-			 rdfs:label "Point"@en .
-
  :Fan  rdfs:subClassOf   :HVAC;
 			 bf:isHierarchical  "";
 			 rdfs:label "Fan"@en .
@@ -164,6 +164,10 @@
  :Resource  rdfs:subClassOf   bf:TagSet;
 			 bf:isHierarchical  "";
 			 rdfs:label "Resource"@en .
+
+ :Lighting  rdfs:subClassOf   :Point;
+			 bf:isHierarchical  "";
+			 rdfs:label "Lighting"@en .
 
  :Chilled_Water_System  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chilled . ];
@@ -946,13 +950,6 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
 			 rdfs:label "Heat Wheel Voltage Sensor"@en .
 
- :Outside_Air_CO2_Sensor  rdfs:subClassOf   :AHU;
-			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Outside . ];
-			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air . ];
-			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:CO2 . ];
-			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
-			 rdfs:label "Outside Air CO2 Sensor"@en .
-
  :Outside_Air_Dewpoint_Sensor  rdfs:subClassOf   :AHU;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Outside . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air . ];
@@ -1373,6 +1370,13 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
 			 rdfs:label "Medium Temperature Hot Water Supply Temperature Sensor"@en .
+
+ :Hot_Water__Flow_Meter  rdfs:subClassOf   :HotWaterSystem;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Flow . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter . ];
+			 rdfs:label "Hot Water  Flow Meter"@en .
 
  :Medium_Temperature_Water_Pressure_Sensor  rdfs:subClassOf   :HotWaterSystem;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Medium . ];
@@ -3441,11 +3445,40 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm . ];
 			 rdfs:label "VFD Alarm"@en .
 
- :VFD_Speed_Command  rdfs:subClassOf   :VFD;
+ :VFD_Command  rdfs:subClassOf   :VFD;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD . ];
-			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Speed . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command . ];
-			 rdfs:label "VFD Speed Command"@en .
+			 rdfs:label "VFD Command"@en .
+
+ :Supply_Fan_VFD_Command  rdfs:subClassOf   :AHU;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fan . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command . ];
+			 rdfs:label "Supply Fan VFD Command"@en .
+
+ :Return_Fan_VFD_Command  rdfs:subClassOf   :AHU;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Return . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fan . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command . ];
+			 rdfs:label "Return Fan VFD Command"@en .
+
+ :Chilled_Water_Pump_VFD_Command  rdfs:subClassOf   :ChilledWaterSystem;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chilled . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pump . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command . ];
+			 rdfs:label "Chilled Water Pump VFD Command"@en .
+
+ :Hot_Water_Pump_VFD_Command  rdfs:subClassOf   :HotWaterSystem;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pump . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command . ];
+			 rdfs:label "Hot Water Pump VFD Command"@en .
 
  :VFD_Start_Stop_Command  rdfs:subClassOf   :VFD;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD . ];
@@ -3773,6 +3806,12 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command . ];
 			 rdfs:label "Domestic Hot Water System Start Stop Command"@en .
 
+ :Hot_Water_Meter  rdfs:subClassOf   :HotWaterSystem;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter . ];
+			 rdfs:label "Hot Water Meter"@en .
+
  :Domestic_Hot_Water_Valve_Command  rdfs:subClassOf   :DomesticHotWaterSystem;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Domestic . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
@@ -3796,6 +3835,11 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Freeze . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status . ];
 			 rdfs:label "Freeze Status"@en .
+
+ :Water_Meter  rdfs:subClassOf   :WaterSystem;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter . ];
+			 rdfs:label "Water Meter"@en .
 
  :Heat_Exchanger_Supply_Water_Temperature_Dead_Band_Setpoint  rdfs:subClassOf   :HeatExchanger;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heat . ];
@@ -4111,3 +4155,24 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 rdfs:label "High Temperature Hot Water"@en .
+
+ :Luminance_Sensor  rdfs:subClassOf   :Lighting;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Luminance . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
+			 rdfs:label "Luminance Sensor"@en .
+
+ :Hail_Sensor  rdfs:subClassOf   :Weather;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hail . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
+			 rdfs:label "Hail Sensor"@en .
+
+ :Solar_Radiance_Sensor  rdfs:subClassOf   :Weather;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Solar . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Radiance . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
+			 rdfs:label "Solar Radiance Sensor"@en .
+
+ :Rain_Sensor  rdfs:subClassOf   :Weather;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Rain . ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor . ];
+			 rdfs:label "Rain Sensor"@en .
