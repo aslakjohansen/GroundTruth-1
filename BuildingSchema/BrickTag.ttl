@@ -1,3 +1,5 @@
+@prefix : <http://buildsys.org/ontologies/BrickTag#> .
+@prefix bf: <http://buildsys.org/ontologies/BrickFrame#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix DUL: <http://www.loa-cnr.it/ontologies/DUL.owl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -11,852 +13,1556 @@
 @prefix unit: <http://qudt.org/vocab/unit#> .
 @prefix gbXML: <http://www.gbxml.org/schema#> .
 @prefix haystack: <http://project-haystack.org/tag/> .
-@prefix bf:  <http://buildsys.org/ontologies/BrickFrame#> .
-@prefix : <http://buildsys.org/ontologies/BrickTag#> .
 
-<http://buildsys.org/ontologies/BrickTag>  a owl:Ontology ;
+<http://buildsys.org/ontologies/BrickTag> a owl:Ontology ;
 	owl:imports <http://buildsys.org/ontologies/BrickFrame> ;
 	rdfs:comment "Domain Tag Definition"@en .
-
-
- :Equipment  rdfs:subClassOf   bf:Tag;
-			 bf:isHierarchical  "";
-			 rdfs:label "Equipment"@en .
-
- :Energy  rdfs:subClassOf   :Equipment;
-			 bf:isHierarchical  "";
-			 rdfs:label "Energy"@en .
-
- :Power  rdfs:subClassOf   :Energy;
-			 bf:isHierarchical  "";
-			 rdfs:label "Power"@en .
-
- :HVAC  rdfs:subClassOf   :Equipment;
-			 bf:isHierarchical  "";
-			 rdfs:label "HVAC"@en .
-
- :AHU  rdfs:subClassOf   :HVAC;
-			 bf:isHierarchical  "";
-			 rdfs:label "AHU"@en .
-
- :Misc  rdfs:subClassOf   :HVAC;
-			 bf:isHierarchical  "";
-			 rdfs:label "Misc"@en .
-
- :VAV  rdfs:subClassOf   :HVAC;
-			 bf:isHierarchical  "";
-			 rdfs:label "VAV"@en .
-
- :VFD  rdfs:subClassOf   :HVAC;
-			 bf:isHierarchical  "";
-			 rdfs:label "VFD"@en .
-
- :Water  rdfs:subClassOf   :HVAC;
-			 bf:isHierarchical  "";
-			 rdfs:label "Water"@en .
-
- :Lighting  rdfs:subClassOf   :Equipment;
-			 bf:isHierarchical  "";
-			 rdfs:label "Lighting"@en .
-
- :Location  rdfs:subClassOf   bf:Tag;
-			 bf:isHierarchical  "";
-			 rdfs:label "Location"@en .
-
- :MeasurementProperty  rdfs:subClassOf   bf:Tag;
-			 bf:isHierarchical  "";
-			 rdfs:label "MeasurementProperty"@en .
-
- :Modifier  rdfs:subClassOf   :MeasurementProperty;
-			 bf:isHierarchical  "";
-			 rdfs:label "Modifier"@en .
-
- :PhysicalProperties  rdfs:subClassOf   :MeasurementProperty;
-			 bf:isHierarchical  "";
-			 rdfs:label "PhysicalProperties"@en .
-
- :Unit  rdfs:subClassOf   :MeasurementProperty;
-			 bf:isHierarchical  "";
-			 rdfs:label "Unit"@en .
-
- :Point  rdfs:subClassOf   bf:Tag;
-			 bf:isHierarchical  "";
-			 rdfs:label "Point"@en .
-
- :SolarPanel  rdfs:subClassOf   :Energy;
-			 bf:isHierarchical  "";
-			 rdfs:label "SolarPanel"@en .
-
- :HVAC  rdfs:subClassOf   :Equipment;
-			 rdfs:label "HVAC"@en .
-
- :Load  rdfs:subClassOf   :Power;
-			 rdfs:label "Load"@en .
-
- :Bus  rdfs:subClassOf   :Power;
-			 rdfs:label "Bus"@en .
-
- :Battery  rdfs:subClassOf   :Power;
-			 rdfs:label "Battery"@en .
-
- :Solar  rdfs:subClassOf   :Power;
-			 rdfs:label "Solar"@en .
-
- :PV  rdfs:subClassOf   :Power;
-			 rdfs:label "PV"@en .
-
- :AHU  rdfs:subClassOf   :HVAC;
-			 rdfs:label "AHU"@en .
-
- :CRAC  rdfs:subClassOf   :HVAC;
-			 rdfs:label "CRAC"@en .
-
- :VFD  rdfs:subClassOf   :HVAC;
-			 rdfs:label "VFD"@en .
-
- :Compressor  rdfs:subClassOf   :HVAC;
-			 rdfs:label "Compressor"@en .
-
- :VAV  rdfs:subClassOf   :HVAC;
-			 rdfs:label "VAV"@en .
-
- :Heating  rdfs:subClassOf   :AHU;
-			 rdfs:label "Heating"@en .
-
- :Cooling  rdfs:subClassOf   :AHU;
-			 rdfs:label "Cooling"@en .
-
- :Coil  rdfs:subClassOf   :AHU;
-			 rdfs:label "Coil"@en .
-
- :Hot  rdfs:subClassOf   :AHU;
-			 rdfs:label "Hot"@en .
-
- :Steam  rdfs:subClassOf   :AHU;
-			 rdfs:label "Steam"@en .
-
- :Exhaust  rdfs:subClassOf   :AHU;
-			 rdfs:label "Exhaust"@en .
-
- :Return  rdfs:subClassOf   :AHU;
-			 rdfs:label "Return"@en .
-
- :Mixed  rdfs:subClassOf   :AHU;
-			 rdfs:label "Mixed"@en .
-
- :Chilled  rdfs:subClassOf   :AHU;
-			 rdfs:label "Chilled"@en .
-
- :Water  rdfs:subClassOf   :AHU;
-			 rdfs:label "Water"@en .
-
- :Outside  rdfs:subClassOf   :AHU;
-			 rdfs:label "Outside"@en .
-
- :Bypass  rdfs:subClassOf   :AHU;
-			 rdfs:label "Bypass"@en .
-
- :Dehumidification  rdfs:subClassOf   :AHU;
-			 rdfs:label "Dehumidification"@en .
-
- :Humidification  rdfs:subClassOf   :AHU;
-			 rdfs:label "Humidification"@en .
-
- :Condensate  rdfs:subClassOf   :AHU;
-			 rdfs:label "Condensate"@en .
-
- :Head  rdfs:subClassOf   :Misc;
-			 rdfs:label "Head"@en .
-
- :Computer  rdfs:subClassOf   :Misc;
-			 rdfs:label "Computer"@en .
-
- :Humidifier  rdfs:subClassOf   :Misc;
-			 rdfs:label "Humidifier"@en .
-
- :Variable  rdfs:subClassOf   :VAV;
-			 rdfs:label "Variable"@en .
-
- :Air  rdfs:subClassOf   :VAV;
-			 rdfs:label "Air"@en .
-
- :Volume  rdfs:subClassOf   :VAV;
-			 rdfs:label "Volume"@en .
-
- :Box  rdfs:subClassOf   :VAV;
-			 rdfs:label "Box"@en .
-
- :Reheat  rdfs:subClassOf   :VAV;
-			 rdfs:label "Reheat"@en .
-
- :Discharge  rdfs:subClassOf   :VAV;
-			 rdfs:label "Discharge"@en .
-
- :Damper  rdfs:subClassOf   :VAV;
-			 rdfs:label "Damper"@en .
-
- :Position  rdfs:subClassOf   :VAV;
-			 rdfs:label "Position"@en .
-
- :Booster  rdfs:subClassOf   :VAV;
-			 rdfs:label "Booster"@en .
-
- :Fan  rdfs:subClassOf   :VAV;
-			 rdfs:label "Fan"@en .
-
- :Thermostat  rdfs:subClassOf   :VAV;
-			 rdfs:label "Thermostat"@en .
-
- :Adjustment  rdfs:subClassOf   :VAV;
-			 rdfs:label "Adjustment"@en .
-
- :Static  rdfs:subClassOf   :VAV;
-			 rdfs:label "Static"@en .
-
- :Heater  rdfs:subClassOf   :VAV;
-			 rdfs:label "Heater"@en .
-
- :Mixed  rdfs:subClassOf   :VAV;
-			 rdfs:label "Mixed"@en .
-
- :Drive  rdfs:subClassOf   :VFD;
-			 rdfs:label "Drive"@en .
-
- :Speed  rdfs:subClassOf   :VFD;
-			 rdfs:label "Speed"@en .
-
- :Torque  rdfs:subClassOf   :VFD;
-			 rdfs:label "Torque"@en .
-
- :Acceleration  rdfs:subClassOf   :VFD;
-			 rdfs:label "Acceleration"@en .
-
- :Deceleration  rdfs:subClassOf   :VFD;
-			 rdfs:label "Deceleration"@en .
-
- :Limit  rdfs:subClassOf   :VFD;
-			 rdfs:label "Limit"@en .
-
- :Run  rdfs:subClassOf   :VFD;
-			 rdfs:label "Run"@en .
-
- :Enable  rdfs:subClassOf   :VFD;
-			 rdfs:label "Enable"@en .
-
- :Manual  rdfs:subClassOf   :VFD;
-			 rdfs:label "Manual"@en .
-
- :Auto  rdfs:subClassOf   :VFD;
-			 rdfs:label "Auto"@en .
-
- :Direction  rdfs:subClassOf   :VFD;
-			 rdfs:label "Direction"@en .
-
- :Maintenance  rdfs:subClassOf   :VFD;
-			 rdfs:label "Maintenance"@en .
-
- :Required  rdfs:subClassOf   :VFD;
-			 rdfs:label "Required"@en .
-
- :Filter  rdfs:subClassOf   :VFD;
-			 rdfs:label "Filter"@en .
-
- :Panel  rdfs:subClassOf   :VFD;
-			 rdfs:label "Panel"@en .
-
- :Lockout  rdfs:subClassOf   :VFD;
-			 rdfs:label "Lockout"@en .
-
- :Output  rdfs:subClassOf   :VFD;
-			 rdfs:label "Output"@en .
-
- :Economizer  rdfs:subClassOf   :VFD;
-			 rdfs:label "Economizer"@en .
-
- :Reference  rdfs:subClassOf   :VFD;
-			 rdfs:label "Reference"@en .
-
- :Motor  rdfs:subClassOf   :VFD;
-			 rdfs:label "Motor"@en .
-
- :Rated  rdfs:subClassOf   :VFD;
-			 rdfs:label "Rated"@en .
-
- :Dead  rdfs:subClassOf   :VFD;
-			 rdfs:label "Dead"@en .
-
- :Band  rdfs:subClassOf   :VFD;
-			 rdfs:label "Band"@en .
-
- :Hot  rdfs:subClassOf   :Water;
-			 rdfs:label "Hot"@en .
-
- :Medium  rdfs:subClassOf   :Water;
-			 rdfs:label "Medium"@en .
-
- :Chilled  rdfs:subClassOf   :Water;
-			 rdfs:label "Chilled"@en .
-
- :Water  rdfs:subClassOf   :Water;
-			 rdfs:label "Water"@en .
-
- :Pump  rdfs:subClassOf   :Water;
-			 rdfs:label "Pump"@en .
-
- :Heat  rdfs:subClassOf   :Water;
-			 rdfs:label "Heat"@en .
-
- :Exchanger  rdfs:subClassOf   :Water;
-			 rdfs:label "Exchanger"@en .
-
- :Valve  rdfs:subClassOf   :Water;
-			 rdfs:label "Valve"@en .
-
- :Stream  rdfs:subClassOf   :Water;
-			 rdfs:label "Stream"@en .
-
- :Differential  rdfs:subClassOf   :Water;
-			 rdfs:label "Differential"@en .
-
- :Freeze  rdfs:subClassOf   :Water;
-			 rdfs:label "Freeze"@en .
-
- :LED  rdfs:subClassOf   :Lighting;
-			 rdfs:label "LED"@en .
-
- :Zone  rdfs:subClassOf   :Location;
-			 rdfs:label "Zone"@en .
-
- :Room  rdfs:subClassOf   :Location;
-			 rdfs:label "Room"@en .
-
- :Floor  rdfs:subClassOf   :Location;
-			 rdfs:label "Floor"@en .
-
- :Building  rdfs:subClassOf   :Location;
-			 rdfs:label "Building"@en .
-
- :Space  rdfs:subClassOf   :Location;
-			 rdfs:label "Space"@en .
-
- :Wing  rdfs:subClassOf   :Location;
-			 rdfs:label "Wing"@en .
-
- :Outside  rdfs:subClassOf   :Location;
-			 rdfs:label "Outside"@en .
-
- :City  rdfs:subClassOf   :Location;
-			 rdfs:label "City"@en .
-
- :Liquid  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Liquid"@en .
-
- :Smoke  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Smoke"@en .
-
- :Domestic  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Domestic"@en .
-
- :Zenith  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Zenith"@en .
-
- :Azimuth  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Azimuth"@en .
-
- :Request  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Request"@en .
-
- :Indicator  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Indicator"@en .
-
- :Reset  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Reset"@en .
-
- :PID  rdfs:subClassOf   :Modifier;
-			 rdfs:label "PID"@en .
-
- :Control  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Control"@en .
-
- :High  rdfs:subClassOf   :Modifier;
-			 rdfs:label "High"@en .
-
- :Low  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Low"@en .
-
- :Disable  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Disable"@en .
-
- :Enable  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Enable"@en .
-
- :Mode  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Mode"@en .
-
- :Start  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Start"@en .
-
- :Stop  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Stop"@en .
-
- :Max  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Max"@en .
-
- :Min  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Min"@en .
-
- :System  rdfs:subClassOf   :Modifier;
-			 rdfs:label "System"@en .
-
- :Ready  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Ready"@en .
-
- :Emergency  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Emergency"@en .
-
- :Tolerance  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Tolerance"@en .
-
- :Delay  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Delay"@en .
-
- :Input  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Input"@en .
-
- :Output  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Output"@en .
-
- :Leak  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Leak"@en .
-
- :Standby  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Standby"@en .
-
- :Conditioning  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Conditioning"@en .
-
- :Overload  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Overload"@en .
-
- :Detected  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Detected"@en .
-
- :Communication  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Communication"@en .
-
- :Loss  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Loss"@en .
-
- :Suction  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Suction"@en .
-
- :Relative  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Relative"@en .
-
- :Estimation  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Estimation"@en .
-
- :Capacity  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Capacity"@en .
-
- :No  rdfs:subClassOf   :Modifier;
-			 rdfs:label "No"@en .
-
- :Wind  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Wind"@en .
-
- :Auto  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Auto"@en .
-
- :Storage  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Storage"@en .
-
- :Activated  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Activated"@en .
-
- :Hood  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Hood"@en .
-
- :Yearly  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Yearly"@en .
-
- :Off  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Off"@en .
-
- :Generator  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Generator"@en .
-
- :Cold  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Cold"@en .
-
- :Underfloor  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Underfloor"@en .
-
- :Supply  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Supply"@en .
-
- :Change  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Change"@en .
-
- :Stage  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Stage"@en .
-
- :Face  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Face"@en .
-
- :Radiance  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Radiance"@en .
-
- :Short  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Short"@en .
-
- :Deionised  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Deionised"@en .
-
- :When  rdfs:subClassOf   :Modifier;
-			 rdfs:label "When"@en .
-
- :Stack  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Stack"@en .
-
- :Failed  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Failed"@en .
-
- :From  rdfs:subClassOf   :Modifier;
-			 rdfs:label "From"@en .
-
- :Push  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Push"@en .
-
- :Hold  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Hold"@en .
-
- :Increase  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Increase"@en .
-
- :Locally  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Locally"@en .
-
- :Demand  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Demand"@en .
-
- :Humidify  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Humidify"@en .
-
- :DualBand  rdfs:subClassOf   :Modifier;
-			 rdfs:label "DualBand"@en .
-
- :Dewpoint  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Dewpoint"@en .
-
- :Average  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Average"@en .
-
- :Thermal  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Thermal"@en .
-
- :Tower  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Tower"@en .
-
- :Temporary  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Temporary"@en .
-
- :Lead  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Lead"@en .
-
- :Stages  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Stages"@en .
-
- :Effective  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Effective"@en .
-
- :Fire  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Fire"@en .
-
- :Turned  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Turned"@en .
-
- :Velocity  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Velocity"@en .
-
- :Meter  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Meter"@en .
-
- :Grains  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Grains"@en .
-
- :Shutdown  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Shutdown"@en .
-
- :Integration  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Integration"@en .
-
- :Freezer  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Freezer"@en .
-
- :Lag  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Lag"@en .
-
- :Percent  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Percent"@en .
-
- :Fans  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Fans"@en .
-
- :Highest  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Highest"@en .
-
- :Conductivity  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Conductivity"@en .
-
- :Sash  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Sash"@en .
-
- :Piezoelectric  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Piezoelectric"@en .
-
- :EconCycle  rdfs:subClassOf   :Modifier;
-			 rdfs:label "EconCycle"@en .
-
- :Handler  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Handler"@en .
-
- :Lowest  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Lowest"@en .
-
- :Cycle  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Cycle"@en .
-
- :Overridden  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Overridden"@en .
-
- :Level  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Level"@en .
-
- :Turn  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Turn"@en .
-
- :Last  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Last"@en .
-
- :Month  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Month"@en .
-
- :Proportional  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Proportional"@en .
-
- :Shed  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Shed"@en .
-
- :Monthly  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Monthly"@en .
-
- :Digital  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Digital"@en .
-
- :Decrease  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Decrease"@en .
-
- :Cooling  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Cooling"@en .
-
- :Integral  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Integral"@en .
-
- :Short  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Short"@en .
-
- :Step  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Step"@en .
-
- :Pre  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Pre"@en .
-
- :Even  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Even"@en .
-
- :Detection  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Detection"@en .
-
- :Peak  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Peak"@en .
-
- :To  rdfs:subClassOf   :Modifier;
-			 rdfs:label "To"@en .
-
- :Fume  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Fume"@en .
-
- :Usage  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Usage"@en .
-
- :Date  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Date"@en .
-
- :Today  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Today"@en .
-
- :Preheat  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Preheat"@en .
-
- :Alarm  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Alarm"@en .
-
- :Code  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Code"@en .
-
- :Cycle  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Cycle"@en .
-
- :Button  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Button"@en .
-
- :Analog  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Analog"@en .
-
- :Open  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Open"@en .
-
- :Wheel  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Wheel"@en .
-
- :On  rdfs:subClassOf   :Modifier;
-			 rdfs:label "On"@en .
-
- :Perimeter  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Perimeter"@en .
-
- :Remotely  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Remotely"@en .
-
- :Schedule  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Schedule"@en .
-
- :By  rdfs:subClassOf   :Modifier;
-			 rdfs:label "By"@en .
-
- :Environment  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Environment"@en .
-
- :Enthalpy  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Enthalpy"@en .
-
- :Glycool  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Glycool"@en .
-
- :Current  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Current"@en .
-
- :Time  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Time"@en .
-
- :Voltage  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Voltage"@en .
-
- :Power  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Power"@en .
-
- :Current  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Current"@en .
-
- :Energy  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Energy"@en .
-
- :DC  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "DC"@en .
-
- :Temperature  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Temperature"@en .
-
- :Flow  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Flow"@en .
-
- :Pressure  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Pressure"@en .
-
- :Humidity  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Humidity"@en .
-
- :Enthalpy  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Enthalpy"@en .
-
- :Angle  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Angle"@en .
-
- :Fault  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Fault"@en .
-
- :Switch  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Switch"@en .
-
- :Status  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Status"@en .
-
- :Alarm  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Alarm"@en .
-
- :CO2  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "CO2"@en .
-
- :Occupancy  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Occupancy"@en .
-
- :Occupied  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Occupied"@en .
-
- :Unoccupied  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Unoccupied"@en .
-
- :Frequency  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Frequency"@en .
-
- :Luminance  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Luminance"@en .
-
- :Fahrenheit  rdfs:subClassOf   :Unit;
-			 rdfs:label "Fahrenheit"@en .
-
- :CFM  rdfs:subClassOf   :Unit;
-			 rdfs:label "CFM"@en .
-
- :Setpoint  rdfs:subClassOf   :Point;
-			 rdfs:label "Setpoint"@en .
-
- :Sensor  rdfs:subClassOf   :Point;
-			 rdfs:label "Sensor"@en .
-
- :Status  rdfs:subClassOf   :Point;
-			 rdfs:label "Status"@en .
-
- :Command  rdfs:subClassOf   :Point;
-			 rdfs:label "Command"@en .
-
- :Alarm  rdfs:subClassOf   :Point;
-			 rdfs:label "Alarm"@en .
-
- :Meter  rdfs:subClassOf   :Point;
-			 rdfs:label "Meter"@en .
-
- :Unit  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Unit"@en .
-
- :Grains  rdfs:subClassOf   :Modifier;
-			 rdfs:label "Grains"@en .
-
- :Photovoltaic  rdfs:subClassOf   :Grains;
-			 rdfs:label "Photovoltaic"@en .
-
- :Terminal  rdfs:subClassOf   :HVAC;
-			 rdfs:label "Terminal"@en .
-
- :Laboratory  rdfs:subClassOf   :Location;
-			 rdfs:label "Laboratory"@en .
-
- :Adjust  rdfs:subClassOf   :VAV;
-			 rdfs:label "Adjust"@en .
-
- :Rain  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Rain"@en .
-
- :Hail  rdfs:subClassOf   :PhysicalProperties;
-			 rdfs:label "Hail"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://buildsys.org/ontologies/BrickTag#AHU
+
+:AHU a owl:Class ;
+	rdfs:subClassOf :HVAC .
+
+:HVAC a owl:Class .
+
+:AHU bf:isHierarchical "" ;
+	rdfs:label "AHU"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Acceleration
+
+:Acceleration a owl:Class ;
+	rdfs:subClassOf :VFD .
+
+:VFD a owl:Class .
+
+:Acceleration rdfs:label "Acceleration"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Activated
+
+:Activated a owl:Class ;
+	rdfs:subClassOf :Modifier .
+
+:Modifier a owl:Class .
+
+:Activated rdfs:label "Activated"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Adjust
+
+:Adjust a owl:Class ;
+	rdfs:subClassOf :VAV .
+
+:VAV a owl:Class .
+
+:Adjust rdfs:label "Adjust"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Adjustment
+
+:Adjustment a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Adjustment"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Air
+
+:Air a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Air"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Alarm
+
+:Alarm a owl:Class ;
+	rdfs:subClassOf :Modifier , :PhysicalProperties .
+
+:PhysicalProperties a owl:Class .
+
+:Alarm rdfs:subClassOf :Point .
+
+:Point a owl:Class .
+
+:Alarm rdfs:label "Alarm"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Analog
+
+:Analog a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Analog"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Angle
+
+:Angle a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Angle"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Auto
+
+:Auto a owl:Class ;
+	rdfs:subClassOf :Modifier , :VFD ;
+	rdfs:label "Auto"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Average
+
+:Average a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Average"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Azimuth
+
+:Azimuth a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Azimuth"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Band
+
+:Band a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Band"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Battery
+
+:Battery a owl:Class ;
+	rdfs:subClassOf :Power .
+
+:Power a owl:Class .
+
+:Battery rdfs:label "Battery"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Booster
+
+:Booster a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Booster"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Box
+
+:Box a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Box"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Building
+
+:Building a owl:Class ;
+	rdfs:subClassOf :Location .
+
+:Location a owl:Class .
+
+:Building rdfs:label "Building"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Bus
+
+:Bus a owl:Class ;
+	rdfs:subClassOf :Power ;
+	rdfs:label "Bus"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Button
+
+:Button a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Button"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#By
+
+:By a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "By"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Bypass
+
+:Bypass a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Bypass"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#CFM
+
+:CFM a owl:Class ;
+	rdfs:subClassOf :Unit .
+
+:Unit a owl:Class .
+
+:CFM rdfs:label "CFM"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#CO2
+
+:CO2 a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "CO2"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#CRAC
+
+:CRAC a owl:Class ;
+	rdfs:subClassOf :HVAC ;
+	rdfs:label "CRAC"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Capacity
+
+:Capacity a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Capacity"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Change
+
+:Change a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Change"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Chilled
+
+:Chilled a owl:Class ;
+	rdfs:subClassOf :AHU , :Water .
+
+:Water a owl:Class .
+
+:Chilled rdfs:label "Chilled"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#City
+
+:City a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "City"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Code
+
+:Code a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Code"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Coil
+
+:Coil a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Coil"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Cold
+
+:Cold a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Cold"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Command
+
+:Command a owl:Class ;
+	rdfs:subClassOf :Point ;
+	rdfs:label "Command"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Communication
+
+:Communication a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Communication"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Compressor
+
+:Compressor a owl:Class ;
+	rdfs:subClassOf :HVAC ;
+	rdfs:label "Compressor"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Computer
+
+:Computer a owl:Class ;
+	rdfs:subClassOf :Misc .
+
+:Misc a owl:Class .
+
+:Computer rdfs:label "Computer"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Condensate
+
+:Condensate a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Condensate"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Conditioning
+
+:Conditioning a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Conditioning"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Conductivity
+
+:Conductivity a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Conductivity"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Control
+
+:Control a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Control"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Cooling
+
+:Cooling a owl:Class ;
+	rdfs:subClassOf :AHU , :Modifier ;
+	rdfs:label "Cooling"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Current
+
+:Current a owl:Class ;
+	rdfs:subClassOf :Modifier , :PhysicalProperties ;
+	rdfs:label "Current"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Cycle
+
+:Cycle a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Cycle"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#DC
+
+:DC a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "DC"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Damper
+
+:Damper a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Damper"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Date
+
+:Date a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Date"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Dead
+
+:Dead a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Dead"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Deceleration
+
+:Deceleration a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Deceleration"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Decrease
+
+:Decrease a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Decrease"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Dehumidification
+
+:Dehumidification a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Dehumidification"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Deionised
+
+:Deionised a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Deionised"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Delay
+
+:Delay a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Delay"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Demand
+
+:Demand a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Demand"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Detected
+
+:Detected a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Detected"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Detection
+
+:Detection a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Detection"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Dewpoint
+
+:Dewpoint a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Dewpoint"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Differential
+
+:Differential a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Differential"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Digital
+
+:Digital a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Digital"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Direction
+
+:Direction a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Direction"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Disable
+
+:Disable a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Disable"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Discharge
+
+:Discharge a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Discharge"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Domestic
+
+:Domestic a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Domestic"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Drive
+
+:Drive a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Drive"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#DualBand
+
+:DualBand a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "DualBand"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#EconCycle
+
+:EconCycle a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "EconCycle"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Economizer
+
+:Economizer a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Economizer"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Effective
+
+:Effective a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Effective"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Emergency
+
+:Emergency a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Emergency"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Enable
+
+:Enable a owl:Class ;
+	rdfs:subClassOf :Modifier , :VFD ;
+	rdfs:label "Enable"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Energy
+
+:Energy a owl:Class ;
+	rdfs:subClassOf :Equipment .
+
+:Equipment a owl:Class .
+
+:Energy rdfs:subClassOf :PhysicalProperties ;
+	bf:isHierarchical "" ;
+	rdfs:label "Energy"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Enthalpy
+
+:Enthalpy a owl:Class ;
+	rdfs:subClassOf :Modifier , :PhysicalProperties ;
+	rdfs:label "Enthalpy"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Environment
+
+:Environment a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Environment"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Equipment
+
+:Equipment rdfs:subClassOf bf:Tag ;
+	bf:isHierarchical "" ;
+	rdfs:label "Equipment"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Estimation
+
+:Estimation a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Estimation"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Even
+
+:Even a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Even"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Exchanger
+
+:Exchanger a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Exchanger"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Exhaust
+
+:Exhaust a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Exhaust"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Face
+
+:Face a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Face"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Fahrenheit
+
+:Fahrenheit a owl:Class ;
+	rdfs:subClassOf :Unit ;
+	rdfs:label "Fahrenheit"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Failed
+
+:Failed a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Failed"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Fan
+
+:Fan a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Fan"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Fans
+
+:Fans a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Fans"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Fault
+
+:Fault a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Fault"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Filter
+
+:Filter a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Filter"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Fire
+
+:Fire a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Fire"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Floor
+
+:Floor a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "Floor"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Flow
+
+:Flow a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Flow"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Freeze
+
+:Freeze a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Freeze"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Freezer
+
+:Freezer a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Freezer"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Frequency
+
+:Frequency a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Frequency"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#From
+
+:From a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "From"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Fume
+
+:Fume a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Fume"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Generator
+
+:Generator a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Generator"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Glycool
+
+:Glycool a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Glycool"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Grains
+
+:Grains a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Grains"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#HVAC
+
+:HVAC rdfs:subClassOf :Equipment ;
+	bf:isHierarchical "" ;
+	rdfs:label "HVAC"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Hail
+
+:Hail a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Hail"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Handler
+
+:Handler a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Handler"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Head
+
+:Head a owl:Class ;
+	rdfs:subClassOf :Misc ;
+	rdfs:label "Head"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Heat
+
+:Heat a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Heat"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Heater
+
+:Heater a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Heater"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Heating
+
+:Heating a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Heating"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#High
+
+:High a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "High"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Highest
+
+:Highest a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Highest"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Hold
+
+:Hold a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Hold"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Hood
+
+:Hood a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Hood"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Hot
+
+:Hot a owl:Class ;
+	rdfs:subClassOf :AHU , :Water ;
+	rdfs:label "Hot"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Humidification
+
+:Humidification a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Humidification"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Humidifier
+
+:Humidifier a owl:Class ;
+	rdfs:subClassOf :Misc ;
+	rdfs:label "Humidifier"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Humidify
+
+:Humidify a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Humidify"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Humidity
+
+:Humidity a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Humidity"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Increase
+
+:Increase a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Increase"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Indicator
+
+:Indicator a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Indicator"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Input
+
+:Input a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Input"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Integral
+
+:Integral a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Integral"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Integration
+
+:Integration a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Integration"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#LED
+
+:LED a owl:Class ;
+	rdfs:subClassOf :Lighting .
+
+:Lighting a owl:Class .
+
+:LED rdfs:label "LED"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Laboratory
+
+:Laboratory a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "Laboratory"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Lag
+
+:Lag a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Lag"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Last
+
+:Last a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Last"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Lead
+
+:Lead a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Lead"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Leak
+
+:Leak a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Leak"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Level
+
+:Level a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Level"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Lighting
+
+:Lighting rdfs:subClassOf :Equipment ;
+	bf:isHierarchical "" ;
+	rdfs:label "Lighting"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Limit
+
+:Limit a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Limit"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Liquid
+
+:Liquid a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Liquid"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Load
+
+:Load a owl:Class ;
+	rdfs:subClassOf :Power ;
+	rdfs:label "Load"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Locally
+
+:Locally a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Locally"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Location
+
+:Location rdfs:subClassOf bf:Tag ;
+	bf:isHierarchical "" ;
+	rdfs:label "Location"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Lockout
+
+:Lockout a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Lockout"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Loss
+
+:Loss a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Loss"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Low
+
+:Low a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Low"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Lowest
+
+:Lowest a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Lowest"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Luminance
+
+:Luminance a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Luminance"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Maintenance
+
+:Maintenance a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Maintenance"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Manual
+
+:Manual a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Manual"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Max
+
+:Max a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Max"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#MeasurementProperty
+
+:MeasurementProperty a owl:Class ;
+	rdfs:subClassOf bf:Tag ;
+	bf:isHierarchical "" ;
+	rdfs:label "MeasurementProperty"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Medium
+
+:Medium a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Medium"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Meter
+
+:Meter a owl:Class ;
+	rdfs:subClassOf :Modifier , :Point ;
+	rdfs:label "Meter"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Min
+
+:Min a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Min"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Misc
+
+:Misc rdfs:subClassOf :HVAC ;
+	bf:isHierarchical "" ;
+	rdfs:label "Misc"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Mixed
+
+:Mixed a owl:Class ;
+	rdfs:subClassOf :AHU , :VAV ;
+	rdfs:label "Mixed"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Mode
+
+:Mode a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Mode"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Modifier
+
+:Modifier rdfs:subClassOf :MeasurementProperty ;
+	bf:isHierarchical "" ;
+	rdfs:label "Modifier"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Month
+
+:Month a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Month"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Monthly
+
+:Monthly a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Monthly"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Motor
+
+:Motor a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Motor"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#No
+
+:No a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "No"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Occupancy
+
+:Occupancy a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Occupancy"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Occupied
+
+:Occupied a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Occupied"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Off
+
+:Off a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Off"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#On
+
+:On a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "On"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Open
+
+:Open a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Open"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Output
+
+:Output a owl:Class ;
+	rdfs:subClassOf :Modifier , :VFD ;
+	rdfs:label "Output"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Outside
+
+:Outside a owl:Class ;
+	rdfs:subClassOf :AHU , :Location ;
+	rdfs:label "Outside"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Overload
+
+:Overload a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Overload"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Overridden
+
+:Overridden a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Overridden"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#PID
+
+:PID a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "PID"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#PV
+
+:PV a owl:Class ;
+	rdfs:subClassOf :Power ;
+	rdfs:label "PV"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Panel
+
+:Panel a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Panel"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Peak
+
+:Peak a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Peak"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Percent
+
+:Percent a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Percent"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Perimeter
+
+:Perimeter a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Perimeter"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Photovoltaic
+
+:Photovoltaic a owl:Class ;
+	rdfs:subClassOf :Grains ;
+	rdfs:label "Photovoltaic"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#PhysicalProperties
+
+:PhysicalProperties rdfs:subClassOf :MeasurementProperty ;
+	bf:isHierarchical "" ;
+	rdfs:label "PhysicalProperties"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Piezoelectric
+
+:Piezoelectric a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Piezoelectric"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Point
+
+:Point rdfs:subClassOf bf:Tag ;
+	bf:isHierarchical "" ;
+	rdfs:label "Point"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Position
+
+:Position a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Position"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Power
+
+:Power rdfs:subClassOf :Energy , :PhysicalProperties ;
+	bf:isHierarchical "" ;
+	rdfs:label "Power"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Pre
+
+:Pre a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Pre"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Preheat
+
+:Preheat a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Preheat"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Pressure
+
+:Pressure a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Pressure"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Proportional
+
+:Proportional a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Proportional"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Pump
+
+:Pump a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Pump"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Push
+
+:Push a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Push"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Radiance
+
+:Radiance a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Radiance"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Rain
+
+:Rain a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Rain"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Rated
+
+:Rated a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Rated"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Ready
+
+:Ready a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Ready"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Reference
+
+:Reference a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Reference"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Reheat
+
+:Reheat a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Reheat"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Relative
+
+:Relative a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Relative"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Remotely
+
+:Remotely a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Remotely"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Request
+
+:Request a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Request"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Required
+
+:Required a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Required"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Reset
+
+:Reset a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Reset"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Return
+
+:Return a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Return"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Room
+
+:Room a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "Room"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Run
+
+:Run a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Run"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Sash
+
+:Sash a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Sash"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Schedule
+
+:Schedule a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Schedule"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Sensor
+
+:Sensor a owl:Class ;
+	rdfs:subClassOf :Point ;
+	rdfs:label "Sensor"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Setpoint
+
+:Setpoint a owl:Class ;
+	rdfs:subClassOf :Point ;
+	rdfs:label "Setpoint"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Shed
+
+:Shed a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Shed"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Short
+
+:Short a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Short"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Shutdown
+
+:Shutdown a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Shutdown"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Smoke
+
+:Smoke a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Smoke"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Solar
+
+:Solar a owl:Class ;
+	rdfs:subClassOf :Power ;
+	rdfs:label "Solar"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#SolarPanel
+
+:SolarPanel a owl:Class ;
+	rdfs:subClassOf :Energy ;
+	bf:isHierarchical "" ;
+	rdfs:label "SolarPanel"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Space
+
+:Space a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "Space"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Speed
+
+:Speed a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Speed"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Stack
+
+:Stack a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Stack"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Stage
+
+:Stage a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Stage"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Stages
+
+:Stages a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Stages"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Standby
+
+:Standby a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Standby"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Start
+
+:Start a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Start"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Static
+
+:Static a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Static"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Status
+
+:Status a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties , :Point ;
+	rdfs:label "Status"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Steam
+
+:Steam a owl:Class ;
+	rdfs:subClassOf :AHU ;
+	rdfs:label "Steam"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Step
+
+:Step a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Step"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Stop
+
+:Stop a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Stop"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Storage
+
+:Storage a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Storage"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Stream
+
+:Stream a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Stream"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Suction
+
+:Suction a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Suction"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Supply
+
+:Supply a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Supply"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Switch
+
+:Switch a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Switch"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#System
+
+:System a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "System"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Temperature
+
+:Temperature a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Temperature"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Temporary
+
+:Temporary a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Temporary"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Terminal
+
+:Terminal a owl:Class ;
+	rdfs:subClassOf :HVAC ;
+	rdfs:label "Terminal"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Thermal
+
+:Thermal a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Thermal"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Thermostat
+
+:Thermostat a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Thermostat"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Time
+
+:Time a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Time"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#To
+
+:To a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "To"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Today
+
+:Today a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Today"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Tolerance
+
+:Tolerance a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Tolerance"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Torque
+
+:Torque a owl:Class ;
+	rdfs:subClassOf :VFD ;
+	rdfs:label "Torque"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Tower
+
+:Tower a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Tower"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Turn
+
+:Turn a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Turn"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Turned
+
+:Turned a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Turned"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Underfloor
+
+:Underfloor a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Underfloor"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Unit
+
+:Unit rdfs:subClassOf :MeasurementProperty , :Modifier ;
+	bf:isHierarchical "" ;
+	rdfs:label "Unit"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Unoccupied
+
+:Unoccupied a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Unoccupied"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Usage
+
+:Usage a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Usage"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#VAV
+
+:VAV rdfs:subClassOf :HVAC ;
+	bf:isHierarchical "" ;
+	rdfs:label "VAV"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#VFD
+
+:VFD rdfs:subClassOf :HVAC ;
+	bf:isHierarchical "" ;
+	rdfs:label "VFD"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Valve
+
+:Valve a owl:Class ;
+	rdfs:subClassOf :Water ;
+	rdfs:label "Valve"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Variable
+
+:Variable a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Variable"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Velocity
+
+:Velocity a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Velocity"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Voltage
+
+:Voltage a owl:Class ;
+	rdfs:subClassOf :PhysicalProperties ;
+	rdfs:label "Voltage"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Volume
+
+:Volume a owl:Class ;
+	rdfs:subClassOf :VAV ;
+	rdfs:label "Volume"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Water
+
+:Water rdfs:subClassOf :AHU , :HVAC , :Water ;
+	bf:isHierarchical "" ;
+	rdfs:label "Water"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Wheel
+
+:Wheel a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Wheel"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#When
+
+:When a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "When"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Wind
+
+:Wind a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Wind"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Wing
+
+:Wing a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "Wing"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Yearly
+
+:Yearly a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Yearly"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Zenith
+
+:Zenith a owl:Class ;
+	rdfs:subClassOf :Modifier ;
+	rdfs:label "Zenith"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Zone
+
+:Zone a owl:Class ;
+	rdfs:subClassOf :Location ;
+	rdfs:label "Zone"@en .
+# 
+# Generated by the OWL API (version 4.1.3.20151118-2017) https://github.com/owlcs/owlapi
