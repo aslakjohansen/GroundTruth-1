@@ -105,6 +105,12 @@
 	rdfs:subClassOf :Equipment_HVAC_VFD , :MeasurementProperty_Modifier ;
 	rdfs:label "Auto"@en .
 # 
+# http://buildsys.org/ontologies/BrickTag#Automatic
+
+:Automatic a owl:Class ;
+	rdfs:subClassOf :MeasurementProperty_Modifier ;
+	rdfs:label "Automatic"@en .
+# 
 # http://buildsys.org/ontologies/BrickTag#Average
 
 :Average a owl:Class ;
@@ -459,6 +465,12 @@
 	rdfs:subClassOf :MeasurementProperty_Modifier ;
 	rdfs:label "DualBand"@en .
 # 
+# http://buildsys.org/ontologies/BrickTag#Duration
+
+:Duration a owl:Class ;
+	rdfs:subClassOf :MeasurementProperty_Modifier ;
+	rdfs:label "Duration"@en .
+# 
 # http://buildsys.org/ontologies/BrickTag#EconCycle
 
 :EconCycle a owl:Class ;
@@ -601,6 +613,12 @@
 	rdfs:subClassOf :Equipment_HVAC_AHU ;
 	rdfs:label "Exhaust"@en .
 # 
+# http://buildsys.org/ontologies/BrickTag#FCU
+
+:FCU a owl:Class ;
+	rdfs:subClassOf :Equipment_HVAC ;
+	rdfs:label "FCU"@en .
+# 
 # http://buildsys.org/ontologies/BrickTag#Face
 
 :Face a owl:Class ;
@@ -684,6 +702,12 @@
 :From a owl:Class ;
 	rdfs:subClassOf :MeasurementProperty_Modifier ;
 	rdfs:label "From"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Frost
+
+:Frost a owl:Class ;
+	rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+	rdfs:label "Frost"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Fume
 
@@ -888,6 +912,12 @@
 :Level a owl:Class ;
 	rdfs:subClassOf :MeasurementProperty_Modifier ;
 	rdfs:label "Level"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Lighting
+
+:Lighting a owl:Class ;
+	rdfs:subClassOf :Equipment ;
+	rdfs:label "Lighting"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Limit
 
@@ -1519,6 +1549,12 @@
 :Tower a owl:Class ;
 	rdfs:subClassOf :MeasurementProperty_Modifier ;
 	rdfs:label "Tower"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Trace
+
+:Trace a owl:Class ;
+	rdfs:subClassOf :MeasurementProperty_Modifier ;
+	rdfs:label "Trace"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Turn
 

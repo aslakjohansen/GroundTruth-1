@@ -363,6 +363,28 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Automatic_Mode_Command
+
+:Automatic_Mode_Command rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Command_HVAC_AHU ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom tag:Automatic
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom tag:Command
+                                        ] ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :hasTag ;
+                                          owl:someValuesFrom tag:Mode
+                                        ] ;
+                        
+                        rdfs:label "Automatic Mode Command"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Average_Cooling_Demand_Sensor
 
 :Average_Cooling_Demand_Sensor rdf:type owl:Class ;
@@ -6924,6 +6946,24 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Frost_Sensor
+
+:Frost_Sensor rdf:type owl:Class ;
+              
+              rdfs:subClassOf :Point_Sensor_HVAC_AHU ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom tag:Frost
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :hasTag ;
+                                owl:someValuesFrom tag:Sensor
+                              ] ;
+              
+              rdfs:label "Frost Sensor"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Fume_Hood_Air_Flow_Sensor
 
 :Fume_Hood_Air_Flow_Sensor rdf:type owl:Class ;
@@ -8632,6 +8672,32 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Hot_Water_Flow_Meter
+
+:Hot_Water_Flow_Meter rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Point_Meter_HVAC_HotWaterSystem ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Flow
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Hot
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Meter
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Water
+                                      ] ;
+                      
+                      rdfs:label "Hot Water Flow Meter"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Hot_Water_Meter
 
 :Hot_Water_Meter rdf:type owl:Class ;
@@ -8991,32 +9057,6 @@
                                                  ] ;
                                  
                                  rdfs:label "Hot Water System Enable Command"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Hot_Water__Flow_Meter
-
-:Hot_Water__Flow_Meter rdf:type owl:Class ;
-                       
-                       rdfs:subClassOf :Point_Meter_HVAC_HotWaterSystem ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasTag ;
-                                         owl:someValuesFrom tag:Flow
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasTag ;
-                                         owl:someValuesFrom tag:Hot
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasTag ;
-                                         owl:someValuesFrom tag:Meter
-                                       ] ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :hasTag ;
-                                         owl:someValuesFrom tag:Water
-                                       ] ;
-                       
-                       rdfs:label "Hot Water  Flow Meter"@en .
 
 
 
@@ -9605,6 +9645,42 @@
                                                 ] ;
                                 
                                 rdfs:label "Lowest Zone Temperature Sensor"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Luminance_Alarm
+
+:Luminance_Alarm rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Point_Alarm_Lighting ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom tag:Alarm
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty :hasTag ;
+                                   owl:someValuesFrom tag:Luminance
+                                 ] ;
+                 
+                 rdfs:label "Luminance Alarm"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Luminance_Command
+
+:Luminance_Command rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Point_Command_Lighting ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom tag:Command
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom tag:Luminance
+                                   ] ;
+                   
+                   rdfs:label "Luminance Command"@en .
 
 
 
@@ -11040,8 +11116,7 @@
 
 :Motor_Start_Stop_Status rdf:type owl:Class ;
                          
-                         owl:equivalentClass :VFD_Start_Stop_Status ,
-                                             :_VFD_Run_Status ;
+                         owl:equivalentClass :VFD_Start_Stop_Status ;
                          
                          rdfs:subClassOf :Point_Status_HVAC_VFD ,
                                          [ rdf:type owl:Restriction ;
@@ -12321,7 +12396,7 @@
 
 :PV_System_Output rdf:type owl:Class ;
                   
-                  owl:equivalentClass :Photovoltaic_Current_Output ;
+                  owl:equivalentClass :_PV_Current_Output ;
                   
                   rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
                                   [ rdf:type owl:Restriction ;
@@ -12597,6 +12672,18 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_Lighting
+
+:Point_Alarm_Lighting rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Point_Alarm ;
+                      
+                      bf:isHierarchical "" ;
+                      
+                      rdfs:label "Lighting"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Point_Alarm_WaterSystem
 
 :Point_Alarm_WaterSystem rdf:type owl:Class ;
@@ -12786,6 +12873,18 @@
                         bf:isHierarchical "" ;
                         
                         rdfs:label "VFD"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Command_Lighting
+
+:Point_Command_Lighting rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Command ;
+                        
+                        bf:isHierarchical "" ;
+                        
+                        rdfs:label "Lighting"@en .
 
 
 
@@ -14033,6 +14132,28 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Rain_Duration_Sensor
+
+:Rain_Duration_Sensor rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Point_Sensor_Weather ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Duration
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Rain
+                                      ] ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :hasTag ;
+                                        owl:someValuesFrom tag:Sensor
+                                      ] ;
+                      
+                      rdfs:label "Rain Duration Sensor"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Rain_Sensor
 
 :Rain_Sensor rdf:type owl:Class ;
@@ -14725,6 +14846,36 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Return_Fan_Differential_Speed_Sensor
+
+:Return_Fan_Differential_Speed_Sensor rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :Point_Sensor_HVAC_AHU ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasTag ;
+                                                        owl:someValuesFrom tag:Differential
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasTag ;
+                                                        owl:someValuesFrom tag:Fan
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasTag ;
+                                                        owl:someValuesFrom tag:Return
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasTag ;
+                                                        owl:someValuesFrom tag:Sensor
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty :hasTag ;
+                                                        owl:someValuesFrom tag:Speed
+                                                      ] ;
+                                      
+                                      rdfs:label "Return Fan Differential Speed Sensor"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Return_Fan_Differential_Speed_Setpoint
 
 :Return_Fan_Differential_Speed_Setpoint rdf:type owl:Class ;
@@ -14864,6 +15015,32 @@
                                         ] ;
                         
                         rdfs:label "Return Fan VFD Command"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Return_Heat_Valve_Command
+
+:Return_Heat_Valve_Command rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Command_HVAC_AHU ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom tag:Command
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom tag:Heat
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom tag:Return
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty :hasTag ;
+                                             owl:someValuesFrom tag:Valve
+                                           ] ;
+                           
+                           rdfs:label "Return Heat Valve Command"@en .
 
 
 
@@ -16981,6 +17158,28 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#Trace_Heat_Sensor
+
+:Trace_Heat_Sensor rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Point_Sensor_HVAC_AHU ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom tag:Heat
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom tag:Sensor
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty :hasTag ;
+                                     owl:someValuesFrom tag:Trace
+                                   ] ;
+                   
+                   rdfs:label "Trace Heat Sensor"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Turn_Off_Status
 
 :Turn_Off_Status rdf:type owl:Class ;
@@ -17522,6 +17721,8 @@
 ###  http://buildsys.org/ontologies/Brick#VFD_Start_Stop_Status
 
 :VFD_Start_Stop_Status rdf:type owl:Class ;
+                       
+                       owl:equivalentClass :_VFD_Run_Status ;
                        
                        rdfs:subClassOf :Point_Status_HVAC_VFD ,
                                        [ rdf:type owl:Restriction ;
