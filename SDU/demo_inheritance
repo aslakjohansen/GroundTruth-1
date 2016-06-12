@@ -21,7 +21,6 @@ g.bind('ts'  , TS)
 result = g.parse('../BuildingSchema/BrickFrame.ttl', format='n3')
 result = g.parse('../BuildingSchema/BrickTag.ttl', format='n3')
 result = g.parse('../BuildingSchema/Brick.ttl', format='n3')
-print(len(g))
 
 MyNS = rdflib.Namespace('http://buildsys.org/ontologies/examples/CollingTower#')
 g.bind(':', MyNS)
