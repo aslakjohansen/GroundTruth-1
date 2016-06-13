@@ -20,14 +20,18 @@ result = g.parse('../BrickFrame.ttl', format='n3')
 result = g.parse('../BrickTag.ttl', format='n3')
 result = g.parse('../Brick.ttl', format='n3')
 
+# building
+BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
+g.bind('building', BUILDING)
+
 # actors
-entity_vav                = URIRef('/mybuilding/vav')
-entity_supply_damper      = URIRef('/mybuilding/supply_damper')
-entity_return_damper      = URIRef('/mybuilding/return_damper')
-entity_supply_pressure    = URIRef('/mybuilding/supply_pressure')
-entity_cooling_coil       = URIRef('/mybuilding/cooling_coil')
-entity_supply_temperature = URIRef('/mybuilding/supply_temperature')
-rooms = map(lambda name: URIRef('/mybuilding/rooms/'+name), ['room1', 'room2'])
+entity_vav                = BUILDING['/vav']
+entity_supply_damper      = BUILDING['/supply_damper']
+entity_return_damper      = BUILDING['/return_damper']
+entity_supply_pressure    = BUILDING['/supply_pressure']
+entity_cooling_coil       = BUILDING['/cooling_coil']
+entity_supply_temperature = BUILDING['/supply_temperature']
+rooms = map(lambda name: BUILDING['/rooms/'+name], ['room1', 'room2'])
 all_entities = [
     entity_vav,
     entity_supply_damper,
@@ -36,8 +40,8 @@ all_entities = [
     entity_cooling_coil,
     entity_supply_temperature,
 ]
-entity_supply_air = URIRef('/media/supply_air')
-entity_return_air = URIRef('/media/return_air')
+entity_supply_air = BUILDING['/media/supply_air']
+entity_return_air = BUILDING['/media/return_air']
 
 # types
 g.add( (entity_vav               , RDF.type, BRICK['VAV']) )
