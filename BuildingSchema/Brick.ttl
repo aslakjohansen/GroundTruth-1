@@ -109,9 +109,17 @@
 			 bf:isHierarchical  "";
 			 rdfs:label "Resource"@en .
 
- :DomesticHWS  rdfs:subClassOf   :Water_System;
+ :Air  rdfs:subClassOf   :Resource;
 			 bf:isHierarchical  "";
-			 rdfs:label "DomesticHWS"@en .
+			 rdfs:label "Air"@en .
+
+ :Water  rdfs:subClassOf   :Resource;
+			 bf:isHierarchical  "";
+			 rdfs:label "Water"@en .
+
+ :Hot_Water  rdfs:subClassOf   :Water;
+			 bf:isHierarchical  "";
+			 rdfs:label "Hot Water"@en .
 
  :FCP  rdfs:subClassOf   :Equipment;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:FCP . ];
@@ -4758,62 +4766,62 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status . ];
 			 rdfs:label "Pump Enable Status"@en .
 
- :Mixed_Air  rdfs:subClassOf   :AHU;
+ :Mixed_Air  rdfs:subClassOf   :Air;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mixed . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air . ];
 			 rdfs:label "Mixed Air"@en .
 
- :Outside_Air  rdfs:subClassOf   :AHU;
+ :Outside_Air  rdfs:subClassOf   :Air;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Outside . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air . ];
 			 rdfs:label "Outside Air"@en .
 
- :Return_Air  rdfs:subClassOf   :AHU;
+ :Return_Air  rdfs:subClassOf   :Air;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Return . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air . ];
 			 rdfs:label "Return Air"@en .
 
- :Chilled_Water  rdfs:subClassOf   :CWS;
+ :Chilled_Water  rdfs:subClassOf   :Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chilled . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 rdfs:label "Chilled Water"@en .
 
- :Hot_Water  rdfs:subClassOf   :HWS;
+ :Hot_Water  rdfs:subClassOf   :Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 rdfs:label "Hot Water"@en .
 
- :Medium_Temperature_Hot_Water  rdfs:subClassOf   :HWS;
+ :Medium_Temperature_Hot_Water  rdfs:subClassOf   :Hot_Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Medium . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 rdfs:label "Medium Temperature Hot Water"@en .
 
- :High_Temperature_Hot_Water  rdfs:subClassOf   :HWS;
+ :High_Temperature_Hot_Water  rdfs:subClassOf   :Hot_Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:High . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 rdfs:label "High Temperature Hot Water"@en .
 
- :Discharge_Air  rdfs:subClassOf   :VAV;
+ :Discharge_Air  rdfs:subClassOf   :Air;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Discharge . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air . ];
 			 rdfs:label "Discharge Air"@en .
 
- :DI_Water  rdfs:subClassOf   :Water_System;
+ :DI_Water  rdfs:subClassOf   :Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:DI . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 rdfs:label "Deionised Water"@en .
 
- :Deionised_Water  rdfs:subClassOf   :Water_System;
+ :Deionised_Water  rdfs:subClassOf   :Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Deionised . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
 			 owl:equivalentClass :DI_Water ;
 			 rdfs:label "Deionised Water"@en .
 
- :Domestic_Hot_Water  rdfs:subClassOf   :DomesticHWS;
+ :Domestic_Hot_Water  rdfs:subClassOf   :Hot_Water;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Domestic . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot . ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water . ];
