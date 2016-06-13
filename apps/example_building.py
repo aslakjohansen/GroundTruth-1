@@ -1,14 +1,15 @@
 # import the rdflib
 from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
+
 # declare the namespaces. This will pull in the definition of the schema
 # if it exists. Else, we need to parse some file to fill in the missing symbols
 # is not pulling anything in from the web, I don't think?
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK = Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG = Namespace('http://buildsys.org/ontologies/BrickTag#')
 
 # This is the graph object that contains all of the schemas. We use this
 # graph to pull out classes and relationships, but any *instances* of these
