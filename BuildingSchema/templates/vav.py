@@ -4,21 +4,13 @@ from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
 import json
 
-RDF   = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
-RDFS  = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BF    = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
-TAGS  = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
-BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+BRICK = Namespace(rdflib.term.URIRef('http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#'))
+RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 
-g = rdflib.Graph()
-g.bind('rdf' , RDF)
-g.bind('rdfs', RDFS)
-g.bind('bf'  , BF)
-g.bind('tag' , TAGS)
-g.bind('ts'  , BRICK)
-result = g.parse('../BrickFrame.ttl', format='n3')
-result = g.parse('../BrickTag.ttl', format='n3')
-result = g.parse('../Brick.ttl', format='n3')
+g = Graph()
+s = g.parse('../Brick.ttl', format='turtle', publicID='brick')
+g.bind('rdf', RDF)
+g.bind('brick', BRICK)
 
 # building
 BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
@@ -52,19 +44,17 @@ g.add( (entity_cooling_coil      , RDF.type, BRICK['Cooling_Coil']) )
 g.add( (entity_supply_temperature, RDF.type, BRICK['Temperature_Sensor']) )
 for room in rooms:
     g.add( (room, RDF.type, BRICK['Room']) )
-g.add( (entity_supply_air        , RDF.type, BRICK['Supply_Air']) )
-g.add( (entity_return_air        , RDF.type, BRICK['Return_Air']) )
 
 # isPartOf relationships
 for entity in filter(lambda entity: entity!=entity_vav, all_entities):
     g.add( (entity, BRICK['isPartOf'], entity_vav) )
 
 # media
-g.add( (entity_supply_damper     , BRICK['hasTagSet'], entity_supply_air) )
-g.add( (entity_return_damper     , BRICK['hasTagSet'], entity_return_air) )
-g.add( (entity_supply_pressure   , BRICK['hasTagSet'], entity_supply_air) )
-g.add( (entity_cooling_coil      , BRICK['hasTagSet'], entity_supply_air) )
-g.add( (entity_supply_temperature, BRICK['hasTagSet'], entity_supply_air) )
+g.add( (entity_supply_damper     , BRICK['hasTagSet'], BRICK['Supply_Air']) )
+g.add( (entity_return_damper     , BRICK['hasTagSet'], BRICK['Return_Air']) )
+g.add( (entity_supply_pressure   , BRICK['hasTagSet'], BRICK['Supply_Air']) )
+g.add( (entity_cooling_coil      , BRICK['hasTagSet'], BRICK['Supply_Air']) )
+g.add( (entity_supply_temperature, BRICK['hasTagSet'], BRICK['Supply_Air']) )
 
 # feeds relationships (note: no AHU has been connected yet)
 g.add( (entity_supply_damper  , BRICK['feeds'], entity_supply_pressure) )

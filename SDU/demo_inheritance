@@ -3,95 +3,75 @@
 from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
 
-RDF  = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+#BS = Namespace('http://www.semanticweb.org/jbkoh/ontologies/2016/4/BuildingSchema#')
+#BS = Namespace('../BuildingSchema/BuildingSchema.ttl')
+#BS = Namespace('../BuildingSchema/Brick.owl')
+BS = Namespace(rdflib.term.URIRef('http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#'))
+RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BF   = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
-TAGS = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
-TS   = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
 
 ################################################################################
 ##################################################################### setup ####
 
-g = rdflib.Graph()
-g.bind('rdf' , RDF)
+g = Graph()
+s = g.parse('../BuildingSchema/Brick.owl', format='turtle', publicID='brick')
+g.bind('rdf', RDF)
 g.bind('rdfs', RDFS)
-g.bind('bf'  , BF)
-g.bind('tag' , TAGS)
-g.bind('ts'  , TS)
-result = g.parse('../BuildingSchema/BrickFrame.ttl', format='n3')
-result = g.parse('../BuildingSchema/BrickTag.ttl', format='n3')
-result = g.parse('../BuildingSchema/Brick.ttl', format='n3')
-
-MyNS = rdflib.Namespace('http://buildsys.org/ontologies/examples/CollingTower#')
-g.bind(':', MyNS)
+g.bind('bs', BS)
 
 cooling_tower = URIRef('ct')
-g.add( (cooling_tower, RDF.type, TS['Cooling_Tower']) )
+g.add( (cooling_tower, RDF.type, BS['Cooling_Tower']) )
 
 water_pump = URIRef('wp')
-g.add( (water_pump, RDF.type, TS['Chilled_Water_Pump']) )
+g.add( (water_pump, RDF.type, BS['Water_Pump']) )
 
-g.add( (cooling_tower, BF.feeds, water_pump) )
+g.add( (cooling_tower, BS.feeds, water_pump) )
 
-print('          [TagSet]')
-print('              ^')
-print('              |')
-print('      +-------+------+ inherits')
-print('      |              |')
-print('[Cooling_Tower] [Chilled_Water_Pump]')
-print('      |              |')
-print('      | instance     | instance')
-print('      |              |')
-print('    (ct) --feeds--> (wp)')
-print('')
-
-################################################################################
-############################################################### vague query ####
-
-r = g.query("""SELECT DISTINCT ?ct ?wp 
-    WHERE { 
-      ?ct bf:feeds ?wp .  
-    }""")
-
-print('Matches for [(?) feeds (?)]:')
-for pair in r:
-    print('  %s -> %s' % pair)
-print('total: '+str(len(r)) )
-print('')
+print '          [TagSet]'
+print '              ^'
+print '              |'
+print '      +-------+------+ inherits'
+print '      |              |'
+print '[Cooling_Tower] [Water_Pump]'
+print '      |              |'
+print '      | instance     | instance'
+print '      |              |'
+print '    (ct) --feeds--> (wp)'
+print ''
 
 ################################################################################
 ############################################################## direct query ####
 
-r = g.query("""SELECT DISTINCT ?ct ?wp 
-    WHERE { 
-      ?ct a ts:Cooling_Tower .  
-      ?wp a ts:Chilled_Water_Pump .  
-      ?ct bf:feeds ?wp .  
-    }""")
+r = g.query(
+    """SELECT DISTINCT ?ct ?wp
+       WHERE {
+          ?ct a bs:Cooling_Tower .
+          ?wp a bs:Water_Pump .
+          ?ct bs:feeds ?wp .
+       }""")
 
-print('Matches for [Cooling_Tower feeds Water_Pump]:')
+print 'Matches for [Cooling_Tower feeds Water_Pump]:'
 for pair in r:
     print('  %s -> %s' % pair)
-print('total: '+str(len(r)) )
-print('')
+print 'total: '+str(len(r))
+print ''
 
 ################################################################################
 ########################################################### inherited query ####
 
-
 r = g.query(
     """SELECT DISTINCT ?ct ?wp
        WHERE {
-          ?ct a ts:Cooling_Tower .
-          ?wp a bf:TagSet .
-          ?ct bf:feeds ?wp .
+          ?ct a bs:Cooling_Tower .
+          ?wp a bs:TagSet .
+          ?ct bs:feeds ?wp .
        }""")
 
-print('Matches for [Cooling_Tower feeds TagSet]:')
+print 'Matches for [Cooling_Tower feeds TagSet]:'
 for pair in r:
     print('  %s -> %s' % pair)
-print('total: '+str(len(r)))
-print('')
+print 'total: '+str(len(r))
+print ''
 
 ################################################################################
 ################################################## unrolled inherited query ####
@@ -99,15 +79,15 @@ print('')
 r = g.query(
     """SELECT DISTINCT ?ct ?someclass ?wp
        WHERE {
-          ?ct bf:feeds ?wp .
-          ?ct a ts:Cooling_Tower .
+          ?ct a bs:Cooling_Tower .
           ?wp a ?someclass .
-          ?someclass rdfs:subClassOf* bf:TagSet .
+          ?ct bs:feeds ?wp .
+          ?someclass rdfs:subClassOf* bs:TagSet .
        }""")
 
-print('Matches for [Cooling_Tower feeds (?) rdfs:subClassOf* bs:TagSet]:')
+print 'Matches for [Cooling_Tower feeds (?) rdfs:subClassOf* bs:TagSet]:'
 for pair in r:
     print('  %s -> %s -> %s' % pair)
-print('total: '+str(len(r)) )
-print('')
+print 'total: '+str(len(r))
+print ''
 

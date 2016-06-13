@@ -187,7 +187,59 @@ g.add((EX.floor_2, BRICKFRAME.hasPoint, EX.floor_power_meter_2))
 # hasPoint is how we associate some sensor with what it measures?
 # TODO: Does the act of associating EX.floor_1 with EX.floor_power_meter_1 using the BRICKFRAME.hasPoint have any recursive qualities?
 
-# TODO: add AHU
+# In our example building, we don't know a whole lot about the HVAC system. We do 
+# know that we have an AHU, and that it has 3 VAVs per floor. 1 VAV serves 2 of the rooms.
+# The other 2 rooms are each served by 1 VAV
+
+# instantiate an AHU
+g.add((EX.ahu_1, RDF.type, BRICK.AHU))
+# associate the AHU with the building
+# TODO: is there another, better way of doing this?
+g.add((EX.building_1, BRICKFRAME.hasPart, EX.ahu_1))
+
+# instantiate our 6 VAVs
+g.add((EX.vav_1_1, RDF.type, BRICK.VAV))
+g.add((EX.vav_1_2, RDF.type, BRICK.VAV))
+g.add((EX.vav_1_3, RDF.type, BRICK.VAV))
+g.add((EX.vav_2_1, RDF.type, BRICK.VAV))
+g.add((EX.vav_2_2, RDF.type, BRICK.VAV))
+g.add((EX.vav_2_3, RDF.type, BRICK.VAV))
+
+# establish the VAVs as downstream of the AHU
+g.add((EX.ahu_1, BRICKFRAME.feeds, EX.vav_1_1))
+g.add((EX.ahu_1, BRICKFRAME.feeds, EX.vav_1_2))
+g.add((EX.ahu_1, BRICKFRAME.feeds, EX.vav_1_3))
+g.add((EX.ahu_1, BRICKFRAME.feeds, EX.vav_2_1))
+g.add((EX.ahu_1, BRICKFRAME.feeds, EX.vav_2_2))
+g.add((EX.ahu_1, BRICKFRAME.feeds, EX.vav_2_3))
+
+# instantiate 6 HVAC zones; one for each VAV
+g.add((EX.hvac_zone_1_1, RDF.type, BRICK.HVAC_Zone))
+g.add((EX.hvac_zone_1_2, RDF.type, BRICK.HVAC_Zone))
+g.add((EX.hvac_zone_1_3, RDF.type, BRICK.HVAC_Zone))
+g.add((EX.hvac_zone_2_1, RDF.type, BRICK.HVAC_Zone))
+g.add((EX.hvac_zone_2_2, RDF.type, BRICK.HVAC_Zone))
+g.add((EX.hvac_zone_2_3, RDF.type, BRICK.HVAC_Zone))
+
+# declare which rooms are in which HVAC Zone
+g.add((EX.hvac_zone_1_1, BRICKFRAME.hasPart, EX.room_1_1))
+g.add((EX.hvac_zone_1_1, BRICKFRAME.hasPart, EX.room_1_2))
+g.add((EX.hvac_zone_1_2, BRICKFRAME.hasPart, EX.room_1_3))
+g.add((EX.hvac_zone_1_3, BRICKFRAME.hasPart, EX.room_1_4))
+
+g.add((EX.hvac_zone_2_1, BRICKFRAME.hasPart, EX.room_1_1))
+g.add((EX.hvac_zone_2_1, BRICKFRAME.hasPart, EX.room_1_2))
+g.add((EX.hvac_zone_2_2, BRICKFRAME.hasPart, EX.room_1_3))
+g.add((EX.hvac_zone_2_3, BRICKFRAME.hasPart, EX.room_1_4))
+
+# declare that the VAVs feed the HVAC Zones
+g.add((EX.vav_1_1, BRICKFRAME.feeds, EX.hvac_zone_1_1))
+g.add((EX.vav_1_2, BRICKFRAME.feeds, EX.hvac_zone_1_2))
+g.add((EX.vav_1_3, BRICKFRAME.feeds, EX.hvac_zone_1_3))
+
+g.add((EX.vav_2_1, BRICKFRAME.feeds, EX.hvac_zone_1_1))
+g.add((EX.vav_2_2, BRICKFRAME.feeds, EX.hvac_zone_1_2))
+g.add((EX.vav_2_3, BRICKFRAME.feeds, EX.hvac_zone_1_3))
 
 # TODO: add Lighting
 
