@@ -33,14 +33,6 @@ g.add( (water_pump, RDF.type, TS['Chilled_Water_Pump']) )
 
 g.add( (cooling_tower, BF.feeds, water_pump) )
 
-cooling_tower = URIRef('ct')
-g.add( (cooling_tower, RDF.type, TS['Cooling_Tower']) )
-
-water_pump = URIRef('wp')
-g.add( (water_pump, RDF.type, TS['Chilled_Water_Pump']) )
-
-g.add( (cooling_tower, BF.feeds, water_pump) )
-
 print('          [TagSet]')
 print('              ^')
 print('              |')
