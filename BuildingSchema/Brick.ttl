@@ -46,6 +46,22 @@
 #################################################################
 
 
+###  http://buildsys.org/ontologies/Brick#AHU
+
+:AHU rdf:type owl:Class ;
+     
+     owl:equivalentClass :Air_Handler_Unit ;
+     
+     rdfs:subClassOf :Equipment_HVAC ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:AHU
+                     ] ;
+     
+     rdfs:label "Air Handler Unit"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#AHU_Auto_Cooling_Setpoint
 
 :AHU_Auto_Cooling_Setpoint rdf:type owl:Class ;
@@ -170,7 +186,7 @@
 
 :AHU_Off_Status_LED rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :Point_Status_HVAC_FireControlPanel_ExhaustSystem ,
+                    rdfs:subClassOf :Point_Status_HVAC_Fire_Control_Panel_Exhaust ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:AHU
@@ -196,7 +212,7 @@
 
 :AHU_On_Status_LED rdf:type owl:Class ;
                    
-                   rdfs:subClassOf :Point_Status_HVAC_FireControlPanel_ExhaustSystem ,
+                   rdfs:subClassOf :Point_Status_HVAC_Fire_Control_Panel_Exhaust ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasTag ;
                                      owl:someValuesFrom tag:AHU
@@ -345,7 +361,7 @@
 :Alarm_Delay_Setpoint rdf:type owl:Class ;
                       
                       rdfs:subClassOf :Point_Alarm_HVAC_CRAC ,
-                                      :Point_Alarm_WaterSystem ,
+                                      :Point_Alarm_Water ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasTag ;
                                         owl:someValuesFrom tag:Alarm
@@ -415,7 +431,7 @@
 
 :Average_Exhaust_Air_Static_Pressure_Sensor rdf:type owl:Class ;
                                             
-                                            rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                                            rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty :hasTag ;
                                                               owl:someValuesFrom tag:Air
@@ -505,7 +521,7 @@
 
 :Battery_Voltage rdf:type owl:Class ;
                  
-                 rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
+                 rdfs:subClassOf :MeasurementProperty_Energy_Solar ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasTag ;
                                    owl:someValuesFrom tag:Battery
@@ -523,7 +539,7 @@
 
 :Battery_Voltage_Sensor rdf:type owl:Class ;
                         
-                        rdfs:subClassOf :Point_Sensor_Energy_SolarPanel ,
+                        rdfs:subClassOf :Point_Sensor_Energy_Solar ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasTag ;
                                           owl:someValuesFrom tag:Battery
@@ -687,7 +703,7 @@
 
 :Building_Exhaust_Fans_Stage_Command rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                                     rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Building
@@ -841,6 +857,28 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#CO2_High_Alarm
+
+:CO2_High_Alarm rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Point_Alarm_HVAC_AHU ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom tag:Alarm
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom tag:CO2
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :hasTag ;
+                                  owl:someValuesFrom tag:High
+                                ] ;
+                
+                rdfs:label "CO2 High Alarm"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#CO2_Level_Sensor
 
 :CO2_Level_Sensor rdf:type owl:Class ;
@@ -880,6 +918,22 @@
                             ] ;
             
             rdfs:label "CO2 Sensor"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#CRAC
+
+:CRAC rdf:type owl:Class ;
+      
+      owl:equivalentClass :Computer_Room_Air_Conditioning ;
+      
+      rdfs:subClassOf :Equipment_HVAC ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTag ;
+                        owl:someValuesFrom tag:CRAC
+                      ] ;
+      
+      rdfs:label "Computer Room Air Conditioning"@en .
 
 
 
@@ -997,6 +1051,22 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#CWS
+
+:CWS rdf:type owl:Class ;
+     
+     owl:equivalentClass :Chilled_Water_System ;
+     
+     rdfs:subClassOf :Equipment_Water ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:CWS
+                     ] ;
+     
+     rdfs:label "Chilled Water System"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Change_Filter_Alarm
 
 :Change_Filter_Alarm rdf:type owl:Class ;
@@ -1023,7 +1093,7 @@
 
 :Chilled_Water rdf:type owl:Class ;
                
-               rdfs:subClassOf :Resource_HVAC_ChilledWaterSystem ,
+               rdfs:subClassOf :Resource_HVAC_CWS ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTag ;
                                  owl:someValuesFrom tag:Chilled
@@ -1041,7 +1111,7 @@
 
 :Chilled_Water_Bypass_Valve_Command rdf:type owl:Class ;
                                     
-                                    rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem ,
+                                    rdfs:subClassOf :Point_Command_HVAC_CWS ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :hasTag ;
                                                       owl:someValuesFrom tag:Bypass
@@ -1071,7 +1141,7 @@
 
 :Chilled_Water_Differential_Pressure rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                     rdfs:subClassOf :MeasurementProperty_Water ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Chilled
@@ -1097,7 +1167,7 @@
 
 :Chilled_Water_Differential_Pressure_Dead_Band_Setpoint rdf:type owl:Class ;
                                                         
-                                                        rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                        rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :hasTag ;
                                                                           owl:someValuesFrom tag:Band
@@ -1135,7 +1205,7 @@
 
 :Chilled_Water_Differential_Pressure_Increase_Decrease_Step_Setpoint rdf:type owl:Class ;
                                                                      
-                                                                     rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                                     rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty :hasTag ;
                                                                                        owl:someValuesFrom tag:Chilled
@@ -1177,7 +1247,7 @@
 
 :Chilled_Water_Differential_Pressure_Integral_Time_Setpoint rdf:type owl:Class ;
                                                             
-                                                            rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                            rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty :hasTag ;
                                                                               owl:someValuesFrom tag:Chilled
@@ -1217,7 +1287,7 @@
                                                      
                                                      owl:equivalentClass :Chilled_Water_Differential_Pressure_Load_Shed_Status ;
                                                      
-                                                     rdfs:subClassOf :Point_Status_Energy_DemandResponse ,
+                                                     rdfs:subClassOf :Point_Status_Energy_Demand_Response ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :hasTag ;
                                                                        owl:someValuesFrom tag:Chilled
@@ -1255,7 +1325,7 @@
 
 :Chilled_Water_Differential_Pressure_Load_Shed_Setpoint rdf:type owl:Class ;
                                                         
-                                                        rdfs:subClassOf :Point_Setpoint_Energy_DemandResponse ,
+                                                        rdfs:subClassOf :Point_Setpoint_Energy_Demand_Response ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :hasTag ;
                                                                           owl:someValuesFrom tag:Chilled
@@ -1293,7 +1363,7 @@
 
 :Chilled_Water_Differential_Pressure_Load_Shed_Status rdf:type owl:Class ;
                                                       
-                                                      rdfs:subClassOf :Point_Status_Energy_DemandResponse ,
+                                                      rdfs:subClassOf :Point_Status_Energy_Demand_Response ,
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty :hasTag ;
                                                                         owl:someValuesFrom tag:Chilled
@@ -1331,7 +1401,7 @@
 
 :Chilled_Water_Differential_Pressure_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                                 
-                                                                rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                                rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty :hasTag ;
                                                                                   owl:someValuesFrom tag:Band
@@ -1369,8 +1439,8 @@
 
 :Chilled_Water_Differential_Pressure_Sensor rdf:type owl:Class ;
                                             
-                                            rdfs:subClassOf :Point_Sensor_HVAC_ChilledWaterSystem ,
-                                                            :Point_Sensor_HVAC_ChilledWaterSystem_Pump ,
+                                            rdfs:subClassOf :Point_Sensor_HVAC_CWS ,
+                                                            :Point_Sensor_HVAC_CWS_Pump ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty :hasTag ;
                                                               owl:someValuesFrom tag:Chilled
@@ -1400,7 +1470,7 @@
 
 :Chilled_Water_Differential_Pressure_Setpoint rdf:type owl:Class ;
                                               
-                                              rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                              rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty :hasTag ;
                                                                 owl:someValuesFrom tag:Chilled
@@ -1432,7 +1502,7 @@
                                      
                                      owl:equivalentClass :Chilled_Water_Supply_Temperature ;
                                      
-                                     rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                     rdfs:subClassOf :MeasurementProperty_Water ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Chilled
@@ -1458,7 +1528,7 @@
 
 :Chilled_Water_Pressure_Setpoint rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                 rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Chilled
@@ -1484,7 +1554,7 @@
 
 :Chilled_Water_Pump rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :Equipment_HVAC_ChilledWaterSystem ,
+                    rdfs:subClassOf :Equipment_HVAC_CWS ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Chilled
@@ -1506,7 +1576,7 @@
 
 :Chilled_Water_Pump_Alarm_Delay_Setpoint rdf:type owl:Class ;
                                          
-                                         rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                         rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasTag ;
                                                            owl:someValuesFrom tag:Alarm
@@ -1540,7 +1610,7 @@
 
 :Chilled_Water_Pump_Command rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem ,
+                            rdfs:subClassOf :Point_Command_HVAC_CWS ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Chilled
@@ -1566,7 +1636,7 @@
 
 :Chilled_Water_Pump_Differential_Pressure_Dead_Band_Setpoint rdf:type owl:Class ;
                                                              
-                                                             rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                             rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                              [ rdf:type owl:Restriction ;
                                                                                owl:onProperty :hasTag ;
                                                                                owl:someValuesFrom tag:Band
@@ -1608,7 +1678,7 @@
 
 :Chilled_Water_Pump_Differential_Pressure_Integration_Time_Setpoint rdf:type owl:Class ;
                                                                     
-                                                                    rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                                    rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty :hasTag ;
                                                                                       owl:someValuesFrom tag:Chilled
@@ -1650,7 +1720,7 @@
 
 :Chilled_Water_Pump_Differential_Pressure_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                                      
-                                                                     rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                                     rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty :hasTag ;
                                                                                        owl:someValuesFrom tag:Band
@@ -1692,7 +1762,7 @@
 
 :Chilled_Water_Pump_Enable_Status rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :Point_Status_HVAC_ChilledWaterSystem_Pump ,
+                                  rdfs:subClassOf :Point_Status_HVAC_CWS_Pump ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Chilled
@@ -1722,7 +1792,7 @@
 
 :Chilled_Water_Pump_Lead_Lag_Command rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem_Pump ,
+                                     rdfs:subClassOf :Point_Command_HVAC_CWS_Pump ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Chilled
@@ -1756,7 +1826,7 @@
 
 :Chilled_Water_Pump_Lead_Lag_Status rdf:type owl:Class ;
                                     
-                                    rdfs:subClassOf :Point_Status_HVAC_ChilledWaterSystem_Pump ,
+                                    rdfs:subClassOf :Point_Status_HVAC_CWS_Pump ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :hasTag ;
                                                       owl:someValuesFrom tag:Chilled
@@ -1790,7 +1860,7 @@
 
 :Chilled_Water_Pump_Start_Stop_Command rdf:type owl:Class ;
                                        
-                                       rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem_Pump ,
+                                       rdfs:subClassOf :Point_Command_HVAC_CWS_Pump ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty :hasTag ;
                                                          owl:someValuesFrom tag:Chilled
@@ -1826,7 +1896,7 @@
                                       
                                       owl:equivalentClass :Chilled_Water_Pump_Status ;
                                       
-                                      rdfs:subClassOf :Point_Status_HVAC_ChilledWaterSystem_Pump ,
+                                      rdfs:subClassOf :Point_Status_HVAC_CWS_Pump ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasTag ;
                                                         owl:someValuesFrom tag:Chilled
@@ -1860,7 +1930,7 @@
 
 :Chilled_Water_Pump_Status rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Status_HVAC_ChilledWaterSystem_Pump ,
+                           rdfs:subClassOf :Point_Status_HVAC_CWS_Pump ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Chilled
@@ -1886,7 +1956,7 @@
 
 :Chilled_Water_Pump_VFD_Command rdf:type owl:Class ;
                                 
-                                rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem ,
+                                rdfs:subClassOf :Point_Command_HVAC_CWS ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty :hasTag ;
                                                   owl:someValuesFrom tag:Chilled
@@ -1916,7 +1986,7 @@
 
 :Chilled_Water_Return_Temperature rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                  rdfs:subClassOf :MeasurementProperty_Water ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Chilled
@@ -1942,7 +2012,7 @@
 
 :Chilled_Water_Return_Temperature_Sensor rdf:type owl:Class ;
                                          
-                                         rdfs:subClassOf :Point_Sensor_HVAC_ChilledWaterSystem ,
+                                         rdfs:subClassOf :Point_Sensor_HVAC_CWS ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasTag ;
                                                            owl:someValuesFrom tag:Chilled
@@ -1972,7 +2042,7 @@
 
 :Chilled_Water_Supply_Flow rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                           rdfs:subClassOf :MeasurementProperty_Water ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Chilled
@@ -1998,7 +2068,7 @@
 
 :Chilled_Water_Supply_Flow_Sensor rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :Point_Sensor_HVAC_ChilledWaterSystem ,
+                                  rdfs:subClassOf :Point_Sensor_HVAC_CWS ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Chilled
@@ -2028,7 +2098,7 @@
 
 :Chilled_Water_Supply_Temperature rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                  rdfs:subClassOf :MeasurementProperty_Water ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Chilled
@@ -2054,7 +2124,7 @@
 
 :Chilled_Water_Supply_Temperature_Sensor rdf:type owl:Class ;
                                          
-                                         rdfs:subClassOf :Point_Sensor_HVAC_ChilledWaterSystem ,
+                                         rdfs:subClassOf :Point_Sensor_HVAC_CWS ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasTag ;
                                                            owl:someValuesFrom tag:Chilled
@@ -2084,7 +2154,7 @@
 
 :Chilled_Water_System rdf:type owl:Class ;
                       
-                      rdfs:subClassOf :Equipment_HVAC ,
+                      rdfs:subClassOf :Equipment_Water ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasTag ;
                                         owl:someValuesFrom tag:Chilled
@@ -2106,7 +2176,7 @@
 
 :Chilled_Water_System_Enable_Command rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem ,
+                                     rdfs:subClassOf :Point_Command_HVAC_CWS ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Chilled
@@ -2136,7 +2206,7 @@
 
 :Chilled_Water_Temperature_Differential_Pressure rdf:type owl:Class ;
                                                  
-                                                 rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                                 rdfs:subClassOf :MeasurementProperty_Water ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasTag ;
                                                                    owl:someValuesFrom tag:Chilled
@@ -2166,7 +2236,7 @@
 
 :Chilled_Water_Temperature_Differential_Sensor rdf:type owl:Class ;
                                                
-                                               rdfs:subClassOf :Point_Sensor_HVAC_ChilledWaterSystem ,
+                                               rdfs:subClassOf :Point_Sensor_HVAC_CWS ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasTag ;
                                                                  owl:someValuesFrom tag:Chilled
@@ -2405,7 +2475,7 @@
 
 :Cooling_Coil rdf:type owl:Class ;
               
-              rdfs:subClassOf :Equipment_HVAC_ChilledWaterSystem ,
+              rdfs:subClassOf :Equipment_HVAC_CWS ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :hasTag ;
                                 owl:someValuesFrom tag:Coil
@@ -2747,7 +2817,7 @@
 
 :Cooling_Tower rdf:type owl:Class ;
                
-               rdfs:subClassOf :Equipment_HVAC_ChilledWaterSystem ,
+               rdfs:subClassOf :Equipment_HVAC_CWS ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTag ;
                                  owl:someValuesFrom tag:Cooling
@@ -2765,7 +2835,7 @@
 
 :Cooling_Tower_Fan rdf:type owl:Class ;
                    
-                   rdfs:subClassOf :Equipment_HVAC_ChilledWaterSystem ,
+                   rdfs:subClassOf :Equipment_HVAC_CWS ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasTag ;
                                      owl:someValuesFrom tag:Cooling
@@ -2787,7 +2857,7 @@
 
 :Cooling_Tower_Fan_Speed_Setpoint rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :Point_Setpoint_WaterSystem ,
+                                  rdfs:subClassOf :Point_Setpoint_Water ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Cooling
@@ -2945,13 +3015,29 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#DHWS
+
+:DHWS rdf:type owl:Class ;
+      
+      owl:equivalentClass :Domestic_Hot_Water_System ;
+      
+      rdfs:subClassOf :Equipment_Water ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :hasTag ;
+                        owl:someValuesFrom tag:DHWS
+                      ] ;
+      
+      rdfs:label "Domestic Hot Water System"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#DI_Water
 
 :DI_Water rdf:type owl:Class ;
           
           owl:equivalentClass :Deionised_Water ;
           
-          rdfs:subClassOf :Resource_WaterSystem ,
+          rdfs:subClassOf :Resource_Water ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :hasTag ;
                             owl:someValuesFrom tag:DI
@@ -2971,7 +3057,7 @@
                 
                 owl:equivalentClass :Deionised_Water_Alarm ;
                 
-                rdfs:subClassOf :Point_Alarm_WaterSystem ,
+                rdfs:subClassOf :Point_Alarm_Water ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasTag ;
                                   owl:someValuesFrom tag:Alarm
@@ -2995,7 +3081,7 @@
                        
                        owl:equivalentClass :Deionised_Water_Level_Sensor ;
                        
-                       rdfs:subClassOf :Point_Sensor_WaterSystem ,
+                       rdfs:subClassOf :Point_Sensor_Water ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasTag ;
                                          owl:someValuesFrom tag:DI
@@ -3127,7 +3213,7 @@
 
 :Deionised_Water rdf:type owl:Class ;
                  
-                 rdfs:subClassOf :Resource_WaterSystem ,
+                 rdfs:subClassOf :Resource_Water ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasTag ;
                                    owl:someValuesFrom tag:Deionised
@@ -3145,7 +3231,7 @@
 
 :Deionised_Water_Alarm rdf:type owl:Class ;
                        
-                       rdfs:subClassOf :Point_Alarm_WaterSystem ,
+                       rdfs:subClassOf :Point_Alarm_Water ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasTag ;
                                          owl:someValuesFrom tag:Alarm
@@ -3167,7 +3253,7 @@
 
 :Deionised_Water_Conductivity rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                              rdfs:subClassOf :MeasurementProperty_Water ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Conductivity
@@ -3189,7 +3275,7 @@
 
 :Deionised_Water_Conductivity_Sensor rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Sensor_WaterSystem ,
+                                     rdfs:subClassOf :Point_Sensor_Water ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Conductivity
@@ -3215,7 +3301,7 @@
 
 :Deionised_Water_Level_Sensor rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :Point_Sensor_WaterSystem ,
+                              rdfs:subClassOf :Point_Sensor_Water ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Deionised
@@ -3241,7 +3327,7 @@
 
 :Disable_Hot_Water_System_Outside_Air_Temperature_Setpoint rdf:type owl:Class ;
                                                            
-                                                           rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                           rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                            [ rdf:type owl:Restriction ;
                                                                              owl:onProperty :hasTag ;
                                                                              owl:someValuesFrom tag:Air
@@ -4148,7 +4234,7 @@
 
 :Domestic_Hot_Water rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :Resource_WaterSystem_DomesticHotWaterSystem ,
+                    rdfs:subClassOf :Resource_Water_DHWS ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Domestic
@@ -4170,7 +4256,7 @@
 
 :Domestic_Hot_Water_Supply_Temperature rdf:type owl:Class ;
                                        
-                                       rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                       rdfs:subClassOf :MeasurementProperty_Water ,
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty :hasTag ;
                                                          owl:someValuesFrom tag:Domestic
@@ -4200,7 +4286,7 @@
 
 :Domestic_Hot_Water_Supply_Temperature_Sensor rdf:type owl:Class ;
                                               
-                                              rdfs:subClassOf :Point_Sensor_WaterSystem_DomesticHotWaterSystem ,
+                                              rdfs:subClassOf :Point_Sensor_Water_DHWS ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty :hasTag ;
                                                                 owl:someValuesFrom tag:Domestic
@@ -4234,7 +4320,7 @@
 
 :Domestic_Hot_Water_Supply_Temperature_Setpoint rdf:type owl:Class ;
                                                 
-                                                rdfs:subClassOf :Point_Setpoint_WaterSystem_DomesticHotWaterSystem ,
+                                                rdfs:subClassOf :Point_Setpoint_Water_DHWS ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :hasTag ;
                                                                   owl:someValuesFrom tag:Domestic
@@ -4268,7 +4354,7 @@
 
 :Domestic_Hot_Water_System rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Equipment_WaterSystem ,
+                           rdfs:subClassOf :Equipment_Water ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Domestic
@@ -4294,7 +4380,7 @@
 
 :Domestic_Hot_Water_System_Enable_Command rdf:type owl:Class ;
                                           
-                                          rdfs:subClassOf :Point_Command_WaterSystem_DomesticHotWaterSystem ,
+                                          rdfs:subClassOf :Point_Command_Water_DHWS ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasTag ;
                                                             owl:someValuesFrom tag:Command
@@ -4328,7 +4414,7 @@
 
 :Domestic_Hot_Water_System_Start_Stop_Command rdf:type owl:Class ;
                                               
-                                              rdfs:subClassOf :Point_Command_WaterSystem_DomesticHotWaterSystem ,
+                                              rdfs:subClassOf :Point_Command_Water_DHWS ,
                                                               [ rdf:type owl:Restriction ;
                                                                 owl:onProperty :hasTag ;
                                                                 owl:someValuesFrom tag:Command
@@ -4366,7 +4452,7 @@
 
 :Domestic_Hot_Water_Valve_Command rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :Point_Command_WaterSystem_DomesticHotWaterSystem ,
+                                  rdfs:subClassOf :Point_Command_Water_DHWS ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Command
@@ -4790,7 +4876,7 @@
 
 :Emergency_Air_Flow_Status rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Status_FumeHood ,
+                           rdfs:subClassOf :Point_Status_Fume_Hood ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Air
@@ -4816,7 +4902,7 @@
 
 :Emergency_Generator_Alarm rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Alarm_Energy_EmergencyGenerator ,
+                           rdfs:subClassOf :Point_Alarm_Energy_Generator ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Alarm
@@ -4838,7 +4924,7 @@
 
 :Emergency_Generator_Status rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Status_Energy_EmergencyGenerator ,
+                            rdfs:subClassOf :Point_Status_Energy_Generator ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Emergency
@@ -5122,7 +5208,7 @@
 
 :Emergency_Push_Button_Status rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :Point_Status_FumeHood ,
+                              rdfs:subClassOf :Point_Status_Fume_Hood ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Button
@@ -5166,7 +5252,7 @@
 
 :Enable_Hot_Water_System_Outside_Air_Temperature_Setpoint rdf:type owl:Class ;
                                                           
-                                                          rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                          rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                           [ rdf:type owl:Restriction ;
                                                                             owl:onProperty :hasTag ;
                                                                             owl:someValuesFrom tag:Air
@@ -5314,15 +5400,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Equipment_ExhaustSystem
+###  http://buildsys.org/ontologies/Brick#Equipment_Exhaust
 
-:Equipment_ExhaustSystem rdf:type owl:Class ;
-                         
-                         rdfs:subClassOf :Equipment ;
-                         
-                         bf:isHierarchical "" ;
-                         
-                         rdfs:label "ExhaustSystem"@en .
+:Equipment_Exhaust rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Equipment ;
+                   
+                   bf:isHierarchical "" ;
+                   
+                   rdfs:label "Exhaust"@en .
 
 
 
@@ -5362,39 +5448,39 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Equipment_HVAC_ChilledWaterSystem
+###  http://buildsys.org/ontologies/Brick#Equipment_HVAC_CWS
 
-:Equipment_HVAC_ChilledWaterSystem rdf:type owl:Class ;
-                                   
-                                   rdfs:subClassOf :Equipment_HVAC ;
-                                   
-                                   bf:isHierarchical "" ;
-                                   
-                                   rdfs:label "ChilledWaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Equipment_HVAC_HotWaterSystem
-
-:Equipment_HVAC_HotWaterSystem rdf:type owl:Class ;
-                               
-                               rdfs:subClassOf :Equipment_HVAC ;
-                               
-                               bf:isHierarchical "" ;
-                               
-                               rdfs:label "HotWaterSystem"@en .
+:Equipment_HVAC_CWS rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Equipment_HVAC ;
+                    
+                    bf:isHierarchical "" ;
+                    
+                    rdfs:label "CWS"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Equipment_HVAC_TerminalUnit
+###  http://buildsys.org/ontologies/Brick#Equipment_HVAC_HWS
 
-:Equipment_HVAC_TerminalUnit rdf:type owl:Class ;
-                             
-                             rdfs:subClassOf :Equipment_HVAC ;
-                             
-                             bf:isHierarchical "" ;
-                             
-                             rdfs:label "TerminalUnit"@en .
+:Equipment_HVAC_HWS rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Equipment_HVAC ;
+                    
+                    bf:isHierarchical "" ;
+                    
+                    rdfs:label "HWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Equipment_HVAC_Terminal_Unit
+
+:Equipment_HVAC_Terminal_Unit rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Equipment_HVAC ;
+                              
+                              bf:isHierarchical "" ;
+                              
+                              rdfs:label "Terminal Unit"@en .
 
 
 
@@ -5434,15 +5520,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Equipment_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Equipment_Water
 
-:Equipment_WaterSystem rdf:type owl:Class ;
-                       
-                       rdfs:subClassOf :Equipment ;
-                       
-                       bf:isHierarchical "" ;
-                       
-                       rdfs:label "WaterSystem"@en .
+:Equipment_Water rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :Equipment ;
+                 
+                 bf:isHierarchical "" ;
+                 
+                 rdfs:label "Water"@en .
 
 
 
@@ -5494,7 +5580,7 @@
 
 :Exhaust_Air_Flow rdf:type owl:Class ;
                   
-                  rdfs:subClassOf :MeasurementProperty_HVAC_ExhaustSystem ,
+                  rdfs:subClassOf :MeasurementProperty_HVAC_Exhaust ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasTag ;
                                     owl:someValuesFrom tag:Air
@@ -5516,7 +5602,7 @@
 
 :Exhaust_Air_Flow_Sensor rdf:type owl:Class ;
                          
-                         rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                         rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTag ;
                                            owl:someValuesFrom tag:Air
@@ -5542,7 +5628,7 @@
 
 :Exhaust_Air_Stack_Flow rdf:type owl:Class ;
                         
-                        rdfs:subClassOf :MeasurementProperty_HVAC_ExhaustSystem ,
+                        rdfs:subClassOf :MeasurementProperty_HVAC_Exhaust ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasTag ;
                                           owl:someValuesFrom tag:Air
@@ -5568,7 +5654,7 @@
 
 :Exhaust_Air_Stack_Flow_Dead_Band_Setpoint rdf:type owl:Class ;
                                            
-                                           rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                           rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hasTag ;
                                                              owl:someValuesFrom tag:Air
@@ -5606,7 +5692,7 @@
 
 :Exhaust_Air_Stack_Flow_Integral_Time_Setpoint rdf:type owl:Class ;
                                                
-                                               rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                               rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasTag ;
                                                                  owl:someValuesFrom tag:Air
@@ -5644,7 +5730,7 @@
 
 :Exhaust_Air_Stack_Flow_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                    
-                                                   rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                                   rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                                    [ rdf:type owl:Restriction ;
                                                                      owl:onProperty :hasTag ;
                                                                      owl:someValuesFrom tag:Air
@@ -5682,7 +5768,7 @@
 
 :Exhaust_Air_Stack_Flow_Sensor rdf:type owl:Class ;
                                
-                               rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                               rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty :hasTag ;
                                                  owl:someValuesFrom tag:Air
@@ -5712,7 +5798,7 @@
 
 :Exhaust_Air_Stack_Flow_Setpoint rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                 rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Air
@@ -5742,7 +5828,7 @@
 
 :Exhaust_Air_Static_Pressure_Dead_Band_Setpoint rdf:type owl:Class ;
                                                 
-                                                rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                                rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :hasTag ;
                                                                   owl:someValuesFrom tag:Air
@@ -5780,7 +5866,7 @@
 
 :Exhaust_Air_Static_Pressure_Integral_Time_Setpoint rdf:type owl:Class ;
                                                     
-                                                    rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                                    rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty :hasTag ;
                                                                       owl:someValuesFrom tag:Air
@@ -5818,7 +5904,7 @@
 
 :Exhaust_Air_Static_Pressure_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                         
-                                                        rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                                        rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :hasTag ;
                                                                           owl:someValuesFrom tag:Air
@@ -5856,7 +5942,7 @@
 
 :Exhaust_Air_Static_Pressure_Sensor rdf:type owl:Class ;
                                     
-                                    rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                                    rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :hasTag ;
                                                       owl:someValuesFrom tag:Air
@@ -5886,7 +5972,7 @@
 
 :Exhaust_Air_Static_Pressure_Setpoint rdf:type owl:Class ;
                                       
-                                      rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                                      rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasTag ;
                                                         owl:someValuesFrom tag:Air
@@ -5916,7 +6002,7 @@
 
 :Exhaust_Air_Temperature rdf:type owl:Class ;
                          
-                         rdfs:subClassOf :MeasurementProperty_HVAC_ExhaustSystem ,
+                         rdfs:subClassOf :MeasurementProperty_HVAC_Exhaust ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTag ;
                                            owl:someValuesFrom tag:Air
@@ -5938,7 +6024,7 @@
 
 :Exhaust_Air_Temperature_Sensor rdf:type owl:Class ;
                                 
-                                rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                                rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty :hasTag ;
                                                   owl:someValuesFrom tag:Air
@@ -5964,7 +6050,7 @@
 
 :Exhaust_Air_Velocity_Pressure rdf:type owl:Class ;
                                
-                               rdfs:subClassOf :MeasurementProperty_HVAC_ExhaustSystem ,
+                               rdfs:subClassOf :MeasurementProperty_HVAC_Exhaust ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty :hasTag ;
                                                  owl:someValuesFrom tag:Air
@@ -5990,7 +6076,7 @@
 
 :Exhaust_Air_Velocity_Pressure_Sensor rdf:type owl:Class ;
                                       
-                                      rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                                      rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                       [ rdf:type owl:Restriction ;
                                                         owl:onProperty :hasTag ;
                                                         owl:someValuesFrom tag:Air
@@ -6020,7 +6106,7 @@
 
 :Exhaust_Bypass_Damper_Command rdf:type owl:Class ;
                                
-                               rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                               rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty :hasTag ;
                                                  owl:someValuesFrom tag:Bypass
@@ -6046,7 +6132,7 @@
 
 :Exhaust_Fan rdf:type owl:Class ;
              
-             rdfs:subClassOf :Equipment_ExhaustSystem ,
+             rdfs:subClassOf :Equipment_Exhaust ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasTag ;
                                owl:someValuesFrom tag:Exhaust
@@ -6064,7 +6150,7 @@
 
 :Exhaust_Fan_Air_Flow_Setpoint rdf:type owl:Class ;
                                
-                               rdfs:subClassOf :Point_Setpoint_HVAC_ExhaustSystem ,
+                               rdfs:subClassOf :Point_Setpoint_HVAC_Exhaust ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty :hasTag ;
                                                  owl:someValuesFrom tag:Air
@@ -6096,7 +6182,7 @@
                      
                      owl:equivalentClass :Exhaust_Fan_Start_Stop_Command ;
                      
-                     rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                     rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasTag ;
                                        owl:someValuesFrom tag:Command
@@ -6118,7 +6204,7 @@
 
 :Exhaust_Fan_Disable_Status rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Status_HVAC_ExhaustSystem ,
+                            rdfs:subClassOf :Point_Status_HVAC_Exhaust ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Disable
@@ -6144,7 +6230,7 @@
 
 :Exhaust_Fan_Enable_Command rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                            rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Command
@@ -6170,7 +6256,7 @@
 
 :Exhaust_Fan_Fire_Control_Panel_Off_Command rdf:type owl:Class ;
                                             
-                                            rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                                            rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty :hasTag ;
                                                               owl:someValuesFrom tag:Command
@@ -6208,7 +6294,7 @@
 
 :Exhaust_Fan_Fire_Control_Panel_On_Command rdf:type owl:Class ;
                                            
-                                           rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                                           rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hasTag ;
                                                              owl:someValuesFrom tag:Command
@@ -6246,7 +6332,7 @@
 
 :Exhaust_Fan_Off_Status_LED rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Status_HVAC_FireControlPanel_ExhaustSystem ,
+                            rdfs:subClassOf :Point_Status_HVAC_Fire_Control_Panel_Exhaust ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Exhaust
@@ -6276,7 +6362,7 @@
 
 :Exhaust_Fan_On_Status_LED rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Status_HVAC_FireControlPanel_ExhaustSystem ,
+                           rdfs:subClassOf :Point_Status_HVAC_Fire_Control_Panel_Exhaust ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Exhaust
@@ -6306,7 +6392,7 @@
 
 :Exhaust_Fan_Overridden_Off_Status rdf:type owl:Class ;
                                    
-                                   rdfs:subClassOf :Point_Status_HVAC_ExhaustSystem ,
+                                   rdfs:subClassOf :Point_Status_HVAC_Exhaust ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasTag ;
                                                      owl:someValuesFrom tag:Exhaust
@@ -6336,7 +6422,7 @@
 
 :Exhaust_Fan_Overridden_On_Status rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :Point_Status_HVAC_ExhaustSystem ,
+                                  rdfs:subClassOf :Point_Status_HVAC_Exhaust ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Exhaust
@@ -6366,7 +6452,7 @@
 
 :Exhaust_Fan_Piezoelectric rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :MeasurementProperty_HVAC_ExhaustSystem ,
+                           rdfs:subClassOf :MeasurementProperty_HVAC_Exhaust ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Exhaust
@@ -6388,7 +6474,7 @@
 
 :Exhaust_Fan_Piezoelectric_Sensor rdf:type owl:Class ;
                                   
-                                  rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                                  rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                   [ rdf:type owl:Restriction ;
                                                     owl:onProperty :hasTag ;
                                                     owl:someValuesFrom tag:Exhaust
@@ -6414,7 +6500,7 @@
 
 :Exhaust_Fan_Start_Stop_Command rdf:type owl:Class ;
                                 
-                                rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                                rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty :hasTag ;
                                                   owl:someValuesFrom tag:Command
@@ -6446,7 +6532,7 @@
                                
                                owl:equivalentClass :Exhaust_Fan_Status ;
                                
-                               rdfs:subClassOf :Point_Status_HVAC_ExhaustSystem ,
+                               rdfs:subClassOf :Point_Status_HVAC_Exhaust ,
                                                [ rdf:type owl:Restriction ;
                                                  owl:onProperty :hasTag ;
                                                  owl:someValuesFrom tag:Exhaust
@@ -6476,7 +6562,7 @@
 
 :Exhaust_Fan_Status rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :Point_Status_HVAC_ExhaustSystem ,
+                    rdfs:subClassOf :Point_Status_HVAC_Exhaust ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Exhaust
@@ -6498,7 +6584,7 @@
 
 :Exhaust_Fan_System_Enable_Command rdf:type owl:Class ;
                                    
-                                   rdfs:subClassOf :Point_Command_HVAC_ExhaustSystem ,
+                                   rdfs:subClassOf :Point_Command_HVAC_Exhaust ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasTag ;
                                                      owl:someValuesFrom tag:Command
@@ -6521,6 +6607,38 @@
                                                    ] ;
                                    
                                    rdfs:label "Exhaust Fan System Enable Command"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#FCP
+
+:FCP rdf:type owl:Class ;
+     
+     owl:equivalentClass :Fire_Control_Panel ;
+     
+     rdfs:subClassOf :Equipment ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:FCP
+                     ] ;
+     
+     rdfs:label "Fire Control Panel"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#FCU
+
+:FCU rdf:type owl:Class ;
+     
+     owl:equivalentClass :Fan_Coil_Unit ;
+     
+     rdfs:subClassOf :Equipment_HVAC_Terminal_Unit ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:FCU
+                     ] ;
+     
+     rdfs:label "Fan Coil Unit"@en .
 
 
 
@@ -6576,7 +6694,7 @@
 
 :Fan_Coil_Unit rdf:type owl:Class ;
                
-               rdfs:subClassOf :Equipment_HVAC_TerminalUnit ,
+               rdfs:subClassOf :Equipment_HVAC_Terminal_Unit ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTag ;
                                  owl:someValuesFrom tag:Coil
@@ -6824,7 +6942,7 @@
 
 :Fire_Control_Panel rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :Equipment_HVAC ,
+                    rdfs:subClassOf :Equipment ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Control
@@ -6860,7 +6978,7 @@
 
 :Freeze_Status rdf:type owl:Class ;
                
-               rdfs:subClassOf :Point_Status_WaterSystem ,
+               rdfs:subClassOf :Point_Status_Water ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTag ;
                                  owl:someValuesFrom tag:Freeze
@@ -6968,7 +7086,7 @@
 
 :Fume_Hood_Air_Flow_Sensor rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Sensor_FumeHood ,
+                           rdfs:subClassOf :Point_Sensor_Fume_Hood ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Air
@@ -6998,7 +7116,7 @@
 
 :Fume_Hood_Alarm rdf:type owl:Class ;
                  
-                 rdfs:subClassOf :Point_Alarm_FumeHood ,
+                 rdfs:subClassOf :Point_Alarm_Fume_Hood ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasTag ;
                                    owl:someValuesFrom tag:Alarm
@@ -7020,7 +7138,7 @@
 
 :Fume_Hood_Sash_Position_Sensor rdf:type owl:Class ;
                                 
-                                rdfs:subClassOf :Point_Sensor_FumeHood ,
+                                rdfs:subClassOf :Point_Sensor_Fume_Hood ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty :hasTag ;
                                                   owl:someValuesFrom tag:Fume
@@ -7061,6 +7179,38 @@
                            ] ;
            
            rdfs:label "HVAC Zone"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#HWS
+
+:HWS rdf:type owl:Class ;
+     
+     owl:equivalentClass :Hot_Water_System ;
+     
+     rdfs:subClassOf :Equipment_Water ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:HWS
+                     ] ;
+     
+     rdfs:label "Hot Water System"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#HX
+
+:HX rdf:type owl:Class ;
+    
+    owl:equivalentClass :Heat_Exchanger ;
+    
+    rdfs:subClassOf :Equipment_HVAC ,
+                    [ rdf:type owl:Restriction ;
+                      owl:onProperty :hasTag ;
+                      owl:someValuesFrom tag:HX
+                    ] ;
+    
+    rdfs:label "Heat Exchanger"@en .
 
 
 
@@ -7128,9 +7278,7 @@
 
 :Heat_Exchanger_Pump rdf:type owl:Class ;
                      
-                     owl:equivalentClass :Hot_Water_Pump ;
-                     
-                     rdfs:subClassOf :Equipment_HVAC_HotWaterSystem ,
+                     rdfs:subClassOf :Equipment_HVAC_HWS ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasTag ;
                                        owl:someValuesFrom tag:Exchanger
@@ -7144,7 +7292,7 @@
                                        owl:someValuesFrom tag:Pump
                                      ] ;
                      
-                     rdfs:label "Hot Water Pump"@en .
+                     rdfs:label "Heat Exchanger Pump"@en .
 
 
 
@@ -7152,7 +7300,7 @@
 
 :Heat_Exchanger_Supply_Water_Temperature rdf:type owl:Class ;
                                          
-                                         rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                         rdfs:subClassOf :MeasurementProperty_Water ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasTag ;
                                                            owl:someValuesFrom tag:Exchanger
@@ -7182,7 +7330,7 @@
 
 :Heat_Exchanger_Supply_Water_Temperature_Dead_Band_Setpoint rdf:type owl:Class ;
                                                             
-                                                            rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                            rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty :hasTag ;
                                                                               owl:someValuesFrom tag:Band
@@ -7224,7 +7372,7 @@
 
 :Heat_Exchanger_Supply_Water_Temperature_Integral_Time_Setpoint rdf:type owl:Class ;
                                                                 
-                                                                rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                                rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                                 [ rdf:type owl:Restriction ;
                                                                                   owl:onProperty :hasTag ;
                                                                                   owl:someValuesFrom tag:Exchanger
@@ -7266,7 +7414,7 @@
 
 :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                                     
-                                                                    rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                                    rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty :hasTag ;
                                                                                       owl:someValuesFrom tag:Band
@@ -7308,7 +7456,7 @@
 
 :Heat_Exchanger_Supply_Water_Temperature_Sensor rdf:type owl:Class ;
                                                 
-                                                rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                                rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                                 [ rdf:type owl:Restriction ;
                                                                   owl:onProperty :hasTag ;
                                                                   owl:someValuesFrom tag:Exchanger
@@ -7342,7 +7490,7 @@
 
 :Heat_Exchanger_Supply_Water_Temperature_Setpoint rdf:type owl:Class ;
                                                   
-                                                  rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                  rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty :hasTag ;
                                                                     owl:someValuesFrom tag:Exchanger
@@ -7376,7 +7524,7 @@
 
 :Heat_Exchanger_System_Enable_Status rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Status_HVAC_HotWaterSystem_HeatExchanger ,
+                                     rdfs:subClassOf :Point_Status_HVAC_HWS_Heat_Exchanger ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Enable
@@ -7406,7 +7554,7 @@
 
 :Heat_Exchanger_Valve_Command rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem_HeatExchanger ,
+                              rdfs:subClassOf :Point_Command_HVAC_HWS_Heat_Exchanger ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Command
@@ -7432,7 +7580,7 @@
 
 :Heat_Exchanger_Valve_Status rdf:type owl:Class ;
                              
-                             rdfs:subClassOf :Point_Status_HVAC_HotWaterSystem_HeatExchanger ,
+                             rdfs:subClassOf :Point_Status_HVAC_HWS_Heat_Exchanger ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty :hasTag ;
                                                owl:someValuesFrom tag:Exchanger
@@ -7510,7 +7658,7 @@
 
 :Heat_Wheel_Differential_Pressure_Sensor rdf:type owl:Class ;
                                          
-                                         rdfs:subClassOf :Point_Sensor_HVAC_AHU_HeatWheel ,
+                                         rdfs:subClassOf :Point_Sensor_HVAC_AHU_Heat_Wheel ,
                                                          [ rdf:type owl:Restriction ;
                                                            owl:onProperty :hasTag ;
                                                            owl:someValuesFrom tag:Differential
@@ -7562,7 +7710,7 @@
 
 :Heat_Wheel_Speed_Sensor rdf:type owl:Class ;
                          
-                         rdfs:subClassOf :Point_Sensor_HVAC_AHU_HeatWheel ,
+                         rdfs:subClassOf :Point_Sensor_HVAC_AHU_Heat_Wheel ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTag ;
                                            owl:someValuesFrom tag:Heat
@@ -7618,7 +7766,7 @@
 
 :Heat_Wheel_Supply_Air_Temperature_Sensor rdf:type owl:Class ;
                                           
-                                          rdfs:subClassOf :Point_Sensor_HVAC_AHU_HeatWheel ,
+                                          rdfs:subClassOf :Point_Sensor_HVAC_AHU_Heat_Wheel ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasTag ;
                                                             owl:someValuesFrom tag:Air
@@ -7696,7 +7844,7 @@
 
 :Heat_Wheel_Voltage_Sensor rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Sensor_HVAC_AHU_HeatWheel ,
+                           rdfs:subClassOf :Point_Sensor_HVAC_AHU_Heat_Wheel ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Heat
@@ -8158,7 +8306,7 @@
 
 :High_Temperature_Hot_Water rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Resource_HVAC_HotWaterSystem ,
+                            rdfs:subClassOf :Resource_HVAC_HWS ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:High
@@ -8184,7 +8332,7 @@
 
 :High_Temperature_Hot_Water_Return_Temperature rdf:type owl:Class ;
                                                
-                                               rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                               rdfs:subClassOf :MeasurementProperty_Water ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasTag ;
                                                                  owl:someValuesFrom tag:High
@@ -8214,7 +8362,7 @@
 
 :High_Temperature_Hot_Water_Return_Temperature_Sensor rdf:type owl:Class ;
                                                       
-                                                      rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                                      rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty :hasTag ;
                                                                         owl:someValuesFrom tag:High
@@ -8248,7 +8396,7 @@
 
 :High_Temperature_Hot_Water_Supply_Temperature rdf:type owl:Class ;
                                                
-                                               rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                               rdfs:subClassOf :MeasurementProperty_Water ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty :hasTag ;
                                                                  owl:someValuesFrom tag:High
@@ -8278,7 +8426,7 @@
 
 :High_Temperature_Hot_Water_Supply_Temperature_Sensor rdf:type owl:Class ;
                                                       
-                                                      rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                                      rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                                       [ rdf:type owl:Restriction ;
                                                                         owl:onProperty :hasTag ;
                                                                         owl:someValuesFrom tag:High
@@ -8458,7 +8606,7 @@
 
 :Hot_Water rdf:type owl:Class ;
            
-           rdfs:subClassOf :Resource_HVAC_HotWaterSystem ,
+           rdfs:subClassOf :Resource_HVAC_HWS ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :hasTag ;
                              owl:someValuesFrom tag:Hot
@@ -8476,7 +8624,7 @@
 
 :Hot_Water_Differential_Pressure rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                 rdfs:subClassOf :MeasurementProperty_Water ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Differential
@@ -8502,7 +8650,7 @@
 
 :Hot_Water_Differential_Pressure_Dead_Band_Setpoint rdf:type owl:Class ;
                                                     
-                                                    rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                    rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                     [ rdf:type owl:Restriction ;
                                                                       owl:onProperty :hasTag ;
                                                                       owl:someValuesFrom tag:Band
@@ -8540,7 +8688,7 @@
 
 :Hot_Water_Differential_Pressure_Integral_Time_Setpoint rdf:type owl:Class ;
                                                         
-                                                        rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                        rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :hasTag ;
                                                                           owl:someValuesFrom tag:Differential
@@ -8578,7 +8726,7 @@
 
 :Hot_Water_Differential_Pressure_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                             
-                                                            rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                            rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                             [ rdf:type owl:Restriction ;
                                                                               owl:onProperty :hasTag ;
                                                                               owl:someValuesFrom tag:Band
@@ -8616,7 +8764,7 @@
 
 :Hot_Water_Differential_Pressure_Sensor rdf:type owl:Class ;
                                         
-                                        rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                        rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                         [ rdf:type owl:Restriction ;
                                                           owl:onProperty :hasTag ;
                                                           owl:someValuesFrom tag:Differential
@@ -8646,7 +8794,7 @@
 
 :Hot_Water_Differential_Pressure_Setpoint rdf:type owl:Class ;
                                           
-                                          rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                          rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasTag ;
                                                             owl:someValuesFrom tag:Differential
@@ -8676,7 +8824,7 @@
 
 :Hot_Water_Flow_Meter rdf:type owl:Class ;
                       
-                      rdfs:subClassOf :Point_Meter_HVAC_HotWaterSystem ,
+                      rdfs:subClassOf :Point_Meter_HVAC_HWS ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasTag ;
                                         owl:someValuesFrom tag:Flow
@@ -8702,7 +8850,7 @@
 
 :Hot_Water_Meter rdf:type owl:Class ;
                  
-                 rdfs:subClassOf :Point_Meter_WaterSystem_HotWaterSystem ,
+                 rdfs:subClassOf :Point_Meter_Water_HWS ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty :hasTag ;
                                    owl:someValuesFrom tag:Hot
@@ -8724,7 +8872,7 @@
 
 :Hot_Water_Pump rdf:type owl:Class ;
                 
-                rdfs:subClassOf :Equipment_HVAC_HotWaterSystem ,
+                rdfs:subClassOf :Equipment_HVAC_HWS ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasTag ;
                                   owl:someValuesFrom tag:Hot
@@ -8746,7 +8894,7 @@
 
 :Hot_Water_Pump_Alarm rdf:type owl:Class ;
                       
-                      rdfs:subClassOf :Point_Alarm_HVAC_HotWaterSystem_Pump ,
+                      rdfs:subClassOf :Point_Alarm_HVAC_HWS_Pump ,
                                       [ rdf:type owl:Restriction ;
                                         owl:onProperty :hasTag ;
                                         owl:someValuesFrom tag:Alarm
@@ -8772,7 +8920,7 @@
 
 :Hot_Water_Pump_Lead_Lag_Command rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem_Pump ,
+                                 rdfs:subClassOf :Point_Command_HVAC_HWS_Pump ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Command
@@ -8806,7 +8954,7 @@
 
 :Hot_Water_Pump_Start_Stop_Command rdf:type owl:Class ;
                                    
-                                   rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem_Pump ,
+                                   rdfs:subClassOf :Point_Command_HVAC_HWS_Pump ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasTag ;
                                                      owl:someValuesFrom tag:Command
@@ -8840,7 +8988,7 @@
 
 :Hot_Water_Pump_VFD_Command rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem_HeatExchanger ,
+                            rdfs:subClassOf :Point_Command_HVAC_HWS_Heat_Exchanger ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Command
@@ -8870,7 +9018,7 @@
 
 :Hot_Water_Return_Temperature rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                              rdfs:subClassOf :MeasurementProperty_Water ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Hot
@@ -8896,7 +9044,7 @@
 
 :Hot_Water_Return_Temperature_Sensor rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                     rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Hot
@@ -8926,7 +9074,7 @@
 
 :Hot_Water_Static_Pressure_Setpoint rdf:type owl:Class ;
                                     
-                                    rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                    rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :hasTag ;
                                                       owl:someValuesFrom tag:Hot
@@ -8956,7 +9104,7 @@
 
 :Hot_Water_Supply_Temperature rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                              rdfs:subClassOf :MeasurementProperty_Water ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Hot
@@ -8982,7 +9130,7 @@
 
 :Hot_Water_Supply_Temperature_Sensor rdf:type owl:Class ;
                                      
-                                     rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                     rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :hasTag ;
                                                        owl:someValuesFrom tag:Hot
@@ -9012,7 +9160,7 @@
 
 :Hot_Water_System rdf:type owl:Class ;
                   
-                  rdfs:subClassOf :Equipment_HVAC ,
+                  rdfs:subClassOf :Equipment_Water ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasTag ;
                                     owl:someValuesFrom tag:Hot
@@ -9034,7 +9182,7 @@
 
 :Hot_Water_System_Enable_Command rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem_HeatExchanger ,
+                                 rdfs:subClassOf :Point_Command_HVAC_HWS_Heat_Exchanger ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Command
@@ -9342,7 +9490,7 @@
 
 :Load_Shed_Command rdf:type owl:Class ;
                    
-                   rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                   rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                    [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasTag ;
                                      owl:someValuesFrom tag:Command
@@ -9364,7 +9512,7 @@
 
 :Load_Shed_Status rdf:type owl:Class ;
                   
-                  rdfs:subClassOf :Point_Status_Energy_DemandResponse ,
+                  rdfs:subClassOf :Point_Status_Energy_Demand_Response ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasTag ;
                                     owl:someValuesFrom tag:Load
@@ -9592,7 +9740,7 @@
 
 :Lowest_Exhaust_Air_Static_Pressure_Sensor rdf:type owl:Class ;
                                            
-                                           rdfs:subClassOf :Point_Sensor_HVAC_ExhaustSystem ,
+                                           rdfs:subClassOf :Point_Sensor_HVAC_Exhaust ,
                                                            [ rdf:type owl:Restriction ;
                                                              owl:onProperty :hasTag ;
                                                              owl:someValuesFrom tag:Air
@@ -9772,7 +9920,7 @@
 
 :Max_Chilled_Water_Differential_Pressure_Setpoint rdf:type owl:Class ;
                                                   
-                                                  rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                  rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty :hasTag ;
                                                                     owl:someValuesFrom tag:Chilled
@@ -9968,15 +10116,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#MeasurementProperty_Energy_SolarPanel
+###  http://buildsys.org/ontologies/Brick#MeasurementProperty_Energy_Solar
 
-:MeasurementProperty_Energy_SolarPanel rdf:type owl:Class ;
-                                       
-                                       rdfs:subClassOf :MeasurementProperty_Energy ;
-                                       
-                                       bf:isHierarchical "" ;
-                                       
-                                       rdfs:label "SolarPanel"@en .
+:MeasurementProperty_Energy_Solar rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :MeasurementProperty_Energy ;
+                                  
+                                  bf:isHierarchical "" ;
+                                  
+                                  rdfs:label "Solar"@en .
 
 
 
@@ -10016,15 +10164,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#MeasurementProperty_HVAC_ExhaustSystem
+###  http://buildsys.org/ontologies/Brick#MeasurementProperty_HVAC_Exhaust
 
-:MeasurementProperty_HVAC_ExhaustSystem rdf:type owl:Class ;
-                                        
-                                        rdfs:subClassOf :MeasurementProperty_HVAC ;
-                                        
-                                        bf:isHierarchical "" ;
-                                        
-                                        rdfs:label "ExhaustSystem"@en .
+:MeasurementProperty_HVAC_Exhaust rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :MeasurementProperty_HVAC ;
+                                  
+                                  bf:isHierarchical "" ;
+                                  
+                                  rdfs:label "Exhaust"@en .
 
 
 
@@ -10064,27 +10212,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#MeasurementProperty_ThermalEnergyStorage
+###  http://buildsys.org/ontologies/Brick#MeasurementProperty_Thermal_Energy_Storage
 
-:MeasurementProperty_ThermalEnergyStorage rdf:type owl:Class ;
-                                          
-                                          rdfs:subClassOf :MeasurementProperty ;
-                                          
-                                          bf:isHierarchical "" ;
-                                          
-                                          rdfs:label "ThermalEnergyStorage"@en .
+:MeasurementProperty_Thermal_Energy_Storage rdf:type owl:Class ;
+                                            
+                                            rdfs:subClassOf :MeasurementProperty ;
+                                            
+                                            bf:isHierarchical "" ;
+                                            
+                                            rdfs:label "Thermal Energy Storage"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#MeasurementProperty_WaterSystem
+###  http://buildsys.org/ontologies/Brick#MeasurementProperty_Water
 
-:MeasurementProperty_WaterSystem rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :MeasurementProperty ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "WaterSystem"@en .
+:MeasurementProperty_Water rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :MeasurementProperty ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Water"@en .
 
 
 
@@ -10104,7 +10252,7 @@
 
 :Medium_Temperature_Hot_Water rdf:type owl:Class ;
                               
-                              rdfs:subClassOf :Resource_HVAC_HotWaterSystem ,
+                              rdfs:subClassOf :Resource_HVAC_HWS ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Hot
@@ -10132,7 +10280,7 @@
                                                                     
                                                                     owl:equivalentClass :Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Status ;
                                                                     
-                                                                    rdfs:subClassOf :Point_Status_Energy_DemandResponse ,
+                                                                    rdfs:subClassOf :Point_Status_Energy_Demand_Response ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty :hasTag ;
                                                                                       owl:someValuesFrom tag:Differential
@@ -10178,7 +10326,7 @@
 
 :Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Setpoint rdf:type owl:Class ;
                                                                        
-                                                                       rdfs:subClassOf :Point_Setpoint_Energy_DemandResponse ,
+                                                                       rdfs:subClassOf :Point_Setpoint_Energy_Demand_Response ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty :hasTag ;
                                                                                          owl:someValuesFrom tag:Differential
@@ -10224,7 +10372,7 @@
 
 :Medium_Temperature_Hot_Water_Differential_Pressure_Load_Shed_Status rdf:type owl:Class ;
                                                                      
-                                                                     rdfs:subClassOf :Point_Status_Energy_DemandResponse ,
+                                                                     rdfs:subClassOf :Point_Status_Energy_Demand_Response ,
                                                                                      [ rdf:type owl:Restriction ;
                                                                                        owl:onProperty :hasTag ;
                                                                                        owl:someValuesFrom tag:Differential
@@ -10270,7 +10418,7 @@
 
 :Medium_Temperature_Hot_Water_Discharge_Temperature_High_Reset_Setpoint rdf:type owl:Class ;
                                                                         
-                                                                        rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                                        rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                                         [ rdf:type owl:Restriction ;
                                                                                           owl:onProperty :hasTag ;
                                                                                           owl:someValuesFrom tag:Discharge
@@ -10312,7 +10460,7 @@
 
 :Medium_Temperature_Hot_Water_Discharge_Temperature_Low_Reset_Setpoint rdf:type owl:Class ;
                                                                        
-                                                                       rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                                       rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                                        [ rdf:type owl:Restriction ;
                                                                                          owl:onProperty :hasTag ;
                                                                                          owl:someValuesFrom tag:Discharge
@@ -10354,7 +10502,7 @@
 
 :Medium_Temperature_Hot_Water_Return_Temperature rdf:type owl:Class ;
                                                  
-                                                 rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                                 rdfs:subClassOf :MeasurementProperty_Water ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasTag ;
                                                                    owl:someValuesFrom tag:Hot
@@ -10384,7 +10532,7 @@
 
 :Medium_Temperature_Hot_Water_Return_Temperature_Sensor rdf:type owl:Class ;
                                                         
-                                                        rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                                        rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :hasTag ;
                                                                           owl:someValuesFrom tag:Hot
@@ -10418,7 +10566,7 @@
 
 :Medium_Temperature_Hot_Water_Supply_Temperature rdf:type owl:Class ;
                                                  
-                                                 rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                                 rdfs:subClassOf :MeasurementProperty_Water ,
                                                                  [ rdf:type owl:Restriction ;
                                                                    owl:onProperty :hasTag ;
                                                                    owl:someValuesFrom tag:Hot
@@ -10448,7 +10596,7 @@
 
 :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Setpoint rdf:type owl:Class ;
                                                                     
-                                                                    rdfs:subClassOf :Point_Setpoint_Energy_DemandResponse ,
+                                                                    rdfs:subClassOf :Point_Setpoint_Energy_Demand_Response ,
                                                                                     [ rdf:type owl:Restriction ;
                                                                                       owl:onProperty :hasTag ;
                                                                                       owl:someValuesFrom tag:Hot
@@ -10490,7 +10638,7 @@
 
 :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Status rdf:type owl:Class ;
                                                                   
-                                                                  rdfs:subClassOf :Point_Status_Energy_DemandResponse ,
+                                                                  rdfs:subClassOf :Point_Status_Energy_Demand_Response ,
                                                                                   [ rdf:type owl:Restriction ;
                                                                                     owl:onProperty :hasTag ;
                                                                                     owl:someValuesFrom tag:Hot
@@ -10532,7 +10680,7 @@
 
 :Medium_Temperature_Hot_Water_Supply_Temperature_Sensor rdf:type owl:Class ;
                                                         
-                                                        rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                                        rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                                         [ rdf:type owl:Restriction ;
                                                                           owl:onProperty :hasTag ;
                                                                           owl:someValuesFrom tag:Hot
@@ -10566,7 +10714,7 @@
 
 :Medium_Temperature_Water_Pressure rdf:type owl:Class ;
                                    
-                                   rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                                   rdfs:subClassOf :MeasurementProperty_Water ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasTag ;
                                                      owl:someValuesFrom tag:Medium
@@ -10592,7 +10740,7 @@
 
 :Medium_Temperature_Water_Pressure_Sensor rdf:type owl:Class ;
                                           
-                                          rdfs:subClassOf :Point_Sensor_HVAC_HotWaterSystem ,
+                                          rdfs:subClassOf :Point_Sensor_HVAC_HWS ,
                                                           [ rdf:type owl:Restriction ;
                                                             owl:onProperty :hasTag ;
                                                             owl:someValuesFrom tag:Medium
@@ -10622,7 +10770,7 @@
 
 :Min_Chilled_Water_Differential_Pressure_Setpoint rdf:type owl:Class ;
                                                   
-                                                  rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem_Pump ,
+                                                  rdfs:subClassOf :Point_Setpoint_HVAC_CWS_Pump ,
                                                                   [ rdf:type owl:Restriction ;
                                                                     owl:onProperty :hasTag ;
                                                                     owl:someValuesFrom tag:Chilled
@@ -11626,7 +11774,7 @@
 
 :Open_Heating_Valve_Outside_Air_Temperature_Setpoint rdf:type owl:Class ;
                                                      
-                                                     rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger ,
+                                                     rdfs:subClassOf :Point_Setpoint_HVAC_HWS_Heat_Exchanger ,
                                                                      [ rdf:type owl:Restriction ;
                                                                        owl:onProperty :hasTag ;
                                                                        owl:someValuesFrom tag:Air
@@ -12396,9 +12544,9 @@
 
 :PV_System_Output rdf:type owl:Class ;
                   
-                  owl:equivalentClass :_PV_Current_Output ;
+                  owl:equivalentClass :Photovoltaic_Current_Output ;
                   
-                  rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
+                  rdfs:subClassOf :MeasurementProperty_Energy_Solar ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasTag ;
                                     owl:someValuesFrom tag:Output
@@ -12468,7 +12616,7 @@
 
 :Perimeter_Heating_Valve_Command rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Command_WaterSystem ,
+                                 rdfs:subClassOf :Point_Command_Water ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Command
@@ -12496,7 +12644,7 @@
                              
                              owl:equivalentClass :_PV_Current_Output ;
                              
-                             rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
+                             rdfs:subClassOf :MeasurementProperty_Energy_Solar ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty :hasTag ;
                                                owl:someValuesFrom tag:Current
@@ -12518,7 +12666,7 @@
 
 :Photovoltaic_Current_Output_Sensor rdf:type owl:Class ;
                                     
-                                    rdfs:subClassOf :Point_Sensor_Energy_SolarPanel ,
+                                    rdfs:subClassOf :Point_Sensor_Energy_Solar ,
                                                     [ rdf:type owl:Restriction ;
                                                       owl:onProperty :hasTag ;
                                                       owl:someValuesFrom tag:Current
@@ -12576,27 +12724,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Alarm_Energy_EmergencyGenerator
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_Energy_Generator
 
-:Point_Alarm_Energy_EmergencyGenerator rdf:type owl:Class ;
-                                       
-                                       rdfs:subClassOf :Point_Alarm_Energy ;
-                                       
-                                       bf:isHierarchical "" ;
-                                       
-                                       rdfs:label "EmergencyGenerator"@en .
+:Point_Alarm_Energy_Generator rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Point_Alarm_Energy ;
+                              
+                              bf:isHierarchical "" ;
+                              
+                              rdfs:label "Generator"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Alarm_FumeHood
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_Fume_Hood
 
-:Point_Alarm_FumeHood rdf:type owl:Class ;
-                      
-                      rdfs:subClassOf :Point_Alarm ;
-                      
-                      bf:isHierarchical "" ;
-                      
-                      rdfs:label "FumeHood"@en .
+:Point_Alarm_Fume_Hood rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Point_Alarm ;
+                       
+                       bf:isHierarchical "" ;
+                       
+                       rdfs:label "Fume Hood"@en .
 
 
 
@@ -12636,27 +12784,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Alarm_HVAC_HotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_HVAC_HWS
 
-:Point_Alarm_HVAC_HotWaterSystem rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Alarm_HVAC ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "HotWaterSystem"@en .
+:Point_Alarm_HVAC_HWS rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Point_Alarm_HVAC ;
+                      
+                      bf:isHierarchical "" ;
+                      
+                      rdfs:label "HWS"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Alarm_HVAC_HotWaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_HVAC_HWS_Pump
 
-:Point_Alarm_HVAC_HotWaterSystem_Pump rdf:type owl:Class ;
-                                      
-                                      rdfs:subClassOf :Point_Alarm_HVAC_HotWaterSystem ;
-                                      
-                                      bf:isHierarchical "" ;
-                                      
-                                      rdfs:label "Pump"@en .
+:Point_Alarm_HVAC_HWS_Pump rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Alarm_HVAC_HWS ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Pump"@en .
 
 
 
@@ -12684,27 +12832,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Alarm_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_Water
 
-:Point_Alarm_WaterSystem rdf:type owl:Class ;
-                         
-                         rdfs:subClassOf :Point_Alarm ;
-                         
-                         bf:isHierarchical "" ;
-                         
-                         rdfs:label "WaterSystem"@en .
+:Point_Alarm_Water rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Point_Alarm ;
+                   
+                   bf:isHierarchical "" ;
+                   
+                   rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Alarm_WaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Alarm_Water_Pump
 
-:Point_Alarm_WaterSystem_Pump rdf:type owl:Class ;
-                              
-                              rdfs:subClassOf :Point_Alarm_WaterSystem ;
-                              
-                              bf:isHierarchical "" ;
-                              
-                              rdfs:label "Pump"@en .
+:Point_Alarm_Water_Pump rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Alarm_Water ;
+                        
+                        bf:isHierarchical "" ;
+                        
+                        rdfs:label "Pump"@en .
 
 
 
@@ -12732,15 +12880,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Command_Energy_DemandResponse
+###  http://buildsys.org/ontologies/Brick#Point_Command_Energy_Demand_Response
 
-:Point_Command_Energy_DemandResponse rdf:type owl:Class ;
-                                     
-                                     rdfs:subClassOf :Point_Command_Energy ;
-                                     
-                                     bf:isHierarchical "" ;
-                                     
-                                     rdfs:label "DemandResponse"@en .
+:Point_Command_Energy_Demand_Response rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :Point_Command_Energy ;
+                                      
+                                      bf:isHierarchical "" ;
+                                      
+                                      rdfs:label "Demand Response"@en .
 
 
 
@@ -12780,75 +12928,75 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_ChilledWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_CWS
 
-:Point_Command_HVAC_ChilledWaterSystem rdf:type owl:Class ;
+:Point_Command_HVAC_CWS rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Command_HVAC ;
+                        
+                        bf:isHierarchical "" ;
+                        
+                        rdfs:label "CWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_CWS_Pump
+
+:Point_Command_HVAC_CWS_Pump rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Point_Command_HVAC_CWS ;
+                             
+                             bf:isHierarchical "" ;
+                             
+                             rdfs:label "Pump"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_Exhaust
+
+:Point_Command_HVAC_Exhaust rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Point_Command_HVAC ;
+                            
+                            bf:isHierarchical "" ;
+                            
+                            rdfs:label "Exhaust"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_HWS
+
+:Point_Command_HVAC_HWS rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Command_HVAC ;
+                        
+                        bf:isHierarchical "" ;
+                        
+                        rdfs:label "HWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_HWS_Heat_Exchanger
+
+:Point_Command_HVAC_HWS_Heat_Exchanger rdf:type owl:Class ;
                                        
-                                       rdfs:subClassOf :Point_Command_HVAC ;
+                                       rdfs:subClassOf :Point_Command_HVAC_HWS ;
                                        
                                        bf:isHierarchical "" ;
                                        
-                                       rdfs:label "ChilledWaterSystem"@en .
+                                       rdfs:label "Heat Exchanger"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_ChilledWaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_HWS_Pump
 
-:Point_Command_HVAC_ChilledWaterSystem_Pump rdf:type owl:Class ;
-                                            
-                                            rdfs:subClassOf :Point_Command_HVAC_ChilledWaterSystem ;
-                                            
-                                            bf:isHierarchical "" ;
-                                            
-                                            rdfs:label "Pump"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_ExhaustSystem
-
-:Point_Command_HVAC_ExhaustSystem rdf:type owl:Class ;
-                                  
-                                  rdfs:subClassOf :Point_Command_HVAC ;
-                                  
-                                  bf:isHierarchical "" ;
-                                  
-                                  rdfs:label "ExhaustSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_HotWaterSystem
-
-:Point_Command_HVAC_HotWaterSystem rdf:type owl:Class ;
-                                   
-                                   rdfs:subClassOf :Point_Command_HVAC ;
-                                   
-                                   bf:isHierarchical "" ;
-                                   
-                                   rdfs:label "HotWaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_HotWaterSystem_HeatExchanger
-
-:Point_Command_HVAC_HotWaterSystem_HeatExchanger rdf:type owl:Class ;
-                                                 
-                                                 rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem ;
-                                                 
-                                                 bf:isHierarchical "" ;
-                                                 
-                                                 rdfs:label "HeatExchanger"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Command_HVAC_HotWaterSystem_Pump
-
-:Point_Command_HVAC_HotWaterSystem_Pump rdf:type owl:Class ;
-                                        
-                                        rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem ;
-                                        
-                                        bf:isHierarchical "" ;
-                                        
-                                        rdfs:label "Pump"@en .
+:Point_Command_HVAC_HWS_Pump rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Point_Command_HVAC_HWS ;
+                             
+                             bf:isHierarchical "" ;
+                             
+                             rdfs:label "Pump"@en .
 
 
 
@@ -12888,39 +13036,39 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Command_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Command_Water
 
-:Point_Command_WaterSystem rdf:type owl:Class ;
-                           
-                           rdfs:subClassOf :Point_Command ;
-                           
-                           bf:isHierarchical "" ;
-                           
-                           rdfs:label "WaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Command_WaterSystem_DomesticHotWaterSystem
-
-:Point_Command_WaterSystem_DomesticHotWaterSystem rdf:type owl:Class ;
-                                                  
-                                                  rdfs:subClassOf :Point_Command_WaterSystem ;
-                                                  
-                                                  bf:isHierarchical "" ;
-                                                  
-                                                  rdfs:label "DomesticHotWaterSystem"@en .
+:Point_Command_Water rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Point_Command ;
+                     
+                     bf:isHierarchical "" ;
+                     
+                     rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Command_WaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Command_Water_DHWS
 
-:Point_Command_WaterSystem_Pump rdf:type owl:Class ;
-                                
-                                rdfs:subClassOf :Point_Command_WaterSystem ;
-                                
-                                bf:isHierarchical "" ;
-                                
-                                rdfs:label "Pump"@en .
+:Point_Command_Water_DHWS rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Point_Command_Water ;
+                          
+                          bf:isHierarchical "" ;
+                          
+                          rdfs:label "DHWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Command_Water_Pump
+
+:Point_Command_Water_Pump rdf:type owl:Class ;
+                          
+                          rdfs:subClassOf :Point_Command_Water ;
+                          
+                          bf:isHierarchical "" ;
+                          
+                          rdfs:label "Pump"@en .
 
 
 
@@ -13008,15 +13156,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Meter_HVAC_HotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Meter_HVAC_HWS
 
-:Point_Meter_HVAC_HotWaterSystem rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Meter_HVAC ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "HotWaterSystem"@en .
+:Point_Meter_HVAC_HWS rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Point_Meter_HVAC ;
+                      
+                      bf:isHierarchical "" ;
+                      
+                      rdfs:label "HWS"@en .
 
 
 
@@ -13032,27 +13180,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Meter_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Meter_Water
 
-:Point_Meter_WaterSystem rdf:type owl:Class ;
-                         
-                         rdfs:subClassOf :Point_Meter ;
-                         
-                         bf:isHierarchical "" ;
-                         
-                         rdfs:label "WaterSystem"@en .
+:Point_Meter_Water rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Point_Meter ;
+                   
+                   bf:isHierarchical "" ;
+                   
+                   rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Meter_WaterSystem_HotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Meter_Water_HWS
 
-:Point_Meter_WaterSystem_HotWaterSystem rdf:type owl:Class ;
-                                        
-                                        rdfs:subClassOf :Point_Meter_WaterSystem ;
-                                        
-                                        bf:isHierarchical "" ;
-                                        
-                                        rdfs:label "HotWaterSystem"@en .
+:Point_Meter_Water_HWS rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Point_Meter_Water ;
+                       
+                       bf:isHierarchical "" ;
+                       
+                       rdfs:label "HWS"@en .
 
 
 
@@ -13080,27 +13228,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_Energy_SolarPanel
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_Energy_Solar
 
-:Point_Sensor_Energy_SolarPanel rdf:type owl:Class ;
-                                
-                                rdfs:subClassOf :Point_Sensor_Energy ;
-                                
-                                bf:isHierarchical "" ;
-                                
-                                rdfs:label "SolarPanel"@en .
+:Point_Sensor_Energy_Solar rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Sensor_Energy ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Solar"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_FumeHood
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_Fume_Hood
 
-:Point_Sensor_FumeHood rdf:type owl:Class ;
-                       
-                       rdfs:subClassOf :Point_Sensor ;
-                       
-                       bf:isHierarchical "" ;
-                       
-                       rdfs:label "FumeHood"@en .
+:Point_Sensor_Fume_Hood rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Sensor ;
+                        
+                        bf:isHierarchical "" ;
+                        
+                        rdfs:label "Fume Hood"@en .
 
 
 
@@ -13128,27 +13276,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_AHU_HeatWheel
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_AHU_Fan
 
-:Point_Sensor_HVAC_AHU_HeatWheel rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Sensor_HVAC_AHU ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "HeatWheel"@en .
+:Point_Sensor_HVAC_AHU_Fan rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Sensor_HVAC_AHU ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Fan"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_AHU_SupplyFan
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_AHU_Heat_Wheel
 
-:Point_Sensor_HVAC_AHU_SupplyFan rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Sensor_HVAC_AHU ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "SupplyFan"@en .
+:Point_Sensor_HVAC_AHU_Heat_Wheel rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf :Point_Sensor_HVAC_AHU ;
+                                  
+                                  bf:isHierarchical "" ;
+                                  
+                                  rdfs:label "Heat Wheel"@en .
 
 
 
@@ -13164,39 +13312,39 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_ChilledWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_CWS
 
-:Point_Sensor_HVAC_ChilledWaterSystem rdf:type owl:Class ;
-                                      
-                                      rdfs:subClassOf :Point_Sensor_HVAC ;
-                                      
-                                      bf:isHierarchical "" ;
-                                      
-                                      rdfs:label "ChilledWaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_ChilledWaterSystem_Pump
-
-:Point_Sensor_HVAC_ChilledWaterSystem_Pump rdf:type owl:Class ;
-                                           
-                                           rdfs:subClassOf :Point_Sensor_HVAC_ChilledWaterSystem ;
-                                           
-                                           bf:isHierarchical "" ;
-                                           
-                                           rdfs:label "Pump"@en .
+:Point_Sensor_HVAC_CWS rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Point_Sensor_HVAC ;
+                       
+                       bf:isHierarchical "" ;
+                       
+                       rdfs:label "CWS"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_ExhaustSystem
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_CWS_Pump
 
-:Point_Sensor_HVAC_ExhaustSystem rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Sensor_HVAC ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "ExhaustSystem"@en .
+:Point_Sensor_HVAC_CWS_Pump rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Point_Sensor_HVAC_CWS ;
+                            
+                            bf:isHierarchical "" ;
+                            
+                            rdfs:label "Pump"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_Exhaust
+
+:Point_Sensor_HVAC_Exhaust rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Sensor_HVAC ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Exhaust"@en .
 
 
 
@@ -13224,15 +13372,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_HotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_HVAC_HWS
 
-:Point_Sensor_HVAC_HotWaterSystem rdf:type owl:Class ;
-                                  
-                                  rdfs:subClassOf :Point_Sensor_HVAC ;
-                                  
-                                  bf:isHierarchical "" ;
-                                  
-                                  rdfs:label "HotWaterSystem"@en .
+:Point_Sensor_HVAC_HWS rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Point_Sensor_HVAC ;
+                       
+                       bf:isHierarchical "" ;
+                       
+                       rdfs:label "HWS"@en .
 
 
 
@@ -13284,27 +13432,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_Water
 
-:Point_Sensor_WaterSystem rdf:type owl:Class ;
-                          
-                          rdfs:subClassOf :Point_Sensor ;
-                          
-                          bf:isHierarchical "" ;
-                          
-                          rdfs:label "WaterSystem"@en .
+:Point_Sensor_Water rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Point_Sensor ;
+                    
+                    bf:isHierarchical "" ;
+                    
+                    rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Sensor_WaterSystem_DomesticHotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Sensor_Water_DHWS
 
-:Point_Sensor_WaterSystem_DomesticHotWaterSystem rdf:type owl:Class ;
-                                                 
-                                                 rdfs:subClassOf :Point_Sensor_WaterSystem ;
-                                                 
-                                                 bf:isHierarchical "" ;
-                                                 
-                                                 rdfs:label "DomesticHotWaterSystem"@en .
+:Point_Sensor_Water_DHWS rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Point_Sensor_Water ;
+                         
+                         bf:isHierarchical "" ;
+                         
+                         rdfs:label "DHWS"@en .
 
 
 
@@ -13344,15 +13492,15 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_Energy_DemandResponse
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_Energy_Demand_Response
 
-:Point_Setpoint_Energy_DemandResponse rdf:type owl:Class ;
-                                      
-                                      rdfs:subClassOf :Point_Setpoint_Energy ;
-                                      
-                                      bf:isHierarchical "" ;
-                                      
-                                      rdfs:label "DemandResponse"@en .
+:Point_Setpoint_Energy_Demand_Response rdf:type owl:Class ;
+                                       
+                                       rdfs:subClassOf :Point_Setpoint_Energy ;
+                                       
+                                       bf:isHierarchical "" ;
+                                       
+                                       rdfs:label "Demand Response"@en .
 
 
 
@@ -13380,63 +13528,63 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_ChilledWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_CWS
 
-:Point_Setpoint_HVAC_ChilledWaterSystem rdf:type owl:Class ;
+:Point_Setpoint_HVAC_CWS rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Point_Setpoint_HVAC ;
+                         
+                         bf:isHierarchical "" ;
+                         
+                         rdfs:label "CWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_CWS_Pump
+
+:Point_Setpoint_HVAC_CWS_Pump rdf:type owl:Class ;
+                              
+                              rdfs:subClassOf :Point_Setpoint_HVAC_CWS ;
+                              
+                              bf:isHierarchical "" ;
+                              
+                              rdfs:label "Pump"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_Exhaust
+
+:Point_Setpoint_HVAC_Exhaust rdf:type owl:Class ;
+                             
+                             rdfs:subClassOf :Point_Setpoint_HVAC ;
+                             
+                             bf:isHierarchical "" ;
+                             
+                             rdfs:label "Exhaust"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_HWS
+
+:Point_Setpoint_HVAC_HWS rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Point_Setpoint_HVAC ;
+                         
+                         bf:isHierarchical "" ;
+                         
+                         rdfs:label "HWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_HWS_Heat_Exchanger
+
+:Point_Setpoint_HVAC_HWS_Heat_Exchanger rdf:type owl:Class ;
                                         
-                                        rdfs:subClassOf :Point_Setpoint_HVAC ;
+                                        rdfs:subClassOf :Point_Setpoint_HVAC_HWS ;
                                         
                                         bf:isHierarchical "" ;
                                         
-                                        rdfs:label "ChilledWaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_ChilledWaterSystem_Pump
-
-:Point_Setpoint_HVAC_ChilledWaterSystem_Pump rdf:type owl:Class ;
-                                             
-                                             rdfs:subClassOf :Point_Setpoint_HVAC_ChilledWaterSystem ;
-                                             
-                                             bf:isHierarchical "" ;
-                                             
-                                             rdfs:label "Pump"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_ExhaustSystem
-
-:Point_Setpoint_HVAC_ExhaustSystem rdf:type owl:Class ;
-                                   
-                                   rdfs:subClassOf :Point_Setpoint_HVAC ;
-                                   
-                                   bf:isHierarchical "" ;
-                                   
-                                   rdfs:label "ExhaustSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_HotWaterSystem
-
-:Point_Setpoint_HVAC_HotWaterSystem rdf:type owl:Class ;
-                                    
-                                    rdfs:subClassOf :Point_Setpoint_HVAC ;
-                                    
-                                    bf:isHierarchical "" ;
-                                    
-                                    rdfs:label "HotWaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger
-
-:Point_Setpoint_HVAC_HotWaterSystem_HeatExchanger rdf:type owl:Class ;
-                                                  
-                                                  rdfs:subClassOf :Point_Setpoint_HVAC_HotWaterSystem ;
-                                                  
-                                                  bf:isHierarchical "" ;
-                                                  
-                                                  rdfs:label "HeatExchanger"@en .
+                                        rdfs:label "Heat Exchanger"@en .
 
 
 
@@ -13464,51 +13612,51 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_ThermalEnergyStorage
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_Thermal_Energy_Storage
 
-:Point_Setpoint_ThermalEnergyStorage rdf:type owl:Class ;
-                                     
-                                     rdfs:subClassOf :Point_Setpoint ;
-                                     
-                                     bf:isHierarchical "" ;
-                                     
-                                     rdfs:label "ThermalEnergyStorage"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_WaterSystem
-
-:Point_Setpoint_WaterSystem rdf:type owl:Class ;
-                            
-                            rdfs:subClassOf :Point_Setpoint ;
-                            
-                            bf:isHierarchical "" ;
-                            
-                            rdfs:label "WaterSystem"@en .
+:Point_Setpoint_Thermal_Energy_Storage rdf:type owl:Class ;
+                                       
+                                       rdfs:subClassOf :Point_Setpoint ;
+                                       
+                                       bf:isHierarchical "" ;
+                                       
+                                       rdfs:label "Thermal Energy Storage"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_WaterSystem_DomesticHotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_Water
 
-:Point_Setpoint_WaterSystem_DomesticHotWaterSystem rdf:type owl:Class ;
-                                                   
-                                                   rdfs:subClassOf :Point_Setpoint_WaterSystem ;
-                                                   
-                                                   bf:isHierarchical "" ;
-                                                   
-                                                   rdfs:label "DomesticHotWaterSystem"@en .
+:Point_Setpoint_Water rdf:type owl:Class ;
+                      
+                      rdfs:subClassOf :Point_Setpoint ;
+                      
+                      bf:isHierarchical "" ;
+                      
+                      rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Setpoint_WaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_Water_DHWS
 
-:Point_Setpoint_WaterSystem_Pump rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Setpoint_WaterSystem ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "Pump"@en .
+:Point_Setpoint_Water_DHWS rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Setpoint_Water ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "DHWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Setpoint_Water_Pump
+
+:Point_Setpoint_Water_Pump rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Setpoint_Water ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Pump"@en .
 
 
 
@@ -13536,39 +13684,39 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_Energy_DemandResponse
+###  http://buildsys.org/ontologies/Brick#Point_Status_Energy_Demand_Response
 
-:Point_Status_Energy_DemandResponse rdf:type owl:Class ;
-                                    
-                                    rdfs:subClassOf :Point_Status_Energy ;
-                                    
-                                    bf:isHierarchical "" ;
-                                    
-                                    rdfs:label "DemandResponse"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Status_Energy_EmergencyGenerator
-
-:Point_Status_Energy_EmergencyGenerator rdf:type owl:Class ;
-                                        
-                                        rdfs:subClassOf :Point_Status_Energy ;
-                                        
-                                        bf:isHierarchical "" ;
-                                        
-                                        rdfs:label "EmergencyGenerator"@en .
+:Point_Status_Energy_Demand_Response rdf:type owl:Class ;
+                                     
+                                     rdfs:subClassOf :Point_Status_Energy ;
+                                     
+                                     bf:isHierarchical "" ;
+                                     
+                                     rdfs:label "Demand Response"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_FumeHood
+###  http://buildsys.org/ontologies/Brick#Point_Status_Energy_Generator
 
-:Point_Status_FumeHood rdf:type owl:Class ;
-                       
-                       rdfs:subClassOf :Point_Status ;
-                       
-                       bf:isHierarchical "" ;
-                       
-                       rdfs:label "FumeHood"@en .
+:Point_Status_Energy_Generator rdf:type owl:Class ;
+                               
+                               rdfs:subClassOf :Point_Status_Energy ;
+                               
+                               bf:isHierarchical "" ;
+                               
+                               rdfs:label "Generator"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Status_Fume_Hood
+
+:Point_Status_Fume_Hood rdf:type owl:Class ;
+                        
+                        rdfs:subClassOf :Point_Status ;
+                        
+                        bf:isHierarchical "" ;
+                        
+                        rdfs:label "Fume Hood"@en .
 
 
 
@@ -13608,87 +13756,87 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_ChilledWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_CWS
 
-:Point_Status_HVAC_ChilledWaterSystem rdf:type owl:Class ;
+:Point_Status_HVAC_CWS rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Point_Status_HVAC ;
+                       
+                       bf:isHierarchical "" ;
+                       
+                       rdfs:label "CWS"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_CWS_Pump
+
+:Point_Status_HVAC_CWS_Pump rdf:type owl:Class ;
+                            
+                            rdfs:subClassOf :Point_Status_HVAC_CWS ;
+                            
+                            bf:isHierarchical "" ;
+                            
+                            rdfs:label "Pump"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_Exhaust
+
+:Point_Status_HVAC_Exhaust rdf:type owl:Class ;
+                           
+                           rdfs:subClassOf :Point_Status_HVAC ;
+                           
+                           bf:isHierarchical "" ;
+                           
+                           rdfs:label "Exhaust"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_Fire_Control_Panel
+
+:Point_Status_HVAC_Fire_Control_Panel rdf:type owl:Class ;
                                       
                                       rdfs:subClassOf :Point_Status_HVAC ;
                                       
                                       bf:isHierarchical "" ;
                                       
-                                      rdfs:label "ChilledWaterSystem"@en .
+                                      rdfs:label "Fire Control Panel"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_ChilledWaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_Fire_Control_Panel_Exhaust
 
-:Point_Status_HVAC_ChilledWaterSystem_Pump rdf:type owl:Class ;
-                                           
-                                           rdfs:subClassOf :Point_Status_HVAC_ChilledWaterSystem ;
-                                           
-                                           bf:isHierarchical "" ;
-                                           
-                                           rdfs:label "Pump"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_ExhaustSystem
-
-:Point_Status_HVAC_ExhaustSystem rdf:type owl:Class ;
-                                 
-                                 rdfs:subClassOf :Point_Status_HVAC ;
-                                 
-                                 bf:isHierarchical "" ;
-                                 
-                                 rdfs:label "ExhaustSystem"@en .
+:Point_Status_HVAC_Fire_Control_Panel_Exhaust rdf:type owl:Class ;
+                                              
+                                              rdfs:subClassOf :Point_Status_HVAC_Fire_Control_Panel ;
+                                              
+                                              bf:isHierarchical "" ;
+                                              
+                                              rdfs:label "Exhaust"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_FireControlPanel
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_HWS
 
-:Point_Status_HVAC_FireControlPanel rdf:type owl:Class ;
-                                    
-                                    rdfs:subClassOf :Point_Status_HVAC ;
-                                    
-                                    bf:isHierarchical "" ;
-                                    
-                                    rdfs:label "FireControlPanel"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_FireControlPanel_ExhaustSystem
-
-:Point_Status_HVAC_FireControlPanel_ExhaustSystem rdf:type owl:Class ;
-                                                  
-                                                  rdfs:subClassOf :Point_Status_HVAC_FireControlPanel ;
-                                                  
-                                                  bf:isHierarchical "" ;
-                                                  
-                                                  rdfs:label "ExhaustSystem"@en .
+:Point_Status_HVAC_HWS rdf:type owl:Class ;
+                       
+                       rdfs:subClassOf :Point_Status_HVAC ;
+                       
+                       bf:isHierarchical "" ;
+                       
+                       rdfs:label "HWS"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_HotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_HWS_Heat_Exchanger
 
-:Point_Status_HVAC_HotWaterSystem rdf:type owl:Class ;
-                                  
-                                  rdfs:subClassOf :Point_Status_HVAC ;
-                                  
-                                  bf:isHierarchical "" ;
-                                  
-                                  rdfs:label "HotWaterSystem"@en .
-
-
-
-###  http://buildsys.org/ontologies/Brick#Point_Status_HVAC_HotWaterSystem_HeatExchanger
-
-:Point_Status_HVAC_HotWaterSystem_HeatExchanger rdf:type owl:Class ;
-                                                
-                                                rdfs:subClassOf :Point_Status_HVAC_HotWaterSystem ;
-                                                
-                                                bf:isHierarchical "" ;
-                                                
-                                                rdfs:label "HeatExchanger"@en .
+:Point_Status_HVAC_HWS_Heat_Exchanger rdf:type owl:Class ;
+                                      
+                                      rdfs:subClassOf :Point_Status_HVAC_HWS ;
+                                      
+                                      bf:isHierarchical "" ;
+                                      
+                                      rdfs:label "Heat Exchanger"@en .
 
 
 
@@ -13728,27 +13876,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Point_Status_Water
 
-:Point_Status_WaterSystem rdf:type owl:Class ;
-                          
-                          rdfs:subClassOf :Point_Status ;
-                          
-                          bf:isHierarchical "" ;
-                          
-                          rdfs:label "WaterSystem"@en .
+:Point_Status_Water rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Point_Status ;
+                    
+                    bf:isHierarchical "" ;
+                    
+                    rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Point_Status_WaterSystem_Pump
+###  http://buildsys.org/ontologies/Brick#Point_Status_Water_Pump
 
-:Point_Status_WaterSystem_Pump rdf:type owl:Class ;
-                               
-                               rdfs:subClassOf :Point_Status_WaterSystem ;
-                               
-                               bf:isHierarchical "" ;
-                               
-                               rdfs:label "Pump"@en .
+:Point_Status_Water_Pump rdf:type owl:Class ;
+                         
+                         rdfs:subClassOf :Point_Status_Water ;
+                         
+                         bf:isHierarchical "" ;
+                         
+                         rdfs:label "Pump"@en .
 
 
 
@@ -13944,7 +14092,7 @@
 
 :Pump_Alarm rdf:type owl:Class ;
             
-            rdfs:subClassOf :Point_Alarm_WaterSystem_Pump ,
+            rdfs:subClassOf :Point_Alarm_Water_Pump ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :hasTag ;
                               owl:someValuesFrom tag:Alarm
@@ -13962,7 +14110,7 @@
 
 :Pump_Alarm_Delay_Setpoint rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Setpoint_WaterSystem_Pump ,
+                           rdfs:subClassOf :Point_Setpoint_Water_Pump ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Alarm
@@ -13988,7 +14136,7 @@
 
 :Pump_Enable_Status rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :Point_Status_WaterSystem_Pump ,
+                    rdfs:subClassOf :Point_Status_Water_Pump ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Enable
@@ -14012,7 +14160,7 @@
                        
                        owl:equivalentClass :Pump_Lead_On_Off ;
                        
-                       rdfs:subClassOf :Point_Command_WaterSystem_Pump ,
+                       rdfs:subClassOf :Point_Command_Water_Pump ,
                                        [ rdf:type owl:Restriction ;
                                          owl:onProperty :hasTag ;
                                          owl:someValuesFrom tag:Command
@@ -14038,7 +14186,7 @@
 
 :Pump_Lead_On_Off rdf:type owl:Class ;
                   
-                  rdfs:subClassOf :Point_Command_WaterSystem_Pump ,
+                  rdfs:subClassOf :Point_Command_Water_Pump ,
                                   [ rdf:type owl:Restriction ;
                                     owl:onProperty :hasTag ;
                                     owl:someValuesFrom tag:Lead
@@ -14064,7 +14212,7 @@
 
 :Pump_Start_Stop_Command rdf:type owl:Class ;
                          
-                         rdfs:subClassOf :Point_Command_WaterSystem_Pump ,
+                         rdfs:subClassOf :Point_Command_Water_Pump ,
                                          [ rdf:type owl:Restriction ;
                                            owl:onProperty :hasTag ;
                                            owl:someValuesFrom tag:Command
@@ -14092,7 +14240,7 @@
                         
                         owl:equivalentClass :Pump_Status ;
                         
-                        rdfs:subClassOf :Point_Status_WaterSystem ,
+                        rdfs:subClassOf :Point_Status_Water ,
                                         [ rdf:type owl:Restriction ;
                                           owl:onProperty :hasTag ;
                                           owl:someValuesFrom tag:Pump
@@ -14118,7 +14266,7 @@
 
 :Pump_Status rdf:type owl:Class ;
              
-             rdfs:subClassOf :Point_Status_WaterSystem ,
+             rdfs:subClassOf :Point_Status_Water ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasTag ;
                                owl:someValuesFrom tag:Pump
@@ -14292,27 +14440,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Resource_HVAC_ChilledWaterSystem
+###  http://buildsys.org/ontologies/Brick#Resource_HVAC_CWS
 
-:Resource_HVAC_ChilledWaterSystem rdf:type owl:Class ;
-                                  
-                                  rdfs:subClassOf :Resource_HVAC ;
-                                  
-                                  bf:isHierarchical "" ;
-                                  
-                                  rdfs:label "ChilledWaterSystem"@en .
+:Resource_HVAC_CWS rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Resource_HVAC ;
+                   
+                   bf:isHierarchical "" ;
+                   
+                   rdfs:label "CWS"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Resource_HVAC_HotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Resource_HVAC_HWS
 
-:Resource_HVAC_HotWaterSystem rdf:type owl:Class ;
-                              
-                              rdfs:subClassOf :Resource_HVAC ;
-                              
-                              bf:isHierarchical "" ;
-                              
-                              rdfs:label "HotWaterSystem"@en .
+:Resource_HVAC_HWS rdf:type owl:Class ;
+                   
+                   rdfs:subClassOf :Resource_HVAC ;
+                   
+                   bf:isHierarchical "" ;
+                   
+                   rdfs:label "HWS"@en .
 
 
 
@@ -14328,27 +14476,27 @@
 
 
 
-###  http://buildsys.org/ontologies/Brick#Resource_WaterSystem
+###  http://buildsys.org/ontologies/Brick#Resource_Water
 
-:Resource_WaterSystem rdf:type owl:Class ;
-                      
-                      rdfs:subClassOf :Resource ;
-                      
-                      bf:isHierarchical "" ;
-                      
-                      rdfs:label "WaterSystem"@en .
+:Resource_Water rdf:type owl:Class ;
+                
+                rdfs:subClassOf :Resource ;
+                
+                bf:isHierarchical "" ;
+                
+                rdfs:label "Water"@en .
 
 
 
-###  http://buildsys.org/ontologies/Brick#Resource_WaterSystem_DomesticHotWaterSystem
+###  http://buildsys.org/ontologies/Brick#Resource_Water_DHWS
 
-:Resource_WaterSystem_DomesticHotWaterSystem rdf:type owl:Class ;
-                                             
-                                             rdfs:subClassOf :Resource_WaterSystem ;
-                                             
-                                             bf:isHierarchical "" ;
-                                             
-                                             rdfs:label "DomesticHotWaterSystem"@en .
+:Resource_Water_DHWS rdf:type owl:Class ;
+                     
+                     rdfs:subClassOf :Resource_Water ;
+                     
+                     bf:isHierarchical "" ;
+                     
+                     rdfs:label "DHWS"@en .
 
 
 
@@ -15414,7 +15562,7 @@
 
 :Shutdown_Hot_Water_When_Unoccupied_Command rdf:type owl:Class ;
                                             
-                                            rdfs:subClassOf :Point_Command_HVAC_HotWaterSystem_HeatExchanger ,
+                                            rdfs:subClassOf :Point_Command_HVAC_HWS_Heat_Exchanger ,
                                                             [ rdf:type owl:Restriction ;
                                                               owl:onProperty :hasTag ;
                                                               owl:someValuesFrom tag:Command
@@ -15470,7 +15618,7 @@
 
 :Solar_Azimuth_Angle rdf:type owl:Class ;
                      
-                     rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
+                     rdfs:subClassOf :MeasurementProperty_Energy_Solar ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasTag ;
                                        owl:someValuesFrom tag:Angle
@@ -15492,7 +15640,7 @@
 
 :Solar_Azimuth_Angle_Sensor rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Sensor_Energy_SolarPanel ,
+                            rdfs:subClassOf :Point_Sensor_Energy_Solar ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Angle
@@ -15558,7 +15706,7 @@
 
 :Solar_Zenith_Angle rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
+                    rdfs:subClassOf :MeasurementProperty_Energy_Solar ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Angle
@@ -15580,7 +15728,7 @@
 
 :Solar_Zenith_Angle_Sensor rdf:type owl:Class ;
                            
-                           rdfs:subClassOf :Point_Sensor_Energy_SolarPanel ,
+                           rdfs:subClassOf :Point_Sensor_Energy_Solar ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Angle
@@ -15700,7 +15848,7 @@
                            
                            owl:equivalentClass :Standby_Load_Shed_Switch ;
                            
-                           rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                           rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                            [ rdf:type owl:Restriction ;
                                              owl:onProperty :hasTag ;
                                              owl:someValuesFrom tag:Command
@@ -15726,7 +15874,7 @@
 
 :Standby_Load_Shed_Switch rdf:type owl:Class ;
                           
-                          rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                          rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty :hasTag ;
                                             owl:someValuesFrom tag:Load
@@ -16568,7 +16716,7 @@
 
 :Supply_Fan_Air_Flow_Sensor rdf:type owl:Class ;
                             
-                            rdfs:subClassOf :Point_Sensor_HVAC_AHU_SupplyFan ,
+                            rdfs:subClassOf :Point_Sensor_HVAC_AHU_Fan ,
                                             [ rdf:type owl:Restriction ;
                                               owl:onProperty :hasTag ;
                                               owl:someValuesFrom tag:Air
@@ -16644,7 +16792,7 @@
 
 :Supply_Fan_Piezoelectric_Sensor rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Sensor_HVAC_AHU_SupplyFan ,
+                                 rdfs:subClassOf :Point_Sensor_HVAC_AHU_Fan ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Fan
@@ -16780,7 +16928,7 @@
 
 :Supply_Water_Temperature_Setpoint rdf:type owl:Class ;
                                    
-                                   rdfs:subClassOf :Point_Setpoint_WaterSystem ,
+                                   rdfs:subClassOf :Point_Setpoint_Water ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasTag ;
                                                      owl:someValuesFrom tag:Setpoint
@@ -16970,7 +17118,7 @@
 
 :Thermal_Energy rdf:type owl:Class ;
                 
-                rdfs:subClassOf :MeasurementProperty_ThermalEnergyStorage ,
+                rdfs:subClassOf :MeasurementProperty_Thermal_Energy_Storage ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :hasTag ;
                                   owl:someValuesFrom tag:Energy
@@ -16988,7 +17136,7 @@
 
 :Thermal_Energy_Storage_Supply_Water_Differential_Pressure_Dead_Band_Setpoint rdf:type owl:Class ;
                                                                               
-                                                                              rdfs:subClassOf :Point_Setpoint_ThermalEnergyStorage ,
+                                                                              rdfs:subClassOf :Point_Setpoint_Thermal_Energy_Storage ,
                                                                                               [ rdf:type owl:Restriction ;
                                                                                                 owl:onProperty :hasTag ;
                                                                                                 owl:someValuesFrom tag:Band
@@ -17038,7 +17186,7 @@
 
 :Thermal_Energy_Storage_Supply_Water_Differential_Pressure_Integral_Time_Setpoint rdf:type owl:Class ;
                                                                                   
-                                                                                  rdfs:subClassOf :Point_Setpoint_ThermalEnergyStorage ,
+                                                                                  rdfs:subClassOf :Point_Setpoint_Thermal_Energy_Storage ,
                                                                                                   [ rdf:type owl:Restriction ;
                                                                                                     owl:onProperty :hasTag ;
                                                                                                     owl:someValuesFrom tag:Differential
@@ -17088,7 +17236,7 @@
 
 :Thermal_Energy_Storage_Supply_Water_Differential_Pressure_Proportional_Band_Setpoint rdf:type owl:Class ;
                                                                                       
-                                                                                      rdfs:subClassOf :Point_Setpoint_ThermalEnergyStorage ,
+                                                                                      rdfs:subClassOf :Point_Setpoint_Thermal_Energy_Storage ,
                                                                                                       [ rdf:type owl:Restriction ;
                                                                                                         owl:onProperty :hasTag ;
                                                                                                         owl:someValuesFrom tag:Band
@@ -17464,7 +17612,7 @@
                               
                               owl:equivalentClass :Unoccupied_Load_Shed_Switch ;
                               
-                              rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                              rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                               [ rdf:type owl:Restriction ;
                                                 owl:onProperty :hasTag ;
                                                 owl:someValuesFrom tag:Command
@@ -17490,7 +17638,7 @@
 
 :Unoccupied_Load_Shed_Switch rdf:type owl:Class ;
                              
-                             rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                             rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                              [ rdf:type owl:Restriction ;
                                                owl:onProperty :hasTag ;
                                                owl:someValuesFrom tag:Load
@@ -17553,6 +17701,22 @@
                                    ] ;
                    
                    rdfs:label "Usage Today Meter"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#VAV
+
+:VAV rdf:type owl:Class ;
+     
+     owl:equivalentClass :Variable_Air_Volume ;
+     
+     rdfs:subClassOf :Equipment_HVAC_Terminal_Unit ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:VAV
+                     ] ;
+     
+     rdfs:label "Variable Air Volume"@en .
 
 
 
@@ -17631,6 +17795,22 @@
                                            ] ;
                            
                            rdfs:label "VAV Heat Request Setpoint"@en .
+
+
+
+###  http://buildsys.org/ontologies/Brick#VFD
+
+:VFD rdf:type owl:Class ;
+     
+     owl:equivalentClass :Variable_Frequency_Drive ;
+     
+     rdfs:subClassOf :Equipment_HVAC ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :hasTag ;
+                       owl:someValuesFrom tag:VFD
+                     ] ;
+     
+     rdfs:label "Variable Frequency Drive"@en .
 
 
 
@@ -17764,6 +17944,28 @@
 
 
 
+###  http://buildsys.org/ontologies/Brick#VFD_Voltage_Sensor
+
+:VFD_Voltage_Sensor rdf:type owl:Class ;
+                    
+                    rdfs:subClassOf :Point_Status_HVAC_VFD ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom tag:Sensor
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom tag:VFD
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :hasTag ;
+                                      owl:someValuesFrom tag:Voltage
+                                    ] ;
+                    
+                    rdfs:label "VFD Voltage Sensor"@en .
+
+
+
 ###  http://buildsys.org/ontologies/Brick#Valve
 
 :Valve rdf:type owl:Class ;
@@ -17782,7 +17984,7 @@
 
 :Valve_Command rdf:type owl:Class ;
                
-               rdfs:subClassOf :Point_Command_WaterSystem ,
+               rdfs:subClassOf :Point_Command_Water ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :hasTag ;
                                  owl:someValuesFrom tag:Command
@@ -17800,7 +18002,7 @@
 
 :Variable_Air_Volume rdf:type owl:Class ;
                      
-                     rdfs:subClassOf :Equipment_HVAC_TerminalUnit ,
+                     rdfs:subClassOf :Equipment_HVAC_Terminal_Unit ,
                                      [ rdf:type owl:Restriction ;
                                        owl:onProperty :hasTag ;
                                        owl:someValuesFrom tag:Air
@@ -17918,7 +18120,7 @@
 
 :Water_Meter rdf:type owl:Class ;
              
-             rdfs:subClassOf :Point_Meter_WaterSystem ,
+             rdfs:subClassOf :Point_Meter_Water ,
                              [ rdf:type owl:Restriction ;
                                owl:onProperty :hasTag ;
                                owl:someValuesFrom tag:Meter
@@ -17936,7 +18138,7 @@
 
 :Water_Supply_Temperature rdf:type owl:Class ;
                           
-                          rdfs:subClassOf :MeasurementProperty_WaterSystem ,
+                          rdfs:subClassOf :MeasurementProperty_Water ,
                                           [ rdf:type owl:Restriction ;
                                             owl:onProperty :hasTag ;
                                             owl:someValuesFrom tag:Supply
@@ -17958,7 +18160,7 @@
 
 :Water_Supply_Temperature_Sensor rdf:type owl:Class ;
                                  
-                                 rdfs:subClassOf :Point_Sensor_WaterSystem ,
+                                 rdfs:subClassOf :Point_Sensor_Water ,
                                                  [ rdf:type owl:Restriction ;
                                                    owl:onProperty :hasTag ;
                                                    owl:someValuesFrom tag:Sensor
@@ -18086,7 +18288,7 @@
 
 :Zone_Standby_Load_Shed_Command rdf:type owl:Class ;
                                 
-                                rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                                rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                                 [ rdf:type owl:Restriction ;
                                                   owl:onProperty :hasTag ;
                                                   owl:someValuesFrom tag:Command
@@ -18230,7 +18432,7 @@
 
 :Zone_Unoccupied_Load_Shed_Command rdf:type owl:Class ;
                                    
-                                   rdfs:subClassOf :Point_Command_Energy_DemandResponse ,
+                                   rdfs:subClassOf :Point_Command_Energy_Demand_Response ,
                                                    [ rdf:type owl:Restriction ;
                                                      owl:onProperty :hasTag ;
                                                      owl:someValuesFrom tag:Command
@@ -18260,7 +18462,7 @@
 
 :_PV_Current_Output rdf:type owl:Class ;
                     
-                    rdfs:subClassOf :MeasurementProperty_Energy_SolarPanel ,
+                    rdfs:subClassOf :MeasurementProperty_Energy_Solar ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :hasTag ;
                                       owl:someValuesFrom tag:Current

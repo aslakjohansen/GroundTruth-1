@@ -56,17 +56,17 @@
 # http://buildsys.org/ontologies/BrickTag#Adjust
 
 :Adjust a owl:Class ;
-	rdfs:subClassOf :Equipment_HVAC_VAV .
-
-:Equipment_HVAC_VAV a owl:Class .
-
-:Adjust rdfs:label "Adjust"@en .
+	rdfs:subClassOf :MeasurementProperty_Modifier ;
+	rdfs:label "Adjust"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Adjustment
 
 :Adjustment a owl:Class ;
-	rdfs:subClassOf :Equipment_HVAC_VAV ;
-	rdfs:label "Adjustment"@en .
+	rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Equipment_HVAC_VAV a owl:Class .
+
+:Adjustment rdfs:label "Adjustment"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Air
 
@@ -207,6 +207,15 @@
 	rdfs:subClassOf :Equipment_HVAC ;
 	rdfs:label "CRAC"@en .
 # 
+# http://buildsys.org/ontologies/BrickTag#CWS
+
+:CWS a owl:Class ;
+	rdfs:subClassOf :Equipment_Water .
+
+:Equipment_Water a owl:Class .
+
+:CWS rdfs:label "CWS"@en .
+# 
 # http://buildsys.org/ontologies/BrickTag#Capacity
 
 :Capacity a owl:Class ;
@@ -338,6 +347,12 @@
 :DC a owl:Class ;
 	rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
 	rdfs:label "DC"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#DHWS
+
+:DHWS a owl:Class ;
+	rdfs:subClassOf :Equipment_Water ;
+	rdfs:label "DHWS"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#DI
 
@@ -589,6 +604,12 @@
 	bf:isHierarchical "" ;
 	rdfs:label "Lighting"@en .
 # 
+# http://buildsys.org/ontologies/BrickTag#Equipment_Water
+
+:Equipment_Water rdfs:subClassOf :Equipment ;
+	bf:isHierarchical "" ;
+	rdfs:label "Water"@en .
+# 
 # http://buildsys.org/ontologies/BrickTag#Estimation
 
 :Estimation a owl:Class ;
@@ -612,6 +633,12 @@
 :Exhaust a owl:Class ;
 	rdfs:subClassOf :Equipment_HVAC_AHU ;
 	rdfs:label "Exhaust"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#FCP
+
+:FCP a owl:Class ;
+	rdfs:subClassOf :Equipment ;
+	rdfs:label "FCP"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#FCU
 
@@ -738,6 +765,18 @@
 :HVAC a owl:Class ;
 	rdfs:subClassOf :Equipment ;
 	rdfs:label "HVAC"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#HWS
+
+:HWS a owl:Class ;
+	rdfs:subClassOf :Equipment_Water ;
+	rdfs:label "HWS"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#HX
+
+:HX a owl:Class ;
+	rdfs:subClassOf :Equipment_HVAC ;
+	rdfs:label "HX"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Hail
 
@@ -1298,6 +1337,12 @@
 	rdfs:subClassOf :MeasurementProperty_Modifier ;
 	rdfs:label "Reset"@en .
 # 
+# http://buildsys.org/ontologies/BrickTag#Response
+
+:Response a owl:Class ;
+	rdfs:subClassOf :MeasurementProperty_Modifier ;
+	rdfs:label "Response"@en .
+# 
 # http://buildsys.org/ontologies/BrickTag#Return
 
 :Return a owl:Class ;
@@ -1651,6 +1696,12 @@
 :Water a owl:Class ;
 	rdfs:subClassOf :Equipment_HVAC_AHU , :Equipment_HVAC_Water ;
 	rdfs:label "Water"@en .
+# 
+# http://buildsys.org/ontologies/BrickTag#Weather
+
+:Weather a owl:Class ;
+	rdfs:subClassOf :MeasurementProperty_Modifier ;
+	rdfs:label "Weather"@en .
 # 
 # http://buildsys.org/ontologies/BrickTag#Wheel
 
