@@ -12,14 +12,18 @@ s = g.parse('../Brick.ttl', format='turtle', publicID='brick')
 g.bind('rdf', RDF)
 g.bind('brick', BRICK)
 
+# building
+BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
+g.bind('building', BUILDING)
+
 # actors
-entity_vav                = URIRef('/vav')
-entity_supply_damper      = URIRef('/supply_damper')
-entity_return_damper      = URIRef('/return_damper')
-entity_supply_pressure    = URIRef('/supply_pressure')
-entity_cooling_coil       = URIRef('/cooling_coil')
-entity_supply_temperature = URIRef('/supply_temperature')
-rooms = map(lambda name: URIRef('/rooms/'+name), ['room1', 'room2'])
+entity_vav                = BUILDING['/vav']
+entity_supply_damper      = BUILDING['/supply_damper']
+entity_return_damper      = BUILDING['/return_damper']
+entity_supply_pressure    = BUILDING['/supply_pressure']
+entity_cooling_coil       = BUILDING['/cooling_coil']
+entity_supply_temperature = BUILDING['/supply_temperature']
+rooms = map(lambda name: BUILDING['/rooms/'+name], ['room1', 'room2'])
 all_entities = [
     entity_vav,
     entity_supply_damper,
@@ -28,6 +32,8 @@ all_entities = [
     entity_cooling_coil,
     entity_supply_temperature,
 ]
+entity_supply_air = BUILDING['/media/supply_air']
+entity_return_air = BUILDING['/media/return_air']
 
 # types
 g.add( (entity_vav               , RDF.type, BRICK['VAV']) )
