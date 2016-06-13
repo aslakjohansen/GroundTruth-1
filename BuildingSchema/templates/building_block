@@ -1,0 +1,31 @@
+# create instances
+HX_1_FB a Heat_Exchanger_Functional_Block
+HX_1_PI a Heat_Exchanger_Primary_Input
+HX_1_PO a Heat_Exchanger_Primary_Output
+HX_1_SI a Heat_Exchanger_Secondary_Input
+HX_1_SO a Heat_Exchanger_Secondary_Output
+
+# bind ports instances to heat exchanger functional block instance
+HX_1_PI isPartOF HX_1_FB
+HX_1_PO isPartOF HX_1_FB
+HX_1_SI isPartOF HX_1_FB
+HX_1_SO isPartOF HX_1_FB
+
+# connect something
+campus_supply_steam feeds HX_1_PI
+HX_1_PO             feeds campus_return_steam
+heated_water_return feeds HX_1_SI
+HX_1_SO             feeds heated_water_supply
+
+# Regarding the Heat Exchanger example:
+# =====================================
+#
+# The Heat_Exchanger_Functional_Block instance will apply the following relationships:
+# - any Heat_Exchanger_Primary_Input which 'isPartOf' the instance will 'feed' to any
+#   Heat_Exchanger_*_Output of the same instance
+# - any Heat_Exchanger_Secondary_Input which 'isPartOf' the instance will 'feed' to any
+#   Heat_Exchanger_*_Output of the same instance
+# 
+# It would be nice to only have a 'feeds(temperature)' relationship between the two
+# sides instead of the vaguely defined 'feeds' that we currently use.
+
