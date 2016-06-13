@@ -19,6 +19,12 @@
 
 :isHierarchical a owl:AnnotationProperty .
 # 
+# http://buildsys.org/ontologies/BrickFrame#similarTagSet
+
+:similarTagSet a owl:AnnotationProperty ;
+	rdfs:range :TagSet ;
+	rdfs:domain :TagSet .
+# 
 # 
 # 
 # #################################################################
