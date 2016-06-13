@@ -18,7 +18,7 @@ g = rdflib.Graph()
 # "bind()" simply means that we can use 'rdf' instead of the full URI for rdf when
 # referring to entities in its namespace. Just shorthand
 g.bind( 'rdf', RDF)
-g.bind('rdfs', RDFS)
+g.bind( 'rdfs', RDFS)
 g.bind( 'brick', BRICK)
 g.bind( 'bf', BRICKFRAME)
 g.bind( 'btag', BRICKTAG)
@@ -29,7 +29,7 @@ g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
 # We want to add nodes to the graph for our building. The building exists in its
 # own namespace, which we are calling EX
 
-EX = rdflib.Namespace('http://buildsys.org/ontologies/building_example#')
+EX = Namespace('http://buildsys.org/ontologies/building_example#')
 g.bind('ex', EX)
 
 # Once we have our namespace, we can start placing things in it. Lets create
@@ -109,7 +109,7 @@ for floor_num in [1,2]:
 #         g.add((co2_sensor, RDF.type, BRICK.CO2_Sensor))
 #         g.add((pir_sensor, RDF.type, BRICK.PIR_Sensor))
 #
-# It could be that in our building, we know slightly more abou the temperature sensors: we want
+# It could be that in our building, we know slightly more about the temperature sensors: we want
 # to indicate that the temperature sensors in our building measure in Fahrenheit. We don't
 # want to add that to the *main* BRICK schema, because it isn't true for all temperature
 # sensors. However, we can create our own subclass and attach the property there
@@ -185,6 +185,7 @@ g.add((EX.floor_1, BRICKFRAME.hasPoint, EX.floor_power_meter_1))
 g.add((EX.floor_2, BRICKFRAME.hasPoint, EX.floor_power_meter_2))
 
 # hasPoint is how we associate some sensor with what it measures?
+# TODO: Does the act of associating EX.floor_1 with EX.floor_power_meter_1 using the BRICKFRAME.hasPoint have any recursive qualities?
 
 # TODO: add AHU
 
