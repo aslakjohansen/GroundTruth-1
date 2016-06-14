@@ -2,6 +2,7 @@ TARGETS = \
 	demo_inheritance.txt \
 	demo_list_upstream_heating_elements.txt \
 	demo_temperature_of_hx_prim_in.txt \
+	demo_verb_matching.txt \
 
 all: demos
 
@@ -24,4 +25,7 @@ demo_list_upstream_heating_elements.txt: ./demo_list_upstream_heating_elements s
 
 demo_temperature_of_hx_prim_in.txt: ./demo_temperature_of_hx_prim_in sdu_gtc.ttl
 	./demo_temperature_of_hx_prim_in > demo_temperature_of_hx_prim_in.txt
+
+demo_verb_matching.txt: ./demo_verb_matching
+	./demo_verb_matching > demo_verb_matching.txt
 
