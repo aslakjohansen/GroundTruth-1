@@ -87,10 +87,6 @@
 			 bf:isHierarchical  "";
 			 rdfs:label "SolarPanel"@en .
 
- :Equipment_Water  rdfs:subClassOf   :Equipment;
-			 bf:isHierarchical  "";
-			 rdfs:label "Water"@en .
-
  :HVAC  rdfs:subClassOf   :Equipment;
 			 rdfs:label "HVAC"@en .
 
@@ -906,24 +902,3 @@
 
  :Duration  rdfs:subClassOf   :MeasurementProperty_Modifier;
 			 rdfs:label "Duration"@en .
-
- :CWS  rdfs:subClassOf   :Equipment_Water;
-			 rdfs:label "CWS"@en .
-
- :HWS  rdfs:subClassOf   :Equipment_Water;
-			 rdfs:label "HWS"@en .
-
- :DHWS  rdfs:subClassOf   :Equipment_Water;
-			 rdfs:label "DHWS"@en .
-
- :Weather  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdfs:label "Weather"@en .
-
- :Response  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdfs:label "Response"@en .
-
- :HX  rdfs:subClassOf   :Equipment_HVAC;
-			 rdfs:label "HX"@en .
-
- :FCP  rdfs:subClassOf   :Equipment;
-			 rdfs:label "FCP"@en .
