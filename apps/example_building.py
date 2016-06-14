@@ -308,6 +308,24 @@ print "AHU has %d downstream temperature sensors" % len(res)
 for row in res:
     print row
 
+res = g.query("""
+SELECT ?sensor ?sensor_type ?room
+WHERE {
+    ?sensor_type rdfs:subClassOf brick:Sensor .
+    ?sensor rdf:type ?sensor_type .
+    ?room rdf:type brick:Room .
+    ?sensor bf:isLocatedIn ?room .
+    ?sensor bf:measures ?room .
+
+    { ?sensor_type bf:hasTag brick:Temperature }
+        UNION
+    { ?sensor_type bf:hasTag brick:CO2 }
+        UNION
+    { ?sensor_type bf:hasTag brick:Occupancy }
+}
+""")
+print len(res)
+
 # TODO: add Lighting
 
 # how to save our results to a Turtle file, which Protege can read
