@@ -24,7 +24,7 @@ def main():
 	g = rdflib.Graph()
 	g.bind('GHC', GHC)
 	g.bind('brick', BRICK)
-	g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+#	g.parse('../BuildingSchema/Brick.ttl', format='turtle')
 	count1 = 0
 	count2 = 0
 	changeablemapping = dict()
