@@ -1,14 +1,12 @@
 # Occupancy Modeling
 
-For each room, we want:
-- temperature sensor
-- co2 sensor
-- pir sensor
-- power meter for any equipment in the room
+- For each room, we want:
+  - temperature sensor
+  - co2 sensor
+  - pir sensor
+  - power meter for any equipment in the room
 
-- identify AHU for all zones
 - identify meters for any HVAC equipment
-
 - identify meters for any lighting equipment
 
 ```sql
