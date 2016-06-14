@@ -22,9 +22,9 @@ g.bind( 'rdfs', RDFS)
 g.bind( 'brick', BRICK)
 g.bind( 'bf', BRICKFRAME)
 g.bind( 'btag', BRICKTAG)
-g.parse('../BuildingSchema/BrickV2.ttl', format='turtle')
-g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
-g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+#g.parse('../BuildingSchema/BrickV2.ttl', format='turtle')
+#g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+#g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
 
 # We want to add nodes to the graph for our building. The building exists in its
 # own namespace, which we are calling EX
@@ -71,7 +71,7 @@ res = g.query("""SELECT DISTINCT ?bldg ?floor
 WHERE {
     ?bldg rdf:type brick:Building .
     ?floor rdf:type brick:Floor .
-    ?floor bf:isPartOf ?bldg .
+    ?floor bf:isPartOf+ ?bldg .
 }
 """)
 for row in res:
@@ -292,6 +292,7 @@ g.add((EX.vav_2_1, BRICKFRAME.feeds, EX.hvac_zone_2_1))
 g.add((EX.vav_2_2, BRICKFRAME.feeds, EX.hvac_zone_2_2))
 g.add((EX.vav_2_3, BRICKFRAME.feeds, EX.hvac_zone_2_3))
 
+# all temperature sensors in rooms downstream of an AHU
 res = g.query("""SELECT ?sensor ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
@@ -311,3 +312,4 @@ for row in res:
 
 # how to save our results to a Turtle file, which Protege can read
 g.serialize(destination='example_building.ttl', format='turtle')
+print len(g)
