@@ -1,3 +1,31 @@
+## How to run Queries
+
+Running these queries isn't too bad using the `rdflib` Python library. The gist of the code
+is:
+
+```python
+import rdflib
+
+g = rdflib.Graph()
+g.parse('<your building turtle file>.ttl', format='ttl')
+
+# query goes here
+res = g.query("""
+SELECT ?vav ?room
+WHERE {
+    ?vav rdf:type brick:VAV .
+    ?room rdf:type brick:Room .
+
+    ?vav bf:feeds+ ?zone .
+    ?room bf:isPartOf ?zone .
+}
+""")
+print "Number of results: {0}".format(len(res))
+print "Results:"
+for subject, predicate, object in res:
+    print subject, predicate, object
+```
+
 ## Occupancy Modeling
 
 - For each room, we want:
