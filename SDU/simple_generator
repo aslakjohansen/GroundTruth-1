@@ -479,12 +479,79 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
             output_dampers.append(entity)
     
     ports = {
-        'fb':           fb,
-        'floor':        rooms_data[room_name]['floor'],
-        'radiators':    radiators,
-        'floorheaters': floor_heaters,
-        'inputdampers': input_dampers,
+        'fb':            fb,
+        'floor':         rooms_data[room_name]['floor'],
+        'radiators':     radiators,
+        'floorheaters':  floor_heaters,
+        'inputdampers':  input_dampers,
         'outputdampers': output_dampers,
+    }
+    return ports
+
+def gen_foyer_room (prefix):
+    fb                = GTC[prefix+'/fb']
+    room              = GTC[prefix+'/room']
+    floor_heaters     = []
+    
+    # types
+    g.add( (fb, RDF.type, GTC['GTC_Room_Functional_Block']) )
+    g.add( (room, RDF.type, BRICK['Room']) )
+    
+    # labels
+    g.add( (room, RDFS.label, Literal('1.A.14')) )
+    
+    # partOf
+    g.add( (room, BRICK['partOf'], fb) )
+    
+    # temperature sensor
+    temperature_sensors = ['-01-ZV01-1A14-TR01', '-01-ZV02-1A14-TR01', '-01-ZV03-1A14-TR01']
+    for index in range(len(temperature_sensors)):
+        entity = GTC[prefix+'/temperature/'+str(index)]
+        g.add( (entity, RDF.type, GTC['Celcius_Temperature_Sensor']) )
+        g.add( (entity, RDFS.label, Literal(temperature_sensors[index])) )
+        g.add( (entity, BRICK['partOf'], room) )
+        g.add( (entity, BRICK['measures'], room) )
+    
+    # CO2 sensor
+    co2_sensors = ['-01-ZV01-1A14-CO2', '-01-ZV02-1A14-CO2', '-01-ZV03-1A14-CO2']
+    for index in range(len(co2_sensors)):
+        entity = GTC[prefix+'/co2/'+str(index)]
+        g.add( (entity, RDF.type, GTC['CO2_Sensor']) )
+        g.add( (entity, RDFS.label, Literal(co2_sensors[index])) )
+        g.add( (entity, BRICK['partOf'], room) )
+        g.add( (entity, BRICK['measures'], room) )
+    
+    # floor heaters
+    fh_sensors = [('-01-1F14-MV01', 1), ('-01-ZV01-1A14-MV1-02', 2), ('-01-ZV02-1A14-MV1-03', 3), ('-01-ZV03-1A14-MV1-02', 2)]
+    for sensor_index in range(len(fh_sensors)):
+        for index in range(fh_sensors[sensor_index][1]):
+            entity = GTC[prefix+'/floorheaters/'+str(index)+'-'+str(fh_sensors[sensor_index][1])]
+            g.add( (entity, RDFS.label, Literal(fh_sensors[sensor_index][0])) )
+            g.add( (entity, RDF.type, GTC['FloorHeater']) )
+            g.add( (entity, BRICK['partOf'], room) )
+            floor_heaters.append(entity)
+    
+    # horizontal windows
+    for i in range(6):
+        entity = GTC[prefix+'/horizontal_windows/'+str(index)]
+        g.add( (entity, RDFS.label, Literal('-01-1A14-VI01')) )
+        g.add( (entity, RDF.type, GTC['Horizontal_Window_Actuator']) )
+        g.add( (entity, BRICK['partOf'], room) )
+    
+    # vertical windows
+    for i in range(4):
+        entity = GTC[prefix+'/vertical_windows/'+str(index)]
+        g.add( (entity, RDFS.label, Literal('-01-1A14-VI01')) )
+        g.add( (entity, RDF.type, GTC['Vertical_Window_Actuator']) )
+        g.add( (entity, BRICK['partOf'], room) )
+    
+    ports = {
+        'fb':            fb,
+        'floor':         0,
+        'radiators':     [],
+        'floorheaters':  floor_heaters,
+        'inputdampers':  [],
+        'outputdampers': [],
     }
     return ports
 
@@ -502,6 +569,7 @@ def gen_building (prefix):
     rooms                = {}
     for room_name in rooms_data.keys():
         rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vavs_data)
+    rooms['1.A.14'] = gen_foyer_room(prefix+'/rooms/1.A.14')
     vavs                 = []
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
