@@ -134,3 +134,60 @@ WHERE {
 }""")
 print "-> {0} results".format(len(res))
 print
+
+print "--- Web Displays App ---"
+print "Reheat valve command for VAVs"
+res = g.query("""
+SELECT ?reheat_vlv_cmd ?vav
+WHERE {
+    ?reheat_vlv_cmd rdf:type brick:Reheat_Valve_Command .
+    ?vav rdf:type brick:VAV .
+    ?vav bf:hasPoint+ ?reheat_vlv_cmd .
+}
+""")
+print "-> {0} results".format(len(res))
+print
+
+print "Airflow sensor for all VAVs"
+res = g.query("""
+SELECT ?airflow_sensor ?room ?vav
+WHERE {
+    ?airflow_sensor rdf:type brick:Sensor .
+    ?airflow_sensor bf:hasTag brick:Air .
+    ?airflow_sensor bf:hasTag brick:Flow .
+    ?vav rdf:type brick:VAV .
+    ?room rdf:type brick:Room .
+    { ?airflow_sensor bf:isPartOf ?vav }
+        UNION
+    { ?vav bf:feeds+ ?airflow_sensor }
+}""")
+print "-> {0} results".format(len(res))
+print
+
+print "Associate VAVs to zones and rooms"
+res = g.query("""
+SELECT ?vav ?room
+WHERE {
+    ?vav rdf:type brick:VAV .
+    ?room rdf:type brick:Room .
+    ?vav bf:feeds+ ?zone .
+    ?room bf:isPartOf ?zone .
+}""")
+print "-> {0} results".format(len(res))
+print
+
+print "Find power meters for cooling loop, heating loop"
+res = g.query("""
+SELECT ?equip ?equip_type ?meter
+WHERE {
+    ?equip_type rdfs:subClassOf brick:Equipment .
+    ?equip rdf:type ?equip_type .
+    ?meter rdf:type brick:Power_Meter .
+    ?equip rdfs:subClassOf brick:Water_System .
+    { ?equip bf:hasTag brick:Chilled }
+        UNION
+    { ?equip bf:hasTag brick:Hot }
+    ?meter bf:isPointOf ?equip .
+}""")
+print "-> {0} results".format(len(res))
+print
