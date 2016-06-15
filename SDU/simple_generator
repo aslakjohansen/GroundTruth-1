@@ -200,10 +200,10 @@ def gen_heat_transfer_box (prefix):
 # instantiate a valve with i inputs and j outputs (usually for 3-way valves)
 def gen_ij_valve (prefix, input_count, output_count):
     fb = GTC[prefix+'/fb']
-    i  = map(lambda: index: GTC[prefix+'/port[i-'+str(index)+']'] , range(input_count))
-    ic = map(lambda: index: GTC[prefix+'/port[ic-'+str(index)+']'], range(input_count))
-    o  = map(lambda: index: GTC[prefix+'/port[o-'+str(index)+']'] , range(output_count))
-    oc = map(lambda: index: GTC[prefix+'/port[oc-'+str(index)+']'], range(output_count))
+    i  = map(lambda index: GTC[prefix+'/port[i-'+str(index)+']'] , range(input_count))
+    ic = map(lambda index: GTC[prefix+'/port[ic-'+str(index)+']'], range(input_count))
+    o  = map(lambda index: GTC[prefix+'/port[o-'+str(index)+']'] , range(output_count))
+    oc = map(lambda index: GTC[prefix+'/port[oc-'+str(index)+']'], range(output_count))
     
     # types
     g.add( (fb, RDF.type, GTC['IJ_Valve_Functional_Block']) )
@@ -444,7 +444,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     
     # radiators
     if 'radiators' in rooms_data[room_name] and rooms_data[room_name]['radiators']['count']>0:
-        for index in range(rooms_data[room_name]['radiators']['count'])
+        for index in range(rooms_data[room_name]['radiators']['count']):
             entity = GTC[prefix+'/radiators/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['radiators']['id'])) )
             g.add( (entity, RDF.type, BRICK['Radiator']) )
@@ -453,7 +453,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     
     # floor heaters
     if 'floorheating' in rooms_data[room_name] and rooms_data[room_name]['floorheating']['count']>0:
-        for index in range(rooms_data[room_name]['floorheating']['count'])
+        for index in range(rooms_data[room_name]['floorheating']['count']):
             entity = GTC[prefix+'/floorheaters/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['floorheating']['id'])) )
             g.add( (entity, RDF.type, GTC['FloorHeater']) )
@@ -462,7 +462,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     
     # input dampers
     if 'input dampeners' in rooms_data[room_name] and rooms_data[room_name]['input dampeners']['count']>0:
-        for index in range(rooms_data[room_name]['input dampeners']['count'])
+        for index in range(rooms_data[room_name]['input dampeners']['count']):
             entity = GTC[prefix+'/input_dampers/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['input dampeners']['id'])) )
             g.add( (entity, RDF.type, GTC['Damper']) )
@@ -471,7 +471,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     
     # output dampers
     if 'output dampeners' in rooms_data[room_name] and rooms_data[room_name]['output dampeners']['count']>0:
-        for index in range(rooms_data[room_name]['output dampeners']['count'])
+        for index in range(rooms_data[room_name]['output dampeners']['count']):
             entity = GTC[prefix+'/output_dampers/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['output dampeners']['id'])) )
             g.add( (entity, RDF.type, GTC['Damper']) )
@@ -480,7 +480,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     
     ports = {
         'fb':           fb,
-        'floor':        rooms_data[room_name]['floor']
+        'floor':        rooms_data[room_name]['floor'],
         'radiators':    radiators,
         'floorheaters': floor_heaters,
         'inputdampers': input_dampers,
@@ -500,7 +500,7 @@ def gen_building (prefix):
     building             = GTC[prefix]
     floors               = map(lambda level: GTC[prefix+'/floors/'+str(level)], range(3))
     rooms                = {}
-    for room_name in rooms_data.keys()
+    for room_name in rooms_data.keys():
         rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vav_data)
     vavs                 = []
     for index in range(len(vavs_data)):
