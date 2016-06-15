@@ -179,4 +179,20 @@ WHERE {
     ?vav bf:feeds+ ?zone .
     ?room bf:isPartOf ?zone .
 }
+
+-- find power meters for cooling loop, heating loop
+SELECT ?equip ?equip_type ?meter
+WHERE {
+    ?equip_type rdfs:subClassOf brick:Equipment .
+    ?equip rdf:type ?equip_type .
+    ?meter rdf:type brick:Power_Meter .
+
+    ?equip rdfs:subClassOf brick:Water_System .
+    { ?equip bf:hasTag brick:Chilled }
+        UNION
+    { ?equip bf:hasTag brick:Hot }
+
+    ?meter bf:measures ?equip .
+
+}
 ```
