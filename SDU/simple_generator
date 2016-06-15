@@ -4,6 +4,12 @@ from rdflib import Graph, Namespace, URIRef, Literal
 import rdflib
 import json
 
+"""
+TODO:
+- add media relations
+- find a better name for IJ_Valve_Functional_Block
+"""
+
 ################################################################################
 ############################################################## front matter ####
 ################################################################################
@@ -32,76 +38,298 @@ g.bind('gtc', GTC)
 ################################################################ constructs ####
 ################################################################################
 
-def vav (prefix, data):
-    # actors
-    entity_vav                = GTC[prefix+'/vav']
-    entity_supply_damper      = GTC[prefix+'/supply_damper']
-    entity_return_damper      = GTC[prefix+'/return_damper']
-    entity_supply_pressure    = GTC[prefix+'/supply_pressure']
-    entity_cooling_coil       = GTC[prefix+'/cooling_coil']
-    entity_supply_temperature = GTC[prefix+'/supply_temperature']
-    rooms = map(lambda name: GTC[prefix+'/rooms/'+name], data['rooms'])
-    all_entities = [
-        entity_vav,
-        entity_supply_damper,
-        entity_return_damper,
-        entity_supply_pressure,
-        entity_cooling_coil,
-        entity_supply_temperature,
-    ]
-    media_supply_air = GTC['/media/supply_air']
-    media_return_air = GTC['/media/return_air']
+def gen_extensions():
+    Heat_Power_Meter_Functional_Block = GTC['Heat_Power_Meter_Functional_Block']
+    Heat_Transfer_Box_Functional_Block = GTC['Heat_Transfer_Box_Functional_Block']
+    GTC_VAV_Functional_Block = GTC['GTC_VAV_Functional_Block']
+    IJ_Valve_Functional_Block = GTC['IJ_Valve_Functional_Block']
     
-    # types
-    g.add( (entity_vav               , RDF.type, BRICK['VAV']) )
-    g.add( (entity_supply_damper     , RDF.type, BRICK['Damper']) )
-    g.add( (entity_return_damper     , RDF.type, BRICK['Damper']) )
-    g.add( (entity_supply_pressure   , RDF.type, BRICK['Air_Pressure_Sensor']) )
-    g.add( (entity_cooling_coil      , RDF.type, BRICK['Cooling_Coil']) )
-    g.add( (entity_supply_temperature, RDF.type, BRICK['Temperature_Sensor']) )
-    g.add( (media_supply_air         , RDF.type, BRICK['Supply_Air']) )
-    g.add( (media_return_air         , RDF.type, BRICK['Return_Air']) )
-    
-    # media relationships
-    g.add( (entity_supply_damper     , BRICK['hasTagSet'], media_supply_air) )
-    g.add( (entity_return_damper     , BRICK['hasTagSet'], media_return_air) )
-    g.add( (entity_supply_pressure   , BRICK['hasTagSet'], media_supply_air) )
-    g.add( (entity_cooling_coil      , BRICK['hasTagSet'], media_supply_air) )
-    g.add( (entity_supply_temperature, BRICK['hasTagSet'], media_supply_air) )
-    
-    # feeds relationships
-    g.add( (entity_supply_damper  , BRICK['feeds'], entity_supply_pressure) )
-    g.add( (entity_supply_pressure, BRICK['feeds'], entity_cooling_coil) )
-    g.add( (entity_cooling_coil   , BRICK['feeds'], entity_supply_temperature) )
-    for room in rooms:
-        g.add( (entity_supply_temperature, BRICK['feeds'], room) )
-    for room in rooms:
-        g.add( (room, BRICK['feeds'], entity_return_damper) )
-    
-    # isPartOf relationship
-    for entity in filter(lambda entity: entity!=entity_vav, all_entities):
-        g.add( (entity, BRICK['isPartOf'], entity_vav) )
+    g.add( (Heat_Power_Meter_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (Heat_Transfer_Box_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (GTC_VAV_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (IJ_Valve_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     
 
-def vavs (prefix):
+# instantiate a heat exchanger
+def gen_hx (prefix):
+    fb = GTC[prefix+'/fb']
+    pi = GTC[prefix+'/port[pi]']
+    po = GTC[prefix+'/port[po]']
+    si = GTC[prefix+'/port[si]']
+    so = GTC[prefix+'/port[so]']
+    
+    # types
+    g.add( (fb, RDF.type, BRICK['Heat_Exchanger_Functional_Block']) )
+    g.add( (pi, RDF.type, BRICK['Heat_Exchanger_Primary_Input']) )
+    g.add( (po, RDF.type, BRICK['Heat_Exchanger_Primary_Output']) )
+    g.add( (si, RDF.type, BRICK['Heat_Exchanger_Secondary_Input']) )
+    g.add( (so, RDF.type, BRICK['Heat_Exchanger_Secondary_Output']) )
+    
+    # partOf
+    g.add( (pi, BRICK['partOf'], fb) )
+    g.add( (po, BRICK['partOf'], fb) )
+    g.add( (si, BRICK['partOf'], fb) )
+    g.add( (so, BRICK['partOf'], fb) )
+    
+    ports = {
+        'fb': fb,
+        'pi': pi,
+        'po': po,
+        'si': si,
+        'so': so,
+    }
+    return ports
+
+# instantiate a heating power meter (measures power based on flow and temperature drop)
+def gen_heating_power_meter (prefix):
+    fb          = GTC[prefix+'/fb']
+    s           = GTC[prefix+'/port[supply]']
+    r           = GTC[prefix+'/port[return]']
+    ms          = GTC[prefix+'/port[metered_supply]']
+    mr          = GTC[prefix+'/port[metered_return]']
+    flow        = GTC[prefix+'/flow']
+    supply_temp = GTC[prefix+'/supply_temp']
+    return_temp = GTC[prefix+'/return_temp']
+    power       = GTC[prefix+'/power']
+    
+    # types
+    g.add( (fb, RDF.type, GTC['Heat_Power_Meter_Functional_Block']) )
+    g.add( (s, RDF.type, GTC['Heat_Power_Meter_Supply']) )
+    g.add( (r, RDF.type, GTC['Heat_Power_Meter_Return']) )
+    g.add( (ms, RDF.type, GTC['Heat_Power_Meter_Metered_Supply']) )
+    g.add( (mr, RDF.type, GTC['Heat_Power_Meter_Metered_Return']) )
+    g.add( (flow, RDF.type, GTC['Flow_Sensor']) )
+    g.add( (supply_temp, RDF.type, GTC['Temperature_Sensor']) )
+    g.add( (return_temp, RDF.type, GTC['Temperature_Sensor']) )
+    g.add( (power, RDF.type, GTC['Heating_Power_Calculation']) )
+    
+    # partOf
+    g.add( (s, BRICK['partOf'], fb) )
+    g.add( (r, BRICK['partOf'], fb) )
+    g.add( (ms, BRICK['partOf'], fb) )
+    g.add( (mr, BRICK['partOf'], fb) )
+    g.add( (flow, BRICK['partOf'], fb) )
+    g.add( (supply_temp, BRICK['partOf'], fb) )
+    g.add( (return_temp, BRICK['partOf'], fb) )
+    g.add( (power, BRICK['partOf'], fb) )
+    
+    # feeds
+    g.add( (s, BRICK['feeds'], flow) )
+    g.add( (flow, BRICK['feeds'], supply_temp) )
+    g.add( (supply_temp, BRICK['feeds'], mr) )
+    g.add( (mr, BRICK['feeds'], return_temp) )
+    g.add( (return_temp, BRICK['feeds'], r) )
+    
+    # controls
+    g.add( (flow, BRICK['feeds'], power) )
+    g.add( (supply_temp, BRICK['feeds'], power) )
+    g.add( (return_temp, BRICK['feeds'], power) )
+    
+    ports = {
+        'fb': fb,
+        'supply': s,
+        'return': r,
+        'metered_supply': ms,
+        'metered_return': mr,
+    }
+    return ports
+
+# instantiation of a grouping of a heating power meter, heat exchanger, pump and two temperature sensors
+def gen_heat_transfer_box (prefix):
+    fb          = GTC[prefix+'/fb']
+    pi          = GTC[prefix+'/port[pi]']
+    po          = GTC[prefix+'/port[po]']
+    si          = GTC[prefix+'/port[si]']
+    so          = GTC[prefix+'/port[so]']
+    hpm         = gen_heating_power_meter(prefix+'/hpm')
+    hx          = gen_hx(prefix+'/hx')
+    pump        = GTC[prefix+'/pump']
+    supply_temp = GTC[prefix+'/supply_temp']
+    return_temp = GTC[prefix+'/return_temp']
+    
+    # types
+    g.add( (fb, RDF.type, GTC['Heat_Transfer_Box_Functional_Block']) )
+    g.add( (pi, RDF.type, GTC['Heat_Transfer_Box_Primary_Input']) )
+    g.add( (po, RDF.type, GTC['Heat_Transfer_Box_Primary_Output']) )
+    g.add( (si, RDF.type, GTC['Heat_Transfer_Box_Secondary_Input']) )
+    g.add( (so, RDF.type, GTC['Heat_Transfer_Box_Secondary_Output']) )
+    g.add( (pump, RDF.type, GTC['Pump']) )
+    g.add( (supply_temp, RDF.type, GTC['Temperature_Sensor']) )
+    g.add( (return_temp, RDF.type, GTC['Temperature_Sensor']) )
+    
+    # partOf
+    g.add( (pi, BRICK['partOf'], fb) )
+    g.add( (po, BRICK['partOf'], fb) )
+    g.add( (si, BRICK['partOf'], fb) )
+    g.add( (so, BRICK['partOf'], fb) )
+    g.add( (hpm['bf'], BRICK['partOf'], fb) )
+    g.add( (hx['bf'], BRICK['partOf'], fb) )
+    g.add( (pump, BRICK['partOf'], fb) )
+    g.add( (supply_temp, BRICK['partOf'], fb) )
+    g.add( (return_temp, BRICK['partOf'], fb) )
+    
+    # feeds
+    g.add( (pi, BRICK['feeds'], hpm['pi']) )
+    g.add( (hpm['so'], BRICK['feeds'], hx['pi']) )
+    g.add( (hx['po'], BRICK['feeds'], hpm['si']) )
+    g.add( (hpm['po'], BRICK['feeds'], po) )
+    g.add( (so, BRICK['feeds'], return_temp) )
+    g.add( (return_temp, BRICK['feeds'], hx['si']) )
+    g.add( (hx['so'], BRICK['feeds'], pump) )
+    g.add( (pump, BRICK['feeds'], supply_temp) )
+    g.add( (supply_temp, BRICK['feeds'], so) )
+    
+    ports = {
+        'fb': fb,
+        'pi': pi,
+        'po': po,
+        'si': si,
+        'so': so,
+    }
+    return ports
+
+# instantiate a valve with i inputs and j outputs (usually for 3-way valves)
+def gen_ij_valve (prefix, input_count, output_count):
+    fb = GTC[prefix+'/fb']
+    i  = map(lambda: index: GTC[prefix+'/port[i-'+str(index)+']'] , range(input_count))
+    ic = map(lambda: index: GTC[prefix+'/port[ic-'+str(index)+']'], range(input_count))
+    o  = map(lambda: index: GTC[prefix+'/port[o-'+str(index)+']'] , range(output_count))
+    oc = map(lambda: index: GTC[prefix+'/port[oc-'+str(index)+']'], range(output_count))
+    
+    # types
+    g.add( (fb, RDF.type, GTC['IJ_Valve_Functional_Block']) )
+    for entity in i:
+        g.add( (entity, RDF.type, GTC['IJ_Valve_Input']) )
+    for entity in ic:
+        g.add( (entity, RDF.type, GTC['IJ_Valve_Input_control']) )
+    for entity in o:
+        g.add( (entity, RDF.type, GTC['IJ_Valve_Output']) )
+    for entity in oc:
+        g.add( (entity, RDF.type, GTC['IJ_Valve_Output_control']) )
+    
+    # partOf
+    for entity in i+ic+o+oc:
+        g.add( (entity, BRICK['partOf'], fb) )
+    
+    # feeds
+    for index in range(input_count):
+        g.add( (i[index], BRICK['feeds'], ic[index]) )
+    for input_index in range(input_count):
+        for output_index in range(output_count):
+            g.add( (ic[input_index], BRICK['feeds'], oc[output_index]) )
+    for index in range(output_count):
+        g.add( (oc[index], BRICK['feeds'], o[index]) )
+    
+    ports = {
+        'fb': fb,
+        'i':  i, # input
+        'ic': c, # inout control
+        'o':  o, # output
+        'ic': c, # output control
+    }
+    return ports
+
+def gen_vav (prefix):
+    fb              = GTC[prefix+'/fb']
+    ui              = GTC[prefix+'/port[ui]']
+    uo              = GTC[prefix+'/port[uo]']
+    di              = GTC[prefix+'/port[di]']
+    do              = GTC[prefix+'/port[do]']
+    ci              = GTC[prefix+'/port[ci]']
+    co              = GTC[prefix+'/port[co]']
+    hx              = gen_hx(prefix+'/hx')
+    controller      = GTC[prefix+'/controller']
+    supply_damper   = GTC[prefix+'/supply_damper']
+    return_damper   = GTC[prefix+'/return_damper']
+    upstream_temp   = GTC[prefix+'/upstream_temp']
+    downstream_temp = GTC[prefix+'/downstream_temp']
+    cooled_flow     = GTC[prefix+'/cooled_flow']
+    cooled_valve    = gen_hx(prefix+'/cooled_valve', 2, 1)
+    
+    # types
+    g.add( (fb, RDF.type, GTC['GTC_VAV_Functional_Block']) )
+    g.add( (ui, RDF.type, GTC['GTC_VAV_Upstream_Input']) )
+    g.add( (uo, RDF.type, GTC['GTC_VAV_Upstream_Output']) )
+    g.add( (di, RDF.type, GTC['GTC_VAV_Downstream_Input']) )
+    g.add( (do, RDF.type, GTC['GTC_VAV_Downstream_Output']) )
+    g.add( (ci, RDF.type, GTC['GTC_VAV_Cooled_input']) )
+    g.add( (co, RDF.type, GTC['GTC_VAV_Cooled_Output']) )
+    g.add( (controller, RDF.type, GTC['Controller']) )
+    g.add( (supply_damper, RDF.type, GTC['Damper']) )
+    g.add( (return_damper, RDF.type, GTC['Damper']) )
+    g.add( (upstream_temp, RDF.type, GTC['Temperature_Sensor']) )
+    g.add( (downstream_temp, RDF.type, GTC['Temperature_Sensor']) )
+    g.add( (cooled_flow, RDF.type, GTC['Flow_Meter']) )
+    
+    # partOf
+    g.add( (ui, BRICK['partOf'], fb) )
+    g.add( (uo, BRICK['partOf'], fb) )
+    g.add( (di, BRICK['partOf'], fb) )
+    g.add( (do, BRICK['partOf'], fb) )
+    g.add( (ci, BRICK['partOf'], fb) )
+    g.add( (co, BRICK['partOf'], fb) )
+    g.add( (hx['bf'], BRICK['partOf'], fb) )
+    g.add( (controller, BRICK['partOf'], fb) )
+    g.add( (supply_damper, BRICK['partOf'], fb) )
+    g.add( (return_damper, BRICK['partOf'], fb) )
+    g.add( (upstream_temp, BRICK['partOf'], fb) )
+    g.add( (downstream_temp, BRICK['partOf'], fb) )
+    g.add( (cooled_flow, BRICK['partOf'], fb) )
+    g.add( (cooled_valve['fb'], BRICK['partOf'], fb) )
+    
+    # feeds
+    g.add( (ui, BRICK['feeds'], supply_damper) )
+    g.add( (supply_damper, BRICK['feeds'], upstream_temp) )
+    g.add( (upstream_temp, BRICK['feeds'], hx['si']) )
+    g.add( (hx['so'], BRICK['feeds'], downstream_temp) )
+    g.add( (downstream_temp, BRICK['feeds'], do) )
+    g.add( (di, BRICK['feeds'], return_damper) )
+    g.add( (return_damper, BRICK['feeds'], uo) )
+    g.add( (cooled_input, BRICK['feeds'], cooled_flow) )
+    g.add( (cooled_flow, BRICK['feeds'], hx['pi']) )
+    g.add( (hx['po'], BRICK['feeds'], cooled_valve['i'][0]) )
+    g.add( (cooled_valve['o'][0], BRICK['feeds'], co) )
+    g.add( (cooled_flow, BRICK['feeds'], cooled_valve['i'][1]) )
+    
+    # controls
+    g.add( (upstream_temp, BRICK['controls'], controller) )
+    g.add( (controller, BRICK['controls'], supply_damper) )
+    g.add( (controller, BRICK['controls'], return_damper) )
+    
+    ports = {
+        'fb': fb,
+        'ui': pi, # upstream input
+        'uo': po, # upstream output
+        'di': si, # downstream input
+        'do': so, # downstream output
+        'ci': pi, # cooled input
+        'co': po, # cooled output
+    }
+    return ports
+
+
+def gen_vavs (prefix):
     with open('gtc_vavs.json') as fo:
         vavs_data = json.loads(''.join(fo.readlines()))
     
     for i in range(len(vavs_data)):
         vav_data = vavs_data[i]
-        vav(prefix+'/'+str(i), vav_data)
+        gen_vav(prefix+'/'+str(i), vav_data)
 
-def building (prefix):
-    vavs(prefix+'/vavs')
+def gen_building (prefix):
+    vavs = gen_vavs(prefix+'/vavs')
 
 ################################################################################
 ###################################################################### main ####
 ################################################################################
 
+
 prefix = 'building:gtc'
 
+gen_extensions()
+
 # building
-b = building(prefix)
+b = gen_building(prefix)
 
 ################################################################################
 ############################################################### back matter ####
