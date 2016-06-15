@@ -25,7 +25,7 @@ def new_graph():
 
 g = new_graph()
 g.parse(sys.argv[1], format='turtle')
-print "---Occupancy Modeling App---"
+print "--- Occupancy Modeling App ---"
 print "Finding Temp, CO2, Occ sensors in all rooms"
 res = g.query("""
 SELECT ?sensor ?sensor_type ?room
@@ -86,6 +86,51 @@ WHERE {
     { ?equipment bf:feeds+ ?zone }
         UNION
     { ?equipment bf:feeds+ ?room }
+}""")
+print "-> {0} results".format(len(res))
+print
+
+print "--- Energy Apportionment App ---"
+print "Find Occ sensors in all rooms"
+res = g.query("""
+SELECT ?sensor ?room
+WHERE {
+    ?sensor_type rdfs:subClassOf brick:Sensor .
+    ?sensor_type bf:hasTag brick:Occupancy .
+    ?sensor rdf:type ?sensor_type .
+    ?room rdf:type brick:Room .
+    ?sensor bf:isLocatedIn ?room .
+    ?sensor bf:isPointOf ?room .
+}""")
+print "-> {0} results".format(len(res))
+print
+
+print "Find lux sensors in rooms"
+res = g.query("""
+SELECT ?sensor ?room
+WHERE {
+    ?sensor_type rdfs:subClassOf brick:Sensor .
+    ?sensor_type bf:hasTag brick:Illumination .
+    ?sensor rdf:type ?sensor_type .
+    ?room rdf:type brick:Room .
+    ?sensor bf:isLocatedIn ?room .
+    ?sensor bf:isPointOf ?room .
+}""")
+print "-> {0} results".format(len(res))
+print
+
+print "Find lighting/hvac equipment (e.g. desk lamps) rooms"
+res = g.query("""
+SELECT ?equipment ?room
+WHERE {
+    ?equipment rdf:type brick:Equipment .
+    ?room rdf:type brick:Room .
+
+    ?equipment bf:isLocatedIn ?room .
+
+    { ?equipment bf:hasTag brick:Lighting }
+    UNION
+    { ?equipment bf:hasTag brick:HVAC }
 }""")
 print "-> {0} results".format(len(res))
 print
