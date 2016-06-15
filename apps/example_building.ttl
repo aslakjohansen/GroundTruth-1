@@ -9,95 +9,95 @@
 
 ex:co2_sensor_1 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_1 ;
-    bf:measures ex:room_1_1 .
+    bf:isPointOf ex:room_1_1 .
 
 ex:co2_sensor_2 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_2 ;
-    bf:measures ex:room_1_2 .
+    bf:isPointOf ex:room_1_2 .
 
 ex:co2_sensor_3 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_3 ;
-    bf:measures ex:room_1_3 .
+    bf:isPointOf ex:room_1_3 .
 
 ex:co2_sensor_4 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_4 ;
-    bf:measures ex:room_1_4 .
+    bf:isPointOf ex:room_1_4 .
 
 ex:co2_sensor_5 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_1 ;
-    bf:measures ex:room_2_1 .
+    bf:isPointOf ex:room_2_1 .
 
 ex:co2_sensor_6 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_2 ;
-    bf:measures ex:room_2_2 .
+    bf:isPointOf ex:room_2_2 .
 
 ex:co2_sensor_7 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_3 ;
-    bf:measures ex:room_2_3 .
+    bf:isPointOf ex:room_2_3 .
 
 ex:co2_sensor_8 a ex:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_4 ;
-    bf:measures ex:room_2_4 .
+    bf:isPointOf ex:room_2_4 .
 
 ex:pir_sensor_1 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_1_1 ;
-    bf:measures ex:room_1_1 .
+    bf:isPointOf ex:room_1_1 .
 
 ex:pir_sensor_2 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_1_2 ;
-    bf:measures ex:room_1_2 .
+    bf:isPointOf ex:room_1_2 .
 
 ex:pir_sensor_3 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_1_3 ;
-    bf:measures ex:room_1_3 .
+    bf:isPointOf ex:room_1_3 .
 
 ex:pir_sensor_4 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_1_4 ;
-    bf:measures ex:room_1_4 .
+    bf:isPointOf ex:room_1_4 .
 
 ex:pir_sensor_5 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_2_1 ;
-    bf:measures ex:room_2_1 .
+    bf:isPointOf ex:room_2_1 .
 
 ex:pir_sensor_6 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_2_2 ;
-    bf:measures ex:room_2_2 .
+    bf:isPointOf ex:room_2_2 .
 
 ex:pir_sensor_7 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_2_3 ;
-    bf:measures ex:room_2_3 .
+    bf:isPointOf ex:room_2_3 .
 
 ex:temp_sensor_1 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_1_1 ;
-    bf:measures ex:room_1_1 .
+    bf:isPointOf ex:room_1_1 .
 
 ex:temp_sensor_2 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_1_2 ;
-    bf:measures ex:room_1_2 .
+    bf:isPointOf ex:room_1_2 .
 
 ex:temp_sensor_3 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_1_3 ;
-    bf:measures ex:room_1_3 .
+    bf:isPointOf ex:room_1_3 .
 
 ex:temp_sensor_4 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_1_4 ;
-    bf:measures ex:room_1_4 .
+    bf:isPointOf ex:room_1_4 .
 
 ex:temp_sensor_5 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_2_1 ;
-    bf:measures ex:room_2_1 .
+    bf:isPointOf ex:room_2_1 .
 
 ex:temp_sensor_6 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_2_2 ;
-    bf:measures ex:room_2_2 .
+    bf:isPointOf ex:room_2_2 .
 
 ex:temp_sensor_7 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_2_3 ;
-    bf:measures ex:room_2_3 .
+    bf:isPointOf ex:room_2_3 .
 
 ex:temp_sensor_8 a ex:Fahrenheit_Temperature_Sensor ;
     bf:isLocatedIn ex:room_2_4 ;
-    bf:measures ex:room_2_4 .
+    bf:isPointOf ex:room_2_4 .
 
 ex:ahu_1 a brick:AHU ;
     bf:feeds ex:vav_1_1,
@@ -133,8 +133,7 @@ ex:hvac_zone_2_3 a brick:HVAC_Zone ;
 
 ex:pir_sensor_8 a ex:PIR_Sensor ;
     bf:isLocatedIn ex:room_2_4 ;
-    bf:isPointOf ex:room_2_4 ;
-    bf:measures ex:room_2_4 .
+    bf:isPointOf ex:room_2_4 .
 
 ex:vav_1_1 a brick:VAV ;
     bf:feeds ex:hvac_zone_1_1 .

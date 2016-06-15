@@ -180,14 +180,14 @@ g.add((EX.temp_sensor_5, BRICKFRAME.isLocatedIn, EX.room_2_1))
 g.add((EX.temp_sensor_6, BRICKFRAME.isLocatedIn, EX.room_2_2))
 g.add((EX.temp_sensor_7, BRICKFRAME.isLocatedIn, EX.room_2_3))
 g.add((EX.temp_sensor_8, BRICKFRAME.isLocatedIn, EX.room_2_4))
-g.add((EX.temp_sensor_1, BRICKFRAME.measures, EX.room_1_1))
-g.add((EX.temp_sensor_2, BRICKFRAME.measures, EX.room_1_2))
-g.add((EX.temp_sensor_3, BRICKFRAME.measures, EX.room_1_3))
-g.add((EX.temp_sensor_4, BRICKFRAME.measures, EX.room_1_4))
-g.add((EX.temp_sensor_5, BRICKFRAME.measures, EX.room_2_1))
-g.add((EX.temp_sensor_6, BRICKFRAME.measures, EX.room_2_2))
-g.add((EX.temp_sensor_7, BRICKFRAME.measures, EX.room_2_3))
-g.add((EX.temp_sensor_8, BRICKFRAME.measures, EX.room_2_4))
+g.add((EX.temp_sensor_1, BRICKFRAME.isPointOf, EX.room_1_1))
+g.add((EX.temp_sensor_2, BRICKFRAME.isPointOf, EX.room_1_2))
+g.add((EX.temp_sensor_3, BRICKFRAME.isPointOf, EX.room_1_3))
+g.add((EX.temp_sensor_4, BRICKFRAME.isPointOf, EX.room_1_4))
+g.add((EX.temp_sensor_5, BRICKFRAME.isPointOf, EX.room_2_1))
+g.add((EX.temp_sensor_6, BRICKFRAME.isPointOf, EX.room_2_2))
+g.add((EX.temp_sensor_7, BRICKFRAME.isPointOf, EX.room_2_3))
+g.add((EX.temp_sensor_8, BRICKFRAME.isPointOf, EX.room_2_4))
 
 g.add((EX.co2_sensor_1, BRICKFRAME.isLocatedIn, EX.room_1_1))
 g.add((EX.co2_sensor_2, BRICKFRAME.isLocatedIn, EX.room_1_2))
@@ -197,14 +197,14 @@ g.add((EX.co2_sensor_5, BRICKFRAME.isLocatedIn, EX.room_2_1))
 g.add((EX.co2_sensor_6, BRICKFRAME.isLocatedIn, EX.room_2_2))
 g.add((EX.co2_sensor_7, BRICKFRAME.isLocatedIn, EX.room_2_3))
 g.add((EX.co2_sensor_8, BRICKFRAME.isLocatedIn, EX.room_2_4))
-g.add((EX.co2_sensor_1, BRICKFRAME.measures, EX.room_1_1))
-g.add((EX.co2_sensor_2, BRICKFRAME.measures, EX.room_1_2))
-g.add((EX.co2_sensor_3, BRICKFRAME.measures, EX.room_1_3))
-g.add((EX.co2_sensor_4, BRICKFRAME.measures, EX.room_1_4))
-g.add((EX.co2_sensor_5, BRICKFRAME.measures, EX.room_2_1))
-g.add((EX.co2_sensor_6, BRICKFRAME.measures, EX.room_2_2))
-g.add((EX.co2_sensor_7, BRICKFRAME.measures, EX.room_2_3))
-g.add((EX.co2_sensor_8, BRICKFRAME.measures, EX.room_2_4))
+g.add((EX.co2_sensor_1, BRICKFRAME.isPointOf, EX.room_1_1))
+g.add((EX.co2_sensor_2, BRICKFRAME.isPointOf, EX.room_1_2))
+g.add((EX.co2_sensor_3, BRICKFRAME.isPointOf, EX.room_1_3))
+g.add((EX.co2_sensor_4, BRICKFRAME.isPointOf, EX.room_1_4))
+g.add((EX.co2_sensor_5, BRICKFRAME.isPointOf, EX.room_2_1))
+g.add((EX.co2_sensor_6, BRICKFRAME.isPointOf, EX.room_2_2))
+g.add((EX.co2_sensor_7, BRICKFRAME.isPointOf, EX.room_2_3))
+g.add((EX.co2_sensor_8, BRICKFRAME.isPointOf, EX.room_2_4))
 
 g.add((EX.pir_sensor_1, BRICKFRAME.isLocatedIn, EX.room_1_1))
 g.add((EX.pir_sensor_2, BRICKFRAME.isLocatedIn, EX.room_1_2))
@@ -214,14 +214,14 @@ g.add((EX.pir_sensor_5, BRICKFRAME.isLocatedIn, EX.room_2_1))
 g.add((EX.pir_sensor_6, BRICKFRAME.isLocatedIn, EX.room_2_2))
 g.add((EX.pir_sensor_7, BRICKFRAME.isLocatedIn, EX.room_2_3))
 g.add((EX.pir_sensor_8, BRICKFRAME.isLocatedIn, EX.room_2_4))
-g.add((EX.pir_sensor_1, BRICKFRAME.measures, EX.room_1_1))
-g.add((EX.pir_sensor_2, BRICKFRAME.measures, EX.room_1_2))
-g.add((EX.pir_sensor_3, BRICKFRAME.measures, EX.room_1_3))
-g.add((EX.pir_sensor_4, BRICKFRAME.measures, EX.room_1_4))
-g.add((EX.pir_sensor_5, BRICKFRAME.measures, EX.room_2_1))
-g.add((EX.pir_sensor_6, BRICKFRAME.measures, EX.room_2_2))
-g.add((EX.pir_sensor_7, BRICKFRAME.measures, EX.room_2_3))
-g.add((EX.pir_sensor_8, BRICKFRAME.measures, EX.room_2_4))
+g.add((EX.pir_sensor_1, BRICKFRAME.isPointOf, EX.room_1_1))
+g.add((EX.pir_sensor_2, BRICKFRAME.isPointOf, EX.room_1_2))
+g.add((EX.pir_sensor_3, BRICKFRAME.isPointOf, EX.room_1_3))
+g.add((EX.pir_sensor_4, BRICKFRAME.isPointOf, EX.room_1_4))
+g.add((EX.pir_sensor_5, BRICKFRAME.isPointOf, EX.room_2_1))
+g.add((EX.pir_sensor_6, BRICKFRAME.isPointOf, EX.room_2_2))
+g.add((EX.pir_sensor_7, BRICKFRAME.isPointOf, EX.room_2_3))
+g.add((EX.pir_sensor_8, BRICKFRAME.isPointOf, EX.room_2_4))
 #TODO: do we *ALSO* use "hasPoint" here?, or conversely isPointOf?
 # these two lines are equivalent
 g.add((EX.pir_sensor_8, BRICKFRAME.isPointOf, EX.room_2_4))
@@ -301,7 +301,7 @@ WHERE {
     ?ahu rdf:type brick:AHU .
     ?ahu bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
-    ?sensor bf:measures ?room .
+    ?sensor bf:isPointOf ?room .
 }
 """)
 print "AHU has %d downstream temperature sensors" % len(res)
@@ -315,7 +315,7 @@ WHERE {
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
-    ?sensor bf:measures ?room .
+    ?sensor bf:isPointOf ?room .
 
     { ?sensor_type bf:hasTag brick:Temperature }
         UNION
