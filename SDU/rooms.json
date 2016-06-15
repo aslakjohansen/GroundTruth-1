@@ -435,13 +435,13 @@
         "floor": 0,
         "side": "N"
     },
-    "1.J.11": {
-        "tr1": "-01-ZVNØ-1J11-TR01",
-        "co2": "-01-ZVNØ-1J11-CO2",
-        "pir": "-01-ZVNØ-1J11-PIR",
+    "1.J.13": {
+        "tr1": "-01-ZVNØ-1J13-TR01",
+        "co2": "-01-ZVNØ-1J13-CO2",
+        "pir": "-01-ZVNØ-1J13-PIR",
         "radiators": {
             "count": 1,
-            "id": "-01-ZVNØ-1J11-MV01"
+            "id": "-01-ZVNØ-1J13-MV01"
         },
         "floorheating": {
             "count": 0,
@@ -449,11 +449,11 @@
         },
         "input dampeners": {
             "count": 1,
-            "id": "-01-ZVNØ-1J11-MSI"
+            "id": "-01-ZVNØ-1J13-MSI"
         },
         "output dampeners": {
             "count": 1,
-            "id": "-01-ZVNØ-1J11-MSU"
+            "id": "-01-ZVNØ-1J13-MSU"
         },
         "zone": 4,
         "floor": 0,
@@ -557,7 +557,7 @@
         "floor": 1,
         "side": "N"
     },
-    "2.F.6a": {
+    "2.F.6A": {
         "tr1": "-02-ZVNV-2F6a-TR01",
         "co2": "-02-ZVNV-2F6a-CO2",
         "pir": "-02-ZVNV-2F6a-PIR",
@@ -606,7 +606,7 @@
         "floor": 1,
         "side": "S"
     },
-    "2.A.22a": {
+    "2.A.22A": {
         "tr1": "-02-ZVNV-2A22a-TR01",
         "co2": "-02-ZVNV-2A22a-CO2",
         "pir": "-02-ZVNV-2A22a-PIR",
@@ -630,7 +630,7 @@
         "floor": 1,
         "side": "S"
     },
-    "2.A.22b": {
+    "2.A.22B": {
         "tr1": "",
         "co2": "",
         "pir": "",
@@ -726,7 +726,7 @@
         "floor": 1,
         "side": "S"
     },
-    "2.I.18a": {
+    "2.I.18A": {
         "tr1": "-02-ZVNV-2I18a-TR01",
         "co2": "-02-ZVNV-2I18a-CO2",
         "pir": "-02-ZVNV-2I18a-PIR",
@@ -750,7 +750,7 @@
         "floor": 1,
         "side": "S"
     },
-    "2.I.18b": {
+    "2.I.18B": {
         "tr1": "",
         "co2": "",
         "pir": "",
@@ -798,7 +798,7 @@
         "floor": 1,
         "side": "S"
     },
-    "2.F.6b": {
+    "2.F.6B": {
         "tr1": "-02-ZVNV-2F6b-TR01",
         "co2": "-02-ZVNV-2F6b-CO2",
         "pir": "-02-ZVNV-2F6b-PIR",
@@ -822,7 +822,7 @@
         "floor": 1,
         "side": "N"
     },
-    "2.H.1a": {
+    "2.H.1A": {
         "tr1": "-02-ZVNV-2H1a-TR01",
         "co2": "-02-ZVNV-2H1a-CO2",
         "pir": "-02-ZVNV-2H1a-PIR",
@@ -846,7 +846,7 @@
         "floor": 1,
         "side": "N"
     },
-    "2.H.1b": {
+    "2.H.1B": {
         "tr1": "",
         "co2": "",
         "pir": "",
@@ -1305,7 +1305,7 @@
         "floor": 2,
         "side": "N"
     },
-    "3.I.1_(fælleskontor)": {
+    "3.I.1": {
         "tr1": "-02-ZVNV-3I1-TR01",
         "co2": "-02-ZVNV-3I1-CO2",
         "pir": "-02-ZVNV-3I1-PIR",
@@ -1327,9 +1327,10 @@
         },
         "zone": 4,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "note": "removed '_(fælleskontor)' from the room name to get a match with other files"
     },
-    "3.F.6_B": {
+    "3.J.11": {
         "tr1": "-02-ZVNV-3J11-TR01",
         "co2": "-02-ZVNV-3J11-CO2",
         "pir": "-02-ZVNV-3J11-PIR",
@@ -1352,9 +1353,9 @@
         "zone": 4,
         "floor": 2,
         "side": "N",
-        "note": "id's indicate that this room should have been called 3.J.11"
+        "note": "name changed from 3.F.6_B as id's indicate that this room should have been called 3.J.11"
     },
-    "3.H.1": {
+    "3.J.13": {
         "tr1": "-02-ZVNV-3J13-TR01",
         "co2": "-02-ZVNV-3J13-CO2",
         "pir": "-02-ZVNV-3J13-PIR",
@@ -1377,7 +1378,7 @@
         "zone": 4,
         "floor": 2,
         "side": "N",
-        "note": "id's indicate that this room should have been called 3.J.13"
+        "note": "name changed from 3.H.1 as id's indicate that this room should have been called 3.J.13"
     },
     
     "1.E.5Gang": {

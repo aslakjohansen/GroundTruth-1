@@ -171,17 +171,17 @@ def gen_heat_transfer_box (prefix):
     g.add( (po, BRICK['partOf'], fb) )
     g.add( (si, BRICK['partOf'], fb) )
     g.add( (so, BRICK['partOf'], fb) )
-    g.add( (hpm['bf'], BRICK['partOf'], fb) )
-    g.add( (hx['bf'], BRICK['partOf'], fb) )
+    g.add( (hpm['fb'], BRICK['partOf'], fb) )
+    g.add( (hx['fb'], BRICK['partOf'], fb) )
     g.add( (pump, BRICK['partOf'], fb) )
     g.add( (supply_temp, BRICK['partOf'], fb) )
     g.add( (return_temp, BRICK['partOf'], fb) )
     
     # feeds
-    g.add( (pi, BRICK['feeds'], hpm['pi']) )
-    g.add( (hpm['so'], BRICK['feeds'], hx['pi']) )
-    g.add( (hx['po'], BRICK['feeds'], hpm['si']) )
-    g.add( (hpm['po'], BRICK['feeds'], po) )
+    g.add( (pi, BRICK['feeds'], hpm['supply']) )
+    g.add( (hpm['metered_supply'], BRICK['feeds'], hx['pi']) )
+    g.add( (hx['po'], BRICK['feeds'], hpm['metered_return']) )
+    g.add( (hpm['return'], BRICK['feeds'], po) )
     g.add( (so, BRICK['feeds'], return_temp) )
     g.add( (return_temp, BRICK['feeds'], hx['si']) )
     g.add( (hx['so'], BRICK['feeds'], pump) )
@@ -274,7 +274,7 @@ def gen_vav (prefix, data):
     g.add( (supply_damper  , RDFS.label, Literal(data['supply valve'])) )
     g.add( (return_damper  , RDFS.label, Literal(data['return valve'])) )
     g.add( (upstream_pres  , RDFS.label, Literal(data['supply pressure'])) )
-    g.add( (hx['fb']       , RDFS.label, Literal(data['cooling_coil'])) )
+    g.add( (hx['fb']       , RDFS.label, Literal(data['cooling coil'])) )
     g.add( (downstream_temp, RDFS.label, Literal(data['supply temperature'])) )
     
     # partOf
@@ -284,7 +284,7 @@ def gen_vav (prefix, data):
     g.add( (do, BRICK['partOf'], fb) )
     g.add( (ci, BRICK['partOf'], fb) )
     g.add( (co, BRICK['partOf'], fb) )
-    g.add( (hx['bf'], BRICK['partOf'], fb) )
+    g.add( (hx['fb'], BRICK['partOf'], fb) )
     g.add( (controller, BRICK['partOf'], fb) )
     g.add( (supply_damper, BRICK['partOf'], fb) )
     g.add( (return_damper, BRICK['partOf'], fb) )
@@ -301,16 +301,16 @@ def gen_vav (prefix, data):
     g.add( (downstream_temp, BRICK['feeds'], do) )
     g.add( (di, BRICK['feeds'], return_damper) )
     g.add( (return_damper, BRICK['feeds'], uo) )
-    g.add( (cooled_input, BRICK['feeds'], cooled_flow) )
+    g.add( (ci, BRICK['feeds'], cooled_flow) )
     g.add( (cooled_flow, BRICK['feeds'], hx['pi']) )
     g.add( (hx['po'], BRICK['feeds'], cooled_valve['i'][0]) )
     g.add( (cooled_valve['o'][0], BRICK['feeds'], co) )
     g.add( (cooled_flow, BRICK['feeds'], cooled_valve['i'][1]) )
     
     # controls
-    g.add( (upstream_temp, BRICK['controls'], controller) )
-    g.add( (controller, BRICK['controls'], supply_damper) )
-    g.add( (controller, BRICK['controls'], return_damper) )
+    g.add( (upstream_pres, BRICK['controls'], controller) )
+    g.add( (controller   , BRICK['controls'], supply_damper) )
+    g.add( (controller   , BRICK['controls'], return_damper) )
     
     ports = {
         'fb': fb,
@@ -318,8 +318,8 @@ def gen_vav (prefix, data):
         'uo': uo, # upstream output
         'di': di, # downstream input
         'do': do, # downstream output
-        'ci': pi, # cooled input
-        'co': po, # cooled output
+        'ci': ci, # cooled input
+        'co': co, # cooled output
     }
     return ports
 
