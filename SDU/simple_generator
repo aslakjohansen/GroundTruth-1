@@ -231,10 +231,10 @@ def gen_ij_valve (prefix, input_count, output_count):
     
     ports = {
         'fb': fb,
-        'i':  i, # input
-        'ic': c, # inout control
-        'o':  o, # output
-        'ic': c, # output control
+        'i':  i,  # input
+        'ic': ic, # inout control
+        'o':  o,  # output
+        'ic': oc, # output control
     }
     return ports
 
@@ -253,7 +253,7 @@ def gen_vav (prefix, data):
     upstream_pres   = GTC[prefix+'/upstream_pres']
     downstream_temp = GTC[prefix+'/downstream_temp']
     cooled_flow     = GTC[prefix+'/cooled_flow']
-    cooled_valve    = gen_hx(prefix+'/cooled_valve', 2, 1)
+    cooled_valve    = gen_ij_valve(prefix+'/cooled_valve', 2, 1)
     
     # types
     g.add( (fb, RDF.type, GTC['GTC_VAV_Functional_Block']) )
@@ -404,7 +404,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     fb                = GTC[prefix+'/fb']
     room              = GTC[prefix+'/room']
     radiators         = []
-    floorheaters      = []
+    floor_heaters     = []
     input_dampers     = []
     output_dampers    = []
     
@@ -501,7 +501,7 @@ def gen_building (prefix):
     floors               = map(lambda level: GTC[prefix+'/floors/'+str(level)], range(3))
     rooms                = {}
     for room_name in rooms_data.keys():
-        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vav_data)
+        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vavs_data)
     vavs                 = []
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
