@@ -43,11 +43,15 @@ def gen_extensions():
     Heat_Transfer_Box_Functional_Block = GTC['Heat_Transfer_Box_Functional_Block']
     GTC_VAV_Functional_Block = GTC['GTC_VAV_Functional_Block']
     IJ_Valve_Functional_Block = GTC['IJ_Valve_Functional_Block']
+    GTC_Filter_Element_Functional_Block = GTC['GTC_Filter_Element_Functional_Block']
+    DPT_Functional_Block = GTC['DPT_Functional_Block']
     
     g.add( (Heat_Power_Meter_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     g.add( (Heat_Transfer_Box_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     g.add( (GTC_VAV_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     g.add( (IJ_Valve_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (GTC_Filter_Element_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (DPT_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     
 
 # instantiate a heat exchanger
@@ -307,17 +311,85 @@ def gen_vav (prefix):
     }
     return ports
 
-
-def gen_vavs (prefix):
-    with open('gtc_vavs.json') as fo:
-        vavs_data = json.loads(''.join(fo.readlines()))
+# instantiate a differential pressure transmitter
+def gen_dpt (prefix):
+    fb = GTC[prefix+'/fb']
+    u  = GTC[prefix+'/port[u]']
+    d  = GTC[prefix+'/port[d]']
+    o  = GTC[prefix+'/port[o]']
+    t  = GTC[prefix+'/transmitter']
     
-    for i in range(len(vavs_data)):
-        vav_data = vavs_data[i]
-        gen_vav(prefix+'/'+str(i), vav_data)
+    # types
+    g.add( (fb, RDF.type, GTC['DPT_Functional_Block']) )
+    g.add( (u, RDF.type, GTC['DPT_Upstream_Input']) )
+    g.add( (d, RDF.type, GTC['DPT_Downstream_Input']) )
+    g.add( (o, RDF.type, GTC['DPT_Output']) )
+    g.add( (t, RDF.type, GTC['Differential_Pressure_Transmitter']) )
+    
+    # partOf
+    g.add( (u, BRICK['partOf'], fb) )
+    g.add( (d, BRICK['partOf'], fb) )
+    g.add( (o, BRICK['partOf'], fb) )
+    g.add( (t, BRICK['partOf'], fb) )
+    
+    # controls
+    g.add( (u, BRICK['controls'], t) )
+    g.add( (d, BRICK['controls'], t) )
+    g.add( (t, BRICK['controls'], o) )
+    
+    ports = {
+        'fb': fb,
+        'u': u, # upstream
+        'd': d, # downstream
+        'o': o, # transmitter
+    }
+    return ports
+
+def gen_filter_element (prefix):
+    fb                = GTC[prefix+'/fb']
+    i                 = GTC[prefix+'/port[i]']
+    o                 = GTC[prefix+'/port[o]']
+    input_pressure    = GTC[prefix+'/input_pressure']
+    filter_nonkeyword = GTC[prefix+'/filter']
+    output_pressure   = GTC[prefix+'/output_pressure']
+    dpt               = gen_dpt(prefix+'/dpt')
+    
+    # types
+    g.add( (fb, RDF.type, GTC['GTC_Filter_Element_Functional_Block']) )
+    g.add( (i, RDF.type, GTC['GTC_Filter_Element_Input']) )
+    g.add( (o, RDF.type, GTC['GTC_Filter_Element_Output']) )
+    g.add( (input_pressure, RDF.type, GTC['Pressure_Sensor']) )
+    g.add( (filter_nonkeyword, RDF.type, GTC['Filter']) )
+    g.add( (output_pressure, RDF.type, GTC['Pressure_Sensor']) )
+    
+    # partOf
+    g.add( (i, BRICK['partOf'], fb) )
+    g.add( (o, BRICK['partOf'], fb) )
+    g.add( (input_pressure, BRICK['partOf'], fb) )
+    g.add( (filter_nonkeyword, BRICK['partOf'], fb) )
+    g.add( (output_pressure, BRICK['partOf'], fb) )
+    g.add( (dpt['fb'], BRICK['partOf'], fb) )
+    
+    # feeds
+    g.add( (i, BRICK['feeds'], input_pressure) )
+    g.add( (input_pressure, BRICK['feeds'], filter_nonkeyword) )
+    g.add( (filter_nonkeyword, BRICK['feeds'], output_pressure) )
+    g.add( (output_pressure, BRICK['feeds'], o) )
+    
+    
+    # controls
+    g.add( (input_pressure, BRICK['controls'], dpt['u']) )
+    g.add( (output_pressure, BRICK['controls'], dpt['d']) )
+    
+    ports = {
+        'fb': fb,
+        'i': i,
+        'o': o,
+    }
+    return ports
 
 def gen_building (prefix):
-    vavs = gen_vavs(prefix+'/vavs')
+    
 
 ################################################################################
 ###################################################################### main ####
