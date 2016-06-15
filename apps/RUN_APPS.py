@@ -43,7 +43,6 @@ WHERE {
 
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Finding all power meters for equipment in rooms"
 res = g.query("""
@@ -56,7 +55,6 @@ WHERE {
     ?meter bf:isPointOf ?equipment .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find all power meters for HVAC equipment"
 res = g.query("""
@@ -71,7 +69,6 @@ WHERE {
     ?zone bf:hasPart ?room .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find all power meters for Lighting equipment"
 res = g.query("""
@@ -88,6 +85,7 @@ WHERE {
     { ?equipment bf:feeds+ ?room }
 }""")
 print "-> {0} results".format(len(res))
+
 print
 
 print "--- Energy Apportionment App ---"
@@ -103,7 +101,6 @@ WHERE {
     ?sensor bf:isPointOf ?room .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find lux sensors in rooms"
 res = g.query("""
@@ -117,7 +114,6 @@ WHERE {
     ?sensor bf:isPointOf ?room .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find lighting/hvac equipment (e.g. desk lamps) rooms"
 res = g.query("""
@@ -133,6 +129,7 @@ WHERE {
     { ?equipment bf:hasTag brick:HVAC }
 }""")
 print "-> {0} results".format(len(res))
+
 print
 
 print "--- Web Displays App ---"
@@ -146,7 +143,6 @@ WHERE {
 }
 """)
 print "-> {0} results".format(len(res))
-print
 
 print "Airflow sensor for all VAVs"
 res = g.query("""
@@ -162,7 +158,6 @@ WHERE {
     { ?vav bf:feeds+ ?airflow_sensor }
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Associate VAVs to zones and rooms"
 res = g.query("""
@@ -174,7 +169,6 @@ WHERE {
     ?room bf:isPartOf ?zone .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find power meters for cooling loop, heating loop"
 res = g.query("""
@@ -190,4 +184,83 @@ WHERE {
     ?meter bf:isPointOf ?equip .
 }""")
 print "-> {0} results".format(len(res))
+
 print
+
+print "--- Model-Predictive Control App ---"
+
+print "Find all buildings, floors, hvac zones, rooms"
+res = g.query("""
+SELECT ?bldg ?floor ?hvac_zone ?room
+WHERE {
+    ?bldg rdf:type brick:Building .
+    ?floor rdf:type brick:Floor .
+    ?room rdf:type brick:Room .
+    ?hvac_zone rdf:type brick:Zone .
+    ?hvac_zone bf:hasTag brick:HVAC .
+    ?floor bf:isPartOf ?bldg .
+    ?room bf:isPartOf ?floor .
+    ?room bf:isPartOf ?hvac_zone .
+}""")
+print "-> {0} results".format(len(res))
+
+#print "Find windows in the room"
+print "Grab the orientation of the room if we have it"
+res = g.query("""
+SELECT ?room ?orientation
+WHERE {
+    ?room rdf:type brick:Room .
+    ?room rdfs:hasProperty brick:Orientation .
+    ?orientation rdf:type brick:Orientation .
+}""")
+print "-> {0} results".format(len(res))
+
+print "Grab all VAVs and AHUs and zones"
+res = g.query("""SELECT ?vav ?ahu ?hvac_zone
+WHERE {
+    ?vav rdf:type brick:VAV .
+    ?ahu rdf:type brick:AHU .
+    ?ahu bf:feeds ?vav .
+    ?hvac_zone rdf:type brick:Zone .
+    ?hvac_zone bf:hasTag brick:HVAC .
+    ?vav  bf:feeds ?hvac_zone .
+}""")
+print "-> {0} results".format(len(res))
+
+print
+
+print "--- Participatory Feedback ---"
+
+print "Associate lighting with rooms"
+res = g.query("""
+SELECT ?light_equip ?light_state ?light_cmd ?room
+WHERE {
+    ?light_equip rdf:type brick:Equipment .
+    ?light_equip bf:hasTag brick:Lighting .
+    ?light_equip bf:feeds ?zone .
+    ?zone rdf:type brick:Zone .
+    ?zone bf:hasTag brick:Lighting .
+    ?zone bf:contains ?room .
+    ?room rdf:type brick:Room .
+    ?light_state rdf:type brick:Status .
+    ?light_state bf:isPointOf ?light_equip .
+    ?light_state bf:hasTag brick:Luminance .
+    ?light_cmd rdf:type brick:Command .
+    ?light_cmd bf:isPointOf ?light_equip .
+    ?light_cmd bf:hasTag brick:Luminance .
+}""")
+print "-> {0} results".format(len(res))
+
+print "Find all power meters and associate them with floor and room"
+res = g.query("""
+SELECT ?meter ?floor ?room
+WHERE {
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   brick:Power .
+    ?loc    rdf:type    brick:Location .
+    { ?room   bf:isLocatedIn ?loc }
+    UNION
+    { ?room   bf:isPartOf ?loc }
+    ?meter  bf:isPointOf+ ?loc
+}""")
+print "-> {0} results".format(len(res))
