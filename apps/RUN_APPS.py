@@ -21,6 +21,9 @@ def new_graph():
     g.bind( 'brick', BRICK)
     g.bind( 'bf', BRICKFRAME)
     g.bind( 'btag', BRICKTAG)
+    g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+    g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+    g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
     return g
 
 g = new_graph()
@@ -31,11 +34,11 @@ res = g.query("""
 SELECT ?sensor ?sensor_type ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    { ?sensor_type bf:hasTag brick:Temperature }
+    { ?sensor_type bf:hasTag btag:Temperature }
         UNION
-    { ?sensor_type bf:hasTag brick:CO2 }
+    { ?sensor_type bf:hasTag btag:CO2 }
         UNION
-    { ?sensor_type bf:hasTag brick:Occupancy }
+    { ?sensor_type bf:hasTag btag:Occupancy }
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
@@ -64,7 +67,7 @@ WHERE {
     ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
-    ?equipment bf:hasTag brick:HVAC .
+    ?equipment bf:hasTag btag:HVAC .
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 }""")
@@ -78,7 +81,7 @@ WHERE {
     ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
-    ?equipment bf:hasTag brick:Lighting .
+    ?equipment bf:hasTag btag:Lighting .
     ?zone bf:hasPart ?room .
     { ?equipment bf:feeds+ ?zone }
         UNION
@@ -94,7 +97,7 @@ res = g.query("""
 SELECT ?sensor ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    ?sensor_type bf:hasTag brick:Occupancy .
+    ?sensor_type bf:hasTag btag:Occupancy .
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
@@ -107,7 +110,7 @@ res = g.query("""
 SELECT ?sensor ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    ?sensor_type bf:hasTag brick:Illumination .
+    ?sensor_type bf:hasTag btag:Illumination .
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
@@ -124,9 +127,9 @@ WHERE {
 
     ?equipment bf:isLocatedIn ?room .
 
-    { ?equipment bf:hasTag brick:Lighting }
+    { ?equipment bf:hasTag btag:Lighting }
     UNION
-    { ?equipment bf:hasTag brick:HVAC }
+    { ?equipment bf:hasTag btag:HVAC }
 }""")
 print "-> {0} results".format(len(res))
 
@@ -149,8 +152,8 @@ res = g.query("""
 SELECT ?airflow_sensor ?room ?vav
 WHERE {
     ?airflow_sensor rdf:type brick:Sensor .
-    ?airflow_sensor bf:hasTag brick:Air .
-    ?airflow_sensor bf:hasTag brick:Flow .
+    ?airflow_sensor bf:hasTag btag:Air .
+    ?airflow_sensor bf:hasTag btag:Flow .
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
     { ?airflow_sensor bf:isPartOf ?vav }
@@ -178,9 +181,9 @@ WHERE {
     ?equip rdf:type ?equip_type .
     ?meter rdf:type brick:Power_Meter .
     ?equip rdfs:subClassOf brick:Water_System .
-    { ?equip bf:hasTag brick:Chilled }
+    { ?equip bf:hasTag btag:Chilled }
         UNION
-    { ?equip bf:hasTag brick:Hot }
+    { ?equip bf:hasTag btag:Hot }
     ?meter bf:isPointOf ?equip .
 }""")
 print "-> {0} results".format(len(res))
@@ -197,7 +200,7 @@ WHERE {
     ?floor rdf:type brick:Floor .
     ?room rdf:type brick:Room .
     ?hvac_zone rdf:type brick:Zone .
-    ?hvac_zone bf:hasTag brick:HVAC .
+    ?hvac_zone bf:hasTag btag:HVAC .
     ?floor bf:isPartOf ?bldg .
     ?room bf:isPartOf ?floor .
     ?room bf:isPartOf ?hvac_zone .
@@ -222,7 +225,7 @@ WHERE {
     ?ahu rdf:type brick:AHU .
     ?ahu bf:feeds ?vav .
     ?hvac_zone rdf:type brick:Zone .
-    ?hvac_zone bf:hasTag brick:HVAC .
+    ?hvac_zone bf:hasTag btag:HVAC .
     ?vav  bf:feeds ?hvac_zone .
 }""")
 print "-> {0} results".format(len(res))
@@ -236,18 +239,18 @@ res = g.query("""
 SELECT ?light_equip ?light_state ?light_cmd ?room
 WHERE {
     ?light_equip rdf:type brick:Equipment .
-    ?light_equip bf:hasTag brick:Lighting .
+    ?light_equip bf:hasTag btag:Lighting .
     ?light_equip bf:feeds ?zone .
     ?zone rdf:type brick:Zone .
-    ?zone bf:hasTag brick:Lighting .
+    ?zone bf:hasTag btag:Lighting .
     ?zone bf:contains ?room .
     ?room rdf:type brick:Room .
     ?light_state rdf:type brick:Status .
     ?light_state bf:isPointOf ?light_equip .
-    ?light_state bf:hasTag brick:Luminance .
+    ?light_state bf:hasTag btag:Luminance .
     ?light_cmd rdf:type brick:Command .
     ?light_cmd bf:isPointOf ?light_equip .
-    ?light_cmd bf:hasTag brick:Luminance .
+    ?light_cmd bf:hasTag btag:Luminance .
 }""")
 print "-> {0} results".format(len(res))
 
@@ -256,11 +259,55 @@ res = g.query("""
 SELECT ?meter ?floor ?room
 WHERE {
     ?meter  rdf:type    brick:Sensor .
-    ?meter  bf:hasTag   brick:Power .
+    ?meter  bf:hasTag   btag:Power .
     ?loc    rdf:type    brick:Location .
     { ?room   bf:isLocatedIn ?loc }
     UNION
     { ?room   bf:isPartOf ?loc }
     ?meter  bf:isPointOf+ ?loc
+}""")
+print "-> {0} results".format(len(res))
+
+print
+
+print "DO THIS!!! --- Fault Detection Diagnosis ---"
+
+print
+
+print "--- Non-Intrusive Load Monitoring App ---"
+print "Get equipment, power meters and what floor/room they are in"
+res = g.query("""
+SELECT ?equip ?meter ?floor ?room
+WHERE {
+    ?equip  rdf:type    brick:Equipment .
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?loc    rdf:type    brick:Location .
+    { ?room   bf:isLocatedIn ?loc }
+    UNION
+    { ?room   bf:isPartOf ?loc }
+    ?meter  bf:isPointOf+ ?loc
+    { ?equip  bf:isLocatedIn+ ?loc }
+    UNION
+    { ?equip  bf:isPartOf+ ?loc }
+}
+""")
+print "-> {0} results".format(len(res))
+
+print
+
+print "--- Demand Response ---"
+print "Find all equipment (inside rooms) and associated power meters and control points"
+res = g.query("""
+SELECT ?equip ?meter ?cmd
+WHERE {
+    ?cmd    rdf:type    brick:Command .
+    ?equip  rdf:type    brick:Equipment .
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?room   rdf:type    brick:Room .
+    ?equip  bf:isLocatedIn ?room .
+    ?meter  bf:isPointOf ?equip .
+    ?cmd    bf:isPointOf ?equip .
 }""")
 print "-> {0} results".format(len(res))
