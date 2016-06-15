@@ -345,6 +345,7 @@ def gen_dpt (prefix):
     }
     return ports
 
+# instantiate a filter element (filter wrapped in a differential pressure transmitter setup)
 def gen_filter_element (prefix):
     fb                = GTC[prefix+'/fb']
     i                 = GTC[prefix+'/port[i]']
