@@ -8,6 +8,8 @@ import json
 TODO:
 - add media relations
 - find a better name for IJ_Valve_Functional_Block
+- what is the difference between isLocatedIn and partOf?
+- define Celcius_Temperature_Sensor
 """
 
 ################################################################################
@@ -389,8 +391,139 @@ def gen_filter_element (prefix):
     }
     return ports
 
+def gen_room (prefix, floors, gtc_data, rooms_data, vav_data):
+    ports = {
+        'fb': fb,
+    }
+    return ports
+
 def gen_building (prefix):
+    # load data
+    with open('gtc.json') as fo:
+        gtc_data = json.loads(''.join(fo.readlines()))
+    with open('rooms.json') as fo:
+        rooms_data = json.loads(''.join(fo.readlines()))
+    with open('gtc_vavs.json') as fo:
+        vav_data = json.loads(''.join(fo.readlines()))
     
+    building             = GTC[prefix]
+    floors               = map(lambda level: GTC[prefix+'/floors/'+str(level)], range(3))
+    rooms                = {}
+    for room_name in 
+        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, floors, gtc_data, rooms_data, vav_data)
+    district_meter       = gen_heating_power_meter(prefix+'/district_meter')
+    radiator_htb         = gen_heat_transfer_box(prefix+'/radiator_htb')
+    floor_htb            = gen_heat_transfer_box(prefix+'/radiator_htb')
+    outside_temp         = GTC[prefix+'/outside_temp']
+    outside_fe           = gen_filter_element(prefix+'outside_fe')
+    outside_fe_temp      = GTC[prefix+'/outside_fe_temp']
+    hx1                  = gen_hx(prefix+'/district_hx')
+    hx_temp              = GTC[prefix+'/hx_temp']
+    hx_fan               = GTC[prefix+'/']
+    hx2                  = gen_hx(prefix+'/return_hx')
+    supply_temp          = GTC[prefix+'/supply_temp']
+    supply_n_pres        = GTC[prefix+'/supply_north_pressure']
+    supply_s_pres        = GTC[prefix+'/supply_south_pressure']
+    return_n_pres        = GTC[prefix+'/return_north_pressure']
+    return_s_pres        = GTC[prefix+'/return_south_pressure']
+    return_damper        = GTC[prefix+'/damper']
+    return_fe            = gen_filter_element(prefix+'return_fe')
+    return_fe_temp       = GTC[prefix+'/return_fe_temp']
+    exhaust_temp         = GTC[prefix+'/exhaust_temp']
+    exhaust_fan          = GTC[prefix+'/exhaust_fan']
+    ahu_meter            = gen_heating_power_meter(prefix+'ahu_meter')
+    district_supply_temp = GTC[prefix+'/district_supply_temp']
+    district_pump        = GTC[prefix+'/district_pump']
+    district_return_temp = GTC[prefix+'/district_return_temp']
+    district_valve       = GTC[prefix+'/district_valve']
+    district_rect        = GTC[prefix+'/district_rectifier']
+    
+    # labels
+    g.add( (building, RDFS.label, Literal("GreenTech Center in Vejle, Denmark")) )
+    
+    # types
+    g.add( (outside_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (outside_fe_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (hx_temp             , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (hx_fan              , RDF.type, BRICK['Fan']) )
+    g.add( (supply_temp         , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (supply_n_pres       , RDF.type,   GTC['Pressure_Sensor']) )
+    g.add( (supply_s_pres       , RDF.type,   GTC['Pressure_Sensor']) )
+    g.add( (return_n_pres       , RDF.type,   GTC['Pressure_Sensor']) )
+    g.add( (return_s_pres       , RDF.type,   GTC['Pressure_Sensor']) )
+    g.add( (return_damper       , RDF.type, BRICK['Damper']) )
+    g.add( (return_fe_temp      , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (exhaust_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (exhaust_fan         , RDF.type, BRICK['Fan']) )
+    g.add( (district_supply_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (district_pump       , RDF.type, BRICK['Pump']) )
+    g.add( (district_return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (district_valve      , RDF.type, BRICK['Valve']) )
+    g.add( (district_rect       , RDF.type,   GTC['Rectifier']) )
+    
+    # feeds
+    g.add( (district_meter['metered_supply'], BRICK['feeds'], radiator_htb['pi']) )
+    g.add( (district_meter['metered_supply'], BRICK['feeds'],    floor_htb['pi']) )
+    g.add( (district_meter['metered_supply'], BRICK['feeds'],    ahu_meter['supply']) )
+    g.add( ( radiator_htb['pi'], BRICK['feeds'], ahu_meter['metered_return']) )
+    g.add( (    floor_htb['pi'], BRICK['feeds'], ahu_meter['metered_return']) )
+    g.add( (ahu_meter['return'], BRICK['feeds'], ahu_meter['metered_return']) )
+    g.add( (outside_temp, BRICK['feeds'], outside_fe['i']) )
+    g.add( (outside_fe['o'], BRICK['feeds'], outside_fe_temp) )
+    g.add( (outside_fe_temp, BRICK['feeds'], hx1['si']) )
+    g.add( (hx1['so'], BRICK['feeds'], hx_temp) )
+    g.add( (hx_temp, BRICK['feeds'], hx_fan) )
+    g.add( (hx_fan, BRICK['feeds'], hx2['si']) )
+    g.add( (hx2['so'], BRICK['feeds'], supply_temp) )
+    g.add( (supply_temp, BRICK['feeds'], supply_n_pres) )
+    g.add( (supply_temp, BRICK['feeds'], supply_n_pres) )
+    g.add( (return_n_pres, BRICK['feeds'], return_damper) )
+    g.add( (return_s_pres, BRICK['feeds'], return_damper) )
+    g.add( (return_damper, BRICK['feeds'], return_fe['i']) )
+    g.add( (return_fe['o'], BRICK['feeds'], return_fe_temp) )
+    g.add( (return_fe_temp, BRICK['feeds'], hx1['pi']) )
+    g.add( (hx1['po'], BRICK['feeds'], exhaust_temp) )
+    g.add( (exhaust_temp, BRICK['feeds'], exhaust_fan) )
+    g.add( (ahu_meter['metered_supply'], BRICK['feeds'], district_supply_temp) )
+    g.add( (district_supply_temp, BRICK['feeds'], district_pump) )
+    g.add( (district_pump, BRICK['feeds'], hx2['pi']) )
+    g.add( (hx2['po'], BRICK['feeds'], district_return_temp) )
+    g.add( (district_return_temp, BRICK['feeds'], district_valve) )
+    g.add( (district_valve, BRICK['feeds'], ahu_meter['metered_return']) )
+    g.add( (district_return_temp, BRICK['feeds'], district_rect) )
+    g.add( (district_rect, BRICK['feeds'], district_supply_temp) )
+    
+    # partOf
+    for floor in floors:
+        g.add( (floor           , BRICK['partOf'], building) )
+    for room_name in floors:
+        g.add( (rooms[room_name]['fb'], BRICK['partOf'], building) )
+    g.add( (district_meter      , BRICK['partOf'], building) )
+    g.add( (radiator_htb        , BRICK['partOf'], building) )
+    g.add( (floor_htb           , BRICK['partOf'], building) )
+    g.add( (outside_temp        , BRICK['partOf'], building) )
+    g.add( (outside_fe          , BRICK['partOf'], building) )
+    g.add( (outside_fe_temp     , BRICK['partOf'], building) )
+    g.add( (hx1                 , BRICK['partOf'], building) )
+    g.add( (hx_temp             , BRICK['partOf'], building) )
+    g.add( (hx_fan              , BRICK['partOf'], building) )
+    g.add( (hx2                 , BRICK['partOf'], building) )
+    g.add( (supply_temp         , BRICK['partOf'], building) )
+    g.add( (supply_n_pres       , BRICK['partOf'], building) )
+    g.add( (supply_s_pres       , BRICK['partOf'], building) )
+    g.add( (return_n_pres       , BRICK['partOf'], building) )
+    g.add( (return_s_pres       , BRICK['partOf'], building) )
+    g.add( (return_damper       , BRICK['partOf'], building) )
+    g.add( (return_fe           , BRICK['partOf'], building) )
+    g.add( (return_fe_temp      , BRICK['partOf'], building) )
+    g.add( (exhaust_temp        , BRICK['partOf'], building) )
+    g.add( (exhaust_fan         , BRICK['partOf'], building) )
+    g.add( (ahu_meter           , BRICK['partOf'], building) )
+    g.add( (district_supply_temp, BRICK['partOf'], building) )
+    g.add( (district_pump       , BRICK['partOf'], building) )
+    g.add( (district_return_temp, BRICK['partOf'], building) )
+    g.add( (district_valve      , BRICK['partOf'], building) )
+    g.add( (district_rect       , BRICK['partOf'], building) )
 
 ################################################################################
 ###################################################################### main ####
