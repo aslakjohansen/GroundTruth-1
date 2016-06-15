@@ -87,6 +87,7 @@ def main():
 			Equip = ""
 			BelongsTo = ""
 			if Key in Tagsets:
+				Total[Key]=1
 				count1+=1
 				g.add((x,RDF.type,OWL.NamedIndividual))
 				g.add((x,RDF.type,BRICK[Tagsets[Key]]))
@@ -97,7 +98,7 @@ def main():
 				location = re.sub(' ','_',location)
 				g.add((GHC[location],RDF.type,OWL.NamedIndividual))
 				g.add((GHC[location],RDF.type,BRICK["Location"]))
-				g.add((x,BRICK.hasLocation,GHC[location]))
+			#	g.add((x,BRICK.hasLocation,GHC[location]))
 				if 'AHU' in ListBasTag[3+y]:
 					Equip="AHU"
 				elif 'VAV' in ListBasTag[3+y] or 'FSB' in ListBasTag[3+y]:
@@ -113,7 +114,8 @@ def main():
 					if('Usage' in NewKey or 'Peak' in NewKey):
 						Equip = "Meter"
 					else:
-						print NewKey
+						pass
+						#print NewKey
 			#	mapping = changeablemapping[Tagsets[Key]]
 			#	if(len(mapping) == 4):
 			#		Equip = re.sub(' ','_',mapping[3])
@@ -141,6 +143,22 @@ def main():
 					Equipment[blank] = 1
 					g.add((GHC[blank],RDF.type, OWL.NamedIndividual))
 					g.add((GHC[blank],RDF.type, BRICK[Equip]))
+					if(Equip != "Meter" and Equip != "AHU"):
+						g.add((GHC[blank+"Room"], RDF.type, OWL.NamedIndividual))
+						g.add((GHC[blank+"Room"], RDF.type, BRICK["Room"]))
+						if(Equip != "FCU"):
+							g.add((GHC[blank+"Zone"], RDF.type, OWL.NamedIndividual))
+							g.add((GHC[blank+"Zone"], RDF.type, BRICK["HVAC_Zone"]))
+							g.add((GHC[blank+"Zone"], BRICK.contains, GHC[blank+"Room"]))
+							g.add((GHC[blank+"Room"], BRICK.isLocatedIn, GHC[blank+"Zone"]))
+							g.add((GHC[blank], BRICK.feeds, GHC[blank+"Zone"]))
+							g.add((GHC[blank], BRICK.feeds, GHC[blank+"Room"]))
+							g.add((GHC[blank+"Room"], BRICK.isFeedBy, GHC[blank]))
+							g.add((GHC[blank+"Zone"], BRICK.isFeedBy, GHC[blank]))
+
+						g.add((x, BRICK.isLocatedIn, GHC[blank+"Room"]))
+						g.add((GHC[blank+"Room"], BRICK.contains, x))
+
 				#	g.add((GHC[blank],BRICH.isLocatedIn,GHC[location]))
 				#	if not(NewBelong in Equipment):
 				#		g.add((GHC[NewBelong],RDF.type, OWL.NamedIndividual))
@@ -153,6 +171,7 @@ def main():
 				#	g.add((GHC[NewEquip],BRICK.hasLocation, GHC[location]))
 				if(Equip !=""):
 					g.add((GHC[blank], BRICK.hasPoint, x))
+					print x
 					g.add((x, BRICK.isPointOf, GHC[blank]))
 			#	if Equip == "":
 			#		g.add((GHC['GHC_HVAC'],BRICK.hasPoint,x))
