@@ -22,9 +22,9 @@ g.bind( 'rdfs', RDFS)
 g.bind( 'brick', BRICK)
 g.bind( 'bf', BRICKFRAME)
 g.bind( 'btag', BRICKTAG)
-g.parse('../BuildingSchema/Brick.ttl', format='turtle')
-g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
-g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+#g.parse('../BuildingSchema/BrickV2.ttl', format='turtle')
+#g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+#g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
 
 # We want to add nodes to the graph for our building. The building exists in its
 # own namespace, which we are calling EX
@@ -45,6 +45,14 @@ g.add((EX.building_1, RDFS.label, Literal("Example Building Hall")))
 # we inherited that from BRICK.building, which is a subclass of Location
 print "SHOULD be True: ", (BRICK.Building, RDFS.subClassOf, BRICK.Location) in g
 # TODO: need a sparql query for this?
+res = g.query("""SELECT DISTINCT ?bldg
+WHERE {
+?bldg rdf:type brick:Building
+}
+""")
+print "All buildings:"
+for row in res:
+    print "%s" % row
 
 # now that we have a building, lets add 2 floors to it.
 # We implicitly create the 2 labels floor_1 and floor_2 that represent
@@ -57,7 +65,17 @@ g.add((EX.floor_2, RDF.type, BRICK.Floor))
 # "isPartOf".
 g.add((EX.floor_1, BRICKFRAME.isPartOf, EX.building_1))
 g.add((EX.floor_2, BRICKFRAME.isPartOf, EX.building_1))
-# TODO: what's the query for "all floors in this building"?
+
+# the query for "all floors in this building"
+res = g.query("""SELECT DISTINCT ?bldg ?floor
+WHERE {
+    ?bldg rdf:type brick:Building .
+    ?floor rdf:type brick:Floor .
+    ?floor bf:isPartOf+ ?bldg .
+}
+""")
+for row in res:
+    print "Building %s has floor %s" % row
 
 # now lets do the same for a few rooms. Here, to autogenerate some labels, we're tkaing
 # advantage of the fact that EX.floor_1 and EX["floor_1"] are equivalent.
@@ -67,8 +85,17 @@ for floor_num in [1,2]:
     for room_num in [1,2,3,4]:
         room = EX["room_{0}_{1}".format(floor_num, room_num)]
         g.add((room, RDF.type, BRICK.Room))
-        g.add((room, BRICK.isPartOf, floor))
+        g.add((room, BRICKFRAME.isPartOf, floor))
 # TODO: query to demonstrate that we now know that those rooms are in the building
+res = g.query("""SELECT DISTINCT ?bldg ?room
+WHERE {
+    ?bldg rdf:type brick:Building .
+    ?room rdf:type brick:Room .
+    ?room bf:isPartOf+ ?bldg .
+}
+""")
+for row in res:
+    print "Building %s has room %s" % row
 
 # We have some structure to our building, so lets start adding in some equipment.
 # Sensors are straightforward to add. Lets put some CO2 and PIR  and temperature sensors
@@ -153,6 +180,14 @@ g.add((EX.temp_sensor_5, BRICKFRAME.isLocatedIn, EX.room_2_1))
 g.add((EX.temp_sensor_6, BRICKFRAME.isLocatedIn, EX.room_2_2))
 g.add((EX.temp_sensor_7, BRICKFRAME.isLocatedIn, EX.room_2_3))
 g.add((EX.temp_sensor_8, BRICKFRAME.isLocatedIn, EX.room_2_4))
+g.add((EX.temp_sensor_1, BRICKFRAME.measures, EX.room_1_1))
+g.add((EX.temp_sensor_2, BRICKFRAME.measures, EX.room_1_2))
+g.add((EX.temp_sensor_3, BRICKFRAME.measures, EX.room_1_3))
+g.add((EX.temp_sensor_4, BRICKFRAME.measures, EX.room_1_4))
+g.add((EX.temp_sensor_5, BRICKFRAME.measures, EX.room_2_1))
+g.add((EX.temp_sensor_6, BRICKFRAME.measures, EX.room_2_2))
+g.add((EX.temp_sensor_7, BRICKFRAME.measures, EX.room_2_3))
+g.add((EX.temp_sensor_8, BRICKFRAME.measures, EX.room_2_4))
 
 g.add((EX.co2_sensor_1, BRICKFRAME.isLocatedIn, EX.room_1_1))
 g.add((EX.co2_sensor_2, BRICKFRAME.isLocatedIn, EX.room_1_2))
@@ -162,6 +197,14 @@ g.add((EX.co2_sensor_5, BRICKFRAME.isLocatedIn, EX.room_2_1))
 g.add((EX.co2_sensor_6, BRICKFRAME.isLocatedIn, EX.room_2_2))
 g.add((EX.co2_sensor_7, BRICKFRAME.isLocatedIn, EX.room_2_3))
 g.add((EX.co2_sensor_8, BRICKFRAME.isLocatedIn, EX.room_2_4))
+g.add((EX.co2_sensor_1, BRICKFRAME.measures, EX.room_1_1))
+g.add((EX.co2_sensor_2, BRICKFRAME.measures, EX.room_1_2))
+g.add((EX.co2_sensor_3, BRICKFRAME.measures, EX.room_1_3))
+g.add((EX.co2_sensor_4, BRICKFRAME.measures, EX.room_1_4))
+g.add((EX.co2_sensor_5, BRICKFRAME.measures, EX.room_2_1))
+g.add((EX.co2_sensor_6, BRICKFRAME.measures, EX.room_2_2))
+g.add((EX.co2_sensor_7, BRICKFRAME.measures, EX.room_2_3))
+g.add((EX.co2_sensor_8, BRICKFRAME.measures, EX.room_2_4))
 
 g.add((EX.pir_sensor_1, BRICKFRAME.isLocatedIn, EX.room_1_1))
 g.add((EX.pir_sensor_2, BRICKFRAME.isLocatedIn, EX.room_1_2))
@@ -171,6 +214,14 @@ g.add((EX.pir_sensor_5, BRICKFRAME.isLocatedIn, EX.room_2_1))
 g.add((EX.pir_sensor_6, BRICKFRAME.isLocatedIn, EX.room_2_2))
 g.add((EX.pir_sensor_7, BRICKFRAME.isLocatedIn, EX.room_2_3))
 g.add((EX.pir_sensor_8, BRICKFRAME.isLocatedIn, EX.room_2_4))
+g.add((EX.pir_sensor_1, BRICKFRAME.measures, EX.room_1_1))
+g.add((EX.pir_sensor_2, BRICKFRAME.measures, EX.room_1_2))
+g.add((EX.pir_sensor_3, BRICKFRAME.measures, EX.room_1_3))
+g.add((EX.pir_sensor_4, BRICKFRAME.measures, EX.room_1_4))
+g.add((EX.pir_sensor_5, BRICKFRAME.measures, EX.room_2_1))
+g.add((EX.pir_sensor_6, BRICKFRAME.measures, EX.room_2_2))
+g.add((EX.pir_sensor_7, BRICKFRAME.measures, EX.room_2_3))
+g.add((EX.pir_sensor_8, BRICKFRAME.measures, EX.room_2_4))
 #TODO: do we *ALSO* use "hasPoint" here?, or conversely isPointOf?
 # these two lines are equivalent
 g.add((EX.pir_sensor_8, BRICKFRAME.isPointOf, EX.room_2_4))
@@ -237,11 +288,46 @@ g.add((EX.vav_1_1, BRICKFRAME.feeds, EX.hvac_zone_1_1))
 g.add((EX.vav_1_2, BRICKFRAME.feeds, EX.hvac_zone_1_2))
 g.add((EX.vav_1_3, BRICKFRAME.feeds, EX.hvac_zone_1_3))
 
-g.add((EX.vav_2_1, BRICKFRAME.feeds, EX.hvac_zone_1_1))
-g.add((EX.vav_2_2, BRICKFRAME.feeds, EX.hvac_zone_1_2))
-g.add((EX.vav_2_3, BRICKFRAME.feeds, EX.hvac_zone_1_3))
+g.add((EX.vav_2_1, BRICKFRAME.feeds, EX.hvac_zone_2_1))
+g.add((EX.vav_2_2, BRICKFRAME.feeds, EX.hvac_zone_2_2))
+g.add((EX.vav_2_3, BRICKFRAME.feeds, EX.hvac_zone_2_3))
+
+# all temperature sensors in rooms downstream of an AHU
+res = g.query("""SELECT ?sensor ?room
+WHERE {
+    ?sensor_type rdfs:subClassOf brick:Sensor .
+    ?sensor_type bf:hasTag brick:Temperature .
+    ?sensor rdf:type ?sensor_type .
+    ?ahu rdf:type brick:AHU .
+    ?ahu bf:feeds+ ?zone .
+    ?zone bf:hasPart ?room .
+    ?sensor bf:measures ?room .
+}
+""")
+print "AHU has %d downstream temperature sensors" % len(res)
+for row in res:
+    print row
+
+res = g.query("""
+SELECT ?sensor ?sensor_type ?room
+WHERE {
+    ?sensor_type rdfs:subClassOf brick:Sensor .
+    ?sensor rdf:type ?sensor_type .
+    ?room rdf:type brick:Room .
+    ?sensor bf:isLocatedIn ?room .
+    ?sensor bf:measures ?room .
+
+    { ?sensor_type bf:hasTag brick:Temperature }
+        UNION
+    { ?sensor_type bf:hasTag brick:CO2 }
+        UNION
+    { ?sensor_type bf:hasTag brick:Occupancy }
+}
+""")
+print len(res)
 
 # TODO: add Lighting
 
 # how to save our results to a Turtle file, which Protege can read
 g.serialize(destination='example_building.ttl', format='turtle')
+print len(g)

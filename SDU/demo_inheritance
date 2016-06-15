@@ -11,7 +11,7 @@ RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
 ##################################################################### setup ####
 
 g = Graph()
-s = g.parse('../BuildingSchema/Brick.owl', format='turtle', publicID='brick')
+s = g.parse('../BuildingSchema/Brick.ttl', format='turtle', publicID='brick')
 g.bind('rdf', RDF)
 g.bind('rdfs', RDFS)
 g.bind('bs', BS)

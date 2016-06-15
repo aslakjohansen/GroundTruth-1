@@ -24,7 +24,7 @@ def main():
 	g = rdflib.Graph()
 	g.bind('GHC', GHC)
 	g.bind('brick', BRICK)
-	g.parse('../BuildingSchema/Brick.owl', format='turtle')
+#	g.parse('../BuildingSchema/Brick.ttl', format='turtle')
 	count1 = 0
 	count2 = 0
 	changeablemapping = dict()
@@ -66,8 +66,8 @@ def main():
 		#	for row in MapReader:
 		#		print row
 		reader = csv.DictReader(DataFile)
-		g.add((GHC['GHC_HVAC'],RDF.type,OWL.NamedIndividual))
-		g.add((GHC['GHC_HVAC'],RDF.type,BRICK['HVAC']))
+	#	g.add((GHC['GHC_HVAC'],RDF.type,OWL.NamedIndividual))
+	#	g.add((GHC['GHC_HVAC'],RDF.type,BRICK['HVAC']))
 		for row in reader:
 			New = row['bas_raw']
 			ListBasTag = New.split('/')
@@ -141,6 +141,7 @@ def main():
 					Equipment[blank] = 1
 					g.add((GHC[blank],RDF.type, OWL.NamedIndividual))
 					g.add((GHC[blank],RDF.type, BRICK[Equip]))
+				#	g.add((GHC[blank],BRICH.isLocatedIn,GHC[location]))
 				#	if not(NewBelong in Equipment):
 				#		g.add((GHC[NewBelong],RDF.type, OWL.NamedIndividual))
 				#		g.add((GHC[NewBelong],RDF.type,BRICK[BelongsTo]))
@@ -152,8 +153,9 @@ def main():
 				#	g.add((GHC[NewEquip],BRICK.hasLocation, GHC[location]))
 				if(Equip !=""):
 					g.add((GHC[blank], BRICK.hasPoint, x))
-				if Equip == "":
-					g.add((GHC['GHC_HVAC'],BRICK.hasPoint,x))
+					g.add((x, BRICK.isPointOf, GHC[blank]))
+			#	if Equip == "":
+			#		g.add((GHC['GHC_HVAC'],BRICK.hasPoint,x))
 							
 					
 			else:

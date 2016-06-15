@@ -8,15 +8,25 @@ import json
 ############################################################## front matter ####
 ################################################################################
 
-BRICK = Namespace(rdflib.term.URIRef('http://www.semanticweb.org/jbkoh/ontologies/2016/4/untitled-ontology-27#'))
-RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
-XTRA = Namespace('extras/')
+RDF        = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS       = Namespace('http://www.w3.org/2000/01/rdf-schema#')
+BRICK      = Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG   = Namespace('http://buildsys.org/ontologies/BrickTag#')
 
 g = Graph()
-#s = g.parse('../BuildingSchema/Brick.owl', format='turtle', publicID='brick')
-s = g.parse('../BuildingSchema/Brick.ttl', format='turtle', publicID='brick')
-g.bind('rdf', RDF)
+g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+g.bind('rdf'  , RDF)
+g.bind('rdfs' , RDFS)
 g.bind('brick', BRICK)
+g.bind('bf'   , BRICKFRAME)
+g.bind('btag' , BRICKTAG)
+
+# building
+GTC = Namespace('http://buildsys.org/ontologies/building_example#')
+g.bind('gtc', GTC)
 
 ################################################################################
 ################################################################ constructs ####
@@ -24,27 +34,53 @@ g.bind('brick', BRICK)
 
 def vav (prefix, data):
     # actors
-    entity_vav                = URIRef(prefix+'/vav')
-    entity_supply_valve       = URIRef(prefix+'/supply_valve')
-    entity_return_valve       = URIRef(prefix+'/return_valve')
-    entity_supply_pressure    = URIRef(prefix+'/supply_pressure')
-    entity_cooling_coil       = URIRef(prefix+'/cooling_coil')
-    entity_supply_temperature = URIRef(prefix+'/supply_temperature')
-    rooms = map(lambda name: URIRef(prefix+'/rooms/'+name), data)
-    
+    entity_vav                = GTC[prefix+'/vav']
+    entity_supply_damper      = GTC[prefix+'/supply_damper']
+    entity_return_damper      = GTC[prefix+'/return_damper']
+    entity_supply_pressure    = GTC[prefix+'/supply_pressure']
+    entity_cooling_coil       = GTC[prefix+'/cooling_coil']
+    entity_supply_temperature = GTC[prefix+'/supply_temperature']
+    rooms = map(lambda name: GTC[prefix+'/rooms/'+name], data['rooms'])
+    all_entities = [
+        entity_vav,
+        entity_supply_damper,
+        entity_return_damper,
+        entity_supply_pressure,
+        entity_cooling_coil,
+        entity_supply_temperature,
+    ]
+    media_supply_air = GTC['/media/supply_air']
+    media_return_air = GTC['/media/return_air']
     
     # types
-    g.add( (entity_vav, RDF.type, BRICK['VAV']) )
-    g.add( (entity_supply_valve, RDF.type, BRICK['Damper']) )
-    g.add( (entity_return_valve, RDF.type, BRICK['Damper']) )
-    g.add( (entity_supply_pressure, RDF.type, BRICK['Air_Pressure_Sensor']) )
-    g.add( (entity_cooling_coil, RDF.type, BRICK['Cooling_Coil']) )
+    g.add( (entity_vav               , RDF.type, BRICK['VAV']) )
+    g.add( (entity_supply_damper     , RDF.type, BRICK['Damper']) )
+    g.add( (entity_return_damper     , RDF.type, BRICK['Damper']) )
+    g.add( (entity_supply_pressure   , RDF.type, BRICK['Air_Pressure_Sensor']) )
+    g.add( (entity_cooling_coil      , RDF.type, BRICK['Cooling_Coil']) )
     g.add( (entity_supply_temperature, RDF.type, BRICK['Temperature_Sensor']) )
+    g.add( (media_supply_air         , RDF.type, BRICK['Supply_Air']) )
+    g.add( (media_return_air         , RDF.type, BRICK['Return_Air']) )
     
-    # relationships
-    g.add( (entity_supply_valve, BRICK['hasTagSet'], BRICK['Supply_Air']) )
-    g.add( (entity_return_valve, BRICK['hasTagSet'], BRICK['Return_Air']) )
+    # media relationships
+    g.add( (entity_supply_damper     , BRICK['hasTagSet'], media_supply_air) )
+    g.add( (entity_return_damper     , BRICK['hasTagSet'], media_return_air) )
+    g.add( (entity_supply_pressure   , BRICK['hasTagSet'], media_supply_air) )
+    g.add( (entity_cooling_coil      , BRICK['hasTagSet'], media_supply_air) )
+    g.add( (entity_supply_temperature, BRICK['hasTagSet'], media_supply_air) )
     
+    # feeds relationships
+    g.add( (entity_supply_damper  , BRICK['feeds'], entity_supply_pressure) )
+    g.add( (entity_supply_pressure, BRICK['feeds'], entity_cooling_coil) )
+    g.add( (entity_cooling_coil   , BRICK['feeds'], entity_supply_temperature) )
+    for room in rooms:
+        g.add( (entity_supply_temperature, BRICK['feeds'], room) )
+    for room in rooms:
+        g.add( (room, BRICK['feeds'], entity_return_damper) )
+    
+    # isPartOf relationship
+    for entity in filter(lambda entity: entity!=entity_vav, all_entities):
+        g.add( (entity, BRICK['isPartOf'], entity_vav) )
     
 
 def vavs (prefix):
