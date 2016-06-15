@@ -43,11 +43,11 @@ SELECT ?sensor ?sensor_type ?room
 WHERE {
     -- get all sensor classes that measure Temperature, CO2 or occupancy
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    { ?sensor_type bf:hasTag brick:Temperature }
+    { ?sensor_type bf:hasTag btag:Temperature }
         UNION
-    { ?sensor_type bf:hasTag brick:CO2 }
+    { ?sensor_type bf:hasTag btag:CO2 }
         UNION
-    { ?sensor_type bf:hasTag brick:Occupancy }
+    { ?sensor_type bf:hasTag btag:Occupancy }
 
     -- get all sensors of those classes
     ?sensor rdf:type ?sensor_type .
@@ -86,7 +86,7 @@ WHERE {
     -- return meter that measures HVAC equipment
     -- upstream of some room
     ?meter bf:measures ?equipment .
-    ?equipment bf:hasTag brick:HVAC .
+    ?equipment bf:hasTag btag:HVAC .
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 }
@@ -99,7 +99,7 @@ WHERE {
     ?room rdf:type brick:Room .
 
     ?meter bf:measures ?equipment .
-    ?equipment bf:hasTag brick:Lighting .
+    ?equipment bf:hasTag btag:Lighting .
     ?zone bf:hasPart ?room .
 
     -- here we aren't sure of the relationship, so
@@ -152,8 +152,8 @@ SELECT ?airflow_sensor ?room ?vav
 WHERE {
     -- define some generic air flow sensor type
     ?airflow_sensor rdf:type brick:Sensor .
-    ?airflow_sensor bf:hasTag brick:Air .
-    ?airflow_sensor bf:hasTag brick:Flow .
+    ?airflow_sensor bf:hasTag btag:Air .
+    ?airflow_sensor bf:hasTag btag:Flow .
 
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
@@ -188,11 +188,129 @@ WHERE {
     ?meter rdf:type brick:Power_Meter .
 
     ?equip rdfs:subClassOf brick:Water_System .
-    { ?equip bf:hasTag brick:Chilled }
+    { ?equip bf:hasTag btag:Chilled }
         UNION
-    { ?equip bf:hasTag brick:Hot }
+    { ?equip bf:hasTag btag:Hot }
 
     ?meter bf:measures ?equip .
 
+}
+```
+
+## Model-Predictive Control
+
+```sql
+-- find all buildings, floors, hvac zones, rooms
+SELECT ?bldg ?floor? ?hvac_zone ?room
+WHERE {
+    ?bldg rdf:type brick:Building .
+    ?floor rdf:type brick:Floor .
+    ?room rdf:type brick:Room .
+    ?hvac_zone rdf:type brick:Zone .
+    ?hvac_zone bf:hasTag btag:HVAC .
+
+    ?floor bf:isPartOf ?bldg .
+    ?room bf:isPartOf ?floor .
+    ?room bf:isPartOf ?hvac_zone .
+}
+
+-- find windows in the room
+
+-- grab the orientation of the room if we have it
+SELECT ?room ?orientation
+WHERE {
+    ?room rdf:type brick:Room .
+    ?room rdfs:hasProperty brick:Orientation .
+    ?orientation rdf:type brick:Orientation .
+}
+
+-- grab all VAVs and AHUs and zones
+SELECT ?vav ?ahu ?hvac_zone
+WHERE {
+    ?vav rdf:type brick:VAV .
+    ?ahu rdf:type brick:AHU .
+    ?ahu bf:feeds ?vav .
+    ?hvac_zone rdf:type brick:Zone .
+    ?hvac_zone bf:hasTag btag:HVAC .
+    ?vav  bf:feeds ?hvac_zone .
+}
+```
+
+## Participatory Feedback
+```sql
+-- associate lighting with rooms
+SELECT ?light_equip ?light_state ?light_cmd ?room
+WHERE {
+    ?light_equip rdf:type brick:Equipment .
+    ?light_equip bf:hasTag btag:Lighting .
+    ?light_equip bf:feeds brick:?zone .
+    ?zone rdf:type brick:Zone .
+    ?zone bf:hasTag btag:Lighting .
+    ?zone bf:contains ?room .
+    ?room rdf:type brick:Room .
+
+    ?light_state rdf:type brick:Status .
+    ?light_state bf:isPointOf ?light_equip .
+    ?light_state bf:hasTag btag:Luminance .
+
+    ?light_cmd rdf:type brick:Command .
+    ?light_cmd bf:isPointOf ?light_equip .
+    ?light_cmd bf:hasTag btag:Luminance .
+}
+
+-- find all power meters and associate them with floor and room
+SELECT ?meter ?floor ?room
+WHERE {
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?loc    rdf:type    brick:Location .
+
+    { ?room   bf:isLocatedIn ?loc }
+    UNION
+    { ?room   bf:isPartOf ?loc }
+
+    ?meter  bf:isPointOf+ ?loc
+}
+```
+
+## Fault Detection and Diagnosis
+
+## Non-Intrusive Load Monitoring
+
+```sql
+-- find all equipment inside rooms and associated power meters
+SELECT ?equip ?meter ?floor ?room
+WHERE {
+    ?equip  rdf:type    brick:Equipment .
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?loc    rdf:type    brick:Location .
+
+    { ?room   bf:isLocatedIn ?loc }
+    UNION
+    { ?room   bf:isPartOf ?loc }
+
+    ?meter  bf:isPointOf+ ?loc
+
+    { ?equip  bf:isLocatedIn+ ?loc }
+    UNION
+    { ?equip  bf:isPartOf+ ?loc }
+}
+```
+
+## Demand Response
+
+```sql
+-- find all equipment (inside rooms) and associated power meters and control points
+SELECT ?equip ?meter ?cmd
+WHERE {
+    ?cmd    rdf:type    brick:Command .
+    ?equip  rdf:type    brick:Equipment .
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?room   rdf:type    brick:Room .
+    ?equip  bf:isLocatedIn ?room .
+    ?meter  bf:isPointOf ?equip .
+    ?cmd    bf:isPointOf ?equip .
 }
 ```

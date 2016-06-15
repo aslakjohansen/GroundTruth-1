@@ -21,6 +21,9 @@ def new_graph():
     g.bind( 'brick', BRICK)
     g.bind( 'bf', BRICKFRAME)
     g.bind( 'btag', BRICKTAG)
+    g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+    g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+    g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
     return g
 
 g = new_graph()
@@ -31,11 +34,11 @@ res = g.query("""
 SELECT ?sensor ?sensor_type ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    { ?sensor_type bf:hasTag brick:Temperature }
+    { ?sensor_type bf:hasTag btag:Temperature }
         UNION
-    { ?sensor_type bf:hasTag brick:CO2 }
+    { ?sensor_type bf:hasTag btag:CO2 }
         UNION
-    { ?sensor_type bf:hasTag brick:Occupancy }
+    { ?sensor_type bf:hasTag btag:Occupancy }
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
@@ -43,7 +46,6 @@ WHERE {
 
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Finding all power meters for equipment in rooms"
 res = g.query("""
@@ -56,7 +58,6 @@ WHERE {
     ?meter bf:isPointOf ?equipment .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find all power meters for HVAC equipment"
 res = g.query("""
@@ -66,12 +67,11 @@ WHERE {
     ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
-    ?equipment bf:hasTag brick:HVAC .
+    ?equipment bf:hasTag btag:HVAC .
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find all power meters for Lighting equipment"
 res = g.query("""
@@ -81,13 +81,14 @@ WHERE {
     ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
-    ?equipment bf:hasTag brick:Lighting .
+    ?equipment bf:hasTag btag:Lighting .
     ?zone bf:hasPart ?room .
     { ?equipment bf:feeds+ ?zone }
         UNION
     { ?equipment bf:feeds+ ?room }
 }""")
 print "-> {0} results".format(len(res))
+
 print
 
 print "--- Energy Apportionment App ---"
@@ -96,28 +97,26 @@ res = g.query("""
 SELECT ?sensor ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    ?sensor_type bf:hasTag brick:Occupancy .
+    ?sensor_type bf:hasTag btag:Occupancy .
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find lux sensors in rooms"
 res = g.query("""
 SELECT ?sensor ?room
 WHERE {
     ?sensor_type rdfs:subClassOf brick:Sensor .
-    ?sensor_type bf:hasTag brick:Illumination .
+    ?sensor_type bf:hasTag btag:Illumination .
     ?sensor rdf:type ?sensor_type .
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find lighting/hvac equipment (e.g. desk lamps) rooms"
 res = g.query("""
@@ -128,11 +127,12 @@ WHERE {
 
     ?equipment bf:isLocatedIn ?room .
 
-    { ?equipment bf:hasTag brick:Lighting }
+    { ?equipment bf:hasTag btag:Lighting }
     UNION
-    { ?equipment bf:hasTag brick:HVAC }
+    { ?equipment bf:hasTag btag:HVAC }
 }""")
 print "-> {0} results".format(len(res))
+
 print
 
 print "--- Web Displays App ---"
@@ -146,15 +146,14 @@ WHERE {
 }
 """)
 print "-> {0} results".format(len(res))
-print
 
 print "Airflow sensor for all VAVs"
 res = g.query("""
 SELECT ?airflow_sensor ?room ?vav
 WHERE {
     ?airflow_sensor rdf:type brick:Sensor .
-    ?airflow_sensor bf:hasTag brick:Air .
-    ?airflow_sensor bf:hasTag brick:Flow .
+    ?airflow_sensor bf:hasTag btag:Air .
+    ?airflow_sensor bf:hasTag btag:Flow .
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
     { ?airflow_sensor bf:isPartOf ?vav }
@@ -162,7 +161,6 @@ WHERE {
     { ?vav bf:feeds+ ?airflow_sensor }
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Associate VAVs to zones and rooms"
 res = g.query("""
@@ -174,7 +172,6 @@ WHERE {
     ?room bf:isPartOf ?zone .
 }""")
 print "-> {0} results".format(len(res))
-print
 
 print "Find power meters for cooling loop, heating loop"
 res = g.query("""
@@ -184,10 +181,133 @@ WHERE {
     ?equip rdf:type ?equip_type .
     ?meter rdf:type brick:Power_Meter .
     ?equip rdfs:subClassOf brick:Water_System .
-    { ?equip bf:hasTag brick:Chilled }
+    { ?equip bf:hasTag btag:Chilled }
         UNION
-    { ?equip bf:hasTag brick:Hot }
+    { ?equip bf:hasTag btag:Hot }
     ?meter bf:isPointOf ?equip .
 }""")
 print "-> {0} results".format(len(res))
+
 print
+
+print "--- Model-Predictive Control App ---"
+
+print "Find all buildings, floors, hvac zones, rooms"
+res = g.query("""
+SELECT ?bldg ?floor ?hvac_zone ?room
+WHERE {
+    ?bldg rdf:type brick:Building .
+    ?floor rdf:type brick:Floor .
+    ?room rdf:type brick:Room .
+    ?hvac_zone rdf:type brick:Zone .
+    ?hvac_zone bf:hasTag btag:HVAC .
+    ?floor bf:isPartOf ?bldg .
+    ?room bf:isPartOf ?floor .
+    ?room bf:isPartOf ?hvac_zone .
+}""")
+print "-> {0} results".format(len(res))
+
+#print "Find windows in the room"
+print "Grab the orientation of the room if we have it"
+res = g.query("""
+SELECT ?room ?orientation
+WHERE {
+    ?room rdf:type brick:Room .
+    ?room rdfs:hasProperty brick:Orientation .
+    ?orientation rdf:type brick:Orientation .
+}""")
+print "-> {0} results".format(len(res))
+
+print "Grab all VAVs and AHUs and zones"
+res = g.query("""SELECT ?vav ?ahu ?hvac_zone
+WHERE {
+    ?vav rdf:type brick:VAV .
+    ?ahu rdf:type brick:AHU .
+    ?ahu bf:feeds ?vav .
+    ?hvac_zone rdf:type brick:Zone .
+    ?hvac_zone bf:hasTag btag:HVAC .
+    ?vav  bf:feeds ?hvac_zone .
+}""")
+print "-> {0} results".format(len(res))
+
+print
+
+print "--- Participatory Feedback ---"
+
+print "Associate lighting with rooms"
+res = g.query("""
+SELECT ?light_equip ?light_state ?light_cmd ?room
+WHERE {
+    ?light_equip rdf:type brick:Equipment .
+    ?light_equip bf:hasTag btag:Lighting .
+    ?light_equip bf:feeds ?zone .
+    ?zone rdf:type brick:Zone .
+    ?zone bf:hasTag btag:Lighting .
+    ?zone bf:contains ?room .
+    ?room rdf:type brick:Room .
+    ?light_state rdf:type brick:Status .
+    ?light_state bf:isPointOf ?light_equip .
+    ?light_state bf:hasTag btag:Luminance .
+    ?light_cmd rdf:type brick:Command .
+    ?light_cmd bf:isPointOf ?light_equip .
+    ?light_cmd bf:hasTag btag:Luminance .
+}""")
+print "-> {0} results".format(len(res))
+
+print "Find all power meters and associate them with floor and room"
+res = g.query("""
+SELECT ?meter ?floor ?room
+WHERE {
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?loc    rdf:type    brick:Location .
+    { ?room   bf:isLocatedIn ?loc }
+    UNION
+    { ?room   bf:isPartOf ?loc }
+    ?meter  bf:isPointOf+ ?loc
+}""")
+print "-> {0} results".format(len(res))
+
+print
+
+print "DO THIS!!! --- Fault Detection Diagnosis ---"
+
+print
+
+print "--- Non-Intrusive Load Monitoring App ---"
+print "Get equipment, power meters and what floor/room they are in"
+res = g.query("""
+SELECT ?equip ?meter ?floor ?room
+WHERE {
+    ?equip  rdf:type    brick:Equipment .
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?loc    rdf:type    brick:Location .
+    { ?room   bf:isLocatedIn ?loc }
+    UNION
+    { ?room   bf:isPartOf ?loc }
+    ?meter  bf:isPointOf+ ?loc
+    { ?equip  bf:isLocatedIn+ ?loc }
+    UNION
+    { ?equip  bf:isPartOf+ ?loc }
+}
+""")
+print "-> {0} results".format(len(res))
+
+print
+
+print "--- Demand Response ---"
+print "Find all equipment (inside rooms) and associated power meters and control points"
+res = g.query("""
+SELECT ?equip ?meter ?cmd
+WHERE {
+    ?cmd    rdf:type    brick:Command .
+    ?equip  rdf:type    brick:Equipment .
+    ?meter  rdf:type    brick:Sensor .
+    ?meter  bf:hasTag   btag:Power .
+    ?room   rdf:type    brick:Room .
+    ?equip  bf:isLocatedIn ?room .
+    ?meter  bf:isPointOf ?equip .
+    ?cmd    bf:isPointOf ?equip .
+}""")
+print "-> {0} results".format(len(res))
