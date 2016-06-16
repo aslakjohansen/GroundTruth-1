@@ -5,6 +5,10 @@ import rdflib
 import json
 
 """
+Point count:
+- actuators & sensors in schematics:
+  23+20+20+20+18+18+18+12+12+18+18+15+12+15+12+15+6+15+12+14+18+18+18+18+18+12+6+12+11+6+18+22+15+10+6+10+9+9=549
+
 TODO:
 - add media relations
 - find a better name for IJ_Valve_Functional_Block
