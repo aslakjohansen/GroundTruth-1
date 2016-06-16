@@ -47,20 +47,31 @@ g.bind('gtc', GTC)
 
 def gen_extensions():
     Heat_Power_Meter_Functional_Block = GTC['Heat_Power_Meter_Functional_Block']
-    Heat_Transfer_Box_Functional_Block = GTC['Heat_Transfer_Box_Functional_Block']
-    GTC_VAV_Functional_Block = GTC['GTC_VAV_Functional_Block']
-    IJ_Valve_Functional_Block = GTC['IJ_Valve_Functional_Block']
-    GTC_Filter_Element_Functional_Block = GTC['GTC_Filter_Element_Functional_Block']
-    DPT_Functional_Block = GTC['DPT_Functional_Block']
-    GTC_Room_Functional_Block = GTC['GTC_Room_Functional_Block']
-    
     g.add( (Heat_Power_Meter_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    Heat_Transfer_Box_Functional_Block = GTC['Heat_Transfer_Box_Functional_Block']
     g.add( (Heat_Transfer_Box_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    GTC_VAV_Functional_Block = GTC['GTC_VAV_Functional_Block']
     g.add( (GTC_VAV_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    IJ_Valve_Functional_Block = GTC['IJ_Valve_Functional_Block']
     g.add( (IJ_Valve_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    GTC_Filter_Element_Functional_Block = GTC['GTC_Filter_Element_Functional_Block']
     g.add( (GTC_Filter_Element_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    DPT_Functional_Block = GTC['DPT_Functional_Block']
     g.add( (DPT_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    GTC_Room_Functional_Block = GTC['GTC_Room_Functional_Block']
     g.add( (GTC_Room_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    
+    Celcius_Temperature_Sensor = GTC['Celcius_Temperature_Sensor']
+    g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK.Sensor) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICK.Temperature) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICK.Celcius) )
+    
     
 
 # instantiate a heat exchanger
