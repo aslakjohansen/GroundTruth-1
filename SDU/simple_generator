@@ -54,6 +54,7 @@ def gen_extensions():
     
     GTC_VAV_Functional_Block = GTC['GTC_VAV_Functional_Block']
     g.add( (GTC_VAV_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (GTC_VAV_Functional_Block, RDFS.subClassOf, BRICK['VAV']) )
     
     IJ_Valve_Functional_Block = GTC['IJ_Valve_Functional_Block']
     g.add( (IJ_Valve_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
@@ -68,9 +69,9 @@ def gen_extensions():
     g.add( (GTC_Room_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     
     Celcius_Temperature_Sensor = GTC['Celcius_Temperature_Sensor']
-    g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK.Sensor) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG.Temperature) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG.Celcius) )
+    g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK['Sensor']) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
     
     
 
@@ -149,6 +150,12 @@ def gen_heating_power_meter (prefix):
     g.add( (supply_temp, BRICKFRAME['controls'], power) )
     g.add( (return_temp, BRICKFRAME['controls'], power) )
     
+    # isPointOf
+    g.add( (flow       , BRICKFRAME['isPointOf'], fb) )
+    g.add( (supply_temp, BRICKFRAME['isPointOf'], fb) )
+    g.add( (return_temp, BRICKFRAME['isPointOf'], fb) )
+    g.add( (power      , BRICKFRAME['isPointOf'], fb) )
+    
     ports = {
         'fb': fb,
         'supply': s,
@@ -202,6 +209,12 @@ def gen_heat_transfer_box (prefix):
     g.add( (hx['so']             , BRICKFRAME['feeds'], pump) )
     g.add( (pump                 , BRICKFRAME['feeds'], supply_temp) )
     g.add( (supply_temp          , BRICKFRAME['feeds'], so) )
+    
+    # isPointOf
+    g.add( (hpm['fb']  , BRICKFRAME['isPointOf'], fb) )
+    g.add( (pump       , BRICKFRAME['isPointOf'], fb) )
+    g.add( (supply_temp, BRICKFRAME['isPointOf'], fb) )
+    g.add( (return_temp, BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -327,6 +340,14 @@ def gen_vav (prefix, data):
     g.add( (controller   , BRICKFRAME['controls'], supply_damper) )
     g.add( (controller   , BRICKFRAME['controls'], return_damper) )
     
+    # isPointOf
+    g.add( (supply_damper     , BRICKFRAME['isPointOf'], fb) )
+    g.add( (return_damper     , BRICKFRAME['isPointOf'], fb) )
+    g.add( (upstream_pres     , BRICKFRAME['isPointOf'], fb) )
+    g.add( (downstream_temp   , BRICKFRAME['isPointOf'], fb) )
+    g.add( (cooled_flow       , BRICKFRAME['isPointOf'], fb) )
+    g.add( (cooled_valve['fb'], BRICKFRAME['isPointOf'], fb) )
+    
     ports = {
         'fb': fb,
         'ui': ui, # upstream input
@@ -363,6 +384,9 @@ def gen_dpt (prefix):
     g.add( (u, BRICKFRAME['controls'], t) )
     g.add( (d, BRICKFRAME['controls'], t) )
     g.add( (t, BRICKFRAME['controls'], o) )
+    
+    # isPointOf
+    g.add( (t, BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -407,6 +431,11 @@ def gen_filter_element (prefix):
     # controls
     g.add( (input_pressure , BRICKFRAME['controls'], dpt['u']) )
     g.add( (output_pressure, BRICKFRAME['controls'], dpt['d']) )
+    
+    # isPointOf
+    g.add( (input_pressure , BRICKFRAME['isPointOf'], fb) )
+    g.add( (output_pressure, BRICKFRAME['isPointOf'], fb) )
+    g.add( (dpt['fb']      , BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -744,6 +773,8 @@ def gen_building (prefix):
     g.add( (district_return_temp, BRICKFRAME['isPartOf'], building) )
     g.add( (district_valve      , BRICKFRAME['isPartOf'], building) )
     g.add( (district_rect       , BRICKFRAME['isPartOf'], building) )
+    
+    # isPointOf
 
 ################################################################################
 ###################################################################### main ####
