@@ -21,7 +21,8 @@
         },
         "zone": 1,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.A.5": {
         "tr1": "-01-ZVNV-1A5-TR01",
@@ -45,7 +46,8 @@
         },
         "zone": 1,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.A.7": {
         "tr1": "-01-ZVNV-1A7-TR01",
@@ -69,7 +71,8 @@
         },
         "zone": 1,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.A.9": {
         "tr1": "-01-ZVNV-1A9-TR01",
@@ -93,7 +96,8 @@
         },
         "zone": 1,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.A.11": {
         "tr1": "-01-ZVNV-1A11-TR01",
@@ -117,7 +121,8 @@
         },
         "zone": 1,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.F.6": {
         "tr1": "-01-ZVNV-1F6-TR01",
@@ -141,7 +146,8 @@
         },
         "zone": 1,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.A.20": {
         "tr1": "-01-ZVSV-1A20-TR01",
@@ -165,7 +171,8 @@
         },
         "zone": 2,
         "floor": 0,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.0.2"
     },
     "1.A.22": {
         "tr1": "-01-ZVSV-1A22-TR01",
@@ -189,7 +196,8 @@
         },
         "zone": 2,
         "floor": 0,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.0.2"
     },
     "1.A.28A": {
         "tr1": "-01-ZVSV-1A28A-TR01",
@@ -213,7 +221,8 @@
         },
         "zone": 2,
         "floor": 0,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.0.2"
     },
     "1.A.28B": {
         "tr1": "-01-ZVSV-1A28B-TR01",
@@ -237,7 +246,8 @@
         },
         "zone": 2,
         "floor": 0,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.0.2"
     },
     "1.B.19": {
         "tr1": "-01-ZVSV-1B19-TR01",
@@ -262,7 +272,8 @@
         "zone": 2,
         "floor": 0,
         "side": "S",
-        "node": "this room is called 1.A.22 in the drawing, but I expect it to be 1.B.19"
+        "node": "this room is called 1.A.22 in the drawing, but I expect it to be 1.B.19",
+        "submeter": "-A1"
     },
     "1.I.19": {
         "tr1": "-01-ZVSØ-1I19-TR01",
@@ -287,7 +298,8 @@
         },
         "zone": 3,
         "floor": 0,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1"
     },
     "1.K.25": {
         "tr1": "-01-ZVSØ-1K25-TR01",
@@ -313,7 +325,8 @@
         },
         "zone": 3,
         "floor": 0,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1"
     },
     "1.H.1": {
         "tr1": "-01-ZVNØ-1H1-TR01",
@@ -337,7 +350,8 @@
         },
         "zone": 4,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.H.6": {
         "tr1": "-01-ZVNØ-1H6-TR01",
@@ -361,7 +375,8 @@
         },
         "zone": 4,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.J.5": {
         "tr1": "-01-ZVNØ-1J5-TR01",
@@ -385,7 +400,8 @@
         },
         "zone": 4,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.J.7": {
         "tr1": "-01-ZVNØ-1J7-TR01",
@@ -409,7 +425,8 @@
         },
         "zone": 4,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.J.9": {
         "tr1": "-01-ZVNØ-1J9-TR01",
@@ -433,7 +450,8 @@
         },
         "zone": 4,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     "1.J.13": {
         "tr1": "-01-ZVNØ-1J13-TR01",
@@ -457,7 +475,8 @@
         },
         "zone": 4,
         "floor": 0,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.0.1"
     },
     
     "2.A.1a": {
@@ -482,7 +501,8 @@
         },
         "zone": 1,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.4"
     },
     "2.A.1b": {
         "tr1": "",
@@ -507,7 +527,8 @@
         },
         "zone": 1,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.4"
     },
     "2.A.11": {
         "tr1": "-02-ZVNV-2A11-TR01",
@@ -531,7 +552,8 @@
         },
         "zone": 1,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.4"
     },
     "2.B.13": {
         "tr1": "-02-ZVNV-2B13-TR01",
@@ -555,7 +577,8 @@
         },
         "zone": 1,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.4"
     },
     "2.F.6A": {
         "tr1": "-02-ZVNV-2F6a-TR01",
@@ -580,7 +603,9 @@
         },
         "zone": 1,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "note": "2.F.6 is split across two submeters and the mapping from (A|B) to submeter is unknown",
+        "submeter": "-A1.1.4"
     },
     "2.A.19": {
         "tr1": "-02-ZVNV-2A19-TR01",
@@ -604,7 +629,8 @@
         },
         "zone": 2,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.1.1"
     },
     "2.A.22A": {
         "tr1": "-02-ZVNV-2A22a-TR01",
@@ -628,7 +654,9 @@
         },
         "zone": 2,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "note": "2.F.22 is split across two submeters and the mapping from (A|B) to submeter is unknown",
+        "submeter": "-A1.1.1"
     },
     "2.A.22B": {
         "tr1": "",
@@ -652,7 +680,9 @@
         },
         "zone": 2,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "note": "2.F.22 is split across two submeters and the mapping from (A|B) to submeter is unknown",
+        "submeter": "-A1.1.2"
     },
     "2.A.30": {
         "tr1": "-02-ZVNV-2A30-TR01",
@@ -676,7 +706,8 @@
         },
         "zone": 2,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.1.1"
     },
     "2.C.30": {
         "tr1": "-02-ZVNV-2C30-TR01",
@@ -700,7 +731,8 @@
         },
         "zone": 2,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.1.1"
     },
     "2.H.30": {
         "tr1": "-02-ZVNV-2H30-TR01",
@@ -724,7 +756,8 @@
         },
         "zone": 3,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.1.2"
     },
     "2.I.18A": {
         "tr1": "-02-ZVNV-2I18a-TR01",
@@ -748,7 +781,9 @@
         },
         "zone": 3,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "note": "2.I.18 does not exists in the blueprints",
+        "submeter": "-A1.1.1"
     },
     "2.I.18B": {
         "tr1": "",
@@ -772,7 +807,9 @@
         },
         "zone": 3,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "note": "2.I.18 does not exists in the blueprints",
+        "submeter": "-A1.1.2"
     },
     "2.L.30": {
         "tr1": "-02-ZVNV-2L30-TR01",
@@ -796,7 +833,8 @@
         },
         "zone": 3,
         "floor": 1,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.1.2"
     },
     "2.F.6B": {
         "tr1": "-02-ZVNV-2F6b-TR01",
@@ -820,7 +858,8 @@
         },
         "zone": 4,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.3"
     },
     "2.H.1A": {
         "tr1": "-02-ZVNV-2H1a-TR01",
@@ -844,7 +883,8 @@
         },
         "zone": 4,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.3"
     },
     "2.H.1B": {
         "tr1": "",
@@ -868,7 +908,8 @@
         },
         "zone": 4,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.3"
     },
     "2.J.11": {
         "tr1": "-02-ZVNV-2J11-TR01",
@@ -892,7 +933,8 @@
         },
         "zone": 4,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.3"
     },
     "2.J.13": {
         "tr1": "-02-ZVNV-2J13-TR01",
@@ -917,7 +959,8 @@
         },
         "zone": 4,
         "floor": 1,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.1.3"
     },
     
     "3.A.1": {
@@ -943,7 +986,8 @@
         "zone": 1,
         "floor": 2,
         "side": "N",
-        "note": "this room is declared twice and last instance is basically empty"
+        "note": "this room is declared twice and last instance is basically empty",
+        "submeter": "-A1.2.4"
     },
     "3.A.11": {
         "tr1": "-02-ZVNV-3A11-TR01",
@@ -967,7 +1011,8 @@
         },
         "zone": 1,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.2.4"
     },
     "3.B.13": {
         "tr1": "-02-ZVNV-3B13-TR01",
@@ -991,7 +1036,8 @@
         },
         "zone": 1,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.2.4"
     },
     "3.D.1": {
         "tr1": "-02-ZVNV-3D1-TR01",
@@ -1015,7 +1061,8 @@
         },
         "zone": 1,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.2.4"
     },
     "3.F.6_A": {
         "tr1": "-02-ZVNV-3F6A-TR01",
@@ -1039,7 +1086,8 @@
         },
         "zone": 1,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.2.3"
     },
     "3.A.18": {
         "tr1": "-02-ZVNV-3A18-TR01",
@@ -1063,7 +1111,8 @@
         },
         "zone": 2,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.1"
     },
     "3.A.22": {
         "tr1": "-02-ZVNV-3A22-TR01",
@@ -1087,7 +1136,8 @@
         },
         "zone": 2,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.1"
     },
     "3.H.27_A": {
         "tr1": "-02-ZVNV-3H27A-TR01",
@@ -1111,7 +1161,8 @@
         },
         "zone": 2,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.1"
     },
     "3.H.27_B": {
         "tr1": "-02-ZVNV-3H27B-TR01",
@@ -1135,7 +1186,8 @@
         },
         "zone": 3,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.1"
     },
     "3.I.22": {
         "tr1": "-02-ZVNV-3I22-TR01",
@@ -1159,7 +1211,8 @@
         },
         "zone": 3,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.2"
     },
     "3.I.30": {
         "tr1": "-02-ZVNV-3I30-TR01",
@@ -1183,7 +1236,8 @@
         },
         "zone": 3,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.2"
     },
     "3.J.18": {
         "tr1": "-02-ZVNV-3J18-TR01",
@@ -1207,7 +1261,8 @@
         },
         "zone": 3,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.2"
     },
     "3.J.29": {
         "tr1": "-02-ZVNV-3J29-TR01",
@@ -1231,7 +1286,9 @@
         },
         "zone": 3,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "note": "this should have been called 3.J.21 according to the spatially-based convention",
+        "submeter": "-A1.2.2"
     },
     "3.L.18": {
         "tr1": "-02-ZVNV-3L18-TR01",
@@ -1255,7 +1312,8 @@
         },
         "zone": 3,
         "floor": 2,
-        "side": "S"
+        "side": "S",
+        "submeter": "-A1.2.2"
     },
     "3.F.6_B": {
         "tr1": "-02-ZVNV-3F6B-TR01",
@@ -1279,7 +1337,8 @@
         },
         "zone": 4,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.2.3"
     },
     "3.H.1": {
         "tr1": "-02-ZVNV-3H1-TR01",
@@ -1303,7 +1362,8 @@
         },
         "zone": 4,
         "floor": 2,
-        "side": "N"
+        "side": "N",
+        "submeter": "-A1.2.3"
     },
     "3.I.1": {
         "tr1": "-02-ZVNV-3I1-TR01",
@@ -1328,7 +1388,8 @@
         "zone": 4,
         "floor": 2,
         "side": "N",
-        "note": "removed '_(fælleskontor)' from the room name to get a match with other files"
+        "note": "removed '_(fælleskontor)' from the room name to get a match with other files. Also, it is misnamed 3.H.1 in the blueprints.",
+        "submeter": "-A1.2.3"
     },
     "3.J.11": {
         "tr1": "-02-ZVNV-3J11-TR01",
@@ -1353,7 +1414,8 @@
         "zone": 4,
         "floor": 2,
         "side": "N",
-        "note": "name changed from 3.F.6_B as id's indicate that this room should have been called 3.J.11"
+        "note": "name changed from 3.F.6_B as id's indicate that this room should have been called 3.J.11",
+        "submeter": "-A1.2.3"
     },
     "3.J.13": {
         "tr1": "-02-ZVNV-3J13-TR01",
@@ -1378,7 +1440,8 @@
         "zone": 4,
         "floor": 2,
         "side": "N",
-        "note": "name changed from 3.H.1 as id's indicate that this room should have been called 3.J.13"
+        "note": "name changed from 3.H.1 as id's indicate that this room should have been called 3.J.13",
+        "submeter": "-A1.2.3"
     },
     
     "1.E.5Gang": {
@@ -1404,7 +1467,8 @@
         "zone": -1,
         "floor": 0,
         "side": "N",
-        "note": "this is neither N nor S"
+        "note": "this is neither N nor S, nor in the blueprints",
+        "submeter": "-A1.2.4"
     },
     "1.I.5Gang": {
         "tr1": "-01-1I5-TR01",
@@ -1429,7 +1493,8 @@
         "zone": -1,
         "floor": 0,
         "side": "N",
-        "note": "this is neither N nor S"
+        "note": "this is neither N nor S, nor in the blueprints",
+        "submeter": "-A1.2.3"
     },
     "1.I.20Gang": {
         "tr1": "-01-1I20-TR01",
@@ -1454,7 +1519,8 @@
         "zone": -1,
         "floor": 0,
         "side": "N",
-        "note": "this is neither N nor S"
+        "note": "this is neither N nor S",
+        "submeter": "-A1.2.2"
     }
 }
 
