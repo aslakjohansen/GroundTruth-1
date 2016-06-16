@@ -555,6 +555,9 @@ def gen_foyer_room (prefix):
     }
     return ports
 
+def gen_misc (prefix, floors):
+    pass
+
 def gen_building (prefix):
     # load data
     with open('gtc.json') as fo:
@@ -601,6 +604,9 @@ def gen_building (prefix):
     district_return_temp = GTC[prefix+'/district_return_temp']
     district_valve       = GTC[prefix+'/district_valve']
     district_rect        = GTC[prefix+'/district_rectifier']
+    
+    # misc
+    gen_misc(prefix+'/misc', floors)
     
     # convenience maps
     supply_map = {'N': supply_n_pres, 'S': supply_s_pres}
