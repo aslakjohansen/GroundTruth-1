@@ -177,7 +177,7 @@ def gen_heat_transfer_box (prefix):
     g.add( (po, RDF.type, GTC['Heat_Transfer_Box_Primary_Output']) )
     g.add( (si, RDF.type, GTC['Heat_Transfer_Box_Secondary_Input']) )
     g.add( (so, RDF.type, GTC['Heat_Transfer_Box_Secondary_Output']) )
-    g.add( (pump, RDF.type, GTC['Pump']) )
+    g.add( (pump, RDF.type, BRICK['Pump']) )
     g.add( (supply_temp, RDF.type, GTC['Temperature_Sensor']) )
     g.add( (return_temp, RDF.type, GTC['Temperature_Sensor']) )
     
