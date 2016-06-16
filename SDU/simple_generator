@@ -117,15 +117,15 @@ def gen_heating_power_meter (prefix):
     power       = GTC[prefix+'/power']
     
     # types
-    g.add( (fb         , RDF.type, GTC['Heat_Power_Meter_Functional_Block']) )
-    g.add( (s          , RDF.type, GTC['Heat_Power_Meter_Supply']) )
-    g.add( (r          , RDF.type, GTC['Heat_Power_Meter_Return']) )
-    g.add( (ms         , RDF.type, GTC['Heat_Power_Meter_Metered_Supply']) )
-    g.add( (mr         , RDF.type, GTC['Heat_Power_Meter_Metered_Return']) )
-    g.add( (flow       , RDF.type, GTC['Flow_Sensor']) )
-    g.add( (supply_temp, RDF.type, GTC['Temperature_Sensor']) )
-    g.add( (return_temp, RDF.type, GTC['Temperature_Sensor']) )
-    g.add( (power      , RDF.type, GTC['Heating_Power_Calculation']) )
+    g.add( (fb         , RDF.type,   GTC['Heat_Power_Meter_Functional_Block']) )
+    g.add( (s          , RDF.type,   GTC['Heat_Power_Meter_Supply']) )
+    g.add( (r          , RDF.type,   GTC['Heat_Power_Meter_Return']) )
+    g.add( (ms         , RDF.type,   GTC['Heat_Power_Meter_Metered_Supply']) )
+    g.add( (mr         , RDF.type,   GTC['Heat_Power_Meter_Metered_Return']) )
+    g.add( (flow       , RDF.type, BRICK['Flow_Sensor']) )
+    g.add( (supply_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (power      , RDF.type,   GTC['Heating_Power_Calculation']) )
     
     # partOf
     g.add( (s          , BRICK['partOf'], fb) )
@@ -178,8 +178,8 @@ def gen_heat_transfer_box (prefix):
     g.add( (si         , RDF.type,   GTC['Heat_Transfer_Box_Secondary_Input']) )
     g.add( (so         , RDF.type,   GTC['Heat_Transfer_Box_Secondary_Output']) )
     g.add( (pump       , RDF.type, BRICK['Pump']) )
-    g.add( (supply_temp, RDF.type,   GTC['Temperature_Sensor']) )
-    g.add( (return_temp, RDF.type,   GTC['Temperature_Sensor']) )
+    g.add( (supply_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     
     # partOf
     g.add( (pi         , BRICK['partOf'], fb) )
@@ -271,19 +271,19 @@ def gen_vav (prefix, data):
     cooled_valve    = gen_ij_valve(prefix+'/cooled_valve', 2, 1)
     
     # types
-    g.add( (fb             , RDF.type, GTC['GTC_VAV_Functional_Block']) )
-    g.add( (ui             , RDF.type, GTC['GTC_VAV_Upstream_Input']) )
-    g.add( (uo             , RDF.type, GTC['GTC_VAV_Upstream_Output']) )
-    g.add( (di             , RDF.type, GTC['GTC_VAV_Downstream_Input']) )
-    g.add( (do             , RDF.type, GTC['GTC_VAV_Downstream_Output']) )
-    g.add( (ci             , RDF.type, GTC['GTC_VAV_Cooled_input']) )
-    g.add( (co             , RDF.type, GTC['GTC_VAV_Cooled_Output']) )
-    g.add( (controller     , RDF.type, GTC['Controller']) )
-    g.add( (supply_damper  , RDF.type, GTC['Damper']) )
-    g.add( (return_damper  , RDF.type, GTC['Damper']) )
-    g.add( (upstream_pres  , RDF.type, GTC['Pressure_Sensor']) )
-    g.add( (downstream_temp, RDF.type, GTC['Temperature_Sensor']) )
-    g.add( (cooled_flow    , RDF.type, GTC['Flow_Meter']) )
+    g.add( (fb             , RDF.type,   GTC['GTC_VAV_Functional_Block']) )
+    g.add( (ui             , RDF.type,   GTC['GTC_VAV_Upstream_Input']) )
+    g.add( (uo             , RDF.type,   GTC['GTC_VAV_Upstream_Output']) )
+    g.add( (di             , RDF.type,   GTC['GTC_VAV_Downstream_Input']) )
+    g.add( (do             , RDF.type,   GTC['GTC_VAV_Downstream_Output']) )
+    g.add( (ci             , RDF.type,   GTC['GTC_VAV_Cooled_input']) )
+    g.add( (co             , RDF.type,   GTC['GTC_VAV_Cooled_Output']) )
+    g.add( (controller     , RDF.type,   GTC['Controller']) )
+    g.add( (supply_damper  , RDF.type, BRICK['Damper']) )
+    g.add( (return_damper  , RDF.type, BRICK['Damper']) )
+    g.add( (upstream_pres  , RDF.type, BRICK['Pressure_Sensor']) )
+    g.add( (downstream_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (cooled_flow    , RDF.type, BRICK['Flow_Meter']) )
     
     # labels
     g.add( (supply_damper  , RDFS.label, Literal(data['supply valve'])) )
@@ -383,12 +383,12 @@ def gen_filter_element (prefix):
     dpt               = gen_dpt(prefix+'/dpt')
     
     # types
-    g.add( (fb               , RDF.type, GTC['GTC_Filter_Element_Functional_Block']) )
-    g.add( (i                , RDF.type, GTC['GTC_Filter_Element_Input']) )
-    g.add( (o                , RDF.type, GTC['GTC_Filter_Element_Output']) )
-    g.add( (input_pressure   , RDF.type, GTC['Pressure_Sensor']) )
-    g.add( (filter_nonkeyword, RDF.type, GTC['Filter']) )
-    g.add( (output_pressure  , RDF.type, GTC['Pressure_Sensor']) )
+    g.add( (fb               , RDF.type,   GTC['GTC_Filter_Element_Functional_Block']) )
+    g.add( (i                , RDF.type,   GTC['GTC_Filter_Element_Input']) )
+    g.add( (o                , RDF.type,   GTC['GTC_Filter_Element_Output']) )
+    g.add( (input_pressure   , RDF.type, BRICK['Pressure_Sensor']) )
+    g.add( (filter_nonkeyword, RDF.type, BRICK['Filter']) )
+    g.add( (output_pressure  , RDF.type, BRICK['Pressure_Sensor']) )
     
     # partOf
     g.add( (i                , BRICK['partOf'], fb) )
@@ -444,7 +444,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     # CO2 sensor
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
         entity = GTC[prefix+'/co2']
-        g.add( (entity, RDF.type, GTC['CO2_Sensor']) )
+        g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['co2'])) )
         g.add( (entity, BRICK['partOf'], room) )
         g.add( (entity, BRICK['measures'], room) )
@@ -452,7 +452,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     # PIR sensor
     if 'pir' in rooms_data[room_name] and rooms_data[room_name]['pir']!='':
         entity = GTC[prefix+'/pir']
-        g.add( (entity, RDF.type, GTC['PIR_Sensor']) )
+        g.add( (entity, RDF.type, BRICK['PIR_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['pir'])) )
         g.add( (entity, BRICK['partOf'], room) )
         g.add( (entity, BRICK['measures'], room) )
@@ -480,7 +480,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
         for index in range(rooms_data[room_name]['input dampeners']['count']):
             entity = GTC[prefix+'/input_dampers/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['input dampeners']['id'])) )
-            g.add( (entity, RDF.type, GTC['Damper']) )
+            g.add( (entity, RDF.type, BRICK['Damper']) )
             g.add( (entity, BRICK['partOf'], room) )
             input_dampers.append(entity)
     
@@ -489,7 +489,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
         for index in range(rooms_data[room_name]['output dampeners']['count']):
             entity = GTC[prefix+'/output_dampers/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['output dampeners']['id'])) )
-            g.add( (entity, RDF.type, GTC['Damper']) )
+            g.add( (entity, RDF.type, BRICK['Damper']) )
             g.add( (entity, BRICK['partOf'], room) )
             output_dampers.append(entity)
     
@@ -531,7 +531,7 @@ def gen_foyer_room (prefix):
     co2_sensors = ['-01-ZV01-1A14-CO2', '-01-ZV02-1A14-CO2', '-01-ZV03-1A14-CO2']
     for index in range(len(co2_sensors)):
         entity = GTC[prefix+'/co2/'+str(index)]
-        g.add( (entity, RDF.type, GTC['CO2_Sensor']) )
+        g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
         g.add( (entity, RDFS.label, Literal(co2_sensors[index])) )
         g.add( (entity, BRICK['partOf'], room) )
         g.add( (entity, BRICK['measures'], room) )
@@ -636,10 +636,10 @@ def gen_building (prefix):
     g.add( (hx_temp             , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (hx_fan              , RDF.type, BRICK['Fan']) )
     g.add( (supply_temp         , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
-    g.add( (supply_n_pres       , RDF.type,   GTC['Pressure_Sensor']) )
-    g.add( (supply_s_pres       , RDF.type,   GTC['Pressure_Sensor']) )
-    g.add( (return_n_pres       , RDF.type,   GTC['Pressure_Sensor']) )
-    g.add( (return_s_pres       , RDF.type,   GTC['Pressure_Sensor']) )
+    g.add( (supply_n_pres       , RDF.type, BRICK['Pressure_Sensor']) )
+    g.add( (supply_s_pres       , RDF.type, BRICK['Pressure_Sensor']) )
+    g.add( (return_n_pres       , RDF.type, BRICK['Pressure_Sensor']) )
+    g.add( (return_s_pres       , RDF.type, BRICK['Pressure_Sensor']) )
     g.add( (return_damper       , RDF.type, BRICK['Damper']) )
     g.add( (return_fe_temp      , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (exhaust_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
