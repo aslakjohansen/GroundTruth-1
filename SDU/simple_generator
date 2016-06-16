@@ -90,7 +90,7 @@ def gen_hx (prefix):
     g.add( (si, RDF.type, BRICK['Heat_Exchanger_Secondary_Input']) )
     g.add( (so, RDF.type, BRICK['Heat_Exchanger_Secondary_Output']) )
     
-    # partOf
+    # isPartOf
     g.add( (pi, BRICKFRAME['isPartOf'], fb) )
     g.add( (po, BRICKFRAME['isPartOf'], fb) )
     g.add( (si, BRICKFRAME['isPartOf'], fb) )
@@ -128,7 +128,7 @@ def gen_heating_power_meter (prefix):
     g.add( (return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (power      , RDF.type,   GTC['Heating_Power_Calculation']) )
     
-    # partOf
+    # isPartOf
     g.add( (s          , BRICKFRAME['isPartOf'], fb) )
     g.add( (r          , BRICKFRAME['isPartOf'], fb) )
     g.add( (ms         , BRICKFRAME['isPartOf'], fb) )
@@ -188,7 +188,7 @@ def gen_heat_transfer_box (prefix):
     g.add( (supply_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     
-    # partOf
+    # isPartOf
     g.add( (pi         , BRICKFRAME['isPartOf'], fb) )
     g.add( (po         , BRICKFRAME['isPartOf'], fb) )
     g.add( (si         , BRICKFRAME['isPartOf'], fb) )
@@ -244,7 +244,7 @@ def gen_ij_valve (prefix, input_count, output_count):
     for entity in oc:
         g.add( (entity, RDF.type, GTC['IJ_Valve_Output_control']) )
     
-    # partOf
+    # isPartOf
     for entity in i+ic+o+oc:
         g.add( (entity, BRICKFRAME['isPartOf'], fb) )
     
@@ -305,7 +305,7 @@ def gen_vav (prefix, data):
     g.add( (hx['fb']       , RDFS.label, Literal(data['cooling coil'])) )
     g.add( (downstream_temp, RDFS.label, Literal(data['supply temperature'])) )
     
-    # partOf
+    # isPartOf
     g.add( (ui                , BRICKFRAME['isPartOf'], fb) )
     g.add( (uo                , BRICKFRAME['isPartOf'], fb) )
     g.add( (di                , BRICKFRAME['isPartOf'], fb) )
@@ -374,7 +374,7 @@ def gen_dpt (prefix):
     g.add( (o , RDF.type, GTC['DPT_Output']) )
     g.add( (t , RDF.type, GTC['Differential_Pressure_Transmitter']) )
     
-    # partOf
+    # isPartOf
     g.add( (u, BRICKFRAME['isPartOf'], fb) )
     g.add( (d, BRICKFRAME['isPartOf'], fb) )
     g.add( (o, BRICKFRAME['isPartOf'], fb) )
@@ -414,7 +414,7 @@ def gen_filter_element (prefix):
     g.add( (filter_nonkeyword, RDF.type, BRICK['Filter']) )
     g.add( (output_pressure  , RDF.type, BRICK['Pressure_Sensor']) )
     
-    # partOf
+    # isPartOf
     g.add( (i                , BRICKFRAME['isPartOf'], fb) )
     g.add( (o                , BRICKFRAME['isPartOf'], fb) )
     g.add( (input_pressure   , BRICKFRAME['isPartOf'], fb) )
@@ -459,7 +459,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     # labels
     g.add( (room, RDFS.label, Literal(room_name)) )
     
-    # partOf
+    # isPartOf
     g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
     # temperature sensor
@@ -547,7 +547,7 @@ def gen_foyer_room (prefix):
     # labels
     g.add( (room, RDFS.label, Literal('1.A.14')) )
     
-    # partOf
+    # isPartOf
     g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
     # temperature sensor
@@ -742,7 +742,7 @@ def gen_building (prefix):
     g.add( (district_return_temp       , BRICKFRAME['feeds'], district_rect) )
     g.add( (district_rect              , BRICKFRAME['feeds'], district_supply_temp) )
     
-    # partOf
+    # isPartOf
     for floor in floors:
         g.add( (floor           , BRICKFRAME['isPartOf'], building) )
     for room_name in rooms:
