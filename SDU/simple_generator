@@ -8,6 +8,10 @@ import json
 Point count:
 - actuators & sensors in schematics:
   23+20+20+20+18+18+18+12+12+18+18+15+12+15+12+15+6+15+12+14+18+18+18+18+18+12+6+12+11+6+18+22+15+10+6+10+9+9=549
+- setpoints and other atrificials (11-12 per rool):
+  12*60=720
+- all in all
+  549+720=1269
 
 TODO:
 - add media relations
