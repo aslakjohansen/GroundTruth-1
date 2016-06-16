@@ -69,8 +69,8 @@ def gen_extensions():
     
     Celcius_Temperature_Sensor = GTC['Celcius_Temperature_Sensor']
     g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK.Sensor) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICK.Temperature) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICK.Celcius) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG.Temperature) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG.Celcius) )
     
     
 
@@ -438,8 +438,9 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
         entity = GTC[prefix+'/temperature']
         g.add( (entity, RDF.type, GTC['Celcius_Temperature_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['tr1'])) )
-        g.add( (entity, BRICK['partOf'], room) )
-        g.add( (entity, BRICK['measures'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (entity, BRICKFRAME['measures'], room) )
     
     # CO2 sensor
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':

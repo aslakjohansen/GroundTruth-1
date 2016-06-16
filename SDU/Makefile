@@ -6,6 +6,9 @@ TARGETS = \
 
 all: demos
 
+test: sdu_gtc_simple.ttl
+	python ../apps/RUN_APPS.py sdu_gtc_simple.ttl
+
 clean:
 	rm sdu_gtc.ttl ${TARGETS}
 
@@ -14,6 +17,9 @@ mrproper: clean
 
 sdu_gtc.ttl: generator rooms.json
 	./generator
+
+sdu_gtc_simple.ttl: simple_generator rooms.json
+	./simple_generator
 
 demos: ${TARGETS}
 
