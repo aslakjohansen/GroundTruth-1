@@ -329,7 +329,8 @@ def gen_ij_valve (prefix, input_count, output_count):
     }
     return ports
 
-def gen_vav (prefix, data):
+# instantiates the equivalent of a VAV
+def gen_vav (prefix, data, meter):
     fb              = GTC[prefix+'/fb']
     ui              = GTC[prefix+'/port[ui]']
     uo              = GTC[prefix+'/port[uo]']
@@ -716,7 +717,7 @@ def gen_building (prefix):
     vavs                 = []
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
-        vav = gen_vav(prefix+'/vavs/'+str(index), vav_data)
+        vav = gen_vav(prefix+'/vavs/'+str(index), vav_data, metermap['-A1'])
         vavs.append(vav)
     district_meter       = gen_heating_power_meter(prefix+'/district_meter')
     radiator_htb         = gen_heat_transfer_box(prefix+'/radiator_htb')
