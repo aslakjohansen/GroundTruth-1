@@ -107,8 +107,10 @@ def gen_electrical (prefix, floors):
         g.add( (submeters[index], RDFS.label, Literal(submeter_labels[index])) )
     
     # types
-    g.add( (meter       , RDF.type,   GTC['Electrical_Energy_Meter']) )
-    g.add( (common_meter, RDF.type,   GTC['Electrical_Energy_Meter']) )
+#    g.add( (meter       , RDF.type,   GTC['Electrical_Energy_Meter']) )
+#    g.add( (common_meter, RDF.type,   GTC['Electrical_Energy_Meter']) )
+    g.add( (meter       , RDF.type, BRICK['Power_Meter']) )
+    g.add( (common_meter, RDF.type, BRICK['Power_Meter']) )
     g.add( (meter       , RDF.type,   GTC['Fuse']) )
     g.add( (common_meter, RDF.type,   GTC['Fuse']) )
     for submeter in submeters:
@@ -600,6 +602,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
                 g.add( (entity, RDF.type, BRICK['Lighting']) )
                 g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
                 g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+                g.add( (entity, BRICKFRAME['feeds'], room) )
                 index += 1
         else:
             print('Error: Unknown type ('+group['type']+') of lighting for room '+room_name+'. Skipping ...')
