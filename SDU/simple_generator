@@ -708,10 +708,11 @@ def gen_building (prefix):
     building             = GTC[prefix]
     floors               = map(lambda level: GTC[prefix+'/floors/'+str(level)], range(3))
     electrical           = gen_electrical(prefix+'/electrical', floors)
+    metermap = electrical['metermap']
     rooms                = {}
     for room_name in rooms_data.keys():
-        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vavs_data, electrical['metermap'])
-    rooms['1.A.14'] = gen_foyer_room(prefix+'/rooms/1.A.14', electrical['metermap'])
+        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vavs_data, metermap)
+    rooms['1.A.14'] = gen_foyer_room(prefix+'/rooms/1.A.14', metermap)
     vavs                 = []
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
