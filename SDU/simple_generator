@@ -590,6 +590,20 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
             g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
             output_dampers.append(entity)
     
+    # lighting
+    index = 0
+    for group in rooms_data[room_name]['lighting']:
+        if group['type']=='ledgo':
+            for i in range(group['count']):
+                entity = GTC[prefix+'/lighting/'+str(index)]
+                g.add( (entity, RDFS.label, Literal(group['id'])) )
+                g.add( (entity, RDF.type, BRICK['Lighting']) )
+                g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+                g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+                index += 1
+        else:
+            print('Error: Unknown type ('+group['type']+') of lighting for room '+room_name+'. Skipping ...')
+    
     ports = {
         'fb':            fb,
         'floor':         rooms_data[room_name]['floor'],

@@ -19,6 +19,13 @@
             "count": 1,
             "id": "-01-ZVNV-1A1-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 6,
+                "id": "-W9018"
+            }
+        ],
         "zone": 1,
         "floor": 0,
         "side": "N",
@@ -44,6 +51,13 @@
             "count": 1,
             "id": "-01-ZVNV-1A5-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9018"
+            }
+        ],
         "zone": 1,
         "floor": 0,
         "side": "N",
@@ -69,6 +83,13 @@
             "count": 1,
             "id": "-01-ZVNV-1A7-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9018"
+            }
+        ],
         "zone": 1,
         "floor": 0,
         "side": "N",
@@ -94,6 +115,13 @@
             "count": 1,
             "id": "-01-ZVNV-1A9-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9018"
+            }
+        ],
         "zone": 1,
         "floor": 0,
         "side": "N",
@@ -119,6 +147,13 @@
             "count": 1,
             "id": "-01-ZVNV-1A11-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9018"
+            }
+        ],
         "zone": 1,
         "floor": 0,
         "side": "N",
@@ -144,6 +179,13 @@
             "count": 1,
             "id": "-01-ZVNV-1F6"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9042"
+            }
+        ],
         "zone": 1,
         "floor": 0,
         "side": "N",
@@ -169,6 +211,13 @@
             "count": 1,
             "id": "-01-ZVSV-1A20-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9016"
+            }
+        ],
         "zone": 2,
         "floor": 0,
         "side": "S",
@@ -194,6 +243,13 @@
             "count": 1,
             "id": "-01-ZVSV-1A22-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 8,
+                "id": "-W9016"
+            }
+        ],
         "zone": 2,
         "floor": 0,
         "side": "S",
@@ -219,6 +275,13 @@
             "count": 1,
             "id": "-01-ZVSV-1A28A-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9016"
+            }
+        ],
         "zone": 2,
         "floor": 0,
         "side": "S",
@@ -244,6 +307,13 @@
             "count": 1,
             "id": "-01-ZVSV-1A28B-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9016"
+            }
+        ],
         "zone": 2,
         "floor": 0,
         "side": "S",
@@ -269,6 +339,13 @@
             "count": 0,
             "id": ""
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 1,
+                "id": "-W9016"
+            }
+        ],
         "zone": 2,
         "floor": 0,
         "side": "S",
@@ -296,6 +373,8 @@
             "id": "",
             "node": "no damper on the output pipe"
         },
+        "lighting": [
+        ],
         "zone": 3,
         "floor": 0,
         "side": "S",
@@ -323,6 +402,13 @@
             "id": "-01-ZVSØ-1K25-MSU",
             "node": "the count is marked as ??, I map that to 1"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9022"
+            }
+        ],
         "zone": 3,
         "floor": 0,
         "side": "S",
@@ -348,6 +434,13 @@
             "count": 1,
             "id": "-01-ZVNØ-1H1-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9016"
+            }
+        ],
         "zone": 4,
         "floor": 0,
         "side": "N",
@@ -373,6 +466,13 @@
             "count": 1,
             "id": "-01-ZVNØ-1H6-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9012"
+            }
+        ],
         "zone": 4,
         "floor": 0,
         "side": "N",
@@ -398,6 +498,13 @@
             "count": 1,
             "id": "-01-ZVNØ-1J5-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9016"
+            }
+        ],
         "zone": 4,
         "floor": 0,
         "side": "N",
@@ -423,6 +530,13 @@
             "count": 1,
             "id": "-01-ZVNØ-1J7-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9016"
+            }
+        ],
         "zone": 4,
         "floor": 0,
         "side": "N",
@@ -448,6 +562,13 @@
             "count": 1,
             "id": "-01-ZVNØ-1J9-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9016"
+            }
+        ],
         "zone": 4,
         "floor": 0,
         "side": "N",
@@ -473,6 +594,13 @@
             "count": 1,
             "id": "-01-ZVNØ-1J13-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9016"
+            }
+        ],
         "zone": 4,
         "floor": 0,
         "side": "N",
@@ -499,6 +627,13 @@
             "count": 1,
             "id": "-02-ZVNV-2A1a-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 12,
+                "id": "-W9012"
+            }
+        ],
         "zone": 1,
         "floor": 1,
         "side": "N",
@@ -525,6 +660,13 @@
             "count": 1,
             "id": "-02-ZVNV-2A1b-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 6,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 1,
         "side": "N",
@@ -550,6 +692,13 @@
             "count": 1,
             "id": "-02-ZVNV-2A11-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 1,
         "side": "N",
@@ -575,6 +724,13 @@
             "count": 1,
             "id": "-02-ZVNV-2B13-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 1,
         "side": "N",
@@ -601,6 +757,13 @@
             "count": 1,
             "id": "-02-ZVNV-2F6a-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 1,
         "side": "N",
@@ -627,6 +790,13 @@
             "count": 1,
             "id": "-02-ZVNV-2A19-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9012"
+            }
+        ],
         "zone": 2,
         "floor": 1,
         "side": "S",
@@ -652,6 +822,13 @@
             "count": 2,
             "id": "-02-ZVNV-2A22a-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 18,
+                "id": "-W9012"
+            }
+        ],
         "zone": 2,
         "floor": 1,
         "side": "S",
@@ -678,6 +855,13 @@
             "count": 1,
             "id": "-02-ZVNV-2A22b-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9014"
+            }
+        ],
         "zone": 2,
         "floor": 1,
         "side": "S",
@@ -704,6 +888,13 @@
             "count": 1,
             "id": "-02-ZVNV-2A30-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9014"
+            }
+        ],
         "zone": 2,
         "floor": 1,
         "side": "S",
@@ -729,6 +920,13 @@
             "count": 1,
             "id": "-02-ZVNV-2C30-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9014"
+            }
+        ],
         "zone": 2,
         "floor": 1,
         "side": "S",
@@ -754,6 +952,13 @@
             "count": 1,
             "id": "-02-ZVNV-2H30-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9012"
+            }
+        ],
         "zone": 3,
         "floor": 1,
         "side": "S",
@@ -779,6 +984,8 @@
             "count": 2,
             "id": "-02-ZVNV-2I18a-MSU"
         },
+        "lighting": [
+        ],
         "zone": 3,
         "floor": 1,
         "side": "S",
@@ -805,6 +1012,8 @@
             "count": 1,
             "id": "-02-ZVNV-2I18b-MSU"
         },
+        "lighting": [
+        ],
         "zone": 3,
         "floor": 1,
         "side": "S",
@@ -831,6 +1040,13 @@
             "count": 1,
             "id": "-02-ZVNV-2L30-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9012"
+            }
+        ],
         "zone": 3,
         "floor": 1,
         "side": "S",
@@ -856,6 +1072,13 @@
             "count": 1,
             "id": "-02-ZVNV-2F6b-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 1,
         "side": "N",
@@ -881,6 +1104,13 @@
             "count": 1,
             "id": "-02-ZVNV-2H1a-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 18,
+                "id": "-W9012"
+            }
+        ],
         "zone": 4,
         "floor": 1,
         "side": "N",
@@ -906,9 +1136,12 @@
             "count": 1,
             "id": "-02-ZVNV-2H1b-MSU"
         },
+        "lighting": [
+        ],
         "zone": 4,
         "floor": 1,
         "side": "N",
+        "note": "(A|B) separation unclear",
         "submeter": "-A1.1.3"
     },
     "2.J.11": {
@@ -931,6 +1164,13 @@
             "count": 1,
             "id": "-02-ZVNV-2J11-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 3,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 1,
         "side": "N",
@@ -957,6 +1197,13 @@
             "count": 1,
             "id": "-02-ZVNV-2J13-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 1,
         "side": "N",
@@ -983,6 +1230,13 @@
             "count": 2,
             "id": "-02-ZVNV-3A1-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 15,
+                "id": "-W9012"
+            }
+        ],
         "zone": 1,
         "floor": 2,
         "side": "N",
@@ -1009,6 +1263,13 @@
             "count": 1,
             "id": "-02-ZVNV-3A11-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 2,
         "side": "N",
@@ -1034,6 +1295,13 @@
             "count": 1,
             "id": "-02-ZVNV-3B13-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 2,
         "side": "N",
@@ -1059,6 +1327,13 @@
             "count": 1,
             "id": "-02-ZVNV-3D1-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 2,
         "side": "N",
@@ -1084,6 +1359,13 @@
             "count": 1,
             "id": "-02-ZVNV-3F6A-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 1,
         "floor": 2,
         "side": "N",
@@ -1109,6 +1391,13 @@
             "count": 1,
             "id": "-02-ZVNV-3A18-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 4,
+                "id": "-W9014"
+            }
+        ],
         "zone": 2,
         "floor": 2,
         "side": "S",
@@ -1134,6 +1423,13 @@
             "count": 1,
             "id": "-02-ZVNV-3A22-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 21,
+                "id": "-W9012"
+            }
+        ],
         "zone": 2,
         "floor": 2,
         "side": "S",
@@ -1159,6 +1455,13 @@
             "count": 1,
             "id": "-02-ZVNV-3H27A-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 2,
         "floor": 2,
         "side": "S",
@@ -1184,6 +1487,13 @@
             "count": 1,
             "id": "-02-ZVNV-3H27B-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 3,
         "floor": 2,
         "side": "S",
@@ -1209,6 +1519,13 @@
             "count": 2,
             "id": "-02-ZVNV-3I22-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 3,
         "floor": 2,
         "side": "S",
@@ -1234,6 +1551,13 @@
             "count": 1,
             "id": "-02-ZVNV-3I30-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 3,
         "floor": 2,
         "side": "S",
@@ -1259,6 +1583,13 @@
             "count": 1,
             "id": "-02-ZVNV-3J18-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 1,
+                "id": "-W9018"
+            }
+        ],
         "zone": 3,
         "floor": 2,
         "side": "S",
@@ -1284,6 +1615,13 @@
             "count": 1,
             "id": "-02-ZVNV-3J29-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 19,
+                "id": "-W9012"
+            }
+        ],
         "zone": 3,
         "floor": 2,
         "side": "S",
@@ -1310,6 +1648,13 @@
             "count": 1,
             "id": "-02-ZVNV-3L18-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 3,
         "floor": 2,
         "side": "S",
@@ -1335,6 +1680,13 @@
             "count": 1,
             "id": "-02-ZVNV-3F6B-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 2,
         "side": "N",
@@ -1360,6 +1712,13 @@
             "count": 1,
             "id": "-02-ZVNV-3H1-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 16,
+                "id": "-W9012"
+            }
+        ],
         "zone": 4,
         "floor": 2,
         "side": "N",
@@ -1385,6 +1744,13 @@
             "count": 2,
             "id": "-02-ZVNV-3I1-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 2,
         "side": "N",
@@ -1411,6 +1777,13 @@
             "count": 1,
             "id": "-02-ZVNV-3J11-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 2,
         "side": "N",
@@ -1437,6 +1810,13 @@
             "count": 1,
             "id": "-02-ZVNV-3J13-MSU"
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 2,
+                "id": "-W9014"
+            }
+        ],
         "zone": 4,
         "floor": 2,
         "side": "N",
@@ -1464,6 +1844,13 @@
             "count": 0,
             "id": ""
         },
+        "lighting": [
+            {
+                "type": "ledgo",
+                "count": 1,
+                "id": "-W9018"
+            }
+        ],
         "zone": -1,
         "floor": 0,
         "side": "N",
@@ -1490,6 +1877,8 @@
             "count": 0,
             "id": ""
         },
+        "lighting": [
+        ],
         "zone": -1,
         "floor": 0,
         "side": "N",
@@ -1516,6 +1905,8 @@
             "count": 0,
             "id": ""
         },
+        "lighting": [
+        ],
         "zone": -1,
         "floor": 0,
         "side": "N",
