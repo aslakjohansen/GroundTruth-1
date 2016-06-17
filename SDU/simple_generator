@@ -721,6 +721,7 @@ def gen_building (prefix):
     district_meter       = gen_heating_power_meter(prefix+'/district_meter')
     radiator_htb         = gen_heat_transfer_box(prefix+'/radiator_htb')
     floor_htb            = gen_heat_transfer_box(prefix+'/floor_htb')
+    ahu                  = GTC[prefix+'/ahu']
     outside_temp         = GTC[prefix+'/outside_temp']
     outside_fe           = gen_filter_element(prefix+'outside_fe')
     outside_fe_temp      = GTC[prefix+'/outside_fe_temp']
@@ -756,6 +757,7 @@ def gen_building (prefix):
     g.add( (building, RDFS.label, Literal("GreenTech Center in Vejle, Denmark")) )
     
     # types
+    g.add( (ahu                 , RDF.type, BRICK['AHU']) )
     g.add( (outside_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (outside_fe_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (hx_temp             , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
@@ -862,7 +864,56 @@ def gen_building (prefix):
     g.add( (district_valve      , BRICKFRAME['isPartOf'], building) )
     g.add( (district_rect       , BRICKFRAME['isPartOf'], building) )
     
-    # isPointOf
+    # isPointOf: metering
+    for vav in vavs:
+        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], vav['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_meter['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], radiator_htb['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], floor_htb['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_fe['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_fe_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx1['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx_fan) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx2['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_n_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_s_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_n_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_s_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_damper) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_fe['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_fe_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], exhaust_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], exhaust_fan) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], ahu_meter['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_supply_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_pump) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_return_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_valve) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_rect) )
+    
+    # isPointOf: sensors and actuators
+    g.add( (outside_temp        , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (outside_fe_temp     , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (hx_temp             , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (hx_fan              , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (supply_temp         , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (supply_n_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (supply_s_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_n_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_s_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_damper       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_fe_temp      , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (exhaust_temp        , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (exhaust_fan         , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_supply_temp, BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_pump       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_return_temp, BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_valve      , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_rect       , BRICKFRAME['isPointOf'], ahu) )
+    
 
 ################################################################################
 ###################################################################### main ####
