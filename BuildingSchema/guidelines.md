@@ -68,7 +68,7 @@ Certain equipments fit badly -- or not at all -- into this model. One example is
 It is impossible to distinguish between the primary and secondary flows if these are represented as a single entity. Instead, we define what is known as a functional block to group entities
 
     Function_Block                  isSubClassOf Thing
-    Heat_Exchanger_Function_Block   isSubClassOf BRICK.Function_Block
+    Heat_Exchanger_Function_Block   isSubClassOf Function_Block
     Heat_Exchanger_Primary_Input    isSubClassOf Thing
     Heat_Exchanger_Primary_Output   isSubClassOf Thing
     Heat_Exchanger_Secondary_Input  isSubClassOf Thing
