@@ -100,7 +100,7 @@ This allows us to have feeds relationships on with HX_1_PI, HX_1_PO, HX_1_SI and
 Where Do We Go from Here?
 -------------------------
 
-Tags, TagSets and Relations are added [here](https://docs.google.com/spreadsheets/d/1QTSu0UxJ7UqRvgTW2P1Q4qudoBbvPqXpEhYiulyjcro/edit#gid=0).  Missing elements should be added here. The spreadsheet is then exported to XL and processed by an IronPython notebook into the /BuildingSchema/Brick*.ttl files. 
+Missing Tags, TagSets and Relations may be added [here](https://docs.google.com/spreadsheets/d/1QTSu0UxJ7UqRvgTW2P1Q4qudoBbvPqXpEhYiulyjcro/edit#gid=0). This spreadsheet is then exported to XL and processed by an IronPython notebook into the /BuildingSchema/Brick*.ttl files. 
 
 The current schema layout is:
 
