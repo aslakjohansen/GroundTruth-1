@@ -23,6 +23,18 @@
 			 bf:isHierarchical  "";
 			 rdfs:label "Equipment"@en .
 
+ :Equipment_HVAC  rdfs:subClassOf   :Equipment;
+			 bf:isHierarchical  "";
+			 rdfs:label "HVAC"@en .
+
+ :Equipment_Fire_Safety_System  rdfs:subClassOf   :Equipment;
+			 bf:isHierarchical  "";
+			 rdfs:label "Fire Safety System"@en .
+
+ :Equipment_Water_System  rdfs:subClassOf   :Equipment;
+			 bf:isHierarchical  "";
+			 rdfs:label "Water System"@en .
+
  :Equipment_Energy  rdfs:subClassOf   :Equipment;
 			 bf:isHierarchical  "";
 			 rdfs:label "Energy"@en .
@@ -30,10 +42,6 @@
  :Equipment_Energy_Power  rdfs:subClassOf   :Equipment_Energy;
 			 bf:isHierarchical  "";
 			 rdfs:label "Power"@en .
-
- :Equipment_HVAC  rdfs:subClassOf   :Equipment;
-			 bf:isHierarchical  "";
-			 rdfs:label "HVAC"@en .
 
  :Equipment_HVAC_AHU  rdfs:subClassOf   :Equipment_HVAC;
 			 bf:isHierarchical  "";
@@ -89,6 +97,21 @@
 
  :HVAC  rdfs:subClassOf   :Equipment;
 			 rdfs:label "HVAC"@en .
+
+ :HX  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "HX"@en .
+
+ :FCP  rdfs:subClassOf   :Equipment_Fire_Safety_System;
+			 rdfs:label "FCP"@en .
+
+ :CWS  rdfs:subClassOf   :Equipment_Water_System;
+			 rdfs:label "CWS"@en .
+
+ :DHWS  rdfs:subClassOf   :Equipment_Water_System;
+			 rdfs:label "DHWS"@en .
+
+ :HWS  rdfs:subClassOf   :Equipment_Water_System;
+			 rdfs:label "HWS"@en .
 
  :Load  rdfs:subClassOf   :Equipment_Energy_Power;
 			 rdfs:label "Load"@en .
@@ -753,6 +776,9 @@
  :Current  rdfs:subClassOf   :MeasurementProperty_Modifier;
 			 rdfs:label "Current"@en .
 
+ :Safety  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Safety"@en .
+
  :Time  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
 			 rdfs:label "Time"@en .
 
@@ -818,6 +844,12 @@
 
  :Luminance  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
 			 rdfs:label "Luminance"@en .
+
+ :PIR  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "PIR"@en .
+
+ :Ventilation  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "Ventilation"@en .
 
  :Fahrenheit  rdfs:subClassOf   :MeasurementProperty_Unit;
 			 rdfs:label "Fahrenheit"@en .
