@@ -24,6 +24,9 @@
  :Equipment  rdfs:subClassOf   bf:TagSet;
 			 rdfs:label "Equipment"@en .
 
+ :Fire_Safety  rdfs:subClassOf   :Equipment;
+			 rdfs:label "Fire Safety"@en .
+
  :HVAC  rdfs:subClassOf   :Equipment;
 			 rdfs:label "HVAC"@en .
 
@@ -60,7 +63,10 @@
  :Location  rdfs:subClassOf   bf:TagSet;
 			 rdfs:label "Location"@en .
 
- :Laboratory  rdfs:subClassOf   :Equipment;
+ :Room  rdfs:subClassOf   :Location;
+			 rdfs:label "Room"@en .
+
+ :Laboratory  rdfs:subClassOf   :Room;
 			 rdfs:label "Laboratory"@en .
 
  :MeasurementProperty  rdfs:subClassOf   bf:TagSet;
@@ -99,11 +105,16 @@
  :Hot_Water  rdfs:subClassOf   :Water;
 			 rdfs:label "Hot Water"@en .
 
- :FCP  rdfs:subClassOf   :Equipment;
+ :Fire_Safety  rdfs:subClassOf   :Equipment;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fire ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Safety ];
+			 rdfs:label "Fire Safety"@en .
+
+ :FCP  rdfs:subClassOf   :Fire_Safety;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:FCP ];
 			 rdfs:label "Fire Control Panel"@en .
 
- :Fire_Control_Panel  rdfs:subClassOf   :Equipment;
+ :Fire_Control_Panel  rdfs:subClassOf   :Fire_Safety;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fire ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Control ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Panel ];
@@ -361,11 +372,16 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Zone ];
 			 rdfs:label "HVAC Zone"@en .
 
+ :Lighting_Zone  rdfs:subClassOf   :Location;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Lighting ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Zone ];
+			 rdfs:label "Lighting Zone"@en .
+
  :Room  rdfs:subClassOf   :Location;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Room ];
 			 rdfs:label "Room"@en .
 
- :Laboratory  rdfs:subClassOf   :Location;
+ :Laboratory  rdfs:subClassOf   :Room;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Laboratory ];
 			 rdfs:label "Laboratory"@en .
 
@@ -2942,6 +2958,26 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Duration ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
 			 rdfs:label "Rain Duration Sensor"@en .
+
+ :Temperature_Sensor  rdfs:subClassOf   :Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Temperature Sensor"@en .
+
+ :Pressure_Sensor  rdfs:subClassOf   :Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Pressure Sensor"@en .
+
+ :Flow_Sensor  rdfs:subClassOf   :Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Flow ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Flow Sensor"@en .
+
+ :PIR_Sensor  rdfs:subClassOf   :Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:PIR ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "PIR Sensor"@en .
 
  :Chilled_Water_Differential_Pressure_Load_Shed_Setpoint  rdfs:subClassOf   :Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chilled ];
