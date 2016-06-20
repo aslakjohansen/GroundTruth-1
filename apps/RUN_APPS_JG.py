@@ -35,7 +35,7 @@ SELECT ?sensor ?room
 WHERE {
     ?sensor rdf:type brick:Occupancy_Sensor .
     ?room rdf:type brick:Room .
-    ?sensor brick:isLocatedIn ?room .
+    ?sensor brick:isPointOf ?room .
 
 }""")
 print "-> {0} results".format(len(res))
@@ -143,6 +143,7 @@ WHERE {
     ?airflow_sensor rdf:type brick:Discharge_Air_Flow_Sensor .
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
+    ?airflow_sensor brick:isLocatedIn ?room .
     ?vav brick:hasPoint ?airflow_sensor .
 }""")
 print "-> {0} results".format(len(res))
