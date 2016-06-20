@@ -8,6 +8,10 @@ import json
 Point count:
 - actuators & sensors in schematics:
   23+20+20+20+18+18+18+12+12+18+18+15+12+15+12+15+6+15+12+14+18+18+18+18+18+12+6+12+11+6+18+22+15+10+6+10+9+9=549
+- setpoints and other atrificials (11-12 per rool):
+  12*60=720
+- all in all
+  549+720=1269
 
 TODO:
 - add media relations
@@ -54,6 +58,7 @@ def gen_extensions():
     
     GTC_VAV_Functional_Block = GTC['GTC_VAV_Functional_Block']
     g.add( (GTC_VAV_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
+    g.add( (GTC_VAV_Functional_Block, RDFS.subClassOf, BRICK['VAV']) )
     
     IJ_Valve_Functional_Block = GTC['IJ_Valve_Functional_Block']
     g.add( (IJ_Valve_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
@@ -68,11 +73,70 @@ def gen_extensions():
     g.add( (GTC_Room_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     
     Celcius_Temperature_Sensor = GTC['Celcius_Temperature_Sensor']
-    g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK.Sensor) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG.Temperature) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG.Celcius) )
+    g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK['Sensor']) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
+    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
     
     
+
+def gen_electrical (prefix, floors):
+    meter        = GTC[prefix+'/main_meter']
+    common_meter = GTC[prefix+'/main_common_meter']
+    fuse         = GTC[prefix+'/main_fuse']
+    common_fuse  = GTC[prefix+'/main_common_fuse']
+    submeter_labels = [
+        '-A1.0.1',
+        '-A1.0.2',
+        '-A1.1.1',
+        '-A1.1.2',
+        '-A1.1.3',
+        '-A1.1.4',
+        '-A1.2.1',
+        '-A1.2.2',
+        '-A1.2.3',
+        '-A1.2.4',
+    ]
+    submeters = map(lambda label: GTC[prefix+'/submeter['+label+']'], submeter_labels)
+    
+    # labels
+    g.add( (meter       , RDFS.label, Literal('aggregate of renters charges')) )
+    g.add( (common_meter, RDFS.label, Literal('shared charging')) )
+    g.add( (fuse        , RDFS.label, Literal('100A')) )
+    g.add( (common_fuse , RDFS.label, Literal('250A')) )
+    for index in range(len(submeter_labels)):
+        g.add( (submeters[index], RDFS.label, Literal(submeter_labels[index])) )
+    
+    # types
+#    g.add( (meter       , RDF.type,   GTC['Electrical_Energy_Meter']) )
+#    g.add( (common_meter, RDF.type,   GTC['Electrical_Energy_Meter']) )
+    g.add( (meter       , RDF.type, BRICK['Power_Meter']) )
+    g.add( (common_meter, RDF.type, BRICK['Power_Meter']) )
+    g.add( (meter       , RDF.type,   GTC['Fuse']) )
+    g.add( (common_meter, RDF.type,   GTC['Fuse']) )
+    for submeter in submeters:
+        g.add( (submeter, RDF.type, GTC['Electrical_Energy_Meter']) )
+    
+    # isPartOf
+    for index in range(len(submeter_labels)):
+        floor = floors[int(submeter_labels[index].split('.')[1])]
+        g.add( (submeters[index], BRICKFRAME['isPartOf'], floor) )
+    
+    # feeds
+    g.add( (fuse       , BRICKFRAME['feeds'], meter) )
+    g.add( (common_fuse, BRICKFRAME['feeds'], common_meter) )
+    for submeter in submeters:
+        g.add( (meter, BRICKFRAME['feeds'], submeter) )
+    
+    # build hash
+    metermap = {}
+    for index in range(len(submeter_labels)):
+        metermap[submeter_labels[index]] = submeters[index]
+    metermap['-A1'] = common_meter
+    
+    ports = {
+        'metermap': metermap,
+    }
+    return ports
 
 # instantiate a heat exchanger
 def gen_hx (prefix):
@@ -89,11 +153,11 @@ def gen_hx (prefix):
     g.add( (si, RDF.type, BRICK['Heat_Exchanger_Secondary_Input']) )
     g.add( (so, RDF.type, BRICK['Heat_Exchanger_Secondary_Output']) )
     
-    # partOf
-    g.add( (pi, BRICK['partOf'], fb) )
-    g.add( (po, BRICK['partOf'], fb) )
-    g.add( (si, BRICK['partOf'], fb) )
-    g.add( (so, BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (pi, BRICKFRAME['isPartOf'], fb) )
+    g.add( (po, BRICKFRAME['isPartOf'], fb) )
+    g.add( (si, BRICKFRAME['isPartOf'], fb) )
+    g.add( (so, BRICKFRAME['isPartOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -127,27 +191,33 @@ def gen_heating_power_meter (prefix):
     g.add( (return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (power      , RDF.type,   GTC['Heating_Power_Calculation']) )
     
-    # partOf
-    g.add( (s          , BRICK['partOf'], fb) )
-    g.add( (r          , BRICK['partOf'], fb) )
-    g.add( (ms         , BRICK['partOf'], fb) )
-    g.add( (mr         , BRICK['partOf'], fb) )
-    g.add( (flow       , BRICK['partOf'], fb) )
-    g.add( (supply_temp, BRICK['partOf'], fb) )
-    g.add( (return_temp, BRICK['partOf'], fb) )
-    g.add( (power      , BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (s          , BRICKFRAME['isPartOf'], fb) )
+    g.add( (r          , BRICKFRAME['isPartOf'], fb) )
+    g.add( (ms         , BRICKFRAME['isPartOf'], fb) )
+    g.add( (mr         , BRICKFRAME['isPartOf'], fb) )
+    g.add( (flow       , BRICKFRAME['isPartOf'], fb) )
+    g.add( (supply_temp, BRICKFRAME['isPartOf'], fb) )
+    g.add( (return_temp, BRICKFRAME['isPartOf'], fb) )
+    g.add( (power      , BRICKFRAME['isPartOf'], fb) )
     
     # feeds
-    g.add( (s          , BRICK['feeds'], flow) )
-    g.add( (flow       , BRICK['feeds'], supply_temp) )
-    g.add( (supply_temp, BRICK['feeds'], mr) )
-    g.add( (mr         , BRICK['feeds'], return_temp) )
-    g.add( (return_temp, BRICK['feeds'], r) )
+    g.add( (s          , BRICKFRAME['feeds'], flow) )
+    g.add( (flow       , BRICKFRAME['feeds'], supply_temp) )
+    g.add( (supply_temp, BRICKFRAME['feeds'], mr) )
+    g.add( (mr         , BRICKFRAME['feeds'], return_temp) )
+    g.add( (return_temp, BRICKFRAME['feeds'], r) )
     
     # controls
-    g.add( (flow       , BRICK['controls'], power) )
-    g.add( (supply_temp, BRICK['controls'], power) )
-    g.add( (return_temp, BRICK['controls'], power) )
+    g.add( (flow       , BRICKFRAME['controls'], power) )
+    g.add( (supply_temp, BRICKFRAME['controls'], power) )
+    g.add( (return_temp, BRICKFRAME['controls'], power) )
+    
+    # isPointOf
+    g.add( (flow       , BRICKFRAME['isPointOf'], fb) )
+    g.add( (supply_temp, BRICKFRAME['isPointOf'], fb) )
+    g.add( (return_temp, BRICKFRAME['isPointOf'], fb) )
+    g.add( (power      , BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -181,27 +251,33 @@ def gen_heat_transfer_box (prefix):
     g.add( (supply_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     
-    # partOf
-    g.add( (pi         , BRICK['partOf'], fb) )
-    g.add( (po         , BRICK['partOf'], fb) )
-    g.add( (si         , BRICK['partOf'], fb) )
-    g.add( (so         , BRICK['partOf'], fb) )
-    g.add( (hpm['fb']  , BRICK['partOf'], fb) )
-    g.add( (hx['fb']   , BRICK['partOf'], fb) )
-    g.add( (pump       , BRICK['partOf'], fb) )
-    g.add( (supply_temp, BRICK['partOf'], fb) )
-    g.add( (return_temp, BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (pi         , BRICKFRAME['isPartOf'], fb) )
+    g.add( (po         , BRICKFRAME['isPartOf'], fb) )
+    g.add( (si         , BRICKFRAME['isPartOf'], fb) )
+    g.add( (so         , BRICKFRAME['isPartOf'], fb) )
+    g.add( (hpm['fb']  , BRICKFRAME['isPartOf'], fb) )
+    g.add( (hx['fb']   , BRICKFRAME['isPartOf'], fb) )
+    g.add( (pump       , BRICKFRAME['isPartOf'], fb) )
+    g.add( (supply_temp, BRICKFRAME['isPartOf'], fb) )
+    g.add( (return_temp, BRICKFRAME['isPartOf'], fb) )
     
     # feeds
-    g.add( (pi                   , BRICK['feeds'], hpm['supply']) )
-    g.add( (hpm['metered_supply'], BRICK['feeds'], hx['pi']) )
-    g.add( (hx['po']             , BRICK['feeds'], hpm['metered_return']) )
-    g.add( (hpm['return']        , BRICK['feeds'], po) )
-    g.add( (so                   , BRICK['feeds'], return_temp) )
-    g.add( (return_temp          , BRICK['feeds'], hx['si']) )
-    g.add( (hx['so']             , BRICK['feeds'], pump) )
-    g.add( (pump                 , BRICK['feeds'], supply_temp) )
-    g.add( (supply_temp          , BRICK['feeds'], so) )
+    g.add( (pi                   , BRICKFRAME['feeds'], hpm['supply']) )
+    g.add( (hpm['metered_supply'], BRICKFRAME['feeds'], hx['pi']) )
+    g.add( (hx['po']             , BRICKFRAME['feeds'], hpm['metered_return']) )
+    g.add( (hpm['return']        , BRICKFRAME['feeds'], po) )
+    g.add( (so                   , BRICKFRAME['feeds'], return_temp) )
+    g.add( (return_temp          , BRICKFRAME['feeds'], hx['si']) )
+    g.add( (hx['so']             , BRICKFRAME['feeds'], pump) )
+    g.add( (pump                 , BRICKFRAME['feeds'], supply_temp) )
+    g.add( (supply_temp          , BRICKFRAME['feeds'], so) )
+    
+    # isPointOf
+    g.add( (hpm['fb']  , BRICKFRAME['isPointOf'], fb) )
+    g.add( (pump       , BRICKFRAME['isPointOf'], fb) )
+    g.add( (supply_temp, BRICKFRAME['isPointOf'], fb) )
+    g.add( (return_temp, BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -231,18 +307,18 @@ def gen_ij_valve (prefix, input_count, output_count):
     for entity in oc:
         g.add( (entity, RDF.type, GTC['IJ_Valve_Output_control']) )
     
-    # partOf
+    # isPartOf
     for entity in i+ic+o+oc:
-        g.add( (entity, BRICK['partOf'], fb) )
+        g.add( (entity, BRICKFRAME['isPartOf'], fb) )
     
     # feeds
     for index in range(input_count):
-        g.add( (i[index], BRICK['feeds'], ic[index]) )
+        g.add( (i[index], BRICKFRAME['feeds'], ic[index]) )
     for input_index in range(input_count):
         for output_index in range(output_count):
-            g.add( (ic[input_index], BRICK['feeds'], oc[output_index]) )
+            g.add( (ic[input_index], BRICKFRAME['feeds'], oc[output_index]) )
     for index in range(output_count):
-        g.add( (oc[index], BRICK['feeds'], o[index]) )
+        g.add( (oc[index], BRICKFRAME['feeds'], o[index]) )
     
     ports = {
         'fb': fb,
@@ -253,7 +329,8 @@ def gen_ij_valve (prefix, input_count, output_count):
     }
     return ports
 
-def gen_vav (prefix, data):
+# instantiates the equivalent of a VAV
+def gen_vav (prefix, data, meter):
     fb              = GTC[prefix+'/fb']
     ui              = GTC[prefix+'/port[ui]']
     uo              = GTC[prefix+'/port[uo]']
@@ -292,40 +369,48 @@ def gen_vav (prefix, data):
     g.add( (hx['fb']       , RDFS.label, Literal(data['cooling coil'])) )
     g.add( (downstream_temp, RDFS.label, Literal(data['supply temperature'])) )
     
-    # partOf
-    g.add( (ui                , BRICK['partOf'], fb) )
-    g.add( (uo                , BRICK['partOf'], fb) )
-    g.add( (di                , BRICK['partOf'], fb) )
-    g.add( (do                , BRICK['partOf'], fb) )
-    g.add( (ci                , BRICK['partOf'], fb) )
-    g.add( (co                , BRICK['partOf'], fb) )
-    g.add( (hx['fb']          , BRICK['partOf'], fb) )
-    g.add( (controller        , BRICK['partOf'], fb) )
-    g.add( (supply_damper     , BRICK['partOf'], fb) )
-    g.add( (return_damper     , BRICK['partOf'], fb) )
-    g.add( (upstream_pres     , BRICK['partOf'], fb) )
-    g.add( (downstream_temp   , BRICK['partOf'], fb) )
-    g.add( (cooled_flow       , BRICK['partOf'], fb) )
-    g.add( (cooled_valve['fb'], BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (ui                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (uo                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (di                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (do                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (ci                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (co                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (hx['fb']          , BRICKFRAME['isPartOf'], fb) )
+    g.add( (controller        , BRICKFRAME['isPartOf'], fb) )
+    g.add( (supply_damper     , BRICKFRAME['isPartOf'], fb) )
+    g.add( (return_damper     , BRICKFRAME['isPartOf'], fb) )
+    g.add( (upstream_pres     , BRICKFRAME['isPartOf'], fb) )
+    g.add( (downstream_temp   , BRICKFRAME['isPartOf'], fb) )
+    g.add( (cooled_flow       , BRICKFRAME['isPartOf'], fb) )
+    g.add( (cooled_valve['fb'], BRICKFRAME['isPartOf'], fb) )
     
     # feeds
-    g.add( (ui                  , BRICK['feeds'], supply_damper) )
-    g.add( (supply_damper       , BRICK['feeds'], upstream_pres) )
-    g.add( (upstream_pres       , BRICK['feeds'], hx['si']) )
-    g.add( (hx['so']            , BRICK['feeds'], downstream_temp) )
-    g.add( (downstream_temp     , BRICK['feeds'], do) )
-    g.add( (di                  , BRICK['feeds'], return_damper) )
-    g.add( (return_damper       , BRICK['feeds'], uo) )
-    g.add( (ci                  , BRICK['feeds'], cooled_flow) )
-    g.add( (cooled_flow         , BRICK['feeds'], hx['pi']) )
-    g.add( (hx['po']            , BRICK['feeds'], cooled_valve['i'][0]) )
-    g.add( (cooled_valve['o'][0], BRICK['feeds'], co) )
-    g.add( (cooled_flow         , BRICK['feeds'], cooled_valve['i'][1]) )
+    g.add( (ui                  , BRICKFRAME['feeds'], supply_damper) )
+    g.add( (supply_damper       , BRICKFRAME['feeds'], upstream_pres) )
+    g.add( (upstream_pres       , BRICKFRAME['feeds'], hx['si']) )
+    g.add( (hx['so']            , BRICKFRAME['feeds'], downstream_temp) )
+    g.add( (downstream_temp     , BRICKFRAME['feeds'], do) )
+    g.add( (di                  , BRICKFRAME['feeds'], return_damper) )
+    g.add( (return_damper       , BRICKFRAME['feeds'], uo) )
+    g.add( (ci                  , BRICKFRAME['feeds'], cooled_flow) )
+    g.add( (cooled_flow         , BRICKFRAME['feeds'], hx['pi']) )
+    g.add( (hx['po']            , BRICKFRAME['feeds'], cooled_valve['i'][0]) )
+    g.add( (cooled_valve['o'][0], BRICKFRAME['feeds'], co) )
+    g.add( (cooled_flow         , BRICKFRAME['feeds'], cooled_valve['i'][1]) )
     
     # controls
-    g.add( (upstream_pres, BRICK['controls'], controller) )
-    g.add( (controller   , BRICK['controls'], supply_damper) )
-    g.add( (controller   , BRICK['controls'], return_damper) )
+    g.add( (upstream_pres, BRICKFRAME['controls'], controller) )
+    g.add( (controller   , BRICKFRAME['controls'], supply_damper) )
+    g.add( (controller   , BRICKFRAME['controls'], return_damper) )
+    
+    # isPointOf
+    g.add( (supply_damper     , BRICKFRAME['isPointOf'], fb) )
+    g.add( (return_damper     , BRICKFRAME['isPointOf'], fb) )
+    g.add( (upstream_pres     , BRICKFRAME['isPointOf'], fb) )
+    g.add( (downstream_temp   , BRICKFRAME['isPointOf'], fb) )
+    g.add( (cooled_flow       , BRICKFRAME['isPointOf'], fb) )
+    g.add( (cooled_valve['fb'], BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -353,16 +438,19 @@ def gen_dpt (prefix):
     g.add( (o , RDF.type, GTC['DPT_Output']) )
     g.add( (t , RDF.type, GTC['Differential_Pressure_Transmitter']) )
     
-    # partOf
-    g.add( (u, BRICK['partOf'], fb) )
-    g.add( (d, BRICK['partOf'], fb) )
-    g.add( (o, BRICK['partOf'], fb) )
-    g.add( (t, BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (u, BRICKFRAME['isPartOf'], fb) )
+    g.add( (d, BRICKFRAME['isPartOf'], fb) )
+    g.add( (o, BRICKFRAME['isPartOf'], fb) )
+    g.add( (t, BRICKFRAME['isPartOf'], fb) )
     
     # controls
-    g.add( (u, BRICK['controls'], t) )
-    g.add( (d, BRICK['controls'], t) )
-    g.add( (t, BRICK['controls'], o) )
+    g.add( (u, BRICKFRAME['controls'], t) )
+    g.add( (d, BRICKFRAME['controls'], t) )
+    g.add( (t, BRICKFRAME['controls'], o) )
+    
+    # isPointOf
+    g.add( (t, BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -390,23 +478,28 @@ def gen_filter_element (prefix):
     g.add( (filter_nonkeyword, RDF.type, BRICK['Filter']) )
     g.add( (output_pressure  , RDF.type, BRICK['Pressure_Sensor']) )
     
-    # partOf
-    g.add( (i                , BRICK['partOf'], fb) )
-    g.add( (o                , BRICK['partOf'], fb) )
-    g.add( (input_pressure   , BRICK['partOf'], fb) )
-    g.add( (filter_nonkeyword, BRICK['partOf'], fb) )
-    g.add( (output_pressure  , BRICK['partOf'], fb) )
-    g.add( (dpt['fb']        , BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (i                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (o                , BRICKFRAME['isPartOf'], fb) )
+    g.add( (input_pressure   , BRICKFRAME['isPartOf'], fb) )
+    g.add( (filter_nonkeyword, BRICKFRAME['isPartOf'], fb) )
+    g.add( (output_pressure  , BRICKFRAME['isPartOf'], fb) )
+    g.add( (dpt['fb']        , BRICKFRAME['isPartOf'], fb) )
     
     # feeds
-    g.add( (i                , BRICK['feeds'], input_pressure) )
-    g.add( (input_pressure   , BRICK['feeds'], filter_nonkeyword) )
-    g.add( (filter_nonkeyword, BRICK['feeds'], output_pressure) )
-    g.add( (output_pressure  , BRICK['feeds'], o) )
+    g.add( (i                , BRICKFRAME['feeds'], input_pressure) )
+    g.add( (input_pressure   , BRICKFRAME['feeds'], filter_nonkeyword) )
+    g.add( (filter_nonkeyword, BRICKFRAME['feeds'], output_pressure) )
+    g.add( (output_pressure  , BRICKFRAME['feeds'], o) )
     
     # controls
-    g.add( (input_pressure , BRICK['controls'], dpt['u']) )
-    g.add( (output_pressure, BRICK['controls'], dpt['d']) )
+    g.add( (input_pressure , BRICKFRAME['controls'], dpt['u']) )
+    g.add( (output_pressure, BRICKFRAME['controls'], dpt['d']) )
+    
+    # isPointOf
+    g.add( (input_pressure , BRICKFRAME['isPointOf'], fb) )
+    g.add( (output_pressure, BRICKFRAME['isPointOf'], fb) )
+    g.add( (dpt['fb']      , BRICKFRAME['isPointOf'], fb) )
     
     ports = {
         'fb': fb,
@@ -415,7 +508,7 @@ def gen_filter_element (prefix):
     }
     return ports
 
-def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
+def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, metermap):
     fb                = GTC[prefix+'/fb']
     room              = GTC[prefix+'/room']
     radiators         = []
@@ -430,8 +523,8 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     # labels
     g.add( (room, RDFS.label, Literal(room_name)) )
     
-    # partOf
-    g.add( (room, BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
     # temperature sensor
     if 'tr1' in rooms_data[room_name] and rooms_data[room_name]['tr1']!='':
@@ -441,22 +534,26 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
         g.add( (entity, BRICKFRAME['measures'], room) )
+        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
     
     # CO2 sensor
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
         entity = GTC[prefix+'/co2']
         g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['co2'])) )
-        g.add( (entity, BRICK['partOf'], room) )
-        g.add( (entity, BRICK['measures'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (entity, BRICKFRAME['measures'], room) )
+        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
     
     # PIR sensor
     if 'pir' in rooms_data[room_name] and rooms_data[room_name]['pir']!='':
         entity = GTC[prefix+'/pir']
         g.add( (entity, RDF.type, BRICK['PIR_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['pir'])) )
-        g.add( (entity, BRICK['partOf'], room) )
-        g.add( (entity, BRICK['measures'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (entity, BRICKFRAME['measures'], room) )
     
     # radiators
     if 'radiators' in rooms_data[room_name] and rooms_data[room_name]['radiators']['count']>0:
@@ -464,7 +561,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
             entity = GTC[prefix+'/radiators/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['radiators']['id'])) )
             g.add( (entity, RDF.type, BRICK['Radiator']) )
-            g.add( (entity, BRICK['partOf'], room) )
+            g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
             radiators.append(entity)
     
     # floor heaters
@@ -473,7 +570,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
             entity = GTC[prefix+'/floorheaters/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['floorheating']['id'])) )
             g.add( (entity, RDF.type, GTC['FloorHeater']) )
-            g.add( (entity, BRICK['partOf'], room) )
+            g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
             floor_heaters.append(entity)
     
     # input dampers
@@ -482,7 +579,8 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
             entity = GTC[prefix+'/input_dampers/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['input dampeners']['id'])) )
             g.add( (entity, RDF.type, BRICK['Damper']) )
-            g.add( (entity, BRICK['partOf'], room) )
+            g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
             input_dampers.append(entity)
     
     # output dampers
@@ -491,8 +589,24 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
             entity = GTC[prefix+'/output_dampers/'+str(index)]
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['output dampeners']['id'])) )
             g.add( (entity, RDF.type, BRICK['Damper']) )
-            g.add( (entity, BRICK['partOf'], room) )
+            g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
             output_dampers.append(entity)
+    
+    # lighting
+    index = 0
+    for group in rooms_data[room_name]['lighting']:
+        if group['type']=='ledgo':
+            for i in range(group['count']):
+                entity = GTC[prefix+'/lighting/'+str(index)]
+                g.add( (entity, RDFS.label, Literal(group['id'])) )
+                g.add( (entity, RDF.type, BRICK['Lighting']) )
+                g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+                g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+                g.add( (entity, BRICKFRAME['feeds'], room) )
+                index += 1
+        else:
+            print('Error: Unknown type ('+group['type']+') of lighting for room '+room_name+'. Skipping ...')
     
     ports = {
         'fb':            fb,
@@ -504,7 +618,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data):
     }
     return ports
 
-def gen_foyer_room (prefix):
+def gen_foyer_room (prefix, metermap):
     fb                = GTC[prefix+'/fb']
     room              = GTC[prefix+'/room']
     floor_heaters     = []
@@ -516,8 +630,8 @@ def gen_foyer_room (prefix):
     # labels
     g.add( (room, RDFS.label, Literal('1.A.14')) )
     
-    # partOf
-    g.add( (room, BRICK['partOf'], fb) )
+    # isPartOf
+    g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
     # temperature sensor
     temperature_sensors = ['-01-ZV01-1A14-TR01', '-01-ZV02-1A14-TR01', '-01-ZV03-1A14-TR01']
@@ -525,8 +639,10 @@ def gen_foyer_room (prefix):
         entity = GTC[prefix+'/temperature/'+str(index)]
         g.add( (entity, RDF.type, GTC['Celcius_Temperature_Sensor']) )
         g.add( (entity, RDFS.label, Literal(temperature_sensors[index])) )
-        g.add( (entity, BRICK['partOf'], room) )
-        g.add( (entity, BRICK['measures'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (entity, BRICKFRAME['measures'], room) )
+        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
     
     # CO2 sensor
     co2_sensors = ['-01-ZV01-1A14-CO2', '-01-ZV02-1A14-CO2', '-01-ZV03-1A14-CO2']
@@ -534,8 +650,10 @@ def gen_foyer_room (prefix):
         entity = GTC[prefix+'/co2/'+str(index)]
         g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
         g.add( (entity, RDFS.label, Literal(co2_sensors[index])) )
-        g.add( (entity, BRICK['partOf'], room) )
-        g.add( (entity, BRICK['measures'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (entity, BRICKFRAME['measures'], room) )
+        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
     
     # floor heaters
     fh_sensors = [('-01-1F14-MV01', 1), ('-01-ZV01-1A14-MV1-02', 2), ('-01-ZV02-1A14-MV1-03', 3), ('-01-ZV03-1A14-MV1-02', 2)]
@@ -544,7 +662,8 @@ def gen_foyer_room (prefix):
             entity = GTC[prefix+'/floorheaters/'+str(index)+'-'+str(fh_sensors[sensor_index][1])]
             g.add( (entity, RDFS.label, Literal(fh_sensors[sensor_index][0])) )
             g.add( (entity, RDF.type, GTC['FloorHeater']) )
-            g.add( (entity, BRICK['partOf'], room) )
+            g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+            g.add( (entity, BRICKFRAME['isPointOf'], room) )
             floor_heaters.append(entity)
     
     # horizontal windows
@@ -552,14 +671,18 @@ def gen_foyer_room (prefix):
         entity = GTC[prefix+'/horizontal_windows/'+str(index)]
         g.add( (entity, RDFS.label, Literal('-01-1A14-VI01')) )
         g.add( (entity, RDF.type, GTC['Horizontal_Window_Actuator']) )
-        g.add( (entity, BRICK['partOf'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
     
     # vertical windows
     for i in range(4):
         entity = GTC[prefix+'/vertical_windows/'+str(index)]
         g.add( (entity, RDFS.label, Literal('-01-1A14-VI01')) )
         g.add( (entity, RDF.type, GTC['Vertical_Window_Actuator']) )
-        g.add( (entity, BRICK['partOf'], room) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
     
     ports = {
         'fb':            fb,
@@ -585,18 +708,21 @@ def gen_building (prefix):
     
     building             = GTC[prefix]
     floors               = map(lambda level: GTC[prefix+'/floors/'+str(level)], range(3))
+    electrical           = gen_electrical(prefix+'/electrical', floors)
+    metermap = electrical['metermap']
     rooms                = {}
     for room_name in rooms_data.keys():
-        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vavs_data)
-    rooms['1.A.14'] = gen_foyer_room(prefix+'/rooms/1.A.14')
+        rooms[room_name] = gen_room(prefix+'/rooms/'+room_name, room_name, floors, gtc_data, rooms_data, vavs_data, metermap)
+    rooms['1.A.14'] = gen_foyer_room(prefix+'/rooms/1.A.14', metermap)
     vavs                 = []
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
-        vav = gen_vav(prefix+'/vavs/'+str(index), vav_data)
+        vav = gen_vav(prefix+'/vavs/'+str(index), vav_data, metermap['-A1'])
         vavs.append(vav)
     district_meter       = gen_heating_power_meter(prefix+'/district_meter')
     radiator_htb         = gen_heat_transfer_box(prefix+'/radiator_htb')
     floor_htb            = gen_heat_transfer_box(prefix+'/floor_htb')
+    ahu                  = GTC[prefix+'/ahu']
     outside_temp         = GTC[prefix+'/outside_temp']
     outside_fe           = gen_filter_element(prefix+'outside_fe')
     outside_fe_temp      = GTC[prefix+'/outside_fe_temp']
@@ -632,6 +758,7 @@ def gen_building (prefix):
     g.add( (building, RDFS.label, Literal("GreenTech Center in Vejle, Denmark")) )
     
     # types
+    g.add( (ahu                 , RDF.type, BRICK['AHU']) )
     g.add( (outside_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (outside_fe_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (hx_temp             , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
@@ -652,91 +779,142 @@ def gen_building (prefix):
     g.add( (district_rect       , RDF.type,   GTC['Rectifier']) )
     
     # feeds
-    g.add( (district_meter['metered_supply'], BRICK['feeds'], radiator_htb['pi']) )
-    g.add( (district_meter['metered_supply'], BRICK['feeds'],    floor_htb['pi']) )
-    g.add( (district_meter['metered_supply'], BRICK['feeds'],    ahu_meter['supply']) )
-    g.add( ( radiator_htb['pi'], BRICK['feeds'], ahu_meter['metered_return']) )
-    g.add( (    floor_htb['pi'], BRICK['feeds'], ahu_meter['metered_return']) )
-    g.add( (ahu_meter['return'], BRICK['feeds'], ahu_meter['metered_return']) )
+    g.add( (district_meter['metered_supply'], BRICKFRAME['feeds'], radiator_htb['pi']) )
+    g.add( (district_meter['metered_supply'], BRICKFRAME['feeds'],    floor_htb['pi']) )
+    g.add( (district_meter['metered_supply'], BRICKFRAME['feeds'],    ahu_meter['supply']) )
+    g.add( ( radiator_htb['pi'], BRICKFRAME['feeds'], ahu_meter['metered_return']) )
+    g.add( (    floor_htb['pi'], BRICKFRAME['feeds'], ahu_meter['metered_return']) )
+    g.add( (ahu_meter['return'], BRICKFRAME['feeds'], ahu_meter['metered_return']) )
     for room_name in rooms:
         room = rooms[room_name]
         for radiator in room['radiators']:
-            g.add( (radiator_htb['so'], BRICK['feeds'], radiator) )
-            g.add( (radiator          , BRICK['feeds'], radiator_htb['so']) )
+            g.add( (radiator_htb['so'], BRICKFRAME['feeds'], radiator) )
+            g.add( (radiator          , BRICKFRAME['feeds'], radiator_htb['so']) )
     for room_name in rooms:
         room = rooms[room_name]
         for floor_heater in room['floorheaters']:
-            g.add( (floor_htb['so'], BRICK['feeds'], floor_heater) )
-            g.add( (floor_heater   , BRICK['feeds'], floor_htb['so']) )
+            g.add( (floor_htb['so'], BRICKFRAME['feeds'], floor_heater) )
+            g.add( (floor_heater   , BRICKFRAME['feeds'], floor_htb['so']) )
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
         vav = vavs[index]
         
-        g.add( (supply_map[vav_data['side']], BRICK['feeds'], vav['ui']) )
-        g.add( (vav['uo']                   , BRICK['feeds'], return_map[vav_data['side']]) )
+        g.add( (supply_map[vav_data['side']], BRICKFRAME['feeds'], vav['ui']) )
+        g.add( (vav['uo']                   , BRICKFRAME['feeds'], return_map[vav_data['side']]) )
         
         for room_name in vav_data['rooms']:
             room = rooms[room_name]
             for damper in room['inputdampers']:
-                g.add( (vav['do'], BRICK['feeds'], damper) )
+                g.add( (vav['do'], BRICKFRAME['feeds'], damper) )
             for damper in room['outputdampers']:
-                g.add( (damper   , BRICK['feeds'], vav['di']) )
-    g.add( (outside_temp               , BRICK['feeds'], outside_fe['i']) )
-    g.add( (outside_fe['o']            , BRICK['feeds'], outside_fe_temp) )
-    g.add( (outside_fe_temp            , BRICK['feeds'], hx1['si']) )
-    g.add( (hx1['so']                  , BRICK['feeds'], hx_temp) )
-    g.add( (hx_temp                    , BRICK['feeds'], hx_fan) )
-    g.add( (hx_fan                     , BRICK['feeds'], hx2['si']) )
-    g.add( (hx2['so']                  , BRICK['feeds'], supply_temp) )
-    g.add( (supply_temp                , BRICK['feeds'], supply_n_pres) )
-    g.add( (supply_temp                , BRICK['feeds'], supply_n_pres) )
-    g.add( (return_n_pres              , BRICK['feeds'], return_damper) )
-    g.add( (return_s_pres              , BRICK['feeds'], return_damper) )
-    g.add( (return_damper              , BRICK['feeds'], return_fe['i']) )
-    g.add( (return_fe['o']             , BRICK['feeds'], return_fe_temp) )
-    g.add( (return_fe_temp             , BRICK['feeds'], hx1['pi']) )
-    g.add( (hx1['po']                  , BRICK['feeds'], exhaust_temp) )
-    g.add( (exhaust_temp               , BRICK['feeds'], exhaust_fan) )
-    g.add( (ahu_meter['metered_supply'], BRICK['feeds'], district_supply_temp) )
-    g.add( (district_supply_temp       , BRICK['feeds'], district_pump) )
-    g.add( (district_pump              , BRICK['feeds'], hx2['pi']) )
-    g.add( (hx2['po']                  , BRICK['feeds'], district_return_temp) )
-    g.add( (district_return_temp       , BRICK['feeds'], district_valve) )
-    g.add( (district_valve             , BRICK['feeds'], ahu_meter['metered_return']) )
-    g.add( (district_return_temp       , BRICK['feeds'], district_rect) )
-    g.add( (district_rect              , BRICK['feeds'], district_supply_temp) )
+                g.add( (damper   , BRICKFRAME['feeds'], vav['di']) )
+    g.add( (outside_temp               , BRICKFRAME['feeds'], outside_fe['i']) )
+    g.add( (outside_fe['o']            , BRICKFRAME['feeds'], outside_fe_temp) )
+    g.add( (outside_fe_temp            , BRICKFRAME['feeds'], hx1['si']) )
+    g.add( (hx1['so']                  , BRICKFRAME['feeds'], hx_temp) )
+    g.add( (hx_temp                    , BRICKFRAME['feeds'], hx_fan) )
+    g.add( (hx_fan                     , BRICKFRAME['feeds'], hx2['si']) )
+    g.add( (hx2['so']                  , BRICKFRAME['feeds'], supply_temp) )
+    g.add( (supply_temp                , BRICKFRAME['feeds'], supply_n_pres) )
+    g.add( (supply_temp                , BRICKFRAME['feeds'], supply_n_pres) )
+    g.add( (return_n_pres              , BRICKFRAME['feeds'], return_damper) )
+    g.add( (return_s_pres              , BRICKFRAME['feeds'], return_damper) )
+    g.add( (return_damper              , BRICKFRAME['feeds'], return_fe['i']) )
+    g.add( (return_fe['o']             , BRICKFRAME['feeds'], return_fe_temp) )
+    g.add( (return_fe_temp             , BRICKFRAME['feeds'], hx1['pi']) )
+    g.add( (hx1['po']                  , BRICKFRAME['feeds'], exhaust_temp) )
+    g.add( (exhaust_temp               , BRICKFRAME['feeds'], exhaust_fan) )
+    g.add( (ahu_meter['metered_supply'], BRICKFRAME['feeds'], district_supply_temp) )
+    g.add( (district_supply_temp       , BRICKFRAME['feeds'], district_pump) )
+    g.add( (district_pump              , BRICKFRAME['feeds'], hx2['pi']) )
+    g.add( (hx2['po']                  , BRICKFRAME['feeds'], district_return_temp) )
+    g.add( (district_return_temp       , BRICKFRAME['feeds'], district_valve) )
+    g.add( (district_valve             , BRICKFRAME['feeds'], ahu_meter['metered_return']) )
+    g.add( (district_return_temp       , BRICKFRAME['feeds'], district_rect) )
+    g.add( (district_rect              , BRICKFRAME['feeds'], district_supply_temp) )
     
-    # partOf
+    # isPartOf
     for floor in floors:
-        g.add( (floor           , BRICK['partOf'], building) )
+        g.add( (floor           , BRICKFRAME['isPartOf'], building) )
     for room_name in rooms:
-        g.add( (rooms[room_name]['fb'], BRICK['partOf'], floors[rooms[room_name]['floor']]) )
-    g.add( (district_meter['fb'], BRICK['partOf'], building) )
-    g.add( (radiator_htb['fb']  , BRICK['partOf'], building) )
-    g.add( (floor_htb['fb']     , BRICK['partOf'], building) )
-    g.add( (outside_temp        , BRICK['partOf'], building) )
-    g.add( (outside_fe['fb']    , BRICK['partOf'], building) )
-    g.add( (outside_fe_temp     , BRICK['partOf'], building) )
-    g.add( (hx1['fb']           , BRICK['partOf'], building) )
-    g.add( (hx_temp             , BRICK['partOf'], building) )
-    g.add( (hx_fan              , BRICK['partOf'], building) )
-    g.add( (hx2['fb']           , BRICK['partOf'], building) )
-    g.add( (supply_temp         , BRICK['partOf'], building) )
-    g.add( (supply_n_pres       , BRICK['partOf'], building) )
-    g.add( (supply_s_pres       , BRICK['partOf'], building) )
-    g.add( (return_n_pres       , BRICK['partOf'], building) )
-    g.add( (return_s_pres       , BRICK['partOf'], building) )
-    g.add( (return_damper       , BRICK['partOf'], building) )
-    g.add( (return_fe['fb']     , BRICK['partOf'], building) )
-    g.add( (return_fe_temp      , BRICK['partOf'], building) )
-    g.add( (exhaust_temp        , BRICK['partOf'], building) )
-    g.add( (exhaust_fan         , BRICK['partOf'], building) )
-    g.add( (ahu_meter['fb']     , BRICK['partOf'], building) )
-    g.add( (district_supply_temp, BRICK['partOf'], building) )
-    g.add( (district_pump       , BRICK['partOf'], building) )
-    g.add( (district_return_temp, BRICK['partOf'], building) )
-    g.add( (district_valve      , BRICK['partOf'], building) )
-    g.add( (district_rect       , BRICK['partOf'], building) )
+        g.add( (rooms[room_name]['fb'], BRICKFRAME['isPartOf'], floors[rooms[room_name]['floor']]) )
+    g.add( (district_meter['fb'], BRICKFRAME['isPartOf'], building) )
+    g.add( (radiator_htb['fb']  , BRICKFRAME['isPartOf'], building) )
+    g.add( (floor_htb['fb']     , BRICKFRAME['isPartOf'], building) )
+    g.add( (outside_temp        , BRICKFRAME['isPartOf'], building) )
+    g.add( (outside_fe['fb']    , BRICKFRAME['isPartOf'], building) )
+    g.add( (outside_fe_temp     , BRICKFRAME['isPartOf'], building) )
+    g.add( (hx1['fb']           , BRICKFRAME['isPartOf'], building) )
+    g.add( (hx_temp             , BRICKFRAME['isPartOf'], building) )
+    g.add( (hx_fan              , BRICKFRAME['isPartOf'], building) )
+    g.add( (hx2['fb']           , BRICKFRAME['isPartOf'], building) )
+    g.add( (supply_temp         , BRICKFRAME['isPartOf'], building) )
+    g.add( (supply_n_pres       , BRICKFRAME['isPartOf'], building) )
+    g.add( (supply_s_pres       , BRICKFRAME['isPartOf'], building) )
+    g.add( (return_n_pres       , BRICKFRAME['isPartOf'], building) )
+    g.add( (return_s_pres       , BRICKFRAME['isPartOf'], building) )
+    g.add( (return_damper       , BRICKFRAME['isPartOf'], building) )
+    g.add( (return_fe['fb']     , BRICKFRAME['isPartOf'], building) )
+    g.add( (return_fe_temp      , BRICKFRAME['isPartOf'], building) )
+    g.add( (exhaust_temp        , BRICKFRAME['isPartOf'], building) )
+    g.add( (exhaust_fan         , BRICKFRAME['isPartOf'], building) )
+    g.add( (ahu_meter['fb']     , BRICKFRAME['isPartOf'], building) )
+    g.add( (district_supply_temp, BRICKFRAME['isPartOf'], building) )
+    g.add( (district_pump       , BRICKFRAME['isPartOf'], building) )
+    g.add( (district_return_temp, BRICKFRAME['isPartOf'], building) )
+    g.add( (district_valve      , BRICKFRAME['isPartOf'], building) )
+    g.add( (district_rect       , BRICKFRAME['isPartOf'], building) )
+    
+    # isPointOf: metering
+    for vav in vavs:
+        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], vav['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_meter['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], radiator_htb['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], floor_htb['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_fe['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_fe_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx1['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx_fan) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx2['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_n_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_s_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_n_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_s_pres) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_damper) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_fe['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_fe_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], exhaust_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], exhaust_fan) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], ahu_meter['fb']) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_supply_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_pump) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_return_temp) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_valve) )
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_rect) )
+    
+    # isPointOf: sensors and actuators
+    g.add( (outside_temp        , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (outside_fe_temp     , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (hx_temp             , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (hx_fan              , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (supply_temp         , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (supply_n_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (supply_s_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_n_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_s_pres       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_damper       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (return_fe_temp      , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (exhaust_temp        , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (exhaust_fan         , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_supply_temp, BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_pump       , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_return_temp, BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_valve      , BRICKFRAME['isPointOf'], ahu) )
+    g.add( (district_rect       , BRICKFRAME['isPointOf'], ahu) )
+    
 
 ################################################################################
 ###################################################################### main ####
