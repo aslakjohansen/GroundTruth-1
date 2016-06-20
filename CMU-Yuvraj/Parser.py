@@ -24,6 +24,9 @@ def main():
 	g = rdflib.Graph()
 	g.bind('GHC', GHC)
 	g.bind('brick', BRICK)
+#	new = rdflib.Graph()
+
+	#new.parse('GHCYuvraj_brick.ttl',format='ttl')
 #	g.parse('../BuildingSchema/Brick.ttl', format='turtle')
 	count1 = 0
 	count2 = 0
@@ -171,8 +174,10 @@ def main():
 				#	g.add((GHC[NewEquip],BRICK.hasLocation, GHC[location]))
 				if(Equip !=""):
 					g.add((GHC[blank], BRICK.hasPoint, x))
+					g.add((GHC[blank+"Room"],BRICK.hasPoint,x))
 					print x
 					g.add((x, BRICK.isPointOf, GHC[blank]))
+					g.add((x, BRICK.isPointOf, GHC[blank+"Room"]))
 			#	if Equip == "":
 			#		g.add((GHC['GHC_HVAC'],BRICK.hasPoint,x))
 							
@@ -188,8 +193,8 @@ def main():
 		#		print "4",ListBasTag[4]	
 		for item in TagsetsToTags.keys():
 			x = BRICK[item]
-			#for value in TagsetsToTags[item]:
-			#	g.add((x,BRICK.hasTag,BRICK[value]))
+			for value in TagsetsToTags[item]:
+				g.add((x,BRICK.hasTag,BRICK[value]))
 	with open('AHURelations2.csv', 'rU') as relations:
 		reader = csv.DictReader(relations)
 		for row in reader:
