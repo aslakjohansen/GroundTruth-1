@@ -7,7 +7,8 @@ import rdflib
 try:
     from termcolor import colored
 except:
-    def f(x,y):
+    print "pip install termcolor"
+    def f(x,y, attrs=[]):
         print x
     colored = f
 
