@@ -1,0 +1,57 @@
+#!/usr/bin/env python
+
+from rdflib import Graph, Namespace, URIRef, Literal
+import rdflib
+import json
+
+RDF        = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS       = Namespace('http://www.w3.org/2000/01/rdf-schema#')
+BRICK      = Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG   = Namespace('http://buildsys.org/ontologies/BrickTag#')
+
+g = Graph()
+g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+g.bind('rdf'  , RDF)
+g.bind('rdfs' , RDFS)
+g.bind('brick', BRICK)
+g.bind('bf'   , BRICKFRAME)
+g.bind('btag' , BRICKTAG)
+
+# building
+BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
+g.bind('building', BUILDING)
+
+# heat exchanger class
+HX = Namespace('http://buildsys.org/ontologies/heatexchanger_example#')
+g.bind('hx', HX)
+g.add( (BRICK['Function_Block'], RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Function_Block']   , RDF.isSubClassOf, BRICK['Function_Block']) )
+g.add( (HX['Primary_Input']    , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Primary_Output']   , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Secondary_Input']  , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Secondary_Output'] , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Primary_Input']  , BRICKFRAME['feeds'], HX['Primary_Output']) )
+g.add( (HX['Primary_Input']  , BRICKFRAME['feeds'], HX['Secondary_Output']) )
+g.add( (HX['Secondary_Input'], BRICKFRAME['feeds'], HX['Primary_Output']) )
+g.add( (HX['Secondary_Input'], BRICKFRAME['feeds'], HX['Secondary_Output']) )
+
+# heat exchanger object
+hx1    = BUILDING['/hx1']
+hx1_fb = BUILDING['/hx1_fb']
+hx1_pi = BUILDING['/hx1_pi']
+g.add( (hx1   , RDF.type, BRICK['Heat_Exchanger']) )
+g.add( (hx1_fb, RDF.type, HX['Function_Block']) )
+g.add( (hx1_pi, RDF.type, HX['Primary_Input']) )
+g.add( (hx1_fb, BRICKFRAME['isPartOf'], hx1) )
+g.add( (hx1_pi, BRICKFRAME['isPartOf'], hx1_fb) )
+
+# some temperature sensor which feeds into the primary input of the heat exchanger
+temp = BUILDING['/temp']
+g.add( (temp, RDF.type, BRICK['Temperature_Sensor']) )
+g.add( (temp, BRICKFRAME['feeds'], hx1_pi) )
+
+g.serialize('demo_extra_namespace.ttl', 'turtle')
+

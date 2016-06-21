@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+
+import rdflib
+
+
+RDF        = rdflib.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS       = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
+BRICK      = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG   = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+
+g = rdflib.Graph()
+g.bind('rdf'  , RDF)
+g.bind('rdfs' , RDFS)
+g.bind('brick', BRICK)
+g.bind('bf'   , BRICKFRAME)
+g.bind('btag' , BRICKTAG)
+g.parse('demo_extra_namespace.ttl', format='n3')
+
+## heat exchanger class
+#HX = rdflib.Namespace('http://buildsys.org/ontologies/heatexchanger_example#')
+#g.bind('hx', HX)
+
+r = g.query(
+    """SELECT DISTINCT ?temp ?hx_prim
+       WHERE {
+          ?temp a brick:Temperature_Sensor .
+          ?hx_prim a hx:Primary_Input .
+          ?temp bf:feeds ?hx_prim .
+       }""")
+
+print('Which temperature sensors feeds which coils')
+for pair in r:
+    print(' - %s --> %s' % pair)
+
