@@ -533,8 +533,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['tr1'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (entity, BRICKFRAME['measures'], room) )
-        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
     
     # CO2 sensor
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
@@ -543,8 +542,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['co2'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (entity, BRICKFRAME['measures'], room) )
-        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
     
     # PIR sensor
     if 'pir' in rooms_data[room_name] and rooms_data[room_name]['pir']!='':
@@ -553,7 +551,6 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['pir'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (entity, BRICKFRAME['measures'], room) )
     
     # radiators
     if 'radiators' in rooms_data[room_name] and rooms_data[room_name]['radiators']['count']>0:
@@ -580,7 +577,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['input dampeners']['id'])) )
             g.add( (entity, RDF.type, BRICK['Damper']) )
             g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
             input_dampers.append(entity)
     
     # output dampers
@@ -590,7 +587,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['output dampeners']['id'])) )
             g.add( (entity, RDF.type, BRICK['Damper']) )
             g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
             output_dampers.append(entity)
     
     # lighting
@@ -602,7 +599,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
                 g.add( (entity, RDFS.label, Literal(group['id'])) )
                 g.add( (entity, RDF.type, BRICK['Lighting']) )
                 g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-                g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['measures'], entity) )
+                g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
                 g.add( (entity, BRICKFRAME['feeds'], room) )
                 index += 1
         else:
@@ -641,8 +638,7 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDFS.label, Literal(temperature_sensors[index])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (entity, BRICKFRAME['measures'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
+        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
     
     # CO2 sensor
     co2_sensors = ['-01-ZV01-1A14-CO2', '-01-ZV02-1A14-CO2', '-01-ZV03-1A14-CO2']
@@ -652,8 +648,7 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDFS.label, Literal(co2_sensors[index])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (entity, BRICKFRAME['measures'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
+        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
     
     # floor heaters
     fh_sensors = [('-01-1F14-MV01', 1), ('-01-ZV01-1A14-MV1-02', 2), ('-01-ZV02-1A14-MV1-03', 3), ('-01-ZV03-1A14-MV1-02', 2)]
@@ -673,7 +668,7 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDF.type, GTC['Horizontal_Window_Actuator']) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
+        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
     
     # vertical windows
     for i in range(4):
@@ -682,7 +677,7 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDF.type, GTC['Vertical_Window_Actuator']) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['measures'], entity) )
+        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
     
     ports = {
         'fb':            fb,
