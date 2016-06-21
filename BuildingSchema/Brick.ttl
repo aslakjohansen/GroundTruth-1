@@ -33,6 +33,9 @@
  :HVAC  rdfs:subClassOf   :Equipment;
 			 rdfs:label "HVAC"@en .
 
+ :Power_System  rdfs:subClassOf   :Equipment;
+			 rdfs:label "Power System"@en .
+
  :CRAC  rdfs:subClassOf   :HVAC;
 			 rdfs:label "CRAC"@en .
 
@@ -709,6 +712,11 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Storage ];
 			 rdfs:label "Energy Storage"@en .
 
+ :Power_System  rdfs:subClassOf   :Equipment;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:System ];
+			 rdfs:label "Power System"@en .
+
  :Thermal_Energy_Storage  rdfs:subClassOf   :Energy_Storage;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Energy ];
@@ -755,6 +763,10 @@
  :Compressor  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Compressor ];
 			 rdfs:label "Compressor"@en .
+
+ :Inverter  rdfs:subClassOf   :Power_System;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Inverter ];
+			 rdfs:label "Inverter"@en .
 
  :Air_Handler_Unit  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
@@ -839,6 +851,11 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heating ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
 			 rdfs:label "Heating Valve"@en .
+
+ :Reheat_Valve  rdfs:subClassOf   :Heating_Valve;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Reheat ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
+			 rdfs:label "Reheat Valve"@en .
 
  :Cooling_Valve  rdfs:subClassOf   :Valve;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
