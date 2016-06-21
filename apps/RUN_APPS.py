@@ -136,7 +136,8 @@ WHERE {
     }
 
     ?room rdf:type brick:Room .
-    ?equipment rdf:type brick:Equipment .
+    ?eqiupment rdf:type ?class .
+    ?class rdfs:subClassOf brick:Equipment .
     ?equipment bf:isLocatedIn ?room .
     ?meter bf:isPointOf ?equipment .
 }""")
@@ -153,7 +154,7 @@ WHERE {
         {?meter rdf:type ?class .
          ?class rdfs:subClassOf brick:Power_Meter}
     }
-    ?equipment rdf:type brick:Equipment .
+
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
 
@@ -170,7 +171,6 @@ res = g.query("""
 SELECT ?meter ?equipment ?room
 WHERE {
     ?meter rdf:type brick:Power_Meter .
-    ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
 
@@ -241,7 +241,6 @@ print "Find lighting/hvac equipment (e.g. desk lamps) rooms"
 res = g.query("""
 SELECT ?equipment ?room
 WHERE {
-    ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
 
     ?equipment bf:isLocatedIn ?room .
