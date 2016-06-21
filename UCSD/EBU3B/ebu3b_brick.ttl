@@ -1,23 +1,11 @@
 @prefix brick: <http://buildsys.org/ontologies/Brick#> .
+@prefix brickframe: <http://buildsys.org/ontologies/BrickFrame#> .
 @prefix ebu3b: <http://ucsd.edu/building/ontology/ebu3b#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-ebu3b: a brick:Battery,
-        brick:CRAC,
-        brick:Chilled_Water_Pump,
-        brick:Chilled_Water_System,
-        brick:HVAC,
-        brick:Heat_Exchanger,
-        brick:Hot_Water_Pump,
-        brick:Hot_Water_System,
-        brick:Solar_Panel,
-        brick:VAV,
-        brick:Weather,
-        owl:NamedIndividual .
 
 ebu3b:BSBM_BATT a brick:Battery_Voltage_Sensor,
         owl:NamedIndividual .
@@ -43,6 +31,15 @@ ebu3b:BSBM_WIND_DIR a brick:Wind_Direction_Sensor,
 ebu3b:BSBM_WIND_SPD a brick:Wind_Speed_Sensor,
         owl:NamedIndividual .
 
+ebu3b:BSB_Solar_Panel a brick:Solar_Panel,
+        owl:NamedIndividual .
+
+ebu3b:BSB_Solar_Panel_Battery a brick:Solar_Panel,
+        owl:NamedIndividual .
+
+ebu3b:BSB_Weather a brick:Weather,
+        owl:NamedIndividual .
+
 ebu3b:EBU2_AZIMUTH a brick:Solar_Azimuth_Angle,
         owl:NamedIndividual .
 
@@ -63,10 +60,19 @@ ebu3b:EBU2_RH a brick:Relative_Humidity_Sensor,
 
 ebu3b:EBU2_SOLAR_RAD a owl:NamedIndividual .
 
+ebu3b:EBU2_Solar_Panel a brick:Solar_Panel,
+        owl:NamedIndividual .
+
+ebu3b:EBU2_Solar_Panel_Battery a brick:Solar_Panel,
+        owl:NamedIndividual .
+
 ebu3b:EBU2_WIND_DIR a brick:Wind_Direction_Sensor,
         owl:NamedIndividual .
 
 ebu3b:EBU2_WIND_SPD a brick:Wind_Speed_Sensor,
+        owl:NamedIndividual .
+
+ebu3b:EBU2_Weather a brick:Weather,
         owl:NamedIndividual .
 
 ebu3b:EBU2_ZENITH a brick:Solar_Zenith_Angle,
@@ -235,7 +241,119 @@ ebu3b:EBU3B_AH1_1_SYS_ENA a owl:NamedIndividual .
 ebu3b:EBU3B_AH1_1_W_ECON a brick:Economizer_Damper_Command,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_AHU_1_RM_B102C a brick:AHU,
+ebu3b:EBU3B_AHU_1 a brick:AHU,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_1 a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_1_Cooling_Valve a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_2 a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_2_Cooling_Valve a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_3 a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_3_Cooling_Valve a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_4 a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Cooling_Coil_4_Cooling_Valve a brick:Cooling_Coil,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Economizer a brick:Economizer,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Economizer_Economizer_Damper_East a brick:Economizer,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Economizer_Economizer_Damper_West a brick:Economizer_Damper,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Filter a brick:Filter,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_1 a brick:Return_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_1_VFD a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_1_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_2 a brick:Return_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_2_VFD a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_2_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_3 a brick:Return_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_3_VFD a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_3_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_4 a brick:Return_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_4_VFD a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Return_Fan_4_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_1 a brick:Supply_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_1_VFD a brick:Supply_Fan,
+        brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_1_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_2 a brick:Supply_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_2_VFD a brick:Supply_Fan,
+        brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_2_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_3 a brick:Supply_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_3_VFD a brick:Supply_Fan,
+        brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_3_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_4 a brick:Supply_Fan,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_4_VFD a brick:Supply_Fan,
+        brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_AHU_1_Supply_Fan_4_VFD_Filter a brick:VFD,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_AH_1_DASP_HI_IN a brick:Point,
@@ -538,6 +656,12 @@ ebu3b:EBU3B_CHW_SYS_CWDP_SP a brick:Chilled_Water_Differential_Pressure_Setpoint
 ebu3b:EBU3B_CO2_Conrol_Co2_Differiential a brick:CO2_Differential_Sensor,
         owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1 a brick:CRAC,
+        owl:NamedIndividual .
+
 <http://ucsd.edu/building/ontology/ebu3b#EBU3B_CRAC_1_%CAPACTY> a brick:CRAC_Capacity_Setpoint,
         owl:NamedIndividual .
 
@@ -550,6 +674,12 @@ ebu3b:EBU3B_CRAC_1_COMPRES1 a owl:NamedIndividual .
 ebu3b:EBU3B_CRAC_1_COMPRES2 a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_1_COOLING a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1_Compressor_1 a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1_Compressor_2 a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_1_DEHUMID a owl:NamedIndividual .
 
@@ -589,6 +719,9 @@ ebu3b:EBU3B_CRAC_1_HUMIDITY a brick:Humidity_Sensor,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_1_INV_BYPS a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1_Inverter a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_1_LIQUID a owl:NamedIndividual .
 
@@ -635,6 +768,18 @@ ebu3b:EBU3B_CRAC_1_STANDBY a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_1_STBY_FAN a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_1_Standby_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1_Standby_Glycool_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1_Standby_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_1_Supply_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
 ebu3b:EBU3B_CRAC_1_TEMP a brick:CRAC_Temperature_Sensor,
         owl:NamedIndividual .
 
@@ -650,6 +795,9 @@ ebu3b:EBU3B_CRAC_1_UNIT_RUN a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_1_UNIT_STS a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_2 a brick:CRAC,
+        owl:NamedIndividual .
+
 <http://ucsd.edu/building/ontology/ebu3b#EBU3B_CRAC_2_%CAPACTY> a brick:CRAC_Capacity_Setpoint,
         owl:NamedIndividual .
 
@@ -662,6 +810,12 @@ ebu3b:EBU3B_CRAC_2_COMPRES1 a owl:NamedIndividual .
 ebu3b:EBU3B_CRAC_2_COMPRES2 a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_2_COOLING a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_2_Compressor_1 a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_2_Compressor_2 a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_2_DEHUMID a owl:NamedIndividual .
 
@@ -701,6 +855,9 @@ ebu3b:EBU3B_CRAC_2_HUMIDITY a brick:Humidity_Sensor,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_2_INV_BYPS a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_2_Inverter a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_2_LIQUID a owl:NamedIndividual .
 
@@ -747,6 +904,18 @@ ebu3b:EBU3B_CRAC_2_STANDBY a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_2_STBY_FAN a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_2_Standby_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_2_Standby_Glycool_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_2_Standby_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_2_Supply_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
 ebu3b:EBU3B_CRAC_2_TEMP a brick:CRAC_Temperature_Sensor,
         owl:NamedIndividual .
 
@@ -762,6 +931,9 @@ ebu3b:EBU3B_CRAC_2_UNIT_RUN a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_2_UNIT_STS a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_3 a brick:CRAC,
+        owl:NamedIndividual .
+
 <http://ucsd.edu/building/ontology/ebu3b#EBU3B_CRAC_3_%CAPACTY> a brick:CRAC_Capacity_Setpoint,
         owl:NamedIndividual .
 
@@ -774,6 +946,12 @@ ebu3b:EBU3B_CRAC_3_COMPRES1 a owl:NamedIndividual .
 ebu3b:EBU3B_CRAC_3_COMPRES2 a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_3_COOLING a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_3_Compressor_1 a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_3_Compressor_2 a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_3_DEHUMID a owl:NamedIndividual .
 
@@ -813,6 +991,9 @@ ebu3b:EBU3B_CRAC_3_HUMIDITY a brick:Humidity_Sensor,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_3_INV_BYPS a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_3_Inverter a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_3_LIQUID a owl:NamedIndividual .
 
@@ -859,6 +1040,18 @@ ebu3b:EBU3B_CRAC_3_STANDBY a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_3_STBY_FAN a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_3_Standby_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_3_Standby_Glycool_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_3_Standby_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_3_Supply_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
 ebu3b:EBU3B_CRAC_3_TEMP a brick:CRAC_Temperature_Sensor,
         owl:NamedIndividual .
 
@@ -874,6 +1067,9 @@ ebu3b:EBU3B_CRAC_3_UNIT_RUN a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_3_UNIT_STS a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_4 a brick:CRAC,
+        owl:NamedIndividual .
+
 <http://ucsd.edu/building/ontology/ebu3b#EBU3B_CRAC_4_%CAPACTY> a brick:CRAC_Capacity_Setpoint,
         owl:NamedIndividual .
 
@@ -886,6 +1082,12 @@ ebu3b:EBU3B_CRAC_4_COMPRES1 a owl:NamedIndividual .
 ebu3b:EBU3B_CRAC_4_COMPRES2 a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_4_COOLING a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_4_Compressor_1 a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_4_Compressor_2 a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_4_DEHUMID a owl:NamedIndividual .
 
@@ -925,6 +1127,9 @@ ebu3b:EBU3B_CRAC_4_HUMIDITY a brick:Humidity_Sensor,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_4_INV_BYPS a owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_4_Inverter a brick:CRAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_4_LIQUID a owl:NamedIndividual .
 
@@ -971,6 +1176,18 @@ ebu3b:EBU3B_CRAC_4_STANDBY a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_4_STBY_FAN a owl:NamedIndividual .
 
+ebu3b:EBU3B_CRAC_4_Standby_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_4_Standby_Glycool_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_4_Standby_Unit a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC_4_Supply_Fan a brick:CRAC,
+        owl:NamedIndividual .
+
 ebu3b:EBU3B_CRAC_4_TEMP a brick:CRAC_Temperature_Sensor,
         owl:NamedIndividual .
 
@@ -986,40 +1203,46 @@ ebu3b:EBU3B_CRAC_4_UNIT_RUN a owl:NamedIndividual .
 
 ebu3b:EBU3B_CRAC_4_UNIT_STS a owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_Pump_1_RM_B102C a brick:Chilled_Water_Pump,
+ebu3b:EBU3B_CRAC_Emergency_Power_Off_System a brick:Emergency_Power_Off_System,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_Pump_2_RM_B102C a brick:Chilled_Water_Pump,
+ebu3b:EBU3B_Chilled_Water_System a brick:Chilled_Water_System,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_Pump_3_RM_B102C a brick:Chilled_Water_Pump,
+ebu3b:EBU3B_Chilled_Water_System_Pump a brick:Chilled_Water_System,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_Pump_4_RM_B102C a brick:Chilled_Water_Pump,
+ebu3b:EBU3B_Chilled_Water_System_Pump_1 a brick:Pump,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_System_CRAC_RM_B102C a brick:Chilled_Water_System,
+ebu3b:EBU3B_Chilled_Water_System_Pump_1_VFD a brick:VFD,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_System_CRAC_Server_Room a brick:Chilled_Water_System,
+ebu3b:EBU3B_Chilled_Water_System_Pump_2 a brick:Pump,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Chilled_Water_System_Main_RM_B102C a brick:Chilled_Water_System,
+ebu3b:EBU3B_Chilled_Water_System_Pump_2_VFD a brick:VFD,
         owl:NamedIndividual .
 
-<http://ucsd.edu/building/ontology/ebu3b#EBU3B_Computer_Room_Air_Conditioning_(CRAC)_1_Server_Room> a brick:CRAC,
+ebu3b:EBU3B_Chilled_Water_System_Pump_3 a brick:Pump,
         owl:NamedIndividual .
 
-<http://ucsd.edu/building/ontology/ebu3b#EBU3B_Computer_Room_Air_Conditioning_(CRAC)_2_Server_Room> a brick:CRAC,
+ebu3b:EBU3B_Chilled_Water_System_Pump_3_VFD a brick:VFD,
         owl:NamedIndividual .
 
-<http://ucsd.edu/building/ontology/ebu3b#EBU3B_Computer_Room_Air_Conditioning_(CRAC)_3_Server_Room> a brick:CRAC,
+ebu3b:EBU3B_Chilled_Water_System_Pump_4 a brick:Pump,
         owl:NamedIndividual .
 
-<http://ucsd.edu/building/ontology/ebu3b#EBU3B_Computer_Room_Air_Conditioning_(CRAC)_4_Server_Room> a brick:CRAC,
+ebu3b:EBU3B_Chilled_Water_System_Pump_4_VFD a brick:VFD,
         owl:NamedIndividual .
 
-<http://ucsd.edu/building/ontology/ebu3b#EBU3B_Computer_Room_Air_Conditioning_(CRAC)_All_Server_Room> a brick:CRAC,
+ebu3b:EBU3B_Domestic_Hot_Water_System a brick:Domestic_Hot_Water_System,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Domestic_Hot_Water_System_Pump a brick:Pump,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Domestic_Hot_Water_System_Valve a brick:Domestic_Hot_Water_System,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_FILE_SERVER_HIx2TEMPALM_STPT a owl:NamedIndividual .
@@ -1078,6 +1301,9 @@ ebu3b:EBU3B_FSCHW_FCWDP_STPT a brick:Chilled_Water_Differential_Pressure_Setpoin
 ebu3b:EBU3B_FSCHW_FCW_ENA a owl:NamedIndividual .
 
 ebu3b:EBU3B_FSCHW_FCW_LEAD a owl:NamedIndividual .
+
+ebu3b:EBU3B_HVAC a brick:HVAC,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_HWP1_AI1_ACTUAL a brick:Point,
         owl:NamedIndividual .
@@ -1272,13 +1498,52 @@ ebu3b:EBU3B_HX_OSA_High_Span a brick:Point,
 ebu3b:EBU3B_HX_OSA_Low_Span a brick:Point,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Hot_Water_Pump_1_RM_B102C a brick:Hot_Water_Pump,
+ebu3b:EBU3B_Hot_Water_System a brick:Hot_Water_System,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Hot_Water_Pump_2_RM_B102C a brick:Hot_Water_Pump,
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger a brick:Heat_Exchanger,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Hot_Water_System_Domestic_RM_B102C a brick:Hot_Water_System,
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1 a brick:Heat_Exchanger,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1_Valve a brick:Heat_Exchanger,
+        brick:Valve,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1_Valve_1A a brick:Heat_Exchanger,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1_Valve_1B a brick:Heat_Exchanger,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_2 a brick:Heat_Exchanger,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_2_Valve a brick:Heat_Exchanger,
+        brick:Valve,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump a brick:Hot_Water_System,
+        brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump_1 a brick:Pump,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump_1_VFD a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump_1_VFD_Filter a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump_2 a brick:Pump,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump_2_VFD a brick:VFD,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_Hot_Water_System_Pump_2_VFD_Filter a brick:VFD,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_Load_Shed_CHW_DP_Load_Shed a owl:NamedIndividual .
@@ -12784,18 +13049,6 @@ ebu3b:EBU3B_RM_Bxxx_BSMT_AVG_CLG_PID1 a brick:Point,
 ebu3b:EBU3B_RM_Bxxx_BSMT_AVG_CLG_PID2 a brick:Point,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Return_Fan_1_RM_B102C a brick:Return_Fan,
-        owl:NamedIndividual .
-
-ebu3b:EBU3B_Return_Fan_2_RM_B102C a brick:Return_Fan,
-        owl:NamedIndividual .
-
-ebu3b:EBU3B_Return_Fan_3_RM_B102C a brick:Return_Fan,
-        owl:NamedIndividual .
-
-ebu3b:EBU3B_Return_Fan_4_RM_B102C a brick:Return_Fan,
-        owl:NamedIndividual .
-
 ebu3b:EBU3B_Rm_1xxx_1ST_AVG a brick:Average_Cooling_Demand_Sensor,
         owl:NamedIndividual .
 
@@ -13050,748 +13303,2911 @@ ebu3b:EBU3B_SF4_STATUS a owl:NamedIndividual .
 ebu3b:EBU3B_SF4_TORQUE a brick:Motor_Torque_Sensor,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_Supply_Fan_1_RM_B102C a brick:Supply_Fan,
-        owl:NamedIndividual .
-
-ebu3b:EBU3B_Supply_Fan_2_RM_B102C a brick:Supply_Fan,
-        owl:NamedIndividual .
-
-ebu3b:EBU3B_Supply_Fan_3_RM_B102C a brick:Supply_Fan,
-        owl:NamedIndividual .
-
-ebu3b:EBU3B_Supply_Fan_4_RM_B102C a brick:Supply_Fan,
-        owl:NamedIndividual .
-
 ebu3b:EBU3B_Unknown_ZN_T a brick:Zone_Temperature_Sensor,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_101_RM_1200B a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100A a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_101_RM_B215 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100A_Booster_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_101_Rm_3140 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100A_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_102_RM_1130 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100A_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_102_RM_B109 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100A_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_102_Rm_2140 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100D a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_102_Rm_3119 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100D_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_103_RM_1100A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100D_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_103_RM_B225 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1100D_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_103_Rm_2119 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1102 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_103_Rm_3154 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1102_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_104_RM_1117 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1102_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_104_RM_B230A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1102_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_104_Rm_2200A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1104 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_104_Rm_3138 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1104_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_105_RM_1200A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1104_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_105_RM_B240A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1104_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_105_Rm_2240 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1106 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_105_Rm_3136 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1106_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_106_RM_1200C a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1106_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_106_RM_B250A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1106_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_106_Rm_2207 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1107 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_106_Rm_3134 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1107_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_107_RM_1207 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1107_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_107_RM_B260A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1107_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_107_Rm_2209 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1108 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_107_Rm_3132 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1108_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_108_RM_B275 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1108_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_108_Rm_2208 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1108_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_108_Rm_3130 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1109 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_109_RM_1213 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1109_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_109_RM_B222 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1109_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_109_Rm_2214 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1109_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_109_Rm_3128 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1110 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_109_Rm_3218 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1110_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_110_RM_1213A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1110_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_110_RM_B224 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1110_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_110_Rm_2221 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1113 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_110_Rm_3126 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1113_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_111_RM_B200B a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1113_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_111_Rm_2218 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1113_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_111_Rm_3122 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1115 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_112_RM_1217 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1115_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_112_RM_B200C a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1115_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_112_Rm_2226 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1115_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_112_Rm_3118 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1116 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_113_RM_1231 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1116_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_113_RM_B103 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1116_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_113_Rm_2230 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1116_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_113_Rm_3111 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1117 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_114_RM_1229 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1117_Booster_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_114_RM_B103A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1117_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_114_Rm_2232 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1117_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_114_Rm_3114 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1117_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_115_RM_1236 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1122 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_115_RM_B102C a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1122_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_115_Rm_2234 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1122_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_115_Rm_3110 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1122_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_116_RM_1230 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1123 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_116_RM_B210 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1123_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_116_Rm_2236 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1123_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_116_Rm_3106 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1123_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_117_RM_1224 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1124 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_117_RM_B220 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1124_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_117_Rm_2238 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1124_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_117_Rm_3102 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1124_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_118_RM_1218 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1125 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_118_RM_B230 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1125_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_118_Rm_2219 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1125_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_118_Rm_3107 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1125_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_119_RM_1212 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1126 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_119_RM_B240 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1126_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_119_Rm_2244 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1126_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_119_Rm_3105 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1126_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_120_RM_1208 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1130 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_120_RM_B250 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1130_Booster_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_120_Rm_2227 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1130_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_120_Rm_3152 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1130_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_121_RM_1208B a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1130_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_121_RM_B260 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1132 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_121_Rm_2250 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1132_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_121_Rm_3150 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1132_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_122_RM_1203 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1132_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_122_RM_3127 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1133 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_122_RM_B270 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1133_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_122_Rm_2256 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1133_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_122_Rm_3127 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1133_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_123_RM_1221 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1134 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_123_Rm_2229A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1134_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_123_Rm_3148 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1134_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_124_RM_1223 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1134_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_124_Rm_2262 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1139 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_124_Rm_3146 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1139_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_125_RM_1102 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1139_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_125_Rm_2266 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1139_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_125_Rm_3144 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1144 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_126_RM_1104 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1144_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_126_Rm_2270 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1144_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_126_Rm_3142 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1144_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_127_RM_1106 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1145 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_127_Rm_2272 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1145_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_127_Rm_3121 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1145_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_128_RM_1108 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1145_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_128_Rm_2203 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1150 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_128_Rm_3109 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1150_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_129_RM_1110 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1150_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_129_Rm_2215 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1150_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_129_Rm_4213 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1151 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_130_RM_1109 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1151_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_130_Rm_2217 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1151_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_130_Rm_4140 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1151_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_131_RM_1116 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1154 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_131_Rm_2231 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1154_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_131_Rm_4119 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1154_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_132_RM_1122 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1154_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_132_Rm_2138 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1155 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_132_Rm_4154 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1155_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_133_RM_1145 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1155_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_133_Rm_2136 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1155_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_133_Rm_4200A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1156 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_134_RM_1124 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1156_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_134_Rm_2134 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1156_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_134_Rm_4205 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1156_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_135_RM_1126 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200A a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_135_Rm_2132 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200A_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_135_Rm_4202 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200A_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_136_RM_1155 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200A_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_136_Rm_2130 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200B a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_136_Rm_4208 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200B_Booster_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_137_RM_1151 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200B_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_137_Rm_2128 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200B_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_137_Rm_4214 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200B_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_138_RM_1156 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200C a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_138_Rm_2126 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200C_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_138_Rm_4220 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200C_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_139_RM_1154 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1200C_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_139_Rm_2122 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1203 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_139_Rm_4226 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1203_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_140_RM_1150 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1203_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_140_Rm_2118 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1207 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_140_Rm_4230 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1207_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_141_RM_1123 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1207_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_141_Rm_2111 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_141_Rm_4232 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208B a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_142_RM_1144 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208B_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_142_Rm_2116 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208B_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_142_Rm_4236 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208B_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_143_RM_1139 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_143_Rm_2112 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208_Exhaust_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_143_Rm_4240 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_144_RM_1134 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1208_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_144_Rm_2108 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1212 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_144_Rm_4219 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1212_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_145_RM_1132 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1212_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_145_Rm_2107 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1212_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_145_Rm_4242 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1213 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_146_RM_1133 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1213A a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_146_Rm_2102 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1213A_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_146_Rm_4231 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1213A_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_147_RM_1100D a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1213_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_147_Rm_2105 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1213_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_147_Rm_4246 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1217 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_148_RM_1107 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1217_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_148_Rm_2154 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1217_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_148_Rm_4250 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1217_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_149_RM_1113 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1218 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_149_Rm_2150 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1218_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_149_Rm_4207 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1218_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_150_RM_1125 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1218_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_150_Rm_2148 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1221 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_150_Rm_4252 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1221_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_151_RM_1115 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1221_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_151_RM_2127 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1221_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_151_Rm_2127 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1223 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_151_Rm_4254 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1223_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_152_Rm_2146 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1223_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_152_Rm_4256 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1223_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_153_Rm_2144 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1224 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_153_Rm_4258 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1224_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_154_RM_4262 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1224_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_154_Rm_2142 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1224_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_154_Rm_4262 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1229 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_155_Rm_2121 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1229_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_155_Rm_4203 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1229_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_156_Rm_2109 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1229_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_156_Rm_4215 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1230 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_157_Rm_3213 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1230_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_157_Rm_4223 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1230_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_158_Rm_3200A a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1230_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_158_Rm_4217 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1231 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_159_Rm_3205 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1231_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_159_Rm_4138 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1231_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_160_Rm_3202 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1231_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_160_Rm_4136 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1236 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_161_Rm_3219S a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1236_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_161_Rm_3223 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1236_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_161_Rm_4134 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_1236_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_162_Rm_3207 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_2127 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_162_Rm_4132 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_3127 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_163_Rm_3208 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_4262 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_163_Rm_4130 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_4262_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_164_Rm_3214 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B102C a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_164_Rm_4126 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B102C_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_165_Rm_3221 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_165_Rm_4122 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103A a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_166_Rm_3220 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103A_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_166_Rm_4118 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103A_Exhaust_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_167_Rm_3226 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103A_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_167_Rm_4111 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_168_Rm_3230 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B103_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_168_Rm_4114 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B109 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_169_Rm_3232 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B109_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_169_Rm_4110 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B109_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_170_Rm_3236 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B109_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_170_Rm_4106 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200B a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_171_Rm_3240 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200B_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_171_Rm_4102 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200B_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_172_Rm_3242 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200B_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_172_Rm_4107 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200C a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_173_Rm_3246 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200C_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_173_Rm_4105 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200C_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_174_Rm_3250 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B200C_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_174_Rm_4152 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B210 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_175_Rm_3252 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B210_Booster_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_175_Rm_4150 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B210_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_176_Rm_3254 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B210_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_176_Rm_4148 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B210_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_177_Rm_3256 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B215 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_177_Rm_4127 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B215_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_178_Rm_3258 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B215_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_178_Rm_4146 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B215_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_179_Rm_3260 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B220 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_179_Rm_4144 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B220_Booster_Fan a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_180_Rm_3262 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B220_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_180_Rm_4142 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B220_Reheat_Valve a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_181_Rm_3203 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B220_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_181_Rm_4128 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B222 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_182_Rm_3215 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B222_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_182_Rm_4121 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B222_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_183_Rm_3200B a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B224 a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_183_Rm_4109 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B224_Damper a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_184_Rm_3217 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B224_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
-ebu3b:EBU3B_VAV_185_Rm_2258 a brick:VAV,
+ebu3b:EBU3B_VAV_RM_B225 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B225_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B225_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B225_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B230_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B240_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B250_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B260_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B270 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B270_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B270_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B270_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B270_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B275 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B275_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B275_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_RM_B275_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2102 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2102_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2102_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2102_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2105 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2105_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2105_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2105_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2107 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2107_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2107_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2107_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2108 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2108_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2108_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2108_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2109 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2109_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2109_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2109_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2111 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2111_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2111_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2111_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2112 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2112_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2112_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2112_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2116 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2116_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2116_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2116_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2118 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2118_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2118_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2118_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2119 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2119_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2119_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2119_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2119_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2121 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2121_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2121_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2121_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2122 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2122_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2122_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2122_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2126 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2126_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2126_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2126_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2127 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2127_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2127_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2127_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2128 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2128_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2128_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2128_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2130 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2130_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2130_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2130_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2132 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2132_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2132_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2132_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2134 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2134_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2134_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2134_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2136 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2136_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2136_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2136_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2138 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2138_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2138_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2138_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2140 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2140_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2140_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2140_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2140_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2142 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2142_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2142_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2142_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2144 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2144_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2144_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2144_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2146 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2146_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2146_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2146_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2148 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2148_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2148_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2148_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2150 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2150_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2150_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2150_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2154 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2154_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2154_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2154_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2200A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2200A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2200A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2200A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2203 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2203_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2203_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2203_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2207 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2207_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2207_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2208 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2208_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2208_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2208_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2209 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2209_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2209_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2214 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2214_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2214_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2214_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2215 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2215_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2215_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2215_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2217 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2217_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2217_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2217_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2218 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2218_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2218_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2218_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2219 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2219_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2219_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2219_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2221 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2221_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2221_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2221_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2226 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2226_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2226_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2226_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2227 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2227_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2227_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2227_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2229A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2229A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2229A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2229A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2230 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2230_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2230_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2230_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2231 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2231_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2231_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2231_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2232 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2232_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2232_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2232_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2234 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2234_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2234_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2234_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2236 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2236_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2236_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2236_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2238 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2238_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2238_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2238_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2240 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2240_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2240_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2240_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2244 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2244_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2244_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2244_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2250 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2250_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2250_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2250_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2256 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2256_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2256_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2256_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2258 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2258_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2258_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2258_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2262 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2262_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2262_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2262_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2266 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2266_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2266_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2266_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2270 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2270_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2270_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2270_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2272 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2272_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2272_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_2272_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3102 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3102_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3102_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3102_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3105 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3105_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3105_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3105_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3106 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3106_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3106_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3106_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3107 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3107_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3107_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3107_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3109 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3109_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3109_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3109_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3110 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3110_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3110_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3110_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3111 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3111_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3111_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3111_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3114 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3114_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3114_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3114_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3118 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3118_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3118_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3118_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3119 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3119_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3119_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3119_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3119_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3121 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3121_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3121_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3121_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3122 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3122_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3122_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3122_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3126 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3126_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3126_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3126_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3127 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3127_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3127_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3127_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3128 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3128_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3128_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3128_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3130 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3130_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3130_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3130_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3132 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3132_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3132_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3132_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3134 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3134_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3134_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3134_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3136 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3136_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3136_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3136_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3138 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3138_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3138_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3138_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3140 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3140_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3140_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3140_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3140_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3142 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3142_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3142_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3142_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3144 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3144_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3144_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3144_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3146 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3146_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3146_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3146_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3148 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3148_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3148_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3148_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3150 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3150_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3150_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3150_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3152 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3152_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3152_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3152_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3154 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3154_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3154_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3154_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3154_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200B a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200B_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200B_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3200B_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3202 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3202_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3202_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3202_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3203 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3203_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3203_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3203_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3205 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3205_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3205_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3205_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3207 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3207_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3207_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3208 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3208_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3208_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3208_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3213 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3213_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3213_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3213_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3213_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3214 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3214_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3214_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3214_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3215 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3215_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3215_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3215_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3217 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3217_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3217_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3217_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3218_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3219S_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3220 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3220_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3220_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3220_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3221 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3221_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3221_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3221_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3223 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3223_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3223_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3223_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3226 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3226_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3226_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3226_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3230 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3230_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3230_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3230_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3232 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3232_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3232_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3232_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3236 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3236_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3236_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3236_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3240 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3240_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3240_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3240_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3242 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3242_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3242_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3242_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3246 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3246_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3246_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3246_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3250 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3250_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3250_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3250_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3252 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3252_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3252_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3252_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3254 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3254_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3254_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3254_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3256 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3256_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3256_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3256_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3258 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3258_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3258_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3258_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3260 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3260_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3260_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3260_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3262 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3262_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3262_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_3262_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4102 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4102_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4102_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4102_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4105 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4105_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4105_Exhaust_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4105_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4105_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4106 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4106_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4106_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4106_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4107 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4107_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4107_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4107_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4109 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4109_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4109_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4109_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4110 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4110_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4110_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4110_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4111 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4111_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4111_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4111_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4114 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4114_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4114_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4114_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4118 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4118_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4118_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4118_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4119 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4119_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4119_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4119_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4119_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4121 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4121_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4121_Exhaust_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4121_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4121_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4122 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4122_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4122_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4122_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4126 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4126_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4126_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4126_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4127 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4127_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4127_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4128 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4128_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4128_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4128_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4130 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4130_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4130_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4130_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4132 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4132_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4132_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4132_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4134 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4134_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4134_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4134_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4136 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4136_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4136_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4136_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4138 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4138_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4138_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4138_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4140 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4140_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4140_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4140_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4140_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4142 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4142_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4142_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4142_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4144 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4144_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4144_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4144_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4146 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4146_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4146_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4146_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4148 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4148_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4148_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4148_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4150 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4150_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4150_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4150_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4152 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4152_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4152_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4152_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4154 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4154_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4154_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4154_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4154_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4200A a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4200A_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4200A_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4200A_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4202 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4202_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4202_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4202_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4203 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4203_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4203_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4203_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4205 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4205_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4205_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4205_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4207 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4207_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4207_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4208 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4208_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4208_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4208_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4213 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4213_Booster_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4213_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4213_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4213_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4214 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4214_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4214_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4214_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4215 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4215_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4215_Exhaust_Fan a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4215_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4215_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4217 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4217_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4217_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4217_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4219 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4219_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4219_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4219_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4220 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4220_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4220_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4220_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4223 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4223_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4223_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4226 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4226_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4226_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4226_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4230 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4230_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4230_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4230_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4231 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4231_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4231_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4231_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4232 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4232_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4232_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4232_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4236 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4236_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4236_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4236_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4240 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4240_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4240_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4240_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4242 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4242_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4242_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4242_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4246 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4246_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4246_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4246_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4250 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4250_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4250_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4250_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4252 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4252_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4252_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4252_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4254 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4254_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4254_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4254_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4256 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4256_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4256_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4256_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4258 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4258_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4258_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4258_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4262 a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4262_Damper a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4262_Reheat_Valve a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Rm_4262_Thermostat a brick:VAV,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B_VAV_Unknown_Thermostat a brick:VAV,
         owl:NamedIndividual .
 
 ebu3b:EBU3_RM_2127_ACLG_SP a owl:NamedIndividual .
@@ -13817,6 +16233,739 @@ ebu3b:HUBBS_WIND_DIR a brick:Wind_Direction_Sensor,
         owl:NamedIndividual .
 
 ebu3b:HUBBS_WIND_SPD a brick:Wind_Speed_Sensor,
+        owl:NamedIndividual .
+
+ebu3b:HVAC_Zone_Rm_1100A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1100D a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1102 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1104 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1106 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1107 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1108 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1109 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1110 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1113 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1115 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1116 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1117 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1122 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1123 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1124 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1125 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1126 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1130 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1132 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1133 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1134 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1139 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1144 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1145 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1150 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1151 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1154 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1155 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1156 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1200A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1200B a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1200C a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1203 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1207 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1208 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1208B a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1212 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1213 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1213A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1217 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1218 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1221 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1223 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1224 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1229 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1230 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1231 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_1236 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_1 .
+
+ebu3b:HVAC_Zone_Rm_2102 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2105 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2107 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2108 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2109 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2111 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2112 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2116 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2118 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2119 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2121 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2122 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2126 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2127 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2128 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2130 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2132 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2134 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2136 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2138 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2140 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2142 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2144 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2146 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2148 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2150 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2154 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2200A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2203 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2207 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2208 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2209 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2214 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2215 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2217 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2218 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2219 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2221 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2226 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2227 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2229A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2230 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2231 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2232 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2234 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2236 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2238 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2240 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2244 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2250 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2256 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2258 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2262 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2266 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2270 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_2272 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_2 .
+
+ebu3b:HVAC_Zone_Rm_3102 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3105 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3106 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3107 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3109 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3110 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3111 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3114 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3118 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3119 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3121 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3122 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3126 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3127 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3128 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3130 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3132 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3134 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3136 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3138 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3140 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3142 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3144 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3146 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3148 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3150 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3152 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3154 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3200A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3200B a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3202 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3203 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3205 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3207 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3208 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3213 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3214 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3215 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3217 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3218 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3219S a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3220 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3221 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3223 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3226 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3230 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3232 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3236 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3240 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3242 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3246 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3250 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3252 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3254 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3256 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3258 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3260 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_3262 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_3 .
+
+ebu3b:HVAC_Zone_Rm_4102 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4105 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4106 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4107 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4109 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4110 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4111 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4114 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4118 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4119 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4121 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4122 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4126 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4127 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4128 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4130 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4132 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4134 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4136 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4138 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4140 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4142 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4144 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4146 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4148 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4150 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4152 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4154 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4200A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4202 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4203 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4205 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4207 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4208 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4213 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4214 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4215 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4217 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4219 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4220 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4223 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4226 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4230 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4231 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4232 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4236 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4240 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4242 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4246 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4250 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4252 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4254 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4256 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4258 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_4262 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Floor_4 .
+
+ebu3b:HVAC_Zone_Rm_B102C a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B103 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B103A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B109 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B200B a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B200C a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B210 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B215 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B220 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B222 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B224 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B225 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B230 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B230A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B240 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B240A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B250 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B250A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B260 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B260A a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B270 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Rm_B275 a brick:HVAC_Zone ;
+    brickframe:isPartOf ebu3b:Basement .
+
+ebu3b:HVAC_Zone_Server_Room a brick:HVAC_Zone .
+
+ebu3b:HVAC_Zone_Unknown a brick:HVAC_Zone .
+
+ebu3b:Hubbs_Hall_Solar_Panel a brick:Solar_Panel,
+        owl:NamedIndividual .
+
+ebu3b:Hubbs_Hall_Solar_Panel_Battery a brick:Solar_Panel,
+        owl:NamedIndividual .
+
+ebu3b:Hubbs_Hall_Weather a brick:Weather,
         owl:NamedIndividual .
 
 ebu3b:TUNING_POINTS_CWDP_PID_CWDP_PID a brick:Point,
@@ -13863,4 +17012,21 @@ ebu3b:TUNING_POINTS_HX2_PID_PM4TI a brick:Point,
 
 ebu3b:TUNING_POINT_HWDP_PID_PM5PB a brick:Point,
         owl:NamedIndividual .
+
+ebu3b:EBU3B a brick:Building .
+
+ebu3b:Basement a brick:Floor ;
+    brickframe:isPartOf ebu3b:EBU3B .
+
+ebu3b:Floor_1 a brick:Floor ;
+    brickframe:isPartOf ebu3b:EBU3B .
+
+ebu3b:Floor_4 a brick:Floor ;
+    brickframe:isPartOf ebu3b:EBU3B .
+
+ebu3b:Floor_2 a brick:Floor ;
+    brickframe:isPartOf ebu3b:EBU3B .
+
+ebu3b:Floor_3 a brick:Floor ;
+    brickframe:isPartOf ebu3b:EBU3B .
 
