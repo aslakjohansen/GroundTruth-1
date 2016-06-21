@@ -25,7 +25,7 @@ BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
 g.bind('building', BUILDING)
 
 # heat exchanger class
-HX = Namespace('http://buildsys.org/ontologies/heatexchanger_example#')
+HX = Namespace('http://buildsys.org/ontologies/Brick/Heat_Exchanger#')
 g.bind('hx', HX)
 g.add( (BRICK['Function_Block'], RDF.isSubClassOf, BRICK['Thing']) )
 g.add( (HX['Function_Block']   , RDF.isSubClassOf, BRICK['Function_Block']) )

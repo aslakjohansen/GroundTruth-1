@@ -17,9 +17,9 @@ g.bind('bf'   , BRICKFRAME)
 g.bind('btag' , BRICKTAG)
 g.parse('demo_extra_namespace.ttl', format='n3')
 
-## heat exchanger class
-#HX = rdflib.Namespace('http://buildsys.org/ontologies/heatexchanger_example#')
-#g.bind('hx', HX)
+# heat exchanger class
+HX = rdflib.Namespace('http://buildsys.org/ontologies/Brick/Heat_Exchanger#')
+g.bind('hx', HX)
 
 r = g.query(
     """SELECT DISTINCT ?temp ?hx_prim
