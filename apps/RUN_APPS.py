@@ -18,6 +18,10 @@ def printResults(res):
         color = 'red'
     print colored("-> {0} results".format(len(res)), color, attrs=['bold'])
 
+def printTuples(res):
+    for row in res:
+        print map(lambda x: x.split('#')[-1], row)
+
 if len(sys.argv) < 2:
     print "Need a turtle file of a building"
     sys.exit(0)
@@ -98,6 +102,7 @@ WHERE {
 }""")
 printResults(res)
 
+
 print "Find all power meters for HVAC equipment"
 res = g.query("""
 SELECT ?meter ?equipment ?room
@@ -137,6 +142,24 @@ WHERE {
         UNION
     { ?equipment bf:feeds+ ?room }
 }""")
+printResults(res)
+
+print "...or if that doesn't work, find all power meters"
+res = g.query("""
+SELECT ?meter ?loc
+WHERE {
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
+    ?loc rdf:type ?loc_class .
+    ?loc_class rdfs:subClassOf brick:Location .
+
+    ?loc bf:hasPoint ?meter .
+}
+""")
 printResults(res)
 
 print
@@ -215,8 +238,10 @@ WHERE {
       UNION
       { ?sensor rdf:type brick:Discharge_Air_Flow_Sensor }
     }
+
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
+
     { ?airflow_sensor bf:isPartOf ?vav }
         UNION
     { ?vav bf:feeds+ ?airflow_sensor }
@@ -254,15 +279,18 @@ print "--- Model-Predictive Control App ---"
 
 print "Find all buildings, floors, hvac zones, rooms"
 res = g.query("""
-SELECT ?bldg ?floor ?hvac_zone ?room
+SELECT ?bldg ?floor ?room ?zone
 WHERE {
     ?bldg rdf:type brick:Building .
     ?floor rdf:type brick:Floor .
     ?room rdf:type brick:Room .
-    ?hvac_zone rdf:type brick:HVAC_Zone .
-    ?floor bf:isPartOf ?bldg .
-    ?room bf:isPartOf ?floor .
-    ?room bf:isPartOf ?hvac_zone .
+    ?zone rdf:type brick:HVAC_Zone .
+
+    ?floor bf:isPartOf+ ?bldg .
+    ?room bf:isPartOf+ ?floor .
+    ?zone bf:hasPart+ ?room .
+    # ?room bf:isPartOf+ ?zone .
+    # curiously, ?room bf:isPartOf ?zone doesn't work
 }""")
 printResults(res)
 
@@ -323,8 +351,9 @@ WHERE {
 printResults(res)
 
 print "Find all power meters and associate them with floor and room"
+g.query("CONSTRUCT {?a bf:isPointOf ?b} WHERE {?b bf:hasPoint ?a}")
 res = g.query("""
-SELECT ?meter ?floor ?room
+SELECT ?meter ?loc
 WHERE {
 
     {
@@ -334,13 +363,16 @@ WHERE {
          ?class rdfs:subClassOf brick:Power_Meter}
     }
 
-    ?loc    rdf:type    brick:Location .
-    { ?room   bf:isLocatedIn ?loc }
-    UNION
-    { ?room   bf:isPartOf ?loc }
-    ?meter  bf:isPointOf+ ?loc
+    { ?loc    rdf:type    brick:Room }
+        UNION
+    { ?loc rdf:type brick:Floor }
+
+    ?loc bf:hasPoint ?meter .
+    # ?meter  bf:isPointOf ?loc .
+    # TODO: this above doesn't work
 }""")
 printResults(res)
+#printTuples(res)
 
 print
 
