@@ -7,7 +7,8 @@ import rdflib
 try:
     from termcolor import colored
 except:
-    def f(x,y):
+    print "pip install termcolor"
+    def f(x,y, attrs=[]):
         print x
     colored = f
 
@@ -18,6 +19,10 @@ def printResults(res):
         color = 'red'
     print colored("-> {0} results".format(len(res)), color, attrs=['bold'])
 
+def printTuples(res):
+    for row in res:
+        print map(lambda x: x.split('#')[-1], row)
+
 if len(sys.argv) < 2:
     print "Need a turtle file of a building"
     sys.exit(0)
@@ -27,6 +32,7 @@ RDFS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
 BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
 BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
 BRICKTAG = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+OWL = rdflib.Namespace('http://www.w3.org/2002/07/owl#')
 
 def new_graph():
     g = rdflib.Graph()
@@ -35,6 +41,7 @@ def new_graph():
     g.bind( 'brick', BRICK)
     g.bind( 'bf', BRICKFRAME)
     g.bind( 'btag', BRICKTAG)
+    g.bind( 'owl', OWL)
     g.parse('../BuildingSchema/Brick.ttl', format='turtle')
     g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
     g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
@@ -42,6 +49,44 @@ def new_graph():
 
 g = new_graph()
 g.parse(sys.argv[1], format='turtle')
+
+# ADD INVERSE RELATIONSHIPS
+res = g.query("SELECT ?a ?b WHERE { ?a bf:hasPart ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isPartOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasPoint ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isPointOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:feeds ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isFedBy, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:contains ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isLocatedIn, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:controls ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isControlledBy, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasOutput ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isOutputOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasInput ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isInputOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasTagSet ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isTagSetOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasToken ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isTokenOf, row[0]))
+
 print "--- Occupancy Modeling App ---"      ############################################ Occupancy Modeling
 print "Finding Temp, CO2, Occ sensors in all rooms"
 res = g.query("""
@@ -98,6 +143,7 @@ WHERE {
 }""")
 printResults(res)
 
+
 print "Find all power meters for HVAC equipment"
 res = g.query("""
 SELECT ?meter ?equipment ?room
@@ -137,6 +183,24 @@ WHERE {
         UNION
     { ?equipment bf:feeds+ ?room }
 }""")
+printResults(res)
+
+print "...or if that doesn't work, find all power meters"
+res = g.query("""
+SELECT ?meter ?loc
+WHERE {
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
+    ?loc rdf:type ?loc_class .
+    ?loc_class rdfs:subClassOf brick:Location .
+
+    ?loc bf:hasPoint ?meter .
+}
+""")
 printResults(res)
 
 print
@@ -215,8 +279,10 @@ WHERE {
       UNION
       { ?sensor rdf:type brick:Discharge_Air_Flow_Sensor }
     }
+
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
+
     { ?airflow_sensor bf:isPartOf ?vav }
         UNION
     { ?vav bf:feeds+ ?airflow_sensor }
@@ -254,15 +320,16 @@ print "--- Model-Predictive Control App ---"
 
 print "Find all buildings, floors, hvac zones, rooms"
 res = g.query("""
-SELECT ?bldg ?floor ?hvac_zone ?room
+SELECT ?bldg ?floor ?room ?zone
 WHERE {
     ?bldg rdf:type brick:Building .
     ?floor rdf:type brick:Floor .
     ?room rdf:type brick:Room .
-    ?hvac_zone rdf:type brick:HVAC_Zone .
-    ?floor bf:isPartOf ?bldg .
-    ?room bf:isPartOf ?floor .
-    ?room bf:isPartOf ?hvac_zone .
+    ?zone rdf:type brick:HVAC_Zone .
+
+    ?floor bf:isPartOf+ ?bldg .
+    ?room bf:isPartOf+ ?floor .
+    ?room bf:isPartOf+ ?zone .
 }""")
 printResults(res)
 
@@ -297,7 +364,7 @@ res = g.query("""
 SELECT ?light_equip ?light_state ?light_cmd ?room
 WHERE {
 
-    # OR do we do ?light_equip rdf:type brick:Lighting_System 
+    # OR do we do ?light_equip rdf:type brick:Lighting_System
     ?light_equip rdf:type ?class .
     ?class rdfs:subClassOf brick:Lighting_System .
 
@@ -323,8 +390,9 @@ WHERE {
 printResults(res)
 
 print "Find all power meters and associate them with floor and room"
+g.query("CONSTRUCT {?a bf:isPointOf ?b} WHERE {?b bf:hasPoint ?a}")
 res = g.query("""
-SELECT ?meter ?floor ?room
+SELECT ?meter ?loc
 WHERE {
 
     {
@@ -334,13 +402,14 @@ WHERE {
          ?class rdfs:subClassOf brick:Power_Meter}
     }
 
-    ?loc    rdf:type    brick:Location .
-    { ?room   bf:isLocatedIn ?loc }
-    UNION
-    { ?room   bf:isPartOf ?loc }
-    ?meter  bf:isPointOf+ ?loc
+    { ?loc    rdf:type    brick:Room }
+        UNION
+    { ?loc rdf:type brick:Floor }
+
+    ?meter  bf:isPointOf ?loc .
 }""")
 printResults(res)
+#printTuples(res)
 
 print
 
