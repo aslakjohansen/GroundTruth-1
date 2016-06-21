@@ -4,6 +4,7 @@ TARGETS = \
 	demo_temperature_of_hx_prim_in.txt \
 	demo_verb_matching.txt \
 	demo_extra_namespace.txt \
+	demo_equipment.txt \
 
 all: demos
 
@@ -41,4 +42,7 @@ demo_temperature_of_hx_prim_in.txt: ./demo_temperature_of_hx_prim_in sdu_gtc.ttl
 
 demo_verb_matching.txt: ./demo_verb_matching
 	./demo_verb_matching > demo_verb_matching.txt
+
+demo_equipment.txt: demo_equipment
+	./demo_equipment > demo_equipment.txt
 
