@@ -95,7 +95,7 @@ WHERE {
 
     {
       { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf brick:Temperature_Sensor . }
+        ?class rdfs:subClassOf+ brick:Temperature_Sensor . }
       UNION
       { ?sensor rdf:type brick:Temperature_Sensor }
     }
@@ -104,7 +104,7 @@ WHERE {
 
     {
       { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf brick:Occupancy_Sensor . }
+        ?class rdfs:subClassOf+ brick:Occupancy_Sensor . }
       UNION
       { ?sensor rdf:type brick:Occupancy_Sensor }
     }
@@ -113,7 +113,7 @@ WHERE {
 
     {
       { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf brick:CO2_Sensor . }
+        ?class rdfs:subClassOf+ brick:CO2_Sensor . }
       UNION
       { ?sensor rdf:type brick:CO2_Sensor }
     }
@@ -133,12 +133,12 @@ WHERE {
         {?meter rdf:type brick:Power_Meter}
         UNION
         {?meter rdf:type ?class .
-         ?class rdfs:subClassOf brick:Power_Meter}
+         ?class rdfs:subClassOf+ brick:Power_Meter}
     }
 
     ?room rdf:type brick:Room .
     ?equipment rdf:type ?class .
-    ?class rdfs:subClassOf brick:Equipment .
+    ?class rdfs:subClassOf+ brick:Equipment .
     ?equipment bf:isLocatedIn ?room .
     ?meter bf:isPointOf ?equipment .
 }""")
@@ -153,14 +153,14 @@ WHERE {
         {?meter rdf:type brick:Power_Meter}
         UNION
         {?meter rdf:type ?class .
-         ?class rdfs:subClassOf brick:Power_Meter}
+         ?class rdfs:subClassOf+ brick:Power_Meter}
     }
 
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
 
     ?equipment rdf:type ?class .
-    ?class rdfs:subClassOf brick:HVAC .
+    ?class rdfs:subClassOf+ brick:HVAC .
 
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
@@ -176,7 +176,7 @@ WHERE {
     ?meter bf:isPointOf ?equipment .
 
     ?equipment rdf:type ?class .
-    ?class rdfs:subClassOf brick:Lighting .
+    ?class rdfs:subClassOf+ brick:Lighting .
 
     ?zone bf:hasPart ?room .
     { ?equipment bf:feeds+ ?zone }
@@ -193,10 +193,10 @@ WHERE {
         {?meter rdf:type brick:Power_Meter}
         UNION
         {?meter rdf:type ?class .
-         ?class rdfs:subClassOf brick:Power_Meter}
+         ?class rdfs:subClassOf+ brick:Power_Meter}
     }
     ?loc rdf:type ?loc_class .
-    ?loc_class rdfs:subClassOf brick:Location .
+    ?loc_class rdfs:subClassOf+ brick:Location .
 
     ?loc bf:hasPoint ?meter .
 }
@@ -212,7 +212,7 @@ SELECT ?sensor ?room
 WHERE {
     {
       { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf brick:Occupancy_Sensor . }
+        ?class rdfs:subClassOf+ brick:Occupancy_Sensor . }
       UNION
       { ?sensor rdf:type brick:Occupancy_Sensor }
     }
@@ -228,7 +228,7 @@ SELECT ?sensor ?room
 WHERE {
     {
       { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf brick:Luminance_Sensor . }
+        ?class rdfs:subClassOf+ brick:Luminance_Sensor . }
       UNION
       { ?sensor rdf:type brick:Luminance_Sensor }
     }
@@ -247,10 +247,10 @@ WHERE {
     ?equipment bf:isLocatedIn ?room .
 
     { ?equipment rdf:type ?class .
-      ?class rdfs:subClassOf brick:Lighting .}
+      ?class rdfs:subClassOf+ brick:Lighting .}
     UNION
     { ?equipment rdf:type ?class .
-      ?class rdfs:subClassOf brick:HVAC .}
+      ?class rdfs:subClassOf+ brick:HVAC .}
 }""")
 printResults(res)
 
@@ -274,7 +274,7 @@ SELECT ?airflow_sensor ?room ?vav
 WHERE {
     {
       { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf brick:Discharge_Air_Flow_Sensor . }
+        ?class rdfs:subClassOf+ brick:Discharge_Air_Flow_Sensor . }
       UNION
       { ?sensor rdf:type brick:Discharge_Air_Flow_Sensor }
     }
@@ -303,12 +303,12 @@ print "Find power meters for cooling loop, heating loop"
 res = g.query("""
 SELECT ?equip ?equip_type ?meter
 WHERE {
-    ?equip_type rdfs:subClassOf brick:Equipment .
+    ?equip_type rdfs:subClassOf+ brick:Equipment .
     ?equip rdf:type ?equip_type .
     ?meter rdf:type brick:Power_Meter .
 
     ?equip rdf:type ?class .
-    ?class rdfs:subClassOf brick:Water_System .
+    ?class rdfs:subClassOf+ brick:Water_System .
     ?meter bf:isPointOf ?equip .
 }""")
 printResults(res)
@@ -365,7 +365,7 @@ WHERE {
 
     # OR do we do ?light_equip rdf:type brick:Lighting_System
     ?light_equip rdf:type ?class .
-    ?class rdfs:subClassOf brick:Lighting_System .
+    ?class rdfs:subClassOf+ brick:Lighting_System .
 
     ?light_equip bf:feeds ?zone .
     ?zone rdf:type brick:Lighting_Zone .
@@ -374,14 +374,14 @@ WHERE {
 
     {
       { ?light_state rdf:type ?state_class .
-        ?state_class rdfs:subClassOf brick:Luminance_Status . }
+        ?state_class rdfs:subClassOf+ brick:Luminance_Status . }
       UNION
       { ?light_state rdf:type brick:Luminance_Status }
     }
 
     {
       { ?light_cmd rdf:type ?cmd_class .
-        ?cmd_class rdfs:subClassOf brick:Luminance_Command . }
+        ?cmd_class rdfs:subClassOf+ brick:Luminance_Command . }
       UNION
       { ?light_cmd rdf:type brick:Luminance_Command }
     }
@@ -398,7 +398,7 @@ WHERE {
         {?meter rdf:type brick:Power_Meter}
         UNION
         {?meter rdf:type ?class .
-         ?class rdfs:subClassOf brick:Power_Meter}
+         ?class rdfs:subClassOf+ brick:Power_Meter}
     }
 
     { ?loc    rdf:type    brick:Room }
@@ -425,7 +425,7 @@ WHERE {
         {?meter rdf:type brick:Power_Meter}
         UNION
         {?meter rdf:type ?class .
-         ?class rdfs:subClassOf brick:Power_Meter}
+         ?class rdfs:subClassOf+ brick:Power_Meter}
     }
 
     ?equip  rdf:type    brick:Equipment .
@@ -452,7 +452,7 @@ WHERE {
         {?meter rdf:type brick:Power_Meter}
         UNION
         {?meter rdf:type ?class .
-         ?class rdfs:subClassOf brick:Power_Meter}
+         ?class rdfs:subClassOf+ brick:Power_Meter}
     }
     ?cmd    rdf:type    brick:Command .
     ?equip  rdf:type    brick:Equipment .
