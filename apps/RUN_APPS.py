@@ -31,6 +31,7 @@ RDFS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
 BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
 BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
 BRICKTAG = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+OWL = rdflib.Namespace('http://www.w3.org/2002/07/owl#')
 
 def new_graph():
     g = rdflib.Graph()
@@ -39,6 +40,7 @@ def new_graph():
     g.bind( 'brick', BRICK)
     g.bind( 'bf', BRICKFRAME)
     g.bind( 'btag', BRICKTAG)
+    g.bind( 'owl', OWL)
     g.parse('../BuildingSchema/Brick.ttl', format='turtle')
     g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
     g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
@@ -46,6 +48,44 @@ def new_graph():
 
 g = new_graph()
 g.parse(sys.argv[1], format='turtle')
+
+# ADD INVERSE RELATIONSHIPS
+res = g.query("SELECT ?a ?b WHERE { ?a bf:hasPart ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isPartOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasPoint ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isPointOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:feeds ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isFedBy, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:contains ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isLocatedIn, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:controls ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isControlledBy, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasOutput ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isOutputOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasInput ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isInputOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasTagSet ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isTagSetOf, row[0]))
+
+res = g.query("SELECT ?a ?b WHERE {?a bf:hasToken ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.isTokenOf, row[0]))
+
 print "--- Occupancy Modeling App ---"      ############################################ Occupancy Modeling
 print "Finding Temp, CO2, Occ sensors in all rooms"
 res = g.query("""
@@ -288,9 +328,7 @@ WHERE {
 
     ?floor bf:isPartOf+ ?bldg .
     ?room bf:isPartOf+ ?floor .
-    ?zone bf:hasPart+ ?room .
-    # ?room bf:isPartOf+ ?zone .
-    # curiously, ?room bf:isPartOf ?zone doesn't work
+    ?room bf:isPartOf+ ?zone .
 }""")
 printResults(res)
 
@@ -325,7 +363,7 @@ res = g.query("""
 SELECT ?light_equip ?light_state ?light_cmd ?room
 WHERE {
 
-    # OR do we do ?light_equip rdf:type brick:Lighting_System 
+    # OR do we do ?light_equip rdf:type brick:Lighting_System
     ?light_equip rdf:type ?class .
     ?class rdfs:subClassOf brick:Lighting_System .
 
@@ -367,9 +405,7 @@ WHERE {
         UNION
     { ?loc rdf:type brick:Floor }
 
-    ?loc bf:hasPoint ?meter .
-    # ?meter  bf:isPointOf ?loc .
-    # TODO: this above doesn't work
+    ?meter  bf:isPointOf ?loc .
 }""")
 printResults(res)
 #printTuples(res)
