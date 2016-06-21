@@ -338,6 +338,7 @@ def gen_vav (prefix, data, meter):
     do              = GTC[prefix+'/port[do]']
     ci              = GTC[prefix+'/port[ci]']
     co              = GTC[prefix+'/port[co]']
+    zn              = GTC[prefix+'/port[zn]']
     hx              = gen_hx(prefix+'/hx')
     controller      = GTC[prefix+'/controller']
     supply_damper   = GTC[prefix+'/supply_damper']
@@ -355,6 +356,7 @@ def gen_vav (prefix, data, meter):
     g.add( (do             , RDF.type,   GTC['GTC_VAV_Downstream_Output']) )
     g.add( (ci             , RDF.type,   GTC['GTC_VAV_Cooled_input']) )
     g.add( (co             , RDF.type,   GTC['GTC_VAV_Cooled_Output']) )
+    g.add( (zn             , RDF.type, BRICK['HVAC_Zone']) )
     g.add( (controller     , RDF.type,   GTC['Controller']) )
     g.add( (supply_damper  , RDF.type, BRICK['Damper']) )
     g.add( (return_damper  , RDF.type, BRICK['Damper']) )
@@ -398,6 +400,8 @@ def gen_vav (prefix, data, meter):
     g.add( (hx['po']            , BRICKFRAME['feeds'], cooled_valve['i'][0]) )
     g.add( (cooled_valve['o'][0], BRICKFRAME['feeds'], co) )
     g.add( (cooled_flow         , BRICKFRAME['feeds'], cooled_valve['i'][1]) )
+    g.add( (do                  , BRICKFRAME['feeds'], zn) )
+    g.add( (zn                  , BRICKFRAME['feeds'], di) )
     
     # controls
     g.add( (upstream_pres, BRICKFRAME['controls'], controller) )
@@ -420,6 +424,7 @@ def gen_vav (prefix, data, meter):
         'do': do, # downstream output
         'ci': ci, # cooled input
         'co': co, # cooled output
+        'zn': zn, # zone
     }
     return ports
 
@@ -607,6 +612,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
     
     ports = {
         'fb':            fb,
+        'room':          room,
         'floor':         rooms_data[room_name]['floor'],
         'radiators':     radiators,
         'floorheaters':  floor_heaters,
@@ -681,6 +687,7 @@ def gen_foyer_room (prefix, metermap):
     
     ports = {
         'fb':            fb,
+        'room':          room,
         'floor':         0,
         'radiators':     [],
         'floorheaters':  floor_heaters,
@@ -794,15 +801,17 @@ def gen_building (prefix):
         vav_data = vavs_data[index]
         vav = vavs[index]
         
+        # upstream
         g.add( (supply_map[vav_data['side']], BRICKFRAME['feeds'], vav['ui']) )
         g.add( (vav['uo']                   , BRICKFRAME['feeds'], return_map[vav_data['side']]) )
         
+        # downstream
         for room_name in vav_data['rooms']:
             room = rooms[room_name]
             for damper in room['inputdampers']:
-                g.add( (vav['do'], BRICKFRAME['feeds'], damper) )
+                g.add( (vav['zn'], BRICKFRAME['feeds'], damper) )
             for damper in room['outputdampers']:
-                g.add( (damper   , BRICKFRAME['feeds'], vav['di']) )
+                g.add( (damper   , BRICKFRAME['feeds'], vav['zn']) )
     g.add( (outside_temp               , BRICKFRAME['feeds'], outside_fe['i']) )
     g.add( (outside_fe['o']            , BRICKFRAME['feeds'], outside_fe_temp) )
     g.add( (outside_fe_temp            , BRICKFRAME['feeds'], hx1['si']) )
@@ -859,6 +868,14 @@ def gen_building (prefix):
     g.add( (district_return_temp, BRICKFRAME['isPartOf'], building) )
     g.add( (district_valve      , BRICKFRAME['isPartOf'], building) )
     g.add( (district_rect       , BRICKFRAME['isPartOf'], building) )
+    
+    # hasPart
+    for index in range(len(vavs_data)):
+        vav_data = vavs_data[index]
+        vav = vavs[index]
+        for room_name in vav_data['rooms']:
+            room = rooms[room_name]
+            g.add( (vav['zn'], BRICKFRAME['hasPart'], room['room']) )
     
     # isPointOf: metering
     for vav in vavs:
