@@ -137,7 +137,7 @@ WHERE {
     }
 
     ?room rdf:type brick:Room .
-    ?eqiupment rdf:type ?class .
+    ?equipment rdf:type ?class .
     ?class rdfs:subClassOf brick:Equipment .
     ?equipment bf:isLocatedIn ?room .
     ?meter bf:isPointOf ?equipment .
