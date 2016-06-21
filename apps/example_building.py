@@ -148,18 +148,8 @@ for row in res:
 #   g.add((temp_sensor, RDF.type, EX.Fahrenheit_Temperature_Sensor))
 
 # add temperature sensor class
-g.add((EX.Fahrenheit_Temperature_Sensor, RDFS.subClassOf, BRICK.Sensor))
-g.add((EX.Fahrenheit_Temperature_Sensor, BRICKFRAME.hasTag, BRICK.Temperature))
+g.add((EX.Fahrenheit_Temperature_Sensor, RDFS.subClassOf, BRICK.Temperature_Sensor))
 g.add((EX.Fahrenheit_Temperature_Sensor, BRICKFRAME.hasUnit, BRICK.Fahrenheit))
-
-# add co2 sensor class
-g.add((EX.CO2_Sensor, RDFS.subClassOf, BRICK.Sensor))
-g.add((EX.CO2_Sensor, BRICKFRAME.hasTag, BRICK.CO2))
-
-# add occupancy sensor class
-g.add((EX.PIR_Sensor, RDFS.subClassOf, BRICK.Sensor))
-g.add((EX.PIR_Sensor, BRICKFRAME.hasTag, BRICK.Occupancy))
-# TODO: how do we indicate that it is PIR?
 
 # create the instances of our sensors
 for num in range(1,9):
@@ -168,8 +158,8 @@ for num in range(1,9):
     pir_sensor = EX["pir_sensor_{0}".format(num)]
     # declare sensors
     g.add((temp_sensor, RDF.type, EX.Fahrenheit_Temperature_Sensor))
-    g.add((co2_sensor, RDF.type, EX.CO2_Sensor))
-    g.add((pir_sensor, RDF.type, EX.PIR_Sensor))
+    g.add((co2_sensor, RDF.type, BRICK.CO2_Sensor))
+    g.add((pir_sensor, RDF.type, BRICK.Occupancy_Sensor))
 
 # add sensor to room
 g.add((EX.temp_sensor_1, BRICKFRAME.isLocatedIn, EX.room_1_1))

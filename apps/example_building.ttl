@@ -7,63 +7,63 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:co2_sensor_1 a ex:CO2_Sensor ;
+ex:co2_sensor_1 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_1 ;
     bf:isPointOf ex:room_1_1 .
 
-ex:co2_sensor_2 a ex:CO2_Sensor ;
+ex:co2_sensor_2 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_2 ;
     bf:isPointOf ex:room_1_2 .
 
-ex:co2_sensor_3 a ex:CO2_Sensor ;
+ex:co2_sensor_3 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_3 ;
     bf:isPointOf ex:room_1_3 .
 
-ex:co2_sensor_4 a ex:CO2_Sensor ;
+ex:co2_sensor_4 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_1_4 ;
     bf:isPointOf ex:room_1_4 .
 
-ex:co2_sensor_5 a ex:CO2_Sensor ;
+ex:co2_sensor_5 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_1 ;
     bf:isPointOf ex:room_2_1 .
 
-ex:co2_sensor_6 a ex:CO2_Sensor ;
+ex:co2_sensor_6 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_2 ;
     bf:isPointOf ex:room_2_2 .
 
-ex:co2_sensor_7 a ex:CO2_Sensor ;
+ex:co2_sensor_7 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_3 ;
     bf:isPointOf ex:room_2_3 .
 
-ex:co2_sensor_8 a ex:CO2_Sensor ;
+ex:co2_sensor_8 a brick:CO2_Sensor ;
     bf:isLocatedIn ex:room_2_4 ;
     bf:isPointOf ex:room_2_4 .
 
-ex:pir_sensor_1 a ex:PIR_Sensor ;
+ex:pir_sensor_1 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_1_1 ;
     bf:isPointOf ex:room_1_1 .
 
-ex:pir_sensor_2 a ex:PIR_Sensor ;
+ex:pir_sensor_2 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_1_2 ;
     bf:isPointOf ex:room_1_2 .
 
-ex:pir_sensor_3 a ex:PIR_Sensor ;
+ex:pir_sensor_3 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_1_3 ;
     bf:isPointOf ex:room_1_3 .
 
-ex:pir_sensor_4 a ex:PIR_Sensor ;
+ex:pir_sensor_4 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_1_4 ;
     bf:isPointOf ex:room_1_4 .
 
-ex:pir_sensor_5 a ex:PIR_Sensor ;
+ex:pir_sensor_5 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_2_1 ;
     bf:isPointOf ex:room_2_1 .
 
-ex:pir_sensor_6 a ex:PIR_Sensor ;
+ex:pir_sensor_6 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_2_2 ;
     bf:isPointOf ex:room_2_2 .
 
-ex:pir_sensor_7 a ex:PIR_Sensor ;
+ex:pir_sensor_7 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_2_3 ;
     bf:isPointOf ex:room_2_3 .
 
@@ -131,7 +131,7 @@ ex:hvac_zone_2_2 a brick:HVAC_Zone ;
 ex:hvac_zone_2_3 a brick:HVAC_Zone ;
     bf:hasPart ex:room_1_4 .
 
-ex:pir_sensor_8 a ex:PIR_Sensor ;
+ex:pir_sensor_8 a brick:Occupancy_Sensor ;
     bf:isLocatedIn ex:room_2_4 ;
     bf:isPointOf ex:room_2_4 .
 
@@ -178,15 +178,8 @@ ex:room_2_4 a brick:Room ;
     bf:hasPoint ex:pir_sensor_8 ;
     bf:isPartOf ex:floor_2 .
 
-ex:CO2_Sensor bf:hasTag brick:CO2 ;
-    rdfs:subClassOf brick:Sensor .
-
-ex:Fahrenheit_Temperature_Sensor bf:hasTag brick:Temperature ;
-    bf:hasUnit brick:Fahrenheit ;
-    rdfs:subClassOf brick:Sensor .
-
-ex:PIR_Sensor bf:hasTag brick:Occupancy ;
-    rdfs:subClassOf brick:Sensor .
+ex:Fahrenheit_Temperature_Sensor bf:hasUnit brick:Fahrenheit ;
+    rdfs:subClassOf brick:Temperature_Sensor .
 
 ex:room_1_1 a brick:Room ;
     bf:isPartOf ex:floor_1 .

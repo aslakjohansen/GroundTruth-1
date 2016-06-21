@@ -4,6 +4,20 @@ import sys
 import os
 import rdflib
 
+try:
+    from termcolor import colored
+except:
+    def f(x,y):
+        print x
+    colored = f
+
+def printResults(res):
+    if len(res) > 0:
+        color = 'green'
+    else:
+        color = 'red'
+    print colored("-> {0} results".format(len(res)), color, attrs=['bold'])
+
 if len(sys.argv) < 2:
     print "Need a turtle file of a building"
     sys.exit(0)
@@ -28,50 +42,83 @@ def new_graph():
 
 g = new_graph()
 g.parse(sys.argv[1], format='turtle')
-print "--- Occupancy Modeling App ---"
+print "--- Occupancy Modeling App ---"      ############################################ Occupancy Modeling
 print "Finding Temp, CO2, Occ sensors in all rooms"
 res = g.query("""
-SELECT ?sensor ?sensor_type ?room
+SELECT ?sensor ?room
 WHERE {
-    ?sensor_type rdfs:subClassOf brick:Sensor .
-    { ?sensor_type bf:hasTag btag:Temperature }
+
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf brick:Temperature_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:Temperature_Sensor }
+    }
+
         UNION
-    { ?sensor_type bf:hasTag btag:CO2 }
+
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf brick:Occupancy_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:Occupancy_Sensor }
+    }
+
         UNION
-    { ?sensor_type bf:hasTag btag:Occupancy }
-    ?sensor rdf:type ?sensor_type .
+
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf brick:CO2_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:CO2_Sensor }
+    }
+
     ?room rdf:type brick:Room .
-    ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
 
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Finding all power meters for equipment in rooms"
 res = g.query("""
 SELECT ?meter ?equipment ?room
 WHERE {
-    ?meter rdf:type brick:Power_Meter .
+
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
+
     ?room rdf:type brick:Room .
     ?equipment rdf:type brick:Equipment .
     ?equipment bf:isLocatedIn ?room .
     ?meter bf:isPointOf ?equipment .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Find all power meters for HVAC equipment"
 res = g.query("""
 SELECT ?meter ?equipment ?room
 WHERE {
-    ?meter rdf:type brick:Power_Meter .
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
     ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
-    ?equipment bf:hasTag btag:HVAC .
+
+    ?equipment rdf:type ?class .
+    ?class rdfs:subClassOf brick:HVAC .
+
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Find all power meters for Lighting equipment"
 res = g.query("""
@@ -81,42 +128,51 @@ WHERE {
     ?equipment rdf:type brick:Equipment .
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
-    ?equipment bf:hasTag btag:Lighting .
+
+    ?equipment rdf:type ?class .
+    ?class rdfs:subClassOf brick:Lighting .
+
     ?zone bf:hasPart ?room .
     { ?equipment bf:feeds+ ?zone }
         UNION
     { ?equipment bf:feeds+ ?room }
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print
 
-print "--- Energy Apportionment App ---"
+print "--- Energy Apportionment App ---"      ############################################ Energy Apportionment
 print "Find Occ sensors in all rooms"
 res = g.query("""
 SELECT ?sensor ?room
 WHERE {
-    ?sensor_type rdfs:subClassOf brick:Sensor .
-    ?sensor_type bf:hasTag btag:Occupancy .
-    ?sensor rdf:type ?sensor_type .
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf brick:Occupancy_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:Occupancy_Sensor }
+    }
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Find lux sensors in rooms"
 res = g.query("""
 SELECT ?sensor ?room
 WHERE {
-    ?sensor_type rdfs:subClassOf brick:Sensor .
-    ?sensor_type bf:hasTag btag:Illumination .
-    ?sensor rdf:type ?sensor_type .
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf brick:Luminance_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:Luminance_Sensor }
+    }
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Find lighting/hvac equipment (e.g. desk lamps) rooms"
 res = g.query("""
@@ -127,15 +183,17 @@ WHERE {
 
     ?equipment bf:isLocatedIn ?room .
 
-    { ?equipment bf:hasTag btag:Lighting }
+    { ?equipment rdf:type ?class .
+      ?class rdfs:subClassOf brick:Lighting .}
     UNION
-    { ?equipment bf:hasTag btag:HVAC }
+    { ?equipment rdf:type ?class .
+      ?class rdfs:subClassOf brick:HVAC .}
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print
 
-print "--- Web Displays App ---"
+print "--- Web Displays App ---"  ################################################ Web Displays
 print "Reheat valve command for VAVs"
 res = g.query("""
 SELECT ?reheat_vlv_cmd ?vav
@@ -145,22 +203,25 @@ WHERE {
     ?vav bf:hasPoint+ ?reheat_vlv_cmd .
 }
 """)
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Airflow sensor for all VAVs"
 res = g.query("""
 SELECT ?airflow_sensor ?room ?vav
 WHERE {
-    ?airflow_sensor rdf:type brick:Sensor .
-    ?airflow_sensor bf:hasTag btag:Air .
-    ?airflow_sensor bf:hasTag btag:Flow .
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf brick:Discharge_Air_Flow_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:Discharge_Air_Flow_Sensor }
+    }
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
     { ?airflow_sensor bf:isPartOf ?vav }
         UNION
     { ?vav bf:feeds+ ?airflow_sensor }
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Associate VAVs to zones and rooms"
 res = g.query("""
@@ -171,7 +232,7 @@ WHERE {
     ?vav bf:feeds+ ?zone .
     ?room bf:isPartOf ?zone .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Find power meters for cooling loop, heating loop"
 res = g.query("""
@@ -180,13 +241,12 @@ WHERE {
     ?equip_type rdfs:subClassOf brick:Equipment .
     ?equip rdf:type ?equip_type .
     ?meter rdf:type brick:Power_Meter .
-    ?equip rdfs:subClassOf brick:Water_System .
-    { ?equip bf:hasTag btag:Chilled }
-        UNION
-    { ?equip bf:hasTag btag:Hot }
+
+    ?equip rdf:type ?class .
+    ?class rdfs:subClassOf brick:Water_System .
     ?meter bf:isPointOf ?equip .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print
 
@@ -199,13 +259,12 @@ WHERE {
     ?bldg rdf:type brick:Building .
     ?floor rdf:type brick:Floor .
     ?room rdf:type brick:Room .
-    ?hvac_zone rdf:type brick:Zone .
-    ?hvac_zone bf:hasTag btag:HVAC .
+    ?hvac_zone rdf:type brick:HVAC_Zone .
     ?floor bf:isPartOf ?bldg .
     ?room bf:isPartOf ?floor .
     ?room bf:isPartOf ?hvac_zone .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 #print "Find windows in the room"
 print "Grab the orientation of the room if we have it"
@@ -216,7 +275,7 @@ WHERE {
     ?room rdfs:hasProperty brick:Orientation .
     ?orientation rdf:type brick:Orientation .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Grab all VAVs and AHUs and zones"
 res = g.query("""SELECT ?vav ?ahu ?hvac_zone
@@ -224,11 +283,10 @@ WHERE {
     ?vav rdf:type brick:VAV .
     ?ahu rdf:type brick:AHU .
     ?ahu bf:feeds ?vav .
-    ?hvac_zone rdf:type brick:Zone .
-    ?hvac_zone bf:hasTag btag:HVAC .
+    ?hvac_zone rdf:type brick:HVAC_Zone .
     ?vav  bf:feeds ?hvac_zone .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print
 
@@ -238,35 +296,51 @@ print "Associate lighting with rooms"
 res = g.query("""
 SELECT ?light_equip ?light_state ?light_cmd ?room
 WHERE {
-    ?light_equip rdf:type brick:Equipment .
-    ?light_equip bf:hasTag btag:Lighting .
+
+    # OR do we do ?light_equip rdf:type brick:Lighting_System 
+    ?light_equip rdf:type ?class .
+    ?class rdfs:subClassOf brick:Lighting_System .
+
     ?light_equip bf:feeds ?zone .
-    ?zone rdf:type brick:Zone .
-    ?zone bf:hasTag btag:Lighting .
+    ?zone rdf:type brick:Lighting_Zone .
     ?zone bf:contains ?room .
     ?room rdf:type brick:Room .
-    ?light_state rdf:type brick:Status .
-    ?light_state bf:isPointOf ?light_equip .
-    ?light_state bf:hasTag btag:Luminance .
-    ?light_cmd rdf:type brick:Command .
-    ?light_cmd bf:isPointOf ?light_equip .
-    ?light_cmd bf:hasTag btag:Luminance .
+
+    {
+      { ?light_state rdf:type ?state_class .
+        ?state_class rdfs:subClassOf brick:Luminance_Status . }
+      UNION
+      { ?light_state rdf:type brick:Luminance_Status }
+    }
+
+    {
+      { ?light_cmd rdf:type ?cmd_class .
+        ?cmd_class rdfs:subClassOf brick:Luminance_Command . }
+      UNION
+      { ?light_cmd rdf:type brick:Luminance_Command }
+    }
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print "Find all power meters and associate them with floor and room"
 res = g.query("""
 SELECT ?meter ?floor ?room
 WHERE {
-    ?meter  rdf:type    brick:Sensor .
-    ?meter  bf:hasTag   btag:Power .
+
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
+
     ?loc    rdf:type    brick:Location .
     { ?room   bf:isLocatedIn ?loc }
     UNION
     { ?room   bf:isPartOf ?loc }
     ?meter  bf:isPointOf+ ?loc
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print
 
@@ -279,9 +353,14 @@ print "Get equipment, power meters and what floor/room they are in"
 res = g.query("""
 SELECT ?equip ?meter ?floor ?room
 WHERE {
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
+
     ?equip  rdf:type    brick:Equipment .
-    ?meter  rdf:type    brick:Sensor .
-    ?meter  bf:hasTag   btag:Power .
     ?loc    rdf:type    brick:Location .
     { ?room   bf:isLocatedIn ?loc }
     UNION
@@ -292,7 +371,7 @@ WHERE {
     { ?equip  bf:isPartOf+ ?loc }
 }
 """)
-print "-> {0} results".format(len(res))
+printResults(res)
 
 print
 
@@ -301,13 +380,17 @@ print "Find all equipment (inside rooms) and associated power meters and control
 res = g.query("""
 SELECT ?equip ?meter ?cmd
 WHERE {
+    {
+        {?meter rdf:type brick:Power_Meter}
+        UNION
+        {?meter rdf:type ?class .
+         ?class rdfs:subClassOf brick:Power_Meter}
+    }
     ?cmd    rdf:type    brick:Command .
     ?equip  rdf:type    brick:Equipment .
-    ?meter  rdf:type    brick:Sensor .
-    ?meter  bf:hasTag   btag:Power .
     ?room   rdf:type    brick:Room .
     ?equip  bf:isLocatedIn ?room .
     ?meter  bf:isPointOf ?equip .
     ?cmd    bf:isPointOf ?equip .
 }""")
-print "-> {0} results".format(len(res))
+printResults(res)
