@@ -274,6 +274,29 @@ WHERE {
 ```
 
 ## Fault Detection and Diagnosis
+We need 11 common points in each AHU to run FDD rules. Those points can be seen in FDD_APP.ipynb. In one building, to get one type of points for all AHUs, we can define the following command
+```python
+def get_points(acronym,brick_name,g):
+    res = g.query("""
+    SELECT ?%s
+    WHERE {
+        ?%s rdf:type brick:%s .
+        ?ahu rdf:type brick:AHU .
+        ?%s ns1:isPointOf ?ahu .
+    }
+    """ % (acronym,acronym,brick_name,acronym))
+    
+    return list(res)
+```
+For example, if we need the outside air temperature(OAT), which is defined as "Outside_Air_Temperature_Sensor" in BRICK, we can run
+```python
+import rdflib
+
+g = rdflib.Graph()
+g.parse('../CMU-Yuvraj/GHCYuvraj_brick.ttl', format='turtle')
+
+res = get_points("OAT","Outside_Air_Temperature_Sensor",g)
+```
 
 ## Non-Intrusive Load Monitoring
 

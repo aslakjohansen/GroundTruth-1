@@ -33,17 +33,29 @@
  :HVAC  rdfs:subClassOf   :Equipment;
 			 rdfs:label "HVAC"@en .
 
+ :Power_System  rdfs:subClassOf   :Equipment;
+			 rdfs:label "Power System"@en .
+
+ :CRAC  rdfs:subClassOf   :HVAC;
+			 rdfs:label "CRAC"@en .
+
  :Coil  rdfs:subClassOf   :HVAC;
 			 rdfs:label "Coil"@en .
 
  :Valve  rdfs:subClassOf   :HVAC;
 			 rdfs:label "Valve"@en .
 
+ :Heating_Valve  rdfs:subClassOf   :Valve;
+			 rdfs:label "Heating Valve"@en .
+
+ :Damper  rdfs:subClassOf   :HVAC;
+			 rdfs:label "Damper"@en .
+
  :AHU  rdfs:subClassOf   :HVAC;
 			 rdfs:label "AHU"@en .
 
- :CRAC  rdfs:subClassOf   :HVAC;
-			 rdfs:label "CRAC"@en .
+ :Filter  rdfs:subClassOf   :HVAC;
+			 rdfs:label "Filter"@en .
 
  :CWS  rdfs:subClassOf   :HVAC;
 			 rdfs:label "CWS"@en .
@@ -700,6 +712,11 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Storage ];
 			 rdfs:label "Energy Storage"@en .
 
+ :Power_System  rdfs:subClassOf   :Equipment;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:System ];
+			 rdfs:label "Power System"@en .
+
  :Thermal_Energy_Storage  rdfs:subClassOf   :Energy_Storage;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Energy ];
@@ -739,6 +756,18 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heater ];
 			 rdfs:label "Space Heater"@en .
 
+ :Thermostat  rdfs:subClassOf   :HVAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermostat ];
+			 rdfs:label "Thermostat"@en .
+
+ :Compressor  rdfs:subClassOf   :HVAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Compressor ];
+			 rdfs:label "Compressor"@en .
+
+ :Inverter  rdfs:subClassOf   :Power_System;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Inverter ];
+			 rdfs:label "Inverter"@en .
+
  :Air_Handler_Unit  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Handler ];
@@ -761,6 +790,12 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Conditioning ];
 			 owl:equivalentClass :CRAC ;
 			 rdfs:label "Computer Room Air Conditioning"@en .
+
+ :Standby_CRAC_Unit  rdfs:subClassOf   :CRAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Standby ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:CRAC ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Unit ];
+			 rdfs:label "Standby CRAC Unit"@en .
 
  :Terminal_Unit  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Terminal ];
@@ -817,16 +852,49 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
 			 rdfs:label "Heating Valve"@en .
 
+ :Reheat_Valve  rdfs:subClassOf   :Heating_Valve;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Reheat ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
+			 rdfs:label "Reheat Valve"@en .
+
  :Cooling_Valve  rdfs:subClassOf   :Valve;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
 			 rdfs:label "Cooling Valve"@en .
 
- :Exhaust_Air_Damper  rdfs:subClassOf   :AHU;
+ :Domestic_Hot_Water_Valve  rdfs:subClassOf   :Heating_Valve;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Domestic ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
+			 rdfs:label "Domestic Hot Water Valve"@en .
+
+ :Damper  rdfs:subClassOf   :HVAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
+			 rdfs:label "Damper"@en .
+
+ :Economizer_Damper  rdfs:subClassOf   :Damper;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
+			 rdfs:label "Economizer Damper"@en .
+
+ :Exhaust_Air_Damper  rdfs:subClassOf   :Damper;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Exhaust ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
 			 rdfs:label "Exhaust Air Damper"@en .
+
+ :Outside_Air_Damper  rdfs:subClassOf   :Damper;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Outside ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
+			 rdfs:label "Outside Air Damper"@en .
+
+ :Return_Air_Damper  rdfs:subClassOf   :Damper;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Return ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
+			 rdfs:label "Return Air Damper"@en .
 
  :Heat_Wheel_VFD  rdfs:subClassOf   :AHU;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heat ];
@@ -834,11 +902,19 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD ];
 			 rdfs:label "Heat Wheel VFD"@en .
 
- :Mixed_Air_Filter  rdfs:subClassOf   :AHU;
+ :Filter  rdfs:subClassOf   :HVAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Filter ];
+			 rdfs:label "Filter"@en .
+
+ :Mixed_Air_Filter  rdfs:subClassOf   :Filter;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mixed ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Filter ];
 			 rdfs:label "Mixed Air Filter"@en .
+
+ :Economizer  rdfs:subClassOf   :HVAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:label "Economizer"@en .
 
  :Preheat_Hot_Water_Valve  rdfs:subClassOf   :AHU;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Preheat ];
@@ -921,6 +997,11 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Exhaust ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fan ];
 			 rdfs:label "Exhaust Fan"@en .
+
+ :Standby_Fan  rdfs:subClassOf   :Fan;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Standby ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fan ];
+			 rdfs:label "Standby Fan"@en .
 
  :Pump  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pump ];
