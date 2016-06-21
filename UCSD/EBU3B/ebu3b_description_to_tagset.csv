@@ -69,20 +69,20 @@ Short Cycle,Binary Input,,Short Cycle,Short Cycle Alarm
 Stages,Analog Input,95,Stages,CRAC Stages Status
 Standby Unit On,Binary Input,,Standby Unit On,Standby Unit On Off Status
 Standy Glycool Unit On,Binary Input,,Standy Glycool Unit On,Standby Glycool Unit On Off Status
-Heat Exchanger OSA Reset High Setpoint,Analog Value,95,Heat Exchanger OSA Reset High Setpoint,Heat Exchanger Outside Air Reset High Setpoint
-Heat Exchanger OSA Reset Low Setpoint,Analog Value,95,Heat Exchanger OSA Reset Low Setpoint,Heat Exchanger Outside Air Reset Low Setpoint
+Heat Exchanger OSA Reset High Setpoint,Analog Value,95,Heat Exchanger OSA Reset High Setpoint,Unknown
+Heat Exchanger OSA Reset Low Setpoint,Analog Value,95,Heat Exchanger OSA Reset Low Setpoint,Unknown
 Heat Exchanger OSA Reset OSA High Span,Analog Value,95,Heat Exchanger OSA Reset OSA High Span,Unknown
 Heat Exchanger OSA Reset OSA Low Span,Analog Value,95,Heat Exchanger OSA Reset OSA Low Span,Unknown
 MTW-DP Load Shed,Binary Value,,MTW-DP Load Shed,Medium Temperature Hot Water Differential Pressure Load Shed Status
 MTWDP-SP Load Shed,Analog Value,56,MTWDP-SP Load Shed,Medium Temperature Hot Water Differential Pressure Load Shed Setpoint
 PV System Output,Analog Value,3,PV System Output,Photovoltaic Current Output Sensor
-Sunbeams are Good!,Analog Value,35,Sunbeams Are Good!,Solar Radiation
+Sunbeams are Good!,Analog Value,35,Sunbeams Are Good!,Solar Radiance Sensor
 Average Floor Cooling PID3,Analog Value,95,Average Floor Cooling PID,Unknown
 Average Floor Cooling PID4,Analog Value,95,Average Floor Cooling PID,Unknown
 Average Floor Cooling PID5,Analog Value,95,Average Floor Cooling PID,Unknown
 Average Cooling PID2,Analog Value,95,Average Floor Cooling PID,Unknown
-DISCH AIR RESET HI OUT,Analog Value,64,Discharge Air Reset High,Discharge Air Flow Reset High Sensor
-DISCH AIR RESET LO OUT,Analog Value,64,Discharge Air Reset Low,Discharge Air Flow Reset Low Sensor
+DISCH AIR RESET HI OUT,Analog Value,64,Discharge Air Reset High,Discharge Air Temperature Reset High Setpoint
+DISCH AIR RESET LO OUT,Analog Value,64,Discharge Air Reset Low,Discharge Air Temperature Reset Low Setpoint
 Unit Turned Off Locally,Binary Input,,Unit Turned Off Locally,Unit Turned Off Locally Status
 Unit Turned Off Remotely,Binary Input,,Unit Turned Off Remotely,Unit Turned Off Remotely Status
 Torque,Analog Input,98,Torque,Motor Torque Sensor
@@ -156,12 +156,12 @@ Return Fan 2 Cmd,Binary Output,,Return Fan Command,Return Fan Start Stop Command
 Return Fan 3 Cmd,Binary Output,,Return Fan Command,Return Fan Start Stop Command
 Return Fan 4 Cmd,Binary Output,,Return Fan Command,Return Fan Start Stop Command
 Return Air High Limit,Binary Input,,Return Air Low Limit,Return Air Temperature Low Limit Alarm
-Return Air Temp,Analog Input,64,Return Air Temp,Return Air Temperature
+Return Air Temp,Analog Input,64,Return Air Temp,Return Air Temperature Sensor
 Relative Humidity,Analog Value,95,Relative Humidity,Relative Humidity Sensor
 Relative Humidity,Analog Value,98,Relative Humidity,Relative Humidity Sensor
 Zone Temperature \ Lounge,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 Supply Air Temperature,Analog Input,64,Supply Air Temperature,Discharge Air Temperature Sensor
-Occupied Heating Flow,Analog Output,84,Minimum Occupied Heating Supply Airflow,Occupied Min Heating Discharge Air Flow Setpoint
+Occupied Heating Flow,Analog Output,84,Minimum Occupied Heating Supply Airflow,Occupied Heating Min Discharge Air Flow Setpoint
 Zone Temperature / Work Room,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 Reference 1,Analog Output,98,Reference 1,Unknown
 Reference 2,Analog Output,98,Reference 2,Unknown
@@ -184,7 +184,7 @@ CHWP LEAD (ON=1/OFF=2),Binary Output,,Pump Lead Lag,Chilled Water Pump Lead Lag 
 HWP LEAD (ON=1/OFF=2),Binary Output,,Pump Lead Lag,Hot Water Pump Lead Lag Command
 Chilled Water Pump 3 Enable,Binary Input,,Pump Enable,Chilled Water Pump Enable Status
 Chilled Water Pump 4 Enable,Binary Input,,Pump Enable,Chilled Water Pump Enable Status
-CHW Pump Dead Band,Analog Output,56,Pump Dead Band,Chilled Water Pump Differential Pressure Dead Band
+CHW Pump Dead Band,Analog Output,56,Pump Dead Band,Chilled Water Pump Differential Pressure Dead Band Setpoint
 Chilled Water Pump 3 Alarm Delay,Analog Output,73,Pump Alarm Delay,Chilled Water Pump Alarm Delay Setpoint
 CHW PUMP 1 ALARM,Binary Input,,Pump Alarm,Chilled Water Pump Alarm
 CHW PUMP 2 ALARM,Binary Input,,Pump Alarm,Chilled Water Pump Alarm
@@ -195,7 +195,7 @@ CHW Pump Command Output,Analog Output,302,Pump Command Output,Chilled Water Pump
 HW PUMP 1 ALARM,Binary Input,,Pump Alarm,Hot Water Pump Alarm
 HWP 2 ALARM,Binary Input,,Pump Alarm,Hot Water Pump Alarm
 Loss Of Power,Binary Input,,Loss Of Power,Power Loss Alarm
-Power,Analog Input,48,Power,Power Sensor
+Power,Analog Input,48,Power,Power Meter
 Pan Lock,Binary Output,,Pan Lock,Panel Lockout Command
 Computed Outside Enthalpy,Analog Value,24,Computed Outside Enthalpy,Outside Enthalpy Sensor
 Outside Air Temp,Analog Input,64,Outside Air Temperature,Outside Air Temperature Sensor
@@ -209,7 +209,7 @@ Zone Temperature \ Kitchen,Analog Input,64,Zone Temperature,Zone Temperature Sen
 Zone Temperature /Electrical Rm,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 Zone Temperature \ 4th Flr Lobby,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 Occupied Htg Flow,Analog Output,64,Minimum Occupied Heating Supply Airflow,Occupied Heating Min Discharge Air Flow Setpoint
-Occupied Clg Min,Analog Output,64,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Se
+Occupied Clg Min,Analog Output,64,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
 Motor Torque,Analog Input,98,Motor Torque,Motor Torque Sensor
 Motor Start/Stop Status,Binary Input,,Motor Start Stop Status,VFD Start Stop Status
 Motor Speed,Analog Input,104,Motor Speed,Motor Speed Sensor
@@ -265,7 +265,7 @@ Fault Indicator,Binary Input,,Fault Indicator,Fault Status
 Fault Status,Binary Input,,Fault Status,Fault Status
 Last Fault,Analog Input,95,Last Fault,Last Fault Code Status
 Main Fan Overload,Binary Input,,Main Fan Overload,Fan Overload Alarm
-Occupied Clg Min,Analog Input,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Se
+Occupied Clg Min,Analog Input,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
 Heating Command,Analog Output,95,Heating Command,Heating Command
 Cooling Command,Analog Output,95,Cooling Command,Cooling Command
 EPO Activated By Leak Detection System,Binary Value,,EPO Activated By Leak Detection System,Emergency Power Off Activated By Leak Detection System Status
@@ -298,7 +298,7 @@ Exhaust Fan Command,Binary Output,,Exhaust Fan Command,Zone Temperature Sensor
 Zone Temperature \ 3rd Flr lobby,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 Zone Temperature/Conference Room,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 zone temperature\south stat,Analog Input,64,Zone Temperature,Zone Temperature Sensor
-Occupied cooling min,Analog Output,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow
+Occupied cooling min,Analog Output,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
 Zone Temperature\north stat Rm 3221,Analog Input,64,Zone Temperature,Zone Temperature Sensor
 Current Limit,Analog Output,3,Current Limit,Current Limit Setpoint
 Current,Analog Input,3,Current,Current Sensor
@@ -327,7 +327,7 @@ Chw Ret Temp 2,Analog Input,64,Chilled Water Return Temperature,Chilled Water Re
 Chw Ret Temp 3,Analog Input,64,Chilled Water Return Temperature,Chilled Water Return Temperature Sensor
 Chw Ret Temp 4,Analog Input,64,Chilled Water Return Temperature,Chilled Water Return Temperature Sensor
 Chilled Water Supply Temperature,Analog Input,64,Chilled Water Supply Temperature,Chilled Water Supply Temperature Sensor
-Chilled Water Pressure Setpoint,Analog Output,56,Chilled Water Pressure Setpoint,Chilled Water Pressure Setpoint
+Chilled Water Pressure Setpoint,Analog Output,56,Chilled Water Pressure Setpoint,Chilled Water Differential Pressure Setpoint
 CHW DIFF PRESS SETPOINT,Analog Output,56,Chilled Water Differential Pressure Setpoint,Chilled Water Differential Pressure Setpoint
 CHW-DP Load Shed,Binary Value,,Chilled Water Differential Pressure Load Shed,Chilled Water Differential Pressure Load Shed Status
 CHWDP-SP Load Shed,Analog Value,56,Chilled Water Differential Pressure Setpoint Load Shed,Chilled Water Differential Pressure Load Shed Setpoint

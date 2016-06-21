@@ -24,6 +24,9 @@
  :Equipment  rdfs:subClassOf   bf:TagSet;
 			 rdfs:label "Equipment"@en .
 
+ :Energy_Storage  rdfs:subClassOf   :Equipment;
+			 rdfs:label "Energy Storage"@en .
+
  :Fire_Safety_System  rdfs:subClassOf   :Equipment;
 			 rdfs:label "Fire Safety System"@en .
 
@@ -180,6 +183,12 @@
  :Setpoint  rdfs:subClassOf   :Point;
 			 rdfs:label "Setpoint"@en .
 
+ :Humidity_Setpoint  rdfs:subClassOf   :Setpoint;
+			 rdfs:label "Humidity Setpoint"@en .
+
+ :Temperature_Setpoint  rdfs:subClassOf   :Setpoint;
+			 rdfs:label "Temperature Setpoint"@en .
+
  :Command  rdfs:subClassOf   :Point;
 			 rdfs:label "Command"@en .
 
@@ -330,9 +339,6 @@
  :Differential_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
 			 rdfs:label "Differential Temperature Sensor"@en .
 
- :Temperature_Setpoint  rdfs:subClassOf   :Setpoint;
-			 rdfs:label "Temperature Setpoint"@en .
-
  :Discharge_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 rdfs:label "Discharge Air Temperature Setpoint"@en .
 
@@ -417,10 +423,7 @@
  :Load_Shed_Supply_Water_Temperature_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Setpoint;
 			 rdfs:label "Load Shed Supply Water Temperature Setpoint"@en .
 
- :Temeperature_Setpoint  rdfs:subClassOf   :Setpoint;
-			 rdfs:label "Temeperature Setpoint"@en .
-
- :Cooling_Temperature_Setpoint  rdfs:subClassOf   :Temeperature_Setpoint;
+ :Cooling_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 rdfs:label "Cooling Temperature Setpoint"@en .
 
  :Static_Pressure_Setpoint  rdfs:subClassOf   :Pressure_Setpoint;
@@ -492,6 +495,12 @@
  :Differential_Speed_Setpoint  rdfs:subClassOf   :Speed_Setpoint;
 			 rdfs:label "Differential Speed Setpoint"@en .
 
+ :Cooling_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 rdfs:label "Cooling Demand Setpoint"@en .
+
+ :Heating_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 rdfs:label "Heating Demand Setpoint"@en .
+
  :Chilled_Water_Differential_Pressure_Setpoint  rdfs:subClassOf   :Differential_Pressure_Setpoint;
 			 rdfs:label "Chilled Water Differential Pressure Setpoint"@en .
 
@@ -504,16 +513,10 @@
  :Differential_Pressure_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
 			 rdfs:label "Differential Pressure Dead Band Setpoint"@en .
 
- :Integral_Time  rdfs:subClassOf   :Setpoint;
-			 rdfs:label "Integral Time"@en .
-
- :Differential_Pressure_Integral_Time  rdfs:subClassOf   :Integral_Time;
+ :Differential_Pressure_Integral_Time  rdfs:subClassOf   :Integral_Time_Setpoint;
 			 rdfs:label "Differential Pressure Integral Time"@en .
 
- :Proportional_Band  rdfs:subClassOf   :Setpoint;
-			 rdfs:label "Proportional Band"@en .
-
- :Differential_Pressure_Proportional_Band  rdfs:subClassOf   :Proportional_Band;
+ :Differential_Pressure_Proportional_Band  rdfs:subClassOf   :Proportional_Band_Setpoint;
 			 rdfs:label "Differential Pressure Proportional Band"@en .
 
  :Exhaust_Air_Flow_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
@@ -561,9 +564,6 @@
  :Cooling_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Discharge_Air_Flow_Setpoint;
 			 rdfs:label "Cooling Discharge Air Flow Setpoint"@en .
 
- :Point_Setpoint  rdfs:subClassOf   bf:TagSet;
-			 rdfs:label "Point Setpoint"@en .
-
  :Zone_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 rdfs:label "Zone Temperature Setpoint"@en .
 
@@ -599,9 +599,6 @@
 
  :Fan_Speed_Setpoint  rdfs:subClassOf   :Speed_Setpoint;
 			 rdfs:label "Fan Speed Setpoint"@en .
-
- :Temeprature_Setpoint  rdfs:subClassOf   :Setpoint;
-			 rdfs:label "Temeprature Setpoint"@en .
 
  :Hot_Water_Supply_Temperature_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Setpoint;
 			 rdfs:label "Hot Water Supply Temperature Setpoint"@en .
@@ -693,6 +690,25 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Lighting ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:System ];
 			 rdfs:label "Lighting System"@en .
+
+ :Weather  rdfs:subClassOf   :Equipment;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Weather ];
+			 rdfs:label "Weather"@en .
+
+ :Energy_Storage  rdfs:subClassOf   :Equipment;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Energy ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Storage ];
+			 rdfs:label "Energy Storage"@en .
+
+ :Thermal_Energy_Storage  rdfs:subClassOf   :Energy_Storage;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Energy ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Storage ];
+			 rdfs:label "Thermal Energy Storage"@en .
+
+ :Battery  rdfs:subClassOf   :Energy_Storage;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Battery ];
+			 rdfs:label "Battery"@en .
 
  :FCP  rdfs:subClassOf   :Fire_Safety_System;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:FCP ];
@@ -977,6 +993,11 @@
  :Room  rdfs:subClassOf   :Location;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Room ];
 			 rdfs:label "Room"@en .
+
+ :Server_Room  rdfs:subClassOf   :Room;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Server ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Room ];
+			 rdfs:label "Server Room"@en .
 
  :Laboratory  rdfs:subClassOf   :Room;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Laboratory ];
@@ -1732,7 +1753,7 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
 			 rdfs:label "Low Humidity Alarm"@en .
 
- :Low_Humidity_Alarm_Setpoint  rdfs:subClassOf   :Setpoint;
+ :Low_Humidity_Alarm_Setpoint  rdfs:subClassOf   :Humidity_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Low ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Humidity ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
@@ -1752,7 +1773,7 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
 			 rdfs:label "Low Temperature Alarm"@en .
 
- :Low_Temperature_Alarm_Setpoint  rdfs:subClassOf   :Setpoint;
+ :Low_Temperature_Alarm_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Low ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
@@ -1936,6 +1957,12 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
 			 rdfs:label "Economizer Damper Command"@en .
+
+ :Economizer_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Temperature Setpoint"@en .
 
  :Mixed_Air_Damper_Position_Command  rdfs:subClassOf   :Damper_Command;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mixed ];
@@ -3099,6 +3126,12 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
 			 rdfs:label "Humidity Sensor"@en .
 
+ :Room_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Room ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Humidity ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Room Humidity Sensor"@en .
+
  :Chilled_Water_Differential_Pressure_Sensor  rdfs:subClassOf   :Differential_Pressure_Sensor;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chilled ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
@@ -4158,14 +4191,14 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
 			 rdfs:label "Unoccupied Mode Setpoint"@en .
 
- :VAV_Cooling_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :VAV_Cooling_Demand_Setpoint  rdfs:subClassOf   :Cooling_Demand_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VAV ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Demand ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
 			 rdfs:label "VAV Cooling Demand Setpoint"@en .
 
- :VAV_Cooling_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :VAV_Cooling_Request_Setpoint  rdfs:subClassOf   :Cooling_Demand_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VAV ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Request ];
@@ -4173,14 +4206,14 @@
 			 owl:equivalentClass :VAV_Cooling_Demand_Setpoint ;
 			 rdfs:label "VAV Cooling Demand Setpoint"@en .
 
- :VAV_Heating_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :VAV_Heating_Demand_Setpoint  rdfs:subClassOf   :Heating_Demand_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VAV ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heating ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Demand ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
 			 rdfs:label "VAV Heating Demand Setpoint"@en .
 
- :VAV_Heat_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :VAV_Heat_Request_Setpoint  rdfs:subClassOf   :Heating_Demand_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VAV ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heat ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Request ];

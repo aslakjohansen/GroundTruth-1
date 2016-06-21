@@ -4530,32 +4530,32 @@ dummy index,Unique Identifier,BACnet Device ID,BACnet Object Type,BACnet Object 
 4528,505_4_3000587,505,4,3000587,EBU3B.SF4.RUN ENABLE,NAE 05 N2 1 NAE5 T1 VND44  SF 4 VFD 44 RUN ENABLE,Run Enable,,Run Enable,,RM-B102C,Supply Fan,4,AHU -> Supply Fan,EBU3B,,Binary Output
 4529,505_3_3000581,505,3,3000581,EBU3B.SF4.STATUS,NAE 05 N2 1 NAE5 T1 VND44  SF 4 VFD 44 STATUS,Run Status,,Run Status,,RM-B102C,Supply Fan,4,AHU -> Supply Fan,EBU3B,,Binary Input
 4530,505_0_3000594,505,0,3000594,EBU3B.SF4.TORQUE,NAE 05 N2 1 NAE5 T1 VND44  SF 4 VFD 44 TORQUE,Torque,98,Torque,,RM-B102C,Supply Fan,4,AHU -> Supply Fan,EBU3B,,Analog Input
-4531,506_2_3010312,506,2,3010312,BSBM_BATT,BSBM_BATT,Battery Voltage,5,Battery Voltage,,,Battery,,,BSB,,Analog Value
-4532,506_2_3010319,506,2,3010319,BSBM_ENTHALPY,BSBM_ENTHALPY,Computed Outside Enthalpy,24,Computed Outside Enthalpy,,,Weather System,,,BSB,,Analog Value
-4533,506_2_3010313,506,2,3010313,BSBM_OSA-T,BSBM_OSA T,Outside Air Temp,64,Outside Air Temperature,,,Weather System,,,BSB,,Analog Value
-4534,506_2_3010318,506,2,3010318,BSBM_PV-CURRENT,BSBM_PV CURRENT,PV System Output,3,PV System Output,,,Solar System,,,BSB,,Analog Value
-4535,506_2_3010314,506,2,3010314,BSBM_RH,BSBM_RH,Relative Humidity,95,Relative Humidity,,,Weather System,,,BSB,,Analog Value
-4536,506_2_3010315,506,2,3010315,BSBM_SOLAR-RAD,BSBM_SOLAR RAD,Sunbeams are Good!,35,Sunbeams Are Good!,,,Solar System,,,BSB,,Analog Value
-4537,506_2_3010316,506,2,3010316,BSBM_WIND-DIR,BSBM_WIND DIR,Wind Direction,90,Wind Direction,,,Weather System,,,BSB,,Analog Value
-4538,506_2_3010317,506,2,3010317,BSBM_WIND-SPD,BSBM_WIND SPD,Wind Speed,78,Wind Speed,,,Weather System,,,BSB,,Analog Value
-4539,506_2_3009730,506,2,3009730,EBU2_BATT,EBU2_BATT,Battery Voltage,5,Battery Voltage,,,Battery,,,EBU2,,Analog Value
-4540,506_2_3009737,506,2,3009737,EBU2_ENTHALPY,EBU2_ENTHALPY,Computed Outside Enthalpy,24,Computed Outside Enthalpy,,,Weather System,,,EBU2,,Analog Value
-4541,506_2_3009731,506,2,3009731,EBU2_OSA-T,EBU2_OSA T,Outside Air Temperature,64,Outside Air Temperature,,,Weather System,,,EBU2,,Analog Value
-4542,506_2_3009736,506,2,3009736,EBU2_PV-CURRENT,EBU2_PV CURRENT,PV System Output,3,PV System Output,,,Solar System,,,EBU2,,Analog Value
-4543,506_2_3009732,506,2,3009732,EBU2_RH,EBU2_RH,Relative Humidity,98,Relative Humidity,,,Weather System,,,EBU2,,Analog Value
-4544,506_2_3009758,506,2,3009758,EBU2_AZIMUTH,NAE 06 EBU2_AZIMUTH,Solar Azimuth Angle,90,Solar Azimuth Angle,,,Solar System,,,EBU2,,Analog Value
-4545,506_2_3009759,506,2,3009759,EBU2_ZENITH,NAE 06 EBU2_ZENITH,Solar Zenith Angle,90,Solar Zenith Angle,,,Solar System,,,EBU2,,Analog Value
-4546,506_2_3009733,506,2,3009733,EBU2_SOLAR-RAD,EBU2_SOLAR RAD,Sunbeams Are Good!,35,Sunbeams Are Good!,,,Solar System,,,EBU2,,Analog Value
-4547,506_2_3009734,506,2,3009734,EBU2_WIND-DIR,EBU2_WIND DIR,Wind Direction,90,Wind Direction,,,Weather System,,,EBU2,,Analog Value
-4548,506_2_3009735,506,2,3009735,EBU2_WIND-SPD,EBU2_WIND SPD,Wind Speed,78,Wind Speed,,,Weather System,,,EBU2,,Analog Value
-4549,506_2_3009739,506,2,3009739,HUBBS_BATT,NAE 06 HUBBS_BATT,Battery Voltage,5,Battery Voltage,,,Battery,,,Hubbs Hall,,Analog Value
-4550,506_2_3009745,506,2,3009745,HUBBS_ENTHALPY,NAE 06 HUBBS_ENTHALPY,Computed Outside Enthalpy,24,Computed Outside Enthalpy,,,Weather System,,,Hubbs Hall,,Analog Value
-4551,506_2_3009740,506,2,3009740,HUBBS_OSA-T,NAE 06 HUBBS_OSA T,Outside Air Temperature,64,Outside Air Temperature,,,Weather System,,,Hubbs Hall,,Analog Value
-4552,506_2_3009760,506,2,3009760,HUBBS_PV-CURRENT,NAE 06 HUBBS_PV CURRENT,PV System Output,3,PV System Output,,,Solar System,,,Hubbs Hall,,Analog Value
-4553,506_2_3009741,506,2,3009741,HUBBS_RH,NAE 06 HUBBS_RH,Relative Humidity,98,Relative Humidity,,,Weather System,,,Hubbs Hall,,Analog Value
-4554,506_2_3009742,506,2,3009742,HUBBS_SOLAR-RAD,NAE 06 HUBBS_SOLAR RAD,Sunbeams Are Good!,35,Sunbeams Are Good!,,,Solar System,,,Hubbs Hall,,Analog Value
-4555,506_2_3009743,506,2,3009743,HUBBS_WIND-DIR,NAE 06 HUBBS_WIND DIR,Wind Direction,90,Wind Direction,,,Weather System,,,Hubbs Hall,,Analog Value
-4556,506_2_3009744,506,2,3009744,HUBBS_WIND-SPD,NAE 06 HUBBS_WIND SPD,Wind Speed,78,Wind Speed,,,Weather System,,,Hubbs Hall,,Analog Value
+4531,506_2_3010312,506,2,3010312,BSBM_BATT,BSBM_BATT,Battery Voltage,5,Battery Voltage,,,Battery,,Solar Panel -> Battery,BSB,,Analog Value
+4532,506_2_3010319,506,2,3010319,BSBM_ENTHALPY,BSBM_ENTHALPY,Computed Outside Enthalpy,24,Computed Outside Enthalpy,,,Weather,,,BSB,,Analog Value
+4533,506_2_3010313,506,2,3010313,BSBM_OSA-T,BSBM_OSA T,Outside Air Temp,64,Outside Air Temperature,,,Weather,,,BSB,,Analog Value
+4534,506_2_3010318,506,2,3010318,BSBM_PV-CURRENT,BSBM_PV CURRENT,PV System Output,3,PV System Output,,,Solar Panel,,,BSB,,Analog Value
+4535,506_2_3010314,506,2,3010314,BSBM_RH,BSBM_RH,Relative Humidity,95,Relative Humidity,,,Weather,,,BSB,,Analog Value
+4536,506_2_3010315,506,2,3010315,BSBM_SOLAR-RAD,BSBM_SOLAR RAD,Sunbeams are Good!,35,Sunbeams Are Good!,,,Solar Panel,,,BSB,,Analog Value
+4537,506_2_3010316,506,2,3010316,BSBM_WIND-DIR,BSBM_WIND DIR,Wind Direction,90,Wind Direction,,,Weather,,,BSB,,Analog Value
+4538,506_2_3010317,506,2,3010317,BSBM_WIND-SPD,BSBM_WIND SPD,Wind Speed,78,Wind Speed,,,Weather,,,BSB,,Analog Value
+4539,506_2_3009730,506,2,3009730,EBU2_BATT,EBU2_BATT,Battery Voltage,5,Battery Voltage,,,Battery,,Solar Panel -> Battery,EBU2,,Analog Value
+4540,506_2_3009737,506,2,3009737,EBU2_ENTHALPY,EBU2_ENTHALPY,Computed Outside Enthalpy,24,Computed Outside Enthalpy,,,Weather,,,EBU2,,Analog Value
+4541,506_2_3009731,506,2,3009731,EBU2_OSA-T,EBU2_OSA T,Outside Air Temperature,64,Outside Air Temperature,,,Weather,,,EBU2,,Analog Value
+4542,506_2_3009736,506,2,3009736,EBU2_PV-CURRENT,EBU2_PV CURRENT,PV System Output,3,PV System Output,,,Solar Panel,,,EBU2,,Analog Value
+4543,506_2_3009732,506,2,3009732,EBU2_RH,EBU2_RH,Relative Humidity,98,Relative Humidity,,,Weather,,,EBU2,,Analog Value
+4544,506_2_3009758,506,2,3009758,EBU2_AZIMUTH,NAE 06 EBU2_AZIMUTH,Solar Azimuth Angle,90,Solar Azimuth Angle,,,Solar Panel,,,EBU2,,Analog Value
+4545,506_2_3009759,506,2,3009759,EBU2_ZENITH,NAE 06 EBU2_ZENITH,Solar Zenith Angle,90,Solar Zenith Angle,,,Solar Panel,,,EBU2,,Analog Value
+4546,506_2_3009733,506,2,3009733,EBU2_SOLAR-RAD,EBU2_SOLAR RAD,Sunbeams Are Good!,35,Sunbeams Are Good!,,,Solar Panel,,,EBU2,,Analog Value
+4547,506_2_3009734,506,2,3009734,EBU2_WIND-DIR,EBU2_WIND DIR,Wind Direction,90,Wind Direction,,,Weather,,,EBU2,,Analog Value
+4548,506_2_3009735,506,2,3009735,EBU2_WIND-SPD,EBU2_WIND SPD,Wind Speed,78,Wind Speed,,,Weather,,,EBU2,,Analog Value
+4549,506_2_3009739,506,2,3009739,HUBBS_BATT,NAE 06 HUBBS_BATT,Battery Voltage,5,Battery Voltage,,,Battery,,Solar Panel -> Battery,Hubbs Hall,,Analog Value
+4550,506_2_3009745,506,2,3009745,HUBBS_ENTHALPY,NAE 06 HUBBS_ENTHALPY,Computed Outside Enthalpy,24,Computed Outside Enthalpy,,,Weather,,,Hubbs Hall,,Analog Value
+4551,506_2_3009740,506,2,3009740,HUBBS_OSA-T,NAE 06 HUBBS_OSA T,Outside Air Temperature,64,Outside Air Temperature,,,Weather,,,Hubbs Hall,,Analog Value
+4552,506_2_3009760,506,2,3009760,HUBBS_PV-CURRENT,NAE 06 HUBBS_PV CURRENT,PV System Output,3,PV System Output,,,Solar Panel,,,Hubbs Hall,,Analog Value
+4553,506_2_3009741,506,2,3009741,HUBBS_RH,NAE 06 HUBBS_RH,Relative Humidity,98,Relative Humidity,,,Weather,,,Hubbs Hall,,Analog Value
+4554,506_2_3009742,506,2,3009742,HUBBS_SOLAR-RAD,NAE 06 HUBBS_SOLAR RAD,Sunbeams Are Good!,35,Sunbeams Are Good!,,,Solar Panel,,,Hubbs Hall,,Analog Value
+4555,506_2_3009743,506,2,3009743,HUBBS_WIND-DIR,NAE 06 HUBBS_WIND DIR,Wind Direction,90,Wind Direction,,,Weather,,,Hubbs Hall,,Analog Value
+4556,506_2_3009744,506,2,3009744,HUBBS_WIND-SPD,NAE 06 HUBBS_WIND SPD,Wind Speed,78,Wind Speed,,,Weather,,,Hubbs Hall,,Analog Value
 4557,506_0_3015095,506,0,3015095,EBU3B.Unknown..ZN-T,NAE 06 N2 1 VMA 101 ZN T,Zone Temperature,64,Zone Temperature,,,VAV,101,,EBU3B,,Analog Input
 4558,505_2_3002099,505,2,3002099,EBU3B.BLDG-AVG..AVG CLG DEMAND,NAE 05 Programming AVERAGE FLOOR COOLING DEMAND BLDG AVG,AVERAGE COOLING DEMAND IN BUILDING,302,Average Cooling Demand,Building,,VAV,Aggregate,,EBU3B,,Analog Value
 4559,505_5_3017935,505,5,3017935,EBU3B.Load Shed..CHW-DP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B CHW DP Load Shed,CHW-DP Load Shed,,Chilled Water Differential Pressure Load Shed,,,Chilled Water System,,,EBU3B,,Binary Value
@@ -4565,18 +4565,18 @@ dummy index,Unique Identifier,BACnet Device ID,BACnet Object Type,BACnet Object 
 4563,505_2_3018433,505,2,3018433,EBU3B.HX..Low Setpoint,NAE 05 Programming HEAT EXCHANGER OSA RESET HX Low Setpoint,Heat Exchanger OSA Reset Low Setpoint,95,Heat Exchanger OSA Reset Low Setpoint,,,Heat Exchanger,,,EBU3B,,Analog Value
 4564,505_2_3018430,505,2,3018430,EBU3B.HX..OSA High Span,NAE 05 Programming HEAT EXCHANGER OSA RESET OSA High Span,Heat Exchanger OSA Reset OSA High Span,95,Heat Exchanger OSA Reset OSA High Span,,,Heat Exchanger,,,EBU3B,,Analog Value
 4565,505_2_3018431,505,2,3018431,EBU3B.HX..OSA Low Span,NAE 05 Programming HEAT EXCHANGER OSA RESET OSA Low Span,Heat Exchanger OSA Reset OSA Low Span,95,Heat Exchanger OSA Reset OSA Low Span,,,Heat Exchanger,,,EBU3B,,Analog Value
-4566,505_19_3017900,505,19,3017900,EBU3B.Load Shed..Load Shed Command,NAE 05 Programming EBU3B Load Shed EBU3B Load Shed Command,Load Shed Command,,Load Shed Command,,,Load Shedding,,,EBU3B,,Multi-State Value
-4567,505_5_3017910,505,5,3017910,EBU3B.Load Shed..MTW-DP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW DP Load Shed,MTW-DP Load Shed,,MTW-DP Load Shed,,,Load Shedding,,,EBU3B,,Binary Value
-4568,505_5_3017929,505,5,3017929,EBU3B.Load Shed..MTW1-T Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW1 T Load Shed,MTW1-T Load Shed,,MTW-T Load Shed,1,,Load Shedding,,,EBU3B,,Binary Value
-4569,505_5_3017932,505,5,3017932,EBU3B.Load Shed..MTW2-T Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW2 T Load Shed,MTW2-T Load Shed,,MTW-T Load Shed,2,,Load Shedding,,,EBU3B,,Binary Value
-4570,505_2_3017911,505,2,3017911,EBU3B.Load Shed..MTWDP-SP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTWDP SP Load Shed,MTWDP-SP Load Shed,56,MTWDP-SP Load Shed,,,Load Shedding,,,EBU3B,,Analog Value
-4571,505_2_3017930,505,2,3017930,EBU3B.Load Shed..MTW1T-SP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW1T SP Load Shed,MTW1T-SP Load Shed,64,MTWT-SP Load Shed,1,,Load Shedding,,,EBU3B,,Analog Value
-4572,505_2_3017933,505,2,3017933,EBU3B.Load Shed..MTW2T-SP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW2T SP Load Shed,MTW2T-SP Load Shed,64,MTWT-SP Load Shed,2,,Load Shedding,,,EBU3B,,Analog Value
+4566,505_19_3017900,505,19,3017900,EBU3B.Load Shed..Load Shed Command,NAE 05 Programming EBU3B Load Shed EBU3B Load Shed Command,Load Shed Command,,Load Shed Command,,,HVAC,,,EBU3B,,Multi-State Value
+4567,505_5_3017910,505,5,3017910,EBU3B.Load Shed..MTW-DP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW DP Load Shed,MTW-DP Load Shed,,MTW-DP Load Shed,,,HVAC,,,EBU3B,,Binary Value
+4568,505_5_3017929,505,5,3017929,EBU3B.Load Shed..MTW1-T Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW1 T Load Shed,MTW1-T Load Shed,,MTW-T Load Shed,1,,HVAC,,,EBU3B,,Binary Value
+4569,505_5_3017932,505,5,3017932,EBU3B.Load Shed..MTW2-T Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW2 T Load Shed,MTW2-T Load Shed,,MTW-T Load Shed,2,,HVAC,,,EBU3B,,Binary Value
+4570,505_2_3017911,505,2,3017911,EBU3B.Load Shed..MTWDP-SP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTWDP SP Load Shed,MTWDP-SP Load Shed,56,MTWDP-SP Load Shed,,,HVAC,,,EBU3B,,Analog Value
+4571,505_2_3017930,505,2,3017930,EBU3B.Load Shed..MTW1T-SP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW1T SP Load Shed,MTW1T-SP Load Shed,64,MTWT-SP Load Shed,1,,HVAC,,,EBU3B,,Analog Value
+4572,505_2_3017933,505,2,3017933,EBU3B.Load Shed..MTW2T-SP Load Shed,NAE 05 Programming EBU3B Load Shed EBU3B MTW2T SP Load Shed,MTW2T-SP Load Shed,64,MTWT-SP Load Shed,2,,HVAC,,,EBU3B,,Analog Value
 4573,505_2_3002407,505,2,3002407,EBU3B.HW-SYS..OA-SP,NAE 05 Programming CHW   HW CONTROL OA SP,OA Setpoint to disable HW system,64,Outside Air Setpoint to Disable Hot Water system,,,Hot Water System,,,EBU3B,,Analog Value
 4574,505_1_3014682,505,1,3014682,EBU3B.FSCHW.CHWP-DB,NAE 05 N2 1 DX 12 File Server CHW System Tuning Parameters CHWP DB,CHW Pump Dead Band,56,Pump Dead Band,,,Chilled Water System,CRAC,,EBU3B,,Analog Output
 4575,505_4_3000013,505,4,3000013,EBU3B.CHW-SYS.CHWP2-SS,NAE 05 N2 1 DX 12 CWP2 SS,CHW PUMP 2 CMD,,Pump Start Stop,2,,Chilled Water System,Main,,EBU3B,,Binary Output
 4576,505_3_3000063,505,3,3000063,EBU3B.CHW-SYS.CHWP1-STS,NAE 05 N2 1 DX 12 CHWP1 ST,CHW PUMP 1 STS,,Pump Status,1,,Chilled Water System,Main,,EBU3B,,Binary Input
-4577,505_5_3015585,505,5,3015585,EBU3B.Load Shed..Stndby Load Shed Switch,NAE 05 Programming EBU3B Load Shed EBU3B Stndby Load Shed Switch,Stndby Load Shed Switch,,Stndby Load Shed Switch,,,Load Shedding,,,EBU3B,,Binary Value
+4577,505_5_3015585,505,5,3015585,EBU3B.Load Shed..Stndby Load Shed Switch,NAE 05 Programming EBU3B Load Shed EBU3B Stndby Load Shed Switch,Stndby Load Shed Switch,,Stndby Load Shed Switch,,,HVAC,,,EBU3B,,Binary Value
 4578,505_1_3000031,505,1,3000031,TUNING POINTS.CWDP-PID..PM6PB,NAE 05 N2 1 DX 12 TUNING POINTS Programmable Modules CWDP PID PM6PB,TUNING POINTS,95,TUNING POINTS,,,Chilled Water Pump,,CHW-SYS -> Pump,EBU3B,,Analog Output
 4579,505_1_3000032,505,1,3000032,TUNING POINTS.CWDP-PID..PM6TI,NAE 05 N2 1 DX 12 TUNING POINTS Programmable Modules CWDP PID PM6TI,TUNING POINTS,95,TUNING POINTS,,,Chilled Water Pump,,CHW-SYS -> Pump,EBU3B,,Analog Output
 4580,505_1_3000033,505,1,3000033,TUNING POINTS.CWDP-PID..CWDP-PID,NAE 05 N2 1 DX 12 TUNING POINTS Programmable Modules CWDP PID CWDP PID,TUNING POINTS,95,TUNING POINTS,,,Chilled Water Pump,,CHW-SYS -> Pump,EBU3B,,Analog Output
@@ -4592,4 +4592,4 @@ dummy index,Unique Identifier,BACnet Device ID,BACnet Object Type,BACnet Object 
 4590,505_1_3000027,505,1,3000027,TUNING POINT.HWDP-PID..PM5PB,NAE 05 N2 1 DX 12 TUNING POINTS Programmable Modules HWDP PID PM5PB,TUNING POINTS,95,TUNING POINTS,,,Hot Water Pump,,HW-SYS -> Pump,EBU3B,,Analog Output
 4591,505_1_3000028,505,1,3000028,TUNING POINTS.HWDP-PID..PM5TI,NAE 05 N2 1 DX 12 TUNING POINTS Programmable Modules HWDP PID PM5TI,TUNING POINTS,95,TUNING POINTS,,,Hot Water Pump,,HW-SYS -> Pump,EBU3B,,Analog Output
 4592,505_1_3000029,505,1,3000029,TUNING POINTS.HWDP-PID..HWDP-PID,NAE 05 N2 1 DX 12 TUNING POINTS Programmable Modules HWDP PID HWDP PID,TUNING POINTS,95,TUNING POINTS,,,Hot Water Pump,,HW-SYS -> Pump,EBU3B,,Analog Output
-4593,505_5_3015572,505,5,3015572,EBU3B.Load Shed..Unocc Load Shed Switch,NAE 05 Programming EBU3B Load Shed EBU3B Load Shed Switch,Unocc Load Shed Switch,,Unoccupied Load Shed Switch,,,Load Shedding,,,EBU3B,,Binary Value
+4593,505_5_3015572,505,5,3015572,EBU3B.Load Shed..Unocc Load Shed Switch,NAE 05 Programming EBU3B Load Shed EBU3B Load Shed Switch,Unocc Load Shed Switch,,Unoccupied Load Shed Switch,,,HVAC,,,EBU3B,,Binary Value
