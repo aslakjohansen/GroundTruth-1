@@ -215,11 +215,11 @@ def gen_heating_power_meter (prefix):
     g.add( (supply_temp, BRICKFRAME['controls'], power) )
     g.add( (return_temp, BRICKFRAME['controls'], power) )
     
-    # isPointOf
-    g.add( (flow       , BRICKFRAME['isPointOf'], fb) )
-    g.add( (supply_temp, BRICKFRAME['isPointOf'], fb) )
-    g.add( (return_temp, BRICKFRAME['isPointOf'], fb) )
-    g.add( (power      , BRICKFRAME['isPointOf'], fb) )
+    # hasPoint
+    g.add( (fb, BRICKFRAME['hasPoint'], flow) )
+    g.add( (fb, BRICKFRAME['hasPoint'], supply_temp) )
+    g.add( (fb, BRICKFRAME['hasPoint'], return_temp) )
+    g.add( (fb, BRICKFRAME['hasPoint'], power) )
     
     ports = {
         'fb': fb,
@@ -275,11 +275,11 @@ def gen_heat_transfer_box (prefix):
     g.add( (pump                 , BRICKFRAME['feeds'], supply_temp) )
     g.add( (supply_temp          , BRICKFRAME['feeds'], so) )
     
-    # isPointOf
-    g.add( (hpm['fb']  , BRICKFRAME['isPointOf'], fb) )
-    g.add( (pump       , BRICKFRAME['isPointOf'], fb) )
-    g.add( (supply_temp, BRICKFRAME['isPointOf'], fb) )
-    g.add( (return_temp, BRICKFRAME['isPointOf'], fb) )
+    # hasPoint
+    g.add( (fb, BRICKFRAME['hasPoint'], hpm['fb']) )
+    g.add( (fb, BRICKFRAME['hasPoint'], pump) )
+    g.add( (fb, BRICKFRAME['hasPoint'], supply_temp) )
+    g.add( (fb, BRICKFRAME['hasPoint'], return_temp) )
     
     ports = {
         'fb': fb,
@@ -422,20 +422,20 @@ def gen_vav (prefix, data, meter):
     g.add( (controller   , BRICKFRAME['controls'], supply_damper) )
     g.add( (controller   , BRICKFRAME['controls'], return_damper) )
     
-    # isPointOf
-    g.add( (supply_damper     , BRICKFRAME['isPointOf'], fb) )
-    g.add( (return_damper     , BRICKFRAME['isPointOf'], fb) )
-    g.add( (upstream_pres     , BRICKFRAME['isPointOf'], fb) )
-    g.add( (downstream_temp   , BRICKFRAME['isPointOf'], fb) )
-    g.add( (cooled_flow       , BRICKFRAME['isPointOf'], fb) )
-    g.add( (cooled_valve['fb'], BRICKFRAME['isPointOf'], fb) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], controller) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], supply_damper) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], return_damper) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], upstream_pres) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], downstream_temp) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], cooled_flow) )
-    g.add( (meter             , BRICKFRAME['isPointOf'], vav) )
+    # hasPoint
+    g.add( (fb             , BRICKFRAME['hasPoint'], supply_damper) )
+    g.add( (fb             , BRICKFRAME['hasPoint'], return_damper) )
+    g.add( (fb             , BRICKFRAME['hasPoint'], upstream_pres) )
+    g.add( (fb             , BRICKFRAME['hasPoint'], downstream_temp) )
+    g.add( (fb             , BRICKFRAME['hasPoint'], cooled_flow) )
+    g.add( (fb             , BRICKFRAME['hasPoint'], cooled_valve['fb']) )
+    g.add( (controller     , BRICKFRAME['hasPoint'], meter) )
+    g.add( (supply_damper  , BRICKFRAME['hasPoint'], meter) )
+    g.add( (return_damper  , BRICKFRAME['hasPoint'], meter) )
+    g.add( (upstream_pres  , BRICKFRAME['hasPoint'], meter) )
+    g.add( (downstream_temp, BRICKFRAME['hasPoint'], meter) )
+    g.add( (cooled_flow    , BRICKFRAME['hasPoint'], meter) )
+    g.add( (vav            , BRICKFRAME['hasPoint'], meter) )
     
     ports = {
         'fb':  fb,
@@ -476,8 +476,8 @@ def gen_dpt (prefix):
     g.add( (d, BRICKFRAME['controls'], t) )
     g.add( (t, BRICKFRAME['controls'], o) )
     
-    # isPointOf
-    g.add( (t, BRICKFRAME['isPointOf'], fb) )
+    # hasPoint
+    g.add( (fb, BRICKFRAME['hasPoint'], t) )
     
     ports = {
         'fb': fb,
@@ -523,10 +523,10 @@ def gen_filter_element (prefix):
     g.add( (input_pressure , BRICKFRAME['controls'], dpt['u']) )
     g.add( (output_pressure, BRICKFRAME['controls'], dpt['d']) )
     
-    # isPointOf
-    g.add( (input_pressure , BRICKFRAME['isPointOf'], fb) )
-    g.add( (output_pressure, BRICKFRAME['isPointOf'], fb) )
-    g.add( (dpt['fb']      , BRICKFRAME['isPointOf'], fb) )
+    # hasPoint
+    g.add( (fb, BRICKFRAME['hasPoint'], input_pressure) )
+    g.add( (fb, BRICKFRAME['hasPoint'], output_pressure) )
+    g.add( (fb, BRICKFRAME['hasPoint'], dpt['fb']) )
     
     ports = {
         'fb': fb,
@@ -553,8 +553,8 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
     # isPartOf
     g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
-    # isPointOf
-    g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], room) )
+    # hasPoint
+    g.add( (room, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
     
     # temperature sensor
     if 'tr1' in rooms_data[room_name] and rooms_data[room_name]['tr1']!='':
@@ -562,8 +562,8 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (entity, RDF.type, GTC['Celcius_Temperature_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['tr1'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
     
     # CO2 sensor
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
@@ -571,8 +571,8 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['co2'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
     
     # PIR sensor
     if 'pir' in rooms_data[room_name] and rooms_data[room_name]['pir']!='':
@@ -580,7 +580,8 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (entity, RDF.type, BRICK['Occupancy_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['pir'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
+        g.add( (room, BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
     
     # radiators
     if 'radiators' in rooms_data[room_name] and rooms_data[room_name]['radiators']['count']>0:
@@ -607,7 +608,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['input dampeners']['id'])) )
             g.add( (entity, RDF.type, BRICK['Damper']) )
             g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
+            g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
             input_dampers.append(entity)
     
     # output dampers
@@ -617,7 +618,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
             g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['output dampeners']['id'])) )
             g.add( (entity, RDF.type, BRICK['Damper']) )
             g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-            g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
+            g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
             output_dampers.append(entity)
     
     # lighting
@@ -632,12 +633,12 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         command = GTC[prefix+'/lighting_zone/'+str(zone_index)+'_status']
         g.add( (command, RDFS.label, Literal(group['id'])) )
         g.add( (command, RDF.type, BRICK['Luminance_Status']) )
-        g.add( (command, BRICKFRAME['isPointOf'], lighting_zone) )
+        g.add( (lighting_zone, BRICKFRAME['hasPoint'], command) )
         
         command = GTC[prefix+'/lighting_zone/'+str(zone_index)+'_command']
         g.add( (command, RDFS.label, Literal(group['id'])) )
         g.add( (command, RDF.type, BRICK['Luminance_Command']) )
-        g.add( (command, BRICKFRAME['isPointOf'], lighting_zone) )
+        g.add( (lighting_zone, BRICKFRAME['hasPoint'], command) )
         
         zone_index += 1
         
@@ -649,7 +650,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
                 g.add( (entity, RDFS.label, Literal(group['id'])) )
                 g.add( (entity, RDF.type, GTC['LEDGO_Lighting_System']) )
                 g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-                g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
+                g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
                 g.add( (entity, BRICKFRAME['feeds'], lighting_zone) )
                 g.add( (entity, BRICKFRAME['feeds'], room) )
                 index += 1
@@ -682,8 +683,8 @@ def gen_foyer_room (prefix, metermap):
     # isPartOf
     g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
-    # isPointOf
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], room) )
+    # hasPoint
+    g.add( (room, BRICKFRAME['hasPoint'], metermap['-A1']) )
     
     # temperature sensor
     temperature_sensors = ['-01-ZV01-1A14-TR01', '-01-ZV02-1A14-TR01', '-01-ZV03-1A14-TR01']
@@ -692,8 +693,8 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDF.type, GTC['Celcius_Temperature_Sensor']) )
         g.add( (entity, RDFS.label, Literal(temperature_sensors[index])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], room) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap['-A1']) )
     
     # CO2 sensor
     co2_sensors = ['-01-ZV01-1A14-CO2', '-01-ZV02-1A14-CO2', '-01-ZV03-1A14-CO2']
@@ -702,8 +703,8 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
         g.add( (entity, RDFS.label, Literal(co2_sensors[index])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], room) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap['-A1']) )
     
     # floor heaters
     fh_sensors = [('-01-1F14-MV01', 1), ('-01-ZV01-1A14-MV1-02', 2), ('-01-ZV02-1A14-MV1-03', 3), ('-01-ZV03-1A14-MV1-02', 2)]
@@ -713,7 +714,7 @@ def gen_foyer_room (prefix, metermap):
             g.add( (entity, RDFS.label, Literal(fh_sensors[sensor_index][0])) )
             g.add( (entity, RDF.type, GTC['FloorHeater']) )
             g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-            g.add( (entity, BRICKFRAME['isPointOf'], room) )
+            g.add( (room, BRICKFRAME['hasPoint'], entity) )
             floor_heaters.append(entity)
     
     # horizontal windows
@@ -722,8 +723,8 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDFS.label, Literal('-01-1A14-VI01')) )
         g.add( (entity, RDF.type, GTC['Horizontal_Window_Actuator']) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
+        g.add( (room, BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap['-A1']) )
     
     # vertical windows
     for i in range(4):
@@ -731,8 +732,8 @@ def gen_foyer_room (prefix, metermap):
         g.add( (entity, RDFS.label, Literal('-01-1A14-VI01')) )
         g.add( (entity, RDF.type, GTC['Vertical_Window_Actuator']) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
-        g.add( (entity, BRICKFRAME['isPointOf'], room) )
-        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], entity) )
+        g.add( (room, BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap['-A1']) )
     
     ports = {
         'fb':            fb,
@@ -928,55 +929,61 @@ def gen_building (prefix):
             g.add( (room['room'], BRICKFRAME['isPartOf'], vav['zn']) )
 #            print((vav['zn'], BRICKFRAME['hasPart'], room['room']))
     
-    # isPointOf: metering
+    # hasPoint: metering
+    entities = [
+        district_meter['fb'],
+        radiator_htb['fb'],
+        floor_htb['fb'],
+        outside_temp,
+        outside_fe['fb'],
+        outside_fe_temp,
+        hx1['fb'],
+        hx_temp,
+        hx_fan,
+        hx2['fb'],
+        supply_temp,
+        supply_n_pres,
+        supply_s_pres,
+        return_n_pres,
+        return_s_pres,
+        return_damper,
+        return_fe['fb'],
+        return_fe_temp,
+        exhaust_temp,
+        exhaust_fan,
+        ahu_meter['fb'],
+        district_supply_temp,
+        district_pump,
+        district_return_temp,
+        district_valve,
+        district_rect,
+    ]
+    entity_points = [
+        outside_temp,
+        outside_fe_temp,
+        hx_temp,
+        hx_fan,
+        supply_temp,
+        supply_n_pres,
+        supply_s_pres,
+        return_n_pres,
+        return_s_pres,
+        return_damper,
+        return_fe_temp,
+        exhaust_temp,
+        exhaust_fan,
+        district_supply_temp,
+        district_pump,
+        district_return_temp,
+        district_valve,
+        district_rect,
+    ]
     for vav in vavs:
-        g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], vav['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_meter['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], radiator_htb['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], floor_htb['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_fe['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], outside_fe_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx1['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx_fan) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], hx2['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_n_pres) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], supply_s_pres) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_n_pres) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_s_pres) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_damper) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_fe['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], return_fe_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], exhaust_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], exhaust_fan) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], ahu_meter['fb']) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_supply_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_pump) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_return_temp) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_valve) )
-    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], district_rect) )
-    
-    # isPointOf: sensors and actuators
-    g.add( (outside_temp        , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (outside_fe_temp     , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (hx_temp             , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (hx_fan              , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (supply_temp         , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (supply_n_pres       , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (supply_s_pres       , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (return_n_pres       , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (return_s_pres       , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (return_damper       , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (return_fe_temp      , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (exhaust_temp        , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (exhaust_fan         , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (district_supply_temp, BRICKFRAME['isPointOf'], ahu) )
-    g.add( (district_pump       , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (district_return_temp, BRICKFRAME['isPointOf'], ahu) )
-    g.add( (district_valve      , BRICKFRAME['isPointOf'], ahu) )
-    g.add( (district_rect       , BRICKFRAME['isPointOf'], ahu) )
+        g.add( (vav['vav'], BRICKFRAME['hasPoint'], metermap['-A1']) )
+    for entity in entities:
+        g.add( (entity , BRICKFRAME['hasPoint'], metermap['-A1']) )
+    for entity in entity_points:
+        g.add( (ahu , BRICKFRAME['hasPoint'], entity) )
     
 
 ################################################################################
