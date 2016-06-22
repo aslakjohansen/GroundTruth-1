@@ -183,7 +183,7 @@ WHERE {
     ?meter bf:isPointOf ?equipment .
 
     ?equipment rdf:type ?class .
-    ?class rdfs:subClassOf+ brick:Lighting .
+    ?class rdfs:subClassOf+ brick:Lighting_System .
 
     ?zone bf:hasPart ?room .
     { ?equipment bf:feeds+ ?zone }
@@ -254,7 +254,7 @@ WHERE {
     ?equipment bf:isLocatedIn ?room .
 
     { ?equipment rdf:type ?class .
-      ?class rdfs:subClassOf+ brick:Lighting .}
+      ?class rdfs:subClassOf+ brick:Lighting_System .}
     UNION
     { ?equipment rdf:type ?class .
       ?class rdfs:subClassOf+ brick:HVAC .}
