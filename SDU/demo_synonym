@@ -1,0 +1,46 @@
+#!/usr/bin/env python
+
+import rdflib
+
+RDF        = rdflib.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS       = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
+BRICK      = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG   = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+OWL        = rdflib.Namespace('http://www.w3.org/2002/07/owl#')
+
+g = rdflib.Graph()
+g.bind('rdf', RDF)
+g.bind('rdfs', RDFS)
+g.bind('brick', BRICK)
+g.bind('bf', BRICKFRAME)
+g.bind('btag', BRICKTAG)
+g.bind('owl', OWL)
+g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+g.parse('sdu_gtc_simple.ttl', format='n3')
+
+source = '2.A.11'
+
+r = g.query(
+    """SELECT DISTINCT ?equipment
+       WHERE {
+          ?equipment rdf:type ?class_equip .
+          ?class_equip rdfs:subClassOf+ brick:HVAC .
+       }""")
+
+print('Equipment (HVAC):')
+for pair in r:
+    print(' - %s' % pair)
+
+r = g.query(
+    """SELECT DISTINCT ?equipment
+       WHERE {
+          ?equipment rdf:type ?class_equip .
+          ?class_equip rdfs:subClassOf+ brick:Heating_Ventilation_Air_Conditioning_System .
+       }""")
+
+print('Equipment (Heating_Ventilation_Air_Conditioning_System):')
+for pair in r:
+    print(' - %s' % pair)

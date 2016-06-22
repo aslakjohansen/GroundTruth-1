@@ -5,6 +5,7 @@ TARGETS = \
 	demo_verb_matching.txt \
 	demo_extra_namespace.txt \
 	demo_equipment.txt \
+	demo_synonym.txt \
 
 all: demos
 
@@ -45,4 +46,7 @@ demo_verb_matching.txt: ./demo_verb_matching
 
 demo_equipment.txt: demo_equipment
 	./demo_equipment > demo_equipment.txt
+
+demo_synonym.txt: demo_synonym
+	./demo_synonym > demo_synonym.txt
 
