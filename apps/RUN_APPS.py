@@ -315,8 +315,6 @@ print "Find power meters for cooling loop, heating loop"
 res = g.query("""
 SELECT ?equip ?equip_type ?meter
 WHERE {
-    ?equip_type rdfs:subClassOf+ brick:Equipment .
-    ?equip rdf:type ?equip_type .
     ?meter rdf:type brick:Power_Meter .
 
     ?equip rdf:type ?class .
