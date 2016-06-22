@@ -264,13 +264,17 @@ printResults(res)
 print
 
 print "--- Web Displays App ---"  ################################################ Web Displays
-print "Reheat valve command for VAVs"
+print "Reheat/cool valve command for VAVs"
 res = g.query("""
-SELECT ?reheat_vlv_cmd ?vav
+SELECT ?vlv_cmd ?vav
 WHERE {
-    ?reheat_vlv_cmd rdf:type brick:Reheat_Valve_Command .
+    {
+      { ?vlv_cmd rdf:type brick:Reheat_Valve_Command }
+      UNION
+      { ?vlv_cmd rdf:type brick:Cooling_Valve_Command }
+    }
     ?vav rdf:type brick:VAV .
-    ?vav bf:hasPoint+ ?reheat_vlv_cmd .
+    ?vav bf:hasPoint+ ?vlv_cmd .
 }
 """)
 printResults(res)
@@ -301,6 +305,7 @@ SELECT ?vav ?room
 WHERE {
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
+    ?zone rdf:type brick:HVAC_Zone .
     ?vav bf:feeds+ ?zone .
     ?room bf:isPartOf ?zone .
 }""")
