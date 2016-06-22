@@ -333,40 +333,43 @@ def gen_ij_valve (prefix, input_count, output_count):
 
 # instantiates the equivalent of a VAV
 def gen_vav (prefix, data, meter):
-    fb              = GTC[prefix+'/fb']
-    ui              = GTC[prefix+'/port[ui]']
-    uo              = GTC[prefix+'/port[uo]']
-    di              = GTC[prefix+'/port[di]']
-    do              = GTC[prefix+'/port[do]']
-    ci              = GTC[prefix+'/port[ci]']
-    co              = GTC[prefix+'/port[co]']
-    zn              = GTC[prefix+'/port[zn]']
-    vav             = GTC[prefix+'/vav']
-    hx              = gen_hx(prefix+'/hx')
-    controller      = GTC[prefix+'/controller']
-    supply_damper   = GTC[prefix+'/supply_damper']
-    return_damper   = GTC[prefix+'/return_damper']
-    upstream_pres   = GTC[prefix+'/upstream_pres']
-    downstream_temp = GTC[prefix+'/downstream_temp']
-    cooled_flow     = GTC[prefix+'/cooled_flow']
-    cooled_valve    = gen_ij_valve(prefix+'/cooled_valve', 2, 1)
+    fb                   = GTC[prefix+'/fb']
+    ui                   = GTC[prefix+'/port[ui]']
+    uo                   = GTC[prefix+'/port[uo]']
+    di                   = GTC[prefix+'/port[di]']
+    do                   = GTC[prefix+'/port[do]']
+    ci                   = GTC[prefix+'/port[ci]']
+    co                   = GTC[prefix+'/port[co]']
+    zn                   = GTC[prefix+'/port[zn]']
+    vav                  = GTC[prefix+'/vav']
+    hx                   = gen_hx(prefix+'/hx')
+    controller           = GTC[prefix+'/controller']
+    supply_damper        = GTC[prefix+'/supply_damper']
+    return_damper        = GTC[prefix+'/return_damper']
+    upstream_pres        = GTC[prefix+'/upstream_pres']
+    downstream_temp      = GTC[prefix+'/downstream_temp']
+    cooled_flow          = GTC[prefix+'/cooled_flow']
+    cooled_valve         = gen_ij_valve(prefix+'/cooled_valve', 2, 1)
+    cooled_valve_command = GTC[prefix+'/cooled_valve_control']
     
     # types
-    g.add( (fb             , RDF.type,   GTC['GTC_VAV_Functional_Block']) )
-    g.add( (ui             , RDF.type,   GTC['GTC_VAV_Upstream_Input']) )
-    g.add( (uo             , RDF.type,   GTC['GTC_VAV_Upstream_Output']) )
-    g.add( (di             , RDF.type,   GTC['GTC_VAV_Downstream_Input']) )
-    g.add( (do             , RDF.type,   GTC['GTC_VAV_Downstream_Output']) )
-    g.add( (ci             , RDF.type,   GTC['GTC_VAV_Cooled_input']) )
-    g.add( (co             , RDF.type,   GTC['GTC_VAV_Cooled_Output']) )
-    g.add( (vav            , RDF.type, BRICK['Variable_Air_Volume']) )
-    g.add( (zn             , RDF.type, BRICK['HVAC_Zone']) )
-    g.add( (controller     , RDF.type,   GTC['Controller']) )
-    g.add( (supply_damper  , RDF.type, BRICK['Damper']) )
-    g.add( (return_damper  , RDF.type, BRICK['Damper']) )
-    g.add( (upstream_pres  , RDF.type, BRICK['Pressure_Sensor']) )
-    g.add( (downstream_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
-    g.add( (cooled_flow    , RDF.type, BRICK['Flow_Meter']) )
+    g.add( (fb                  , RDF.type,   GTC['GTC_VAV_Functional_Block']) )
+    g.add( (ui                  , RDF.type,   GTC['GTC_VAV_Upstream_Input']) )
+    g.add( (uo                  , RDF.type,   GTC['GTC_VAV_Upstream_Output']) )
+    g.add( (di                  , RDF.type,   GTC['GTC_VAV_Downstream_Input']) )
+    g.add( (do                  , RDF.type,   GTC['GTC_VAV_Downstream_Output']) )
+    g.add( (ci                  , RDF.type,   GTC['GTC_VAV_Cooled_input']) )
+    g.add( (co                  , RDF.type,   GTC['GTC_VAV_Cooled_Output']) )
+    g.add( (vav                 , RDF.type, BRICK['VAV']) )
+#    g.add( (vav                 , RDF.type, BRICK['Variable_Air_Volume']) )
+    g.add( (zn                  , RDF.type, BRICK['HVAC_Zone']) )
+    g.add( (controller          , RDF.type,   GTC['Controller']) )
+    g.add( (supply_damper       , RDF.type, BRICK['Damper']) )
+    g.add( (return_damper       , RDF.type, BRICK['Damper']) )
+    g.add( (upstream_pres       , RDF.type, BRICK['Pressure_Sensor']) )
+    g.add( (downstream_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
+    g.add( (cooled_flow         , RDF.type, BRICK['Discharge_Air_Flow_Sensor']) )
+    g.add( (cooled_valve_command, RDF.type, BRICK['Cooling_Valve_Command']) )
     
     # labels
     g.add( (supply_damper  , RDFS.label, Literal(data['supply valve'])) )
@@ -423,19 +426,21 @@ def gen_vav (prefix, data, meter):
     g.add( (controller   , BRICKFRAME['controls'], return_damper) )
     
     # hasPoint
-    g.add( (fb             , BRICKFRAME['hasPoint'], supply_damper) )
-    g.add( (fb             , BRICKFRAME['hasPoint'], return_damper) )
-    g.add( (fb             , BRICKFRAME['hasPoint'], upstream_pres) )
-    g.add( (fb             , BRICKFRAME['hasPoint'], downstream_temp) )
-    g.add( (fb             , BRICKFRAME['hasPoint'], cooled_flow) )
-    g.add( (fb             , BRICKFRAME['hasPoint'], cooled_valve['fb']) )
-    g.add( (controller     , BRICKFRAME['hasPoint'], meter) )
-    g.add( (supply_damper  , BRICKFRAME['hasPoint'], meter) )
-    g.add( (return_damper  , BRICKFRAME['hasPoint'], meter) )
-    g.add( (upstream_pres  , BRICKFRAME['hasPoint'], meter) )
-    g.add( (downstream_temp, BRICKFRAME['hasPoint'], meter) )
-    g.add( (cooled_flow    , BRICKFRAME['hasPoint'], meter) )
-    g.add( (vav            , BRICKFRAME['hasPoint'], meter) )
+    g.add( (fb                , BRICKFRAME['hasPoint'], supply_damper) )
+    g.add( (fb                , BRICKFRAME['hasPoint'], return_damper) )
+    g.add( (fb                , BRICKFRAME['hasPoint'], upstream_pres) )
+    g.add( (fb                , BRICKFRAME['hasPoint'], downstream_temp) )
+    g.add( (fb                , BRICKFRAME['hasPoint'], cooled_flow) )
+    g.add( (fb                , BRICKFRAME['hasPoint'], cooled_valve['fb']) )
+    g.add( (controller        , BRICKFRAME['hasPoint'], meter) )
+    g.add( (supply_damper     , BRICKFRAME['hasPoint'], meter) )
+    g.add( (return_damper     , BRICKFRAME['hasPoint'], meter) )
+    g.add( (upstream_pres     , BRICKFRAME['hasPoint'], meter) )
+    g.add( (downstream_temp   , BRICKFRAME['hasPoint'], meter) )
+    g.add( (cooled_flow       , BRICKFRAME['hasPoint'], meter) )
+    g.add( (vav               , BRICKFRAME['hasPoint'], meter) )
+    g.add( (cooled_valve['fb'], BRICKFRAME['hasPoint'], cooled_valve_command) )
+    g.add( (vav               , BRICKFRAME['hasPoint'], cooled_valve_command) )
     
     ports = {
         'fb':  fb,
