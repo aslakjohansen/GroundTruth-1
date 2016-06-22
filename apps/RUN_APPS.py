@@ -284,10 +284,10 @@ res = g.query("""
 SELECT ?airflow_sensor ?room ?vav
 WHERE {
     {
-      { ?sensor rdf:type ?class .
+      { ?airflow_sensor rdf:type ?class .
         ?class rdfs:subClassOf+ brick:Discharge_Air_Flow_Sensor . }
       UNION
-      { ?sensor rdf:type brick:Discharge_Air_Flow_Sensor }
+      { ?airflow_sensor rdf:type brick:Discharge_Air_Flow_Sensor }
     }
 
     ?vav rdf:type brick:VAV .
