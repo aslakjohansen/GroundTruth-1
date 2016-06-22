@@ -77,6 +77,8 @@ def gen_extensions():
     g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
     g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
     
+    LEDGO_Lighting = GTC['LEDGO_Lighting']
+    g.add( (LEDGO_Lighting, RDFS.subClassOf, BRICK['Lighting']) )
     
 
 def gen_electrical (prefix, floors):
@@ -551,6 +553,9 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
     # isPartOf
     g.add( (room, BRICKFRAME['isPartOf'], fb) )
     
+    # isPointOf
+    g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], room) )
+    
     # temperature sensor
     if 'tr1' in rooms_data[room_name] and rooms_data[room_name]['tr1']!='':
         entity = GTC[prefix+'/temperature']
@@ -572,7 +577,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
     # PIR sensor
     if 'pir' in rooms_data[room_name] and rooms_data[room_name]['pir']!='':
         entity = GTC[prefix+'/pir']
-        g.add( (entity, RDF.type, BRICK['PIR_Sensor']) )
+        g.add( (entity, RDF.type, BRICK['Occupancy_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['pir'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (entity, BRICKFRAME['isPointOf'], room) )
@@ -622,7 +627,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
             for i in range(group['count']):
                 entity = GTC[prefix+'/lighting/'+str(index)]
                 g.add( (entity, RDFS.label, Literal(group['id'])) )
-                g.add( (entity, RDF.type, BRICK['Lighting']) )
+                g.add( (entity, RDF.type, GTC['LEDGO_Lighting']) )
                 g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
                 g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
                 g.add( (entity, BRICKFRAME['feeds'], room) )
