@@ -77,8 +77,8 @@ def gen_extensions():
     g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
     g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
     
-    LEDGO_Lighting = GTC['LEDGO_Lighting']
-    g.add( (LEDGO_Lighting, RDFS.subClassOf, BRICK['Lighting']) )
+    LEDGO_Lighting_System = GTC['LEDGO_Lighting_System']
+    g.add( (LEDGO_Lighting_System, RDFS.subClassOf, BRICK['Lighting_System']) )
     
 
 def gen_electrical (prefix, floors):
@@ -622,14 +622,35 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
     
     # lighting
     index = 0
+    zone_index = 0
     for group in rooms_data[room_name]['lighting']:
+        lighting_zone = GTC[prefix+'/lighting_zone/'+str(zone_index)]
+        g.add( (lighting_zone, RDF.type, BRICK['Lighting_Zone']) )
+        g.add( (lighting_zone, BRICKFRAME['contains'], room) )
+#        g.add( (lighting_zone, BRICKFRAME['feeds'], room) )
+        
+        command = GTC[prefix+'/lighting_zone/'+str(zone_index)+'_status']
+        g.add( (command, RDFS.label, Literal(group['id'])) )
+        g.add( (command, RDF.type, BRICK['Luminance_Status']) )
+        g.add( (command, BRICKFRAME['isPointOf'], lighting_zone) )
+        
+        command = GTC[prefix+'/lighting_zone/'+str(zone_index)+'_command']
+        g.add( (command, RDFS.label, Literal(group['id'])) )
+        g.add( (command, RDF.type, BRICK['Luminance_Command']) )
+        g.add( (command, BRICKFRAME['isPointOf'], lighting_zone) )
+        
+        zone_index += 1
+        
         if group['type']=='ledgo':
+            g.add( (lighting_zone, RDFS.label, Literal('LEDGO')) )
+            
             for i in range(group['count']):
                 entity = GTC[prefix+'/lighting/'+str(index)]
                 g.add( (entity, RDFS.label, Literal(group['id'])) )
-                g.add( (entity, RDF.type, GTC['LEDGO_Lighting']) )
+                g.add( (entity, RDF.type, GTC['LEDGO_Lighting_System']) )
                 g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
                 g.add( (metermap[rooms_data[room_name]['submeter']], BRICKFRAME['isPointOf'], entity) )
+                g.add( (entity, BRICKFRAME['feeds'], lighting_zone) )
                 g.add( (entity, BRICKFRAME['feeds'], room) )
                 index += 1
         else:
@@ -660,6 +681,9 @@ def gen_foyer_room (prefix, metermap):
     
     # isPartOf
     g.add( (room, BRICKFRAME['isPartOf'], fb) )
+    
+    # isPointOf
+    g.add( (metermap['-A1'], BRICKFRAME['isPointOf'], room) )
     
     # temperature sensor
     temperature_sensors = ['-01-ZV01-1A14-TR01', '-01-ZV02-1A14-TR01', '-01-ZV03-1A14-TR01']
@@ -901,6 +925,7 @@ def gen_building (prefix):
         for room_name in vav_data['rooms']:
             room = rooms[room_name]
             g.add( (vav['zn'], BRICKFRAME['hasPart'], room['room']) )
+            g.add( (room['room'], BRICKFRAME['isPartOf'], vav['zn']) )
 #            print((vav['zn'], BRICKFRAME['hasPart'], room['room']))
     
     # isPointOf: metering
