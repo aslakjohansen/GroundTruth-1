@@ -3,6 +3,11 @@ How to Lay a BRICK
 
 A key concept is that few relations are needed to provide value, but for each added relation that value increases. In these guidelines we differentiate between a simple model and an extended model. The simple model represents a sensible minimum.
 
+Relationships
+-------------
+
+Use hasPoint instead of isPointOf. Similar goes for the rest of the relations. This allows the preprocessor of [the application test script](https://github.com/BuildSysUniformMetadata/GroundTruth/blob/master/apps/RUN_APPS.py) to do less preprocessing and not be quite as slow.
+
 Constructing a simple VAV
 -------------------------
 
