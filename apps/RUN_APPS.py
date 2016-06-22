@@ -162,6 +162,13 @@ WHERE {
     ?equipment rdf:type ?class .
     ?class rdfs:subClassOf+ brick:HVAC .
 
+    {
+        {?zone rdf:type brick:HVAC_Zone}
+        UNION
+        {?zone rdf:type ?zone_class .
+         ?zone_class rdfs:subClassOf+ brick:HVAC_Zone}
+    }
+
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 }""")
