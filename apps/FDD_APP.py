@@ -39,6 +39,11 @@ g.parse('../CMU-Yuvraj/GHCYuvraj_brick.ttl', format='turtle')
 # g.parse('example_building.ttl', format='turtle')
 # g.parse('../SDU/', format='turtle')
 
+BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+g.bind( 'bf', BRICKFRAME)
+BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+g.bind('brick', BRICK)
+
 
 # In[6]:
 
@@ -49,7 +54,7 @@ def get_points(acronym,brick_name,g):
     WHERE {
         ?%s rdf:type brick:%s .
         ?ahu rdf:type brick:AHU .
-        ?%s ns1:isPointOf ?ahu .
+        ?%s bf:isPointOf ?ahu .
     }
     """ % (acronym,acronym,brick_name,acronym))
     
@@ -70,14 +75,9 @@ for acr,brk_names in points_map.items():
         Result[acr].append(res)
 
 
-# In[26]:
+# In[8]:
 
 print "units containing out side air temperature sensor:"
 for i in [str(i[0]) for i in Result['OAT'][0]]:
     print i
-
-
-# In[ ]:
-
-
 
