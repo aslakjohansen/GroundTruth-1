@@ -332,7 +332,7 @@ def gen_ij_valve (prefix, input_count, output_count):
     return ports
 
 # instantiates the equivalent of a VAV
-def gen_vav (prefix, data, meter):
+def gen_vav (prefix, data, meter, water_system):
     fb                   = GTC[prefix+'/fb']
     ui                   = GTC[prefix+'/port[ui]']
     uo                   = GTC[prefix+'/port[uo]']
@@ -368,7 +368,7 @@ def gen_vav (prefix, data, meter):
     g.add( (return_damper       , RDF.type, BRICK['Damper']) )
     g.add( (upstream_pres       , RDF.type, BRICK['Pressure_Sensor']) )
     g.add( (downstream_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
-    g.add( (cooled_flow         , RDF.type, BRICK['Discharge_Air_Flow_Sensor']) )
+    g.add( (cooled_flow         , RDF.type, BRICK['Chilled_Water_Supply_Flow']) )
     g.add( (cooled_valve_command, RDF.type, BRICK['Cooling_Valve_Command']) )
     
     # labels
@@ -401,6 +401,7 @@ def gen_vav (prefix, data, meter):
     g.add( (downstream_temp   , BRICKFRAME['isPartOf'], vav) )
     g.add( (cooled_flow       , BRICKFRAME['isPartOf'], vav) )
     g.add( (cooled_valve['fb'], BRICKFRAME['isPartOf'], vav) )
+    g.add( (cooled_flow       , BRICKFRAME['isPartOf'], water_system) )
     
     # feeds
     g.add( (ui                  , BRICKFRAME['feeds'], supply_damper) )
@@ -431,6 +432,7 @@ def gen_vav (prefix, data, meter):
     g.add( (fb                , BRICKFRAME['hasPoint'], upstream_pres) )
     g.add( (fb                , BRICKFRAME['hasPoint'], downstream_temp) )
     g.add( (fb                , BRICKFRAME['hasPoint'], cooled_flow) )
+    g.add( (vav               , BRICKFRAME['hasPoint'], cooled_flow) )
     g.add( (fb                , BRICKFRAME['hasPoint'], cooled_valve['fb']) )
     g.add( (controller        , BRICKFRAME['hasPoint'], meter) )
     g.add( (supply_damper     , BRICKFRAME['hasPoint'], meter) )
@@ -765,6 +767,7 @@ def gen_building (prefix):
     
     building             = GTC[prefix]
     floors               = map(lambda level: GTC[prefix+'/floors/'+str(level)], range(3))
+    chilled_water_system = GTC[prefix+'/systems/water/chilled']
     electrical           = gen_electrical(prefix+'/electrical', floors)
     metermap = electrical['metermap']
     rooms                = {}
@@ -774,7 +777,7 @@ def gen_building (prefix):
     vavs                 = []
     for index in range(len(vavs_data)):
         vav_data = vavs_data[index]
-        vav = gen_vav(prefix+'/vavs/'+str(index), vav_data, metermap['-A1'])
+        vav = gen_vav(prefix+'/vavs/'+str(index), vav_data, metermap['-A1'], chilled_water_system)
         vavs.append(vav)
     district_meter       = gen_heating_power_meter(prefix+'/district_meter')
     radiator_htb         = gen_heat_transfer_box(prefix+'/radiator_htb')
@@ -815,6 +818,8 @@ def gen_building (prefix):
     g.add( (building, RDFS.label, Literal("GreenTech Center in Vejle, Denmark")) )
     
     # types
+    g.add( (chilled_water_system, RDF.type, BRICK['CWS']) )
+    g.add( (building            , RDF.type, BRICK['Building']) )
     g.add( (ahu                 , RDF.type, BRICK['AHU']) )
     g.add( (outside_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (outside_fe_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
