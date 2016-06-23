@@ -646,7 +646,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (command, RDFS.label, Literal(group['id'])) )
         g.add( (command, RDF.type, BRICK['Luminance_Command']) )
         g.add( (lighting_zone, BRICKFRAME['hasPoint'], command) )
-        
+        floors
         zone_index += 1
         
         if group['type']=='ledgo':
@@ -820,6 +820,8 @@ def gen_building (prefix):
     # types
     g.add( (chilled_water_system, RDF.type, BRICK['CWS']) )
     g.add( (building            , RDF.type, BRICK['Building']) )
+    for floor in floors:
+        g.add( (floor           , RDF.type, BRICK['Floor']) )
     g.add( (ahu                 , RDF.type, BRICK['AHU']) )
     g.add( (outside_temp        , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (outside_fe_temp     , RDF.type,   GTC['Celcius_Temperature_Sensor']) )
@@ -847,6 +849,8 @@ def gen_building (prefix):
     g.add( ( radiator_htb['pi'], BRICKFRAME['feeds'], ahu_meter['metered_return']) )
     g.add( (    floor_htb['pi'], BRICKFRAME['feeds'], ahu_meter['metered_return']) )
     g.add( (ahu_meter['return'], BRICKFRAME['feeds'], ahu_meter['metered_return']) )
+    for vav in vavs:
+        g.add( (ahu, BRICKFRAME['feeds'], vav['vav']) )
     for room_name in rooms:
         room = rooms[room_name]
         for radiator in room['radiators']:
