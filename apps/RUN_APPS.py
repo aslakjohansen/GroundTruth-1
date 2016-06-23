@@ -109,8 +109,7 @@ SELECT DISTINCT ?sensor ?room
 WHERE {
 
     {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Temperature_Sensor . }
+      { ?sensor rdf:type/rdfs:subClassOf+ brick:Temperature_Sensor . }
       UNION
       { ?sensor rdf:type brick:Temperature_Sensor }
     }
@@ -118,8 +117,7 @@ WHERE {
         UNION
 
     {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Occupancy_Sensor . }
+      { ?sensor rdf:type/rdfs:subClassOf+ brick:Occupancy_Sensor . }
       UNION
       { ?sensor rdf:type brick:Occupancy_Sensor }
     }
@@ -127,8 +125,7 @@ WHERE {
         UNION
 
     {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:CO2_Sensor . }
+      { ?sensor rdf:type/rdfs:subClassOf+ brick:CO2_Sensor . }
       UNION
       { ?sensor rdf:type brick:CO2_Sensor }
     }
@@ -151,8 +148,7 @@ SELECT DISTINCT ?sensor ?vav
 WHERE {
 
     {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Occupancy_Sensor . }
+      { ?sensor rdf:type/rdfs:subClassOf+ brick:Occupancy_Sensor . }
       UNION
       { ?sensor rdf:type brick:Occupancy_Sensor }
     }
@@ -160,8 +156,7 @@ WHERE {
         UNION
 
     {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:CO2_Sensor . }
+      { ?sensor rdf:type/rdfs:subClassOf+ brick:CO2_Sensor . }
       UNION
       { ?sensor rdf:type brick:CO2_Sensor }
     }
@@ -181,8 +176,7 @@ WHERE {
     {
         {?meter rdf:type brick:Power_Meter}
         UNION
-        {?meter rdf:type ?class .
-         ?class rdfs:subClassOf+ brick:Power_Meter}
+        {?meter rdf:type/rdfs:subClassOf+ brick:Power_Meter}
     }
 
     ?room rdf:type brick:Room .
@@ -201,8 +195,7 @@ WHERE {
     {
         {?meter rdf:type brick:Power_Meter}
         UNION
-        {?meter rdf:type ?class .
-         ?class rdfs:subClassOf+ brick:Power_Meter}
+        {?meter rdf:type/rdfs:subClassOf+ brick:Power_Meter}
     }
 
     ?room rdf:type brick:Room .
@@ -333,8 +326,7 @@ res = g.query("""
 SELECT ?airflow_sensor ?room ?vav
 WHERE {
     {
-      { ?airflow_sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Discharge_Air_Flow_Sensor . }
+      { ?airflow_sensor rdf:type/rdfs:subClassOf+ brick:Discharge_Air_Flow_Sensor . }
       UNION
       { ?airflow_sensor rdf:type brick:Discharge_Air_Flow_Sensor }
     }
@@ -342,8 +334,7 @@ WHERE {
     UNION
 
     {
-      { ?airflow_sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Supply_Air_Flow_Sensor . }
+      { ?airflow_sensor rdf:type/rdfs:subClassOf+ brick:Supply_Air_Flow_Sensor . }
       UNION
       { ?airflow_sensor rdf:type brick:Supply_Air_Flow_Sensor }
     }

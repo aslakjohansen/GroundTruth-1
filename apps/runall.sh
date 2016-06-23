@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for building in ../UCSD/EBU3B/ebu3b_brick.ttl ../SDU/sdu_gtc.ttl ../CMU-Yuvraj/GHCYuvraj_brick.ttl ../IBM/IBM_B3.ttl; do
+for building in ../UCBerkeley/berkeley.ttl ../UCSD/EBU3B/ebu3b_brick.ttl ../SDU/sdu_gtc_simple.ttl ../CMU-Yuvraj/GHCYuvraj_brick.ttl ; do
     echo $building
     python RUN_APPS.py $building
 done
