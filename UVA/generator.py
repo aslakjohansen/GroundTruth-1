@@ -1,10 +1,15 @@
 import re
+import csv
 
 src = [i.strip().split(',')[0] for i in open('Rice_Type').readlines()]
 tagList = set()
 tagSet = set()
+output = list()
 for s in src:
     #print s, '-->',
+    tmp = []
+    tmp.append(s)
+    identifier = re.findall('[0-9]+', s)
     s = re.sub('[0-9]', '_', s)
     s = re.sub('\s', '_', s)
     s = re.sub('(\bHW\b)', r'_\1_', s)
@@ -13,9 +18,11 @@ for s in src:
     s = re.sub('^_+|_+$', '', s)
     s = re.split('_+', s)
     tagList |= set(s)
-    #print s
     tagSet.add('_'.join(s))
-    #raw_input()
+    #tmp.append('_'.join(ss.lower() for ss in s))
+    tmp.append('_'.join(s))
+    tmp.extend(identifier)
+    output.append(tmp)
 
 out = open('tagList','wb')
 for tag in sorted(tagList):
@@ -26,3 +33,9 @@ out = open('tagSet','wb')
 for tag in sorted(tagSet):
     print >> out, tag
 out.close()
+
+
+out = open('point.csv', 'wb')
+wr = csv.writer(out, quoting=csv.QUOTE_ALL)
+#wr.writerow('original point name', 'tagsets','identifier')
+wr.writerows(output[2:])
