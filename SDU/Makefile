@@ -41,12 +41,12 @@ demo_list_upstream_heating_elements.txt: ./demo_list_upstream_heating_elements s
 demo_temperature_of_hx_prim_in.txt: ./demo_temperature_of_hx_prim_in sdu_gtc.ttl
 	./demo_temperature_of_hx_prim_in > demo_temperature_of_hx_prim_in.txt
 
-demo_verb_matching.txt: ./demo_verb_matching
+demo_verb_matching.txt: ./demo_verb_matching sdu_gtc_simple.ttl
 	./demo_verb_matching > demo_verb_matching.txt
 
-demo_equipment.txt: demo_equipment
+demo_equipment.txt: demo_equipment sdu_gtc_simple.ttl
 	./demo_equipment > demo_equipment.txt
 
-demo_synonym.txt: demo_synonym
+demo_synonym.txt: demo_synonym sdu_gtc_simple.ttl
 	./demo_synonym > demo_synonym.txt
 
