@@ -54,22 +54,37 @@ g.parse(sys.argv[1], format='turtle')
 res = g.query("SELECT ?a ?b WHERE { ?a bf:hasPart ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isPartOf, row[0]))
+res = g.query("SELECT ?a ?b WHERE { ?a bf:isPartOf ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.hasPart, row[0]))
 
 res = g.query("SELECT ?a ?b WHERE {?a bf:hasPoint ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isPointOf, row[0]))
+res = g.query("SELECT ?a ?b WHERE {?a bf:isPointOf ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.hasPoint, row[0]))
 
 res = g.query("SELECT ?a ?b WHERE {?a bf:feeds ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isFedBy, row[0]))
+res = g.query("SELECT ?a ?b WHERE {?a bf:isFedBy ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.feeds, row[0]))
 
 res = g.query("SELECT ?a ?b WHERE {?a bf:contains ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isLocatedIn, row[0]))
+res = g.query("SELECT ?a ?b WHERE {?a bf:isLocatedIn ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.contains, row[0]))
 
 res = g.query("SELECT ?a ?b WHERE {?a bf:controls ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isControlledBy, row[0]))
+res = g.query("SELECT ?a ?b WHERE {?a bf:isControlledBy ?b .}")
+for row in res:
+    g.add((row[1], BRICKFRAME.controls, row[0]))
 
 res = g.query("SELECT ?a ?b WHERE {?a bf:hasOutput ?b .}")
 for row in res:
@@ -87,10 +102,11 @@ res = g.query("SELECT ?a ?b WHERE {?a bf:hasToken ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isTokenOf, row[0]))
 
+
 print "--- Occupancy Modeling App ---"      ############################################ Occupancy Modeling
-print "Finding Temp, CO2, Occ sensors in all rooms"
+print "Finding Temp sensors in all rooms"
 res = g.query("""
-SELECT ?sensor ?room
+SELECT DISTINCT ?sensor ?vav
 WHERE {
 
     {
@@ -118,11 +134,44 @@ WHERE {
       { ?sensor rdf:type brick:CO2_Sensor }
     }
 
+    ?vav rdf:type brick:VAV .
+    ?zone rdf:type brick:HVAC_Zone .
+    ?room rdf:type brick:Room .
+
+    ?vav bf:feeds+ ?zone .
+    ?zone bf:hasPart ?room .
+
+    ?sensor bf:isPointOf ?vav .
+
+}""")
+printResults(res)
+
+print "Finding CO2, Occ sensors"
+res = g.query("""
+SELECT DISTINCT ?sensor ?vav
+WHERE {
+
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf+ brick:Occupancy_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:Occupancy_Sensor }
+    }
+
+        UNION
+
+    {
+      { ?sensor rdf:type ?class .
+        ?class rdfs:subClassOf+ brick:CO2_Sensor . }
+      UNION
+      { ?sensor rdf:type brick:CO2_Sensor }
+    }
+
     ?room rdf:type brick:Room .
     ?sensor bf:isPointOf ?room .
 
 }""")
-printResults(res)
+
 
 print "Finding all power meters for equipment in rooms"
 res = g.query("""
@@ -290,12 +339,22 @@ WHERE {
       { ?airflow_sensor rdf:type brick:Discharge_Air_Flow_Sensor }
     }
 
+    UNION
+
+    {
+      { ?airflow_sensor rdf:type ?class .
+        ?class rdfs:subClassOf+ brick:Supply_Air_Flow_Sensor . }
+      UNION
+      { ?airflow_sensor rdf:type brick:Supply_Air_Flow_Sensor }
+    }
+
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
+    ?zone rdf:type brick:HVAC_Zone .
+    ?vav bf:feeds+ ?zone .
+    ?room bf:isPartOf ?zone .
 
-    { ?airflow_sensor bf:isPartOf ?vav }
-        UNION
-    { ?vav bf:feeds+ ?airflow_sensor }
+    ?airflow_sensor bf:isPointOf ?vav .
 }""")
 printResults(res)
 
@@ -327,16 +386,15 @@ print
 
 print "--- Model-Predictive Control App ---"
 
-print "Find all buildings, floors, hvac zones, rooms"
+print "Find all floors, hvac zones, rooms"
 res = g.query("""
-SELECT ?bldg ?floor ?room ?zone
+# no more building
+SELECT ?floor ?room ?zone
 WHERE {
-    ?bldg rdf:type brick:Building .
     ?floor rdf:type brick:Floor .
     ?room rdf:type brick:Room .
     ?zone rdf:type brick:HVAC_Zone .
 
-    ?floor bf:isPartOf+ ?bldg .
     ?room bf:isPartOf+ ?floor .
     ?room bf:isPartOf+ ?zone .
 }""")
