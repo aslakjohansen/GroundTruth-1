@@ -108,27 +108,14 @@ res = g.query("""
 SELECT DISTINCT ?sensor ?room
 WHERE {
 
-    {
-      { ?sensor rdf:type/rdfs:subClassOf+ brick:Temperature_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:Temperature_Sensor }
-    }
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Temperature_Sensor . }
+        UNION
+
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Occupancy_Sensor . }
 
         UNION
 
-    {
-      { ?sensor rdf:type/rdfs:subClassOf+ brick:Occupancy_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:Occupancy_Sensor }
-    }
-
-        UNION
-
-    {
-      { ?sensor rdf:type/rdfs:subClassOf+ brick:CO2_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:CO2_Sensor }
-    }
+    { ?sensor rdf:type/rdfs:subClassOf* brick:CO2_Sensor . }
 
     ?vav rdf:type brick:VAV .
     ?zone rdf:type brick:HVAC_Zone .
@@ -147,19 +134,9 @@ res = g.query("""
 SELECT DISTINCT ?sensor ?vav
 WHERE {
 
-    {
-      { ?sensor rdf:type/rdfs:subClassOf+ brick:Occupancy_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:Occupancy_Sensor }
-    }
-
+      { ?sensor rdf:type/rdfs:subClassOf* brick:Occupancy_Sensor . }
         UNION
-
-    {
-      { ?sensor rdf:type/rdfs:subClassOf+ brick:CO2_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:CO2_Sensor }
-    }
+      { ?sensor rdf:type/rdfs:subClassOf* brick:CO2_Sensor . }
 
     ?room rdf:type brick:Room .
     ?sensor bf:isPointOf ?room .
@@ -192,11 +169,7 @@ print "Find all power meters for HVAC equipment"
 res = g.query("""
 SELECT ?meter ?equipment ?room
 WHERE {
-    {
-        {?meter rdf:type brick:Power_Meter}
-        UNION
-        {?meter rdf:type/rdfs:subClassOf+ brick:Power_Meter}
-    }
+    ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
 
     ?room rdf:type brick:Room .
     ?meter bf:isPointOf ?equipment .
@@ -204,12 +177,7 @@ WHERE {
     ?equipment rdf:type ?class .
     ?class rdfs:subClassOf+ brick:Heating_Ventilation_Air_Conditioning_System .
 
-    {
-        {?zone rdf:type brick:HVAC_Zone}
-        UNION
-        {?zone rdf:type ?zone_class .
-         ?zone_class rdfs:subClassOf+ brick:HVAC_Zone}
-    }
+    {?zone rdf:type/rdfs:subClassOf* brick:HVAC_Zone}
 
     ?equipment bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
@@ -238,12 +206,7 @@ print "...or if that doesn't work, find all power meters"
 res = g.query("""
 SELECT ?meter ?loc
 WHERE {
-    {
-        {?meter rdf:type brick:Power_Meter}
-        UNION
-        {?meter rdf:type ?class .
-         ?class rdfs:subClassOf+ brick:Power_Meter}
-    }
+    ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
     ?loc rdf:type ?loc_class .
     ?loc_class rdfs:subClassOf+ brick:Location .
 
@@ -259,12 +222,7 @@ print "Find Occ sensors in all rooms"
 res = g.query("""
 SELECT ?sensor ?room
 WHERE {
-    {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Occupancy_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:Occupancy_Sensor }
-    }
+    ?sensor rdf:type/rdfs:subClassOf* brick:Occupancy_Sensor . 
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
@@ -275,12 +233,7 @@ print "Find lux sensors in rooms"
 res = g.query("""
 SELECT ?sensor ?room
 WHERE {
-    {
-      { ?sensor rdf:type ?class .
-        ?class rdfs:subClassOf+ brick:Luminance_Sensor . }
-      UNION
-      { ?sensor rdf:type brick:Luminance_Sensor }
-    }
+    ?sensor rdf:type/rdfs:subClassOf* brick:Luminance_Sensor . 
     ?room rdf:type brick:Room .
     ?sensor bf:isLocatedIn ?room .
     ?sensor bf:isPointOf ?room .
@@ -295,11 +248,9 @@ WHERE {
 
     ?equipment bf:isLocatedIn ?room .
 
-    { ?equipment rdf:type ?class .
-      ?class rdfs:subClassOf+ brick:Lighting_System .}
+    { ?equipment rdf:type/rdfs:subClassOf* brick:Lighting_System .}
     UNION
-    { ?equipment rdf:type ?class .
-      ?class rdfs:subClassOf+ brick:Heating_Ventilation_Air_Conditioning_System .}
+    { ?equipment rdf:type/rdfs:subClassOf* brick:Heating_Ventilation_Air_Conditioning_System .}
 }""")
 printResults(res)
 
@@ -325,19 +276,11 @@ print "Airflow sensor for all VAVs"
 res = g.query("""
 SELECT ?airflow_sensor ?room ?vav
 WHERE {
-    {
-      { ?airflow_sensor rdf:type/rdfs:subClassOf+ brick:Discharge_Air_Flow_Sensor . }
-      UNION
-      { ?airflow_sensor rdf:type brick:Discharge_Air_Flow_Sensor }
-    }
+      { ?airflow_sensor rdf:type/rdfs:subClassOf* brick:Discharge_Air_Flow_Sensor . }
 
     UNION
 
-    {
-      { ?airflow_sensor rdf:type/rdfs:subClassOf+ brick:Supply_Air_Flow_Sensor . }
-      UNION
-      { ?airflow_sensor rdf:type brick:Supply_Air_Flow_Sensor }
-    }
+      { ?airflow_sensor rdf:type/rdfs:subClassOf* brick:Supply_Air_Flow_Sensor . }
 
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
@@ -425,31 +368,27 @@ print "--- Participatory Feedback ---"
 
 print "Associate lighting with rooms"
 res = g.query("""
-SELECT ?light_equip ?light_state ?light_cmd ?room
+SELECT DISTINCT ?light_equip ?light_state ?light_cmd ?room
 WHERE {
 
     # OR do we do ?light_equip rdf:type brick:Lighting_System
-    ?light_equip rdf:type ?class .
-    ?class rdfs:subClassOf+ brick:Lighting_System .
+    ?light_equip rdf:type/rdfs:subClassOf* brick:Lighting_System .
 
     ?light_equip bf:feeds ?zone .
     ?zone rdf:type brick:Lighting_Zone .
     ?zone bf:contains ?room .
     ?room rdf:type brick:Room .
 
-    {
-      { ?light_state rdf:type ?state_class .
-        ?state_class rdfs:subClassOf+ brick:Luminance_Status . }
-      UNION
-      { ?light_state rdf:type brick:Luminance_Status }
-    }
+    ?light_state rdf:type/rdfs:subClassOf* brick:Luminance_Status .
+    ?light_cmd rdf:type/rdfs:subClassOf* brick:Luminance_Command .
 
-    {
-      { ?light_cmd rdf:type ?cmd_class .
-        ?cmd_class rdfs:subClassOf+ brick:Luminance_Command . }
-      UNION
-      { ?light_cmd rdf:type brick:Luminance_Command }
-    }
+    {?light_equip bf:hasPoint ?light_state}
+    UNION
+    {?zone bf:hasPoint ?light_state}
+
+    {?light_equip bf:hasPoint ?light_cmd}
+    UNION
+    {?zone bf:hasPoint ?light_cmd}
 }""")
 printResults(res)
 
@@ -458,13 +397,7 @@ g.query("CONSTRUCT {?a bf:isPointOf ?b} WHERE {?b bf:hasPoint ?a}")
 res = g.query("""
 SELECT ?meter ?loc
 WHERE {
-
-    {
-        {?meter rdf:type brick:Power_Meter}
-        UNION
-        {?meter rdf:type ?class .
-         ?class rdfs:subClassOf+ brick:Power_Meter}
-    }
+    ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
 
     { ?loc    rdf:type    brick:Room }
         UNION
@@ -486,12 +419,7 @@ print "Get equipment, power meters and what floor/room they are in"
 res = g.query("""
 SELECT ?equip ?meter ?floor ?room
 WHERE {
-    {
-        {?meter rdf:type brick:Power_Meter}
-        UNION
-        {?meter rdf:type ?class .
-         ?class rdfs:subClassOf+ brick:Power_Meter}
-    }
+    ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
 
     ?equip  rdf:type    brick:Equipment .
     ?loc    rdf:type    brick:Location .
@@ -517,12 +445,7 @@ print "Find all equipment (inside rooms) and associated power meters and control
 res = g.query("""
 SELECT ?equip ?meter ?cmd
 WHERE {
-    {
-        {?meter rdf:type brick:Power_Meter}
-        UNION
-        {?meter rdf:type ?class .
-         ?class rdfs:subClassOf+ brick:Power_Meter}
-    }
+    ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
     ?cmd    rdf:type    brick:Command .
     ?equip  rdf:type    brick:Equipment .
     ?room   rdf:type    brick:Room .
