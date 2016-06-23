@@ -1310,6 +1310,12 @@ ebu3b:EBU3B_Chilled_Water_System_Pump_2_VFD_Filter a brick:Filter,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_Chilled_Water_System_Pump_2_VFD .
 
+ebu3b:EBU3B_Cooling_Thermal_Power_CRAC a brick:Cooling_Thermal_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_CRAC .
+
+ebu3b:EBU3B_Cooling_Thermal_Power_HVAC a brick:Cooling_Thermal_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_Chilled_Water_System .
+
 ebu3b:EBU3B_FILE_SERVER_HIx2TEMPALM_STPT a owl:NamedIndividual .
 
 ebu3b:EBU3B_FSCHW_CAC_STS a owl:NamedIndividual .
@@ -1614,6 +1620,12 @@ ebu3b:EBU3B_HX_OSA_Low_Span a brick:Point,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger .
 
+ebu3b:EBU3B_Heating_Thermal_Power_CRAC a brick:Heating_Thermal_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_CRAC .
+
+ebu3b:EBU3B_Heating_Thermal_Power_HVAC a brick:Heating_Thermal_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_Hot_Water_System .
+
 ebu3b:EBU3B_Hot_Water_System_Pump a brick:Pump,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_Hot_Water_System .
@@ -1645,6 +1657,31 @@ ebu3b:EBU3B_Load_Shed_MTW_DP_Load_Shed a owl:NamedIndividual .
 ebu3b:EBU3B_Load_Shed_Stndby_Load_Shed_Switch a owl:NamedIndividual .
 
 ebu3b:EBU3B_Load_Shed_Unocc_Load_Shed_Switch a owl:NamedIndividual .
+
+ebu3b:EBU3B_Power_Meter_Elevator a brick:Electrical_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_Elevator .
+
+ebu3b:EBU3B_Power_Meter_HVAC a brick:Electrical_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_HVAC .
+
+ebu3b:EBU3B_Power_Meter_Lighting_Basement a brick:Electrical_Power_Meter .
+
+ebu3b:EBU3B_Power_Meter_Lighting_Floor_1 a brick:Electrical_Power_Meter .
+
+ebu3b:EBU3B_Power_Meter_Lighting_Floor_2 a brick:Electrical_Power_Meter .
+
+ebu3b:EBU3B_Power_Meter_Lighting_Floor_3 a brick:Electrical_Power_Meter .
+
+ebu3b:EBU3B_Power_Meter_Lighting_Floor_4 a brick:Electrical_Power_Meter .
+
+ebu3b:EBU3B_Power_Meter_Main_A a brick:Electrical_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B .
+
+ebu3b:EBU3B_Power_Meter_Main_B a brick:Electrical_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B .
+
+ebu3b:EBU3B_Power_Meter_Server_Room a brick:Electrical_Power_Meter ;
+    brick:isPointOf ebu3b:EBU3B_Server_Room .
 
 ebu3b:EBU3B_RF1_AI1_ACTUAL a brick:Point,
         owl:NamedIndividual ;
@@ -18402,6 +18439,156 @@ ebu3b:EBU3B_RM_Bxxx_BSMT_AVG_CLG_PID2 a brick:Point,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_HVAC .
 
+ebu3b:EBU3B_Rm_1100A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1100A .
+
+ebu3b:EBU3B_Rm_1100D a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1100D .
+
+ebu3b:EBU3B_Rm_1102 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1102 .
+
+ebu3b:EBU3B_Rm_1104 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1104 .
+
+ebu3b:EBU3B_Rm_1106 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1106 .
+
+ebu3b:EBU3B_Rm_1107 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1107 .
+
+ebu3b:EBU3B_Rm_1108 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1108 .
+
+ebu3b:EBU3B_Rm_1109 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1109 .
+
+ebu3b:EBU3B_Rm_1110 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1110 .
+
+ebu3b:EBU3B_Rm_1113 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1113 .
+
+ebu3b:EBU3B_Rm_1115 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1115 .
+
+ebu3b:EBU3B_Rm_1116 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1116 .
+
+ebu3b:EBU3B_Rm_1117 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1117 .
+
+ebu3b:EBU3B_Rm_1122 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1122 .
+
+ebu3b:EBU3B_Rm_1123 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1123 .
+
+ebu3b:EBU3B_Rm_1124 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1124 .
+
+ebu3b:EBU3B_Rm_1125 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1125 .
+
+ebu3b:EBU3B_Rm_1126 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1126 .
+
+ebu3b:EBU3B_Rm_1130 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1130 .
+
+ebu3b:EBU3B_Rm_1132 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1132 .
+
+ebu3b:EBU3B_Rm_1133 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1133 .
+
+ebu3b:EBU3B_Rm_1134 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1134 .
+
+ebu3b:EBU3B_Rm_1139 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1139 .
+
+ebu3b:EBU3B_Rm_1144 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1144 .
+
+ebu3b:EBU3B_Rm_1145 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1145 .
+
+ebu3b:EBU3B_Rm_1150 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1150 .
+
+ebu3b:EBU3B_Rm_1151 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1151 .
+
+ebu3b:EBU3B_Rm_1154 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1154 .
+
+ebu3b:EBU3B_Rm_1155 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1155 .
+
+ebu3b:EBU3B_Rm_1156 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1156 .
+
+ebu3b:EBU3B_Rm_1200A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1200A .
+
+ebu3b:EBU3B_Rm_1200B a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1200B .
+
+ebu3b:EBU3B_Rm_1200C a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1200C .
+
+ebu3b:EBU3B_Rm_1203 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1203 .
+
+ebu3b:EBU3B_Rm_1207 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1207 .
+
+ebu3b:EBU3B_Rm_1208 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1208 .
+
+ebu3b:EBU3B_Rm_1208B a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1208B .
+
+ebu3b:EBU3B_Rm_1212 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1212 .
+
+ebu3b:EBU3B_Rm_1213 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1213 .
+
+ebu3b:EBU3B_Rm_1213A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1213A .
+
+ebu3b:EBU3B_Rm_1217 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1217 .
+
+ebu3b:EBU3B_Rm_1218 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1218 .
+
+ebu3b:EBU3B_Rm_1221 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1221 .
+
+ebu3b:EBU3B_Rm_1223 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1223 .
+
+ebu3b:EBU3B_Rm_1224 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1224 .
+
+ebu3b:EBU3B_Rm_1229 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1229 .
+
+ebu3b:EBU3B_Rm_1230 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1230 .
+
+ebu3b:EBU3B_Rm_1231 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1231 .
+
+ebu3b:EBU3B_Rm_1236 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1236 .
+
+ebu3b:EBU3B_Rm_1Xxx a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1Xxx .
+
 ebu3b:EBU3B_Rm_1xxx_1ST_AVG a brick:Average_Cooling_Demand_Sensor,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_HVAC .
@@ -18410,9 +18597,591 @@ ebu3b:EBU3B_Rm_1xxx_1ST_AVG a brick:Average_Cooling_Demand_Sensor,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_HVAC .
 
+ebu3b:EBU3B_Rm_2102 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2102 .
+
+ebu3b:EBU3B_Rm_2105 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2105 .
+
+ebu3b:EBU3B_Rm_2107 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2107 .
+
+ebu3b:EBU3B_Rm_2108 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2108 .
+
+ebu3b:EBU3B_Rm_2109 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2109 .
+
+ebu3b:EBU3B_Rm_2111 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2111 .
+
+ebu3b:EBU3B_Rm_2112 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2112 .
+
+ebu3b:EBU3B_Rm_2116 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2116 .
+
+ebu3b:EBU3B_Rm_2118 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2118 .
+
+ebu3b:EBU3B_Rm_2119 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2119 .
+
+ebu3b:EBU3B_Rm_2121 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2121 .
+
+ebu3b:EBU3B_Rm_2122 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2122 .
+
+ebu3b:EBU3B_Rm_2126 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2126 .
+
+ebu3b:EBU3B_Rm_2127 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2127 .
+
+ebu3b:EBU3B_Rm_2128 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2128 .
+
+ebu3b:EBU3B_Rm_2130 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2130 .
+
+ebu3b:EBU3B_Rm_2132 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2132 .
+
+ebu3b:EBU3B_Rm_2134 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2134 .
+
+ebu3b:EBU3B_Rm_2136 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2136 .
+
+ebu3b:EBU3B_Rm_2138 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2138 .
+
+ebu3b:EBU3B_Rm_2140 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2140 .
+
+ebu3b:EBU3B_Rm_2142 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2142 .
+
+ebu3b:EBU3B_Rm_2144 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2144 .
+
+ebu3b:EBU3B_Rm_2146 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2146 .
+
+ebu3b:EBU3B_Rm_2148 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2148 .
+
+ebu3b:EBU3B_Rm_2150 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2150 .
+
+ebu3b:EBU3B_Rm_2154 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2154 .
+
+ebu3b:EBU3B_Rm_2200A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2200A .
+
+ebu3b:EBU3B_Rm_2203 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2203 .
+
+ebu3b:EBU3B_Rm_2207 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2207 .
+
+ebu3b:EBU3B_Rm_2208 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2208 .
+
+ebu3b:EBU3B_Rm_2209 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2209 .
+
+ebu3b:EBU3B_Rm_2214 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2214 .
+
+ebu3b:EBU3B_Rm_2215 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2215 .
+
+ebu3b:EBU3B_Rm_2217 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2217 .
+
+ebu3b:EBU3B_Rm_2218 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2218 .
+
+ebu3b:EBU3B_Rm_2219 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2219 .
+
+ebu3b:EBU3B_Rm_2221 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2221 .
+
+ebu3b:EBU3B_Rm_2226 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2226 .
+
+ebu3b:EBU3B_Rm_2227 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2227 .
+
+ebu3b:EBU3B_Rm_2229A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2229A .
+
+ebu3b:EBU3B_Rm_2230 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2230 .
+
+ebu3b:EBU3B_Rm_2231 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2231 .
+
+ebu3b:EBU3B_Rm_2232 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2232 .
+
+ebu3b:EBU3B_Rm_2234 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2234 .
+
+ebu3b:EBU3B_Rm_2236 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2236 .
+
+ebu3b:EBU3B_Rm_2238 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2238 .
+
+ebu3b:EBU3B_Rm_2240 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2240 .
+
+ebu3b:EBU3B_Rm_2244 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2244 .
+
+ebu3b:EBU3B_Rm_2250 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2250 .
+
+ebu3b:EBU3B_Rm_2256 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2256 .
+
+ebu3b:EBU3B_Rm_2258 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2258 .
+
+ebu3b:EBU3B_Rm_2262 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2262 .
+
+ebu3b:EBU3B_Rm_2266 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2266 .
+
+ebu3b:EBU3B_Rm_2270 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2270 .
+
+ebu3b:EBU3B_Rm_2272 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2272 .
+
+ebu3b:EBU3B_Rm_2Xxx a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2Xxx .
+
 <http://ucsd.edu/building/ontology/ebu3b#EBU3B_Rm_2xxx_SUPFLO_AVG_%> a brick:Average_Discharge_Air_Flow_Sensor,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_HVAC .
+
+ebu3b:EBU3B_Rm_3102 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3102 .
+
+ebu3b:EBU3B_Rm_3105 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3105 .
+
+ebu3b:EBU3B_Rm_3106 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3106 .
+
+ebu3b:EBU3B_Rm_3107 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3107 .
+
+ebu3b:EBU3B_Rm_3109 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3109 .
+
+ebu3b:EBU3B_Rm_3110 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3110 .
+
+ebu3b:EBU3B_Rm_3111 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3111 .
+
+ebu3b:EBU3B_Rm_3114 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3114 .
+
+ebu3b:EBU3B_Rm_3118 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3118 .
+
+ebu3b:EBU3B_Rm_3119 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3119 .
+
+ebu3b:EBU3B_Rm_3121 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3121 .
+
+ebu3b:EBU3B_Rm_3122 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3122 .
+
+ebu3b:EBU3B_Rm_3126 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3126 .
+
+ebu3b:EBU3B_Rm_3127 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3127 .
+
+ebu3b:EBU3B_Rm_3128 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3128 .
+
+ebu3b:EBU3B_Rm_3130 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3130 .
+
+ebu3b:EBU3B_Rm_3132 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3132 .
+
+ebu3b:EBU3B_Rm_3134 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3134 .
+
+ebu3b:EBU3B_Rm_3136 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3136 .
+
+ebu3b:EBU3B_Rm_3138 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3138 .
+
+ebu3b:EBU3B_Rm_3140 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3140 .
+
+ebu3b:EBU3B_Rm_3142 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3142 .
+
+ebu3b:EBU3B_Rm_3144 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3144 .
+
+ebu3b:EBU3B_Rm_3146 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3146 .
+
+ebu3b:EBU3B_Rm_3148 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3148 .
+
+ebu3b:EBU3B_Rm_3150 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3150 .
+
+ebu3b:EBU3B_Rm_3152 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3152 .
+
+ebu3b:EBU3B_Rm_3154 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3154 .
+
+ebu3b:EBU3B_Rm_3200A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3200A .
+
+ebu3b:EBU3B_Rm_3200B a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3200B .
+
+ebu3b:EBU3B_Rm_3202 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3202 .
+
+ebu3b:EBU3B_Rm_3203 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3203 .
+
+ebu3b:EBU3B_Rm_3205 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3205 .
+
+ebu3b:EBU3B_Rm_3207 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3207 .
+
+ebu3b:EBU3B_Rm_3208 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3208 .
+
+ebu3b:EBU3B_Rm_3213 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3213 .
+
+ebu3b:EBU3B_Rm_3214 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3214 .
+
+ebu3b:EBU3B_Rm_3215 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3215 .
+
+ebu3b:EBU3B_Rm_3217 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3217 .
+
+ebu3b:EBU3B_Rm_3218 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3218 .
+
+ebu3b:EBU3B_Rm_3219S a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3219S .
+
+ebu3b:EBU3B_Rm_3220 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3220 .
+
+ebu3b:EBU3B_Rm_3221 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3221 .
+
+ebu3b:EBU3B_Rm_3223 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3223 .
+
+ebu3b:EBU3B_Rm_3226 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3226 .
+
+ebu3b:EBU3B_Rm_3230 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3230 .
+
+ebu3b:EBU3B_Rm_3232 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3232 .
+
+ebu3b:EBU3B_Rm_3236 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3236 .
+
+ebu3b:EBU3B_Rm_3240 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3240 .
+
+ebu3b:EBU3B_Rm_3242 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3242 .
+
+ebu3b:EBU3B_Rm_3246 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3246 .
+
+ebu3b:EBU3B_Rm_3250 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3250 .
+
+ebu3b:EBU3B_Rm_3252 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3252 .
+
+ebu3b:EBU3B_Rm_3254 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3254 .
+
+ebu3b:EBU3B_Rm_3256 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3256 .
+
+ebu3b:EBU3B_Rm_3258 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3258 .
+
+ebu3b:EBU3B_Rm_3260 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3260 .
+
+ebu3b:EBU3B_Rm_3262 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3262 .
+
+ebu3b:EBU3B_Rm_3Xxx a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3Xxx .
+
+ebu3b:EBU3B_Rm_4102 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4102 .
+
+ebu3b:EBU3B_Rm_4105 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4105 .
+
+ebu3b:EBU3B_Rm_4106 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4106 .
+
+ebu3b:EBU3B_Rm_4107 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4107 .
+
+ebu3b:EBU3B_Rm_4109 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4109 .
+
+ebu3b:EBU3B_Rm_4110 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4110 .
+
+ebu3b:EBU3B_Rm_4111 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4111 .
+
+ebu3b:EBU3B_Rm_4114 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4114 .
+
+ebu3b:EBU3B_Rm_4118 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4118 .
+
+ebu3b:EBU3B_Rm_4119 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4119 .
+
+ebu3b:EBU3B_Rm_4121 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4121 .
+
+ebu3b:EBU3B_Rm_4122 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4122 .
+
+ebu3b:EBU3B_Rm_4126 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4126 .
+
+ebu3b:EBU3B_Rm_4127 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4127 .
+
+ebu3b:EBU3B_Rm_4128 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4128 .
+
+ebu3b:EBU3B_Rm_4130 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4130 .
+
+ebu3b:EBU3B_Rm_4132 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4132 .
+
+ebu3b:EBU3B_Rm_4134 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4134 .
+
+ebu3b:EBU3B_Rm_4136 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4136 .
+
+ebu3b:EBU3B_Rm_4138 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4138 .
+
+ebu3b:EBU3B_Rm_4140 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4140 .
+
+ebu3b:EBU3B_Rm_4142 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4142 .
+
+ebu3b:EBU3B_Rm_4144 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4144 .
+
+ebu3b:EBU3B_Rm_4146 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4146 .
+
+ebu3b:EBU3B_Rm_4148 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4148 .
+
+ebu3b:EBU3B_Rm_4150 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4150 .
+
+ebu3b:EBU3B_Rm_4152 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4152 .
+
+ebu3b:EBU3B_Rm_4154 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4154 .
+
+ebu3b:EBU3B_Rm_4200A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4200A .
+
+ebu3b:EBU3B_Rm_4202 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4202 .
+
+ebu3b:EBU3B_Rm_4203 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4203 .
+
+ebu3b:EBU3B_Rm_4205 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4205 .
+
+ebu3b:EBU3B_Rm_4207 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4207 .
+
+ebu3b:EBU3B_Rm_4208 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4208 .
+
+ebu3b:EBU3B_Rm_4213 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4213 .
+
+ebu3b:EBU3B_Rm_4214 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4214 .
+
+ebu3b:EBU3B_Rm_4215 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4215 .
+
+ebu3b:EBU3B_Rm_4217 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4217 .
+
+ebu3b:EBU3B_Rm_4219 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4219 .
+
+ebu3b:EBU3B_Rm_4220 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4220 .
+
+ebu3b:EBU3B_Rm_4223 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4223 .
+
+ebu3b:EBU3B_Rm_4226 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4226 .
+
+ebu3b:EBU3B_Rm_4230 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4230 .
+
+ebu3b:EBU3B_Rm_4231 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4231 .
+
+ebu3b:EBU3B_Rm_4232 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4232 .
+
+ebu3b:EBU3B_Rm_4236 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4236 .
+
+ebu3b:EBU3B_Rm_4240 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4240 .
+
+ebu3b:EBU3B_Rm_4242 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4242 .
+
+ebu3b:EBU3B_Rm_4246 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4246 .
+
+ebu3b:EBU3B_Rm_4250 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4250 .
+
+ebu3b:EBU3B_Rm_4252 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4252 .
+
+ebu3b:EBU3B_Rm_4254 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4254 .
+
+ebu3b:EBU3B_Rm_4256 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4256 .
+
+ebu3b:EBU3B_Rm_4258 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4258 .
+
+ebu3b:EBU3B_Rm_4262 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4262 .
+
+ebu3b:EBU3B_Rm_4Xxx a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4Xxx .
+
+ebu3b:EBU3B_Rm_B102C a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B102C .
+
+ebu3b:EBU3B_Rm_B103 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B103 .
+
+ebu3b:EBU3B_Rm_B103A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B103A .
+
+ebu3b:EBU3B_Rm_B109 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B109 .
+
+ebu3b:EBU3B_Rm_B200B a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B200B .
+
+ebu3b:EBU3B_Rm_B200C a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B200C .
+
+ebu3b:EBU3B_Rm_B210 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B210 .
+
+ebu3b:EBU3B_Rm_B215 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B215 .
+
+ebu3b:EBU3B_Rm_B220 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B220 .
+
+ebu3b:EBU3B_Rm_B222 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B222 .
+
+ebu3b:EBU3B_Rm_B224 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B224 .
+
+ebu3b:EBU3B_Rm_B225 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B225 .
+
+ebu3b:EBU3B_Rm_B230 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B230 .
+
+ebu3b:EBU3B_Rm_B230A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B230A .
+
+ebu3b:EBU3B_Rm_B240 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B240 .
+
+ebu3b:EBU3B_Rm_B240A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B240A .
+
+ebu3b:EBU3B_Rm_B250 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B250 .
+
+ebu3b:EBU3B_Rm_B250A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B250A .
+
+ebu3b:EBU3B_Rm_B260 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B260 .
+
+ebu3b:EBU3B_Rm_B260A a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B260A .
+
+ebu3b:EBU3B_Rm_B270 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B270 .
+
+ebu3b:EBU3B_Rm_B275 a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B275 .
 
 ebu3b:EBU3B_Rm_Bxxx_BSMT_AVG a brick:Average_Cooling_Demand_Sensor,
         owl:NamedIndividual ;
@@ -18760,6 +19529,9 @@ ebu3b:EBU3B_SF4_TORQUE a brick:Motor_Torque_Sensor,
     brickframe:isPointOf ebu3b:EBU3B_AHU_1,
         ebu3b:EBU3B_AHU_1_Supply_Fan_4_VFD .
 
+ebu3b:EBU3B_Unknown a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Unknown .
+
 ebu3b:EBU3B_Unknown_ZN_T a brick:Zone_Temperature_Sensor,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_VAV_Unknown_Thermostat .
@@ -18904,741 +19676,6 @@ ebu3b:HUBBS_WIND_SPD a brick:Wind_Speed_Sensor,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:Hubbs_Hall_Weather .
 
-ebu3b:Rm_1100A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1100A .
-
-ebu3b:Rm_1100D a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1100D .
-
-ebu3b:Rm_1102 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1102 .
-
-ebu3b:Rm_1104 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1104 .
-
-ebu3b:Rm_1106 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1106 .
-
-ebu3b:Rm_1107 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1107 .
-
-ebu3b:Rm_1108 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1108 .
-
-ebu3b:Rm_1109 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1109 .
-
-ebu3b:Rm_1110 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1110 .
-
-ebu3b:Rm_1113 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1113 .
-
-ebu3b:Rm_1115 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1115 .
-
-ebu3b:Rm_1116 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1116 .
-
-ebu3b:Rm_1117 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1117 .
-
-ebu3b:Rm_1122 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1122 .
-
-ebu3b:Rm_1123 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1123 .
-
-ebu3b:Rm_1124 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1124 .
-
-ebu3b:Rm_1125 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1125 .
-
-ebu3b:Rm_1126 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1126 .
-
-ebu3b:Rm_1130 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1130 .
-
-ebu3b:Rm_1132 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1132 .
-
-ebu3b:Rm_1133 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1133 .
-
-ebu3b:Rm_1134 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1134 .
-
-ebu3b:Rm_1139 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1139 .
-
-ebu3b:Rm_1144 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1144 .
-
-ebu3b:Rm_1145 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1145 .
-
-ebu3b:Rm_1150 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1150 .
-
-ebu3b:Rm_1151 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1151 .
-
-ebu3b:Rm_1154 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1154 .
-
-ebu3b:Rm_1155 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1155 .
-
-ebu3b:Rm_1156 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1156 .
-
-ebu3b:Rm_1200A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1200A .
-
-ebu3b:Rm_1200B a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1200B .
-
-ebu3b:Rm_1200C a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1200C .
-
-ebu3b:Rm_1203 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1203 .
-
-ebu3b:Rm_1207 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1207 .
-
-ebu3b:Rm_1208 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1208 .
-
-ebu3b:Rm_1208B a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1208B .
-
-ebu3b:Rm_1212 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1212 .
-
-ebu3b:Rm_1213 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1213 .
-
-ebu3b:Rm_1213A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1213A .
-
-ebu3b:Rm_1217 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1217 .
-
-ebu3b:Rm_1218 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1218 .
-
-ebu3b:Rm_1221 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1221 .
-
-ebu3b:Rm_1223 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1223 .
-
-ebu3b:Rm_1224 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1224 .
-
-ebu3b:Rm_1229 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1229 .
-
-ebu3b:Rm_1230 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1230 .
-
-ebu3b:Rm_1231 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1231 .
-
-ebu3b:Rm_1236 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1236 .
-
-ebu3b:Rm_1Xxx a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_1Xxx .
-
-ebu3b:Rm_2102 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2102 .
-
-ebu3b:Rm_2105 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2105 .
-
-ebu3b:Rm_2107 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2107 .
-
-ebu3b:Rm_2108 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2108 .
-
-ebu3b:Rm_2109 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2109 .
-
-ebu3b:Rm_2111 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2111 .
-
-ebu3b:Rm_2112 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2112 .
-
-ebu3b:Rm_2116 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2116 .
-
-ebu3b:Rm_2118 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2118 .
-
-ebu3b:Rm_2119 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2119 .
-
-ebu3b:Rm_2121 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2121 .
-
-ebu3b:Rm_2122 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2122 .
-
-ebu3b:Rm_2126 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2126 .
-
-ebu3b:Rm_2127 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2127 .
-
-ebu3b:Rm_2128 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2128 .
-
-ebu3b:Rm_2130 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2130 .
-
-ebu3b:Rm_2132 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2132 .
-
-ebu3b:Rm_2134 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2134 .
-
-ebu3b:Rm_2136 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2136 .
-
-ebu3b:Rm_2138 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2138 .
-
-ebu3b:Rm_2140 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2140 .
-
-ebu3b:Rm_2142 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2142 .
-
-ebu3b:Rm_2144 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2144 .
-
-ebu3b:Rm_2146 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2146 .
-
-ebu3b:Rm_2148 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2148 .
-
-ebu3b:Rm_2150 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2150 .
-
-ebu3b:Rm_2154 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2154 .
-
-ebu3b:Rm_2200A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2200A .
-
-ebu3b:Rm_2203 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2203 .
-
-ebu3b:Rm_2207 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2207 .
-
-ebu3b:Rm_2208 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2208 .
-
-ebu3b:Rm_2209 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2209 .
-
-ebu3b:Rm_2214 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2214 .
-
-ebu3b:Rm_2215 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2215 .
-
-ebu3b:Rm_2217 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2217 .
-
-ebu3b:Rm_2218 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2218 .
-
-ebu3b:Rm_2219 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2219 .
-
-ebu3b:Rm_2221 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2221 .
-
-ebu3b:Rm_2226 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2226 .
-
-ebu3b:Rm_2227 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2227 .
-
-ebu3b:Rm_2229A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2229A .
-
-ebu3b:Rm_2230 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2230 .
-
-ebu3b:Rm_2231 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2231 .
-
-ebu3b:Rm_2232 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2232 .
-
-ebu3b:Rm_2234 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2234 .
-
-ebu3b:Rm_2236 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2236 .
-
-ebu3b:Rm_2238 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2238 .
-
-ebu3b:Rm_2240 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2240 .
-
-ebu3b:Rm_2244 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2244 .
-
-ebu3b:Rm_2250 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2250 .
-
-ebu3b:Rm_2256 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2256 .
-
-ebu3b:Rm_2258 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2258 .
-
-ebu3b:Rm_2262 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2262 .
-
-ebu3b:Rm_2266 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2266 .
-
-ebu3b:Rm_2270 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2270 .
-
-ebu3b:Rm_2272 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2272 .
-
-ebu3b:Rm_2Xxx a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_2Xxx .
-
-ebu3b:Rm_3102 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3102 .
-
-ebu3b:Rm_3105 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3105 .
-
-ebu3b:Rm_3106 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3106 .
-
-ebu3b:Rm_3107 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3107 .
-
-ebu3b:Rm_3109 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3109 .
-
-ebu3b:Rm_3110 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3110 .
-
-ebu3b:Rm_3111 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3111 .
-
-ebu3b:Rm_3114 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3114 .
-
-ebu3b:Rm_3118 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3118 .
-
-ebu3b:Rm_3119 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3119 .
-
-ebu3b:Rm_3121 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3121 .
-
-ebu3b:Rm_3122 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3122 .
-
-ebu3b:Rm_3126 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3126 .
-
-ebu3b:Rm_3127 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3127 .
-
-ebu3b:Rm_3128 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3128 .
-
-ebu3b:Rm_3130 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3130 .
-
-ebu3b:Rm_3132 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3132 .
-
-ebu3b:Rm_3134 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3134 .
-
-ebu3b:Rm_3136 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3136 .
-
-ebu3b:Rm_3138 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3138 .
-
-ebu3b:Rm_3140 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3140 .
-
-ebu3b:Rm_3142 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3142 .
-
-ebu3b:Rm_3144 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3144 .
-
-ebu3b:Rm_3146 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3146 .
-
-ebu3b:Rm_3148 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3148 .
-
-ebu3b:Rm_3150 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3150 .
-
-ebu3b:Rm_3152 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3152 .
-
-ebu3b:Rm_3154 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3154 .
-
-ebu3b:Rm_3200A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3200A .
-
-ebu3b:Rm_3200B a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3200B .
-
-ebu3b:Rm_3202 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3202 .
-
-ebu3b:Rm_3203 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3203 .
-
-ebu3b:Rm_3205 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3205 .
-
-ebu3b:Rm_3207 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3207 .
-
-ebu3b:Rm_3208 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3208 .
-
-ebu3b:Rm_3213 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3213 .
-
-ebu3b:Rm_3214 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3214 .
-
-ebu3b:Rm_3215 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3215 .
-
-ebu3b:Rm_3217 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3217 .
-
-ebu3b:Rm_3218 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3218 .
-
-ebu3b:Rm_3219S a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3219S .
-
-ebu3b:Rm_3220 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3220 .
-
-ebu3b:Rm_3221 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3221 .
-
-ebu3b:Rm_3223 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3223 .
-
-ebu3b:Rm_3226 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3226 .
-
-ebu3b:Rm_3230 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3230 .
-
-ebu3b:Rm_3232 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3232 .
-
-ebu3b:Rm_3236 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3236 .
-
-ebu3b:Rm_3240 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3240 .
-
-ebu3b:Rm_3242 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3242 .
-
-ebu3b:Rm_3246 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3246 .
-
-ebu3b:Rm_3250 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3250 .
-
-ebu3b:Rm_3252 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3252 .
-
-ebu3b:Rm_3254 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3254 .
-
-ebu3b:Rm_3256 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3256 .
-
-ebu3b:Rm_3258 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3258 .
-
-ebu3b:Rm_3260 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3260 .
-
-ebu3b:Rm_3262 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3262 .
-
-ebu3b:Rm_3Xxx a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_3Xxx .
-
-ebu3b:Rm_4102 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4102 .
-
-ebu3b:Rm_4105 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4105 .
-
-ebu3b:Rm_4106 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4106 .
-
-ebu3b:Rm_4107 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4107 .
-
-ebu3b:Rm_4109 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4109 .
-
-ebu3b:Rm_4110 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4110 .
-
-ebu3b:Rm_4111 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4111 .
-
-ebu3b:Rm_4114 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4114 .
-
-ebu3b:Rm_4118 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4118 .
-
-ebu3b:Rm_4119 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4119 .
-
-ebu3b:Rm_4121 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4121 .
-
-ebu3b:Rm_4122 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4122 .
-
-ebu3b:Rm_4126 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4126 .
-
-ebu3b:Rm_4127 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4127 .
-
-ebu3b:Rm_4128 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4128 .
-
-ebu3b:Rm_4130 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4130 .
-
-ebu3b:Rm_4132 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4132 .
-
-ebu3b:Rm_4134 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4134 .
-
-ebu3b:Rm_4136 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4136 .
-
-ebu3b:Rm_4138 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4138 .
-
-ebu3b:Rm_4140 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4140 .
-
-ebu3b:Rm_4142 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4142 .
-
-ebu3b:Rm_4144 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4144 .
-
-ebu3b:Rm_4146 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4146 .
-
-ebu3b:Rm_4148 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4148 .
-
-ebu3b:Rm_4150 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4150 .
-
-ebu3b:Rm_4152 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4152 .
-
-ebu3b:Rm_4154 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4154 .
-
-ebu3b:Rm_4200A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4200A .
-
-ebu3b:Rm_4202 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4202 .
-
-ebu3b:Rm_4203 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4203 .
-
-ebu3b:Rm_4205 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4205 .
-
-ebu3b:Rm_4207 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4207 .
-
-ebu3b:Rm_4208 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4208 .
-
-ebu3b:Rm_4213 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4213 .
-
-ebu3b:Rm_4214 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4214 .
-
-ebu3b:Rm_4215 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4215 .
-
-ebu3b:Rm_4217 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4217 .
-
-ebu3b:Rm_4219 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4219 .
-
-ebu3b:Rm_4220 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4220 .
-
-ebu3b:Rm_4223 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4223 .
-
-ebu3b:Rm_4226 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4226 .
-
-ebu3b:Rm_4230 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4230 .
-
-ebu3b:Rm_4231 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4231 .
-
-ebu3b:Rm_4232 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4232 .
-
-ebu3b:Rm_4236 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4236 .
-
-ebu3b:Rm_4240 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4240 .
-
-ebu3b:Rm_4242 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4242 .
-
-ebu3b:Rm_4246 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4246 .
-
-ebu3b:Rm_4250 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4250 .
-
-ebu3b:Rm_4252 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4252 .
-
-ebu3b:Rm_4254 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4254 .
-
-ebu3b:Rm_4256 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4256 .
-
-ebu3b:Rm_4258 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4258 .
-
-ebu3b:Rm_4262 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4262 .
-
-ebu3b:Rm_4Xxx a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_4Xxx .
-
-ebu3b:Rm_B102C a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B102C .
-
-ebu3b:Rm_B103 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B103 .
-
-ebu3b:Rm_B103A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B103A .
-
-ebu3b:Rm_B109 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B109 .
-
-ebu3b:Rm_B200B a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B200B .
-
-ebu3b:Rm_B200C a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B200C .
-
-ebu3b:Rm_B210 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B210 .
-
-ebu3b:Rm_B215 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B215 .
-
-ebu3b:Rm_B220 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B220 .
-
-ebu3b:Rm_B222 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B222 .
-
-ebu3b:Rm_B224 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B224 .
-
-ebu3b:Rm_B225 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B225 .
-
-ebu3b:Rm_B230 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B230 .
-
-ebu3b:Rm_B230A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B230A .
-
-ebu3b:Rm_B240 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B240 .
-
-ebu3b:Rm_B240A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B240A .
-
-ebu3b:Rm_B250 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B250 .
-
-ebu3b:Rm_B250A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B250A .
-
-ebu3b:Rm_B260 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B260 .
-
-ebu3b:Rm_B260A a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B260A .
-
-ebu3b:Rm_B270 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B270 .
-
-ebu3b:Rm_B275 a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Rm_B275 .
-
-ebu3b:Server_Room a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Server_Room .
-
 ebu3b:TUNING_POINTS_CWDP_PID_CWDP_PID a brick:Point,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_Chilled_Water_System .
@@ -19699,9 +19736,6 @@ ebu3b:TUNING_POINT_HWDP_PID_PM5PB a brick:Point,
         owl:NamedIndividual ;
     brickframe:isPointOf ebu3b:EBU3B_Hot_Water_System .
 
-ebu3b:Unknown a brick:Room ;
-    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Unknown .
-
 ebu3b:BSB_Solar_Panel_Battery a brick:Battery,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:BSB_Solar_Panel .
@@ -19742,6 +19776,8 @@ ebu3b:EBU3B_Domestic_Hot_Water_System_Valve a brick:Valve,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_Domestic_Hot_Water_System .
 
+ebu3b:EBU3B_Elevator a brick:Elevator .
+
 ebu3b:EBU3B_HVAC_Zone_Rm_1Xxx a brick:HVAC_Zone ;
     brickframe:isPartOf ebu3b:EBU3B_Floor_1 .
 
@@ -19765,6 +19801,9 @@ ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1_Valve_1A a brick:Valve,
 ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1_Valve_1B a brick:Valve,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_Hot_Water_System_Heat_Exchanger_1 .
+
+ebu3b:EBU3B_Server_Room a brick:Room ;
+    brickframe:isPartOf ebu3b:EBU3B_HVAC_Zone_Server_Room .
 
 ebu3b:EBU3B_VAV_Rm_1100A_Reheat_Valve a brick:Reheat_Valve,
         owl:NamedIndividual ;
@@ -22689,9 +22728,6 @@ ebu3b:EBU3B_AHU_1_Economizer a brick:Economizer,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_AHU_1 .
 
-ebu3b:EBU3B_CRAC a brick:CRAC,
-        owl:NamedIndividual .
-
 ebu3b:EBU3B_Chilled_Water_System_Pump a brick:Pump,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_Chilled_Water_System .
@@ -23402,8 +23438,6 @@ ebu3b:BSB_Weather a brick:Weather,
 ebu3b:EBU2_Weather a brick:Weather,
         owl:NamedIndividual .
 
-ebu3b:EBU3B a brick:Building .
-
 ebu3b:EBU3B_HVAC_Zone_Rm_B210 a brick:HVAC_Zone ;
     brickframe:isPartOf ebu3b:EBU3B_Basement .
 
@@ -23427,6 +23461,11 @@ ebu3b:EBU3B_HVAC_Zone_Rm_B270 a brick:HVAC_Zone ;
 
 ebu3b:Hubbs_Hall_Weather a brick:Weather,
         owl:NamedIndividual .
+
+ebu3b:EBU3B_CRAC a brick:CRAC,
+        owl:NamedIndividual .
+
+ebu3b:EBU3B a brick:Building .
 
 ebu3b:EBU3B_AHU_1_Return_Fan_1_VFD a brick:VFD,
         owl:NamedIndividual ;
@@ -23460,9 +23499,6 @@ ebu3b:EBU3B_AHU_1_Supply_Fan_4_VFD a brick:VFD,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_AHU_1_Supply_Fan_4 .
 
-ebu3b:EBU3B_Chilled_Water_System a brick:Chilled_Water_System,
-        owl:NamedIndividual .
-
 ebu3b:EBU3B_Chilled_Water_System_Pump_1_VFD a brick:VFD,
         owl:NamedIndividual ;
     brickframe:isPartOf ebu3b:EBU3B_Chilled_Water_System_Pump_1 .
@@ -23483,7 +23519,7 @@ ebu3b:EBU3B_VAV_Rm_B222 a brick:VAV,
         owl:NamedIndividual ;
     brickframe:feeds ebu3b:EBU3B_HVAC_Zone_Rm_B222 .
 
-ebu3b:EBU3B_Hot_Water_System a brick:Hot_Water_System,
+ebu3b:EBU3B_Chilled_Water_System a brick:Chilled_Water_System,
         owl:NamedIndividual .
 
 ebu3b:EBU3B_VAV_Rm_1203 a brick:VAV,
@@ -23541,6 +23577,9 @@ ebu3b:EBU3B_VAV_Rm_B224 a brick:VAV,
 ebu3b:EBU3B_VAV_Rm_B230A a brick:VAV,
         owl:NamedIndividual ;
     brickframe:feeds ebu3b:EBU3B_HVAC_Zone_Rm_B230A .
+
+ebu3b:EBU3B_Hot_Water_System a brick:Hot_Water_System,
+        owl:NamedIndividual .
 
 ebu3b:EBU3B_VAV_Rm_3223 a brick:VAV,
         owl:NamedIndividual ;

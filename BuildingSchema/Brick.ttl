@@ -273,6 +273,12 @@
  :Meter  rdfs:subClassOf   :Point;
 			 rdfs:label "Meter"@en .
 
+ :Power_Meter  rdfs:subClassOf   :Meter;
+			 rdfs:label "Power Meter"@en .
+
+ :Thermal_Power_Meter  rdfs:subClassOf   :Power_Meter;
+			 rdfs:label "Thermal Power Meter"@en .
+
  :Flow_Meter  rdfs:subClassOf   :Meter;
 			 rdfs:label "Flow Meter"@en .
 
@@ -398,9 +404,6 @@
 
  :Room_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
 			 rdfs:label "Room Temperature Sensor"@en .
-
- :Power_Meter  rdfs:subClassOf   :Meter;
-			 rdfs:label "Power Meter"@en .
 
  :Torque_Sensor  rdfs:subClassOf   :Sensor;
 			 rdfs:label "Torque Sensor"@en .
@@ -716,6 +719,10 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:System ];
 			 rdfs:label "Power System"@en .
+
+ :Elevator  rdfs:subClassOf   :Equipment;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Elevator ];
+			 rdfs:label "Elevator"@en .
 
  :Thermal_Energy_Storage  rdfs:subClassOf   :Energy_Storage;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
@@ -2613,6 +2620,32 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter ];
 			 rdfs:label "Power Meter"@en .
 
+ :Electrical_Power_Meter  rdfs:subClassOf   :Power_Meter;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Electrical ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter ];
+			 rdfs:label "Electrical Power Meter"@en .
+
+ :Thermal_Power_Meter  rdfs:subClassOf   :Power_Meter;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter ];
+			 rdfs:label "Thermal Power Meter"@en .
+
+ :Heating_Thermal_Power_Meter  rdfs:subClassOf   :Thermal_Power_Meter;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heating ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter ];
+			 rdfs:label "Heating Thermal Power Meter"@en .
+
+ :Cooling_Thermal_Power_Meter  rdfs:subClassOf   :Thermal_Power_Meter;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thermal ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Meter ];
+			 rdfs:label "Cooling Thermal Power Meter"@en .
+
  :Hot_Water_Flow_Meter  rdfs:subClassOf   :Flow_Meter;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
@@ -3139,6 +3172,12 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Speed ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
 			 rdfs:label "Return Fan Differential Speed Sensor"@en .
+
+ :Differential_Pressure_Sensor  rdfs:subClassOf   :Pressure_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Differential ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Differential Pressure Sensor"@en .
 
  :Heat_Wheel_Differential_Pressure_Sensor  rdfs:subClassOf   :Differential_Pressure_Sensor;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heat ];
@@ -3933,6 +3972,15 @@
 			 owl:equivalentClass :Discharge_Air_Static_Pressure_Integral_Time_Setpoint ;
 			 rdfs:label "Discharge Air Static Pressure Integral Time Setpoint"@en .
 
+ :_Supply_Air_Integrative_Gain_Factor  rdfs:subClassOf   :Integral_Time_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Integrative ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Gain ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Factor ];
+			 owl:equivalentClass :Supply_Air_Static_Pressure_Integral_Time_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Integral Time Setpoint"@en .
+
  :Discharge_Air_Static_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Discharge ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
@@ -3943,6 +3991,15 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
 			 rdfs:label "Discharge Air Static Pressure Proportional Band Setpoint"@en .
 
+ :_Supply_Air_Proportional_Gain_Factor  rdfs:subClassOf   :Proportional_Band_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Proportional ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Gain ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Factor ];
+			 owl:equivalentClass :Discharge_Air_Static_Pressure_Proportional_Band_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Proportional Band Setpoint"@en .
+
  :Supply_Air_Static_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
@@ -3951,7 +4008,7 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Proportional ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Band ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
-			 owl:equivalentClass :Discharge_Air_Static_Pressure_Proportional_Band_Setpoint ;
+			 owl:equivalentClass :_Supply_Air_Proportional_Gain_Factor ;
 			 rdfs:label "Discharge Air Static Pressure Proportional Band Setpoint"@en .
 
  :Discharge_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Static_Pressure_Setpoint;
@@ -5641,3 +5698,18 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
 			 rdfs:label "Domestic Hot Water"@en .
+
+ :Fan_Speed_Reset_Command  rdfs:subClassOf   :Reset_Command;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fan ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Speed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Reset ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
+			 rdfs:label "Fan Speed Reset Command"@en .
+
+ :Cooling_Coil_Valve_Pressure_Sensor  rdfs:subClassOf   :Pressure_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Coil ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Cooling Coil Valve Pressure Sensor"@en .
