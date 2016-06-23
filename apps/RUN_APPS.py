@@ -411,6 +411,32 @@ printResults(res)
 print
 
 print "DO THIS!!! --- Fault Detection Diagnosis ---"
+print "Get sensors for AHU"
+res = g.query("""
+SELECT ?ahu ?sensor
+WHERE {
+    ?ahu rdf:type/rdfs:subClassOf* brick:AHU .
+    ?ahu (bf:feeds|bf:hasPoint|bf:hasPart|bf:contains)* ?sensor .
+
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Reheat_Valve_Command }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Cooling_Valve_Command }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Mixed_Air_Temperature_Sensor }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Outside_Air_Temperature_Sensor }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Return_Air_Temperature_Sensor }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Supply_Air_Temperature_Sensor }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Outside_Air_Humidity_Sensor }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Return_Air_Temperature_Sensor}
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Outside_Air_Damper_Position_Sensor }
+}""")
+printResults(res)
 
 print
 
