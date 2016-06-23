@@ -148,6 +148,10 @@ def main():
 					g.add((GHC[blank],RDF.type, OWL.NamedIndividual))
 					g.add((GHC[blank],RDF.type, BRICK[Equip]))
 					if(Equip != "Meter" and Equip != "AHU"):
+						number = re.search('[0-9]+',blank)
+						floor = number.group()[0]
+						g.add((GHC[floor+"Floor"], RDF.type, BRICK["Floor"]))
+						g.add((GHC[blank+"Room"], BRICKFRAME.hasPart, GHC[blank+"Room"]))
 						g.add((GHC[blank+"Room"], RDF.type, OWL.NamedIndividual))
 						g.add((GHC[blank+"Room"], RDF.type, BRICK["Room"]))
 						if(Equip != "FCU"):
