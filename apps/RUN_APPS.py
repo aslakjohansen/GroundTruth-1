@@ -102,11 +102,10 @@ res = g.query("SELECT ?a ?b WHERE {?a bf:hasToken ?b .}")
 for row in res:
     g.add((row[1], BRICKFRAME.isTokenOf, row[0]))
 
-
 print "--- Occupancy Modeling App ---"      ############################################ Occupancy Modeling
 print "Finding Temp sensors in all rooms"
 res = g.query("""
-SELECT DISTINCT ?sensor ?vav
+SELECT DISTINCT ?sensor ?room
 WHERE {
 
     {
@@ -171,6 +170,7 @@ WHERE {
     ?sensor bf:isPointOf ?room .
 
 }""")
+printResults(res)
 
 
 print "Finding all power meters for equipment in rooms"
@@ -209,7 +209,7 @@ WHERE {
     ?meter bf:isPointOf ?equipment .
 
     ?equipment rdf:type ?class .
-    ?class rdfs:subClassOf+ brick:HVAC .
+    ?class rdfs:subClassOf+ brick:Heating_Ventilation_Air_Conditioning_System .
 
     {
         {?zone rdf:type brick:HVAC_Zone}
@@ -306,7 +306,7 @@ WHERE {
       ?class rdfs:subClassOf+ brick:Lighting_System .}
     UNION
     { ?equipment rdf:type ?class .
-      ?class rdfs:subClassOf+ brick:HVAC .}
+      ?class rdfs:subClassOf+ brick:Heating_Ventilation_Air_Conditioning_System .}
 }""")
 printResults(res)
 
@@ -372,15 +372,21 @@ printResults(res)
 
 print "Find power meters for cooling loop, heating loop"
 res = g.query("""
-SELECT ?equip ?equip_type ?meter
+SELECT ?equip ?meter
 WHERE {
     ?meter rdf:type brick:Power_Meter .
 
-    ?equip rdf:type ?class .
-    ?class rdfs:subClassOf+ brick:Water_System .
-    ?meter bf:isPointOf ?equip .
+    ?meter bf:isPointOf* ?equip .
+
+    ?equip bf:isPartOf* ?thing .
+
+    {?thing rdf:type/rdfs:subClassOf* brick:Water_System }
+    UNION
+    {?thing rdf:type/rdfs:subClassOf* brick:Heating_Ventilation_Air_Conditioning_System }
 }""")
 printResults(res)
+printTuples(res)
+
 
 print
 

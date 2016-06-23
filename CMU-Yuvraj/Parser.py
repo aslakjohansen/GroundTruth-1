@@ -17,8 +17,8 @@ def main():
 	Equipment = dict()
 	print "hi"
 	BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
-	GHC = rdflib.Namespace('http://cmu.edu/building/ontology/ghc#')
 	BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+	GHC = rdflib.Namespace('http://cmu.edu/building/ontology/ghc#')
 	#RDF, RDFS and OWL have already been imported in the library initializations
 	print GHC["test"]
 	#Initiate graph from base ttl file
@@ -153,12 +153,12 @@ def main():
 						if(Equip != "FCU"):
 							g.add((GHC[blank+"Zone"], RDF.type, OWL.NamedIndividual))
 							g.add((GHC[blank+"Zone"], RDF.type, BRICK["HVAC_Zone"]))
-							g.add((GHC[blank+"Zone"], BRICKFRAME.contains, GHC[blank+"Room"]))
-							g.add((GHC[blank+"Room"], BRICKFRAME.isLocatedIn, GHC[blank+"Zone"]))
+							g.add((GHC[blank+"Zone"], BRICKFRAME.hasPoint, GHC[blank+"Room"]))
+							g.add((GHC[blank+"Room"], BRICKFRAME.isPointOf, GHC[blank+"Zone"]))
 							g.add((GHC[blank], BRICKFRAME.feeds, GHC[blank+"Zone"]))
 							g.add((GHC[blank], BRICKFRAME.feeds, GHC[blank+"Room"]))
-							g.add((GHC[blank+"Room"], BRICKFRAME.isFeedBy, GHC[blank]))
-							g.add((GHC[blank+"Zone"], BRICKFRAME.isFeedBy, GHC[blank]))
+							g.add((GHC[blank+"Room"], BRICKFRAME.isFedBy, GHC[blank]))
+							g.add((GHC[blank+"Zone"], BRICKFRAME.isFedBy, GHC[blank]))
 
 						g.add((x, BRICKFRAME.isLocatedIn, GHC[blank+"Room"]))
 						g.add((GHC[blank+"Room"], BRICKFRAME.contains, x))
@@ -195,7 +195,7 @@ def main():
 		for item in TagsetsToTags.keys():
 			x = BRICK[item]
 			for value in TagsetsToTags[item]:
-				g.add((x,BRICK.hasTag,BRICK[value]))
+				g.add((x,BRICKFRAME.hasTag,BRICK[value]))
 	with open('AHURelations2.csv', 'rU') as relations:
 		reader = csv.DictReader(relations)
 		for row in reader:
