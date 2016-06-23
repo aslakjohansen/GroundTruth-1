@@ -440,13 +440,17 @@ WHERE {
 
     ?equip  rdf:type    brick:Equipment .
     ?loc    rdf:type    brick:Location .
-    { ?room   bf:isLocatedIn ?loc }
-    UNION
-    { ?room   bf:isPartOf ?loc }
+    {
+        { ?room   bf:isLocatedIn ?loc }
+        UNION
+        { ?room   bf:isPartOf ?loc }
+    }
     ?meter  bf:isPointOf+ ?loc
-    { ?equip  bf:isLocatedIn+ ?loc }
-    UNION
-    { ?equip  bf:isPartOf+ ?loc }
+    {
+        { ?equip  bf:isLocatedIn+ ?loc }
+        UNION
+        { ?equip  bf:isPartOf+ ?loc }
+    }
 }
 """)
 printResults(res)
