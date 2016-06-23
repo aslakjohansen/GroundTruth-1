@@ -1,4 +1,5 @@
 import rdflib
+import re
 import csv
 from rdflib.namespace import OWL, RDF, RDFS
 from rdflib import URIRef
@@ -35,13 +36,14 @@ with open('point.csv', 'r') as src:
     ptList = csv.DictReader(src)
     for pt in ptList:
         label = pt['original label']
+        label = re.sub('\s+','_',label)
         pt_type = pt['parsed tagset']
         pt_type = BRICK[pt_type]
         if (pt_type, None, None) in brick_graph:
             building_graph.add((RICE[label], RDF.type, pt_type))
+            print pt_type
         else:
-            building_graph.add((RICE[label], RDF.type, BRICK.Equipment))
-
+            building_graph.add((RICE[label], RDF.type, BRICK.Point))
         #pt_loc = pt['room']
         #building_graph.add((pt['original label'], BRICKFRAME.isLocatedIn, RICE[pt_loc]))
 
