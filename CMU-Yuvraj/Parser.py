@@ -16,8 +16,9 @@ def main():
 	TagsetsToTags = dict()
 	Equipment = dict()
 	print "hi"
-	BRICK = rdflib.Namespace('http://buildsys.org/ontologies/brick#')
+	BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
 	GHC = rdflib.Namespace('http://cmu.edu/building/ontology/ghc#')
+	BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
 	#RDF, RDFS and OWL have already been imported in the library initializations
 	print GHC["test"]
 	#Initiate graph from base ttl file
@@ -152,15 +153,15 @@ def main():
 						if(Equip != "FCU"):
 							g.add((GHC[blank+"Zone"], RDF.type, OWL.NamedIndividual))
 							g.add((GHC[blank+"Zone"], RDF.type, BRICK["HVAC_Zone"]))
-							g.add((GHC[blank+"Zone"], BRICK.contains, GHC[blank+"Room"]))
-							g.add((GHC[blank+"Room"], BRICK.isLocatedIn, GHC[blank+"Zone"]))
-							g.add((GHC[blank], BRICK.feeds, GHC[blank+"Zone"]))
-							g.add((GHC[blank], BRICK.feeds, GHC[blank+"Room"]))
-							g.add((GHC[blank+"Room"], BRICK.isFeedBy, GHC[blank]))
-							g.add((GHC[blank+"Zone"], BRICK.isFeedBy, GHC[blank]))
+							g.add((GHC[blank+"Zone"], BRICKFRAME.contains, GHC[blank+"Room"]))
+							g.add((GHC[blank+"Room"], BRICKFRAME.isLocatedIn, GHC[blank+"Zone"]))
+							g.add((GHC[blank], BRICKFRAME.feeds, GHC[blank+"Zone"]))
+							g.add((GHC[blank], BRICKFRAME.feeds, GHC[blank+"Room"]))
+							g.add((GHC[blank+"Room"], BRICKFRAME.isFeedBy, GHC[blank]))
+							g.add((GHC[blank+"Zone"], BRICKFRAME.isFeedBy, GHC[blank]))
 
-						g.add((x, BRICK.isLocatedIn, GHC[blank+"Room"]))
-						g.add((GHC[blank+"Room"], BRICK.contains, x))
+						g.add((x, BRICKFRAME.isLocatedIn, GHC[blank+"Room"]))
+						g.add((GHC[blank+"Room"], BRICKFRAME.contains, x))
 
 				#	g.add((GHC[blank],BRICH.isLocatedIn,GHC[location]))
 				#	if not(NewBelong in Equipment):
@@ -173,11 +174,11 @@ def main():
 				#	g.add((GHC[NewEquip],BRICK.isPartOf,GHC[NewBelong]))
 				#	g.add((GHC[NewEquip],BRICK.hasLocation, GHC[location]))
 				if(Equip !=""):
-					g.add((GHC[blank], BRICK.hasPoint, x))
-					g.add((GHC[blank+"Room"],BRICK.hasPoint,x))
+					g.add((GHC[blank], BRICKFRAME.hasPoint, x))
+					g.add((GHC[blank+"Room"],BRICKFRAME.hasPoint,x))
 					print x
-					g.add((x, BRICK.isPointOf, GHC[blank]))
-					g.add((x, BRICK.isPointOf, GHC[blank+"Room"]))
+					g.add((x, BRICKFRAME.isPointOf, GHC[blank]))
+					g.add((x, BRICKFRAME.isPointOf, GHC[blank+"Room"]))
 			#	if Equip == "":
 			#		g.add((GHC['GHC_HVAC'],BRICK.hasPoint,x))
 							
@@ -199,7 +200,7 @@ def main():
 		reader = csv.DictReader(relations)
 		for row in reader:
 			new = re.sub('_','-',row['First'])
-			g.add((GHC[new+'_I'],BRICK.feeds,GHC[row['Third']]))
+			g.add((GHC[new+'_I'],BRICKFRAME.feeds,GHC[row['Third']]))
 	
 #	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,OWL.NamedIndividual))
 	if((BRICK["Run_Request"],None,None) in g):
