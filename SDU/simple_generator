@@ -657,6 +657,7 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
                 g.add( (entity, RDFS.label, Literal(group['id'])) )
                 g.add( (entity, RDF.type, GTC['LEDGO_Lighting_System']) )
                 g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+                g.add( (entity, BRICKFRAME['isPartOf'], room) )
                 g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
                 g.add( (entity, BRICKFRAME['feeds'], lighting_zone) )
                 g.add( (entity, BRICKFRAME['feeds'], room) )
