@@ -1,0 +1,29 @@
+@prefix brick: <http://buildsys.org/ontologies/Brick#> .
+@prefix brickframe: <http://buildsys.org/ontologies/BrickFrame#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rice: <http://virginia.edu/building/ontology/rice#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rice:RICE_Basement a brick:Floor ;
+    brickframe:isPartof rice:RICE .
+
+rice:RICE_Floor_1 a brick:Floor ;
+    brickframe:isPartof rice:RICE .
+
+rice:RICE_Floor_2 a brick:Floor ;
+    brickframe:isPartof rice:RICE .
+
+rice:RICE_Floor_3 a brick:Floor ;
+    brickframe:isPartof rice:RICE .
+
+rice:RICE_Floor_4 a brick:Floor ;
+    brickframe:isPartof rice:RICE .
+
+rice:RICE_Floor_5 a brick:Floor ;
+    brickframe:isPartof rice:RICE .
+
+rice:RICE a brick:Building .
+
