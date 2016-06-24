@@ -441,25 +441,15 @@ printResults(res)
 print
 
 print "--- Non-Intrusive Load Monitoring App ---"
-print "Get equipment, power meters and what floor/room they are in"
+print "Get equipment, power meters and what they measure"
 res = g.query("""
-SELECT ?equip ?meter ?floor ?room
+SELECT ?x ?meter
 WHERE {
     ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
-
-    ?equip  rdf:type    brick:Equipment .
-    ?loc    rdf:type    brick:Location .
-    {
-        { ?room   bf:isLocatedIn ?loc }
-        UNION
-        { ?room   bf:isPartOf ?loc }
-    }
-    ?meter  bf:isPointOf+ ?loc
-    {
-        { ?equip  bf:isLocatedIn+ ?loc }
-        UNION
-        { ?equip  bf:isPartOf+ ?loc }
-    }
+    ?meter (bf:isPointOf|bf:isPartOf)* ?x .
+    {?x rdf:type/rdfs:subClassOf* brick:Equipment .}
+    UNION
+    {?x rdf:type/rdfs:subClassOf* brick:Location .}
 }
 """)
 printResults(res)
@@ -469,14 +459,18 @@ print
 print "--- Demand Response ---"
 print "Find all equipment (inside rooms) and associated power meters and control points"
 res = g.query("""
-SELECT ?equip ?meter ?cmd
+SELECT DISTINCT ?equip ?cmd ?status
 WHERE {
-    ?meter rdf:type/rdfs:subClassOf* brick:Power_Meter .
-    ?cmd    rdf:type    brick:Command .
-    ?equip  rdf:type    brick:Equipment .
-    ?room   rdf:type    brick:Room .
-    ?equip  bf:isLocatedIn ?room .
-    ?meter  bf:isPointOf ?equip .
-    ?cmd    bf:isPointOf ?equip .
+    ?equip  rdf:type/rdfs:subClassOf* brick:Equipment .
+    {
+    ?cmd rdf:type/rdfs:subClassOf*    brick:Command .
+    ?cmd (bf:isPointOf|bf:isPartOf)* ?equip .
+    }
+    UNION
+    {
+    ?status rdf:type/rdfs:subClassOf* brick:Status .
+    ?status (bf:isPointOf|bf:isPartOf)* ?equip .
+    }
+
 }""")
 printResults(res)

@@ -44,7 +44,7 @@ def main():
 				if (len(Values)>1):
 					changeablemapping[Key] = Values
 			#	print Values
-			reader = csv.DictReader(Mapping)	
+			reader = csv.DictReader(Mapping)
 			for row in reader:
 				#print row['Bas1'], row['TagSet'], row['Tags']
 				BasTag = row['Bas1']
@@ -55,7 +55,7 @@ def main():
 				x=row['TagSet']
 				NewX = re.sub(' ','_',x)
 				Key = re.sub(' ','_',Key)
-			#	print NewX	
+			#	print NewX
 				Tagsets[Key] = NewX
 				Tags = row['Tags']
 				listTags = Tags.split(';')
@@ -81,7 +81,7 @@ def main():
 			y=0
 			if('Parking' in ListBasTag[2]):
 				y=1
-			
+
 			NewKey = ListBasTag[1]+'/'+ListBasTag[3+y]+'/'+Key
 			NewKey = re.sub(' ','_',NewKey)
 			x = GHC[NewKey]
@@ -95,12 +95,12 @@ def main():
 				count1+=1
 				g.add((x,RDF.type,OWL.NamedIndividual))
 				g.add((x,RDF.type,BRICK[Tagsets[Key]]))
-				location = "" 
+				location = ""
 				for i in range(0,3+y):
 					location=location+ListBasTag[i]
 
 				location = re.sub(' ','_',location)
-				g.add((GHC[location],RDF.type,OWL.NamedIndividual))
+                                g.add((GHC[location],RDF.type,OWL.NamedIndividual))
 				g.add((GHC[location],RDF.type,BRICK["Location"]))
 			#	g.add((x,BRICK.hasLocation,GHC[location]))
 				if 'AHU' in ListBasTag[3+y]:
@@ -130,7 +130,7 @@ def main():
 			#	if(len(mapping) > 4):
 			#		Equip = re.sub(' ','_',mapping[4])
 			#		BelongsTo = re.sub(' ','_',mapping[3])
-			
+
 			#	LowestEquip = mapping[len(mapping)-1]
 			#	NewEquipment = ListBasTag[1]+'/'+ListBasTag[3+y]+'/'+Equip
 			#	NewBelongs =  ListBasTag[1]+'/'+ListBasTag[3+y]+'/'+BelongsTo
@@ -143,7 +143,7 @@ def main():
 			#	NewEquip = NewEquipment
 			#	print NewBelong, NewEquip, x
 				if not (blank in Equipment) and not 'Interface' in ListBasTag[3+y] and Equip!="":
-					
+
 					Equipment[blank] = 1
 					g.add((GHC[blank],RDF.type, OWL.NamedIndividual))
 					g.add((GHC[blank],RDF.type, BRICK[Equip]))
@@ -174,7 +174,7 @@ def main():
 				#		Equipment[NewBelong]=1
 				#		g.add((GHC[NewEquip],BRICK.hasLocation,GHC[location]))
 					#	print NewBelong, NewEquip
-					
+
 				#	g.add((GHC[NewEquip],BRICK.isPartOf,GHC[NewBelong]))
 				#	g.add((GHC[NewEquip],BRICK.hasLocation, GHC[location]))
 				if(Equip !=""):
@@ -185,8 +185,8 @@ def main():
 					g.add((x, BRICKFRAME.isPointOf, GHC[blank+"Room"]))
 			#	if Equip == "":
 			#		g.add((GHC['GHC_HVAC'],BRICK.hasPoint,x))
-							
-					
+
+
 			else:
 				Total[Key]=1
 			#	print Key
@@ -195,7 +195,7 @@ def main():
 		#	if ('AHU' in ListBasTag[3]):
 		#		print "3",ListBasTag[3]
 		#	if ('AHU' in ListBasTag[4]):
-		#		print "4",ListBasTag[4]	
+		#		print "4",ListBasTag[4]
 		for item in TagsetsToTags.keys():
 			x = BRICK[item]
 			for value in TagsetsToTags[item]:
@@ -205,7 +205,7 @@ def main():
 		for row in reader:
 			new = re.sub('_','-',row['First'])
 			g.add((GHC[new+'_I'],BRICKFRAME.feeds,GHC[row['Third']]))
-	
+
 #	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,OWL.NamedIndividual))
 	if((BRICK["Run_Request"],None,None) in g):
 		print "Hi"
@@ -215,5 +215,5 @@ def main():
 	print count1
 	print count2
 	print len(Total.keys())
-	
+
 main();
