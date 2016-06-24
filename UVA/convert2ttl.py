@@ -51,9 +51,10 @@ with open('point.csv', 'r') as src:
             building_graph.add((RICE[label], RDF.type, OWL.NamedIndividual))
             building_graph.add((RICE[label], RDF.type, BRICK.Point))
 
-
         if pt_room:
             pt_room = BRICK[pt_room]
+            building_graph.add((RICE[pt_room], RDF.type, OWL.NamedIndividual))
+            building_graph.add((RICE[pt_room], RDF.type, BRICK["Location"]))
             building_graph.add((RICE[label], BRICKFRAME.isLocatedIn, RICE[pt_room]))
 
             if pt_zone:

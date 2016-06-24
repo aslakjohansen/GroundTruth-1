@@ -1671,6 +1671,87 @@ rice:ventRatioLimitVavVChilled_Beam_Source_VAS3 a brick:Point,
 
 <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#59> brickframe:isPointOf rice:HVAC_Zone5 .
 
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#105> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#107> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1071> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1072> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1091> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1092> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#122> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#128> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#13> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#150> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#160> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#20> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#220> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#276> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#326> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#505> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#512> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#514> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#516> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#52> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#530> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#534> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#542> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#561> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#57> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#58> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#59> a brick:Location,
+        owl:NamedIndividual .
+
 rice:HVAC_Zone7 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#506>,
         <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#552> .
 
@@ -1752,11 +1833,200 @@ rice:HVAC_Zone8 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#
 <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#7> brickframe:isPointOf rice:HVAC_Zone2,
         rice:HVAC_Zone3 .
 
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#101> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#102> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#103> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#104> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#106> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#108> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#11> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#15> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#154> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#156> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#17> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#19> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#201> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#202> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#203> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#204> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#205> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#207> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#208> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#209> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#210> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#211> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#222> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#224> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#226> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#230> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#232> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#24> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#242> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#252> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#259> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#50> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#501> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#502> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#503> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#504> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#506> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#507> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#508> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#509> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#513> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#521> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#522> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#524> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#526> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#527> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#528> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#532> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#536> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#54> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#557> a brick:Location,
+        owl:NamedIndividual .
+
 <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#32> brickframe:isPointOf rice:HVAC_Zone2,
         rice:HVAC_Zone3,
         rice:HVAC_Zone4 .
 
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#206> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#212> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#32> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#552> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#228> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#511> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#7> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#305> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#308> a brick:Location,
+        owl:NamedIndividual .
+
 rice:RICE a brick:Building .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> a brick:Location,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> a brick:Location,
+        owl:NamedIndividual .
 
 rice:HVAC_Zone6 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#156>,
         <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#201>,
