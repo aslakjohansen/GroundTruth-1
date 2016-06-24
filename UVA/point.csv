@@ -325,16 +325,16 @@ ventOptStatusV5th Floor Chilled Beam VAS1,Vent Operating Mode,,1,5,,,vent_Opt_St
 ventOptStatusV5th Floor Perimeter Devices VAS2,Vent Operating Mode,,2,5,,,vent_Opt_StatusV_th_Floor_Perimeter_Devices_VAS
 ventOptStatusVBasement Perimeter Devices2,Vent Operating Mode,,2,0,,,vent_Opt_StatusV_Basement_Perimeter_Devices
 ventOptStatusVChilled Beam Source VAS3,Vent Operating Mode,,3,,,,vent_Opt_StatusV_Chilled_Beam_Source_VAS
-Active Cool DAT Stptscc2AV003,Discharge Air Cooling Setpoint,,2,,,3,Active_Cool_DAT_Stptscc_AV
-Active Heat DAT Stptscc2AV005,Discharge Air Heating Setpoint,,2,,,5,Active_Heat_DAT_Stptscc_AV
-Cooling Stpt Activescc2AV006,Discharge Air Cooling Setpoint,,2,,,6,Cooling_Stpt_Activescc_AV
-Cooling Stpt Localdac3AV008,Discharge Air Cooling Setpoint,,3,,,8,Cooling_Stpt_Localdac_AV
+Active Cool DAT Stptscc2AV003,Discharge Air Temperature Cooling Setpoint,,2,,,3,Active_Cool_DAT_Stptscc_AV
+Active Heat DAT Stptscc2AV005,Discharge Air Temperature Heating Setpoint,,2,,,5,Active_Heat_DAT_Stptscc_AV
+Cooling Stpt Activescc2AV006,Discharge Air Temperature Cooling Setpoint,,2,,,6,Cooling_Stpt_Activescc_AV
+Cooling Stpt Localdac3AV008,Discharge Air Temperature Cooling Setpoint,,3,,,8,Cooling_Stpt_Localdac_AV
 Freeze Protect Low Limitpgm1AV013,Freeze Protect Low Limit,,1,,,13,Freeze_Protect_Low_Limitpgm_AV
-Heating Stpt Activescc2AV007,Discharge Air Heating Setpoint,,2,,,7,Heating_Stpt_Activescc_AV
+Heating Stpt Activescc2AV007,Discharge Air Temperature Heating Setpoint,,2,,,7,Heating_Stpt_Activescc_AV
 High Static Cutout Limitscc2AV022,High Static Pressure Cutout Limit,,2,,,22,High_Static_Cutout_Limitscc_AV
-LT Chiller CHW SP OPR,Chilled Water Temperature Setpoint,,,,,,LT_Chiller_CHW_SP_OPR
-Max CoolMin Ht DAT Stptscc2TrAV03,Discharge Air Cooling Setpoint,,2,,,3,Max_Cool_Min_Ht_DAT_Stptscc_TrAV
-OA CO Damper Close Limit,Outside Air Damper Close Limit,,,,,,OA_CO_Damper_Close_Limit
+LT Chiller CHW SP OPR,Chilled Water Supply Temperature Sensor,,,,,,LT_Chiller_CHW_SP_OPR
+Max CoolMin Ht DAT Stptscc2TrAV03,Discharge Air Temperature Cooling Setpoint,,2,,,3,Max_Cool_Min_Ht_DAT_Stptscc_TrAV
+OA CO Damper Close Limit,Outside Air Damper Close Limit Setpoint,,,,,,OA_CO_Damper_Close_Limit
 Occupied Offsetscc2,Unknown,,2,,,,Occupied_Offsetscc
 Occupied Standby Offsetscc2,Unknown,,2,,,,Occupied_Standby_Offsetscc
 RMI527 Zone Temp 8 Stpt,Zone Temperature Setpoint,,8,,527,,RMI_Zone_Temp_Stpt
@@ -347,9 +347,9 @@ Space CO2 Low Limit,CO2 Sensor,,,,,,Space_CO_Low_Limit
 Space Humidity High Limit,High Humidity Alarm Setpoint,,,,,,Space_Humidity_High_Limit
 Space Humidity Low Limit,Low Humidity Alarm Setpoint,,,,,,Space_Humidity_Low_Limit
 Space Stpt Activescc2AV017,Unknown,,2,,,17,Space_Stpt_Activescc_AV
-Thumbwheel Set point Hi Limit,Thumbwheel Setpoint High Limit,,,,,,Thumbwheel_Set_point_Hi_Limit
-Thumbwheel Set point Lo Limit,Thumbwheel Setpoint Low Limit,,,,,,Thumbwheel_Set_point_Lo_Limit
-Ventilation Ratio Limit BAS,Ventilation Ratio Limit,,,,,,Ventilation_Ratio_Limit_BAS
+Thumbwheel Set point Hi Limit,Thumbwheel Temperature High Limit Setpoint ,,,,,,Thumbwheel_Set_point_Hi_Limit
+Thumbwheel Set point Lo Limit,Thumbwheel Temperature Low Limit Setpoint ,,,,,,Thumbwheel_Set_point_Lo_Limit
+Ventilation Ratio Limit BAS,Ventilation Air Flow Ratio Limit Setpoint,,,,,,Ventilation_Ratio_Limit_BAS
 deltaTemperatureA1st Floor Area1,Unknown,,1,1,,,delta_TemperatureA_st_Floor_Area
 deltaTemperatureA2nd Floor Area1,Unknown,,1,2,,,delta_TemperatureA_nd_Floor_Area
 deltaTemperatureA5th Floor Area1,Unknown,,1,5,,,delta_TemperatureA_th_Floor_Area
