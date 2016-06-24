@@ -31,6 +31,14 @@ building_graph.add((RICE.Floor_2, BRICKFRAME.isPartof, RICE.RICE))
 building_graph.add((RICE.Floor_3, BRICKFRAME.isPartof, RICE.RICE))
 building_graph.add((RICE.Floor_4, BRICKFRAME.isPartof, RICE.RICE))
 building_graph.add((RICE.Floor_5, BRICKFRAME.isPartof, RICE.RICE))
+building_graph.add((RICE.AHU_1, RDF.type, BRICK.AHU))
+building_graph.add((RICE.AHU_2, RDF.type, BRICK.AHU))
+building_graph.add((RICE.AHU_3, RDF.type, BRICK.AHU))
+building_graph.add((RICE.AHU_4, RDF.type, BRICK.AHU))
+building_graph.add((RICE.AHU_1, BRICKFRAME.isPartof, RICE.RICE))
+building_graph.add((RICE.AHU_2, BRICKFRAME.isPartof, RICE.RICE))
+building_graph.add((RICE.AHU_3, BRICKFRAME.isPartof, RICE.RICE))
+building_graph.add((RICE.AHU_4, BRICKFRAME.isPartof, RICE.RICE))
 
 with open('point.csv', 'r') as src:
     ptList = csv.DictReader(src)
@@ -61,6 +69,13 @@ with open('point.csv', 'r') as src:
                 building_graph.add((RICE["HVAC_Zone" + pt_zone], RDF.type, BRICK.HVAC_Zone))
                 building_graph.add((RICE["HVAC_Zone" + pt_zone], BRICKFRAME.hasPart, RICE["Room" + pt_room]))
 
+                building_graph.add((RICE["VAV" + pt_zone], RDF.type, OWL.NamedIndividual))
+                building_graph.add((RICE["VAV" + pt_zone], RDF.type, BRICK.VAV))
+                building_graph.add((RICE["VAV" + pt_zone], BRICKFRAME.feeds, RICE["HVAC_Zone" + pt_zone]))
+                building_graph.add((RICE["VAV" + pt_zone], BRICKFRAME.hasPoint, RICE[label]))
+
+                building_graph.add((RICE["AHU" + pt_zone], BRICKFRAME.feeds, RICE["VAV" + pt_zone]))
+                
             if pt_floor:
                 building_graph.add((RICE["Floor" + pt_floor], BRICKFRAME.hasPart, RICE["Room" + pt_room]))
 

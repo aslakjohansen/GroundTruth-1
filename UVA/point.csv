@@ -28,16 +28,16 @@ ventOptVavAirflowGross5th Floor Chilled Beam VAS1,Discharge Air Flow Sensor,,1,5
 ventOptVavAirflowGross5th Floor Perimeter Devices VAS2,Discharge Air Flow Sensor,,2,5,,,vent_Opt_Vav_Airflow_Gross_th_Floor_Perimeter_Devices_VAS
 ventOptVavAirflowGrossBasement Perimeter Devices2,Discharge Air Flow Sensor,,2,,,,vent_Opt_Vav_Airflow_Gross_Basement_Perimeter_Devices
 ventOptVavAirflowGrossChilled Beam Source VAS3,Discharge Air Flow Sensor,,3,,,,vent_Opt_Vav_Airflow_Gross_Chilled_Beam_Source_VAS
-1st Floor Avg Space Humidity, Humidity Sensor,,,1,,,st_Floor_Avg_Space_Humidity
-2nd Floor Avg Space Humidity, Humidity Sensor,,,2,,,nd_Floor_Avg_Space_Humidity
-5th Floor Avg Space Humidity, Humidity Sensor,,,5,,,th_Floor_Avg_Space_Humidity
-Corridor Humidity BAS, Humidity Sensor,,,,,,Corridor_Humidity_BAS
+1st Floor Avg Space Humidity,Humidity Sensor,,,1,,,st_Floor_Avg_Space_Humidity
+2nd Floor Avg Space Humidity,Humidity Sensor,,,2,,,nd_Floor_Avg_Space_Humidity
+5th Floor Avg Space Humidity,Humidity Sensor,,,5,,,th_Floor_Avg_Space_Humidity
+Corridor Humidity BAS,Humidity Sensor,,,,,,Corridor_Humidity_BAS
 DA Humiditydac4UIP17,Discharge Air Humidity Sensor,,4,,,17,DA_Humiditydac_UIP
 Discharge Air Humiditydac1UIP09,Discharge Air Humidity Sensor,,1,,,9,Discharge_Air_Humiditydac_UIP
 Discharge Air Humiditydac2UIP09,Discharge Air Humidity Sensor,,2,,,9,Discharge_Air_Humiditydac_UIP
 Discharge Air Humiditydac3UIP09,Discharge Air Humidity Sensor,,3,,,9,Discharge_Air_Humiditydac_UIP
-East Space Humidityscc2UIP19, Humidity Sensor,,2,,,19,East_Space_Humidityscc_UIP
-Enter CDQ Regen Humidityscc2UIP24, Humidity Sensor,,2,,,24,Enter_CDQ_Regen_Humidityscc_UIP
+East Space Humidityscc2UIP19,Humidity Sensor,,2,,,19,East_Space_Humidityscc_UIP
+Enter CDQ Regen Humidityscc2UIP24,Humidity Sensor,,2,,,24,Enter_CDQ_Regen_Humidityscc_UIP
 Exhaust Air Humiditydac4UIP21,Exhaust Air Humidity Sensor,,4,,,21,Exhaust_Air_Humiditydac_UIP
 Humidity 1,Humidity Sensor,,1,,,,Humidity
 Humidity Corr NESHS,Humidity Sensor,,,,,,Humidity_Corr_NESHS
