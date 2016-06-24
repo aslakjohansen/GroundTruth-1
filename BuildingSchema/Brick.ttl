@@ -690,6 +690,60 @@
  :Hot_Water  rdfs:subClassOf   :Water;
 			 rdfs:label "Hot Water"@en .
 
+ :Speed_Reset_Command  rdfs:subClassOf   :Reset_Command;
+			 rdfs:label "Speed Reset Command"@en .
+
+ :Temperature_Low_Limit_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 rdfs:label "Temperature Low Limit Setpoint"@en .
+
+ :Temperature_High_Limit_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 rdfs:label "Temperature High Limit Setpoint"@en .
+
+ :Economizer_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 rdfs:label "Economizer Temperature Setpoint"@en .
+
+ :Enthalpy_Setpoint  rdfs:subClassOf   :Setpoint;
+			 rdfs:label "Enthalpy Setpoint"@en .
+
+ :Economizer_Enthalpy_Setpoint  rdfs:subClassOf   :Enthalpy_Setpoint;
+			 rdfs:label "Economizer Enthalpy Setpoint"@en .
+
+ :Dew_Point_Setpoint  rdfs:subClassOf   :Setpoint;
+			 rdfs:label "Dew Point Setpoint"@en .
+
+ :Economizer_Dew_Point_Setpoint  rdfs:subClassOf   :Dew_Point_Setpoint;
+			 rdfs:label "Economizer Dew Point Setpoint"@en .
+
+ :Entering_Water_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
+			 rdfs:label "Entering Water Temperature Sensor"@en .
+
+ :Leaving_Water_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
+			 rdfs:label "Leaving Water Temperature Sensor"@en .
+
+ :Demand_Sensor  rdfs:subClassOf   :Sensor;
+			 rdfs:label "Demand Sensor"@en .
+
+ :Load_Setpoint  rdfs:subClassOf   :Setpoint;
+			 rdfs:label "Load Setpoint"@en .
+
+ :Max_Load_Setpoint  rdfs:subClassOf   :Load_Setpoint;
+			 rdfs:label "Max Load Setpoint"@en .
+
+ :Temperature_Alarm  rdfs:subClassOf   :Alarm;
+			 rdfs:label "Temperature Alarm"@en .
+
+ :Failure_Alarm  rdfs:subClassOf   :Alarm;
+			 rdfs:label "Failure Alarm"@en .
+
+ :Timer  rdfs:subClassOf   :Point;
+			 rdfs:label "Timer"@en .
+
+ :On_Off_Command  rdfs:subClassOf   :Command;
+			 rdfs:label "On Off Command"@en .
+
+ :Valve_Pressure_Sensor  rdfs:subClassOf   :Pressure_Sensor;
+			 rdfs:label "Valve Pressure Sensor"@en .
+
  :Fire_Safety_System  rdfs:subClassOf   :Equipment;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fire ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Safety ];
@@ -770,6 +824,10 @@
  :Compressor  rdfs:subClassOf   :HVAC;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Compressor ];
 			 rdfs:label "Compressor"@en .
+
+ :Condensor  rdfs:subClassOf   :HVAC;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Condensor ];
+			 rdfs:label "Condensor"@en .
 
  :Inverter  rdfs:subClassOf   :Power_System;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Inverter ];
@@ -2032,6 +2090,18 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:On ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
 			 rdfs:label "AHU Fire Control Panel On Command"@en .
+
+ :Enable_Command  rdfs:subClassOf   :Command;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
+			 rdfs:label "Enable Command"@en .
+
+ :System_Enable_Command  rdfs:subClassOf   :Command;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:System ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
+			 owl:equivalentClass :Enable_Command ;
+			 rdfs:label "Enable Command"@en .
 
  :AHU_System_Enable_Command  rdfs:subClassOf   :Enable_Command;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:AHU ];
@@ -3652,10 +3722,16 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
 			 rdfs:label "Output Voltage Sensor"@en .
 
+ :_On_Timer  rdfs:subClassOf   :Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:On ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Timer ];
+			 rdfs:label "Run Time Sensor"@en .
+
  :Running_Hour_Sensor  rdfs:subClassOf   :Sensor;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Running ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hour ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 owl:equivalentClass :_On_Timer ;
 			 rdfs:label "Run Time Sensor"@en .
 
  :Run_Time_Sensor  rdfs:subClassOf   :Sensor;
@@ -5638,6 +5714,10 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status ];
 			 rdfs:label "Pump Enable Status"@en .
 
+ :Steam  rdfs:subClassOf   :Resource;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Steam ];
+			 rdfs:label "Steam"@en .
+
  :Mixed_Air  rdfs:subClassOf   :Air;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mixed ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
@@ -5699,7 +5779,7 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
 			 rdfs:label "Domestic Hot Water"@en .
 
- :Fan_Speed_Reset_Command  rdfs:subClassOf   :Reset_Command;
+ :Fan_Speed_Reset_Command  rdfs:subClassOf   :Speed_Reset_Command;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fan ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Speed ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Reset ];
@@ -5713,3 +5793,349 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
 			 rdfs:label "Cooling Coil Valve Pressure Sensor"@en .
+
+ :Return_Air_Temperature_Low_Limit_Alarm  rdfs:subClassOf   :Alarm;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Return ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Low ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
+			 rdfs:label "Return Air Temperature Low Limit Alarm"@en .
+
+ :Curtailment_Override_Command  rdfs:subClassOf   :Command;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Curtailment ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Override ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
+			 rdfs:label "Curtailment Override Command"@en .
+
+ :Discharge_Air_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Discharge ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Humidity ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Discharge Air Humidity Sensor"@en .
+
+ :Exhaust_Air_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Exhaust ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Humidity ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Exhaust Air Humidity Sensor"@en .
+
+ :Supply_Air_Duct_Pressure_Status  rdfs:subClassOf   :Pressure_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Duct ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status ];
+			 rdfs:label "Supply Air Duct Pressure Status"@en .
+
+ :VAV_Box_Operating_Mode_Status  rdfs:subClassOf   :Mode_Status;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VAV ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Box ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Operating ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mode ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status ];
+			 rdfs:label "VAV Box Operating Mode Status"@en .
+
+ :System_Mode_Status  rdfs:subClassOf   :Mode_Status;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:System ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mode ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status ];
+			 rdfs:label "System Mode Status"@en .
+
+ :Vent_Operating_Mode_Status  rdfs:subClassOf   :Mode_Status;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Vent ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Operating ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Mode ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Status ];
+			 rdfs:label "Vent Operating Mode Status"@en .
+
+ :Discharge_Air_Temperature_Cooling_Setpoint  rdfs:subClassOf   :Discharge_Air_Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Discharge ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Discharge Air Temperature Cooling Setpoint"@en .
+
+ :Discharge_Air_Temperature_Heating_Setpoint  rdfs:subClassOf   :Discharge_Air_Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Discharge ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Heating ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Discharge Air Temperature Heating Setpoint"@en .
+
+ :Freeze_Protect_Temperature_Low_Limit_Setpoint  rdfs:subClassOf   :Temperature_Low_Limit_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Freeze ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Protect ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Low ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Freeze Protect Temperature Low Limit Setpoint"@en .
+
+ :High_Static_Pressure_Cutout_Limit_Setpoint  rdfs:subClassOf   :Static_Pressure_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:High ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Static ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cutout ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "High Static Pressure Cutout Limit Setpoint"@en .
+
+ :Outside_Air_Damper_Close_Limit_Setpoint  rdfs:subClassOf   :Damper_Position_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Outside ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Close ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Outside Air Damper Close Limit Setpoint"@en .
+
+ :Thumbwheel_Temperature_Low_Limit_Setpoint  rdfs:subClassOf   :Temperature_Low_Limit_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thumbwheel ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Low ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Thumbwheel Temperature Low Limit Setpoint"@en .
+
+ :Thumbwheel_Temperature_High_Limit_Setpoint  rdfs:subClassOf   :Temperature_High_Limit_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Thumbwheel ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:High ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Thumbwheel Temperature High Limit Setpoint"@en .
+
+ :Ventilation_Air_Flow_Ratio_Limit_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Ventilation ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Flow ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Ratio ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Limit ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Ventilation Air Flow Ratio Limit Setpoint"@en .
+
+ :Supply_Air_Damper_Max_Position_Setpoint  rdfs:subClassOf   :Damper_Position_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Damper ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Max ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Position ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Supply Air Damper Max Position Setpoint"@en .
+
+ :Supply_Air_Duct_Max_Position_Setpoint  rdfs:subClassOf   :Damper_Position_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Duct ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Max ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Position ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 owl:equivalentClass :Supply_Air_Damper_Max_Position_Setpoint ;
+			 rdfs:label "Supply Air Damper Max Position Setpoint"@en .
+
+ :Economizer_Disable_Differential_Temperature_Setpoint  rdfs:subClassOf   :Economizer_Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Disable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Differential ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Disable Differential Temperature Setpoint"@en .
+
+ :Economizer_Disable_Differential_Enthalpy_Setpoint  rdfs:subClassOf   :Economizer_Enthalpy_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Disable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Differential ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enthalpy ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Disable Differential Enthalpy Setpoint"@en .
+
+ :Economizer_Disable_Fixed_Temperature_Setpoint  rdfs:subClassOf   :Economizer_Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Disable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fixed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Disable Fixed Temperature Setpoint"@en .
+
+ :Economizer_Disable_Fixed_Enthalpy_Setpoint  rdfs:subClassOf   :Economizer_Enthalpy_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Disable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fixed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enthalpy ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Disable Fixed Enthalpy Setpoint"@en .
+
+ :Economizer_Disable_Fixed_Dew_Point_Setpoint  rdfs:subClassOf   :Economizer_Dew_Point_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Disable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fixed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Dew ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Point ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Disable Fixed Dew Point Setpoint"@en .
+
+ :Economizer_Enable_Differential_Temperature_Setpoint  rdfs:subClassOf   :Economizer_Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Differential ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Enable Differential Temperature Setpoint"@en .
+
+ :Economizer_Enable_Differential_Enthalpy_Setpoint  rdfs:subClassOf   :Economizer_Enthalpy_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Differential ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enthalpy ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Enable Differential Enthalpy Setpoint"@en .
+
+ :Economizer_Enable_Fixed_Temperature_Setpoint  rdfs:subClassOf   :Economizer_Temperature_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fixed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Enable Fixed Temperature Setpoint"@en .
+
+ :Economizer_Enable_Fixed_Enthalpy_Setpoint  rdfs:subClassOf   :Economizer_Enthalpy_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fixed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enthalpy ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Enable Fixed Enthalpy Setpoint"@en .
+
+ :Economizer_Enable_Fixed_Dew_Point_Setpoint  rdfs:subClassOf   :Economizer_Dew_Point_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Economizer ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Enable ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Fixed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Dew ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Point ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Economizer Enable Fixed Dew Point Setpoint"@en .
+
+ :Cooling_Coil_Discharge_Air_Temperature_Sensor  rdfs:subClassOf   :Discharge_Air_Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Cooling ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Coil ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Discharge ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Cooling Coil Discharge Air Temperature Sensor"@en .
+
+ :Ice_Tank_Entering_Water_Temperature_Sensor  rdfs:subClassOf   :Entering_Water_Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Ice ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Tank ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Entering ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Ice Tank Entering Water Temperature Sensor"@en .
+
+ :Ice_Tank_Leaving__Water_Temperature_Sensor  rdfs:subClassOf   :Leaving_Water_Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Ice ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Tank ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Leaving ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Ice Tank Leaving  Water Temperature Sensor"@en .
+
+ :PreHeat_Coil_Entering_Air_Temperature_Sensor  rdfs:subClassOf   :Entering_Water_Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:PreHeat ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Coil ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Entering ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Air ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "PreHeat Coil Entering Air Temperature Sensor"@en .
+
+ :Hot_Water_Coil_Entering_Temperature_Sensor  rdfs:subClassOf   :Entering_Water_Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Hot ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Coil ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Entering ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Hot Water Coil Entering Temperature Sensor"@en .
+
+ :PreHeat_Coil_Leaving_Water_Temperature_Sensor  rdfs:subClassOf   :Leaving_Water_Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:PreHeat ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Coil ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Leaving ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "PreHeat Coil Leaving Water Temperature Sensor"@en .
+
+ :Peak_Power_Demand_Sensor  rdfs:subClassOf   :Demand_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Peak ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Power ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Demand ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Peak Power Demand Sensor"@en .
+
+ :Chiller_Max_Load_Setpoint  rdfs:subClassOf   :Max_Load_Setpoint;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chiller ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Max ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Load ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Setpoint ];
+			 rdfs:label "Chiller Max Load Setpoint"@en .
+
+ :Chiller_Supply_Water_Temperature_Alarm  rdfs:subClassOf   :Temperature_Alarm;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chiller ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Supply ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Water ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
+			 rdfs:label "Chiller Supply Water Temperature Alarm"@en .
+
+ :Chiller_Failure_Alarm  rdfs:subClassOf   :Failure_Alarm;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chiller ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Failure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Alarm ];
+			 rdfs:label "Chiller Failure Alarm"@en .
+
+ :On_Timer  rdfs:subClassOf   :Timer;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:On ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Timer ];
+			 rdfs:label "On Timer"@en .
+
+ :Steam_On_Off_Command  rdfs:subClassOf   :On_Off_Command;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Steam ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:On ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Off ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
+			 rdfs:label "Steam On Off Command"@en .
+
+ :Condensor_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Condensor ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Temperature ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Condensor Temperature Sensor"@en .
+
+ :Chilled_Valve_Pressure_Sensor  rdfs:subClassOf   :Valve_Pressure_Sensor;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Chilled ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Pressure ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Sensor ];
+			 rdfs:label "Chilled Valve Pressure Sensor"@en .
+
+ :VFD_Speed_Reset_Command  rdfs:subClassOf   :Speed_Reset_Command;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:VFD ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Speed ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Reset ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Command ];
+			 rdfs:label "VFD Speed Reset Command"@en .
+
+ :Isolation_Valve  rdfs:subClassOf   :Valve;
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Isolation ];
+			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Valve ];
+			 rdfs:label "Isolation Valve"@en .
