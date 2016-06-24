@@ -7,259 +7,311 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://virginia.edu/building/ontology/rice#1st_Floor_Avg_Space_Humidity> a brick:Point .
+<http://virginia.edu/building/ontology/rice#1st_Floor_Avg_Space_Humidity> a brick:Point,
+        owl:NamedIndividual .
 
-<http://virginia.edu/building/ontology/rice#2_Mag_CHW_Return_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2_Mag_CHW_Return_Temp> a brick:Chilled_Water_Return_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2_Mag_CHW_Supply_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2_Mag_CHW_Supply_Temp> a brick:Chilled_Water_Discharge_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2_Mag_HW_Return_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2_Mag_HW_Return_Temp> a brick:Hot_Water_Return_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2_Mag_HW_Supply_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2_Mag_HW_Supply_Temp> a brick:Hot_Water_Supply_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2nd_Floor_Avg_Space_Humidity> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2nd_Floor_Avg_Space_Humidity> a brick:Point,
+        owl:NamedIndividual .
 
-<http://virginia.edu/building/ontology/rice#2nd_Floor_CHW_Return_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2nd_Floor_CHW_Return_Temp> a brick:Chilled_Water_Return_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2nd_Floor_CHW_Supply_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2nd_Floor_CHW_Supply_Temp> a brick:Chilled_Water_Discharge_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2nd_Floor_HW_Return_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2nd_Floor_HW_Return_Temp> a brick:Hot_Water_Supply_Temperature .
 
-<http://virginia.edu/building/ontology/rice#2nd_Floor_HW_Supply_Temp> a brick:Point .
+<http://virginia.edu/building/ontology/rice#2nd_Floor_HW_Supply_Temp> a brick:Chilled_Water_Discharge_Temperature .
 
-<http://virginia.edu/building/ontology/rice#5th_Floor_Avg_Space_Humidity> a brick:Point .
+<http://virginia.edu/building/ontology/rice#5th_Floor_Avg_Space_Humidity> a brick:Point,
+        owl:NamedIndividual .
 
-rice:AHU1_PreHeat_Coil_Temp a brick:Point .
+rice:AHU1_PreHeat_Coil_Temp a brick:Point,
+        owl:NamedIndividual .
 
-rice:AHU2_PreHeat_Coil_Temp a brick:Point .
+rice:AHU2_PreHeat_Coil_Temp a brick:Point,
+        owl:NamedIndividual .
 
-rice:AHU3_CHW_Return_Temppgm2UIP09 a brick:Point .
+rice:AHU3_CHW_Return_Temppgm2UIP09 a brick:Chilled_Water_Return_Temperature .
 
-rice:AHU3_HW_Supply_Temppgm2UIP11 a brick:Point .
+rice:AHU3_HW_Supply_Temppgm2UIP11 a brick:Hot_Water_Supply_Temperature .
 
-rice:AHU_3_Supply_Fan_Temp a brick:Point .
+rice:AHU_3_Supply_Fan_Temp a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Active_Cool_DAT_Stptscc2AV003 a brick:Point .
+rice:Active_Cool_DAT_Stptscc2AV003 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Active_Heat_DAT_Stptscc2AV005 a brick:Point .
+rice:Active_Heat_DAT_Stptscc2AV005 a brick:Point,
+        owl:NamedIndividual .
 
-rice:CB228_CHW_Return_Temp a brick:Point .
+rice:CB228_CHW_Return_Temp a brick:Chilled_Water_Return_Temperature ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#228> .
 
-rice:CB228_CHW_Supply_Temp a brick:Point .
+rice:CB228_CHW_Supply_Temp a brick:Chilled_Water_Discharge_Temperature ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#228> .
 
-rice:CB_CHW_Return_Temp a brick:Point .
+rice:CB_CHW_Return_Temp a brick:Chilled_Water_Return_Temperature .
 
-rice:CB_CHW_Supply_Temp a brick:Point .
+rice:CB_CHW_Supply_Temp a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CB_Flow_Meter_RMI308 a brick:Point .
+rice:CB_Flow_Meter_RMI308 a brick:Discharge_Air_Flow ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#308> .
 
-rice:CB_Return_Temp_RMI308 a brick:Point .
+rice:CB_Return_Temp_RMI308 a brick:Chilled_Water_Return_Temperature ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#308> .
 
-rice:CB_Supply_Temp a brick:Point .
+rice:CB_Supply_Temp a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CB_Supply_Temp_RMI308 a brick:Point .
+rice:CB_Supply_Temp_RMI308 a brick:Chilled_Water_Discharge_Temperature ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#308> .
 
-rice:CHWCoilLeavingAirTempscc2UIP01 a brick:Point .
+rice:CHWCoilLeavingAirTempscc2UIP01 a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CHW_Coil_Entering_Tempscc2UIP06 a brick:Point .
+rice:CHW_Coil_Entering_Tempscc2UIP06 a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CHW_Main_Return_Temp_T4 a brick:Point .
+rice:CHW_Main_Return_Temp_T4 a brick:Chilled_Water_Return_Temperature .
 
-rice:CHW_Main_Supply_Temp_T3 a brick:Point .
+rice:CHW_Main_Supply_Temp_T3 a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CHW_Return_Mag_Temp a brick:Point .
+rice:CHW_Return_Mag_Temp a brick:Chilled_Water_Return_Temperature .
 
-rice:CHW_Supply_Mag_Temp a brick:Point .
+rice:CHW_Supply_Mag_Temp a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CHW_System_Return_Temppgm2UIP20 a brick:Point .
+rice:CHW_System_Return_Temppgm2UIP20 a brick:Chilled_Water_Return_Temperature .
 
-rice:CHW_System_Supply_Temppgm2UIP19 a brick:Point .
+rice:CHW_System_Supply_Temppgm2UIP19 a brick:Chilled_Water_Discharge_Temperature .
 
-rice:ChilledBeamCHWReturnTemppgm2UIP14 a brick:Point .
+rice:ChilledBeamCHWReturnTemppgm2UIP14 a brick:Chilled_Water_Return_Temperature .
 
-rice:ChilledBeamCHWSupplyTemppgm2UIP13 a brick:Point .
+rice:ChilledBeamCHWSupplyTemppgm2UIP13 a brick:Chilled_Water_Discharge_Temperature .
 
 rice:Chilled_Water_Return_Temperature a brick:Chilled_Water_Return_Temperature .
 
-rice:Chilled_Water_Supply_Temperature a brick:Chilled_Water_Supply_Temperature .
+rice:Chilled_Water_Supply_Temperature a brick:Chilled_Water_Discharge_Temperature .
 
-rice:CoolingEnteringWaterTempdac2UIP16 a brick:Point .
+rice:CoolingEnteringWaterTempdac2UIP16 a brick:Point,
+        owl:NamedIndividual .
 
-rice:CoolingEnterngWaterTempdac3UIP16 a brick:Point .
+rice:CoolingEnterngWaterTempdac3UIP16 a brick:Point,
+        owl:NamedIndividual .
 
-rice:CoolingLeavingWaterTempdac1UIP16 a brick:Point .
+rice:CoolingLeavingWaterTempdac1UIP16 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Cooling_Coil_DA_Tempdac1UIP26 a brick:Point .
+rice:Cooling_Coil_DA_Tempdac1UIP26 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Cooling_Coil_DA_Tempdac2UIP26 a brick:Point .
+rice:Cooling_Coil_DA_Tempdac2UIP26 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Cooling_Stpt_Activescc2AV006 a brick:Point .
+rice:Cooling_Stpt_Activescc2AV006 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Cooling_Stpt_Localdac3AV008 a brick:Point .
+rice:Cooling_Stpt_Localdac3AV008 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Corridor_Humidity_BAS a brick:Point .
+rice:Corridor_Humidity_BAS a brick:Point,
+        owl:NamedIndividual .
 
-rice:DA_Humiditydac4UIP17 a brick:Point .
+rice:DA_Humiditydac4UIP17 a brick:Point,
+        owl:NamedIndividual .
 
 rice:Discharge_Air_Flow a brick:Discharge_Air_Flow .
 
-rice:Discharge_Air_Humiditydac1UIP09 a brick:Point .
+rice:Discharge_Air_Humiditydac1UIP09 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Discharge_Air_Humiditydac2UIP09 a brick:Point .
+rice:Discharge_Air_Humiditydac2UIP09 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Discharge_Air_Humiditydac3UIP09 a brick:Point .
+rice:Discharge_Air_Humiditydac3UIP09 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Discharge_Air_Tempdac1UIP06 a brick:Point .
+rice:Discharge_Air_Tempdac1UIP06 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Tempdac2UIP06 a brick:Point .
+rice:Discharge_Air_Tempdac2UIP06 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Tempdac3UIP06 a brick:Point .
+rice:Discharge_Air_Tempdac3UIP06 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperature a brick:Discharge_Air_Temperature .
+rice:Discharge_Air_Temperature a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturedac1 a brick:Point .
+rice:Discharge_Air_Temperaturedac1 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturedac2 a brick:Point .
+rice:Discharge_Air_Temperaturedac2 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturedac3 a brick:Point .
+rice:Discharge_Air_Temperaturedac3 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturedac4 a brick:Point .
+rice:Discharge_Air_Temperaturedac4 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturescc2 a brick:Point .
+rice:Discharge_Air_Temperaturescc2 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturewshp1 a brick:Point .
+rice:Discharge_Air_Temperaturewshp1 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:Discharge_Air_Temperaturewshp2 a brick:Point .
+rice:Discharge_Air_Temperaturewshp2 a brick:Discharge_Air_Temperature_Sensor .
 
-rice:ER_PHRH_Water_Temppgm2UIP03 a brick:Point .
+rice:ER_PHRH_Water_Temppgm2UIP03 a brick:Point,
+        owl:NamedIndividual .
 
-rice:EX_Air_Temp_From_ERWdac4UIP01 a brick:Point .
+rice:EX_Air_Temp_From_ERWdac4UIP01 a brick:Point,
+        owl:NamedIndividual .
 
-rice:East_Space_Humidityscc2UIP19 a brick:Point .
+rice:East_Space_Humidityscc2UIP19 a brick:Point,
+        owl:NamedIndividual .
 
-rice:East_Space_Temperaturescc2UIP33 a brick:Point .
+rice:East_Space_Temperaturescc2UIP33 a brick:Zone_Temperature_Sensor .
 
-rice:Effective_RA_CO2dac1AV004 a brick:Point .
+rice:Effective_RA_CO2dac1AV004 a brick:Return_Air_CO2_Sensor .
 
-rice:Effective_RA_CO2dac2AV004 a brick:Point .
+rice:Effective_RA_CO2dac2AV004 a brick:Return_Air_CO2_Sensor .
 
-rice:Effective_RA_CO2dac3AV004 a brick:Point .
+rice:Effective_RA_CO2dac3AV004 a brick:Return_Air_CO2_Sensor .
 
-rice:Enter_CDQ_Regen_Humidityscc2UIP24 a brick:Point .
+rice:Enter_CDQ_Regen_Humidityscc2UIP24 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Enter_CDQ_Regen_Tempscc2UIP23 a brick:Point .
+rice:Enter_CDQ_Regen_Tempscc2UIP23 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Enter_CDQ_Supply_Tempscc2UIP25 a brick:Point .
+rice:Enter_CDQ_Supply_Tempscc2UIP25 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Entering_Water_Temperaturewshp1 a brick:Point .
+rice:Entering_Water_Temperaturewshp1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Entering_Water_Temperaturewshp2 a brick:Point .
+rice:Entering_Water_Temperaturewshp2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Exhaust_Air_Humiditydac4UIP21 a brick:Point .
+rice:Exhaust_Air_Humiditydac4UIP21 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Exhaust_Air_Tempdac4UIP22 a brick:Point .
+rice:Exhaust_Air_Tempdac4UIP22 a brick:Exhaust_Air_Temperature_Sensor .
 
-rice:FCU_CHW_Return_Temppgm2UIP16 a brick:Point .
+rice:FCU_CHW_Return_Temppgm2UIP16 a brick:Chilled_Water_Return_Temperature .
 
-rice:FPVAV_Hot_Water_Return_Temp a brick:Point .
+rice:FPVAV_Hot_Water_Return_Temp a brick:Hot_Water_Return_Temperature .
 
-rice:FPVAV_Hot_Water_Supply_Temp a brick:Point .
+rice:FPVAV_Hot_Water_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:FP_VAV_Hot_Water_Return_Temp a brick:Point .
+rice:FP_VAV_Hot_Water_Return_Temp a brick:Hot_Water_Return_Temperature .
 
-rice:FP_VAV_Hot_Water_Supply_Temp a brick:Point .
+rice:FP_VAV_Hot_Water_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:Freeze_Protect_Low_Limitpgm1AV013 a brick:Point .
+rice:Freeze_Protect_Low_Limitpgm1AV013 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Glycol_Enterng_WaterTempdac3UIP17 a brick:Point .
+rice:Glycol_Enterng_WaterTempdac3UIP17 a brick:Point,
+        owl:NamedIndividual .
 
-rice:HWS_Temp a brick:Point .
+rice:HWS_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:HW_Coil_Entering_Tempscc2UIP36 a brick:Point .
+rice:HW_Coil_Entering_Tempscc2UIP36 a brick:Point,
+        owl:NamedIndividual .
 
-rice:HW_Main_Return_Temp_T2 a brick:Point .
+rice:HW_Main_Return_Temp_T2 a brick:Hot_Water_Return_Temperature .
 
-rice:HW_Main_Supply_Temp_T1 a brick:Point .
+rice:HW_Main_Supply_Temp_T1 a brick:Hot_Water_Supply_Temperature .
 
-rice:HW_Return_Mag_Temp1 a brick:Point .
+rice:HW_Return_Mag_Temp1 a brick:Hot_Water_Return_Temperature .
 
-rice:HW_Return_Temp_RM_I324 a brick:Point .
+rice:HW_Return_Temp_RM_I324 a brick:Hot_Water_Return_Temperature ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> .
 
-rice:HW_Return_Temperature_Local a brick:Point .
+rice:HW_Return_Temperature_Local a brick:Hot_Water_Return_Temperature .
 
-rice:HW_Return_Temppgm1UIP02 a brick:Point .
+rice:HW_Return_Temppgm1UIP02 a brick:Hot_Water_Return_Temperature .
 
-rice:HW_Supply_Mag_Temp1 a brick:Point .
+rice:HW_Supply_Mag_Temp1 a brick:Hot_Water_Supply_Temperature .
 
-rice:HW_Supply_Temp_RM_I324 a brick:Point .
+rice:HW_Supply_Temp_RM_I324 a brick:Hot_Water_Supply_Temperature .
 
-rice:HW_Supply_Temperature_Local a brick:Point .
+rice:HW_Supply_Temperature_Local a brick:Hot_Water_Supply_Temperature .
 
-rice:HW_Supply_Temppgm1UIP01 a brick:Point .
+rice:HW_Supply_Temppgm1UIP01 a brick:Hot_Water_Supply_Temperature .
 
-rice:HW_VAV_Return_Temp a brick:Point .
+rice:HW_VAV_Return_Temp a brick:Hot_Water_Return_Temperature .
 
-rice:HW_VAV_Supply_Temp a brick:Point .
+rice:HW_VAV_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:Heating_Stpt_Activescc2AV007 a brick:Point .
+rice:Heating_Stpt_Activescc2AV007 a brick:Point,
+        owl:NamedIndividual .
 
-rice:High_Static_Cutout_Limitscc2AV022 a brick:Point .
+rice:High_Static_Cutout_Limitscc2AV022 a brick:Point,
+        owl:NamedIndividual .
 
 rice:Hot_Water_ReturnTemperature a brick:Hot_Water_Return_Temperature .
 
 rice:Hot_Water_Supply_Temperature a brick:Hot_Water_Supply_Temperature .
 
-rice:Humidity_1 a brick:Humidity .
+rice:Humidity_1 a brick:Humidity_Sensor .
 
-rice:Humidity_Corr_NESHS a brick:Point .
+rice:Humidity_Corr_NESHS a brick:Humidity_Sensor .
 
-rice:Humidity_Zone_1_RMI207 a brick:Point .
+rice:Humidity_Zone_1_RMI207 a brick:Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#207> .
 
-rice:Humidity_Zone_1_RMI212 a brick:Point .
+rice:Humidity_Zone_1_RMI212 a brick:Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#212> .
 
-rice:LT_Chiller_CHW_SP_OPR a brick:Point .
+rice:LT_Chiller_CHW_SP_OPR a brick:Chilled_Water_Supply_Temperature_Sensor .
 
-rice:Lab_Humidity_RM_I228 a brick:Point .
+rice:Lab_Humidity_RM_I228 a brick:Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#228> .
 
-rice:Leave_CDQ_Regen_Tempscc2UIP29 a brick:Point .
+rice:Leave_CDQ_Regen_Tempscc2UIP29 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Leave_CDQ_Supply_Tempscc2UIP27 a brick:Point .
+rice:Leave_CDQ_Supply_Tempscc2UIP27 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Leaving_Water_Temperaturewshp1 a brick:Point .
+rice:Leaving_Water_Temperaturewshp1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Leaving_Water_Temperaturewshp2 a brick:Point .
+rice:Leaving_Water_Temperaturewshp2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Max_CoolMin_Ht_DAT_Stptscc2TrAV03 a brick:Point .
+rice:Max_CoolMin_Ht_DAT_Stptscc2TrAV03 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Medium_Temp_HW_Returnpgm1UIP24 a brick:Point .
+rice:Medium_Temp_HW_Returnpgm1UIP24 a brick:Hot_Water_Return_Temperature .
 
-rice:Medium_Temp_HW_Supplypgm1UIP23 a brick:Point .
+rice:Medium_Temp_HW_Supplypgm1UIP23 a brick:Hot_Water_Supply_Temperature .
 
-rice:Mixed_Air_Tempdac1UIP03 a brick:Point .
+rice:Mixed_Air_Tempdac1UIP03 a brick:Mixed_Air_Temperature_Sensor .
 
-rice:Mixed_Air_Tempdac2UIP03 a brick:Point .
+rice:Mixed_Air_Tempdac2UIP03 a brick:Mixed_Air_Temperature_Sensor .
 
-rice:Mixed_Air_Tempdac3UIP03 a brick:Point .
+rice:Mixed_Air_Tempdac3UIP03 a brick:Mixed_Air_Temperature_Sensor .
 
-rice:Mixed_Air_Temperature_Localscc2 a brick:Point .
+rice:Mixed_Air_Temperature_Localscc2 a brick:Mixed_Air_Temperature_Sensor .
 
-rice:Mixed_Air_Tempscc2UIP03 a brick:Point .
+rice:Mixed_Air_Tempscc2UIP03 a brick:Mixed_Air_Temperature_Sensor .
 
-rice:Nominal_Air_Flow_Status a brick:Point .
+rice:Nominal_Air_Flow_Status a brick:Discharge_Air_Flow .
 
-rice:OA_CO_Damper_Close_Limit a brick:Point .
+rice:OA_CO_Damper_Close_Limit a brick:Point,
+        owl:NamedIndividual .
 
-rice:Occupied_Offsetscc2 a brick:Point .
+rice:Occupied_Offsetscc2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Occupied_Standby_Offsetscc2 a brick:Point .
+rice:Occupied_Standby_Offsetscc2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Outdoor_Air_Humiditypgm1UIP03 a brick:Point .
+rice:Outdoor_Air_Humiditypgm1UIP03 a brick:Outside_Air_Humidity .
 
-rice:PreheatCoilLeave_AirTempscc2UIP02 a brick:Point .
+rice:PreheatCoilLeave_AirTempscc2UIP02 a brick:Point,
+        owl:NamedIndividual .
 
-rice:PreheatLeavingWaterTempdac3UIP15 a brick:Point .
+rice:PreheatLeavingWaterTempdac3UIP15 a brick:Point,
+        owl:NamedIndividual .
 
-rice:Pump_CHW_Supply_Temppgm2UIP15 a brick:Point .
+rice:Pump_CHW_Supply_Temppgm2UIP15 a brick:Chilled_Water_Discharge_Temperature .
 
 rice:RICE_Basement a brick:Floor ;
     brickframe:isPartof rice:RICE .
@@ -279,899 +331,1538 @@ rice:RICE_Floor_4 a brick:Floor ;
 rice:RICE_Floor_5 a brick:Floor ;
     brickframe:isPartof rice:RICE .
 
-rice:RM511A_Zone_Temp_3 a brick:Point .
+rice:RM511A_Zone_Temp_3 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#511> .
 
-rice:RMI1071_Space_Temperature_Local a brick:Point .
+rice:RMI1071_Space_Temperature_Local a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1071> .
 
-rice:RMI1072_Space_Temperature_Local a brick:Point .
+rice:RMI1072_Space_Temperature_Local a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1072> .
 
-rice:RMI108_Space_Temperature_Local a brick:Point .
+rice:RMI108_Space_Temperature_Local a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#108> .
 
-rice:RMI1091_Space_Temperature_Local a brick:Point .
+rice:RMI1091_Space_Temperature_Local a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1091> .
 
-rice:RMI1092_Space_Temperature_Local a brick:Point .
+rice:RMI1092_Space_Temperature_Local a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#1092> .
 
-rice:RMI501_Space_Temperature_Perimeter a brick:Point .
+rice:RMI501_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#501> .
 
-rice:RMI501_Zone_Temp_5 a brick:Point .
+rice:RMI501_Zone_Temp_5 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#501> .
 
-rice:RMI502_Space_Temperature_Perimeter a brick:Point .
+rice:RMI502_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#502> .
 
-rice:RMI502_Zone_Temp_4 a brick:Point .
+rice:RMI502_Zone_Temp_4 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#502> .
 
-rice:RMI503_Space_Temperature_Perimeter a brick:Point .
+rice:RMI503_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#503> .
 
-rice:RMI503_Zone_Temp_3 a brick:Point .
+rice:RMI503_Zone_Temp_3 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#503> .
 
-rice:RMI504_Zone_Temp_2 a brick:Point .
+rice:RMI504_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#504> .
 
-rice:RMI505_Space_Temperature_Perimeter a brick:Point .
+rice:RMI505_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#505> .
 
-rice:RMI506_Space_Temperature_Perimeter a brick:Point .
+rice:RMI506_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#506> .
 
-rice:RMI506_Zone_Temp_7 a brick:Point .
+rice:RMI506_Zone_Temp_7 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#506> .
 
-rice:RMI507_Space_Temperature_Perimeter a brick:Point .
+rice:RMI507_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#507> .
 
-rice:RMI507_Zone_Temp_6 a brick:Point .
+rice:RMI507_Zone_Temp_6 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#507> .
 
-rice:RMI508_Space_Temperature_Perimeter a brick:Point .
+rice:RMI508_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#508> .
 
-rice:RMI508_Zone_Temp_5 a brick:Point .
+rice:RMI508_Zone_Temp_5 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#508> .
 
-rice:RMI509_Space_Temperature_Perimeter a brick:Point .
+rice:RMI509_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#509> .
 
-rice:RMI509_Zone_Temp_4 a brick:Point .
+rice:RMI509_Zone_Temp_4 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#509> .
 
-rice:RMI511A_Space_Temperature_Perimeter a brick:Point .
+rice:RMI511A_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#511> .
 
-rice:RMI511B_Space_Temperature_Perimeter a brick:Point .
+rice:RMI511B_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#511> .
 
-rice:RMI511B_Zone_Temp_2 a brick:Point .
+rice:RMI511B_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#511> .
 
-rice:RMI512_Space_Temperature_Perimeter a brick:Point .
+rice:RMI512_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#512> .
 
-rice:RMI513_Zone_Temp_2 a brick:Point .
+rice:RMI513_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#513> .
 
-rice:RMI516_Space_CO2_Concentration_Zone_2 a brick:Point .
+rice:RMI516_Space_CO2_Concentration_Zone_2 a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#516> .
 
-rice:RMI521_Zone_Temp_2 a brick:Point .
+rice:RMI521_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#521> .
 
-rice:RMI522_Zone_Temp_3 a brick:Point .
+rice:RMI522_Zone_Temp_3 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#522> .
 
-rice:RMI526_Zone_Temp_5 a brick:Point .
+rice:RMI526_Zone_Temp_5 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#526> .
 
-rice:RMI527_Zone_Temp_8 a brick:Point .
+rice:RMI527_Zone_Temp_8 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#527> .
 
-rice:RMI527_Zone_Temp_8_Stpt a brick:Point .
+rice:RMI527_Zone_Temp_8_Stpt a brick:Zone_Temperature_Setpoint ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#527> .
 
-rice:RMI528_Zone_Temp_6 a brick:Point .
+rice:RMI528_Zone_Temp_6 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#528> .
 
-rice:RMI530_Space_Temperature a brick:Point .
+rice:RMI530_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#530> .
 
-rice:RMI534_Space_Temperature_Perimeter a brick:Point .
+rice:RMI534_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#534> .
 
-rice:RMI536_Space_Temperature_Perimeter a brick:Point .
+rice:RMI536_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#536> .
 
-rice:RMI536_Zone_Temp_2 a brick:Point .
+rice:RMI536_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#536> .
 
-rice:RMI542_Zone_Temp_2 a brick:Point .
+rice:RMI542_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#542> .
 
-rice:RMI552_Zone_Temp_3 a brick:Point .
+rice:RMI552_Zone_Temp_3 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#552> .
 
-rice:RMI561_Zone_Temp_3 a brick:Point .
+rice:RMI561_Zone_Temp_3 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#561> .
 
-rice:RMIC160_Space_Relative_Humidity_Local a brick:Point .
+rice:RMIC160_Space_Relative_Humidity_Local a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#160> .
 
-rice:RMIC552_Zone_Temp_3 a brick:Point .
+rice:RMIC552_Zone_Temp_3 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#552> .
 
-rice:RMIC552_Zone_Temp_7 a brick:Point .
+rice:RMIC552_Zone_Temp_7 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#552> .
 
-rice:RMIC557_Zone_Temp_6 a brick:Point .
+rice:RMIC557_Zone_Temp_6 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#557> .
 
-rice:RMIC557_Zone_Temp_8 a brick:Point .
+rice:RMIC557_Zone_Temp_8 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#557> .
 
-rice:RMI_524_Zone_Temp_4 a brick:Point .
+rice:RMI_524_Zone_Temp_4 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#524> .
 
-rice:Return_Air_CFM a brick:Point .
+rice:Return_Air_CFM a brick:Return_Air_Flow_Sensor .
 
-rice:Return_Air_CO2_Sensordac1UIP36 a brick:Point .
+rice:Return_Air_CO2_Sensordac1UIP36 a brick:Return_Air_CO2_Sensor .
 
-rice:Return_Air_CO2_Sensordac2UIP36 a brick:Point .
+rice:Return_Air_CO2_Sensordac2UIP36 a brick:Return_Air_CO2_Sensor .
 
-rice:Return_Air_CO2_Sensordac3UIP36 a brick:Point .
+rice:Return_Air_CO2_Sensordac3UIP36 a brick:Return_Air_CO2_Sensor .
 
-rice:Return_Air_CO2scc2UIP17 a brick:Point .
+rice:Return_Air_CO2scc2UIP17 a brick:Return_Air_CO2_Sensor .
 
-rice:Return_Air_Humiditydac1UIP27 a brick:Point .
+rice:Return_Air_Humiditydac1UIP27 a brick:Return_Air_Humidity_Sensor .
 
-rice:Return_Air_Humiditydac2UIP27 a brick:Point .
+rice:Return_Air_Humiditydac2UIP27 a brick:Return_Air_Humidity_Sensor .
 
-rice:Return_Air_Humiditydac3UIP21 a brick:Point .
+rice:Return_Air_Humiditydac3UIP21 a brick:Return_Air_Humidity_Sensor .
 
-rice:Return_Air_Humidityscc2UIP14 a brick:Point .
+rice:Return_Air_Humidityscc2UIP14 a brick:Return_Air_Humidity_Sensor .
 
-rice:Return_Air_Tempdac1UIP28 a brick:Point .
+rice:Return_Air_Tempdac1UIP28 a brick:Return_Air_Temperature_Sensor .
 
-rice:Return_Air_Tempdac2UIP28 a brick:Point .
+rice:Return_Air_Tempdac2UIP28 a brick:Return_Air_Temperature_Sensor .
 
-rice:Return_Air_Tempdac3UIP22 a brick:Point .
+rice:Return_Air_Tempdac3UIP22 a brick:Return_Air_Temperature_Sensor .
 
-rice:Return_Air_Tempscc2UIP15 a brick:Point .
+rice:Return_Air_Tempscc2UIP15 a brick:Return_Air_Temperature_Sensor .
 
-rice:Return_Airflow a brick:Point .
+rice:Return_Airflow a brick:Return_Air_Flow_Sensor .
 
-rice:Return_Airflow_CFM a brick:Point .
+rice:Return_Airflow_CFM a brick:Return_Air_Flow_Sensor .
 
-rice:Return_CO2_Diffdac1TrAV04 a brick:Point .
+rice:Return_CO2_Diffdac1TrAV04 a brick:Return_Air_CO2_Sensor .
 
-rice:Return_CO2_Diffdac2TrAV04 a brick:Point .
+rice:Return_CO2_Diffdac2TrAV04 a brick:Return_Air_CO2_Sensor .
 
-rice:Return_CO2_Diffdac3TrAV04 a brick:Point .
+rice:Return_CO2_Diffdac3TrAV04 a brick:Return_Air_CO2_Sensor .
 
-rice:RmI504_Space_Temperature_Perimeter a brick:Point .
+rice:RmI504_Space_Temperature_Perimeter a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#504> .
 
-rice:RmI521_Space_Temperature a brick:Point .
+rice:RmI521_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#521> .
 
-rice:RmI522_Space_Temperature a brick:Point .
+rice:RmI522_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#522> .
 
-rice:RmI524_Space_Temperature a brick:Point .
+rice:RmI524_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#524> .
 
-rice:RmI526_Space_Temperature a brick:Point .
+rice:RmI526_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#526> .
 
-rice:RmI528_Space_Temperature a brick:Point .
+rice:RmI528_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#528> .
 
-rice:RmI532_Space_Temperature a brick:Point .
+rice:RmI532_Space_Temperature a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#532> .
 
-rice:RmI532_Zone_Temp_2 a brick:Point .
+rice:RmI532_Zone_Temp_2 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#532> .
 
-rice:Space_CO2_Concentration_BASscc2 a brick:Point .
+rice:Space_CO2_Concentration_BASscc2 a brick:CO2_Sensor .
 
-rice:Space_CO2_Concentration_Local a brick:Point .
+rice:Space_CO2_Concentration_Local a brick:CO2_Sensor .
 
-rice:Space_CO2_Concentration_RMI050 a brick:Point .
+rice:Space_CO2_Concentration_RMI050 a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#50> .
 
-rice:Space_CO2_Concentration_Zone_2_RMI230 a brick:Point .
+rice:Space_CO2_Concentration_Zone_2_RMI230 a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#230> .
 
-rice:Space_CO2_Limit a brick:Point .
+rice:Space_CO2_Limit a brick:CO2_Sensor .
 
-rice:Space_CO2_Low_Limit a brick:Point .
+rice:Space_CO2_Low_Limit a brick:CO2_Sensor .
 
-rice:Space_CO2_RMI206 a brick:Point .
+rice:Space_CO2_RMI206 a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#206> .
 
-rice:Space_CO2_Room_513 a brick:Point .
+rice:Space_CO2_Room_513 a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#513> .
 
-rice:Space_CO2_level_RM242 a brick:Point .
+rice:Space_CO2_level_RM242 a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#242> .
 
-rice:Space_Humidity a brick:Point .
+rice:Space_Humidity a brick:Humidity_Sensor .
 
-rice:Space_Humidity_Active a brick:Point .
+rice:Space_Humidity_Active a brick:Humidity_Sensor .
 
-rice:Space_Humidity_Activedac1 a brick:Point .
+rice:Space_Humidity_Activedac1 a brick:Humidity_Sensor .
 
-rice:Space_Humidity_Activedac2 a brick:Point .
+rice:Space_Humidity_Activedac2 a brick:Humidity_Sensor .
 
-rice:Space_Humidity_Activedac3 a brick:Point .
+rice:Space_Humidity_Activedac3 a brick:Humidity_Sensor .
 
-rice:Space_Humidity_Activedac4 a brick:Point .
+rice:Space_Humidity_Activedac4 a brick:Humidity_Sensor .
 
-rice:Space_Humidity_Activescc2AV019 a brick:Point .
+rice:Space_Humidity_Activescc2AV019 a brick:Humidity_Sensor .
 
-rice:Space_Humidity_BAS a brick:Point .
+rice:Space_Humidity_BAS a brick:Humidity_Sensor .
 
-rice:Space_Humidity_High_Limit a brick:Point .
+rice:Space_Humidity_High_Limit a brick:High_Humidity_Alarm_Setpoint .
 
-rice:Space_Humidity_Low_Limit a brick:Point .
+rice:Space_Humidity_Low_Limit a brick:Low_Humidity_Alarm_Setpoint .
 
-rice:Space_Humidity_RMI206 a brick:Point .
+rice:Space_Humidity_RMI206 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#206> .
 
-rice:Space_Humidity_RMI326 a brick:Point .
+rice:Space_Humidity_RMI326 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#326> .
 
-rice:Space_Humidity_RMIC259 a brick:Point .
+rice:Space_Humidity_RMIC259 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#259> .
 
-rice:Space_Relative_Humidity_Corr_NW a brick:Point .
+rice:Space_Relative_Humidity_Corr_NW a brick:Humidity_Sensor .
 
-rice:Space_Relative_Humidity_Local a brick:Point .
+rice:Space_Relative_Humidity_Local a brick:Humidity_Sensor .
 
-rice:Space_Relative_Humidity_RMI226 a brick:Point .
+rice:Space_Relative_Humidity_RMI226 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#226> .
 
-rice:Space_Relative_Humidity_RMI305 a brick:Point .
+rice:Space_Relative_Humidity_RMI305 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#305> .
 
-rice:Space_Relative_Humidity_RMI306 a brick:Point .
+rice:Space_Relative_Humidity_RMI306 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> .
 
-rice:Space_Relative_Humidity_RMI308 a brick:Point .
+rice:Space_Relative_Humidity_RMI308 a brick:Room_Humidity_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#308> .
 
-rice:Space_Stpt_Activescc2AV017 a brick:Point .
+rice:Space_Stpt_Activescc2AV017 a brick:Point,
+        owl:NamedIndividual .
 
-rice:TEMP1_Perm_Temp_Rm_230 a brick:Point .
+rice:TEMP1_Perm_Temp_Rm_230 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#230> .
 
-rice:TEMP1_Space_TemperatureRMI050 a brick:Point .
+rice:TEMP1_Space_TemperatureRMI050 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#50> .
 
-rice:TEMP1_Space_Temperature_Perm_Rm_I228 a brick:Point .
+rice:TEMP1_Space_Temperature_Perm_Rm_I228 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#228> .
 
-rice:TEMP1_Space_Temperature_RME220 a brick:Point .
+rice:TEMP1_Space_Temperature_RME220 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#220> .
 
-rice:TEMP1_Space_Temperature_RMI013 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI013 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#13> .
 
-rice:TEMP1_Space_Temperature_RMI020 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI020 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#20> .
 
-rice:TEMP1_Space_Temperature_RMI102 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI102 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#102> .
 
-rice:TEMP1_Space_Temperature_RMI103 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI103 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#103> .
 
-rice:TEMP1_Space_Temperature_RMI106 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI106 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#106> .
 
-rice:TEMP1_Space_Temperature_RMI203 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI203 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#203> .
 
-rice:TEMP1_Space_Temperature_RMI204 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI204 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#204> .
 
-rice:TEMP1_Space_Temperature_RMI208 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI208 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#208> .
 
-rice:TEMP1_Space_Temperature_RMI308 a brick:Point .
+rice:TEMP1_Space_Temperature_RMI308 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#308> .
 
-rice:TEMP1_Space_Temperature_RMIC058 a brick:Point .
+rice:TEMP1_Space_Temperature_RMIC058 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#58> .
 
-rice:TEMP1_Space_Temperature_RMIC150A a brick:Point .
+rice:TEMP1_Space_Temperature_RMIC150A a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#150> .
 
-rice:TEMP1_Space_Temperature_RMIC259 a brick:Point .
+rice:TEMP1_Space_Temperature_RMIC259 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#259> .
 
-rice:TEMP1_Space_Temperature_RMIC276 a brick:Point .
+rice:TEMP1_Space_Temperature_RMIC276 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#276> .
 
-rice:TEMP1_Space_Temperature_RM_212 a brick:Point .
+rice:TEMP1_Space_Temperature_RM_212 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#212> .
 
-rice:TEMP1_Space_Temperature_RM_I322 a brick:Point .
+rice:TEMP1_Space_Temperature_RM_I322 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> .
 
-rice:TEMP1_Space_Temperature_RmI011 a brick:Point .
+rice:TEMP1_Space_Temperature_RmI011 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#11> .
 
-rice:TEMP2_Perm_Temperature_Rm_232 a brick:Point .
+rice:TEMP2_Perm_Temperature_Rm_232 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#232> .
 
-rice:TEMP2_Space_Temperature_Perm_RM_I226 a brick:Point .
+rice:TEMP2_Space_Temperature_Perm_RM_I226 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#226> .
 
-rice:TEMP2_Space_Temperature_RME222 a brick:Point .
+rice:TEMP2_Space_Temperature_RME222 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#222> .
 
-rice:TEMP2_Space_Temperature_RMI015 a brick:Point .
+rice:TEMP2_Space_Temperature_RMI015 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#15> .
 
-rice:TEMP2_Space_Temperature_RMI024 a brick:Point .
+rice:TEMP2_Space_Temperature_RMI024 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#24> .
 
-rice:TEMP2_Space_Temperature_RMI101 a brick:Point .
+rice:TEMP2_Space_Temperature_RMI101 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#101> .
 
-rice:TEMP2_Space_Temperature_RMI105 a brick:Point .
+rice:TEMP2_Space_Temperature_RMI105 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#105> .
 
-rice:TEMP2_Space_Temperature_RMI202 a brick:Point .
+rice:TEMP2_Space_Temperature_RMI202 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#202> .
 
-rice:TEMP2_Space_Temperature_RMI207 a brick:Point .
+rice:TEMP2_Space_Temperature_RMI207 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#207> .
 
-rice:TEMP2_Space_Temperature_RM_211 a brick:Point .
+rice:TEMP2_Space_Temperature_RM_211 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#211> .
 
-rice:TEMP2_Space_Temperature_RmI007 a brick:Point .
+rice:TEMP2_Space_Temperature_RmI007 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#7> .
 
-rice:TEMP3_Space_Temperature_Perm_RM_I224 a brick:Point .
+rice:TEMP3_Space_Temperature_Perm_RM_I224 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#224> .
 
-rice:TEMP3_Space_Temperature_RMI017 a brick:Point .
+rice:TEMP3_Space_Temperature_RMI017 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#17> .
 
-rice:TEMP3_Space_Temperature_RMI104 a brick:Point .
+rice:TEMP3_Space_Temperature_RMI104 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#104> .
 
-rice:TEMP3_Space_Temperature_RMI201 a brick:Point .
+rice:TEMP3_Space_Temperature_RMI201 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#201> .
 
-rice:TEMP3_Space_Temperature_RMI206 a brick:Point .
+rice:TEMP3_Space_Temperature_RMI206 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#206> .
 
-rice:TEMP3_Space_Temperature_RM_210 a brick:Point .
+rice:TEMP3_Space_Temperature_RM_210 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#210> .
 
-rice:TEMP3_Space_Temperature_RmI007A a brick:Point .
+rice:TEMP3_Space_Temperature_RmI007A a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#7> .
 
-rice:TEMP4_Space_Temperature_RMI019 a brick:Point .
+rice:TEMP4_Space_Temperature_RMI019 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#19> .
 
-rice:TEMP4_Space_Temperature_RMI205 a brick:Point .
+rice:TEMP4_Space_Temperature_RMI205 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#205> .
 
-rice:TEMP4_Space_Temperature_RM_209 a brick:Point .
+rice:TEMP4_Space_Temperature_RM_209 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#209> .
 
-rice:Temp_2_BAS a brick:Point .
+rice:Temp_2_BAS a brick:Point,
+        owl:NamedIndividual .
 
-rice:Temp_3_BAS a brick:Point .
+rice:Temp_3_BAS a brick:Point,
+        owl:NamedIndividual .
 
-rice:Thumbwheel_Set_point_Hi_Limit a brick:Point .
+rice:Thumbwheel_Set_point_Hi_Limit a brick:Point,
+        owl:NamedIndividual .
 
-rice:Thumbwheel_Set_point_Lo_Limit a brick:Point .
+rice:Thumbwheel_Set_point_Lo_Limit a brick:Point,
+        owl:NamedIndividual .
 
-rice:VAV_211_HW_Return_Temp a brick:Point .
+rice:VAV_211_HW_Return_Temp a brick:Hot_Water_Return_Temperature .
 
-rice:VAV_211_HW_Supply_Temp a brick:Point .
+rice:VAV_211_HW_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:VAV_26_HW_Return_Temp a brick:Point .
+rice:VAV_26_HW_Return_Temp a brick:Hot_Water_Return_Temperature .
 
-rice:VAV_26_HW_Supply_Temp a brick:Point .
+rice:VAV_26_HW_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:VAV_HW_Return_Temp a brick:Point .
+rice:VAV_HW_Return_Temp a brick:Hot_Water_Return_Temperature .
 
-rice:VAV_HW_Supply_Temp a brick:Point .
+rice:VAV_HW_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:Ventilation_Ratio_Limit_BAS a brick:Point .
+rice:Ventilation_Ratio_Limit_BAS a brick:Point,
+        owl:NamedIndividual .
 
-rice:WTS1_Chiller_CHWS_Temp a brick:Point .
+rice:WTS1_Chiller_CHWS_Temp a brick:Chilled_Water_Discharge_Temperature .
 
-rice:WTS1_Chiller_CHWS_Temppgm3UIP07 a brick:Point .
+rice:WTS1_Chiller_CHWS_Temppgm3UIP07 a brick:Chilled_Water_Discharge_Temperature .
 
-rice:WTS2_Ice_Tank_Entering_Temp a brick:Point .
+rice:WTS2_Ice_Tank_Entering_Temp a brick:Point,
+        owl:NamedIndividual .
 
-rice:WTS3_Ice_Tank_Leaving_Temp a brick:Point .
+rice:WTS3_Ice_Tank_Leaving_Temp a brick:Point,
+        owl:NamedIndividual .
 
-rice:WTS4_AHU3_Entering_GLY_Temp a brick:Point .
+rice:WTS4_AHU3_Entering_GLY_Temp a brick:Point,
+        owl:NamedIndividual .
 
-rice:West_Space_Humidityscc2UIP20 a brick:Point .
+rice:West_Space_Humidityscc2UIP20 a brick:Humidity_Sensor .
 
-rice:West_Space_Temperaturescc2UIP34 a brick:Point .
+rice:West_Space_Temperaturescc2UIP34 a brick:Zone_Temperature_Sensor .
 
-rice:Zone_2_Temp_Corr_252 a brick:Point .
+rice:Zone_2_Temp_Corr_252 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#252> .
 
-rice:Zone_2_Temp_RMCorr a brick:Point .
+rice:Zone_2_Temp_RMCorr a brick:Zone_Temperature_Sensor .
 
-rice:Zone_Humidity_2_CORRNWSHS a brick:Point .
+rice:Zone_Humidity_2_CORRNWSHS a brick:Humidity_Sensor .
 
-rice:Zone_Humidity_2_Corr_NESHS a brick:Point .
+rice:Zone_Humidity_2_Corr_NESHS a brick:Humidity_Sensor .
 
-rice:Zone_Humidity_Corr_SESHS a brick:Point .
+rice:Zone_Humidity_Corr_SESHS a brick:Humidity_Sensor .
 
-rice:Zone_Humidity_Corr_SWSHS a brick:Point .
+rice:Zone_Humidity_Corr_SWSHS a brick:Humidity_Sensor .
 
-rice:Zone_Temp_2_RME222 a brick:Point .
+rice:Zone_Temp_2_RME222 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#222> .
 
-rice:Zone_Temp_2_RMI007 a brick:Point .
+rice:Zone_Temp_2_RMI007 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#7> .
 
-rice:Zone_Temp_2_RMI015 a brick:Point .
+rice:Zone_Temp_2_RMI015 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#15> .
 
-rice:Zone_Temp_2_RMI024 a brick:Point .
+rice:Zone_Temp_2_RMI024 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#24> .
 
-rice:Zone_Temp_2_RMI032 a brick:Point .
+rice:Zone_Temp_2_RMI032 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#32> .
 
-rice:Zone_Temp_2_RMI108 a brick:Point .
+rice:Zone_Temp_2_RMI108 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#108> .
 
-rice:Zone_Temp_2_RMI122 a brick:Point .
+rice:Zone_Temp_2_RMI122 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#122> .
 
-rice:Zone_Temp_2_RMI209 a brick:Point .
+rice:Zone_Temp_2_RMI209 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#209> .
 
-rice:Zone_Temp_2_RM_242 a brick:Point .
+rice:Zone_Temp_2_RM_242 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#242> .
 
-rice:Zone_Temp_2_RM_I232 a brick:Point .
+rice:Zone_Temp_2_RM_I232 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#232> .
 
-rice:Zone_Temp_2_RmI204 a brick:Point .
+rice:Zone_Temp_2_RmI204 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#204> .
 
-rice:Zone_Temp_3_RM210 a brick:Point .
+rice:Zone_Temp_3_RM210 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#210> .
 
-rice:Zone_Temp_3_RMI007A a brick:Point .
+rice:Zone_Temp_3_RMI007A a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#7> .
 
-rice:Zone_Temp_3_RMI017 a brick:Point .
+rice:Zone_Temp_3_RMI017 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#17> .
 
-rice:Zone_Temp_3_RMI032A a brick:Point .
+rice:Zone_Temp_3_RMI032A a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#32> .
 
-rice:Zone_Temp_3_RMI052 a brick:Point .
+rice:Zone_Temp_3_RMI052 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#52> .
 
-rice:Zone_Temp_3_RMI103 a brick:Point .
+rice:Zone_Temp_3_RMI103 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#103> .
 
-rice:Zone_Temp_3_RMI107 a brick:Point .
+rice:Zone_Temp_3_RMI107 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#107> .
 
-rice:Zone_Temp_3_RMI128 a brick:Point .
+rice:Zone_Temp_3_RMI128 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#128> .
 
-rice:Zone_Temp_3_RM_I205 a brick:Point .
+rice:Zone_Temp_3_RM_I205 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#205> .
 
-rice:Zone_Temp_3_Rm_I224 a brick:Point .
+rice:Zone_Temp_3_Rm_I224 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#224> .
 
-rice:Zone_Temp_4_RM211 a brick:Point .
+rice:Zone_Temp_4_RM211 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#211> .
 
-rice:Zone_Temp_4_RMI011 a brick:Point .
+rice:Zone_Temp_4_RMI011 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#11> .
 
-rice:Zone_Temp_4_RMI019 a brick:Point .
+rice:Zone_Temp_4_RMI019 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#19> .
 
-rice:Zone_Temp_4_RMI032B a brick:Point .
+rice:Zone_Temp_4_RMI032B a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#32> .
 
-rice:Zone_Temp_4_RMI102 a brick:Point .
+rice:Zone_Temp_4_RMI102 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#102> .
 
-rice:Zone_Temp_4_RMI106 a brick:Point .
+rice:Zone_Temp_4_RMI106 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#106> .
 
-rice:Zone_Temp_4_RMIC154_Corr a brick:Point .
+rice:Zone_Temp_4_RMIC154_Corr a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#154> .
 
-rice:Zone_Temp_4_RM_C252 a brick:Point .
+rice:Zone_Temp_4_RM_C252 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#252> .
 
-rice:Zone_Temp_4_RM_I203 a brick:Point .
+rice:Zone_Temp_4_RM_I203 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#203> .
 
-rice:Zone_Temp_5_Local_RMI208 a brick:Point .
+rice:Zone_Temp_5_Local_RMI208 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#208> .
 
-rice:Zone_Temp_5_RMI101 a brick:Point .
+rice:Zone_Temp_5_RMI101 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#101> .
 
-rice:Zone_Temp_5_RMIC054 a brick:Point .
+rice:Zone_Temp_5_RMIC054 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#54> .
 
-rice:Zone_Temp_5_RMIC057 a brick:Point .
+rice:Zone_Temp_5_RMIC057 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#57> .
 
-rice:Zone_Temp_5_RMIC059 a brick:Point .
+rice:Zone_Temp_5_RMIC059 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#59> .
 
-rice:Zone_Temp_5_RMIC154A a brick:Point .
+rice:Zone_Temp_5_RMIC154A a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#154> .
 
-rice:Zone_Temp_5_RMIC156E a brick:Point .
+rice:Zone_Temp_5_RMIC156E a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#156> .
 
-rice:Zone_Temp_5_RM_I202 a brick:Point .
+rice:Zone_Temp_5_RM_I202 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#202> .
 
-rice:Zone_Temp_6_RMI054 a brick:Point .
+rice:Zone_Temp_6_RMI054 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#54> .
 
-rice:Zone_Temp_6_RMI212 a brick:Point .
+rice:Zone_Temp_6_RMI212 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#212> .
 
-rice:Zone_Temp_6_RMIC156 a brick:Point .
+rice:Zone_Temp_6_RMIC156 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#156> .
 
-rice:Zone_Temp_6_RM_I201 a brick:Point .
+rice:Zone_Temp_6_RM_I201 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#201> .
 
-rice:Zone_Temp_RMI104 a brick:Point .
+rice:Zone_Temp_RMI104 a brick:Room_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#104> .
 
-rice:averageSpaceTemperatureA1st_Floor_Area1 a brick:Point .
+rice:averageSpaceTemperatureA1st_Floor_Area1 a brick:Average_Zone_Temperature_Sensor .
 
-rice:averageSpaceTemperatureA2nd_Floor_Area1 a brick:Point .
+rice:averageSpaceTemperatureA2nd_Floor_Area1 a brick:Average_Zone_Temperature_Sensor .
 
-rice:averageSpaceTemperatureA3rd_Floor_Area1 a brick:Point .
+rice:averageSpaceTemperatureA3rd_Floor_Area1 a brick:Average_Zone_Temperature_Sensor .
 
-rice:averageSpaceTemperatureA5th_Floor_Area1 a brick:Point .
+rice:averageSpaceTemperatureA5th_Floor_Area1 a brick:Average_Zone_Temperature_Sensor .
 
-rice:averageSpaceTemperatureAAuditorium_Area4 a brick:Point .
+rice:averageSpaceTemperatureAAuditorium_Area4 a brick:Average_Zone_Temperature_Sensor .
 
-rice:averageSpaceTemperatureABasement_Area2 a brick:Point .
+rice:averageSpaceTemperatureABasement_Area2 a brick:Average_Zone_Temperature_Sensor .
 
-rice:averageSpaceTemperatureARoom_305_Area2 a brick:Point .
+rice:averageSpaceTemperatureARoom_305_Area2 a brick:Average_Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#305> .
 
-rice:averageSpaceTemperatureARoom_306_Area3 a brick:Point .
+rice:averageSpaceTemperatureARoom_306_Area3 a brick:Average_Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> .
 
-rice:averageSpaceTemperatureARoom_322_Area4 a brick:Point .
+rice:averageSpaceTemperatureARoom_322_Area4 a brick:Average_Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> .
 
-rice:averageSpaceTemperatureARoom_324_Area5 a brick:Point .
+rice:averageSpaceTemperatureARoom_324_Area5 a brick:Average_Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> .
 
-rice:deltaTemperatureA1st_Floor_Area1 a brick:Point .
+rice:deltaTemperatureA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:deltaTemperatureA2nd_Floor_Area1 a brick:Point .
+rice:deltaTemperatureA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:deltaTemperatureA5th_Floor_Area1 a brick:Point .
+rice:deltaTemperatureA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:deltaTemperatureAAuditorium_Area4 a brick:Point .
+rice:deltaTemperatureAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:deltaTemperatureABasement_Area2 a brick:Point .
+rice:deltaTemperatureABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagCalculationA1st_Floor_Area1 a brick:Point .
+rice:diagCalculationA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagCalculationA2nd_Floor_Area1 a brick:Point .
+rice:diagCalculationA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagCalculationA5th_Floor_Area1 a brick:Point .
+rice:diagCalculationA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagCalculationABasement_Area2 a brick:Point .
+rice:diagCalculationABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasSourceTempFailureVBasement_Perimeter_Devices2 a brick:Point .
+rice:diagVasSourceTempFailureVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasSourceTempFailureVChilled_Beam_Source_VAS3 a brick:Point .
+rice:diagVasSourceTempFailureVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasSystemFailureV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:diagVasSystemFailureV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasSystemFailureV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:diagVasSystemFailureV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasSystemFailureVBasement_Perimeter_Devices2 a brick:Point .
+rice:diagVasSystemFailureVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasSystemFailureVChilled_Beam_Source_VAS3 a brick:Point .
+rice:diagVasSystemFailureVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasUnableToDriveMaxV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:diagVasUnableToDriveMaxV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasUnableToDriveMaxV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:diagVasUnableToDriveMaxV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasUnableToDriveMaxVBasement_Perimeter_Devices2 a brick:Point .
+rice:diagVasUnableToDriveMaxVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagVasUnableToDriveMaxVChilled_Beam_Source_VAS3 a brick:Point .
+rice:diagVasUnableToDriveMaxVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagnosticAlarmPresentA1st_Floor_Area1 a brick:Point .
+rice:diagnosticAlarmPresentA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagnosticAlarmPresentA2nd_Floor_Area1 a brick:Point .
+rice:diagnosticAlarmPresentA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:diagnosticAlarmPresentA5th_Floor_Area1 a brick:Point .
+rice:diagnosticAlarmPresentA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPos1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:ductPressOptMaxPos1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPos1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ductPressOptMaxPos1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPos2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:ductPressOptMaxPos2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPos2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ductPressOptMaxPos2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPos5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:ductPressOptMaxPos5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPos5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:ductPressOptMaxPos5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPosBasement_Perimeter_Devices2 a brick:Point .
+rice:ductPressOptMaxPosBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptMaxPosChilled_Beam_Source_VAS3 a brick:Point .
+rice:ductPressOptMaxPosChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusV1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:ductPressOptStatusV1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusV1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ductPressOptStatusV1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:ductPressOptStatusV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ductPressOptStatusV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusV5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:ductPressOptStatusV5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusV5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:ductPressOptStatusV5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusVBasement_Perimeter_Devices2 a brick:Point .
+rice:ductPressOptStatusVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ductPressOptStatusVChilled_Beam_Source_VAS3 a brick:Point .
+rice:ductPressOptStatusVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialDryBulbA1st_Floor_Area1 a brick:Point .
+rice:economizerDisableDifferentialDryBulbA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialDryBulbA2nd_Floor_Area1 a brick:Point .
+rice:economizerDisableDifferentialDryBulbA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialDryBulbA5th_Floor_Area1 a brick:Point .
+rice:economizerDisableDifferentialDryBulbA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialDryBulbAAuditorium_Area4 a brick:Point .
+rice:economizerDisableDifferentialDryBulbAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialDryBulbABasement_Area2 a brick:Point .
+rice:economizerDisableDifferentialDryBulbABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialEnthalpyA1st_Floor_Area1 a brick:Point .
+rice:economizerDisableDifferentialEnthalpyA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialEnthalpyA2nd_Floor_Area1 a brick:Point .
+rice:economizerDisableDifferentialEnthalpyA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialEnthalpyA5th_Floor_Area1 a brick:Point .
+rice:economizerDisableDifferentialEnthalpyA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialEnthalpyAAuditorium_Area4 a brick:Point .
+rice:economizerDisableDifferentialEnthalpyAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableDifferentialEnthalpyABasement_Area2 a brick:Point .
+rice:economizerDisableDifferentialEnthalpyABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDewPointA1st_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedDewPointA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDewPointA2nd_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedDewPointA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDewPointA5th_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedDewPointA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDewPointAAuditorium_Area4 a brick:Point .
+rice:economizerDisableFixedDewPointAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDewPointABasement_Area2 a brick:Point .
+rice:economizerDisableFixedDewPointABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDryBulbA1st_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedDryBulbA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDryBulbA2nd_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedDryBulbA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDryBulbA5th_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedDryBulbA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDryBulbAAuditorium_Area4 a brick:Point .
+rice:economizerDisableFixedDryBulbAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedDryBulbABasement_Area2 a brick:Point .
+rice:economizerDisableFixedDryBulbABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedEnthalpyA1st_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedEnthalpyA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedEnthalpyA2nd_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedEnthalpyA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedEnthalpyA5th_Floor_Area1 a brick:Point .
+rice:economizerDisableFixedEnthalpyA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedEnthalpyAAuditorium_Area4 a brick:Point .
+rice:economizerDisableFixedEnthalpyAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerDisableFixedEnthalpyABasement_Area2 a brick:Point .
+rice:economizerDisableFixedEnthalpyABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialDryBulbA1st_Floor_Area1 a brick:Point .
+rice:economizerEnableDifferentialDryBulbA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialDryBulbA2nd_Floor_Area1 a brick:Point .
+rice:economizerEnableDifferentialDryBulbA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialDryBulbA5th_Floor_Area1 a brick:Point .
+rice:economizerEnableDifferentialDryBulbA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialDryBulbAAuditorium_Area4 a brick:Point .
+rice:economizerEnableDifferentialDryBulbAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialDryBulbABasement_Area2 a brick:Point .
+rice:economizerEnableDifferentialDryBulbABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialEnthalpyA1st_Floor_Area1 a brick:Point .
+rice:economizerEnableDifferentialEnthalpyA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialEnthalpyA2nd_Floor_Area1 a brick:Point .
+rice:economizerEnableDifferentialEnthalpyA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialEnthalpyA5th_Floor_Area1 a brick:Point .
+rice:economizerEnableDifferentialEnthalpyA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialEnthalpyAAuditorium_Area4 a brick:Point .
+rice:economizerEnableDifferentialEnthalpyAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableDifferentialEnthalpyABasement_Area2 a brick:Point .
+rice:economizerEnableDifferentialEnthalpyABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDewPointA1st_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedDewPointA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDewPointA2nd_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedDewPointA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDewPointA5th_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedDewPointA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDewPointAAuditorium_Area4 a brick:Point .
+rice:economizerEnableFixedDewPointAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDewPointABasement_Area2 a brick:Point .
+rice:economizerEnableFixedDewPointABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDryBulbA1st_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedDryBulbA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDryBulbA2nd_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedDryBulbA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDryBulbA5th_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedDryBulbA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDryBulbAAuditorium_Area4 a brick:Point .
+rice:economizerEnableFixedDryBulbAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedDryBulbABasement_Area2 a brick:Point .
+rice:economizerEnableFixedDryBulbABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedEnthalpyA1st_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedEnthalpyA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedEnthalpyA2nd_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedEnthalpyA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedEnthalpyA5th_Floor_Area1 a brick:Point .
+rice:economizerEnableFixedEnthalpyA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedEnthalpyAAuditorium_Area4 a brick:Point .
+rice:economizerEnableFixedEnthalpyAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerEnableFixedEnthalpyABasement_Area2 a brick:Point .
+rice:economizerEnableFixedEnthalpyABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:economizerStatusA1st_Floor_Area1 a brick:Point .
+rice:economizerStatusA1st_Floor_Area1 a brick:Economizer_Mode_Status .
 
-rice:economizerStatusA2nd_Floor_Area1 a brick:Point .
+rice:economizerStatusA2nd_Floor_Area1 a brick:Economizer_Mode_Status .
 
-rice:economizerStatusA5th_Floor_Area1 a brick:Point .
+rice:economizerStatusA5th_Floor_Area1 a brick:Economizer_Mode_Status .
 
-rice:economizerStatusAAuditorium_Area4 a brick:Point .
+rice:economizerStatusAAuditorium_Area4 a brick:Economizer_Mode_Status .
 
-rice:economizerStatusABasement_Area2 a brick:Point .
+rice:economizerStatusABasement_Area2 a brick:Economizer_Mode_Status .
 
-rice:heatCoolModeStatusA1st_Floor_Area1 a brick:Point .
+rice:heatCoolModeStatusA1st_Floor_Area1 a brick:Heating_On_Off_Status .
 
-rice:heatCoolModeStatusA2nd_Floor_Area1 a brick:Point .
+rice:heatCoolModeStatusA2nd_Floor_Area1 a brick:Heating_On_Off_Status .
 
-rice:heatCoolModeStatusA3rd_Floor_Area1 a brick:Point .
+rice:heatCoolModeStatusA3rd_Floor_Area1 a brick:Heating_On_Off_Status .
 
-rice:heatCoolModeStatusA5th_Floor_Area1 a brick:Point .
+rice:heatCoolModeStatusA5th_Floor_Area1 a brick:Heating_On_Off_Status .
 
-rice:heatCoolModeStatusAAuditorium_Area4 a brick:Point .
+rice:heatCoolModeStatusAAuditorium_Area4 a brick:Heating_On_Off_Status .
 
-rice:heatCoolModeStatusABasement_Area2 a brick:Point .
+rice:heatCoolModeStatusABasement_Area2 a brick:Heating_On_Off_Status .
 
-rice:heatCoolModeStatusARoom_305_Area2 a brick:Point .
+rice:heatCoolModeStatusARoom_305_Area2 a brick:Heating_On_Off_Status ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#305> .
 
-rice:heatCoolModeStatusARoom_306_Area3 a brick:Point .
+rice:heatCoolModeStatusARoom_306_Area3 a brick:Heating_On_Off_Status ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> .
 
-rice:heatCoolModeStatusARoom_322_Area4 a brick:Point .
+rice:heatCoolModeStatusARoom_322_Area4 a brick:Heating_On_Off_Status ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> .
 
-rice:heatCoolModeStatusARoom_324_Area5 a brick:Point .
+rice:heatCoolModeStatusARoom_324_Area5 a brick:Heating_On_Off_Status ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> .
 
-rice:occupancyA1st_Floor_Area1 a brick:Point .
+rice:occupancyA1st_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyA2nd_Floor_Area1 a brick:Point .
+rice:occupancyA2nd_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyA5th_Floor_Area1 a brick:Point .
+rice:occupancyA5th_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyAAuditorium_Area4 a brick:Point .
+rice:occupancyAAuditorium_Area4 a brick:Occupancy_Sensor .
 
-rice:occupancyABasement_Area2 a brick:Point .
+rice:occupancyABasement_Area2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatus1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:occupancyStatus1st_Floor_Chilled_Beam_VAS2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatus1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:occupancyStatus1st_Foor_Perimeter_Devices_VAS1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatus2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:occupancyStatus2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatus2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:occupancyStatus2nd_Floor_Perimeter_Devices_VAS1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatus5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:occupancyStatus5th_Floor_Chilled_Beam_VAS1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatus5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:occupancyStatus5th_Floor_Perimeter_Devices_VAS2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusA1st_Floor_Area1 a brick:Point .
+rice:occupancyStatusA1st_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusA2nd_Floor_Area1 a brick:Point .
+rice:occupancyStatusA2nd_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusA3rd_Floor_Area1 a brick:Point .
+rice:occupancyStatusA3rd_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusA5th_Floor_Area1 a brick:Point .
+rice:occupancyStatusA5th_Floor_Area1 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusAAuditorium_Area4 a brick:Point .
+rice:occupancyStatusAAuditorium_Area4 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusABasement_Area2 a brick:Point .
+rice:occupancyStatusABasement_Area2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusARoom_305_Area2 a brick:Point .
+rice:occupancyStatusARoom_305_Area2 a brick:Occupancy_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#305> .
 
-rice:occupancyStatusARoom_306_Area3 a brick:Point .
+rice:occupancyStatusARoom_306_Area3 a brick:Occupancy_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> .
 
-rice:occupancyStatusARoom_322_Area4 a brick:Point .
+rice:occupancyStatusARoom_322_Area4 a brick:Occupancy_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> .
 
-rice:occupancyStatusARoom_324_Area5 a brick:Point .
+rice:occupancyStatusARoom_324_Area5 a brick:Occupancy_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> .
 
-rice:occupancyStatusBasement_Perimeter_Devices2 a brick:Point .
+rice:occupancyStatusBasement_Perimeter_Devices2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusChilled_Beam_Source_VAS3 a brick:Point .
+rice:occupancyStatusChilled_Beam_Source_VAS3 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusV3rd_Floor_CB_VAS2 a brick:Point .
+rice:occupancyStatusV3rd_Floor_CB_VAS2 a brick:Occupancy_Sensor .
 
-rice:occupancyStatusV3rd_Floor_Perimiter_VAS3 a brick:Point .
+rice:occupancyStatusV3rd_Floor_Perimiter_VAS3 a brick:Occupancy_Sensor .
 
-rice:occupiedDifferenceA1st_Floor_Area1 a brick:Point .
+rice:occupiedDifferenceA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedDifferenceA2nd_Floor_Area1 a brick:Point .
+rice:occupiedDifferenceA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedDifferenceA5th_Floor_Area1 a brick:Point .
+rice:occupiedDifferenceA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedDifferenceAAuditorium_Area4 a brick:Point .
+rice:occupiedDifferenceAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedDifferenceABasement_Area2 a brick:Point .
+rice:occupiedDifferenceABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedOffsetA1st_Floor_Area1 a brick:Point .
+rice:occupiedOffsetA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedOffsetA2nd_Floor_Area1 a brick:Point .
+rice:occupiedOffsetA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedOffsetA5th_Floor_Area1 a brick:Point .
+rice:occupiedOffsetA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:occupiedOffsetABasement_Area2 a brick:Point .
+rice:occupiedOffsetABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingMode1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:operatingMode1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingMode1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:operatingMode1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingMode2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:operatingMode2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingMode2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:operatingMode2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingMode5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:operatingMode5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingMode5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:operatingMode5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeA1st_Floor_Area1 a brick:Point .
+rice:operatingModeA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeA2nd_Floor_Area1 a brick:Point .
+rice:operatingModeA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeA3rd_Floor_Area1 a brick:Point .
+rice:operatingModeA3rd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeA5th_Floor_Area1 a brick:Point .
+rice:operatingModeA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeAAuditorium_Area4 a brick:Point .
+rice:operatingModeAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeABasement_Area2 a brick:Point .
+rice:operatingModeABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeARoom_305_Area2 a brick:Point .
+rice:operatingModeARoom_305_Area2 a brick:Point,
+        owl:NamedIndividual ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#305> .
 
-rice:operatingModeARoom_306_Area3 a brick:Point .
+rice:operatingModeARoom_306_Area3 a brick:Point,
+        owl:NamedIndividual ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> .
 
-rice:operatingModeARoom_322_Area4 a brick:Point .
+rice:operatingModeARoom_322_Area4 a brick:Point,
+        owl:NamedIndividual ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> .
 
-rice:operatingModeARoom_324_Area5 a brick:Point .
+rice:operatingModeARoom_324_Area5 a brick:Point,
+        owl:NamedIndividual ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> .
 
-rice:operatingModeBasement_Perimeter_Devices2 a brick:Point .
+rice:operatingModeBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeChilled_Beam_Source_VAS3 a brick:Point .
+rice:operatingModeChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeV3rd_Floor_CB_VAS2 a brick:Point .
+rice:operatingModeV3rd_Floor_CB_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:operatingModeV3rd_Floor_Perimiter_VAS3 a brick:Point .
+rice:operatingModeV3rd_Floor_Perimiter_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:outdoorAirHumidityA1st_Floor_Area1 a brick:Point .
+rice:outdoorAirHumidityA1st_Floor_Area1 a brick:Outside_Air_Humidity .
 
-rice:outdoorAirHumidityA2nd_Floor_Area1 a brick:Point .
+rice:outdoorAirHumidityA2nd_Floor_Area1 a brick:Outside_Air_Humidity .
 
-rice:outdoorAirHumidityA5th_Floor_Area1 a brick:Point .
+rice:outdoorAirHumidityA5th_Floor_Area1 a brick:Outside_Air_Humidity .
 
-rice:outdoorAirHumidityAAuditorium_Area4 a brick:Point .
+rice:outdoorAirHumidityAAuditorium_Area4 a brick:Outside_Air_Humidity .
 
-rice:outdoorAirHumidityABasement_Area2 a brick:Point .
+rice:outdoorAirHumidityABasement_Area2 a brick:Outside_Air_Humidity .
 
-rice:rmi514_Space_CO2_Concentration a brick:Point .
+rice:rmi514_Space_CO2_Concentration a brick:CO2_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#514> .
 
-rice:spaceHumidityA1st_Floor_Area1 a brick:Point .
+rice:spaceHumidityA1st_Floor_Area1 a brick:Humidity_Sensor .
 
-rice:spaceHumidityA2nd_Floor_Area1 a brick:Point .
+rice:spaceHumidityA2nd_Floor_Area1 a brick:Humidity_Sensor .
 
-rice:spaceHumidityA5th_Floor_Area1 a brick:Point .
+rice:spaceHumidityA5th_Floor_Area1 a brick:Humidity_Sensor .
 
-rice:spaceHumidityAAuditorium_Area4 a brick:Point .
+rice:spaceHumidityAAuditorium_Area4 a brick:Humidity_Sensor .
 
-rice:spaceHumidityABasement_Area2 a brick:Point .
+rice:spaceHumidityABasement_Area2 a brick:Humidity_Sensor .
 
-rice:spaceSensorA1st_Floor_Area1 a brick:Point .
+rice:spaceSensorA1st_Floor_Area1 a brick:Zone_Temperature_Sensor .
 
-rice:spaceSensorA2nd_Floor_Area1 a brick:Point .
+rice:spaceSensorA2nd_Floor_Area1 a brick:Zone_Temperature_Sensor .
 
-rice:spaceSensorA3rd_Floor_Area1 a brick:Point .
+rice:spaceSensorA3rd_Floor_Area1 a brick:Zone_Temperature_Sensor .
 
-rice:spaceSensorA5th_Floor_Area1 a brick:Point .
+rice:spaceSensorA5th_Floor_Area1 a brick:Zone_Temperature_Sensor .
 
-rice:spaceSensorAAuditorium_Area4 a brick:Point .
+rice:spaceSensorAAuditorium_Area4 a brick:Zone_Temperature_Sensor .
 
-rice:spaceSensorABasement_Area2 a brick:Point .
+rice:spaceSensorABasement_Area2 a brick:Zone_Temperature_Sensor .
 
-rice:spaceSensorARoom_306_Area3 a brick:Point .
+rice:spaceSensorARoom_306_Area3 a brick:Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#306> .
 
-rice:spaceSensorARoom_322_Area4 a brick:Point .
+rice:spaceSensorARoom_322_Area4 a brick:Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#322> .
 
-rice:spaceSensorARoom_324_Area5 a brick:Point .
+rice:spaceSensorARoom_324_Area5 a brick:Zone_Temperature_Sensor ;
+    brickframe:isLocatedIn <http://virginia.edu/building/ontology/rice#http://buildsys.org/ontologies/Brick#324> .
 
-rice:standbyOffsetA1st_Floor_Area1 a brick:Point .
+rice:standbyOffsetA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:standbyOffsetA2nd_Floor_Area1 a brick:Point .
+rice:standbyOffsetA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:standbyOffsetA5th_Floor_Area1 a brick:Point .
+rice:standbyOffsetA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:standbyOffsetAAuditorium_Area4 a brick:Point .
+rice:standbyOffsetAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:standbyOffsetABasement_Area2 a brick:Point .
+rice:standbyOffsetABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemMode1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:systemMode1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemMode1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:systemMode1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemMode2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:systemMode2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemMode2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:systemMode2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemMode5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:systemMode5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemMode5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:systemMode5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemModeBasement_Perimeter_Devices2 a brick:Point .
+rice:systemModeBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:systemModeChilled_Beam_Source_VAS3 a brick:Point .
+rice:systemModeChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:unoccupiedDifferenceA1st_Floor_Area1 a brick:Point .
+rice:unoccupiedDifferenceA1st_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:unoccupiedDifferenceA2nd_Floor_Area1 a brick:Point .
+rice:unoccupiedDifferenceA2nd_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:unoccupiedDifferenceA5th_Floor_Area1 a brick:Point .
+rice:unoccupiedDifferenceA5th_Floor_Area1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:unoccupiedDifferenceAAuditorium_Area4 a brick:Point .
+rice:unoccupiedDifferenceAAuditorium_Area4 a brick:Point,
+        owl:NamedIndividual .
 
-rice:unoccupiedDifferenceABasement_Area2 a brick:Point .
+rice:unoccupiedDifferenceABasement_Area2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusV1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:ventOptStatusV1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusV1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventOptStatusV1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:ventOptStatusV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventOptStatusV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusV5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:ventOptStatusV5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusV5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:ventOptStatusV5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusVBasement_Perimeter_Devices2 a brick:Point .
+rice:ventOptStatusVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptStatusVChilled_Beam_Source_VAS3 a brick:Point .
+rice:ventOptStatusVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventOptVavAirflowGross1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:ventOptVavAirflowGross1st_Floor_Chilled_Beam_VAS2 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGross1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventOptVavAirflowGross1st_Foor_Perimeter_Devices_VAS1 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGross2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:ventOptVavAirflowGross2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGross2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventOptVavAirflowGross2nd_Floor_Perimeter_Devices_VAS1 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGross5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:ventOptVavAirflowGross5th_Floor_Chilled_Beam_VAS1 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGross5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:ventOptVavAirflowGross5th_Floor_Perimeter_Devices_VAS2 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGrossBasement_Perimeter_Devices2 a brick:Point .
+rice:ventOptVavAirflowGrossBasement_Perimeter_Devices2 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventOptVavAirflowGrossChilled_Beam_Source_VAS3 a brick:Point .
+rice:ventOptVavAirflowGrossChilled_Beam_Source_VAS3 a brick:Discharge_Air_Flow_Sensor .
 
-rice:ventRatioLimitAhuV1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:ventRatioLimitAhuV1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuV1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventRatioLimitAhuV1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:ventRatioLimitAhuV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventRatioLimitAhuV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuV5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:ventRatioLimitAhuV5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuV5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:ventRatioLimitAhuV5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuVBasement_Perimeter_Devices2 a brick:Point .
+rice:ventRatioLimitAhuVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitAhuVChilled_Beam_Source_VAS3 a brick:Point .
+rice:ventRatioLimitAhuVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavV1st_Floor_Chilled_Beam_VAS2 a brick:Point .
+rice:ventRatioLimitVavV1st_Floor_Chilled_Beam_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavV1st_Foor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventRatioLimitVavV1st_Foor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point .
+rice:ventRatioLimitVavV2nd_Floor_Chilled_Beam_Source_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point .
+rice:ventRatioLimitVavV2nd_Floor_Perimeter_Devices_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavV5th_Floor_Chilled_Beam_VAS1 a brick:Point .
+rice:ventRatioLimitVavV5th_Floor_Chilled_Beam_VAS1 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavV5th_Floor_Perimeter_Devices_VAS2 a brick:Point .
+rice:ventRatioLimitVavV5th_Floor_Perimeter_Devices_VAS2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavVBasement_Perimeter_Devices2 a brick:Point .
+rice:ventRatioLimitVavVBasement_Perimeter_Devices2 a brick:Point,
+        owl:NamedIndividual .
 
-rice:ventRatioLimitVavVChilled_Beam_Source_VAS3 a brick:Point .
+rice:ventRatioLimitVavVChilled_Beam_Source_VAS3 a brick:Point,
+        owl:NamedIndividual .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#104> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#105> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#107> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#108> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#122> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#128> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#13> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#15> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#150> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#17> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#19> brickframe:isPointOf rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#20> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#206> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#210> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#220> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#222> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#224> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#226> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#228> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#232> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#24> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#242> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#259> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#276> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#305> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#306> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#308> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#324> brickframe:isPointOf rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#50> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#501> brickframe:isPointOf rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#502> brickframe:isPointOf rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#503> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#504> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#506> brickframe:isPointOf rice:HVAC_Zone7 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#507> brickframe:isPointOf rice:HVAC_Zone6 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#508> brickframe:isPointOf rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#509> brickframe:isPointOf rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#513> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#516> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#52> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#521> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#522> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#524> brickframe:isPointOf rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#526> brickframe:isPointOf rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#527> brickframe:isPointOf rice:HVAC_Zone8 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#528> brickframe:isPointOf rice:HVAC_Zone6 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#532> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#536> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#542> brickframe:isPointOf rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#561> brickframe:isPointOf rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#57> brickframe:isPointOf rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#58> brickframe:isPointOf rice:HVAC_Zone1 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#59> brickframe:isPointOf rice:HVAC_Zone5 .
+
+rice:HVAC_Zone7 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#506>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#552> .
+
+rice:HVAC_Zone8 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#527>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#557> .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#101> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#102> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#103> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#106> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#11> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#154> brickframe:isPointOf rice:HVAC_Zone4,
+        rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#156> brickframe:isPointOf rice:HVAC_Zone5,
+        rice:HVAC_Zone6 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#201> brickframe:isPointOf rice:HVAC_Zone3,
+        rice:HVAC_Zone6 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#202> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#203> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#204> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#205> brickframe:isPointOf rice:HVAC_Zone3,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#207> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#208> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone5 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#209> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#211> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#212> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone6 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#230> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone2 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#252> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#322> brickframe:isPointOf rice:HVAC_Zone1,
+        rice:HVAC_Zone4 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#511> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#54> brickframe:isPointOf rice:HVAC_Zone5,
+        rice:HVAC_Zone6 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#552> brickframe:isPointOf rice:HVAC_Zone3,
+        rice:HVAC_Zone7 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#557> brickframe:isPointOf rice:HVAC_Zone6,
+        rice:HVAC_Zone8 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#7> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone3 .
+
+<http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#32> brickframe:isPointOf rice:HVAC_Zone2,
+        rice:HVAC_Zone3,
+        rice:HVAC_Zone4 .
 
 rice:RICE a brick:Building .
+
+rice:HVAC_Zone6 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#156>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#201>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#212>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#507>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#528>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#54>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#557> .
+
+rice:HVAC_Zone5 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#101>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#154>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#156>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#202>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#208>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#324>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#501>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#508>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#526>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#54>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#57>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#59> .
+
+rice:HVAC_Zone4 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#102>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#106>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#11>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#154>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#19>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#203>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#205>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#209>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#211>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#252>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#32>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#322>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#502>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#509>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#524> .
+
+rice:HVAC_Zone3 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#103>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#104>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#107>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#128>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#17>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#201>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#205>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#206>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#210>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#224>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#306>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#32>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#503>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#511>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#52>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#522>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#552>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#561>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#7> .
+
+rice:HVAC_Zone1 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#102>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#103>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#106>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#11>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#13>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#150>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#20>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#203>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#204>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#207>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#208>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#212>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#220>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#228>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#230>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#259>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#276>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#308>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#322>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#50>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#58> .
+
+rice:HVAC_Zone2 brickframe:hasPoint <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#101>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#105>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#108>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#122>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#15>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#202>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#204>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#207>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#209>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#211>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#222>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#226>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#230>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#232>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#24>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#242>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#252>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#305>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#32>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#504>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#511>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#513>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#516>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#521>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#532>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#536>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#542>,
+        <http://virginia.edu/building/ontology/rice#Roomhttp://buildsys.org/ontologies/Brick#7> .
 

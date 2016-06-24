@@ -1,1 +1,7 @@
-The file contains the list of points whose data is available, along with the groud truth type.
+Rice_Type contains the list of points whose data is available, along with the groud truth type.
+
+point.csv contains the mapping of each primitive label to detailed information
+
+generator.py generates the automatically "parsed" tags and tagsets, but not necessarily the tagsets in the Brick Schema.
+
+convert2ttl.py generate the turtle file based on point.csv.
