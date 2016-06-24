@@ -29,43 +29,39 @@
 
 <http://virginia.edu/building/ontology/rice#5th_Floor_Avg_Space_Humidity> a brick:Humidity_Sensor .
 
-rice:AHU1 brickframe:feeds rice:VAV1 .
-
 rice:AHU1_PreHeat_Coil_Temp a brick:PreHeat_Coil_Leaving_Air_Temperature_Sensor .
 
-rice:AHU2 brickframe:feeds rice:VAV2 .
-
 rice:AHU2_PreHeat_Coil_Temp a brick:PreHeat_Coil_Leaving_Air_Temperature_Sensor .
-
-rice:AHU3 brickframe:feeds rice:VAV3 .
 
 rice:AHU3_CHW_Return_Temppgm2UIP09 a brick:Chilled_Water_Return_Temperature .
 
 rice:AHU3_HW_Supply_Temppgm2UIP11 a brick:Hot_Water_Supply_Temperature .
 
-rice:AHU4 brickframe:feeds rice:VAV4 .
-
-rice:AHU5 brickframe:feeds rice:VAV5 .
-
-rice:AHU6 brickframe:feeds rice:VAV6 .
-
-rice:AHU7 brickframe:feeds rice:VAV7 .
-
-rice:AHU8 brickframe:feeds rice:VAV8 .
-
 rice:AHU_1 a brick:AHU ;
-    brickframe:isPartof rice:RICE .
+    brickframe:feeds rice:VAV1 ;
+    brickframe:isPartOf rice:RICE .
 
 rice:AHU_2 a brick:AHU ;
-    brickframe:isPartof rice:RICE .
+    brickframe:feeds rice:VAV2 ;
+    brickframe:isPartOf rice:RICE .
 
 rice:AHU_3 a brick:AHU ;
-    brickframe:isPartof rice:RICE .
+    brickframe:feeds rice:VAV3 ;
+    brickframe:isPartOf rice:RICE .
 
 rice:AHU_3_Supply_Fan_Temp a brick:Discharge_Air_Temperature_Sensor .
 
 rice:AHU_4 a brick:AHU ;
-    brickframe:isPartof rice:RICE .
+    brickframe:feeds rice:VAV4 ;
+    brickframe:isPartOf rice:RICE .
+
+rice:AHU_5 brickframe:feeds rice:VAV5 .
+
+rice:AHU_6 brickframe:feeds rice:VAV6 .
+
+rice:AHU_7 brickframe:feeds rice:VAV7 .
+
+rice:AHU_8 brickframe:feeds rice:VAV8 .
 
 rice:Active_Cool_DAT_Stptscc2AV003 a brick:Discharge_Air_Temperature_Cooling_Setpoint .
 
@@ -187,7 +183,8 @@ rice:FP_VAV_Hot_Water_Return_Temp a brick:Hot_Water_Return_Temperature .
 
 rice:FP_VAV_Hot_Water_Supply_Temp a brick:Hot_Water_Supply_Temperature .
 
-rice:Floor0 brickframe:hasPart rice:Room11,
+rice:Floor_0 a brick:Floor ;
+    brickframe:hasPart rice:Room11,
         rice:Room13,
         rice:Room15,
         rice:Room17,
@@ -201,9 +198,11 @@ rice:Floor0 brickframe:hasPart rice:Room11,
         rice:Room57,
         rice:Room58,
         rice:Room59,
-        rice:Room7 .
+        rice:Room7 ;
+    brickframe:isPartOf rice:RICE .
 
-rice:Floor1 brickframe:hasPart rice:Room101,
+rice:Floor_1 a brick:Floor ;
+    brickframe:hasPart rice:Room101,
         rice:Room102,
         rice:Room103,
         rice:Room104,
@@ -220,9 +219,11 @@ rice:Floor1 brickframe:hasPart rice:Room101,
         rice:Room150,
         rice:Room154,
         rice:Room156,
-        rice:Room160 .
+        rice:Room160 ;
+    brickframe:isPartOf rice:RICE .
 
-rice:Floor2 brickframe:hasPart rice:Room201,
+rice:Floor_2 a brick:Floor ;
+    brickframe:hasPart rice:Room201,
         rice:Room202,
         rice:Room203,
         rice:Room204,
@@ -244,16 +245,23 @@ rice:Floor2 brickframe:hasPart rice:Room201,
         rice:Room242,
         rice:Room252,
         rice:Room259,
-        rice:Room276 .
+        rice:Room276 ;
+    brickframe:isPartOf rice:RICE .
 
-rice:Floor3 brickframe:hasPart rice:Room305,
+rice:Floor_3 a brick:Floor ;
+    brickframe:hasPart rice:Room305,
         rice:Room306,
         rice:Room308,
         rice:Room322,
         rice:Room324,
-        rice:Room326 .
+        rice:Room326 ;
+    brickframe:isPartOf rice:RICE .
 
-rice:Floor5 brickframe:hasPart rice:Room501,
+rice:Floor_4 a brick:Floor ;
+    brickframe:isPartOf rice:RICE .
+
+rice:Floor_5 a brick:Floor ;
+    brickframe:hasPart rice:Room501,
         rice:Room502,
         rice:Room503,
         rice:Room504,
@@ -280,25 +288,8 @@ rice:Floor5 brickframe:hasPart rice:Room501,
         rice:Room542,
         rice:Room552,
         rice:Room557,
-        rice:Room561 .
-
-rice:Floor_0 a brick:Floor ;
-    brickframe:isPartof rice:RICE .
-
-rice:Floor_1 a brick:Floor ;
-    brickframe:isPartof rice:RICE .
-
-rice:Floor_2 a brick:Floor ;
-    brickframe:isPartof rice:RICE .
-
-rice:Floor_3 a brick:Floor ;
-    brickframe:isPartof rice:RICE .
-
-rice:Floor_4 a brick:Floor ;
-    brickframe:isPartof rice:RICE .
-
-rice:Floor_5 a brick:Floor ;
-    brickframe:isPartof rice:RICE .
+        rice:Room561 ;
+    brickframe:isPartOf rice:RICE .
 
 rice:Freeze_Protect_Low_Limitpgm1AV013 a brick:Freeze_Protect_Low_Limit .
 
