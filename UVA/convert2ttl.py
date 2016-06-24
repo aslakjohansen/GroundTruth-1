@@ -47,4 +47,4 @@ with open('point.csv', 'r') as src:
         #pt_loc = pt['room']
         #building_graph.add((pt['original label'], BRICKFRAME.isLocatedIn, RICE[pt_loc]))
 
-building_graph.serialize(destination='test.ttl', format='turtle')
+building_graph.serialize(destination='Rice.ttl', format='turtle')

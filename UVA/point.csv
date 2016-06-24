@@ -1,4 +1,4 @@
-original label,tagset,ahu,zone,floor,room,unit,parsed tagset
+original label,tagset,ahu,hvac_zone,floor,room,unit,parsed tagset
 Effective RA CO2dac1AV004,Return Air CO2 Sensor,,1,,,4,Effective_RA_CO_dac_AV
 Effective RA CO2dac2AV004,Return Air CO2 Sensor,,2,,,4,Effective_RA_CO_dac_AV
 Effective RA CO2dac3AV004,Return Air CO2 Sensor,,3,,,4,Effective_RA_CO_dac_AV
