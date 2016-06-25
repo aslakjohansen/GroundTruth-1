@@ -112,11 +112,27 @@ soda_hall:ahu_A1 a brick:AHU ;
         soda_hall:vav_R734,
         soda_hall:vav_R776,
         soda_hall:vav_R784 ;
-    rdf:contains soda_hall:supply_fan_S11 .
+    bf:hasPoint soda_hall:ahu_occpy_SODA1____OCCPY,
+        soda_hall:ahu_start_stop_SODA1______S_S,
+        soda_hall:curtl_SODA1____CURTL,
+        soda_hall:override_event_SODA1____EVENT,
+        soda_hall:smoke_alarm_SODA1_SMK_ALM2,
+        soda_hall:smoke_alarm_SODA1_SMK_ALM3,
+        soda_hall:smoke_alarm_SODA1_SMK_ALM4 ;
+    rdf:contains soda_hall:supply_fan_S11 ;
+    rdf:hasPoint soda_hall:rat_SODA1_LOW_RAT2,
+        soda_hall:rat_SODA1_LOW_RAT3,
+        soda_hall:rat_SODA1_LOW_RAT4,
+        soda_hall:rat_SODA1__LOW_RAT .
 
 soda_hall:ahu_A2 a brick:AHU ;
     bf:feeds soda_hall:vav_R306 ;
-    rdf:contains soda_hall:supply_fan_S14 .
+    bf:hasPoint soda_hall:ahu_occpy_SODA2____OCCPY,
+        soda_hall:ahu_start_stop_SODA2______S_S,
+        soda_hall:curtl_SODA2____CURTL,
+        soda_hall:override_event_SODA2____EVENT ;
+    rdf:contains soda_hall:supply_fan_S14 ;
+    rdf:hasPoint soda_hall:rat_SODA2__LOW_RAT .
 
 soda_hall:ahu_A3 a brick:AHU ;
     bf:feeds soda_hall:vav_C411,
@@ -190,7 +206,19 @@ soda_hall:ahu_A3 a brick:AHU ;
         soda_hall:vav_R789,
         soda_hall:vav_R795,
         soda_hall:vav_R798 ;
-    rdf:contains soda_hall:supply_fan_S16 .
+    bf:hasPoint soda_hall:ahu_occpy_SODA3____OCCPY,
+        soda_hall:ahu_start_stop_SODA3______S_S,
+        soda_hall:curtl_SODA3____CURTL,
+        soda_hall:oat_SODA3______OAT,
+        soda_hall:override_event_SODA3____EVENT,
+        soda_hall:smoke_alarm_SODA3_SMK_ALM1,
+        soda_hall:smoke_alarm_SODA3_SMK_ALM2,
+        soda_hall:smoke_alarm_SODA3_SMK_ALM3 ;
+    rdf:contains soda_hall:supply_fan_S16 ;
+    rdf:hasPoint soda_hall:rat_SODA3_LOW_RAT1,
+        soda_hall:rat_SODA3_LOW_RAT2,
+        soda_hall:rat_SODA3_LOW_RAT3,
+        soda_hall:rat_SODA3__LOW_RAT .
 
 soda_hall:ahu_A4 a brick:AHU ;
     bf:feeds soda_hall:vav_C300T,
@@ -263,11 +291,86 @@ soda_hall:ahu_A4 a brick:AHU ;
         soda_hall:vav_R777,
         soda_hall:vav_R779,
         soda_hall:vav_zone_337A ;
-    rdf:contains soda_hall:supply_fan_S18 .
+    bf:hasPoint soda_hall:ahu_occpy_SODA4____OCCPY,
+        soda_hall:ahu_start_stop_SODA4______S_S,
+        soda_hall:curtl_SODA4____CURTL,
+        soda_hall:override_event_SODA4____EVENT,
+        soda_hall:smoke_alarm_SODA4_SMK_ALM1,
+        soda_hall:smoke_alarm_SODA4_SMK_ALM2,
+        soda_hall:smoke_alarm_SODA4_SMK_ALM3 ;
+    rdf:contains soda_hall:supply_fan_S18 ;
+    rdf:hasPoint soda_hall:rat_SODA4_LOW_RAT1,
+        soda_hall:rat_SODA4_LOW_RAT2,
+        soda_hall:rat_SODA4_LOW_RAT3,
+        soda_hall:rat_SODA4__LOW_RAT .
 
 soda_hall:ahu_A5 a brick:AHU ;
     bf:feeds soda_hall:vav_R800A ;
     rdf:contains soda_hall:supply_fan_S20 .
+
+soda_hall:energy_demand_building_SOD__BLD_1_KWD a brick:Energy_Demand .
+
+soda_hall:energy_meter_building_SOD__BLD_1_KWH a brick:Energy_Meter .
+
+soda_hall:flow_sensor_SODA1F1_VAV_AV a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Average ;
+    bf:isLocatedIn soda_hall:floor_1 .
+
+soda_hall:flow_sensor_SODA1F1_VAV_MN a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Min ;
+    bf:isLocatedIn soda_hall:floor_1 .
+
+soda_hall:flow_sensor_SODA1F1_VAV_MX a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Max ;
+    bf:isLocatedIn soda_hall:floor_1 .
+
+soda_hall:flow_sensor_SODA1F2_VAV_AV a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Average ;
+    bf:isLocatedIn soda_hall:floor_2 .
+
+soda_hall:flow_sensor_SODA1F2_VAV_MN a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Min ;
+    bf:isLocatedIn soda_hall:floor_2 .
+
+soda_hall:flow_sensor_SODA1F2_VAV_MX a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Max ;
+    bf:isLocatedIn soda_hall:floor_2 .
+
+soda_hall:flow_sensor_SODA1F3_VAV_AV a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Average ;
+    bf:isLocatedIn soda_hall:floor_3 .
+
+soda_hall:flow_sensor_SODA1F3_VAV_MN a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Min ;
+    bf:isLocatedIn soda_hall:floor_3 .
+
+soda_hall:flow_sensor_SODA1F3_VAV_MX a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Max ;
+    bf:isLocatedIn soda_hall:floor_3 .
+
+soda_hall:flow_sensor_SODA1F4_VAV_AV a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Average ;
+    bf:isLocatedIn soda_hall:floor_4 .
+
+soda_hall:flow_sensor_SODA1F4_VAV_MN a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Min ;
+    bf:isLocatedIn soda_hall:floor_4 .
+
+soda_hall:flow_sensor_SODA1F4_VAV_MX a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Max ;
+    bf:isLocatedIn soda_hall:floor_4 .
+
+soda_hall:flow_sensor_SODA1F5_VAV_AV a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Average ;
+    bf:isLocatedIn soda_hall:floor_5 .
+
+soda_hall:flow_sensor_SODA1F5_VAV_MN a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Min ;
+    bf:isLocatedIn soda_hall:floor_5 .
+
+soda_hall:flow_sensor_SODA1F5_VAV_MX a brick:Supply_Air_Flow_Sensor ;
+    bf:hasTag brick:Max ;
+    bf:isLocatedIn soda_hall:floor_5 .
 
 soda_hall:vav_R179 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R179 ;
@@ -284,6 +387,22 @@ soda_hall:vav_R183 a brick:VAV ;
     bf:hasPoint soda_hall:temp_sensor_hvac_zone_R183,
         soda_hall:temp_setpoint_hvac_zone_R183 .
 
+soda_hall:ahu_occpy_SODA1____OCCPY a brick:Occupancy_Command .
+
+soda_hall:ahu_occpy_SODA2____OCCPY a brick:Occupancy_Command .
+
+soda_hall:ahu_occpy_SODA3____OCCPY a brick:Occupancy_Command .
+
+soda_hall:ahu_occpy_SODA4____OCCPY a brick:Occupancy_Command .
+
+soda_hall:ahu_start_stop_SODA1______S_S a brick:Start_Stop_Command .
+
+soda_hall:ahu_start_stop_SODA2______S_S a brick:Start_Stop_Command .
+
+soda_hall:ahu_start_stop_SODA3______S_S a brick:Start_Stop_Command .
+
+soda_hall:ahu_start_stop_SODA4______S_S a brick:Start_Stop_Command .
+
 soda_hall:c_water_vlv_press_supply_fan_S11 a brick:Cooling_Coil_Valve_Pressure .
 
 soda_hall:c_water_vlv_press_supply_fan_S14 a brick:Cooling_Coil_Valve_Pressure .
@@ -293,6 +412,14 @@ soda_hall:c_water_vlv_press_supply_fan_S16 a brick:Cooling_Coil_Valve_Pressure .
 soda_hall:c_water_vlv_press_supply_fan_S18 a brick:Cooling_Coil_Valve_Pressure .
 
 soda_hall:c_water_vlv_press_supply_fan_S20 a brick:Cooling_Coil_Valve_Pressure .
+
+soda_hall:curtl_SODA1____CURTL a brick:Curtailment_Override .
+
+soda_hall:curtl_SODA2____CURTL a brick:Curtailment_Override .
+
+soda_hall:curtl_SODA3____CURTL a brick:Curtailment_Override .
+
+soda_hall:curtl_SODA4____CURTL a brick:Curtailment_Override .
 
 soda_hall:exhaust_fan_E12 a brick:Exhaust_Fan ;
     bf:hasPoint soda_hall:exhaust_fan_cfm_exhaust_fan_E12,
@@ -346,14 +473,11 @@ soda_hall:fault_status_supply_fan_S16 a brick:Fault_Status .
 
 soda_hall:fault_status_supply_fan_S18 a brick:Fault_Status .
 
-soda_hall:flow_sensor_hvac_zone_C180 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C180 .
+soda_hall:flow_sensor_hvac_zone_C180 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_C300 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C300 .
+soda_hall:flow_sensor_hvac_zone_C300 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_C300B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C300B .
+soda_hall:flow_sensor_hvac_zone_C300B a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_C300T a brick:Supply_Air_Flow_Sensor .
 
@@ -361,8 +485,7 @@ soda_hall:flow_sensor_hvac_zone_C400A a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_C400B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_C400C a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C400C .
+soda_hall:flow_sensor_hvac_zone_C400C a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_C511 a brick:Supply_Air_Flow_Sensor .
 
@@ -380,56 +503,39 @@ soda_hall:flow_sensor_hvac_zone_C711 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_C751 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R184 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R184 .
+soda_hall:flow_sensor_hvac_zone_R184 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R187 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R187 .
+soda_hall:flow_sensor_hvac_zone_R187 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R187A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R187A .
+soda_hall:flow_sensor_hvac_zone_R187A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R190A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R190A .
+soda_hall:flow_sensor_hvac_zone_R190A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R190B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R190B .
+soda_hall:flow_sensor_hvac_zone_R190B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R252 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R252 .
+soda_hall:flow_sensor_hvac_zone_R252 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R271 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R271 .
+soda_hall:flow_sensor_hvac_zone_R271 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R273 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R273 .
+soda_hall:flow_sensor_hvac_zone_R273 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R275 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R275 .
+soda_hall:flow_sensor_hvac_zone_R275 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R277 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R277 .
+soda_hall:flow_sensor_hvac_zone_R277 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R280 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R280 .
+soda_hall:flow_sensor_hvac_zone_R280 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R283E a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R283E .
+soda_hall:flow_sensor_hvac_zone_R283E a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R284 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R284 .
+soda_hall:flow_sensor_hvac_zone_R284 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R287 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R287 .
+soda_hall:flow_sensor_hvac_zone_R287 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R288 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R288 .
+soda_hall:flow_sensor_hvac_zone_R288 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R290 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R290 .
+soda_hall:flow_sensor_hvac_zone_R290 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R310 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R310 .
+soda_hall:flow_sensor_hvac_zone_R310 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R311 a brick:Supply_Air_Flow_Sensor .
 
@@ -437,15 +543,13 @@ soda_hall:flow_sensor_hvac_zone_R313 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R315 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R316 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R316 .
+soda_hall:flow_sensor_hvac_zone_R316 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R317 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R319 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R320 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R320 .
+soda_hall:flow_sensor_hvac_zone_R320 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R321 a brick:Supply_Air_Flow_Sensor .
 
@@ -453,37 +557,31 @@ soda_hall:flow_sensor_hvac_zone_R323 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R325 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R326 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R326 .
+soda_hall:flow_sensor_hvac_zone_R326 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R327 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R329 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R330A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R330A .
+soda_hall:flow_sensor_hvac_zone_R330A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R330B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R330B .
+soda_hall:flow_sensor_hvac_zone_R330B a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R331 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R333 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R336 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R336 .
+soda_hall:flow_sensor_hvac_zone_R336 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R337 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R339 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R340 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R340 .
+soda_hall:flow_sensor_hvac_zone_R340 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R341 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R342 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R342 .
+soda_hall:flow_sensor_hvac_zone_R342 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R343 a brick:Supply_Air_Flow_Sensor .
 
@@ -493,11 +591,9 @@ soda_hall:flow_sensor_hvac_zone_R347 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R349 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R352 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R352 .
+soda_hall:flow_sensor_hvac_zone_R352 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R364 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R364 .
+soda_hall:flow_sensor_hvac_zone_R364 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R365 a brick:Supply_Air_Flow_Sensor .
 
@@ -509,22 +605,19 @@ soda_hall:flow_sensor_hvac_zone_R373 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R375 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R376A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R376A .
+soda_hall:flow_sensor_hvac_zone_R376A a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R377 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R379 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R380 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R380 .
+soda_hall:flow_sensor_hvac_zone_R380 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R381 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R383 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R384 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R384 .
+soda_hall:flow_sensor_hvac_zone_R384 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R385 a brick:Supply_Air_Flow_Sensor .
 
@@ -534,20 +627,15 @@ soda_hall:flow_sensor_hvac_zone_R393 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R395 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R398 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R398 .
+soda_hall:flow_sensor_hvac_zone_R398 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R405A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R405A .
+soda_hall:flow_sensor_hvac_zone_R405A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R405B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R405B .
+soda_hall:flow_sensor_hvac_zone_R405B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R410A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R410A .
+soda_hall:flow_sensor_hvac_zone_R410A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R410B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R410B .
+soda_hall:flow_sensor_hvac_zone_R410B a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R411 a brick:Supply_Air_Flow_Sensor .
 
@@ -555,43 +643,35 @@ soda_hall:flow_sensor_hvac_zone_R413 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R415 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R416 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R416 .
+soda_hall:flow_sensor_hvac_zone_R416 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R417 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R419 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R420 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R420 .
+soda_hall:flow_sensor_hvac_zone_R420 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R420A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R420A .
+soda_hall:flow_sensor_hvac_zone_R420A a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R421 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R430 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R430 .
+soda_hall:flow_sensor_hvac_zone_R430 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R430A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R430A .
+soda_hall:flow_sensor_hvac_zone_R430A a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R434 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R438 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R440 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R440 .
+soda_hall:flow_sensor_hvac_zone_R440 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R441 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R442 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R442 .
+soda_hall:flow_sensor_hvac_zone_R442 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R443 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R444 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R444 .
+soda_hall:flow_sensor_hvac_zone_R444 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R445 a brick:Supply_Air_Flow_Sensor .
 
@@ -599,61 +679,45 @@ soda_hall:flow_sensor_hvac_zone_R447 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R449 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465A .
+soda_hall:flow_sensor_hvac_zone_R465A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465B .
+soda_hall:flow_sensor_hvac_zone_R465B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465D a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465D .
+soda_hall:flow_sensor_hvac_zone_R465D a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465K a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465K .
+soda_hall:flow_sensor_hvac_zone_R465K a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465_3 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_3 .
+soda_hall:flow_sensor_hvac_zone_R465_3 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465_4 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_4 .
+soda_hall:flow_sensor_hvac_zone_R465_4 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465_6 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_6 .
+soda_hall:flow_sensor_hvac_zone_R465_6 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R465_7 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_7 .
+soda_hall:flow_sensor_hvac_zone_R465_7 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R498 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R498 .
+soda_hall:flow_sensor_hvac_zone_R498 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R500A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R500A .
+soda_hall:flow_sensor_hvac_zone_R500A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R500B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R500B .
+soda_hall:flow_sensor_hvac_zone_R500B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R508 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R508 .
+soda_hall:flow_sensor_hvac_zone_R508 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R510 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R510 .
+soda_hall:flow_sensor_hvac_zone_R510 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R513 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R514 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R514 .
+soda_hall:flow_sensor_hvac_zone_R514 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R515 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R516 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R516 .
+soda_hall:flow_sensor_hvac_zone_R516 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R517 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R523 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R524 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R524 .
+soda_hall:flow_sensor_hvac_zone_R524 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R525 a brick:Supply_Air_Flow_Sensor .
 
@@ -661,27 +725,23 @@ soda_hall:flow_sensor_hvac_zone_R527 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R529 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R530 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R530 .
+soda_hall:flow_sensor_hvac_zone_R530 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R531 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R533 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R534 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R534 .
+soda_hall:flow_sensor_hvac_zone_R534 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R535 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R537 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R542 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R542 .
+soda_hall:flow_sensor_hvac_zone_R542 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R543 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R544 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R544 .
+soda_hall:flow_sensor_hvac_zone_R544 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R545 a brick:Supply_Air_Flow_Sensor .
 
@@ -689,19 +749,15 @@ soda_hall:flow_sensor_hvac_zone_R551 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R5511 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R552 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R552 .
+soda_hall:flow_sensor_hvac_zone_R552 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R562A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R562A .
+soda_hall:flow_sensor_hvac_zone_R562A a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R563 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R564 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R564 .
+soda_hall:flow_sensor_hvac_zone_R564 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R566 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R566 .
+soda_hall:flow_sensor_hvac_zone_R566 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R567 a brick:Supply_Air_Flow_Sensor .
 
@@ -715,14 +771,11 @@ soda_hall:flow_sensor_hvac_zone_R579 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R580 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R582 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R582 .
+soda_hall:flow_sensor_hvac_zone_R582 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R582_1 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R582_1 .
+soda_hall:flow_sensor_hvac_zone_R582_1 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R582_2 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R582_2 .
+soda_hall:flow_sensor_hvac_zone_R582_2 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R583 a brick:Supply_Air_Flow_Sensor .
 
@@ -734,17 +787,13 @@ soda_hall:flow_sensor_hvac_zone_R5871 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R595 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R598 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R598 .
+soda_hall:flow_sensor_hvac_zone_R598 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R600A a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R600A .
+soda_hall:flow_sensor_hvac_zone_R600A a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R600B a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R600B .
+soda_hall:flow_sensor_hvac_zone_R600B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R606 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R606 .
+soda_hall:flow_sensor_hvac_zone_R606 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R615 a brick:Supply_Air_Flow_Sensor .
 
@@ -756,8 +805,7 @@ soda_hall:flow_sensor_hvac_zone_R623 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R625 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R626 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R626 .
+soda_hall:flow_sensor_hvac_zone_R626 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R627 a brick:Supply_Air_Flow_Sensor .
 
@@ -767,8 +815,7 @@ soda_hall:flow_sensor_hvac_zone_R631 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R633 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R634 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R634 .
+soda_hall:flow_sensor_hvac_zone_R634 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R635 a brick:Supply_Air_Flow_Sensor .
 
@@ -782,8 +829,7 @@ soda_hall:flow_sensor_hvac_zone_R645 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R651 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R652 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R652 .
+soda_hall:flow_sensor_hvac_zone_R652 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R665 a brick:Supply_Air_Flow_Sensor .
 
@@ -793,25 +839,21 @@ soda_hall:flow_sensor_hvac_zone_R673 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R675 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R676 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R676 .
+soda_hall:flow_sensor_hvac_zone_R676 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R677 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R678 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R678 .
+soda_hall:flow_sensor_hvac_zone_R678 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R681A a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R681B a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R682 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R682 .
+soda_hall:flow_sensor_hvac_zone_R682 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R683 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R684 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R684 .
+soda_hall:flow_sensor_hvac_zone_R684 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R685 a brick:Supply_Air_Flow_Sensor .
 
@@ -821,8 +863,7 @@ soda_hall:flow_sensor_hvac_zone_R689 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R695 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R698 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R698 .
+soda_hall:flow_sensor_hvac_zone_R698 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R719 a brick:Supply_Air_Flow_Sensor .
 
@@ -832,8 +873,7 @@ soda_hall:flow_sensor_hvac_zone_R723 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R725 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R726 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R726 .
+soda_hall:flow_sensor_hvac_zone_R726 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R727 a brick:Supply_Air_Flow_Sensor .
 
@@ -843,8 +883,7 @@ soda_hall:flow_sensor_hvac_zone_R731 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R733 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R734 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R734 .
+soda_hall:flow_sensor_hvac_zone_R734 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R735 a brick:Supply_Air_Flow_Sensor .
 
@@ -854,8 +893,7 @@ soda_hall:flow_sensor_hvac_zone_R739 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R741 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R752 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R752 .
+soda_hall:flow_sensor_hvac_zone_R752 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R765 a brick:Supply_Air_Flow_Sensor .
 
@@ -865,8 +903,7 @@ soda_hall:flow_sensor_hvac_zone_R773 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R775 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R776 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R776 .
+soda_hall:flow_sensor_hvac_zone_R776 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R777 a brick:Supply_Air_Flow_Sensor .
 
@@ -876,8 +913,7 @@ soda_hall:flow_sensor_hvac_zone_R781 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R783 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R784 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R784 .
+soda_hall:flow_sensor_hvac_zone_R784 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R785 a brick:Supply_Air_Flow_Sensor .
 
@@ -887,8 +923,7 @@ soda_hall:flow_sensor_hvac_zone_R789 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_R795 a brick:Supply_Air_Flow_Sensor .
 
-soda_hall:flow_sensor_hvac_zone_R798 a brick:Supply_Air_Flow_Sensor ;
-    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R798 .
+soda_hall:flow_sensor_hvac_zone_R798 a brick:Supply_Air_Flow_Sensor .
 
 soda_hall:flow_sensor_hvac_zone_zone_337A a brick:Supply_Air_Flow_Sensor .
 
@@ -1637,6 +1672,16 @@ soda_hall:mixed_air_temp_supply_fan_S16 a brick:Mixed_Air_Temperature_Sensor .
 
 soda_hall:mixed_air_temp_supply_fan_S18 a brick:Mixed_Air_Temperature_Sensor .
 
+soda_hall:oat_SODA3______OAT a brick:Outside_Air_Temperature .
+
+soda_hall:override_event_SODA1____EVENT a brick:AHU_Overriden_On_Status .
+
+soda_hall:override_event_SODA2____EVENT a brick:AHU_Overriden_On_Status .
+
+soda_hall:override_event_SODA3____EVENT a brick:AHU_Overriden_On_Status .
+
+soda_hall:override_event_SODA4____EVENT a brick:AHU_Overriden_On_Status .
+
 soda_hall:pid_i_supply_fan_S11 a brick:Supply_Air_Integrative_Gain_Factor .
 
 soda_hall:pid_i_supply_fan_S16 a brick:Supply_Air_Integrative_Gain_Factor .
@@ -1648,6 +1693,32 @@ soda_hall:pid_p_supply_fan_S11 a brick:Supply_Air_Proportional_Gain_Factor .
 soda_hall:pid_p_supply_fan_S14 a brick:Supply_Air_Proportional_Gain_Factor .
 
 soda_hall:pid_p_supply_fan_S16 a brick:Supply_Air_Proportional_Gain_Factor .
+
+soda_hall:rat_SODA1_LOW_RAT2 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA1_LOW_RAT3 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA1_LOW_RAT4 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA1__LOW_RAT a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA2__LOW_RAT a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA3_LOW_RAT1 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA3_LOW_RAT2 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA3_LOW_RAT3 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA3__LOW_RAT a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA4_LOW_RAT1 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA4_LOW_RAT2 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA4_LOW_RAT3 a brick:Return_Air_Temperature_Low_Limit_Alarm .
+
+soda_hall:rat_SODA4__LOW_RAT a brick:Return_Air_Temperature_Low_Limit_Alarm .
 
 soda_hall:reheat_sensor_hvac_zone_C300T a brick:Reheat_Valve_Command .
 
@@ -2657,6 +2728,24 @@ soda_hall:s_s_supply_fan_S16 a brick:Start_Stop_Status .
 soda_hall:s_s_supply_fan_S18 a brick:Start_Stop_Status .
 
 soda_hall:s_s_supply_fan_S20 a brick:Start_Stop_Status .
+
+soda_hall:smoke_alarm_SODA1_SMK_ALM2 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA1_SMK_ALM3 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA1_SMK_ALM4 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA3_SMK_ALM1 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA3_SMK_ALM2 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA3_SMK_ALM3 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA4_SMK_ALM1 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA4_SMK_ALM2 a brick:Smoke_Detected_Alarm .
+
+soda_hall:smoke_alarm_SODA4_SMK_ALM3 a brick:Smoke_Detected_Alarm .
 
 soda_hall:smoke_alarm_supply_fan_S11 a brick:Smoke_Detected_Alarm .
 
@@ -3692,17 +3781,20 @@ soda_hall:temp_setpoint_hvac_zone_R800A a brick:Zone_Temperature_Setpoint .
 
 soda_hall:vav_C180 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_C180 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_C180,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C180,
+        soda_hall:temp_sensor_hvac_zone_C180,
         soda_hall:temp_setpoint_hvac_zone_C180 .
 
 soda_hall:vav_C300 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_C300 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_C300,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C300,
+        soda_hall:temp_sensor_hvac_zone_C300,
         soda_hall:temp_setpoint_hvac_zone_C300 .
 
 soda_hall:vav_C300B a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_C300B ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_C300B,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C300B,
+        soda_hall:temp_sensor_hvac_zone_C300B,
         soda_hall:temp_setpoint_hvac_zone_C300B .
 
 soda_hall:vav_C300T a brick:VAV ;
@@ -3731,7 +3823,8 @@ soda_hall:vav_C400B a brick:VAV ;
 
 soda_hall:vav_C400C a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_C400C ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_C400C,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_C400C,
+        soda_hall:temp_sensor_hvac_zone_C400C,
         soda_hall:temp_setpoint_hvac_zone_C400C .
 
 soda_hall:vav_C411 a brick:VAV ;
@@ -3825,82 +3918,98 @@ soda_hall:vav_C751 a brick:VAV ;
 
 soda_hall:vav_R184 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R184 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R184,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R184,
+        soda_hall:temp_sensor_hvac_zone_R184,
         soda_hall:temp_setpoint_hvac_zone_R184 .
 
 soda_hall:vav_R187 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R187 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R187,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R187,
+        soda_hall:temp_sensor_hvac_zone_R187,
         soda_hall:temp_setpoint_hvac_zone_R187 .
 
 soda_hall:vav_R187A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R187A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R187A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R187A,
+        soda_hall:temp_sensor_hvac_zone_R187A,
         soda_hall:temp_setpoint_hvac_zone_R187A .
 
 soda_hall:vav_R190A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R190A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R190A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R190A,
+        soda_hall:temp_sensor_hvac_zone_R190A,
         soda_hall:temp_setpoint_hvac_zone_R190A .
 
 soda_hall:vav_R190B a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R190B ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R190B,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R190B,
+        soda_hall:temp_sensor_hvac_zone_R190B,
         soda_hall:temp_setpoint_hvac_zone_R190B .
 
 soda_hall:vav_R252 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R252 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R252,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R252,
+        soda_hall:temp_sensor_hvac_zone_R252,
         soda_hall:temp_setpoint_hvac_zone_R252 .
 
 soda_hall:vav_R271 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R271 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R271,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R271,
+        soda_hall:temp_sensor_hvac_zone_R271,
         soda_hall:temp_setpoint_hvac_zone_R271 .
 
 soda_hall:vav_R273 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R273 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R273,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R273,
+        soda_hall:temp_sensor_hvac_zone_R273,
         soda_hall:temp_setpoint_hvac_zone_R273 .
 
 soda_hall:vav_R275 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R275 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R275,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R275,
+        soda_hall:temp_sensor_hvac_zone_R275,
         soda_hall:temp_setpoint_hvac_zone_R275 .
 
 soda_hall:vav_R277 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R277 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R277,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R277,
+        soda_hall:temp_sensor_hvac_zone_R277,
         soda_hall:temp_setpoint_hvac_zone_R277 .
 
 soda_hall:vav_R280 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R280 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R280,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R280,
+        soda_hall:temp_sensor_hvac_zone_R280,
         soda_hall:temp_setpoint_hvac_zone_R280 .
 
 soda_hall:vav_R283E a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R283E ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R283E,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R283E,
+        soda_hall:temp_sensor_hvac_zone_R283E,
         soda_hall:temp_setpoint_hvac_zone_R283E .
 
 soda_hall:vav_R284 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R284 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R284,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R284,
+        soda_hall:temp_sensor_hvac_zone_R284,
         soda_hall:temp_setpoint_hvac_zone_R284 .
 
 soda_hall:vav_R287 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R287 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R287,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R287,
+        soda_hall:temp_sensor_hvac_zone_R287,
         soda_hall:temp_setpoint_hvac_zone_R287 .
 
 soda_hall:vav_R288 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R288 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R288,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R288,
+        soda_hall:temp_sensor_hvac_zone_R288,
         soda_hall:temp_setpoint_hvac_zone_R288 .
 
 soda_hall:vav_R290 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R290 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R290,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R290,
+        soda_hall:temp_sensor_hvac_zone_R290,
         soda_hall:temp_setpoint_hvac_zone_R290 .
 
 soda_hall:vav_R306 a brick:VAV ;
@@ -3910,7 +4019,8 @@ soda_hall:vav_R306 a brick:VAV ;
 
 soda_hall:vav_R310 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R310 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R310,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R310,
+        soda_hall:temp_sensor_hvac_zone_R310,
         soda_hall:temp_setpoint_hvac_zone_R310 .
 
 soda_hall:vav_R311 a brick:VAV ;
@@ -3939,7 +4049,8 @@ soda_hall:vav_R315 a brick:VAV ;
 
 soda_hall:vav_R316 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R316 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R316,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R316,
+        soda_hall:temp_sensor_hvac_zone_R316,
         soda_hall:temp_setpoint_hvac_zone_R316 .
 
 soda_hall:vav_R317 a brick:VAV ;
@@ -3960,7 +4071,8 @@ soda_hall:vav_R319 a brick:VAV ;
 
 soda_hall:vav_R320 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R320 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R320,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R320,
+        soda_hall:temp_sensor_hvac_zone_R320,
         soda_hall:temp_setpoint_hvac_zone_R320 .
 
 soda_hall:vav_R321 a brick:VAV ;
@@ -3989,7 +4101,8 @@ soda_hall:vav_R325 a brick:VAV ;
 
 soda_hall:vav_R326 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R326 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R326,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R326,
+        soda_hall:temp_sensor_hvac_zone_R326,
         soda_hall:temp_setpoint_hvac_zone_R326 .
 
 soda_hall:vav_R327 a brick:VAV ;
@@ -4010,12 +4123,14 @@ soda_hall:vav_R329 a brick:VAV ;
 
 soda_hall:vav_R330A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R330A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R330A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R330A,
+        soda_hall:temp_sensor_hvac_zone_R330A,
         soda_hall:temp_setpoint_hvac_zone_R330A .
 
 soda_hall:vav_R330B a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R330B ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R330B,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R330B,
+        soda_hall:temp_sensor_hvac_zone_R330B,
         soda_hall:temp_setpoint_hvac_zone_R330B .
 
 soda_hall:vav_R331 a brick:VAV ;
@@ -4036,7 +4151,8 @@ soda_hall:vav_R333 a brick:VAV ;
 
 soda_hall:vav_R336 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R336 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R336,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R336,
+        soda_hall:temp_sensor_hvac_zone_R336,
         soda_hall:temp_setpoint_hvac_zone_R336 .
 
 soda_hall:vav_R337 a brick:VAV ;
@@ -4062,7 +4178,8 @@ soda_hall:vav_R339 a brick:VAV ;
 
 soda_hall:vav_R340 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R340 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R340,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R340,
+        soda_hall:temp_sensor_hvac_zone_R340,
         soda_hall:temp_setpoint_hvac_zone_R340 .
 
 soda_hall:vav_R341 a brick:VAV ;
@@ -4075,7 +4192,8 @@ soda_hall:vav_R341 a brick:VAV ;
 
 soda_hall:vav_R342 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R342 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R342,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R342,
+        soda_hall:temp_sensor_hvac_zone_R342,
         soda_hall:temp_setpoint_hvac_zone_R342 .
 
 soda_hall:vav_R343 a brick:VAV ;
@@ -4112,12 +4230,14 @@ soda_hall:vav_R349 a brick:VAV ;
 
 soda_hall:vav_R352 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R352 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R352,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R352,
+        soda_hall:temp_sensor_hvac_zone_R352,
         soda_hall:temp_setpoint_hvac_zone_R352 .
 
 soda_hall:vav_R364 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R364 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R364,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R364,
+        soda_hall:temp_sensor_hvac_zone_R364,
         soda_hall:temp_setpoint_hvac_zone_R364 .
 
 soda_hall:vav_R365 a brick:VAV ;
@@ -4154,7 +4274,8 @@ soda_hall:vav_R375 a brick:VAV ;
 
 soda_hall:vav_R376A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R376A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R376A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R376A,
+        soda_hall:temp_sensor_hvac_zone_R376A,
         soda_hall:temp_setpoint_hvac_zone_R376A .
 
 soda_hall:vav_R377 a brick:VAV ;
@@ -4175,7 +4296,8 @@ soda_hall:vav_R379 a brick:VAV ;
 
 soda_hall:vav_R380 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R380 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R380,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R380,
+        soda_hall:temp_sensor_hvac_zone_R380,
         soda_hall:temp_setpoint_hvac_zone_R380 .
 
 soda_hall:vav_R381 a brick:VAV ;
@@ -4196,7 +4318,8 @@ soda_hall:vav_R383 a brick:VAV ;
 
 soda_hall:vav_R384 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R384 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R384,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R384,
+        soda_hall:temp_sensor_hvac_zone_R384,
         soda_hall:temp_setpoint_hvac_zone_R384 .
 
 soda_hall:vav_R385 a brick:VAV ;
@@ -4233,27 +4356,32 @@ soda_hall:vav_R395 a brick:VAV ;
 
 soda_hall:vav_R398 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R398 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R398,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R398,
+        soda_hall:temp_sensor_hvac_zone_R398,
         soda_hall:temp_setpoint_hvac_zone_R398 .
 
 soda_hall:vav_R405A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R405A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R405A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R405A,
+        soda_hall:temp_sensor_hvac_zone_R405A,
         soda_hall:temp_setpoint_hvac_zone_R405A .
 
 soda_hall:vav_R405B a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R405B ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R405B,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R405B,
+        soda_hall:temp_sensor_hvac_zone_R405B,
         soda_hall:temp_setpoint_hvac_zone_R405B .
 
 soda_hall:vav_R410A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R410A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R410A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R410A,
+        soda_hall:temp_sensor_hvac_zone_R410A,
         soda_hall:temp_setpoint_hvac_zone_R410A .
 
 soda_hall:vav_R410B a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R410B ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R410B,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R410B,
+        soda_hall:temp_sensor_hvac_zone_R410B,
         soda_hall:temp_setpoint_hvac_zone_R410B .
 
 soda_hall:vav_R411 a brick:VAV ;
@@ -4280,7 +4408,8 @@ soda_hall:vav_R415 a brick:VAV ;
 
 soda_hall:vav_R416 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R416 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R416,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R416,
+        soda_hall:temp_sensor_hvac_zone_R416,
         soda_hall:temp_setpoint_hvac_zone_R416 .
 
 soda_hall:vav_R417 a brick:VAV ;
@@ -4301,12 +4430,14 @@ soda_hall:vav_R419 a brick:VAV ;
 
 soda_hall:vav_R420 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R420 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R420,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R420,
+        soda_hall:temp_sensor_hvac_zone_R420,
         soda_hall:temp_setpoint_hvac_zone_R420 .
 
 soda_hall:vav_R420A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R420A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R420A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R420A,
+        soda_hall:temp_sensor_hvac_zone_R420A,
         soda_hall:temp_setpoint_hvac_zone_R420A .
 
 soda_hall:vav_R421 a brick:VAV ;
@@ -4319,12 +4450,14 @@ soda_hall:vav_R421 a brick:VAV ;
 
 soda_hall:vav_R430 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R430 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R430,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R430,
+        soda_hall:temp_sensor_hvac_zone_R430,
         soda_hall:temp_setpoint_hvac_zone_R430 .
 
 soda_hall:vav_R430A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R430A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R430A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R430A,
+        soda_hall:temp_sensor_hvac_zone_R430A,
         soda_hall:temp_setpoint_hvac_zone_R430A .
 
 soda_hall:vav_R434 a brick:VAV ;
@@ -4345,7 +4478,8 @@ soda_hall:vav_R438 a brick:VAV ;
 
 soda_hall:vav_R440 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R440 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R440,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R440,
+        soda_hall:temp_sensor_hvac_zone_R440,
         soda_hall:temp_setpoint_hvac_zone_R440 .
 
 soda_hall:vav_R441 a brick:VAV ;
@@ -4358,7 +4492,8 @@ soda_hall:vav_R441 a brick:VAV ;
 
 soda_hall:vav_R442 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R442 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R442,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R442,
+        soda_hall:temp_sensor_hvac_zone_R442,
         soda_hall:temp_setpoint_hvac_zone_R442 .
 
 soda_hall:vav_R443 a brick:VAV ;
@@ -4371,7 +4506,8 @@ soda_hall:vav_R443 a brick:VAV ;
 
 soda_hall:vav_R444 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R444 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R444,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R444,
+        soda_hall:temp_sensor_hvac_zone_R444,
         soda_hall:temp_setpoint_hvac_zone_R444 .
 
 soda_hall:vav_R445 a brick:VAV ;
@@ -4404,12 +4540,14 @@ soda_hall:vav_R452 a brick:VAV ;
 
 soda_hall:vav_R465A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465A,
+        soda_hall:temp_sensor_hvac_zone_R465A,
         soda_hall:temp_setpoint_hvac_zone_R465A .
 
 soda_hall:vav_R465B a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465B ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465B,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465B,
+        soda_hall:temp_sensor_hvac_zone_R465B,
         soda_hall:temp_setpoint_hvac_zone_R465B .
 
 soda_hall:vav_R465C a brick:VAV ;
@@ -4419,7 +4557,8 @@ soda_hall:vav_R465C a brick:VAV ;
 
 soda_hall:vav_R465D a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465D ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465D,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465D,
+        soda_hall:temp_sensor_hvac_zone_R465D,
         soda_hall:temp_setpoint_hvac_zone_R465D .
 
 soda_hall:vav_R465E a brick:VAV ;
@@ -4434,17 +4573,20 @@ soda_hall:vav_R465H a brick:VAV ;
 
 soda_hall:vav_R465K a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465K ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465K,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465K,
+        soda_hall:temp_sensor_hvac_zone_R465K,
         soda_hall:temp_setpoint_hvac_zone_R465K .
 
 soda_hall:vav_R465_3 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465_3 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465_3,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_3,
+        soda_hall:temp_sensor_hvac_zone_R465_3,
         soda_hall:temp_setpoint_hvac_zone_R465_3 .
 
 soda_hall:vav_R465_4 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465_4 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465_4,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_4,
+        soda_hall:temp_sensor_hvac_zone_R465_4,
         soda_hall:temp_setpoint_hvac_zone_R465_4 .
 
 soda_hall:vav_R465_5 a brick:VAV ;
@@ -4454,33 +4596,40 @@ soda_hall:vav_R465_5 a brick:VAV ;
 
 soda_hall:vav_R465_6 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465_6 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465_6,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_6,
+        soda_hall:temp_sensor_hvac_zone_R465_6,
         soda_hall:temp_setpoint_hvac_zone_R465_6 .
 
 soda_hall:vav_R465_7 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R465_7 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R465_7,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R465_7,
+        soda_hall:temp_sensor_hvac_zone_R465_7,
         soda_hall:temp_setpoint_hvac_zone_R465_7 .
 
 soda_hall:vav_R498 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R498 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R498,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R498,
+        soda_hall:temp_sensor_hvac_zone_R498,
         soda_hall:temp_setpoint_hvac_zone_R498 .
 
 soda_hall:vav_R500A a brick:VAV ;
-    bf:feeds soda_hall:hvac_zone_R500A .
+    bf:feeds soda_hall:hvac_zone_R500A ;
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R500A .
 
 soda_hall:vav_R500B a brick:VAV ;
-    bf:feeds soda_hall:hvac_zone_R500B .
+    bf:feeds soda_hall:hvac_zone_R500B ;
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R500B .
 
 soda_hall:vav_R508 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R508 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R508,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R508,
+        soda_hall:temp_sensor_hvac_zone_R508,
         soda_hall:temp_setpoint_hvac_zone_R508 .
 
 soda_hall:vav_R510 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R510 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R510,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R510,
+        soda_hall:temp_sensor_hvac_zone_R510,
         soda_hall:temp_setpoint_hvac_zone_R510 .
 
 soda_hall:vav_R513 a brick:VAV ;
@@ -4493,7 +4642,8 @@ soda_hall:vav_R513 a brick:VAV ;
 
 soda_hall:vav_R514 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R514 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R514,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R514,
+        soda_hall:temp_sensor_hvac_zone_R514,
         soda_hall:temp_setpoint_hvac_zone_R514 .
 
 soda_hall:vav_R515 a brick:VAV ;
@@ -4506,7 +4656,8 @@ soda_hall:vav_R515 a brick:VAV ;
 
 soda_hall:vav_R516 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R516 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R516,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R516,
+        soda_hall:temp_sensor_hvac_zone_R516,
         soda_hall:temp_setpoint_hvac_zone_R516 .
 
 soda_hall:vav_R517 a brick:VAV ;
@@ -4527,7 +4678,8 @@ soda_hall:vav_R523 a brick:VAV ;
 
 soda_hall:vav_R524 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R524 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R524,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R524,
+        soda_hall:temp_sensor_hvac_zone_R524,
         soda_hall:temp_setpoint_hvac_zone_R524 .
 
 soda_hall:vav_R525 a brick:VAV ;
@@ -4556,7 +4708,8 @@ soda_hall:vav_R529 a brick:VAV ;
 
 soda_hall:vav_R530 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R530 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R530,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R530,
+        soda_hall:temp_sensor_hvac_zone_R530,
         soda_hall:temp_setpoint_hvac_zone_R530 .
 
 soda_hall:vav_R531 a brick:VAV ;
@@ -4577,7 +4730,8 @@ soda_hall:vav_R533 a brick:VAV ;
 
 soda_hall:vav_R534 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R534 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R534,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R534,
+        soda_hall:temp_sensor_hvac_zone_R534,
         soda_hall:temp_setpoint_hvac_zone_R534 .
 
 soda_hall:vav_R535 a brick:VAV ;
@@ -4598,7 +4752,8 @@ soda_hall:vav_R537 a brick:VAV ;
 
 soda_hall:vav_R542 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R542 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R542,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R542,
+        soda_hall:temp_sensor_hvac_zone_R542,
         soda_hall:temp_setpoint_hvac_zone_R542 .
 
 soda_hall:vav_R543 a brick:VAV ;
@@ -4611,7 +4766,8 @@ soda_hall:vav_R543 a brick:VAV ;
 
 soda_hall:vav_R544 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R544 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R544,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R544,
+        soda_hall:temp_sensor_hvac_zone_R544,
         soda_hall:temp_setpoint_hvac_zone_R544 .
 
 soda_hall:vav_R545 a brick:VAV ;
@@ -4638,12 +4794,14 @@ soda_hall:vav_R5511 a brick:VAV ;
 
 soda_hall:vav_R552 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R552 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R552,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R552,
+        soda_hall:temp_sensor_hvac_zone_R552,
         soda_hall:temp_setpoint_hvac_zone_R552 .
 
 soda_hall:vav_R562A a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R562A ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R562A,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R562A,
+        soda_hall:temp_sensor_hvac_zone_R562A,
         soda_hall:temp_setpoint_hvac_zone_R562A .
 
 soda_hall:vav_R563 a brick:VAV ;
@@ -4656,12 +4814,14 @@ soda_hall:vav_R563 a brick:VAV ;
 
 soda_hall:vav_R564 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R564 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R564,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R564,
+        soda_hall:temp_sensor_hvac_zone_R564,
         soda_hall:temp_setpoint_hvac_zone_R564 .
 
 soda_hall:vav_R566 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R566 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R566,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R566,
+        soda_hall:temp_sensor_hvac_zone_R566,
         soda_hall:temp_setpoint_hvac_zone_R566 .
 
 soda_hall:vav_R567 a brick:VAV ;
@@ -4714,14 +4874,17 @@ soda_hall:vav_R580 a brick:VAV ;
 
 soda_hall:vav_R582 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R582 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R582,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R582,
+        soda_hall:temp_sensor_hvac_zone_R582,
         soda_hall:temp_setpoint_hvac_zone_R582 .
 
 soda_hall:vav_R582_1 a brick:VAV ;
-    bf:feeds soda_hall:hvac_zone_R582_1 .
+    bf:feeds soda_hall:hvac_zone_R582_1 ;
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R582_1 .
 
 soda_hall:vav_R582_2 a brick:VAV ;
-    bf:feeds soda_hall:hvac_zone_R582_2 .
+    bf:feeds soda_hall:hvac_zone_R582_2 ;
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R582_2 .
 
 soda_hall:vav_R583 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R583 ;
@@ -4761,18 +4924,22 @@ soda_hall:vav_R595 a brick:VAV ;
 
 soda_hall:vav_R598 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R598 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R598,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R598,
+        soda_hall:temp_sensor_hvac_zone_R598,
         soda_hall:temp_setpoint_hvac_zone_R598 .
 
 soda_hall:vav_R600A a brick:VAV ;
-    bf:feeds soda_hall:hvac_zone_R600A .
+    bf:feeds soda_hall:hvac_zone_R600A ;
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R600A .
 
 soda_hall:vav_R600B a brick:VAV ;
-    bf:feeds soda_hall:hvac_zone_R600B .
+    bf:feeds soda_hall:hvac_zone_R600B ;
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R600B .
 
 soda_hall:vav_R606 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R606 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R606,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R606,
+        soda_hall:temp_sensor_hvac_zone_R606,
         soda_hall:temp_setpoint_hvac_zone_R606 .
 
 soda_hall:vav_R615 a brick:VAV ;
@@ -4817,7 +4984,8 @@ soda_hall:vav_R625 a brick:VAV ;
 
 soda_hall:vav_R626 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R626 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R626,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R626,
+        soda_hall:temp_sensor_hvac_zone_R626,
         soda_hall:temp_setpoint_hvac_zone_R626 .
 
 soda_hall:vav_R627 a brick:VAV ;
@@ -4854,7 +5022,8 @@ soda_hall:vav_R633 a brick:VAV ;
 
 soda_hall:vav_R634 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R634 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R634,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R634,
+        soda_hall:temp_sensor_hvac_zone_R634,
         soda_hall:temp_setpoint_hvac_zone_R634 .
 
 soda_hall:vav_R635 a brick:VAV ;
@@ -4907,7 +5076,8 @@ soda_hall:vav_R651 a brick:VAV ;
 
 soda_hall:vav_R652 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R652 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R652,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R652,
+        soda_hall:temp_sensor_hvac_zone_R652,
         soda_hall:temp_setpoint_hvac_zone_R652 .
 
 soda_hall:vav_R665 a brick:VAV ;
@@ -4944,7 +5114,8 @@ soda_hall:vav_R675 a brick:VAV ;
 
 soda_hall:vav_R676 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R676 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R676,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R676,
+        soda_hall:temp_sensor_hvac_zone_R676,
         soda_hall:temp_setpoint_hvac_zone_R676 .
 
 soda_hall:vav_R677 a brick:VAV ;
@@ -4957,7 +5128,8 @@ soda_hall:vav_R677 a brick:VAV ;
 
 soda_hall:vav_R678 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R678 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R678,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R678,
+        soda_hall:temp_sensor_hvac_zone_R678,
         soda_hall:temp_setpoint_hvac_zone_R678 .
 
 soda_hall:vav_R681A a brick:VAV ;
@@ -4978,7 +5150,8 @@ soda_hall:vav_R681B a brick:VAV ;
 
 soda_hall:vav_R682 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R682 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R682,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R682,
+        soda_hall:temp_sensor_hvac_zone_R682,
         soda_hall:temp_setpoint_hvac_zone_R682 .
 
 soda_hall:vav_R683 a brick:VAV ;
@@ -4991,7 +5164,8 @@ soda_hall:vav_R683 a brick:VAV ;
 
 soda_hall:vav_R684 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R684 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R684,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R684,
+        soda_hall:temp_sensor_hvac_zone_R684,
         soda_hall:temp_setpoint_hvac_zone_R684 .
 
 soda_hall:vav_R685 a brick:VAV ;
@@ -5028,7 +5202,8 @@ soda_hall:vav_R695 a brick:VAV ;
 
 soda_hall:vav_R698 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R698 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R698,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R698,
+        soda_hall:temp_sensor_hvac_zone_R698,
         soda_hall:temp_setpoint_hvac_zone_R698 .
 
 soda_hall:vav_R719 a brick:VAV ;
@@ -5065,7 +5240,8 @@ soda_hall:vav_R725 a brick:VAV ;
 
 soda_hall:vav_R726 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R726 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R726,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R726,
+        soda_hall:temp_sensor_hvac_zone_R726,
         soda_hall:temp_setpoint_hvac_zone_R726 .
 
 soda_hall:vav_R727 a brick:VAV ;
@@ -5102,7 +5278,8 @@ soda_hall:vav_R733 a brick:VAV ;
 
 soda_hall:vav_R734 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R734 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R734,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R734,
+        soda_hall:temp_sensor_hvac_zone_R734,
         soda_hall:temp_setpoint_hvac_zone_R734 .
 
 soda_hall:vav_R735 a brick:VAV ;
@@ -5139,7 +5316,8 @@ soda_hall:vav_R741 a brick:VAV ;
 
 soda_hall:vav_R752 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R752 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R752,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R752,
+        soda_hall:temp_sensor_hvac_zone_R752,
         soda_hall:temp_setpoint_hvac_zone_R752 .
 
 soda_hall:vav_R765 a brick:VAV ;
@@ -5176,7 +5354,8 @@ soda_hall:vav_R775 a brick:VAV ;
 
 soda_hall:vav_R776 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R776 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R776,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R776,
+        soda_hall:temp_sensor_hvac_zone_R776,
         soda_hall:temp_setpoint_hvac_zone_R776 .
 
 soda_hall:vav_R777 a brick:VAV ;
@@ -5213,7 +5392,8 @@ soda_hall:vav_R783 a brick:VAV ;
 
 soda_hall:vav_R784 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R784 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R784,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R784,
+        soda_hall:temp_sensor_hvac_zone_R784,
         soda_hall:temp_setpoint_hvac_zone_R784 .
 
 soda_hall:vav_R785 a brick:VAV ;
@@ -5250,7 +5430,8 @@ soda_hall:vav_R795 a brick:VAV ;
 
 soda_hall:vav_R798 a brick:VAV ;
     bf:feeds soda_hall:hvac_zone_R798 ;
-    bf:hasPoint soda_hall:temp_sensor_hvac_zone_R798,
+    bf:hasPoint soda_hall:flow_sensor_hvac_zone_R798,
+        soda_hall:temp_sensor_hvac_zone_R798,
         soda_hall:temp_setpoint_hvac_zone_R798 .
 
 soda_hall:vav_R800A a brick:VAV ;
