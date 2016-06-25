@@ -108,8 +108,10 @@ res = g.query("""
 SELECT DISTINCT ?sensor ?room
 WHERE {
 
-    { ?sensor rdf:type/rdfs:subClassOf* brick:Temperature_Sensor . }
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Zone_Temperature_Sensor . }
         UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Discharge_Air_Temperature_Sensor . }
+    UNION
 
     { ?sensor rdf:type/rdfs:subClassOf* brick:Occupancy_Sensor . }
 
@@ -124,7 +126,9 @@ WHERE {
     ?vav bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 
-    ?sensor bf:isPointOf ?vav .
+    {?sensor bf:isPointOf ?vav }
+    UNION
+    {?sensor bf:isPointOf ?room }
 
 }""")
 printResults(res)
