@@ -1,0 +1,135 @@
+#!/usr/bin/env python
+
+from rdflib import Graph, Namespace, URIRef, Literal
+import rdflib
+import json
+
+RDF        = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
+RDFS       = Namespace('http://www.w3.org/2000/01/rdf-schema#')
+BRICK      = Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG   = Namespace('http://buildsys.org/ontologies/BrickTag#')
+
+g = Graph()
+g.parse('../BuildingSchema/Brick.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
+g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+g.bind('rdf'  , RDF)
+g.bind('rdfs' , RDFS)
+g.bind('brick', BRICK)
+g.bind('bf'   , BRICKFRAME)
+g.bind('btag' , BRICKTAG)
+
+# building
+BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
+g.bind('building', BUILDING)
+
+# heat exchanger class
+HX = Namespace('http://buildsys.org/ontologies/Brick/Heat_Exchanger#')
+g.bind('hx', HX)
+g.add( (BRICK['Function_Block'], RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Function_Block']   , RDF.isSubClassOf, BRICK['Function_Block']) )
+g.add( (HX['Primary_Input']    , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Primary_Output']   , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Secondary_Input']  , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Secondary_Output'] , RDF.isSubClassOf, BRICK['Thing']) )
+g.add( (HX['Primary_Input']  , BRICKFRAME['feeds'], HX['Primary_Output']) )
+g.add( (HX['Primary_Input']  , BRICKFRAME['feeds'], HX['Secondary_Output']) )
+g.add( (HX['Secondary_Input'], BRICKFRAME['feeds'], HX['Secondary_Output']) )
+
+# make two heat exchangers and connect some temperature sensors to them
+for i in range(2):
+    # hx
+    hx    = BUILDING['/hx'+str(i)]
+    hx_fb = BUILDING['/hx'+str(i)+'_fb']
+    hx_pi = BUILDING['/hx'+str(i)+'_pi']
+    hx_po = BUILDING['/hx'+str(i)+'_po']
+    g.add( (hx   , RDF.type, BRICK['Heat_Exchanger']) )
+    g.add( (hx_fb, RDF.type, HX['Function_Block']) )
+    g.add( (hx_pi, RDF.type, HX['Primary_Input']) )
+    g.add( (hx_po, RDF.type, HX['Primary_Output']) )
+    g.add( (hx_fb, BRICKFRAME['isPartOf'], hx) )
+    g.add( (hx_pi, BRICKFRAME['isPartOf'], hx_fb) )
+    g.add( (hx_po, BRICKFRAME['isPartOf'], hx_fb) )
+    
+    # some temperature sensor which feeds into the primary input of the heat exchanger
+    temp = BUILDING['/temp'+str(i)+'_in']
+    g.add( (temp, RDF.type, BRICK['Temperature_Sensor']) )
+    g.add( (temp, BRICKFRAME['feeds'], hx_pi) )
+    
+    # some temperature sensor which is being fed from the primary output of the heat exchanger
+    temp = BUILDING['/temp'+str(i)+'_out']
+    g.add( (temp, RDF.type, BRICK['Temperature_Sensor']) )
+    g.add( (hx_po, BRICKFRAME['feeds'], temp) )
+
+#########################################################################################
+############################################################################## setup ####
+
+print '               +------------------------------------------+'
+print '               |                 hx0_fb                   |'
+print '               |                                          |'
+print '               +-----------------+     +------------------+'
+print '(temp0_in)---->|  Primary_Input  |---->|  Primary_Output  |---->(temp0_out)'
+print '               +-----------------+     +------------------+'
+print '               |                                          |'
+print '               +-----------------+     +------------------+'
+print '               | Secondary_Input |---->| Secondary_Output |'
+print '               +-----------------+     +------------------+'
+print '               |                                          |'
+print '               +------------------------------------------+'
+print ''
+print '               +------------------------------------------+'
+print '               |                 hx1_fb                   |'
+print '               |                                          |'
+print '               +-----------------+     +------------------+'
+print '(temp1_in)---->|  Primary_Input  |---->|  Primary_Output  |---->(temp1_out)'
+print '               +-----------------+     +------------------+'
+print '               |                                          |'
+print '               +-----------------+     +------------------+'
+print '               | Secondary_Input |---->| Secondary_Output |'
+print '               +-----------------+     +------------------+'
+print '               |                                          |'
+print '               +------------------------------------------+'
+print ''
+
+#########################################################################################
+############################################################### disregarding context ####
+
+r = g.query(
+    """SELECT DISTINCT ?t1 ?t2
+       WHERE {
+          ?t1 a brick:Temperature_Sensor .
+          ?t2 a brick:Temperature_Sensor .
+          ?pi a hx:Primary_Input .
+          ?po a hx:Primary_Output .
+          ?t1 bf:feeds ?pi .
+          ?po bf:feeds ?t2 .
+       }""")
+
+print 'Disregarding context:'
+for pair in r:
+    print('  %s -> %s' % pair)
+print ''
+
+#########################################################################################
+################################################################ considering context ####
+
+r = g.query(
+    """SELECT DISTINCT ?t1 ?t2
+       WHERE {
+          ?t1 a brick:Temperature_Sensor .
+          ?t2 a brick:Temperature_Sensor .
+          ?pi a hx:Primary_Input .
+          ?po a hx:Primary_Output .
+          ?t1 bf:feeds ?pi .
+          ?po bf:feeds ?t2 .
+          
+          ?fb a hx:Function_Block .
+          ?pi bf:isPartOf ?fb .
+          ?po bf:isPartOf ?fb .
+       }""")
+
+print 'Considering context:'
+for pair in r:
+    print('  %s -> %s' % pair)
+
