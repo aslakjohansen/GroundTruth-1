@@ -1179,7 +1179,7 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Output ];
 			 rdfs:label "Photovoltaic Current Output"@en .
 
- :_PV_Current_Output  rdfs:subClassOf   :Current;
+ :PV_Current_Output  rdfs:subClassOf   :Current;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:PV ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Current ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Output ];
@@ -1190,7 +1190,7 @@
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Photovoltaic ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Current ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Output ];
-			 owl:equivalentClass :_PV_Current_Output ;
+			 owl:equivalentClass :PV_Current_Output ;
 			 rdfs:label "Photovoltaic Current Output"@en .
 
  :Solar_Azimuth_Angle  rdfs:subClassOf   :Angle;
@@ -2790,7 +2790,7 @@
 			 owl:equivalentClass :PV_System_Output_Sensor ;
 			 rdfs:label "Photovoltaic Current Output Sensor"@en .
 
- :_PV_Current_Output_Sensor  rdfs:subClassOf   :Current_Sensor;
+ :PV_Current_Output_Sensor  rdfs:subClassOf   :Current_Sensor;
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:PV ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Current ];
 			 rdfs:subClassOf [ a owl:Restriction ; owl:onProperty :hasTag ; owl:someValuesFrom tag:Output ];
