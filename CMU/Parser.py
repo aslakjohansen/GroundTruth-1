@@ -200,7 +200,7 @@ def main():
 			x = BRICK[item]
 			for value in TagsetsToTags[item]:
 				g.add((x,BRICKFRAME.hasTag,BRICK[value]))
-	with open('AHURelations2.csv', 'rU') as relations:
+	with open('AHURelations.csv', 'rU') as relations:
 		reader = csv.DictReader(relations)
 		for row in reader:
 			new = re.sub('_','-',row['First'])
@@ -211,7 +211,7 @@ def main():
 		print "Hi"
 #	g.add((GHC["AHU-1_Zone-Temperature"],RDF.type,BRICK["Zone_Temp"]))
 #	g.add((GHC["VAV1"], BRICK.hasPoint, GHC["AHU-1_Zone-Temperature"]))
-	g.serialize(destination='GHCYuvraj_brick.ttl', format='turtle')
+	g.serialize(destination='GHC_brick.ttl', format='turtle')
 	print count1
 	print count2
 	print len(Total.keys())
