@@ -1,0 +1,1297 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDisjointClasses" ],
+  "http://www.w3.org/2002/07/owl#members" : [ {
+    "@list" : [ {
+      "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Building"
+    }, {
+      "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+    }, {
+      "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingStorey"
+    }, {
+      "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space"
+    } ]
+  } ]
+}, {
+  "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Sensor",
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#DataPoint"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/creator" : [ {
+    "@value" : "Joern Ploennigs, IBM Research"
+  } ],
+  "http://purl.org/dc/elements/1.1/publisher" : [ {
+    "@value" : "IBM Research, Smarter Cities Technology Centre, Dublin"
+  } ],
+  "http://purl.org/dc/elements/1.1/rightsHolder" : [ {
+    "@value" : "IBM Research, Smarter Cities Technology Centre, Dublin"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Domain ontology for smart buildings"
+  } ],
+  "http://www.w3.org/2002/07/owl#imports" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/PhysicalProcess"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Actuateable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#LocationProperty"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#ActuatorCmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/ahu#points"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceBidirectionalProcessViaOpen" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Setpoint_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Setable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceBidirectionalProcessViaOpen" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Setpoint_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Setable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_MeanRadiantTemperature_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosDelayProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InternalEnergy_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InternalEnergy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_MeanRadiantTemperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Speed_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.gbxml.org/schema#WindSpeed"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Speed_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Cooling_Setpoint_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Setable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Heating_Setpoint_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Setable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosDelayProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InternalEnergy_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InternalEnergy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Temperature_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Velocity_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Door_Opening_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Actuation_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Window_Opening_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Bank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Blind_Actuation_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Setpoint_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Actuateable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Box",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Building",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). "
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.gbxml.org/schema#Building"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcproductextension/lexical/ifcbuilding.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InsideBuilding"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcproductextension/lexical/ifcbuildingelement.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/PhysicalProcess#FeatureLink"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InsideBuilding"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingStorey",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.gbxml.org/schema#BuildingStorey"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcproductextension/lexical/ifcbuildingstorey.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InsideBuilding"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#CO2_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Ceiling",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#City",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Cooling_Actuation_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Cooling_Setpoint_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Cooling_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Actuateable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Cooling_Valve_Percentage_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Cooling_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Percentage_Cmd"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Valve_Cmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#DataPoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Data point such as a sensor or actuator."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/point"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Direction_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Door",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Door_Open_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Door_Opening_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Open_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Door_Opening_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Electric_Consumption_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Electric_Meter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Electric_Consumption_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Facade",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Actuation_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Setpoint_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Setpoint_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Setpoint_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Actuateable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Percentage_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Percentage_Cmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Flow_Meter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Gas_Flow_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Flow_Meter"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Glare_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceBidirectionalProcessViaTransparent" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Glare_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Blind_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Ground",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Groundfloor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Ceiling"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Heat_Flow_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Flow_Meter"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Heat_Pump_Power_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter_Pulse"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Heating_Actuation_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Heating_Setpoint_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Heating_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Actuateable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Heating_Valve_Percentage_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Heating_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Percentage_Cmd"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Valve_Cmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Humidity_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceBidirectionalProcessViaTransparent" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Blind_Actuation_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Light_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Setpoint_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Setable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InsideBuilding",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InternalEnergy_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegDelayProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Cooling_Actuation_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosDelayProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Heating_Actuation_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Light_Actuation_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosProportionalProcessViaAny" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceProportionalProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Fan_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Unobservable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Light_Actuation_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluenceNegControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#hasInfluencePosControlProcess" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Setpoint_Property"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresInfluence" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Actuateable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Lighting_Percentage_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Light_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Percentage_Cmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Lighting_Power_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter_Pulse"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Any object that relates to a geometric or spatial context. Subtypes of IfcProduct usually hold a shape representation and a object placement within the project structure."
+  }, {
+    "@language" : "en",
+    "@value" : "Markers providing information about the location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.gbxml.org/schema#Location"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifckernel/lexical/ifcproduct.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/ssnx/ssn#FeatureOfInterest"
+  }, {
+    "@id" : "http://www.loa-cnr.it/ontologies/DUL.owl#PhysicalPlace"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#LocationProperty",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Property"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#LocationProperty"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupied_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#alsoKnownAs" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/iBMSbase#Zone_Occupied_Command"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Strangly named Occupied \"Command\" in iIBM. I interprete this as sensor instead of actuator command"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Open_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Opening",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A virtual building element to indicate that two locations are directly connected without a wall, door, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresProperty" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associated with outside air, often used to model ahu points."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/outside"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Air_CO2_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#CO2_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Air_Humidity_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Humidity_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Air_MeanRadiantTemperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_MeanRadiantTemperature_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Air_Temperature_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Air_Pressure_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Pressure_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Air_Temperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_DiffuseIllumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Illumination_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_DirectIllumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Illumination_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Illumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Occupied_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupied_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_SunshineHour_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Wind_Direction_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Direction_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Wind_Speed_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Speed_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Percentage_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#ActuatorCmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Pressure_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Project",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "IfcProject indicates the undertaking of some design, engineering, construction, or maintenance activities leading towards a product. The project establishes the context for information to be exchanged or shared, and it may represent a construction project but does not have to. The IfcProject's main purpose in an exchange structure is to provide the root instance and the context for all other information items included."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifckernel/lexical/ifcproject.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Quality_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Roof",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Ceiling"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Rooftop",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Used with ahu to mark an AHU as a packaged rooftop unit (RTU)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/rooftop"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcsharedbldgelements/lexical/ifcroof.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Outside"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Room",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/ahu#points"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Setable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#LocationProperty"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SetpointValue",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/ahu#points"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Site",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A site is a defined area of land, possibly covered with water, on which the project construction is to be completed."
+  }, {
+    "@value" : "Building or other type of facility with unique street address."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/site"
+  }, {
+    "@id" : "http://www.gbxml.org/schema#Campus"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcproductextension/lexical/ifcsite.htm"
+  }, {
+    "@value" : "http://www.w3.org/ns/org#Site"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A space represents a volume enclosed by surfaces."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.gbxml.org/schema#Space"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcproductextension/lexical/ifcspace.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Speed_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Sunblind_Percentage_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Blind_Actuation_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Percentage_Cmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Temperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Temperature_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SetpointValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Total_Power_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Power_Meter_Pulse"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Trunk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Unobservable",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#LocationProperty"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Valve_Cmd",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#ActuatorCmd"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Voltage_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Wall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The wall represents a vertical construction that bounds or subdivides spaces. Wall are usually vertical, or nearly vertical, planar elements, often designed to bear structural loads. A wall is however not required to be load bearing."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcsharedbldgelements/lexical/ifcwall.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Water_Flow_Meter_Pulse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Flow_Meter"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Window",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Window_Open_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Window_Opening_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Open_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Window_Opening_Property",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Observable"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Wing",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Space"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#requiresProperty" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InternalEnergy_Property"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Associated with a conditioned zone of a building."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://project-haystack.org/tag/zone"
+  }, {
+    "@id" : "http://www.gbxml.org/schema#Zone"
+  }, {
+    "@value" : "http://www.buildingsmart-tech.org/ifc/IFC2x4/rc3/html/schema/ifcproductextension/lexical/ifczone.htm"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#InsideBuilding"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_CO2_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#CO2_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_CO2_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_CO2_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Setpoint"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Humidity_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Humidity_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Humidity_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Humidity_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Setpoint"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_MeanRadiantTemperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_MeanRadiantTemperature_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_MeanRadiantTemperature_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Temperature_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Pressure_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Pressure_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Quality_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.gbxml.org/schema#IndoorAirQuality"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Quality_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Temperature_Cooling_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Cooling_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Temperature_Setpoint"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Setpoint"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Temperature"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Temperature_Heating_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Heating_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Temperature_Setpoint"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Setpoint"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Temperature"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Air_Temperature_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#alsoKnownAs" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Temperature"
+  } ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Air_Temperature_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Temperature"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_DiffuseIllumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Illumination_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_DirectIllumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Illumination_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Illumination_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Illumination_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Illumination_Setpoint_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Setpoint"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Occupied_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.ibm.com/SCTC/ontology/PhysicalProcess#defaultObserved" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupancy_Property"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Occupied_Sensor"
+  }, {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Sensor",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SensorValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Setpoint",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#SetpointValue"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Zone_Temperature",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#area",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#hasDBID",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#hasSubLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.loa-cnr.it/ontologies/DUL.owl#hasPart"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#isSubLocationOf"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#height",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#isConnectedTo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Spaces that are directly connected, such as a room and its wall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#BuildingElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/PhysicalProcess#linksFeature"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#isSubLocationOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty", "http://www.w3.org/2002/07/owl#IrreflexiveProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.loa-cnr.it/ontologies/DUL.owl#isPartOf"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#length",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#observationCount",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.oclc.org/NET/ssnx/ssn#Observation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#decimal"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#width",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#x",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#y",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#z",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.ibm.com/SCTC/ontology/SmartBuilding#Location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#double"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Basic class defining a marker"
+  } ]
+} ]

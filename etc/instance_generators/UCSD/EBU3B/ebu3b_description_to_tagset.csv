@@ -1,0 +1,362 @@
+BACnet Description,BACnet Type Str,BACnet Unit,Ground Truth Point Type,Schema Label
+Zone Temperature \ Conference Rm 1202,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Common Setpoint,Analog Output,64,Temperature Setpoint,Zone Temperature Setpoint
+Warm/Cool Adjust,Analog Output,64,Warm Cool Adjust,Thermostat Adjust Sensor
+Actual Sup Flow SP,Analog Output,84,Supply Airflow Setpoint,Discharge Air Flow Setpoint
+Actual Supply Flow,Analog Input,84,Supply Airflow,Discharge Air Flow Sensor
+Reheat Valve Command,Analog Output,98,Reheat Valve Command,Reheat Valve Command
+Occupied Htg Flow,Analog Output,84,Minimum Occupied Heating Supply Airflow,Occupied Heating Min Discharge Air Flow Setpoint
+Actual Heating Setpoint,Analog Input,64,Actual Heating Setpoint,effective heating temperature setpoint
+Actual Cooling Setpoint,Analog Input,64,Actual Cooling Setpoint,effective cooling temperature setpoint
+Occupied Clg Min,Analog Output,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
+Occupied Command,Multi-State Output,unknown,Occupancy Command,Occupancy Command
+Heating Command,Analog Output,98,Heating Command,Heating Command
+Fan Command,Binary Output,unknown,Fan Command,Booster Fan Start Stop Command
+Damper Position,Analog Input,98,Damper Position,Damper Position Sensor
+Damper Command,Analog Output,98,Damper Command,Damper Command
+Cooling Max Flow,Analog Output,84,Maximum Supply Airflow,Cooling Max Discharge Air Flow Setpoint
+Cooling Command,Analog Output,98,Cooling Command,Cooling Command
+Zone Temperature \ 1st Flr Lobby,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature \ Lounge-Game Room,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Temp Occ Sts,Binary Input,unknown,Temporary Occupancy Status,Temporary Occupancy Status
+Zone Temperature \ 2nd Flr Lobby,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature / Elec room,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Wind Speed,Analog Value,78,Wind Speed,Wind Speed Sensor
+Wind Direction,Analog Value,90,Wind Direction,Wind Direction Sensor
+No Water In Humidifier Pan,Binary Input,unknown,No Water In Humidifier Pan,Humidifier Pan No Water Alarm
+Loss Of Water,Binary Input,unknown,Loss Of Water,Water Loss Alarm
+CHWP 1 VFD CMD,Analog Output,98,Pump VFD Command,Chilled Water Pump VFD Command
+CHWP 2 VFD CMD,Analog Output,98,Pump VFD Command,Chilled Water Pump VFD Command
+Chilled Water Pump 3 VFD Command,Analog Output,302,Pump VFD Command,Chilled Water Pump VFD Command
+Chilled Water Pump 4 VFD Command,Analog Output,302,Pump VFD Command,Chilled Water Pump VFD Command
+HWP 1 VFD CMD,Analog Output,98,Pump VFD Command,VFD Command
+HWP 2 VFD CMD,Analog Output,98,Pump VFD Command,VFD Command
+Return VFD Command,Analog Output,98,Return Fan VFD Command,Return Fan VFD Command
+Supply VFD Command,Analog Output,98,Supply Fan VFD Command,Supply Fan VFD Command
+HX1 ISO VLV STS,Binary Input,unknown,Heat Exchanger Valve Status,Heat Exchanger Valve Status
+HX2 ISO VLV STS,Binary Input,unknown,Heat Exchanger Valve Status,Heat Exchanger Valve Status
+HX 1 ISO VLV CMD,Binary Output,unknown,Heat Exchanger ISO Valve Command,Heat Exchanger Valve Command
+HX 2 ISO VLV CMD,Binary Output,unknown,Heat Exchanger ISO Valve Command,Heat Exchanger Valve Command
+HX 1A VALVE CMD 1/3,Analog Output,98,Heat Exchanger Valve Command,Heat Exchanger Valve Command
+HX 1B VALVE CMD 2\3,Analog Output,98,Heat Exchanger Valve Command,Heat Exchanger Valve Command
+HX 2 VALVE CMD,Analog Output,98,Heat Exchanger Valve Command,Heat Exchanger Valve Command
+Unocc Load Shed Switch,Binary Value,unknown,Unoccupied Load Shed Switch,Unoccupied Load Shed Switch
+PM9EDB,Analog Output,95,PM9EDB,Unknown
+TUNING POINTS PM2PB,Analog Output,95,TUNING POINTS PM2PB,Unknown
+TUNING POINTS PM2TI,Analog Output,95,TUNING POINTS PM2TI,Unknown
+TUNING POINTS PM5PB,Analog Output,95,TUNING POINTS PM5PB,Unknown
+TUNING POINTS PM5TI,Analog Output,95,TUNING POINTS PM5TI,Unknown
+TUNING POINTS PM8PB,Analog Output,64,TUNING POINTS PM8PB,Unknown
+TUNING POINTS PM8TI,Analog Output,64,TUNING POINTS PM8TI,Unknown
+Average Floor Cooling PID1,Analog Value,95,Average Floor Cooling PID,Unknown
+Average Floor Cooling PID2,Analog Value,95,Average Floor Cooling PID,Unknown
+AI 1 Actual,Analog Input,98,AI 1 Actual,Unknown
+AI 2 Actual,Analog Input,98,AI 2 Actual,Unknown
+AO1 Command Point,Analog Output,98,AO1 Command Point,Unknown
+DO 1 Command,Binary Output,unknown,DO 1 Command,Unknown
+DO 2 Command,Binary Output,unknown,DO 2 Command,Unknown
+PID Control,Analog Input,98,PID Control,Unknown
+PID Gain,Analog Output,98,PID Gain,Unknown
+TUNING POINTS,Analog Output,95,TUNING POINTS,Unknown
+CHW Pump Integration Time,Analog Output,95,Pump Integration Time,Chilled Water Pump Differential Pressure Integration Time Setpoint
+CHW Pump Proportional Band,Analog Output,56,Pump Proportional Band,Chilled Water Pump Differential Pressure Proportional Band Setpoint
+Econ-O-Cycle On-Off,Binary Input,unknown,Econ-O-Cycle On-Off,Econ-o-cycle on off status
+High-High Temp Alarm Setpoint,Analog Value,64,High-High Temperature Alarm Setpoint,High Temperature Alarm Setpoint
+Inverter On Bypass,Binary Input,unknown,Inverter On Bypass,Unknown
+Pager Test Point For Server Room,Binary Value,unknown,Pager Test Point For Server Room,Unknown
+Short Cycle,Binary Input,unknown,Short Cycle,Short Cycle Alarm
+Stages,Analog Input,95,Stages,CRAC Stages Status
+Standby Unit On,Binary Input,unknown,Standby Unit On,Standby Unit On Off Status
+Standy Glycool Unit On,Binary Input,unknown,Standy Glycool Unit On,Standby Glycool Unit On Off Status
+Heat Exchanger OSA Reset High Setpoint,Analog Value,95,Heat Exchanger OSA Reset High Setpoint,Unknown
+Heat Exchanger OSA Reset Low Setpoint,Analog Value,95,Heat Exchanger OSA Reset Low Setpoint,Unknown
+Heat Exchanger OSA Reset OSA High Span,Analog Value,95,Heat Exchanger OSA Reset OSA High Span,Unknown
+Heat Exchanger OSA Reset OSA Low Span,Analog Value,95,Heat Exchanger OSA Reset OSA Low Span,Unknown
+MTW-DP Load Shed,Binary Value,unknown,MTW-DP Load Shed,Medium Temperature Hot Water Differential Pressure Load Shed Status
+MTWDP-SP Load Shed,Analog Value,56,MTWDP-SP Load Shed,Medium Temperature Hot Water Differential Pressure Load Shed Setpoint
+PV System Output,Analog Value,3,PV System Output,Photovoltaic Current Output Sensor
+Sunbeams are Good!,Analog Value,35,Sunbeams Are Good!,Solar Radiance Sensor
+Average Floor Cooling PID3,Analog Value,95,Average Floor Cooling PID,Unknown
+Average Floor Cooling PID4,Analog Value,95,Average Floor Cooling PID,Unknown
+Average Floor Cooling PID5,Analog Value,95,Average Floor Cooling PID,Unknown
+Average Cooling PID2,Analog Value,95,Average Floor Cooling PID,Unknown
+DISCH AIR RESET HI OUT,Analog Value,64,Discharge Air Reset High,Discharge Air Temperature Reset High Setpoint
+DISCH AIR RESET LO OUT,Analog Value,64,Discharge Air Reset Low,Discharge Air Temperature Reset Low Setpoint
+Unit Turned Off Locally,Binary Input,unknown,Unit Turned Off Locally,CRAC Unit Turned Off Locally Status
+Unit Turned Off Remotely,Binary Input,unknown,Unit Turned Off Remotely,CRAC Unit Turned Off Remotely Status
+Torque,Analog Input,98,Torque,Motor Torque Sensor
+Temp Setpoint,Analog Output,64,Temperature Setpoint,Temperature Setpoint
+Temperature Tolerance,Analog Input,64,Temperature Tolerance,Temperature Tolerance Setpoint
+Zone Temperature \ Corridor West,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature / Telecom Rm,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature/ Telecom room.,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature / Elec Rm,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+File Server Room Temperature,Analog Input,64,File Server Room Temperature,Room Temperature Sensor
+Temperature,Analog Input,64,Temperature,CRAC Temperature Sensor
+System Enable,Binary Output,unknown,System Enable,System Enable Command
+CHW SYSTEM ENABLE,Binary Output,unknown,System Enable,Chilled Water System Enable Command
+HW SYSTEM ENABLE,Binary Output,unknown,System Enable,Hot Water System Enable Command
+HX 1 SUP SETPOINT,Analog Output,64,Heat Exchanger Supply Water Temperature Setpoint,Heat Exchanger Supply Water Temperature Setpoint
+HX 2 SUP SETPOINT,Analog Output,64,Heat Exchanger Supply Water Temperature Setpoint,Heat Exchanger Supply Water Temperature Setpoint
+Supply Fan 1 Status,Binary Input,unknown,Supply Fan Status,Supply Fan Start Stop Status
+Supply Fan 2 Status,Binary Input,unknown,Supply Fan Status,Supply Fan Start Stop Status
+Supply Fan 3 Status,Binary Input,unknown,Supply Fan Status,Supply Fan Start Stop Status
+Supply Fan 4 Status,Binary Input,unknown,Supply Fan Status,Supply Fan Start Stop Status
+Supply Fan 1 Cmd,Binary Output,unknown,Supply Fan Start Stop Command,Supply Fan Start Stop Command
+Supply Fan 2 Cmd,Binary Output,unknown,Supply Fan Start Stop Command,Supply Fan Start Stop Command
+Supply Fan 3 Cmd,Binary Output,unknown,Supply Fan Start Stop Command,Supply Fan Start Stop Command
+Supply Fan 4 Cmd,Binary Output,unknown,Supply Fan Start Stop Command,Supply Fan Start Stop Command
+Supply Static Press / Sensor in Rm 4234,Analog Input,95,Supply Static Press,Discharge Air Static Pressure Sensor
+Supply Air High Limit,Binary Input,unknown,Supply Air High Limit,Discharge Air Temperature High Limit Alarm
+Exhaust Fan 1 Sts / Electrical Room Bsmt,Binary Input,unknown,Exhaust Fan Status,Exhaust Fan Start Stop Status
+Exhaust Fan 1 Cmd,Binary Output,unknown,Exhaust Fan Command,Exhaust Fan Start Stop Command
+,Analog Input,64,Actual Cooling Setpoint,effective cooling temperature setpoint
+Occupancy Sensor,Binary Input,unknown,Occupancy Sensor,Occupancy Sensor
+Fan Output,Analog Output,84,Fan Output,Booster Fan Air Flow Sensor
+CO2 Level,Analog Input,96,CO2 Level,CO2 Sensor
+CO2 Hi Alarm,Binary Input,unknown,CO2 Hi Alarm,co2 high alarm
+SF-1 Supply Flow (cfm x 8.5),Analog Value,84,Supply Fan Air Flow,Supply Fan Air Flow Sensor
+Supply Fan 2 Flow (cfm x 10),Analog Value,84,Supply Fan Air Flow,Supply Fan Air Flow Sensor
+Supply Fan 3 Flow (cfm x 10),Analog Value,84,Supply Fan Air Flow,Supply Fan Air Flow Sensor
+Supply Fan 4 Flow (cfm x 10),Analog Value,84,Supply Fan Air Flow,Supply Fan Air Flow Sensor
+Booster Fan Command,Binary Output,unknown,Booster Fan Command,Booster Fan Start Stop Command
+CO2 Hi Alarm,Binary Input,unknown,CO2 High Alarm,co2 high alarm
+Zone Temperature \ WRR,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature / Kitchen,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Exhaust Fan Status / Rms 1211-1206-1201,Binary Input,unknown,Exhaust Fan Status,Exhaust Fan Status
+Exhaust Fan Command / EF-2 in rm 1201,Binary Output,unknown,Exhaust Fan Command,Exhaust Fan Start Stop Command
+Computer Room A/C Status,Binary Output,unknown,CRAC Status,CRAC Start Stop Status
+Static Pressure Setpt,Analog Output,58,Static Pressure Setpoint,Discharge Air Static Pressure Setpoint
+VFD Start/Stop,Binary Output,unknown,VFD Start Stop,VFD Start Stop command
+Stndby Load Shed Switch,Binary Value,unknown,Stndby Load Shed Switch,Standby Load Shed Switch
+Standby Fan On,Binary Input,unknown,Standby Fan On,Standby Fan Status
+Solar Zenith Angle,Analog Value,90,Solar Zenith Angle,Solar Zenith Angle
+Solar Azimuth Angle,Analog Value,90,Solar Azimuth Angle,Solar Azimuth Angle
+Smoke Detected,Binary Input,unknown,Smoke Detected,Smoke Detected Alarm
+Run Time Hours,Analog Input,71,Run Time Hours,Run Time Sensor
+Run Status,Binary Input,unknown,Run Status,VFD Start Stop Status
+Run Enable Status,Binary Input,unknown,Run Enable Status,Run Enable Status
+Unit Run (Feedback),Binary Input,unknown,Unit Run Status,Unit Start Stop Status
+Run Enable,Binary Output,unknown,Run Enable,Run Enable Command
+Unit Run (Last Commanded),Binary Output,unknown,Unit Run Command,Unit Run Command
+Run Direction Status,Binary Input,unknown,Run Direction Status,Run Direction Status
+Run Direction Command,Binary Output,unknown,Run Direction Command,Run Direction Command
+Return Fan 1 Status,Binary Input,unknown,Return Fan Status,Return Fan Status
+Return Fan 2 Status,Binary Input,unknown,Return Fan Status,Return Fan Status
+Return Fan 3 Status,Binary Input,unknown,Return Fan Status,Return Fan Status
+Return Fan 4 Status,Binary Input,unknown,Return Fan Status,Return Fan Status
+Return Fan 1 Flow (cfm x 10),Analog Value,84,Return Fan Flow,Return Fan Air Flow Sensor
+Return Fan 2 Flow (cfm x 10),Analog Value,84,Return Fan Flow,Return Fan Air Flow Sensor
+Return Fan 3 Flow (cfm x 10),Analog Value,84,Return Fan Flow,Return Fan Air Flow Sensor
+Return Fan 4 Flow (cfm x 10),Analog Value,84,Return Fan Flow,Return Fan Air Flow Sensor
+Return Fan Diff Speed from Supply (15%),Analog Output,98,Return Fan Differential Speed,Return Supply Fan Differential Speed Setpoint
+Return Fan 1 Cmd,Binary Output,unknown,Return Fan Command,Return Fan Start Stop Command
+Return Fan 2 Cmd,Binary Output,unknown,Return Fan Command,Return Fan Start Stop Command
+Return Fan 3 Cmd,Binary Output,unknown,Return Fan Command,Return Fan Start Stop Command
+Return Fan 4 Cmd,Binary Output,unknown,Return Fan Command,Return Fan Start Stop Command
+Return Air High Limit,Binary Input,unknown,Return Air Low Limit,Return Air Temperature Low Limit Alarm
+Return Air Temp,Analog Input,64,Return Air Temp,Return Air Temperature Sensor
+Relative Humidity,Analog Value,95,Relative Humidity,Relative Humidity Sensor
+Relative Humidity,Analog Value,98,Relative Humidity,Relative Humidity Sensor
+Zone Temperature \ Lounge,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Supply Air Temperature,Analog Input,64,Supply Air Temperature,Discharge Air Temperature Sensor
+Occupied Heating Flow,Analog Output,84,Minimum Occupied Heating Supply Airflow,Occupied Heating Min Discharge Air Flow Setpoint
+Zone Temperature / Work Room,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Reference 1,Analog Output,98,Reference 1,Unknown
+Reference 2,Analog Output,98,Reference 2,Unknown
+Reference Input AI-1,Analog Input,98,Reference Input AI-1,Unknown
+Rated Speed,Analog Input,98,Rated Speed,Rated Speed Setpoint
+CHW PUMP 2 STS,Binary Input,unknown,Pump Status,Chilled Water Pump Status
+Chilled Water Pump 3 Status,Binary Input,unknown,Pump Status,Chilled Water Pump Status
+Chilled Water Pump 4 Status,Binary Input,unknown,Pump Status,Chilled Water Pump Status
+CHW PUMP 1 STS,Binary Input,unknown,Pump Status,Chilled Water Pump Status
+HW PUMP 1 STS,Binary Input,unknown,Pump Status,Hot Water Pump Start Stop Status
+HW PUMP 2 STS,Binary Input,unknown,Pump Status,Hot Water Pump Start Stop Status
+CHW PUMP 1 CMD,Binary Output,unknown,Pump Start Stop Command,Chilled Water Pump Start Stop Command
+Chilled Water Pump 3 Start/Stop,Binary Output,unknown,Pump Start Stop Command,Chilled Water Pump Start Stop Command
+Chilled Water Pump 4 Start/Stop,Binary Output,unknown,Pump Start Stop Command,Chilled Water Pump Start Stop Command
+CHW PUMP 2 CMD,Binary Output,unknown,Pump Start Stop Command,Chilled Water Pump Start Stop Command
+HW PUMP 1 COMMAND,Binary Output,unknown,Pump Start Stop,Hot Water Pump Start Stop Command
+HW PUMP 2 COMMAND,Binary Output,unknown,Pump Start Stop,Hot Water Pump Start Stop Command
+CHWP LEAD (ON=1/OFF=2),Binary Output,unknown,Pump Lead Lag,Chilled Water Pump Lead Lag Command
+"Pump Lead (Off = 3, On = 4)",Binary Output,unknown,Pump Lead Lag,Chilled Water Pump Lead Lag Command
+HWP LEAD (ON=1/OFF=2),Binary Output,unknown,Pump Lead Lag,Hot Water Pump Lead Lag Command
+Chilled Water Pump 3 Enable,Binary Input,unknown,Pump Enable,Chilled Water Pump Enable Status
+Chilled Water Pump 4 Enable,Binary Input,unknown,Pump Enable,Chilled Water Pump Enable Status
+CHW Pump Dead Band,Analog Output,56,Pump Dead Band,Chilled Water Pump Differential Pressure Dead Band Setpoint
+Chilled Water Pump 3 Alarm Delay,Analog Output,73,Pump Alarm Delay,Chilled Water Pump Alarm Delay Setpoint
+CHW PUMP 1 ALARM,Binary Input,unknown,Pump Alarm,Chilled Water Pump Alarm
+CHW PUMP 2 ALARM,Binary Input,unknown,Pump Alarm,Chilled Water Pump Alarm
+Chilled Water Pump 3 Alarm,Binary Input,unknown,Pump Alarm,Chilled Water Pump Alarm
+Chilled Water Pump 4 Alarm,Binary Input,unknown,Pump Alarm,Chilled Water Pump Alarm
+Chilled Water Pump 4 Alarm Delay,Analog Output,73,Pump Alarm Delay,Chilled Water Pump Alarm Delay Setpoint
+CHW Pump Command Output,Analog Output,302,Pump Command Output,Chilled Water Pump Command
+HW PUMP 1 ALARM,Binary Input,unknown,Pump Alarm,Hot Water Pump Alarm
+HWP 2 ALARM,Binary Input,unknown,Pump Alarm,Hot Water Pump Alarm
+Loss Of Power,Binary Input,unknown,Loss Of Power,Power Loss Alarm
+Power,Analog Input,48,Power,Power Meter
+Pan Lock,Binary Output,unknown,Pan Lock,Panel Lockout Command
+Computed Outside Enthalpy,Analog Value,24,Computed Outside Enthalpy,Outside Enthalpy Sensor
+Outside Air Temp,Analog Input,64,Outside Air Temperature,Outside Air Temperature Sensor
+Outside Air Temp,Analog Value,64,Outside Air Temperature,Outside Air Temperature Sensor
+Outside Air Temperature,Analog Value,64,Outside Air Temperature,Outside Air Temperature Sensor
+OA Shutdown of HW when inUnocc,Binary Output,unknown,Outside Air Shutdown of Hot Water when Unoccupied,Shutdown Hot Water when Unoccupied Command
+OA Setpoint to disable HW system,Analog Value,64,Outside Air Setpoint to Disable Hot Water system,Disable Hot Water System Outside Air Temperature Setpoint
+Output Voltage,Analog Input,5,Output Voltage,Output Voltage Sensor
+Output Frequency,Analog Input,27,Output Frequency,Output Frequency Sensor
+Zone Temperature \ Kitchen,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature /Electrical Rm,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature \ 4th Flr Lobby,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Occupied Htg Flow,Analog Output,64,Minimum Occupied Heating Supply Airflow,Occupied Heating Min Discharge Air Flow Setpoint
+Occupied Clg Min,Analog Output,64,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
+Motor Torque,Analog Input,98,Motor Torque,Motor Torque Sensor
+Motor Start/Stop Status,Binary Input,unknown,Motor Start Stop Status,VFD Start Stop Status
+Motor Speed,Analog Input,104,Motor Speed,Motor Speed Sensor
+Motor Direction Status,Binary Input,unknown,Motor Direction Status,Run Direction Status
+Motor Direction Command,Binary Output,unknown,Motor Direction Command,Run Direction Command
+Motor Current,Analog Input,3,Motor Current,Motor Current Sensor
+Mixed Air Temperature,Analog Input,64,Mixed Air Temperature,Mixed Air Temperature Sensor
+MTW1-T Load Shed,Binary Value,unknown,MTW-T Load Shed,Medium Water Temperature Load Shed Status
+MTW2-T Load Shed,Binary Value,unknown,MTW-T Load Shed,Medium Water Temperature Load Shed Status
+MTW1T-SP Load Shed,Analog Value,64,MTWT-SP Load Shed,Medium Water Temperature Load Shed Setpoint
+MTW2T-SP Load Shed,Analog Value,64,MTWT-SP Load Shed,Medium Water Temperature Load Shed Setpoint
+Hand/Auto Status,Binary Input,unknown,Hand Auto Status,Manual Auto Status
+Manual Override,Binary Input,unknown,Manual Override,Manual Auto Status
+SF-1 in Maintenance Mode,Binary Output,unknown,Supply Fan in Maintenance Mode,Supply Fan Maintenance Mode Command
+SF-2 in Maintenance Mode,Binary Output,unknown,Supply Fan in Maintenance Mode,Supply Fan Maintenance Mode Command
+SF-3 in Maintenance Mode,Binary Output,unknown,Supply Fan in Maintenance Mode,Supply Fan Maintenance Mode Command
+SF-4 in Maintenance Mode,Binary Output,unknown,Supply Fan in Maintenance Mode,Supply Fan Maintenance Mode Command
+Low Temp Setpoint,Analog Input,64,Low Temperature Setpoint,Low Temperature Alarm Setpoint
+Low Temperature,Binary Input,unknown,Low Temperature,Low Temperature Alarm
+Low Suction Pressure,Binary Input,unknown,Low Suction Pressure,Low Suction Pressure Alarm
+Low Humidity Setpoint,Analog Input,29,Low Humidity Setpoint,Low Humidity Alarm Setpoint
+Low Humidity,Binary Input,unknown,Low Humidity,Low Humidity Alarm
+Load Shed Command,Multi-State Value,unknown,Load Shed Command,Load Shed Command
+Liquid Detected,Binary Input,unknown,Liquid Detected,Liquid Detected Alarm
+Humidity Tolerance,Analog Input,29,Humidity Tolerance,Humidity Tolerance Setpoint
+Humidity Setpoint,Analog Output,29,Humidity Setpoint,Humidity Setpoint
+File Server Room Humidity,Analog Input,29,File Server Room Humidity,Room Humidity Sensor
+Humidity,Analog Input,29,Humidity,Humidity Sensor
+Humidifier Problem,Binary Input,unknown,Humidifier Problem,Humidifier Fault Status
+Humidification On-Off,Binary Input,unknown,Humidification On-Off,Humidification On Off Status
+MAIN HW SUPPLY TEMP,Analog Input,64,Main Hot Water Supply Temperature,Hot Water Supply Temperature Sensor
+MAIN HW RETURN TEMP,Analog Input,64,Main Hot Water Return Temperature,Hot Water Return Temperature Sensor
+HW DIFF PRESS SETPOINT,Analog Output,56,Hot Water Differential Pressure Setpoint,Hot Water Differential Pressure Setpoint
+HOT WATER DIFF PRESS / Sensor in Rm 4230,Analog Input,56,Hot Water Differential Pressure,Hot Water Differential Pressure Sensor
+High Temp Alarm Setpoint,Analog Value,64,High Temperature Alarm Setpoint,High Temperature Alarm Setpoint
+High Temp Setpoint,Analog Input,64,High Temperature Setpoint,High Temperature Alarm Setpoint
+High Temperature,Binary Input,unknown,High Temperature,High Temperature Alarm
+High Temperature Alarm,Binary Value,unknown,High Temperature Alarm,High Temperature Alarm
+High Humidity Setpoint,Analog Input,29,High Humidity Setpoint,High Humidity Alarm Setpoint
+High Humidity,Binary Input,unknown,High Humidity,High Humidity Alarm
+High Head Pressure 1,Binary Input,unknown,High Head Pressure,High Head Pressure Alarm
+High Head Pressure 2,Binary Input,unknown,High Head Pressure,High Head Pressure Alarm
+Heating On-Off,Binary Input,unknown,Heating On-Off,Heating On Off Status
+Box Mode,Multi-State Output,unknown,Box Mode,VAV Box Mode Command
+reheat valve,Analog Output,98,Reheat Valve Command,Reheat Valve Command
+occupied status,Multi-State Input,unknown,Occupancy Sensor,Occupancy Sensor
+Cooing Command,Analog Output,98,Cooing Command,Cooling Command
+Frequency Output,Analog Input,27,Frequency Output,Output Frequency Sensor
+Filter Reset,Binary Output,unknown,Filter Reset,Filter Reset Command
+Filter Diff Pressure,Analog Input,95,Filter Differential Pressure,Filter Differential Pressure Sensor
+Fault Reset,Binary Output,unknown,Fault Reset,Fault Reset Command
+Fault Indicator,Binary Input,unknown,Fault Indicator,Fault Status
+Fault Status,Binary Input,unknown,Fault Status,Fault Status
+Last Fault,Analog Input,95,Last Fault,Last Fault Code Status
+Main Fan Overload,Binary Input,unknown,Main Fan Overload,Fan Overload Alarm
+Occupied Clg Min,Analog Input,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
+Heating Command,Analog Output,95,Heating Command,Heating Command
+Cooling Command,Analog Output,95,Cooling Command,Cooling Command
+EPO Activated By Leak Detection System,Binary Value,unknown,EPO Activated By Leak Detection System,Emergency Power Off Activated By Leak Detection System Status
+Energy (kWh),Analog Input,19,Energy,Energy Sensor
+Energy (MWh),Analog Input,49,Energy,Energy Sensor
+VFD Enable,Binary Output,unknown,VFD Enable,VFD System Enable Command
+File Server Emergency Power Off Switch,Binary Output,unknown,File Server Emergency Power Off Switch,Emergency Power Off Command
+File Server Room EPO System Enable,Binary Value,unknown,File Server Room EPO System Enable,Emergency Power Off System Enable Status
+EPO Activated By High Temperature,Binary Value,unknown,EPO Activated By High Temperature,Emergency Power Off Activated by High Temperature
+Loss Of Emergency Power,Binary Input,unknown,Loss Of Emergency Power,Emergency Power Loss Alarm
+Economizer Setpoint,Analog Output,64,Economizer Setpoint,Economizer Temperature Setpoint
+E Economizer / 100%=osa open,Analog Output,98,Economizer,Economizer Damper Command
+W Economizer / 100%=osa open,Analog Output,98,Economizer,Economizer Damper Command
+Drive Temperature,Analog Input,62,Drive Temperature,Drive Temperature Sensor
+Drive Ready Status,Binary Input,unknown,Drive Ready Status,Drive Ready Status
+Domestic Hot Water Control Valve,Analog Output,98,Domestic Hot Water Control Valve,Domestic Hot Water Valve Command
+Domestic Hot Water System Enable,Binary Output,unknown,Domestic Hot Water System Enable,Domestic Hot Water System Enable Command
+Domestic Hot Water Setpoint,Analog Output,95,Domestic Hot Water Setpoint,Domestic Hot Water Supply Temperature Setpoint
+Domestic Hot Water Supply Temp,Analog Input,64,Domestic Hot Water Supply Temperature,Domestic Hot Water Supply Temperature Sensor
+Discharge Air Setpt,Analog Output,64,Discharge Air Temperature Setpoint,Discharge Air Temperature Setpoint
+Discharge Air Temp 1,Analog Input,64,Discharge Air Temperature,Discharge Air Temperature Sensor
+Discharge Air Temp 2,Analog Input,64,Discharge Air Temperature,Discharge Air Temperature Sensor
+DA COOLING DEMAND LOW IN,Analog Value,302,Discharge Air Cooling Demand Low,unknown
+DA COOLING DEMAND HIGH IN,Analog Value,302,Discharge Air Cooling Demand High,unknown
+Dehumidification On-Off,Binary Input,unknown,Dehumidification On-Off,Dehumidification On Off Status
+Deceleration Time,Analog Output,73,Deceleration Time,Deceleration Time Setpoint
+DC Bus Voltage,Analog Input,5,DC Bus Voltage,DC Bus Voltage Sensor
+Exhaust Fan Status / Kitchen Ex Rm 4215,Binary Input,unknown,Exhaust Fan Status,Exhaust Fan Status
+Exhaust Fan Command,Binary Output,unknown,Exhaust Fan Command,Zone Temperature Sensor
+Zone Temperature \ 3rd Flr lobby,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Zone Temperature/Conference Room,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+zone temperature\south stat,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Occupied cooling min,Analog Output,84,Minimum Occupied Cooling Supply Airflow,Occupied Cooling Min Discharge Air Flow Setpoint
+Zone Temperature\north stat Rm 3221,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Current Limit,Analog Output,3,Current Limit,Current Limit Setpoint
+Current,Analog Input,3,Current,Current Sensor
+Cooling Valve 1 Cmd,Analog Output,98,Cooling Valve Command,Cooling Valve Command
+Cooling Valve 2 Cmd,Analog Output,98,Cooling Valve Command,Cooling Valve Command
+Cooling Valve 3 Cmd,Analog Output,98,Cooling Valve Command,Cooling Valve Command
+Cooling Valve 4 Cmd,Analog Output,98,Cooling Valve Command,Cooling Valve Command
+Cooling On-Off,Binary Input,unknown,Cooling On-Off,Cooling On Off Status
+Exhaust Fan 4 Status / Restrooms,Binary Input,unknown,Exhaust Fan Status,Exhaust Fan Status
+Exhaust Fan 4 Command,Binary Output,unknown,Exhaust Fan Command,Exhaust Fan Start Stop Command
+EF Sts / Ex 4121-3121-2121-1121-Mech Rm,Binary Input,unknown,Exhaust Fan Status,Exhaust Fan Status
+Zone Temperature/ConferenceRoom,Analog Input,64,Zone Temperature,Zone Temperature Sensor
+Condensate Leak Dectection Alarm,Binary Input,unknown,Condensate Leak Dectection Alarm,Condensate Leak Alarm
+Compressor 1 Overload,Binary Input,unknown,Compressor Overload,Compressor Overload Alarm
+Compressor 2 Overload,Binary Input,unknown,Compressor Overload,Compressor Overload Alarm
+Loss Of Communications,Binary Input,unknown,Loss Of Communications,Communication Loss Alarm
+CO2 Outside Air,Analog Input,96,Outside Air CO2 Level,Outside Air CO2 Sensor
+Supply Flow Setpoint,Analog Output,84,Supply Airflow Setpoint,Discharge Air Flow Setpoint
+Supply Flow,Analog Output,84,Supply Airflow,Discharge Air Flow Sensor
+Heating Flow,Analog Output,84,Heating Supply Airflow,Occupied Heating Discharge Air Flow Setpoint
+Actual Heating Setpoint,Analog Output,64,Actual Heating Setpoint,effective heating temperature setpoint
+Actual Cooling Setpoint,Analog Output,64,Actual Cooling Setpoint,effective cooling temperature setpoint
+Occupancy Command,Analog Output,95,Occupancy Command,Occupancy Command
+Chw Ret Temp1,Analog Input,64,Chilled Water Return Temperature,Chilled Water Return Temperature Sensor
+Chw Ret Temp 2,Analog Input,64,Chilled Water Return Temperature,Chilled Water Return Temperature Sensor
+Chw Ret Temp 3,Analog Input,64,Chilled Water Return Temperature,Chilled Water Return Temperature Sensor
+Chw Ret Temp 4,Analog Input,64,Chilled Water Return Temperature,Chilled Water Return Temperature Sensor
+Chilled Water Supply Temperature,Analog Input,64,Chilled Water Supply Temperature,Chilled Water Supply Temperature Sensor
+Chilled Water Pressure Setpoint,Analog Output,56,Chilled Water Pressure Setpoint,Chilled Water Differential Pressure Setpoint
+CHW DIFF PRESS SETPOINT,Analog Output,56,Chilled Water Differential Pressure Setpoint,Chilled Water Differential Pressure Setpoint
+CHW-DP Load Shed,Binary Value,unknown,Chilled Water Differential Pressure Load Shed,Chilled Water Differential Pressure Load Shed Status
+CHWDP-SP Load Shed,Analog Value,56,Chilled Water Differential Pressure Setpoint Load Shed,Chilled Water Differential Pressure Load Shed Setpoint
+CHW DIFF PRESS,Analog Input,56,Chilled Water Differential Pressure,Chilled Water Differential Pressure Sensor
+Chilled Water Differential Pressure,Analog Input,56,Chilled Water Differential Pressure,Chilled Water Differential Pressure Sensor
+Change Filters,Binary Input,unknown,Change Filters,Change Filter Alarm
+% Capacity,Analog Input,98,CRAC Capacity,CRAC Capacity Setpoint
+Cooling Min Flow,Analog Output,84,Minimum Supply Cooling Airflow,Cooling Min Discharge Air Flow Setpoint
+AVERAGE COOLING DEMAND IN BUILDING,Analog Value,302,Average Cooling Demand,Average Cooling Demand Sensor
+Battery Voltage,Analog Value,5,Battery Voltage,Battery Voltage Sensor
+AVERAGE SUPFLOW %,Analog Value,98,Average Supply Flow,Average Discharge Air Flow Sensor
+AVERAGE SUPFLOW %,Analog Value,95,Average Supply Flow,Average Discharge Air Flow Sensor
+Average Supply Flow,Analog Value,95,Average Supply Flow,Average Discharge Air Flow Sensor
+AVERAGE COOLING DEMAND IN BASEMENT,Analog Value,302,Average Cooling Demand,Average Cooling Demand Sensor
+CO2 Differential,Analog Value,95,CO2 Differential,CO2 Differential Sensor
+AVERAGE COOLING DEMAND ON 1ST FLR,Analog Value,302,Average Cooling Demand,Average Cooling Demand Sensor
+AVERAGE COOLING DEMAND ON FLR,Analog Value,98,Average Cooling Demand,Average Cooling Demand Sensor
+AVERAGE COOLING DEMAND ON FLR,Analog Value,302,Average Cooling Demand,Average Cooling Demand Sensor
+VFD Alarm,Binary Input,unknown,VFD Alarm,VFD Alarm
+Alarm Present,Binary Input,unknown,Alarm Present,Alarm
+Local Alarm 1,Binary Input,unknown,Local Alarm,Alarm
+Local Alarm 2,Binary Input,unknown,Local Alarm,Alarm
+Loss Of Airflow,Binary Input,unknown,Loss Of Airflow,Air Flow Loss Alarm
+Return Fan 1 Flow,Analog Value,84,Supply Flow Calculation,Return Fan Air Flow Sensor
+Return Fan 2 Flow,Analog Value,84,Supply Flow Calculation,Return Fan Air Flow Sensor
+Return Fan 3 Flow,Analog Value,84,Supply Flow Calculation,Return Fan Air Flow Sensor
+Return Fan 4 Flow,Analog Value,84,Supply Flow Calculation,Return Fan Air Flow Sensor
+Supply Fan 1 Flow,Analog Value,84,Supply Flow Calculation,Supply Fan Air Flow Sensor
+Supply Fan 2 Flow,Analog Value,84,Supply Flow Calculation,Supply Fan Air Flow Sensor
+Supply Fan 3 Flow,Analog Value,84,Supply Flow Calculation,Supply Fan Air Flow Sensor
+Supply Fan 4 Flow,Analog Value,84,Supply Flow Calculation,Supply Fan Air Flow Sensor
+Acceleration Time,Analog Output,73,Acceleration Time,Acceleration Time Setpoint
