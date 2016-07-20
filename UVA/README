@@ -1,6 +1,6 @@
 Rice_Type contains the list of points whose data is available, along with the groud truth type.
 
-point.csv contains the mapping of each primitive label to detailed information
+point.csv contains the mapping of each primitive label to detailed information, e.g, tagset defined in BRICK, AHU, HVAC zone, floor, room, equipment unit id.
 
 generator.py generates the automatically "parsed" tags and tagsets, but not necessarily the tagsets in the Brick Schema.
 
