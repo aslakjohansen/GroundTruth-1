@@ -1,11 +1,18 @@
 Name of building : Soda Hall
 Number of Sensors : 1586
+Built in 1994
+BMS System : Barrington/Broadwin (company has ceased to exist)
 
+Files provided : 
+1. SodaParseKey 
 < Format of *_MetadataParseKey file>
 
 Sensor Tag => List ( [tag substring] -> [haystack-ish key] )
 
-< Format of *_relationships file>
+2. convertSodaHallToBrick.py
+Python file to convert the list of sensor tags to Brick
 
-Entities (room, zone, equipment, sensors):
-description and relationships to other sensors, equipment
+3. berkeley.ttl
+Soda Hall metadata converted to Brick (using the script)
+
+
