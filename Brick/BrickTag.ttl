@@ -924,3 +924,96 @@
 
  :Duration  rdfs:subClassOf   :MeasurementProperty_Modifier;
 			 rdfs:label "Duration"@en .
+
+ :Gain  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Gain"@en .
+
+ :Protect  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Protect"@en .
+
+ :Condensor  rdfs:subClassOf   :Equipment_HVAC_AHU;
+			 rdfs:label "Condensor"@en .
+
+ :Leaving  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Leaving"@en .
+
+ :Tank  rdfs:subClassOf   :Equipment_HVAC_AHU;
+			 rdfs:label "Tank"@en .
+
+ :Fixed  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Fixed"@en .
+
+ :Vent  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Vent"@en .
+
+ :Entering  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Entering"@en .
+
+ :Isolation  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Isolation"@en .
+
+ :Dewpoint  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "Dewpoint"@en .
+
+ :Cutout  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Cutout"@en .
+
+ :Failure  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "Failure"@en .
+
+ :Operating  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Operating"@en .
+
+ :Curtailment  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Curtailment"@en .
+
+ :Elevator  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "Elevator"@en .
+
+ :Weather  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "Weather"@en .
+
+ :Inverter  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "Inverter"@en .
+
+ :Close  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Close"@en .
+
+ :Override  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Override"@en .
+
+ :Thumbwheel  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "Thumbwheel"@en .
+
+ :Chiller  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "Chiller"@en .
+
+ :Timer  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "Timer"@en .
+
+ :Electrical  rdfs:subClassOf   :Equipment_Energy;
+			 rdfs:label "Electrical"@en .
+
+ :PreHeat  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "PreHeat"@en .
+
+ :Ice  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
+			 rdfs:label "Ice"@en .
+
+ :Factor  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Factor"@en .
+
+ :Ratio  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Ratio"@en .
+
+ :Integrative  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Integrative"@en .
+
+ :Duct  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "Duct"@en .
+
+ :Server  rdfs:subClassOf   :Equipment;
+			 rdfs:label "Server"@en .
+
+ :Dew  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Dew"@en .
