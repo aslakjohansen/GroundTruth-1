@@ -11,3 +11,8 @@ The [Makefile](Makefile) uses a [generator script](gtc_brickgenerator.py) to gen
 3. [rooms.json](rooms.json)
    List of rooms, including configuration and internal point names.
 
+The main targets of the makefile are:
+
+* `all (default)` Builds the Brick representation of the GTH building.
+* `install` Installs a new version of the Brick representation at [the central location](../../../building_instances/gtc_brick.ttl).
+
