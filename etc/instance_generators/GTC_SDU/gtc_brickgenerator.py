@@ -32,9 +32,10 @@ BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
 BRICKTAG   = Namespace('http://buildsys.org/ontologies/BrickTag#')
 
 g = Graph()
-g.parse('../BuildingSchema/Brick.ttl', format='turtle')
-g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
-g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+brickpath = lambda filename: '../../../Brick/'+filename
+g.parse(brickpath('Brick.ttl'), format='turtle')
+g.parse(brickpath('BrickFrame.ttl'), format='turtle')
+g.parse(brickpath('BrickTag.ttl'), format='turtle')
 g.bind('rdf'  , RDF)
 g.bind('rdfs' , RDFS)
 g.bind('brick', BRICK)
@@ -1016,5 +1017,5 @@ b = gen_building(prefix)
 ############################################################### back matter ####
 ################################################################################
 
-g.serialize('sdu_gtc_simple.ttl', 'turtle')
+g.serialize('gtc_brick.ttl', 'turtle')
 
