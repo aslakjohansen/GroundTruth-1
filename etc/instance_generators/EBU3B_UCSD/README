@@ -1,4 +1,21 @@
-Here is an explanation for the metadata details provided for buildings at UCSD. 
+Name of building : Engineering Building Unit 3B
+Number of Sensors : 4594
+Built in 2004
+BMS System : Johnson Controls
+
+Files provided : 
+1. ebu3b_description_to_tagset.csv
+Descriptions given by the vendor are unique. We map each description to a Tagset defined in Brick to represent its point type. This is used in "ebu3b_brickgenerator.ipynb" to normalize point types.
+
+2. ebu3b_sensor_types_location.csv
+This contains raw labels and metadata given by the vendor and its ground truth relationships and point types. Point types here are customized (not Brick).
+
+3. ebu3b_brickgenerator.ipynb
+It takes 1. and 2. to generate normalized Brick metadata, ebu3b_brick.ttl.
+
+
+Appendix. 
+Description for the ground truth file.
 
 We provide both the native information obtained from BACnet and ground truth information as interpreted by us. Everything is provided as an Excel as well as CSV file. We will provide mapping to Haystack in the future.
 
@@ -31,4 +48,5 @@ Equipment Ref: Number assigned to equipment. If there are two supply fans, their
 
 Equipment Subsystem: The hierarchical relationship between equipment. For example, AHU contains supply and return fans.
 Building: Building name. There are a few spurious points which may belong to other buildings.
+
 

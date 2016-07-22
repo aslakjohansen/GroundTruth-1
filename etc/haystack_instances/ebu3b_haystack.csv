@@ -1,0 +1,4012 @@
+Note,Contains haystack tags and custom tags
+EBU3B.RM-1100A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1100A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1100A..CLGPID-O,zone cooling cmd
+EBU3B.RM-1100A..DPR-C,discharge air damper cmd
+EBU3B.RM-1100A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1100A..FAN-C,discharge air fan cmd
+EBU3B.RM-1100A..HTGPID-O,zone heating cmd
+EBU3B.RM-1100A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1100A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1100A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1100A..OCC-CMD,zone occupied cmd
+EBU3B.RM-1100A..RH-VLV,reheat valve cmd
+EBU3B.RM-1100A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1100A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1100A..COMMONSP,zone air temp sp
+EBU3B.RM-1100A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1100A..ZN-T,zone air temp sensor
+EBU3B.RM-1100D..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1100D..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1100D..CLGPID-O,zone cooling cmd
+EBU3B.RM-1100D..DPR-C,discharge air damper cmd
+EBU3B.RM-1100D..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1100D..HTGPID-O,zone heating cmd
+EBU3B.RM-1100D..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1100D..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1100D..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1100D..OCC-CMD,zone occupied cmd
+EBU3B.RM-1100D..RH-VLV,reheat valve cmd
+EBU3B.RM-1100D..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1100D..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1100D..COMMONSP,zone air temp sp
+EBU3B.RM-1100D..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1100D..ZN-T,zone air temp sensor
+EBU3B.RM-1102..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1102..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1102..CLGPID-O,zone cooling cmd
+EBU3B.RM-1102..DPR-C,discharge air damper cmd
+EBU3B.RM-1102..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1102..HTGPID-O,zone heating cmd
+EBU3B.RM-1102..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1102..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1102..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1102..OCC-CMD,zone occupied cmd
+EBU3B.RM-1102..RH-VLV,reheat valve cmd
+EBU3B.RM-1102..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1102..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1102..COMMONSP,zone air temp sp
+EBU3B.RM-1102..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1102..ZN-T,zone air temp sensor
+EBU3B.RM-1104..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1104..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1104..CLGPID-O,zone cooling cmd
+EBU3B.RM-1104..DPR-C,discharge air damper cmd
+EBU3B.RM-1104..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1104..HTGPID-O,zone heating cmd
+EBU3B.RM-1104..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1104..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1104..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1104..OCC-CMD,zone occupied cmd
+EBU3B.RM-1104..RH-VLV,reheat valve cmd
+EBU3B.RM-1104..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1104..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1104..COMMONSP,zone air temp sp
+EBU3B.RM-1104..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1104..ZN-T,zone air temp sensor
+EBU3B.RM-1106..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1106..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1106..CLGPID-O,zone cooling cmd
+EBU3B.RM-1106..DPR-C,discharge air damper cmd
+EBU3B.RM-1106..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1106..HTGPID-O,zone heating cmd
+EBU3B.RM-1106..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1106..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1106..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1106..OCC-CMD,zone occupied cmd
+EBU3B.RM-1106..RH-VLV,reheat valve cmd
+EBU3B.RM-1106..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1106..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1106..COMMONSP,zone air temp sp
+EBU3B.RM-1106..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1106..ZN-T,zone air temp sensor
+EBU3B.RM-1107..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1107..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1107..CLGPID-O,zone cooling cmd
+EBU3B.RM-1107..DPR-C,discharge air damper cmd
+EBU3B.RM-1107..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1107..HTGPID-O,zone heating cmd
+EBU3B.RM-1107..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1107..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1107..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1107..OCC-CMD,zone occupied cmd
+EBU3B.RM-1107..RH-VLV,reheat valve cmd
+EBU3B.RM-1107..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1107..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1107..COMMONSP,zone air temp sp
+EBU3B.RM-1107..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1107..ZN-T,zone air temp sensor
+EBU3B.RM-1108..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1108..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1108..CLGPID-O,zone cooling cmd
+EBU3B.RM-1108..DPR-C,discharge air damper cmd
+EBU3B.RM-1108..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1108..HTGPID-O,zone heating cmd
+EBU3B.RM-1108..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1108..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1108..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1108..OCC-CMD,zone occupied cmd
+EBU3B.RM-1108..RH-VLV,reheat valve cmd
+EBU3B.RM-1108..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1108..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1108..COMMONSP,zone air temp sp
+EBU3B.RM-1108..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1108..ZN-T,zone air temp sensor
+EBU3B.RM-1109..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1109..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1109..CLGPID-O,zone cooling cmd
+EBU3B.RM-1109..DPR-C,discharge air damper cmd
+EBU3B.RM-1109..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1109..HTGPID-O,zone heating cmd
+EBU3B.RM-1109..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1109..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1109..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1109..OCC-CMD,zone occupied cmd
+EBU3B.RM-1109..RH-VLV,reheat valve cmd
+EBU3B.RM-1109..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1109..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1109..COMMONSP,zone air temp sp
+EBU3B.RM-1109..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1109..ZN-T,zone air temp sensor
+EBU3B.RM-1110..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1110..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1110..CLGPID-O,zone cooling cmd
+EBU3B.RM-1110..DPR-C,discharge air damper cmd
+EBU3B.RM-1110..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1110..HTGPID-O,zone heating cmd
+EBU3B.RM-1110..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1110..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1110..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1110..OCC-CMD,zone occupied cmd
+EBU3B.RM-1110..RH-VLV,reheat valve cmd
+EBU3B.RM-1110..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1110..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1110..COMMONSP,zone air temp sp
+EBU3B.RM-1110..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1110..ZN-T,zone air temp sensor
+EBU3B.RM-1113..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1113..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1113..CLGPID-O,zone cooling cmd
+EBU3B.RM-1113..DPR-C,discharge air damper cmd
+EBU3B.RM-1113..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1113..HTGPID-O,zone heating cmd
+EBU3B.RM-1113..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1113..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1113..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1113..OCC-CMD,zone occupied cmd
+EBU3B.RM-1113..RH-VLV,reheat valve cmd
+EBU3B.RM-1113..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1113..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1113..COMMONSP,zone air temp sp
+EBU3B.RM-1113..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1113..ZN-T,zone air temp sensor
+EBU3B.RM-1115..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1115..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1115..CLGPID-O,zone cooling cmd
+EBU3B.RM-1115..DPR-C,discharge air damper cmd
+EBU3B.RM-1115..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1115..HTGPID-O,zone heating cmd
+EBU3B.RM-1115..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1115..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1115..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1115..OCC-CMD,zone occupied cmd
+EBU3B.RM-1115..RH-VLV,reheat valve cmd
+EBU3B.RM-1115..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1115..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1115..COMMONSP,zone air temp sp
+EBU3B.RM-1115..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1115..ZN-T,zone air temp sensor
+EBU3B.RM-1116..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1116..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1116..CLGPID-O,zone cooling cmd
+EBU3B.RM-1116..DPR-C,discharge air damper cmd
+EBU3B.RM-1116..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1116..HTGPID-O,zone heating cmd
+EBU3B.RM-1116..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1116..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1116..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1116..OCC-CMD,zone occupied cmd
+EBU3B.RM-1116..RH-VLV,reheat valve cmd
+EBU3B.RM-1116..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1116..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1116..COMMONSP,zone air temp sp
+EBU3B.RM-1116..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1116..ZN-T,zone air temp sensor
+EBU3B.RM-1117..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1117..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1117..CLGPID-O,zone cooling cmd
+EBU3B.RM-1117..DPR-C,discharge air damper cmd
+EBU3B.RM-1117..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1117..FAN-C,discharge air fan cmd
+EBU3B.RM-1117..HTGPID-O,zone heating cmd
+EBU3B.RM-1117..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1117..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1117..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1117..OCC-CMD,zone occupied cmd
+EBU3B.RM-1117..RH-VLV,reheat valve cmd
+EBU3B.RM-1117..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1117..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1117..COMMONSP,zone air temp sp
+EBU3B.RM-1117..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1117..ZN-T,zone air temp sensor
+EBU3B.RM-1122..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1122..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1122..CLGPID-O,zone cooling cmd
+EBU3B.RM-1122..DPR-C,discharge air damper cmd
+EBU3B.RM-1122..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1122..HTGPID-O,zone heating cmd
+EBU3B.RM-1122..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1122..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1122..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1122..OCC-CMD,zone occupied cmd
+EBU3B.RM-1122..RH-VLV,reheat valve cmd
+EBU3B.RM-1122..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1122..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1122..COMMONSP,zone air temp sp
+EBU3B.RM-1122..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1122..ZN-T,zone air temp sensor
+EBU3B.RM-1123..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1123..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1123..CLGPID-O,zone cooling cmd
+EBU3B.RM-1123..DPR-C,discharge air damper cmd
+EBU3B.RM-1123..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1123..HTGPID-O,zone heating cmd
+EBU3B.RM-1123..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1123..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1123..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1123..OCC-CMD,zone occupied cmd
+EBU3B.RM-1123..RH-VLV,reheat valve cmd
+EBU3B.RM-1123..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1123..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1123..COMMONSP,zone air temp sp
+EBU3B.RM-1123..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1123..ZN-T,zone air temp sensor
+EBU3B.RM-1124..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1124..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1124..CLGPID-O,zone cooling cmd
+EBU3B.RM-1124..DPR-C,discharge air damper cmd
+EBU3B.RM-1124..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1124..HTGPID-O,zone heating cmd
+EBU3B.RM-1124..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1124..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1124..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1124..OCC-CMD,zone occupied cmd
+EBU3B.RM-1124..RH-VLV,reheat valve cmd
+EBU3B.RM-1124..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1124..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1124..COMMONSP,zone air temp sp
+EBU3B.RM-1124..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-1124..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1124..ZN-T,zone air temp sensor
+EBU3B.RM-1125..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1125..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1125..CLGPID-O,zone cooling cmd
+EBU3B.RM-1125..DPR-C,discharge air damper cmd
+EBU3B.RM-1125..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1125..HTGPID-O,zone heating cmd
+EBU3B.RM-1125..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1125..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1125..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1125..OCC-CMD,zone occupied cmd
+EBU3B.RM-1125..RH-VLV,reheat valve cmd
+EBU3B.RM-1125..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1125..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1125..COMMONSP,zone air temp sp
+EBU3B.RM-1125..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1125..ZN-T,zone air temp sensor
+EBU3B.RM-1126..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1126..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1126..CLGPID-O,zone cooling cmd
+EBU3B.RM-1126..DPR-C,discharge air damper cmd
+EBU3B.RM-1126..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1126..HTGPID-O,zone heating cmd
+EBU3B.RM-1126..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1126..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1126..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1126..OCC-CMD,zone occupied cmd
+EBU3B.RM-1126..RH-VLV,reheat valve cmd
+EBU3B.RM-1126..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1126..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1126..COMMONSP,zone air temp sp
+EBU3B.RM-1126..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1126..ZN-T,zone air temp sensor
+EBU3B.RM-1130..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1130..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1130..CLGPID-O,zone cooling cmd
+EBU3B.RM-1130..DPR-C,discharge air damper cmd
+EBU3B.RM-1130..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1130..FAN-C,discharge air fan cmd
+EBU3B.RM-1130..HTGPID-O,zone heating cmd
+EBU3B.RM-1130..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1130..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1130..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1130..OCC-CMD,zone occupied cmd
+EBU3B.RM-1130..RH-VLV,reheat valve cmd
+EBU3B.RM-1130..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1130..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1130..COMMONSP,zone air temp sp
+EBU3B.RM-1130..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1130..ZN-T,zone air temp sensor
+EBU3B.RM-1132..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1132..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1132..CLGPID-O,zone cooling cmd
+EBU3B.RM-1132..DPR-C,discharge air damper cmd
+EBU3B.RM-1132..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1132..HTGPID-O,zone heating cmd
+EBU3B.RM-1132..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1132..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1132..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1132..OCC-CMD,zone occupied cmd
+EBU3B.RM-1132..RH-VLV,reheat valve cmd
+EBU3B.RM-1132..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1132..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1132..COMMONSP,zone air temp sp
+EBU3B.RM-1132..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1132..ZN-T,zone air temp sensor
+EBU3B.RM-1133..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1133..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1133..CLGPID-O,zone cooling cmd
+EBU3B.RM-1133..DPR-C,discharge air damper cmd
+EBU3B.RM-1133..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1133..HTGPID-O,zone heating cmd
+EBU3B.RM-1133..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1133..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1133..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1133..OCC-CMD,zone occupied cmd
+EBU3B.RM-1133..RH-VLV,reheat valve cmd
+EBU3B.RM-1133..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1133..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1133..COMMONSP,zone air temp sp
+EBU3B.RM-1133..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1133..ZN-T,zone air temp sensor
+EBU3B.RM-1134..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1134..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1134..CLGPID-O,zone cooling cmd
+EBU3B.RM-1134..DPR-C,discharge air damper cmd
+EBU3B.RM-1134..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1134..HTGPID-O,zone heating cmd
+EBU3B.RM-1134..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1134..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1134..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1134..OCC-CMD,zone occupied cmd
+EBU3B.RM-1134..RH-VLV,reheat valve cmd
+EBU3B.RM-1134..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1134..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1134..COMMONSP,zone air temp sp
+EBU3B.RM-1134..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1134..ZN-T,zone air temp sensor
+EBU3B.RM-1139..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1139..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1139..CLGPID-O,zone cooling cmd
+EBU3B.RM-1139..DPR-C,discharge air damper cmd
+EBU3B.RM-1139..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1139..HTGPID-O,zone heating cmd
+EBU3B.RM-1139..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1139..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1139..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1139..OCC-CMD,zone occupied cmd
+EBU3B.RM-1139..RH-VLV,reheat valve cmd
+EBU3B.RM-1139..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1139..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1139..COMMONSP,zone air temp sp
+EBU3B.RM-1139..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1139..ZN-T,zone air temp sensor
+EBU3B.RM-1144..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1144..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1144..CLGPID-O,zone cooling cmd
+EBU3B.RM-1144..DPR-C,discharge air damper cmd
+EBU3B.RM-1144..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1144..HTGPID-O,zone heating cmd
+EBU3B.RM-1144..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1144..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1144..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1144..OCC-CMD,zone occupied cmd
+EBU3B.RM-1144..RH-VLV,reheat valve cmd
+EBU3B.RM-1144..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1144..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1144..COMMONSP,zone air temp sp
+EBU3B.RM-1144..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1144..ZN-T,zone air temp sensor
+EBU3B.RM-1145..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1145..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1145..CLGPID-O,zone cooling cmd
+EBU3B.RM-1145..DPR-C,discharge air damper cmd
+EBU3B.RM-1145..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1145..HTGPID-O,zone heating cmd
+EBU3B.RM-1145..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1145..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1145..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1145..OCC-CMD,zone occupied cmd
+EBU3B.RM-1145..RH-VLV,reheat valve cmd
+EBU3B.RM-1145..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1145..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1145..COMMONSP,zone air temp sp
+EBU3B.RM-1145..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1145..ZN-T,zone air temp sensor
+EBU3B.RM-1150..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1150..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1150..CLGPID-O,zone cooling cmd
+EBU3B.RM-1150..DPR-C,discharge air damper cmd
+EBU3B.RM-1150..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1150..HTGPID-O,zone heating cmd
+EBU3B.RM-1150..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1150..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1150..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1150..OCC-CMD,zone occupied cmd
+EBU3B.RM-1150..RH-VLV,reheat valve cmd
+EBU3B.RM-1150..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1150..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1150..COMMONSP,zone air temp sp
+EBU3B.RM-1150..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1150..ZN-T,zone air temp sensor
+EBU3B.RM-1151..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1151..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1151..CLGPID-O,zone cooling cmd
+EBU3B.RM-1151..DPR-C,discharge air damper cmd
+EBU3B.RM-1151..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1151..HTGPID-O,zone heating cmd
+EBU3B.RM-1151..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1151..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1151..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1151..OCC-CMD,zone occupied cmd
+EBU3B.RM-1151..RH-VLV,reheat valve cmd
+EBU3B.RM-1151..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1151..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1151..COMMONSP,zone air temp sp
+EBU3B.RM-1151..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1151..ZN-T,zone air temp sensor
+EBU3B.RM-1154..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1154..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1154..CLGPID-O,zone cooling cmd
+EBU3B.RM-1154..DPR-C,discharge air damper cmd
+EBU3B.RM-1154..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1154..HTGPID-O,zone heating cmd
+EBU3B.RM-1154..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1154..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1154..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1154..OCC-CMD,zone occupied cmd
+EBU3B.RM-1154..RH-VLV,reheat valve cmd
+EBU3B.RM-1154..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1154..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1154..COMMONSP,zone air temp sp
+EBU3B.RM-1154..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1154..ZN-T,zone air temp sensor
+EBU3B.RM-1155..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1155..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1155..CLGPID-O,zone cooling cmd
+EBU3B.RM-1155..DPR-C,discharge air damper cmd
+EBU3B.RM-1155..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1155..HTGPID-O,zone heating cmd
+EBU3B.RM-1155..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1155..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1155..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1155..OCC-CMD,zone occupied cmd
+EBU3B.RM-1155..RH-VLV,reheat valve cmd
+EBU3B.RM-1155..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1155..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1155..COMMONSP,zone air temp sp
+EBU3B.RM-1155..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1155..ZN-T,zone air temp sensor
+EBU3B.RM-1156..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1156..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1156..CLGPID-O,zone cooling cmd
+EBU3B.RM-1156..DPR-C,discharge air damper cmd
+EBU3B.RM-1156..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1156..HTGPID-O,zone heating cmd
+EBU3B.RM-1156..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1156..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1156..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1156..OCC-CMD,zone occupied cmd
+EBU3B.RM-1156..RH-VLV,reheat valve cmd
+EBU3B.RM-1156..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1156..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1156..COMMONSP,zone air temp sp
+EBU3B.RM-1156..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1156..ZN-T,zone air temp sensor
+EBU3B.RM-1200A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1200A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1200A..CLGPID-O,zone cooling cmd
+EBU3B.RM-1200A..DPR-C,discharge air damper cmd
+EBU3B.RM-1200A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1200A..HTGPID-O,zone heating cmd
+EBU3B.RM-1200A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1200A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1200A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1200A..OCC-CMD,zone occupied cmd
+EBU3B.RM-1200A..RH-VLV,reheat valve cmd
+EBU3B.RM-1200A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1200A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1200A..COMMONSP,zone air temp sp
+EBU3B.RM-1200A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1200A..ZN-T,zone air temp sensor
+EBU3B.RM-1200B..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1200B..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1200B..CLGPID-O,zone cooling cmd
+EBU3B.RM-1200B..DPR-C,discharge air damper cmd
+EBU3B.RM-1200B..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1200B..FAN-C,discharge air fan cmd
+EBU3B.RM-1200B..HTGPID-O,zone heating cmd
+EBU3B.RM-1200B..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1200B..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1200B..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1200B..OCC-CMD,zone occupied cmd
+EBU3B.RM-1200B..RH-VLV,reheat valve cmd
+EBU3B.RM-1200B..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1200B..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1200B..COMMONSP,zone air temp sp
+EBU3B.RM-1200B..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1200B..ZN-T,zone air temp sensor
+EBU3B.RM-1200C..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1200C..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1200C..CLGPID-O,zone cooling cmd
+EBU3B.RM-1200C..DPR-C,discharge air damper cmd
+EBU3B.RM-1200C..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1200C..HTGPID-O,zone heating cmd
+EBU3B.RM-1200C..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1200C..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1200C..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1200C..OCC-CMD,zone occupied cmd
+EBU3B.RM-1200C..RH-VLV,reheat valve cmd
+EBU3B.RM-1200C..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1200C..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1200C..COMMONSP,zone air temp sp
+EBU3B.RM-1200C..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1200C..ZN-T,zone air temp sensor
+EBU3B.RM-1203..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1203..CLGPID-O,zone cooling cmd
+EBU3B.RM-1203..DPR-C,discharge air damper cmd
+EBU3B.RM-1203..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1203..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1203..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1203..OCC-CMD,zone occupied cmd
+EBU3B.RM-1203..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1203..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1203..COMMONSP,zone air temp sp
+EBU3B.RM-1203..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1203..ZN-T,zone air temp sensor
+EBU3B.RM-1207..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1207..CLGPID-O,zone cooling cmd
+EBU3B.RM-1207..DPR-C,discharge air damper cmd
+EBU3B.RM-1207..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1207..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1207..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1207..OCC-CMD,zone occupied cmd
+EBU3B.RM-1207..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1207..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1207..COMMONSP,zone air temp sp
+EBU3B.RM-1207..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1207..ZN-T,zone air temp sensor
+EBU3B.RM-1208..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1208..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1208..CLGPID-O,zone cooling cmd
+EBU3B.RM-1208..DPR-C,discharge air damper cmd
+EBU3B.RM-1208..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1208..EF2-C,exhaust air fan cmd
+EBU3B.RM-1208..EF2-S,exhaust air fan sensor
+EBU3B.RM-1208..HTGPID-O,zone heating cmd
+EBU3B.RM-1208..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1208..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1208..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1208..OCC-CMD,zone occupied cmd
+EBU3B.RM-1208..RH-VLV,reheat valve cmd
+EBU3B.RM-1208..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1208..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1208..COMMONSP,zone air temp sp
+EBU3B.RM-1208..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1208..ZN-T,zone air temp sensor
+EBU3B.RM-1208B..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1208B..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1208B..CLGPID-O,zone cooling cmd
+EBU3B.RM-1208B..DPR-C,discharge air damper cmd
+EBU3B.RM-1208B..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1208B..HTGPID-O,zone heating cmd
+EBU3B.RM-1208B..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1208B..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1208B..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1208B..OCC-CMD,zone occupied cmd
+EBU3B.RM-1208B..RH-VLV,reheat valve cmd
+EBU3B.RM-1208B..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1208B..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1208B..COMMONSP,zone air temp sp
+EBU3B.RM-1208B..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1208B..ZN-T,zone air temp sensor
+EBU3B.RM-1212..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1212..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1212..CLGPID-O,zone cooling cmd
+EBU3B.RM-1212..DPR-C,discharge air damper cmd
+EBU3B.RM-1212..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1212..HTGPID-O,zone heating cmd
+EBU3B.RM-1212..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1212..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1212..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1212..OCC-CMD,zone occupied cmd
+EBU3B.RM-1212..RH-VLV,reheat valve cmd
+EBU3B.RM-1212..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1212..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1212..COMMONSP,zone air temp sp
+EBU3B.RM-1212..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1212..ZN-T,zone air temp sensor
+EBU3B.RM-1213..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1213..CLGPID-O,zone cooling cmd
+EBU3B.RM-1213..DPR-C,discharge air damper cmd
+EBU3B.RM-1213..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1213..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1213..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1213..OCC-CMD,zone occupied cmd
+EBU3B.RM-1213..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1213..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1213..COMMONSP,zone air temp sp
+EBU3B.RM-1213..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1213..ZN-T,zone air temp sensor
+EBU3B.RM-1213A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1213A..CLGPID-O,zone cooling cmd
+EBU3B.RM-1213A..DPR-C,discharge air damper cmd
+EBU3B.RM-1213A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1213A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1213A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1213A..OCC-CMD,zone occupied cmd
+EBU3B.RM-1213A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1213A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1213A..COMMONSP,zone air temp sp
+EBU3B.RM-1213A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1213A..ZN-T,zone air temp sensor
+EBU3B.RM-1217..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1217..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1217..CLGPID-O,zone cooling cmd
+EBU3B.RM-1217..DPR-C,discharge air damper cmd
+EBU3B.RM-1217..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1217..HTGPID-O,zone heating cmd
+EBU3B.RM-1217..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1217..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1217..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1217..OCC-CMD,zone occupied cmd
+EBU3B.RM-1217..RH-VLV,reheat valve cmd
+EBU3B.RM-1217..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1217..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1217..COMMONSP,zone air temp sp
+EBU3B.RM-1217..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1217..ZN-T,zone air temp sensor
+EBU3B.RM-1218..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1218..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1218..CLGPID-O,zone cooling cmd
+EBU3B.RM-1218..DPR-C,discharge air damper cmd
+EBU3B.RM-1218..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1218..HTGPID-O,zone heating cmd
+EBU3B.RM-1218..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1218..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1218..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1218..OCC-CMD,zone occupied cmd
+EBU3B.RM-1218..RH-VLV,reheat valve cmd
+EBU3B.RM-1218..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1218..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1218..COMMONSP,zone air temp sp
+EBU3B.RM-1218..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1218..ZN-T,zone air temp sensor
+EBU3B.RM-1221..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1221..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1221..CLGPID-O,zone cooling cmd
+EBU3B.RM-1221..DPR-C,discharge air damper cmd
+EBU3B.RM-1221..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1221..HTGPID-O,zone heating cmd
+EBU3B.RM-1221..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1221..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1221..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1221..OCC-CMD,zone occupied cmd
+EBU3B.RM-1221..RH-VLV,reheat valve cmd
+EBU3B.RM-1221..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1221..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1221..COMMONSP,zone air temp sp
+EBU3B.RM-1221..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1221..ZN-T,zone air temp sensor
+EBU3B.RM-1223..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1223..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1223..CLGPID-O,zone cooling cmd
+EBU3B.RM-1223..DPR-C,discharge air damper cmd
+EBU3B.RM-1223..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1223..HTGPID-O,zone heating cmd
+EBU3B.RM-1223..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1223..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1223..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1223..OCC-CMD,zone occupied cmd
+EBU3B.RM-1223..RH-VLV,reheat valve cmd
+EBU3B.RM-1223..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1223..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1223..COMMONSP,zone air temp sp
+EBU3B.RM-1223..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1223..ZN-T,zone air temp sensor
+EBU3B.RM-1224..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1224..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1224..CLGPID-O,zone cooling cmd
+EBU3B.RM-1224..DPR-C,discharge air damper cmd
+EBU3B.RM-1224..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1224..HTGPID-O,zone heating cmd
+EBU3B.RM-1224..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1224..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1224..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1224..OCC-CMD,zone occupied cmd
+EBU3B.RM-1224..RH-VLV,reheat valve cmd
+EBU3B.RM-1224..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1224..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1224..COMMONSP,zone air temp sp
+EBU3B.RM-1224..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1224..ZN-T,zone air temp sensor
+EBU3B.RM-1229..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1229..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1229..CLGPID-O,zone cooling cmd
+EBU3B.RM-1229..DPR-C,discharge air damper cmd
+EBU3B.RM-1229..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1229..HTGPID-O,zone heating cmd
+EBU3B.RM-1229..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1229..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1229..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1229..OCC-CMD,zone occupied cmd
+EBU3B.RM-1229..RH-VLV,reheat valve cmd
+EBU3B.RM-1229..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1229..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1229..COMMONSP,zone air temp sp
+EBU3B.RM-1229..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1229..ZN-T,zone air temp sensor
+EBU3B.RM-1230..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1230..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1230..CLGPID-O,zone cooling cmd
+EBU3B.RM-1230..DPR-C,discharge air damper cmd
+EBU3B.RM-1230..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1230..HTGPID-O,zone heating cmd
+EBU3B.RM-1230..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1230..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1230..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1230..OCC-CMD,zone occupied cmd
+EBU3B.RM-1230..RH-VLV,reheat valve cmd
+EBU3B.RM-1230..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1230..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1230..COMMONSP,zone air temp sp
+EBU3B.RM-1230..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1230..ZN-T,zone air temp sensor
+EBU3B.RM-1231..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1231..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1231..CLGPID-O,zone cooling cmd
+EBU3B.RM-1231..DPR-C,discharge air damper cmd
+EBU3B.RM-1231..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1231..HTGPID-O,zone heating cmd
+EBU3B.RM-1231..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1231..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1231..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1231..OCC-CMD,zone occupied cmd
+EBU3B.RM-1231..RH-VLV,reheat valve cmd
+EBU3B.RM-1231..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1231..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1231..COMMONSP,zone air temp sp
+EBU3B.RM-1231..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1231..ZN-T,zone air temp sensor
+EBU3B.RM-1236..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-1236..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-1236..CLGPID-O,zone cooling cmd
+EBU3B.RM-1236..DPR-C,discharge air damper cmd
+EBU3B.RM-1236..DMPR-POS,discharge air damper sensor
+EBU3B.RM-1236..HTGPID-O,zone heating cmd
+EBU3B.RM-1236..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-1236..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-1236..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-1236..OCC-CMD,zone occupied cmd
+EBU3B.RM-1236..RH-VLV,reheat valve cmd
+EBU3B.RM-1236..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-1236..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-1236..COMMONSP,zone air temp sp
+EBU3B.RM-1236..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-1236..ZN-T,zone air temp sensor
+EBU3B.RM-210..CO2-Hi Alarm,zone air co2 high alarm
+EBU3B.RM-2102..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2102..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2102..CLGPID-O,zone cooling cmd
+EBU3B.RM-2102..DPR-C,discharge air damper cmd
+EBU3B.RM-2102..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2102..HTGPID-O,zone heating cmd
+EBU3B.RM-2102..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2102..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2102..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2102..OCC-CMD,zone occupied cmd
+EBU3B.RM-2102..RH-VLV,reheat valve cmd
+EBU3B.RM-2102..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2102..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2102..COMMONSP,zone air temp sp
+EBU3B.RM-2102..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2102..ZN-T,zone air temp sensor
+EBU3B.RM-2105..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2105..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2105..CLGPID-O,zone cooling cmd
+EBU3B.RM-2105..DPR-C,discharge air damper cmd
+EBU3B.RM-2105..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2105..HTGPID-O,zone heating cmd
+EBU3B.RM-2105..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2105..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2105..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2105..OCC-CMD,zone occupied cmd
+EBU3B.RM-2105..RH-VLV,reheat valve cmd
+EBU3B.RM-2105..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2105..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2105..COMMONSP,zone air temp sp
+EBU3B.RM-2105..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2105..ZN-T,zone air temp sensor
+EBU3B.RM-2107..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2107..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2107..CLGPID-O,zone cooling cmd
+EBU3B.RM-2107..DPR-C,discharge air damper cmd
+EBU3B.RM-2107..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2107..HTGPID-O,zone heating cmd
+EBU3B.RM-2107..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2107..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2107..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2107..OCC-CMD,zone occupied cmd
+EBU3B.RM-2107..RH-VLV,reheat valve cmd
+EBU3B.RM-2107..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2107..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2107..COMMONSP,zone air temp sp
+EBU3B.RM-2107..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2107..ZN-T,zone air temp sensor
+EBU3B.RM-2108..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2108..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2108..CLGPID-O,zone cooling cmd
+EBU3B.RM-2108..DPR-C,discharge air damper cmd
+EBU3B.RM-2108..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2108..HTGPID-O,zone heating cmd
+EBU3B.RM-2108..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2108..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2108..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2108..OCC-CMD,zone occupied cmd
+EBU3B.RM-2108..RH-VLV,reheat valve cmd
+EBU3B.RM-2108..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2108..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2108..COMMONSP,zone air temp sp
+EBU3B.RM-2108..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2108..ZN-T,zone air temp sensor
+EBU3B.RM-2109..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2109..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2109..CLGPID-O,zone cooling cmd
+EBU3B.RM-2109..DPR-C,discharge air damper cmd
+EBU3B.RM-2109..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2109..HTGPID-O,zone heating cmd
+EBU3B.RM-2109..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2109..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2109..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2109..OCC-CMD,zone occupied cmd
+EBU3B.RM-2109..RH-VLV,reheat valve cmd
+EBU3B.RM-2109..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2109..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2109..COMMONSP,zone air temp sp
+EBU3B.RM-2109..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2109..ZN-T,zone air temp sensor
+EBU3B.RM-2111..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2111..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2111..CLGPID-O,zone cooling cmd
+EBU3B.RM-2111..DPR-C,discharge air damper cmd
+EBU3B.RM-2111..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2111..HTGPID-O,zone heating cmd
+EBU3B.RM-2111..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2111..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2111..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2111..OCC-CMD,zone occupied cmd
+EBU3B.RM-2111..RH-VLV,reheat valve cmd
+EBU3B.RM-2111..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2111..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2111..COMMONSP,zone air temp sp
+EBU3B.RM-2111..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2111..ZN-T,zone air temp sensor
+EBU3B.RM-2112..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2112..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2112..CLGPID-O,zone cooling cmd
+EBU3B.RM-2112..DPR-C,discharge air damper cmd
+EBU3B.RM-2112..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2112..HTGPID-O,zone heating cmd
+EBU3B.RM-2112..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2112..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2112..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2112..OCC-CMD,zone occupied cmd
+EBU3B.RM-2112..RH-VLV,reheat valve cmd
+EBU3B.RM-2112..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2112..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2112..COMMONSP,zone air temp sp
+EBU3B.RM-2112..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2112..ZN-T,zone air temp sensor
+EBU3B.RM-2116..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2116..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2116..CLGPID-O,zone cooling cmd
+EBU3B.RM-2116..DPR-C,discharge air damper cmd
+EBU3B.RM-2116..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2116..HTGPID-O,zone heating cmd
+EBU3B.RM-2116..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2116..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2116..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2116..OCC-CMD,zone occupied cmd
+EBU3B.RM-2116..RH-VLV,reheat valve cmd
+EBU3B.RM-2116..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2116..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2116..COMMONSP,zone air temp sp
+EBU3B.RM-2116..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2116..ZN-T,zone air temp sensor
+EBU3B.RM-2118..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2118..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2118..CLGPID-O,zone cooling cmd
+EBU3B.RM-2118..DPR-C,discharge air damper cmd
+EBU3B.RM-2118..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2118..HTGPID-O,zone heating cmd
+EBU3B.RM-2118..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2118..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2118..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2118..OCC-CMD,zone occupied cmd
+EBU3B.RM-2118..RH-VLV,reheat valve cmd
+EBU3B.RM-2118..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2118..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2118..COMMONSP,zone air temp sp
+EBU3B.RM-2118..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2118..ZN-T,zone air temp sensor
+EBU3B.RM-2119..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2119..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2119..CLGPID-O,zone cooling cmd
+EBU3B.RM-2119..DPR-C,discharge air damper cmd
+EBU3B.RM-2119..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2119..FAN-C,discharge air fan cmd
+EBU3B.RM-2119..HTGPID-O,zone heating cmd
+EBU3B.RM-2119..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2119..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2119..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2119..OCC-CMD,zone occupied cmd
+EBU3B.RM-2119..RH-VLV,reheat valve cmd
+EBU3B.RM-2119..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2119..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2119..COMMONSP,zone air temp sp
+EBU3B.RM-2119..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2119..ZN-T,zone air temp sensor
+EBU3B.RM-2121..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2121..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2121..CLGPID-O,zone cooling cmd
+EBU3B.RM-2121..DPR-C,discharge air damper cmd
+EBU3B.RM-2121..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2121..HTGPID-O,zone heating cmd
+EBU3B.RM-2121..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2121..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2121..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2121..OCC-CMD,zone occupied cmd
+EBU3B.RM-2121..RH-VLV,reheat valve cmd
+EBU3B.RM-2121..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2121..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2121..COMMONSP,zone air temp sp
+EBU3B.RM-2121..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2121..ZN-T,zone air temp sensor
+EBU3B.RM-2122..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2122..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2122..CLGPID-O,zone cooling cmd
+EBU3B.RM-2122..DPR-C,discharge air damper cmd
+EBU3B.RM-2122..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2122..HTGPID-O,zone heating cmd
+EBU3B.RM-2122..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2122..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2122..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2122..OCC-CMD,zone occupied cmd
+EBU3B.RM-2122..RH-VLV,reheat valve cmd
+EBU3B.RM-2122..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2122..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2122..COMMONSP,zone air temp sp
+EBU3B.RM-2122..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2122..ZN-T,zone air temp sensor
+EBU3B.RM-2126..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2126..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2126..CLGPID-O,zone cooling cmd
+EBU3B.RM-2126..DPR-C,discharge air damper cmd
+EBU3B.RM-2126..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2126..HTGPID-O,zone heating cmd
+EBU3B.RM-2126..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2126..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2126..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2126..OCC-CMD,zone occupied cmd
+EBU3B.RM-2126..RH-VLV,reheat valve cmd
+EBU3B.RM-2126..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2126..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2126..COMMONSP,zone air temp sp
+EBU3B.RM-2126..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2126..ZN-T,zone air temp sensor
+EBU3.RM-2127..ACLG-SP,zone air temp effective min sp
+EBU3B.RM-2127..AHTG-SP,zone air temp effective max sp
+EBU3B.RM-2127..BOXMODE,vavMode sp
+EBU3B.RM-2127..DMPRPOS,discharge air damper sensor
+EBU3B.AH-1..DASP-LO IN,discharge air demand sp
+EBU3B.RM-2127..HTGPID-O,zone heating cmd
+EBU3B.RM-2127..CMAXFLO,discharge air flow max sp
+EBU3B.RM-2127..OCMNC-SP,discharge air flow occ cooling min sp
+EBU3B.RM-2127..OCCHTGFL,discharge air flow occ heating min sp
+EBU3B.RM-2127..OCC-CMD,zone occupied cmd
+EBU3B.RM-2127..OCC-S,zone occupied sensor
+EBU3B.RM-2127..OCC-STS,zone occupied sensor
+EBU3B.RM-2127..RH-VLV,reheat valve cmd
+EBU3B.RM-2127..SUPFLOW,discharge air flow sensor
+EBU3B.RM-2127..SUPLOSP,discharge air flow sp
+EBU3B.RM-2127..COMMONSP,zone air temp sp
+EBU3B.RM-2127..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2127..ZN-T,zone air temp sensor
+EBU3B.RM-2128..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2128..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2128..CLGPID-O,zone cooling cmd
+EBU3B.RM-2128..DPR-C,discharge air damper cmd
+EBU3B.RM-2128..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2128..HTGPID-O,zone heating cmd
+EBU3B.RM-2128..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2128..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2128..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2128..OCC-CMD,zone occupied cmd
+EBU3B.RM-2128..RH-VLV,reheat valve cmd
+EBU3B.RM-2128..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2128..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2128..COMMONSP,zone air temp sp
+EBU3B.RM-2128..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2128..ZN-T,zone air temp sensor
+EBU3B.RM-2130..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2130..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2130..CLGPID-O,zone cooling cmd
+EBU3B.RM-2130..DPR-C,discharge air damper cmd
+EBU3B.RM-2130..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2130..HTGPID-O,zone heating cmd
+EBU3B.RM-2130..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2130..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2130..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2130..OCC-CMD,zone occupied cmd
+EBU3B.RM-2130..RH-VLV,reheat valve cmd
+EBU3B.RM-2130..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2130..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2130..COMMONSP,zone air temp sp
+EBU3B.RM-2130..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2130..ZN-T,zone air temp sensor
+EBU3B.RM-2132..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2132..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2132..CLGPID-O,zone cooling cmd
+EBU3B.RM-2132..DPR-C,discharge air damper cmd
+EBU3B.RM-2132..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2132..HTGPID-O,zone heating cmd
+EBU3B.RM-2132..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2132..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2132..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2132..OCC-CMD,zone occupied cmd
+EBU3B.RM-2132..RH-VLV,reheat valve cmd
+EBU3B.RM-2132..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2132..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2132..COMMONSP,zone air temp sp
+EBU3B.RM-2132..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2132..ZN-T,zone air temp sensor
+EBU3B.RM-2134..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2134..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2134..CLGPID-O,zone cooling cmd
+EBU3B.RM-2134..DPR-C,discharge air damper cmd
+EBU3B.RM-2134..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2134..HTGPID-O,zone heating cmd
+EBU3B.RM-2134..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2134..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2134..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2134..OCC-CMD,zone occupied cmd
+EBU3B.RM-2134..RH-VLV,reheat valve cmd
+EBU3B.RM-2134..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2134..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2134..COMMONSP,zone air temp sp
+EBU3B.RM-2134..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2134..ZN-T,zone air temp sensor
+EBU3B.RM-2136..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2136..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2136..CLGPID-O,zone cooling cmd
+EBU3B.RM-2136..DPR-C,discharge air damper cmd
+EBU3B.RM-2136..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2136..HTGPID-O,zone heating cmd
+EBU3B.RM-2136..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2136..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2136..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2136..OCC-CMD,zone occupied cmd
+EBU3B.RM-2136..RH-VLV,reheat valve cmd
+EBU3B.RM-2136..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2136..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2136..COMMONSP,zone air temp sp
+EBU3B.RM-2136..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2136..ZN-T,zone air temp sensor
+EBU3B.RM-2138..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2138..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2138..CLGPID-O,zone cooling cmd
+EBU3B.RM-2138..DPR-C,discharge air damper cmd
+EBU3B.RM-2138..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2138..HTGPID-O,zone heating cmd
+EBU3B.RM-2138..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2138..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2138..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2138..OCC-CMD,zone occupied cmd
+EBU3B.RM-2138..RH-VLV,reheat valve cmd
+EBU3B.RM-2138..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2138..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2138..COMMONSP,zone air temp sp
+EBU3B.RM-2138..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2138..ZN-T,zone air temp sensor
+EBU3B.RM-2140..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2140..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2140..CLGPID-O,zone cooling cmd
+EBU3B.RM-2140..DPR-C,discharge air damper cmd
+EBU3B.RM-2140..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2140..FAN-C,discharge air fan cmd
+EBU3B.RM-2140..HTGPID-O,zone heating cmd
+EBU3B.RM-2140..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2140..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2140..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2140..OCC-CMD,zone occupied cmd
+EBU3B.RM-2140..RH-VLV,reheat valve cmd
+EBU3B.RM-2140..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2140..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2140..COMMONSP,zone air temp sp
+EBU3B.RM-2140..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2140..ZN-T,zone air temp sensor
+EBU3B.RM-2142..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2142..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2142..CLGPID-O,zone cooling cmd
+EBU3B.RM-2142..DPR-C,discharge air damper cmd
+EBU3B.RM-2142..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2142..HTGPID-O,zone heating cmd
+EBU3B.RM-2142..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2142..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2142..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2142..OCC-CMD,zone occupied cmd
+EBU3B.RM-2142..RH-VLV,reheat valve cmd
+EBU3B.RM-2142..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2142..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2142..COMMONSP,zone air temp sp
+EBU3B.RM-2142..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2142..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2142..ZN-T,zone air temp sensor
+EBU3B.RM-2144..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2144..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2144..CLGPID-O,zone cooling cmd
+EBU3B.RM-2144..DPR-C,discharge air damper cmd
+EBU3B.RM-2144..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2144..HTGPID-O,zone heating cmd
+EBU3B.RM-2144..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2144..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2144..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2144..OCC-CMD,zone occupied cmd
+EBU3B.RM-2144..RH-VLV,reheat valve cmd
+EBU3B.RM-2144..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2144..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2144..COMMONSP,zone air temp sp
+EBU3B.RM-2144..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2144..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2144..ZN-T,zone air temp sensor
+EBU3B.RM-2146..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2146..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2146..CLGPID-O,zone cooling cmd
+EBU3B.RM-2146..DPR-C,discharge air damper cmd
+EBU3B.RM-2146..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2146..HTGPID-O,zone heating cmd
+EBU3B.RM-2146..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2146..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2146..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2146..OCC-CMD,zone occupied cmd
+EBU3B.RM-2146..RH-VLV,reheat valve cmd
+EBU3B.RM-2146..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2146..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2146..COMMONSP,zone air temp sp
+EBU3B.RM-2146..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2146..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2146..ZN-T,zone air temp sensor
+EBU3B.RM-2148..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2148..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2148..CLGPID-O,zone cooling cmd
+EBU3B.RM-2148..DPR-C,discharge air damper cmd
+EBU3B.RM-2148..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2148..HTGPID-O,zone heating cmd
+EBU3B.RM-2148..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2148..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2148..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2148..OCC-CMD,zone occupied cmd
+EBU3B.RM-2148..RH-VLV,reheat valve cmd
+EBU3B.RM-2148..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2148..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2148..COMMONSP,zone air temp sp
+EBU3B.RM-2148..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2148..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2148..ZN-T,zone air temp sensor
+EBU3B.RM-2150..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2150..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2150..CLGPID-O,zone cooling cmd
+EBU3B.RM-2150..DPR-C,discharge air damper cmd
+EBU3B.RM-2150..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2150..HTGPID-O,zone heating cmd
+EBU3B.RM-2150..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2150..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2150..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2150..OCC-CMD,zone occupied cmd
+EBU3B.RM-2150..RH-VLV,reheat valve cmd
+EBU3B.RM-2150..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2150..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2150..COMMONSP,zone air temp sp
+EBU3B.RM-2150..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2150..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2150..ZN-T,zone air temp sensor
+EBU3B.RM-2154..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2154..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2154..CLGPID-O,zone cooling cmd
+EBU3B.RM-2154..DPR-C,discharge air damper cmd
+EBU3B.RM-2154..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2154..HTGPID-O,zone heating cmd
+EBU3B.RM-2154..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2154..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2154..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2154..OCC-CMD,zone occupied cmd
+EBU3B.RM-2154..RH-VLV,reheat valve cmd
+EBU3B.RM-2154..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2154..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2154..COMMONSP,zone air temp sp
+EBU3B.RM-2154..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2154..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2154..ZN-T,zone air temp sensor
+EBU3B.RM-2200A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2200A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2200A..CLGPID-O,zone cooling cmd
+EBU3B.RM-2200A..DPR-C,discharge air damper cmd
+EBU3B.RM-2200A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2200A..HTGPID-O,zone heating cmd
+EBU3B.RM-2200A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2200A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2200A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2200A..OCC-CMD,zone occupied cmd
+EBU3B.RM-2200A..RH-VLV,reheat valve cmd
+EBU3B.RM-2200A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2200A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2200A..COMMONSP,zone air temp sp
+EBU3B.RM-2200A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2200A..ZN-T,zone air temp sensor
+EBU3B.RM-2203..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2203..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2203..CLGPID-O,zone cooling cmd
+EBU3B.RM-2203..DPR-C,discharge air damper cmd
+EBU3B.RM-2203..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2203..HTGPID-O,zone heating cmd
+EBU3B.RM-2203..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2203..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2203..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2203..OCC-CMD,zone occupied cmd
+EBU3B.RM-2203..RH-VLV,reheat valve cmd
+EBU3B.RM-2203..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2203..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2203..COMMONSP,zone air temp sp
+EBU3B.RM-2203..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2203..ZN-T,zone air temp sensor
+EBU3B.RM-2207..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2207..CLGPID-O,zone cooling cmd
+EBU3B.RM-2207..DPR-C,discharge air damper cmd
+EBU3B.RM-2207..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2207..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2207..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2207..OCC-CMD,zone occupied cmd
+EBU3B.RM-2207..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2207..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2207..COMMONSP,zone air temp sp
+EBU3B.RM-2207..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2207..ZN-T,zone air temp sensor
+EBU3B.RM-2208..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2208..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2208..CLGPID-O,zone cooling cmd
+EBU3B.RM-2208..DPR-C,discharge air damper cmd
+EBU3B.RM-2208..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2208..HTGPID-O,zone heating cmd
+EBU3B.RM-2208..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2208..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2208..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2208..OCC-CMD,zone occupied cmd
+EBU3B.RM-2208..RH-VLV,reheat valve cmd
+EBU3B.RM-2208..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2208..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2208..COMMONSP,zone air temp sp
+EBU3B.RM-2208..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2208..ZN-T,zone air temp sensor
+EBU3B.RM-2209..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2209..CLGPID-O,zone cooling cmd
+EBU3B.RM-2209..DPR-C,discharge air damper cmd
+EBU3B.RM-2209..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2209..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2209..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2209..OCC-CMD,zone occupied cmd
+EBU3B.RM-2209..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2209..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2209..COMMONSP,zone air temp sp
+EBU3B.RM-2209..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2209..ZN-T,zone air temp sensor
+EBU3B.RM-2214..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2214..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2214..CLGPID-O,zone cooling cmd
+EBU3B.RM-2214..DPR-C,discharge air damper cmd
+EBU3B.RM-2214..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2214..HTGPID-O,zone heating cmd
+EBU3B.RM-2214..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2214..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2214..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2214..OCC-CMD,zone occupied cmd
+EBU3B.RM-2214..RH-VLV,reheat valve cmd
+EBU3B.RM-2214..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2214..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2214..COMMONSP,zone air temp sp
+EBU3B.RM-2214..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2214..ZN-T,zone air temp sensor
+EBU3B.RM-2215..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2215..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2215..CLGPID-O,zone cooling cmd
+EBU3B.RM-2215..DPR-C,discharge air damper cmd
+EBU3B.RM-2215..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2215..HTGPID-O,zone heating cmd
+EBU3B.RM-2215..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2215..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2215..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2215..OCC-CMD,zone occupied cmd
+EBU3B.RM-2215..RH-VLV,reheat valve cmd
+EBU3B.RM-2215..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2215..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2215..COMMONSP,zone air temp sp
+EBU3B.RM-2215..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2215..ZN-T,zone air temp sensor
+EBU3B.RM-2217..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2217..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2217..CLGPID-O,zone cooling cmd
+EBU3B.RM-2217..DPR-C,discharge air damper cmd
+EBU3B.RM-2217..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2217..HTGPID-O,zone heating cmd
+EBU3B.RM-2217..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2217..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2217..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2217..OCC-CMD,zone occupied cmd
+EBU3B.RM-2217..RH-VLV,reheat valve cmd
+EBU3B.RM-2217..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2217..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2217..COMMONSP,zone air temp sp
+EBU3B.RM-2217..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2217..ZN-T,zone air temp sensor
+EBU3B.RM-2218..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2218..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2218..CLGPID-O,zone cooling cmd
+EBU3B.RM-2218..DPR-C,discharge air damper cmd
+EBU3B.RM-2218..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2218..HTGPID-O,zone heating cmd
+EBU3B.RM-2218..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2218..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2218..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2218..OCC-CMD,zone occupied cmd
+EBU3B.RM-2218..RH-VLV,reheat valve cmd
+EBU3B.RM-2218..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2218..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2218..COMMONSP,zone air temp sp
+EBU3B.RM-2218..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2218..ZN-T,zone air temp sensor
+EBU3B.RM-2219..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2219..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2219..CLGPID-O,zone cooling cmd
+EBU3B.RM-2219..DPR-C,discharge air damper cmd
+EBU3B.RM-2219..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2219..HTGPID-O,zone heating cmd
+EBU3B.RM-2219..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2219..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2219..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2219..OCC-CMD,zone occupied cmd
+EBU3B.RM-2219..RH-VLV,reheat valve cmd
+EBU3B.RM-2219..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2219..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2219..COMMONSP,zone air temp sp
+EBU3B.RM-2219..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2219..ZN-T,zone air temp sensor
+EBU3B.RM-2221..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2221..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2221..CLGPID-O,zone cooling cmd
+EBU3B.RM-2221..DPR-C,discharge air damper cmd
+EBU3B.RM-2221..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2221..HTGPID-O,zone heating cmd
+EBU3B.RM-2221..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2221..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2221..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2221..OCC-CMD,zone occupied cmd
+EBU3B.RM-2221..RH-VLV,reheat valve cmd
+EBU3B.RM-2221..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2221..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2221..COMMONSP,zone air temp sp
+EBU3B.RM-2221..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2221..ZN-T,zone air temp sensor
+EBU3B.RM-2226..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2226..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2226..CLGPID-O,zone cooling cmd
+EBU3B.RM-2226..DPR-C,discharge air damper cmd
+EBU3B.RM-2226..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2226..HTGPID-O,zone heating cmd
+EBU3B.RM-2226..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2226..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2226..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2226..OCC-CMD,zone occupied cmd
+EBU3B.RM-2226..RH-VLV,reheat valve cmd
+EBU3B.RM-2226..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2226..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2226..COMMONSP,zone air temp sp
+EBU3B.RM-2226..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2226..ZN-T,zone air temp sensor
+EBU3B.RM-2227..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2227..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2227..CLGPID-O,zone cooling cmd
+EBU3B.RM-2227..DPR-C,discharge air damper cmd
+EBU3B.RM-2227..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2227..HTGPID-O,zone heating cmd
+EBU3B.RM-2227..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2227..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2227..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2227..OCC-CMD,zone occupied cmd
+EBU3B.RM-2227..RH-VLV,reheat valve cmd
+EBU3B.RM-2227..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2227..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2227..COMMONSP,zone air temp sp
+EBU3B.RM-2227..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2227..ZN-T,zone air temp sensor
+EBU3B.RM-2229A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2229A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2229A..CLGPID-O,zone cooling cmd
+EBU3B.RM-2229A..DPR-C,discharge air damper cmd
+EBU3B.RM-2229A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2229A..HTGPID-O,zone heating cmd
+EBU3B.RM-2229A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2229A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2229A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2229A..OCC-CMD,zone occupied cmd
+EBU3B.RM-2229A..RH-VLV,reheat valve cmd
+EBU3B.RM-2229A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2229A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2229A..COMMONSP,zone air temp sp
+EBU3B.RM-2229A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2229A..ZN-T,zone air temp sensor
+EBU3B.RM-2230..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2230..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2230..CLGPID-O,zone cooling cmd
+EBU3B.RM-2230..DPR-C,discharge air damper cmd
+EBU3B.RM-2230..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2230..HTGPID-O,zone heating cmd
+EBU3B.RM-2230..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2230..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2230..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2230..OCC-CMD,zone occupied cmd
+EBU3B.RM-2230..RH-VLV,reheat valve cmd
+EBU3B.RM-2230..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2230..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2230..COMMONSP,zone air temp sp
+EBU3B.RM-2230..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2230..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2230..ZN-T,zone air temp sensor
+EBU3B.RM-2231..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2231..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2231..CLGPID-O,zone cooling cmd
+EBU3B.RM-2231..DPR-C,discharge air damper cmd
+EBU3B.RM-2231..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2231..HTGPID-O,zone heating cmd
+EBU3B.RM-2231..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2231..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2231..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2231..OCC-CMD,zone occupied cmd
+EBU3B.RM-2231..RH-VLV,reheat valve cmd
+EBU3B.RM-2231..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2231..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2231..COMMONSP,zone air temp sp
+EBU3B.RM-2231..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2231..ZN-T,zone air temp sensor
+EBU3B.RM-2232..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2232..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2232..CLGPID-O,zone cooling cmd
+EBU3B.RM-2232..DPR-C,discharge air damper cmd
+EBU3B.RM-2232..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2232..HTGPID-O,zone heating cmd
+EBU3B.RM-2232..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2232..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2232..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2232..OCC-CMD,zone occupied cmd
+EBU3B.RM-2232..RH-VLV,reheat valve cmd
+EBU3B.RM-2232..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2232..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2232..COMMONSP,zone air temp sp
+EBU3B.RM-2232..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2232..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2232..ZN-T,zone air temp sensor
+EBU3B.RM-2234..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2234..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2234..CLGPID-O,zone cooling cmd
+EBU3B.RM-2234..DPR-C,discharge air damper cmd
+EBU3B.RM-2234..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2234..HTGPID-O,zone heating cmd
+EBU3B.RM-2234..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2234..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2234..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2234..OCC-CMD,zone occupied cmd
+EBU3B.RM-2234..OCC-S,zone occupied sensor
+EBU3B.RM-2234..RH-VLV,reheat valve cmd
+EBU3B.RM-2234..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2234..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2234..COMMONSP,zone air temp sp
+EBU3B.RM-2234..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2234..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2234..ZN-T,zone air temp sensor
+EBU3B.RM-2236..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2236..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2236..CLGPID-O,zone cooling cmd
+EBU3B.RM-2236..DPR-C,discharge air damper cmd
+EBU3B.RM-2236..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2236..HTGPID-O,zone heating cmd
+EBU3B.RM-2236..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2236..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2236..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2236..OCC-CMD,zone occupied cmd
+EBU3B.RM-2236..RH-VLV,reheat valve cmd
+EBU3B.RM-2236..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2236..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2236..COMMONSP,zone air temp sp
+EBU3B.RM-2236..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2236..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2236..ZN-T,zone air temp sensor
+EBU3B.RM-2238..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2238..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2238..CLGPID-O,zone cooling cmd
+EBU3B.RM-2238..DPR-C,discharge air damper cmd
+EBU3B.RM-2238..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2238..HTGPID-O,zone heating cmd
+EBU3B.RM-2238..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2238..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2238..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2238..OCC-CMD,zone occupied cmd
+EBU3B.RM-2238..RH-VLV,reheat valve cmd
+EBU3B.RM-2238..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2238..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2238..COMMONSP,zone air temp sp
+EBU3B.RM-2238..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-2238..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2238..ZN-T,zone air temp sensor
+EBU3B.RM-2240..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2240..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2240..CLGPID-O,zone cooling cmd
+EBU3B.RM-2240..DPR-C,discharge air damper cmd
+EBU3B.RM-2240..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2240..HTGPID-O,zone heating cmd
+EBU3B.RM-2240..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2240..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2240..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2240..OCC-CMD,zone occupied cmd
+EBU3B.RM-2240..RH-VLV,reheat valve cmd
+EBU3B.RM-2240..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2240..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2240..COMMONSP,zone air temp sp
+EBU3B.RM-2240..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2240..ZN-T,zone air temp sensor
+EBU3B.RM-2244..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2244..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2244..CLGPID-O,zone cooling cmd
+EBU3B.RM-2244..DPR-C,discharge air damper cmd
+EBU3B.RM-2244..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2244..HTGPID-O,zone heating cmd
+EBU3B.RM-2244..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2244..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2244..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2244..OCC-CMD,zone occupied cmd
+EBU3B.RM-2244..RH-VLV,reheat valve cmd
+EBU3B.RM-2244..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2244..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2244..COMMONSP,zone air temp sp
+EBU3B.RM-2244..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2244..ZN-T,zone air temp sensor
+EBU3B.RM-2250..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2250..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2250..CLGPID-O,zone cooling cmd
+EBU3B.RM-2250..DPR-C,discharge air damper cmd
+EBU3B.RM-2250..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2250..HTGPID-O,zone heating cmd
+EBU3B.RM-2250..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2250..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2250..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2250..OCC-CMD,zone occupied cmd
+EBU3B.RM-2250..RH-VLV,reheat valve cmd
+EBU3B.RM-2250..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2250..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2250..COMMONSP,zone air temp sp
+EBU3B.RM-2250..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2250..ZN-T,zone air temp sensor
+EBU3B.RM-2256..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2256..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2256..CLGPID-O,zone cooling cmd
+EBU3B.RM-2256..DPR-C,discharge air damper cmd
+EBU3B.RM-2256..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2256..HTGPID-O,zone heating cmd
+EBU3B.RM-2256..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2256..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2256..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2256..OCC-CMD,zone occupied cmd
+EBU3B.RM-2256..RH-VLV,reheat valve cmd
+EBU3B.RM-2256.SA-T,discharge air temp sensor
+EBU3B.RM-2256..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2256..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2256..COMMONSP,zone air temp sp
+EBU3B.RM-2256..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2256..ZN-T,zone air temp sensor
+EBU3B.RM-2258.ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2258.ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2258.CLGPID-O,zone cooling cmd
+EBU3B.RM-2258.DPR-CMD,discharge air damper cmd
+EBU3B.RM-2258.HTGFLOW,discharge air flow heating sp
+EBU3B.RM-2258.CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2258.OCC-CMD,zone occupied cmd
+EBU3B.RM-2258.RH-VLV,reheat valve cmd
+EBU3B.RM-2258.SA-T,discharge air temp sensor
+EBU3B.RM-2258.SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2258.SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2258.COMMONSP,zone air temp sp
+EBU3B.RM-2258.WC-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2258.ZN-T,zone air temp sensor
+EBU3B.RM-2262..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2262..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2262..CLGPID-O,zone cooling cmd
+EBU3B.RM-2262..DPR-C,discharge air damper cmd
+EBU3B.RM-2262..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2262..HTGPID-O,zone heating cmd
+EBU3B.RM-2262..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2262..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2262..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2262..OCC-CMD,zone occupied cmd
+EBU3B.RM-2262..RH-VLV,reheat valve cmd
+EBU3B.RM-2262..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2262..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2262..COMMONSP,zone air temp sp
+EBU3B.RM-2262..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2262..ZN-T,zone air temp sensor
+EBU3B.RM-2266..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2266..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2266..CLGPID-O,zone cooling cmd
+EBU3B.RM-2266..DPR-C,discharge air damper cmd
+EBU3B.RM-2266..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2266..HTGPID-O,zone heating cmd
+EBU3B.RM-2266..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2266..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2266..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2266..OCC-CMD,zone occupied cmd
+EBU3B.RM-2266..RH-VLV,reheat valve cmd
+EBU3B.RM-2266..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2266..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2266..COMMONSP,zone air temp sp
+EBU3B.RM-2266..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2266..ZN-T,zone air temp sensor
+EBU3B.RM-2270..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2270..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2270..CLGPID-O,zone cooling cmd
+EBU3B.RM-2270..DPR-C,discharge air damper cmd
+EBU3B.RM-2270..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2270..HTGPID-O,zone heating cmd
+EBU3B.RM-2270..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2270..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2270..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2270..OCC-CMD,zone occupied cmd
+EBU3B.RM-2270..RH-VLV,reheat valve cmd
+EBU3B.RM-2270..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2270..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2270..COMMONSP,zone air temp sp
+EBU3B.RM-2270..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2270..ZN-T,zone air temp sensor
+EBU3B.RM-2272..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-2272..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-2272..CLGPID-O,zone cooling cmd
+EBU3B.RM-2272..DPR-C,discharge air damper cmd
+EBU3B.RM-2272..DMPR-POS,discharge air damper sensor
+EBU3B.RM-2272..HTGPID-O,zone heating cmd
+EBU3B.RM-2272..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-2272..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-2272..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-2272..OCC-CMD,zone occupied cmd
+EBU3B.RM-2272..RH-VLV,reheat valve cmd
+EBU3B.RM-2272..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-2272..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-2272..COMMONSP,zone air temp sp
+EBU3B.RM-2272..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-2272..ZN-T,zone air temp sensor
+EBU3B.RM-3102..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3102..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3102..CLGPID-O,zone cooling cmd
+EBU3B.RM-3102..DPR-C,discharge air damper cmd
+EBU3B.RM-3102..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3102..HTGPID-O,zone heating cmd
+EBU3B.RM-3102..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3102..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3102..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3102..OCC-CMD,zone occupied cmd
+EBU3B.RM-3102..RH-VLV,reheat valve cmd
+EBU3B.RM-3102..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3102..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3102..COMMONSP,zone air temp sp
+EBU3B.RM-3102..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3102..ZN-T,zone air temp sensor
+EBU3B.RM-3105..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3105..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3105..CLGPID-O,zone cooling cmd
+EBU3B.RM-3105..DPR-C,discharge air damper cmd
+EBU3B.RM-3105..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3105..HTGPID-O,zone heating cmd
+EBU3B.RM-3105..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3105..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3105..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3105..OCC-CMD,zone occupied cmd
+EBU3B.RM-3105..RH-VLV,reheat valve cmd
+EBU3B.RM-3105..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3105..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3105..COMMONSP,zone air temp sp
+EBU3B.RM-3105..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3105..ZN-T,zone air temp sensor
+EBU3B.RM-3106..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3106..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3106..CLGPID-O,zone cooling cmd
+EBU3B.RM-3106..DPR-C,discharge air damper cmd
+EBU3B.RM-3106..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3106..HTGPID-O,zone heating cmd
+EBU3B.RM-3106..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3106..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3106..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3106..OCC-CMD,zone occupied cmd
+EBU3B.RM-3106..RH-VLV,reheat valve cmd
+EBU3B.RM-3106..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3106..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3106..COMMONSP,zone air temp sp
+EBU3B.RM-3106..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3106..ZN-T,zone air temp sensor
+EBU3B.RM-3107..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3107..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3107..CLGPID-O,zone cooling cmd
+EBU3B.RM-3107..DPR-C,discharge air damper cmd
+EBU3B.RM-3107..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3107..HTGPID-O,zone heating cmd
+EBU3B.RM-3107..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3107..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3107..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3107..OCC-CMD,zone occupied cmd
+EBU3B.RM-3107..RH-VLV,reheat valve cmd
+EBU3B.RM-3107..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3107..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3107..COMMONSP,zone air temp sp
+EBU3B.RM-3107..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3107..ZN-T,zone air temp sensor
+EBU3B.RM-3109..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3109..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3109..CLGPID-O,zone cooling cmd
+EBU3B.RM-3109..DPR-C,discharge air damper cmd
+EBU3B.RM-3109..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3109..HTGPID-O,zone heating cmd
+EBU3B.RM-3109..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3109..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3109..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3109..OCC-CMD,zone occupied cmd
+EBU3B.RM-3109..RH-VLV,reheat valve cmd
+EBU3B.RM-3109..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3109..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3109..COMMONSP,zone air temp sp
+EBU3B.RM-3109..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3109..ZN-T,zone air temp sensor
+EBU3B.RM-3110..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3110..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3110..CLGPID-O,zone cooling cmd
+EBU3B.RM-3110..DPR-C,discharge air damper cmd
+EBU3B.RM-3110..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3110..HTGPID-O,zone heating cmd
+EBU3B.RM-3110..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3110..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3110..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3110..OCC-CMD,zone occupied cmd
+EBU3B.RM-3110..RH-VLV,reheat valve cmd
+EBU3B.RM-3110..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3110..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3110..COMMONSP,zone air temp sp
+EBU3B.RM-3110..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3110..ZN-T,zone air temp sensor
+EBU3B.RM-3111..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3111..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3111..CLGPID-O,zone cooling cmd
+EBU3B.RM-3111..DPR-C,discharge air damper cmd
+EBU3B.RM-3111..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3111..HTGPID-O,zone heating cmd
+EBU3B.RM-3111..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3111..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3111..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3111..OCC-CMD,zone occupied cmd
+EBU3B.RM-3111..RH-VLV,reheat valve cmd
+EBU3B.RM-3111..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3111..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3111..COMMONSP,zone air temp sp
+EBU3B.RM-3111..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3111..ZN-T,zone air temp sensor
+EBU3B.RM-3114..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3114..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3114..CLGPID-O,zone cooling cmd
+EBU3B.RM-3114..DPR-C,discharge air damper cmd
+EBU3B.RM-3114..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3114..HTGPID-O,zone heating cmd
+EBU3B.RM-3114..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3114..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3114..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3114..OCC-CMD,zone occupied cmd
+EBU3B.RM-3114..RH-VLV,reheat valve cmd
+EBU3B.RM-3114..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3114..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3114..COMMONSP,zone air temp sp
+EBU3B.RM-3114..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3114..ZN-T,zone air temp sensor
+EBU3B.RM-3118..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3118..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3118..CLGPID-O,zone cooling cmd
+EBU3B.RM-3118..DPR-C,discharge air damper cmd
+EBU3B.RM-3118..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3118..HTGPID-O,zone heating cmd
+EBU3B.RM-3118..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3118..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3118..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3118..OCC-CMD,zone occupied cmd
+EBU3B.RM-3118..RH-VLV,reheat valve cmd
+EBU3B.RM-3118..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3118..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3118..COMMONSP,zone air temp sp
+EBU3B.RM-3118..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3118..ZN-T,zone air temp sensor
+EBU3B.RM-3119..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3119..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3119..CLGPID-O,zone cooling cmd
+EBU3B.RM-3119..DPR-C,discharge air damper cmd
+EBU3B.RM-3119..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3119..FAN-C,discharge air fan cmd
+EBU3B.RM-3119..HTGPID-O,zone heating cmd
+EBU3B.RM-3119..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3119..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3119..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3119..OCC-CMD,zone occupied cmd
+EBU3B.RM-3119..RH-VLV,reheat valve cmd
+EBU3B.RM-3119..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3119..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3119..COMMONSP,zone air temp sp
+EBU3B.RM-3119..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3119..ZN-T,zone air temp sensor
+EBU3B.RM-3121..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3121..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3121..CLGPID-O,zone cooling cmd
+EBU3B.RM-3121..DPR-C,discharge air damper cmd
+EBU3B.RM-3121..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3121..HTGPID-O,zone heating cmd
+EBU3B.RM-3121..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3121..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3121..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3121..OCC-CMD,zone occupied cmd
+EBU3B.RM-3121..RH-VLV,reheat valve cmd
+EBU3B.RM-3121..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3121..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3121..COMMONSP,zone air temp sp
+EBU3B.RM-3121..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3121..ZN-T,zone air temp sensor
+EBU3B.RM-3122..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3122..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3122..CLGPID-O,zone cooling cmd
+EBU3B.RM-3122..DPR-C,discharge air damper cmd
+EBU3B.RM-3122..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3122..HTGPID-O,zone heating cmd
+EBU3B.RM-3122..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3122..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3122..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3122..OCC-CMD,zone occupied cmd
+EBU3B.RM-3122..RH-VLV,reheat valve cmd
+EBU3B.RM-3122..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3122..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3122..COMMONSP,zone air temp sp
+EBU3B.RM-3122..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3122..ZN-T,zone air temp sensor
+EBU3B.RM-3126..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3126..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3126..CLGPID-O,zone cooling cmd
+EBU3B.RM-3126..DPR-C,discharge air damper cmd
+EBU3B.RM-3126..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3126..HTGPID-O,zone heating cmd
+EBU3B.RM-3126..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3126..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3126..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3126..OCC-CMD,zone occupied cmd
+EBU3B.RM-3126..RH-VLV,reheat valve cmd
+EBU3B.RM-3126..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3126..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3126..COMMONSP,zone air temp sp
+EBU3B.RM-3126..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3126..ZN-T,zone air temp sensor
+EBU3B.RM-3127..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3127..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3127..CLGPID-O,zone cooling cmd
+EBU3B.RM-3127..DPR-C,discharge air damper cmd
+EBU3B.RM-3127..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3127..HTGPID-O,zone heating cmd
+EBU3B.RM-3127..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3127..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3127..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3127..OCC-CMD,zone occupied cmd
+EBU3B.RM-3127..OCC-S,zone occupied sensor
+EBU3B.RM-3127..RH-VLV,reheat valve cmd
+EBU3B.RM-3127..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3127..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3127..COMMONSP,zone air temp sp
+EBU3B.RM-3127..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3127..ZN-T,zone air temp sensor
+EBU3B.RM-3128..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3128..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3128..CLGPID-O,zone cooling cmd
+EBU3B.RM-3128..DPR-C,discharge air damper cmd
+EBU3B.RM-3128..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3128..HTGPID-O,zone heating cmd
+EBU3B.RM-3128..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3128..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3128..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3128..OCC-CMD,zone occupied cmd
+EBU3B.RM-3128..RH-VLV,reheat valve cmd
+EBU3B.RM-3128..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3128..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3128..COMMONSP,zone air temp sp
+EBU3B.RM-3128..ZN-T,zone air temp sensor
+EBU3B.RM-3130..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3130..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3130..CLGPID-O,zone cooling cmd
+EBU3B.RM-3130..DPR-C,discharge air damper cmd
+EBU3B.RM-3130..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3130..HTGPID-O,zone heating cmd
+EBU3B.RM-3130..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3130..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3130..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3130..OCC-CMD,zone occupied cmd
+EBU3B.RM-3130..RH-VLV,reheat valve cmd
+EBU3B.RM-3130..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3130..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3130..COMMONSP,zone air temp sp
+EBU3B.RM-3130..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3130..ZN-T,zone air temp sensor
+EBU3B.RM-3132..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3132..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3132..CLGPID-O,zone cooling cmd
+EBU3B.RM-3132..DPR-C,discharge air damper cmd
+EBU3B.RM-3132..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3132..HTGPID-O,zone heating cmd
+EBU3B.RM-3132..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3132..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3132..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3132..OCC-CMD,zone occupied cmd
+EBU3B.RM-3132..RH-VLV,reheat valve cmd
+EBU3B.RM-3132..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3132..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3132..COMMONSP,zone air temp sp
+EBU3B.RM-3132..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3132..ZN-T,zone air temp sensor
+EBU3B.RM-3134..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3134..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3134..CLGPID-O,zone cooling cmd
+EBU3B.RM-3134..DPR-C,discharge air damper cmd
+EBU3B.RM-3134..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3134..HTGPID-O,zone heating cmd
+EBU3B.RM-3134..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3134..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3134..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3134..OCC-CMD,zone occupied cmd
+EBU3B.RM-3134..RH-VLV,reheat valve cmd
+EBU3B.RM-3134..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3134..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3134..COMMONSP,zone air temp sp
+EBU3B.RM-3134..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3134..ZN-T,zone air temp sensor
+EBU3B.RM-3136..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3136..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3136..CLGPID-O,zone cooling cmd
+EBU3B.RM-3136..DPR-C,discharge air damper cmd
+EBU3B.RM-3136..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3136..HTGPID-O,zone heating cmd
+EBU3B.RM-3136..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3136..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3136..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3136..OCC-CMD,zone occupied cmd
+EBU3B.RM-3136..RH-VLV,reheat valve cmd
+EBU3B.RM-3136..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3136..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3136..COMMONSP,zone air temp sp
+EBU3B.RM-3136..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3136..ZN-T,zone air temp sensor
+EBU3B.RM-3138..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3138..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3138..CLGPID-O,zone cooling cmd
+EBU3B.RM-3138..DPR-C,discharge air damper cmd
+EBU3B.RM-3138..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3138..HTGPID-O,zone heating cmd
+EBU3B.RM-3138..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3138..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3138..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3138..OCC-CMD,zone occupied cmd
+EBU3B.RM-3138..RH-VLV,reheat valve cmd
+EBU3B.RM-3138..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3138..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3138..COMMONSP,zone air temp sp
+EBU3B.RM-3138..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3138..ZN-T,zone air temp sensor
+EBU3B.RM-3140..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3140..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3140..CLGPID-O,zone cooling cmd
+EBU3B.RM-3140..DPR-C,discharge air damper cmd
+EBU3B.RM-3140..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3140..FAN-C,discharge air fan cmd
+EBU3B.RM-3140..HTGPID-O,zone heating cmd
+EBU3B.RM-3140..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3140..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3140..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3140..OCC-CMD,zone occupied cmd
+EBU3B.RM-3140..RH-VLV,reheat valve cmd
+EBU3B.RM-3140..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3140..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3140..COMMONSP,zone air temp sp
+EBU3B.RM-3140..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3140..ZN-T,zone air temp sensor
+EBU3B.RM-3142..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3142..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3142..CLGPID-O,zone cooling cmd
+EBU3B.RM-3142..DPR-C,discharge air damper cmd
+EBU3B.RM-3142..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3142..HTGPID-O,zone heating cmd
+EBU3B.RM-3142..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3142..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3142..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3142..OCC-CMD,zone occupied cmd
+EBU3B.RM-3142..RH-VLV,reheat valve cmd
+EBU3B.RM-3142..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3142..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3142..COMMONSP,zone air temp sp
+EBU3B.RM-3142..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3142..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3142..ZN-T,zone air temp sensor
+EBU3B.RM-3144..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3144..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3144..CLGPID-O,zone cooling cmd
+EBU3B.RM-3144..DPR-C,discharge air damper cmd
+EBU3B.RM-3144..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3144..HTGPID-O,zone heating cmd
+EBU3B.RM-3144..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3144..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3144..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3144..OCC-CMD,zone occupied cmd
+EBU3B.RM-3144..RH-VLV,reheat valve cmd
+EBU3B.RM-3144..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3144..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3144..COMMONSP,zone air temp sp
+EBU3B.RM-3144..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3144..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3144..ZN-T,zone air temp sensor
+EBU3B.RM-3146..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3146..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3146..CLGPID-O,zone cooling cmd
+EBU3B.RM-3146..DPR-C,discharge air damper cmd
+EBU3B.RM-3146..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3146..HTGPID-O,zone heating cmd
+EBU3B.RM-3146..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3146..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3146..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3146..OCC-CMD,zone occupied cmd
+EBU3B.RM-3146..RH-VLV,reheat valve cmd
+EBU3B.RM-3146..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3146..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3146..COMMONSP,zone air temp sp
+EBU3B.RM-3146..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3146..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3146..ZN-T,zone air temp sensor
+EBU3B.RM-3148..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3148..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3148..CLGPID-O,zone cooling cmd
+EBU3B.RM-3148..DPR-C,discharge air damper cmd
+EBU3B.RM-3148..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3148..HTGPID-O,zone heating cmd
+EBU3B.RM-3148..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3148..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3148..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3148..OCC-CMD,zone occupied cmd
+EBU3B.RM-3148..RH-VLV,reheat valve cmd
+EBU3B.RM-3148..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3148..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3148..COMMONSP,zone air temp sp
+EBU3B.RM-3148..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3148..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3148..ZN-T,zone air temp sensor
+EBU3B.RM-3150..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3150..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3150..CLGPID-O,zone cooling cmd
+EBU3B.RM-3150..DPR-C,discharge air damper cmd
+EBU3B.RM-3150..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3150..HTGPID-O,zone heating cmd
+EBU3B.RM-3150..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3150..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3150..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3150..OCC-CMD,zone occupied cmd
+EBU3B.RM-3150..RH-VLV,reheat valve cmd
+EBU3B.RM-3150..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3150..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3150..COMMONSP,zone air temp sp
+EBU3B.RM-3150..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3150..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3150..ZN-T,zone air temp sensor
+EBU3B.RM-3152..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3152..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3152..CLGPID-O,zone cooling cmd
+EBU3B.RM-3152..DPR-C,discharge air damper cmd
+EBU3B.RM-3152..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3152..HTGPID-O,zone heating cmd
+EBU3B.RM-3152..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3152..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3152..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3152..OCC-CMD,zone occupied cmd
+EBU3B.RM-3152..RH-VLV,reheat valve cmd
+EBU3B.RM-3152..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3152..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3152..COMMONSP,zone air temp sp
+EBU3B.RM-3152..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3152..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3152..ZN-T,zone air temp sensor
+EBU3B.RM-3154..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3154..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3154..CLGPID-O,zone cooling cmd
+EBU3B.RM-3154..DPR-C,discharge air damper cmd
+EBU3B.RM-3154..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3154..FAN-C,discharge air fan cmd
+EBU3B.RM-3154..HTGPID-O,zone heating cmd
+EBU3B.RM-3154..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3154..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3154..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3154..OCC-CMD,zone occupied cmd
+EBU3B.RM-3154..RH-VLV,reheat valve cmd
+EBU3B.RM-3154..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3154..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3154..COMMONSP,zone air temp sp
+EBU3B.RM-3154..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3154..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3154..ZN-T,zone air temp sensor
+EBU3B.RM-3200A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3200A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3200A..CLGPID-O,zone cooling cmd
+EBU3B.RM-3200A..DPR-C,discharge air damper cmd
+EBU3B.RM-3200A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3200A..HTGPID-O,zone heating cmd
+EBU3B.RM-3200A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3200A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3200A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3200A..OCC-CMD,zone occupied cmd
+EBU3B.RM-3200A..RH-VLV,reheat valve cmd
+EBU3B.RM-3200A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3200A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3200A..COMMONSP,zone air temp sp
+EBU3B.RM-3200A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3200A..ZN-T,zone air temp sensor
+EBU3B.RM-3200B..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3200B..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3200B..CLGPID-O,zone cooling cmd
+EBU3B.RM-3200B..DPR-C,discharge air damper cmd
+EBU3B.RM-3200B..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3200B..HTGPID-O,zone heating cmd
+EBU3B.RM-3200B..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3200B..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3200B..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3200B..OCC-CMD,zone occupied cmd
+EBU3B.RM-3200B..RH-VLV,reheat valve cmd
+EBU3B.RM-3200B..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3200B..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3200B..COMMONSP,zone air temp sp
+EBU3B.RM-3200B..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3200B..ZN-T,zone air temp sensor
+EBU3B.RM-3202..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3202..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3202..CLGPID-O,zone cooling cmd
+EBU3B.RM-3202..DPR-C,discharge air damper cmd
+EBU3B.RM-3202..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3202..HTGPID-O,zone heating cmd
+EBU3B.RM-3202..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3202..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3202..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3202..OCC-CMD,zone occupied cmd
+EBU3B.RM-3202..RH-VLV,reheat valve cmd
+EBU3B.RM-3202..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3202..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3202..COMMONSP,zone air temp sp
+EBU3B.RM-3202..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3202..ZN-T,zone air temp sensor
+EBU3B.RM-3203..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3203..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3203..CLGPID-O,zone cooling cmd
+EBU3B.RM-3203..DPR-C,discharge air damper cmd
+EBU3B.RM-3203..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3203..HTGPID-O,zone heating cmd
+EBU3B.RM-3203..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3203..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3203..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3203..OCC-CMD,zone occupied cmd
+EBU3B.RM-3203..RH-VLV,reheat valve cmd
+EBU3B.RM-3203..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3203..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3203..COMMONSP,zone air temp sp
+EBU3B.RM-3203..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3203..ZN-T,zone air temp sensor
+EBU3B.RM-3205..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3205..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3205..CLGPID-O,zone cooling cmd
+EBU3B.RM-3205..DPR-C,discharge air damper cmd
+EBU3B.RM-3205..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3205..HTGPID-O,zone heating cmd
+EBU3B.RM-3205..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3205..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3205..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3205..OCC-CMD,zone occupied cmd
+EBU3B.RM-3205..RH-VLV,reheat valve cmd
+EBU3B.RM-3205..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3205..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3205..COMMONSP,zone air temp sp
+EBU3B.RM-3205..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3205..ZN-T,zone air temp sensor
+EBU3B.RM-3207..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3207..CLGPID-O,zone cooling cmd
+EBU3B.RM-3207..DPR-C,discharge air damper cmd
+EBU3B.RM-3207..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3207..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3207..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3207..OCC-CMD,zone occupied cmd
+EBU3B.RM-3207..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3207..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3207..COMMONSP,zone air temp sp
+EBU3B.RM-3207..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3207..ZN-T,zone air temp sensor
+EBU3B.RM-3208..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3208..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3208..CLGPID-O,zone cooling cmd
+EBU3B.RM-3208..DPR-C,discharge air damper cmd
+EBU3B.RM-3208..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3208..HTGPID-O,zone heating cmd
+EBU3B.RM-3208..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3208..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3208..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3208..OCC-CMD,zone occupied cmd
+EBU3B.RM-3208..RH-VLV,reheat valve cmd
+EBU3B.RM-3208..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3208..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3208..COMMONSP,zone air temp sp
+EBU3B.RM-3208..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3208..ZN-T,zone air temp sensor
+EBU3B.RM-3213..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3213..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3213..CLGPID-O,zone cooling cmd
+EBU3B.RM-3213..DPR-C,discharge air damper cmd
+EBU3B.RM-3213..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3213..FAN-C,discharge air fan cmd
+EBU3B.RM-3213..HTGPID-O,zone heating cmd
+EBU3B.RM-3213..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3213..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3213..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3213..OCC-CMD,zone occupied cmd
+EBU3B.RM-3213..RH-VLV,reheat valve cmd
+EBU3B.RM-3213..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3213..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3213..COMMONSP,zone air temp sp
+EBU3B.RM-3213..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3213..ZN-T,zone air temp sensor
+EBU3B.RM-3214..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3214..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3214..CLGPID-O,zone cooling cmd
+EBU3B.RM-3214..DPR-C,discharge air damper cmd
+EBU3B.RM-3214..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3214..HTGPID-O,zone heating cmd
+EBU3B.RM-3214..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3214..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3214..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3214..OCC-CMD,zone occupied cmd
+EBU3B.RM-3214..RH-VLV,reheat valve cmd
+EBU3B.RM-3214..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3214..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3214..COMMONSP,zone air temp sp
+EBU3B.RM-3214..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3214..ZN-T,zone air temp sensor
+EBU3B.RM-3215..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3215..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3215..CLGPID-O,zone cooling cmd
+EBU3B.RM-3215..DPR-C,discharge air damper cmd
+EBU3B.RM-3215..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3215..HTGPID-O,zone heating cmd
+EBU3B.RM-3215..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3215..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3215..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3215..OCC-CMD,zone occupied cmd
+EBU3B.RM-3215..RH-VLV,reheat valve cmd
+EBU3B.RM-3215..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3215..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3215..COMMONSP,zone air temp sp
+EBU3B.RM-3215..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3215..ZN-T,zone air temp sensor
+EBU3B.RM-3217..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3217..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3217..CLGPID-O,zone cooling cmd
+EBU3B.RM-3217..DPR-C,discharge air damper cmd
+EBU3B.RM-3217..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3217..HTGPID-O,zone heating cmd
+EBU3B.RM-3217..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3217..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3217..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3217..OCC-CMD,zone occupied cmd
+EBU3B.RM-3217..RH-VLV,reheat valve cmd
+EBU3B.RM-3217..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3217..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3217..COMMONSP,zone air temp sp
+EBU3B.RM-3217..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3217..ZN-T,zone air temp sensor
+EBU3B.RM-3218..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3219S..ZN-T,zone air temp sensor
+EBU3B.RM-3220..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3220..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3220..CLGPID-O,zone cooling cmd
+EBU3B.RM-3220..DPR-C,discharge air damper cmd
+EBU3B.RM-3220..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3220..HTGPID-O,zone heating cmd
+EBU3B.RM-3220..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3220..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3220..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3220..OCC-CMD,zone occupied cmd
+EBU3B.RM-3220..RH-VLV,reheat valve cmd
+EBU3B.RM-3220..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3220..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3220..COMMONSP,zone air temp sp
+EBU3B.RM-3220..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3220..ZN-T,zone air temp sensor
+EBU3B.RM-3221..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3221..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3221..CLGPID-O,zone cooling cmd
+EBU3B.RM-3221..DPR-C,discharge air damper cmd
+EBU3B.RM-3221..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3221..HTGPID-O,zone heating cmd
+EBU3B.RM-3221..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3221..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3221..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3221..OCC-CMD,zone occupied cmd
+EBU3B.RM-3221..RH-VLV,reheat valve cmd
+EBU3B.RM-3221..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3221..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3221..COMMONSP,zone air temp sp
+EBU3B.RM-3221..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3219N..ZN-T,zone air temp sensor
+EBU3B.RM-3223..ACLG-SP,zone air temp effective min sp
+EBU3B.RM-3223..AHTG-STPT,zone air temp effective max sp
+EBU3B.RM-3223..BOXMODE,vavMode sp
+EBU3B.RM-3223..DMPRPOS,discharge air damper sensor
+EBU3B.RM-3223..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3223..OCMNC-SP,discharge air flow occ cooling min sp
+EBU3B.RM-3223..OCCHTGFL,discharge air flow occ heating min sp
+EBU3B.RM-3223..OCC-CMD,zone occupied cmd
+EBU3B.RM-3223..OCC-STS,zone occupied sensor
+EBU3B.RM-3223..RH-VLV,reheat valve cmd
+EBU3B.RM-3223..SUPFLOW,discharge air flow sensor
+EBU3B.RM-3223..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3223..COMMONSP,zone air temp sp
+EBU3B.RM-3223..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3226..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3226..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3226..CLGPID-O,zone cooling cmd
+EBU3B.RM-3226..DPR-C,discharge air damper cmd
+EBU3B.RM-3226..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3226..HTGPID-O,zone heating cmd
+EBU3B.RM-3226..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3226..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3226..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3226..OCC-CMD,zone occupied cmd
+EBU3B.RM-3226..RH-VLV,reheat valve cmd
+EBU3B.RM-3226..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3226..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3226..COMMONSP,zone air temp sp
+EBU3B.RM-3226..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3226..ZN-T,zone air temp sensor
+EBU3B.RM-3230..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3230..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3230..CLGPID-O,zone cooling cmd
+EBU3B.RM-3230..DPR-C,discharge air damper cmd
+EBU3B.RM-3230..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3230..HTGPID-O,zone heating cmd
+EBU3B.RM-3230..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3230..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3230..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3230..OCC-CMD,zone occupied cmd
+EBU3B.RM-3230..RH-VLV,reheat valve cmd
+EBU3B.RM-3230..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3230..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3230..COMMONSP,zone air temp sp
+EBU3B.RM-3230..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3230..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3230..ZN-T,zone air temp sensor
+EBU3B.RM-3232..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3232..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3232..CLGPID-O,zone cooling cmd
+EBU3B.RM-3232..DPR-C,discharge air damper cmd
+EBU3B.RM-3232..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3232..HTGPID-O,zone heating cmd
+EBU3B.RM-3232..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3232..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3232..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3232..OCC-CMD,zone occupied cmd
+EBU3B.RM-3232..RH-VLV,reheat valve cmd
+EBU3B.RM-3232..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3232..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3232..COMMONSP,zone air temp sp
+EBU3B.RM-3232..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3232..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3232..ZN-T,zone air temp sensor
+EBU3B.RM-3236..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3236..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3236..CLGPID-O,zone cooling cmd
+EBU3B.RM-3236..DPR-C,discharge air damper cmd
+EBU3B.RM-3236..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3236..HTGPID-O,zone heating cmd
+EBU3B.RM-3236..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3236..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3236..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3236..OCC-CMD,zone occupied cmd
+EBU3B.RM-3236..RH-VLV,reheat valve cmd
+EBU3B.RM-3236..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3236..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3236..COMMONSP,zone air temp sp
+EBU3B.RM-3236..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3236..ZN-T,zone air temp sensor
+EBU3B.RM-3240..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3240..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3240..CLGPID-O,zone cooling cmd
+EBU3B.RM-3240..DPR-C,discharge air damper cmd
+EBU3B.RM-3240..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3240..HTGPID-O,zone heating cmd
+EBU3B.RM-3240..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3240..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3240..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3240..OCC-CMD,zone occupied cmd
+EBU3B.RM-3240..RH-VLV,reheat valve cmd
+EBU3B.RM-3240..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3240..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3240..COMMONSP,zone air temp sp
+EBU3B.RM-3240..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3240..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3240..ZN-T,zone air temp sensor
+EBU3B.RM-3242..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3242..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3242..CLGPID-O,zone cooling cmd
+EBU3B.RM-3242..DPR-C,discharge air damper cmd
+EBU3B.RM-3242..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3242..HTGPID-O,zone heating cmd
+EBU3B.RM-3242..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3242..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3242..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3242..OCC-CMD,zone occupied cmd
+EBU3B.RM-3242..RH-VLV,reheat valve cmd
+EBU3B.RM-3242..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3242..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3242..COMMONSP,zone air temp sp
+EBU3B.RM-3242..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3242..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3242..ZN-T,zone air temp sensor
+EBU3B.RM-3246..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3246..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3246..CLGPID-O,zone cooling cmd
+EBU3B.RM-3246..DPR-C,discharge air damper cmd
+EBU3B.RM-3246..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3246..HTGPID-O,zone heating cmd
+EBU3B.RM-3246..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3246..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3246..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3246..OCC-CMD,zone occupied cmd
+EBU3B.RM-3246..RH-VLV,reheat valve cmd
+EBU3B.RM-3246..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3246..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3246..COMMONSP,zone air temp sp
+EBU3B.RM-3246..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3246..ZN-T,zone air temp sensor
+EBU3B.RM-3250..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3250..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3250..CLGPID-O,zone cooling cmd
+EBU3B.RM-3250..DPR-C,discharge air damper cmd
+EBU3B.RM-3250..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3250..HTGPID-O,zone heating cmd
+EBU3B.RM-3250..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3250..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3250..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3250..OCC-CMD,zone occupied cmd
+EBU3B.RM-3250..RH-VLV,reheat valve cmd
+EBU3B.RM-3250..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3250..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3250..COMMONSP,zone air temp sp
+EBU3B.RM-3250..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3250..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3250..ZN-T,zone air temp sensor
+EBU3B.RM-3252..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3252..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3252..CLGPID-O,zone cooling cmd
+EBU3B.RM-3252..DPR-C,discharge air damper cmd
+EBU3B.RM-3252..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3252..HTGPID-O,zone heating cmd
+EBU3B.RM-3252..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3252..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3252..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3252..OCC-CMD,zone occupied cmd
+EBU3B.RM-3252..RH-VLV,reheat valve cmd
+EBU3B.RM-3252..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3252..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3252..COMMONSP,zone air temp sp
+EBU3B.RM-3252..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3252..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3252..ZN-T,zone air temp sensor
+EBU3B.RM-3254..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3254..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3254..CLGPID-O,zone cooling cmd
+EBU3B.RM-3254..DPR-C,discharge air damper cmd
+EBU3B.RM-3254..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3254..HTGPID-O,zone heating cmd
+EBU3B.RM-3254..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3254..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3254..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3254..OCC-CMD,zone occupied cmd
+EBU3B.RM-3254..RH-VLV,reheat valve cmd
+EBU3B.RM-3254..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3254..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3254..COMMONSP,zone air temp sp
+EBU3B.RM-3254..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3254..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3254..ZN-T,zone air temp sensor
+EBU3B.RM-3256..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3256..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3256..CLGPID-O,zone cooling cmd
+EBU3B.RM-3256..DPR-C,discharge air damper cmd
+EBU3B.RM-3256..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3256..HTGPID-O,zone heating cmd
+EBU3B.RM-3256..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3256..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3256..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3256..OCC-CMD,zone occupied cmd
+EBU3B.RM-3256..RH-VLV,reheat valve cmd
+EBU3B.RM-3256..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3256..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3256..COMMONSP,zone air temp sp
+EBU3B.RM-3256..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3256..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3256..ZN-T,zone air temp sensor
+EBU3B.RM-3258..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3258..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3258..CLGPID-O,zone cooling cmd
+EBU3B.RM-3258..DPR-C,discharge air damper cmd
+EBU3B.RM-3258..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3258..HTGPID-O,zone heating cmd
+EBU3B.RM-3258..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3258..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3258..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3258..OCC-CMD,zone occupied cmd
+EBU3B.RM-3258..RH-VLV,reheat valve cmd
+EBU3B.RM-3258..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3258..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3258..COMMONSP,zone air temp sp
+EBU3B.RM-3258..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3258..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3258..ZN-T,zone air temp sensor
+EBU3B.RM-3260..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3260..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3260..CLGPID-O,zone cooling cmd
+EBU3B.RM-3260..DPR-C,discharge air damper cmd
+EBU3B.RM-3260..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3260..HTGPID-O,zone heating cmd
+EBU3B.RM-3260..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3260..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3260..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3260..OCC-CMD,zone occupied cmd
+EBU3B.RM-3260..RH-VLV,reheat valve cmd
+EBU3B.RM-3260..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3260..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3260..COMMONSP,zone air temp sp
+EBU3B.RM-3260..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3260..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3260..ZN-T,zone air temp sensor
+EBU3B.RM-3262..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-3262..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-3262..CLGPID-O,zone cooling cmd
+EBU3B.RM-3262..DPR-C,discharge air damper cmd
+EBU3B.RM-3262..DMPR-POS,discharge air damper sensor
+EBU3B.RM-3262..HTGPID-O,zone heating cmd
+EBU3B.RM-3262..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-3262..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-3262..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-3262..OCC-CMD,zone occupied cmd
+EBU3B.RM-3262..RH-VLV,reheat valve cmd
+EBU3B.RM-3262..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-3262..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-3262..COMMONSP,zone air temp sp
+EBU3B.RM-3262..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-3262..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-3262..ZN-T,zone air temp sensor
+EBU3B.RM-4102..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4102..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4102..CLGPID-O,zone cooling cmd
+EBU3B.RM-4102..DPR-C,discharge air damper cmd
+EBU3B.RM-4102..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4102..HTGPID-O,zone heating cmd
+EBU3B.RM-4102..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4102..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4102..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4102..OCC-CMD,zone occupied cmd
+EBU3B.RM-4102..RH-VLV,reheat valve cmd
+EBU3B.RM-4102..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4102..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4102..COMMONSP,zone air temp sp
+EBU3B.RM-4102..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4102..ZN-T,zone air temp sensor
+EBU3B.RM-4105..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4105..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4105..CLGPID-O,zone cooling cmd
+EBU3B.RM-4105..DPR-C,discharge air damper cmd
+EBU3B.RM-4105..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4105..EF4-C,exhaust air fan cmd
+EBU3B.RM-4105..EF4-S,exhaust air fan sensor
+EBU3B.RM-4105..HTGPID-O,zone heating cmd
+EBU3B.RM-4105..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4105..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4105..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4105..OCC-CMD,zone occupied cmd
+EBU3B.RM-4105..RH-VLV,reheat valve cmd
+EBU3B.RM-4105..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4105..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4105..COMMONSP,zone air temp sp
+EBU3B.RM-4105..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4105..ZN-T,zone air temp sensor
+EBU3B.RM-4106..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4106..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4106..CLGPID-O,zone cooling cmd
+EBU3B.RM-4106..DPR-C,discharge air damper cmd
+EBU3B.RM-4106..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4106..HTGPID-O,zone heating cmd
+EBU3B.RM-4106..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4106..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4106..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4106..OCC-CMD,zone occupied cmd
+EBU3B.RM-4106..RH-VLV,reheat valve cmd
+EBU3B.RM-4106..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4106..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4106..COMMONSP,zone air temp sp
+EBU3B.RM-4106..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4106..ZN-T,zone air temp sensor
+EBU3B.RM-4107..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4107..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4107..CLGPID-O,zone cooling cmd
+EBU3B.RM-4107..DPR-C,discharge air damper cmd
+EBU3B.RM-4107..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4107..HTGPID-O,zone heating cmd
+EBU3B.RM-4107..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4107..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4107..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4107..OCC-CMD,zone occupied cmd
+EBU3B.RM-4107..RH-VLV,reheat valve cmd
+EBU3B.RM-4107..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4107..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4107..COMMONSP,zone air temp sp
+EBU3B.RM-4107..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4107..ZN-T,zone air temp sensor
+EBU3B.RM-4109..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4109..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4109..CLGPID-O,zone cooling cmd
+EBU3B.RM-4109..DPR-C,discharge air damper cmd
+EBU3B.RM-4109..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4109..HTGPID-O,zone heating cmd
+EBU3B.RM-4109..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4109..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4109..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4109..OCC-CMD,zone occupied cmd
+EBU3B.RM-4109..RH-VLV,reheat valve cmd
+EBU3B.RM-4109..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4109..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4109..COMMONSP,zone air temp sp
+EBU3B.RM-4109..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4109..ZN-T,zone air temp sensor
+EBU3B.RM-4110..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4110..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4110..CLGPID-O,zone cooling cmd
+EBU3B.RM-4110..DPR-C,discharge air damper cmd
+EBU3B.RM-4110..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4110..HTGPID-O,zone heating cmd
+EBU3B.RM-4110..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4110..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4110..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4110..OCC-CMD,zone occupied cmd
+EBU3B.RM-4110..RH-VLV,reheat valve cmd
+EBU3B.RM-4110..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4110..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4110..COMMONSP,zone air temp sp
+EBU3B.RM-4110..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4110..ZN-T,zone air temp sensor
+EBU3B.RM-4111..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4111..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4111..CLGPID-O,zone cooling cmd
+EBU3B.RM-4111..DPR-C,discharge air damper cmd
+EBU3B.RM-4111..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4111..HTGPID-O,zone heating cmd
+EBU3B.RM-4111..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4111..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4111..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4111..OCC-CMD,zone occupied cmd
+EBU3B.RM-4111..RH-VLV,reheat valve cmd
+EBU3B.RM-4111..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4111..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4111..COMMONSP,zone air temp sp
+EBU3B.RM-4111..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4111..ZN-T,zone air temp sensor
+EBU3B.RM-4114..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4114..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4114..CLGPID-O,zone cooling cmd
+EBU3B.RM-4114..DPR-C,discharge air damper cmd
+EBU3B.RM-4114..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4114..HTGPID-O,zone heating cmd
+EBU3B.RM-4114..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4114..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4114..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4114..OCC-CMD,zone occupied cmd
+EBU3B.RM-4114..RH-VLV,reheat valve cmd
+EBU3B.RM-4114..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4114..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4114..COMMONSP,zone air temp sp
+EBU3B.RM-4114..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4114..ZN-T,zone air temp sensor
+EBU3B.RM-4118..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4118..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4118..CLGPID-O,zone cooling cmd
+EBU3B.RM-4118..DPR-C,discharge air damper cmd
+EBU3B.RM-4118..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4118..HTGPID-O,zone heating cmd
+EBU3B.RM-4118..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4118..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4118..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4118..OCC-CMD,zone occupied cmd
+EBU3B.RM-4118..RH-VLV,reheat valve cmd
+EBU3B.RM-4118..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4118..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4118..COMMONSP,zone air temp sp
+EBU3B.RM-4118..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4118..ZN-T,zone air temp sensor
+EBU3B.RM-4119..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4119..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4119..CLGPID-O,zone cooling cmd
+EBU3B.RM-4119..DPR-C,discharge air damper cmd
+EBU3B.RM-4119..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4119..FAN-C,discharge air fan cmd
+EBU3B.RM-4119..HTGPID-O,zone heating cmd
+EBU3B.RM-4119..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4119..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4119..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4119..OCC-CMD,zone occupied cmd
+EBU3B.RM-4119..RH-VLV,reheat valve cmd
+EBU3B.RM-4119..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4119..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4119..COMMONSP,zone air temp sp
+EBU3B.RM-4119..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4119..ZN-T,zone air temp sensor
+EBU3B.RM-4121..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4121..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4121..CLGPID-O,zone cooling cmd
+EBU3B.RM-4121..DPR-C,discharge air damper cmd
+EBU3B.RM-4121..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4121..EF3-C,exhaust air fan cmd
+EBU3B.RM-4121..EF3-S,exhaust air fan sensor
+EBU3B.RM-4121..HTGPID-O,zone heating cmd
+EBU3B.RM-4121..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4121..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4121..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4121..OCC-CMD,zone occupied cmd
+EBU3B.RM-4121..RH-VLV,reheat valve cmd
+EBU3B.RM-4121..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4121..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4121..COMMONSP,zone air temp sp
+EBU3B.RM-4121..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4121..ZN-T,zone air temp sensor
+EBU3B.RM-4122..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4122..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4122..CLGPID-O,zone cooling cmd
+EBU3B.RM-4122..DPR-C,discharge air damper cmd
+EBU3B.RM-4122..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4122..HTGPID-O,zone heating cmd
+EBU3B.RM-4122..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4122..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4122..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4122..OCC-CMD,zone occupied cmd
+EBU3B.RM-4122..RH-VLV,reheat valve cmd
+EBU3B.RM-4122..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4122..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4122..COMMONSP,zone air temp sp
+EBU3B.RM-4122..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4122..ZN-T,zone air temp sensor
+EBU3B.RM-4126..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4126..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4126..CLGPID-O,zone cooling cmd
+EBU3B.RM-4126..DPR-C,discharge air damper cmd
+EBU3B.RM-4126..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4126..HTGPID-O,zone heating cmd
+EBU3B.RM-4126..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4126..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4126..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4126..OCC-CMD,zone occupied cmd
+EBU3B.RM-4126..RH-VLV,reheat valve cmd
+EBU3B.RM-4126..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4126..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4126..COMMONSP,zone air temp sp
+EBU3B.RM-4126..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4126..ZN-T,zone air temp sensor
+EBU3B.RM-4127..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4127..CLGPID-O,zone cooling cmd
+EBU3B.RM-4127..DPR-C,discharge air damper cmd
+EBU3B.RM-4127..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4127..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4127..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4127..OCC-CMD,zone occupied cmd
+EBU3B.RM-4127..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4127..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4127..COMMONSP,zone air temp sp
+EBU3B.RM-4127..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4127..ZN-T,zone air temp sensor
+EBU3B.RM-4128..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4128..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4128..CLGPID-O,zone cooling cmd
+EBU3B.RM-4128..DPR-C,discharge air damper cmd
+EBU3B.RM-4128..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4128..HTGPID-O,zone heating cmd
+EBU3B.RM-4128..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4128..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4128..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4128..OCC-CMD,zone occupied cmd
+EBU3B.RM-4128..RH-VLV,reheat valve cmd
+EBU3B.RM-4128..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4128..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4128..COMMONSP,zone air temp sp
+EBU3B.RM-4128..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4128..ZN-T,zone air temp sensor
+EBU3B.RM-4130..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4130..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4130..CLGPID-O,zone cooling cmd
+EBU3B.RM-4130..DPR-C,discharge air damper cmd
+EBU3B.RM-4130..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4130..HTGPID-O,zone heating cmd
+EBU3B.RM-4130..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4130..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4130..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4130..OCC-CMD,zone occupied cmd
+EBU3B.RM-4130..RH-VLV,reheat valve cmd
+EBU3B.RM-4130..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4130..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4130..COMMONSP,zone air temp sp
+EBU3B.RM-4130..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4130..ZN-T,zone air temp sensor
+EBU3B.RM-4132..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4132..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4132..CLGPID-O,zone cooling cmd
+EBU3B.RM-4132..DPR-C,discharge air damper cmd
+EBU3B.RM-4132..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4132..HTGPID-O,zone heating cmd
+EBU3B.RM-4132..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4132..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4132..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4132..OCC-CMD,zone occupied cmd
+EBU3B.RM-4132..RH-VLV,reheat valve cmd
+EBU3B.RM-4132..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4132..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4132..COMMONSP,zone air temp sp
+EBU3B.RM-4132..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4132..ZN-T,zone air temp sensor
+EBU3B.RM-4134..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4134..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4134..CLGPID-O,zone cooling cmd
+EBU3B.RM-4134..DPR-C,discharge air damper cmd
+EBU3B.RM-4134..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4134..HTGPID-O,zone heating cmd
+EBU3B.RM-4134..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4134..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4134..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4134..OCC-CMD,zone occupied cmd
+EBU3B.RM-4134..RH-VLV,reheat valve cmd
+EBU3B.RM-4134..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4134..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4134..COMMONSP,zone air temp sp
+EBU3B.RM-4134..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4134..ZN-T,zone air temp sensor
+EBU3B.RM-4136..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4136..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4136..CLGPID-O,zone cooling cmd
+EBU3B.RM-4136..DPR-C,discharge air damper cmd
+EBU3B.RM-4136..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4136..HTGPID-O,zone heating cmd
+EBU3B.RM-4136..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4136..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4136..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4136..OCC-CMD,zone occupied cmd
+EBU3B.RM-4136..RH-VLV,reheat valve cmd
+EBU3B.RM-4136..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4136..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4136..COMMONSP,zone air temp sp
+EBU3B.RM-4136..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4136..ZN-T,zone air temp sensor
+EBU3B.RM-4138..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4138..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4138..CLGPID-O,zone cooling cmd
+EBU3B.RM-4138..DPR-C,discharge air damper cmd
+EBU3B.RM-4138..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4138..HTGPID-O,zone heating cmd
+EBU3B.RM-4138..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4138..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4138..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4138..OCC-CMD,zone occupied cmd
+EBU3B.RM-4138..RH-VLV,reheat valve cmd
+EBU3B.RM-4138..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4138..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4138..COMMONSP,zone air temp sp
+EBU3B.RM-4138..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4138..ZN-T,zone air temp sensor
+EBU3B.RM-4140..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4140..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4140..CLGPID-O,zone cooling cmd
+EBU3B.RM-4140..DPR-C,discharge air damper cmd
+EBU3B.RM-4140..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4140..FAN-C,discharge air fan cmd
+EBU3B.RM-4140..HTGPID-O,zone heating cmd
+EBU3B.RM-4140..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4140..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4140..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4140..OCC-CMD,zone occupied cmd
+EBU3B.RM-4140..RH-VLV,reheat valve cmd
+EBU3B.RM-4140..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4140..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4140..COMMONSP,zone air temp sp
+EBU3B.RM-4140..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4140..ZN-T,zone air temp sensor
+EBU3B.RM-4142..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4142..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4142..CLGPID-O,zone cooling cmd
+EBU3B.RM-4142..DPR-C,discharge air damper cmd
+EBU3B.RM-4142..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4142..HTGPID-O,zone heating cmd
+EBU3B.RM-4142..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4142..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4142..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4142..OCC-CMD,zone occupied cmd
+EBU3B.RM-4142..RH-VLV,reheat valve cmd
+EBU3B.RM-4142..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4142..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4142..COMMONSP,zone air temp sp
+EBU3B.RM-4142..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4142..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4142..ZN-T,zone air temp sensor
+EBU3B.RM-4144..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4144..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4144..CLGPID-O,zone cooling cmd
+EBU3B.RM-4144..DPR-C,discharge air damper cmd
+EBU3B.RM-4144..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4144..HTGPID-O,zone heating cmd
+EBU3B.RM-4144..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4144..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4144..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4144..OCC-CMD,zone occupied cmd
+EBU3B.RM-4144..OCCSEN-STS,zone occupied sensor
+EBU3B.RM-4144..RH-VLV,reheat valve cmd
+EBU3B.RM-4144..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4144..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4144..COMMONSP,zone air temp sp
+EBU3B.RM-4144..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4144..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4144..ZN-T,zone air temp sensor
+EBU3B.RM-4146..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4146..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4146..CLGPID-O,zone cooling cmd
+EBU3B.RM-4146..DPR-C,discharge air damper cmd
+EBU3B.RM-4146..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4146..HTGPID-O,zone heating cmd
+EBU3B.RM-4146..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4146..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4146..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4146..OCC-CMD,zone occupied cmd
+EBU3B.RM-4146..RH-VLV,reheat valve cmd
+EBU3B.RM-4146..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4146..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4146..COMMONSP,zone air temp sp
+EBU3B.RM-4146..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4146..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4146..ZN-T,zone air temp sensor
+EBU3B.RM-4148..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4148..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4148..CLGPID-O,zone cooling cmd
+EBU3B.RM-4148..DPR-C,discharge air damper cmd
+EBU3B.RM-4148..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4148..HTGPID-O,zone heating cmd
+EBU3B.RM-4148..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4148..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4148..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4148..OCC-CMD,zone occupied cmd
+EBU3B.RM-4148..RH-VLV,reheat valve cmd
+EBU3B.RM-4148..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4148..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4148..COMMONSP,zone air temp sp
+EBU3B.RM-4148..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4148..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4148..ZN-T,zone air temp sensor
+EBU3B.RM-4150..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4150..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4150..CLGPID-O,zone cooling cmd
+EBU3B.RM-4150..DPR-C,discharge air damper cmd
+EBU3B.RM-4150..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4150..HTGPID-O,zone heating cmd
+EBU3B.RM-4150..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4150..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4150..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4150..OCC-CMD,zone occupied cmd
+EBU3B.RM-4150..RH-VLV,reheat valve cmd
+EBU3B.RM-4150..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4150..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4150..COMMONSP,zone air temp sp
+EBU3B.RM-4150..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4150..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4150..ZN-T,zone air temp sensor
+EBU3B.RM-4152..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4152..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4152..CLGPID-O,zone cooling cmd
+EBU3B.RM-4152..DPR-C,discharge air damper cmd
+EBU3B.RM-4152..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4152..HTGPID-O,zone heating cmd
+EBU3B.RM-4152..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4152..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4152..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4152..OCC-CMD,zone occupied cmd
+EBU3B.RM-4152..RH-VLV,reheat valve cmd
+EBU3B.RM-4152..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4152..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4152..COMMONSP,zone air temp sp
+EBU3B.RM-4152..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4152..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4152..ZN-T,zone air temp sensor
+EBU3B.RM-4154..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4154..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4154..CLGPID-O,zone cooling cmd
+EBU3B.RM-4154..DPR-C,discharge air damper cmd
+EBU3B.RM-2127..DPR-C,discharge air damper cmd
+EBU3B.RM-4154.DMPR-POS,discharge air damper sensor
+EBU3B.RM-4154..FAN-C,discharge air fan cmd
+EBU3B.RM-4154..HTGPID-O,zone heating cmd
+EBU3B.RM-4154..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4154..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4154..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4154..OCC-CMD,zone occupied cmd
+EBU3B.RM-4154..RH-VLV,reheat valve cmd
+EBU3B.RM-4154..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4154..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4154..COMMONSP,zone air temp sp
+EBU3B.RM-4154..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4154..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4154..ZN-T,zone air temp sensor
+EBU3B.RM-4200A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4200A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4200A..CLGPID-O,zone cooling cmd
+EBU3B.RM-4200A..DPR-C,discharge air damper cmd
+EBU3B.RM-4200A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4200A..HTGPID-O,zone heating cmd
+EBU3B.RM-4200A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4200A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4200A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4200A..OCC-CMD,zone occupied cmd
+EBU3B.RM-4200A..RH-VLV,reheat valve cmd
+EBU3B.RM-4200A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4200A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4200A..COMMONSP,zone air temp sp
+EBU3B.RM-4200A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4200A..ZN-T,zone air temp sensor
+EBU3B.RM-4202..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4202..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4202..CLGPID-O,zone cooling cmd
+EBU3B.RM-4202..DPR-C,discharge air damper cmd
+EBU3B.RM-4202..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4202..HTGPID-O,zone heating cmd
+EBU3B.RM-4202..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4202..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4202..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4202..OCC-CMD,zone occupied cmd
+EBU3B.RM-4202..RH-VLV,reheat valve cmd
+EBU3B.RM-4202..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4202..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4202..COMMONSP,zone air temp sp
+EBU3B.RM-4202..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4202..ZN-T,zone air temp sensor
+EBU3B.RM-4203..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4203..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4203..CLGPID-O,zone cooling cmd
+EBU3B.RM-4203..DPR-C,discharge air damper cmd
+EBU3B.RM-4203..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4203..HTGPID-O,zone heating cmd
+EBU3B.RM-4203..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4203..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4203..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4203..OCC-CMD,zone occupied cmd
+EBU3B.RM-4203..RH-VLV,reheat valve cmd
+EBU3B.RM-4203..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4203..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4203..COMMONSP,zone air temp sp
+EBU3B.RM-4203..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4203..ZN-T,zone air temp sensor
+EBU3B.RM-4205..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4205..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4205..CLGPID-O,zone cooling cmd
+EBU3B.RM-4205..DPR-C,discharge air damper cmd
+EBU3B.RM-4205..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4205..HTGPID-O,zone heating cmd
+EBU3B.RM-4205..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4205..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4205..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4205..OCC-CMD,zone occupied cmd
+EBU3B.RM-4205..RH-VLV,reheat valve cmd
+EBU3B.RM-4205..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4205..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4205..COMMONSP,zone air temp sp
+EBU3B.RM-4205..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4205..ZN-T,zone air temp sensor
+EBU3B.RM-4207..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4207..CLGPID-O,zone cooling cmd
+EBU3B.RM-4207..DPR-C,discharge air damper cmd
+EBU3B.RM-4207..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4207..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4207..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4207..OCC-CMD,zone occupied cmd
+EBU3B.RM-4207..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4207..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4207..COMMONSP,zone air temp sp
+EBU3B.RM-4207..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4207..ZN-T,zone air temp sensor
+EBU3B.RM-4208..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4208..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4208..CLGPID-O,zone cooling cmd
+EBU3B.RM-4208..DPR-C,discharge air damper cmd
+EBU3B.RM-4208..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4208..HTGPID-O,zone heating cmd
+EBU3B.RM-4208..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4208..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4208..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4208..OCC-CMD,zone occupied cmd
+EBU3B.RM-4208..RH-VLV,reheat valve cmd
+EBU3B.RM-4208..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4208..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4208..COMMONSP,zone air temp sp
+EBU3B.RM-4208..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4208..ZN-T,zone air temp sensor
+EBU3B.RM-4213..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4213..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4213..CLGPID-O,zone cooling cmd
+EBU3B.RM-4213..DPR-C,discharge air damper cmd
+EBU3B.RM-4213..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4213..FAN-C,discharge air fan cmd
+EBU3B.RM-4213..HTGPID-O,zone heating cmd
+EBU3B.RM-4213..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4213..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4213..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4213..OCC-CMD,zone occupied cmd
+EBU3B.RM-4213..RH-VLV,reheat valve cmd
+EBU3B.RM-4213..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4213..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4213..COMMONSP,zone air temp sp
+EBU3B.RM-4213..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4213..ZN-T,zone air temp sensor
+EBU3B.RM-4214..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4214..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4214..CLGPID-O,zone cooling cmd
+EBU3B.RM-4214..DPR-C,discharge air damper cmd
+EBU3B.RM-4214..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4214..HTGPID-O,zone heating cmd
+EBU3B.RM-4214..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4214..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4214..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4214..OCC-CMD,zone occupied cmd
+EBU3B.RM-4214..RH-VLV,reheat valve cmd
+EBU3B.RM-4214..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4214..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4214..COMMONSP,zone air temp sp
+EBU3B.RM-4214..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4214..ZN-T,zone air temp sensor
+EBU3B.RM-4215..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4215..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4215..CLGPID-O,zone cooling cmd
+EBU3B.RM-4215..DPR-C,discharge air damper cmd
+EBU3B.RM-4215..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4215..EF5-C,exhaust air fan cmd
+EBU3B.RM-4215..EF5-S,exhaust air fan sensor
+EBU3B.RM-4215..HTGPID-O,zone heating cmd
+EBU3B.RM-4215..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4215..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4215..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4215..OCC-CMD,zone occupied cmd
+EBU3B.RM-4215..RH-VLV,reheat valve cmd
+EBU3B.RM-4215..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4215..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4215..COMMONSP,zone air temp sp
+EBU3B.RM-4215..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4215..ZN-T,zone air temp sensor
+EBU3B.RM-4217..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4217..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4217..CLGPID-O,zone cooling cmd
+EBU3B.RM-4217..DPR-C,discharge air damper cmd
+EBU3B.RM-4217..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4217..HTGPID-O,zone heating cmd
+EBU3B.RM-4217..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4217..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4217..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4217..OCC-CMD,zone occupied cmd
+EBU3B.RM-4217..RH-VLV,reheat valve cmd
+EBU3B.RM-4217..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4217..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4217..COMMONSP,zone air temp sp
+EBU3B.RM-4217..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4217..ZN-T,zone air temp sensor
+EBU3B.RM-4219..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4219..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4219..CLGPID-O,zone cooling cmd
+EBU3B.RM-4219..DPR-C,discharge air damper cmd
+EBU3B.RM-4219..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4219..HTGPID-O,zone heating cmd
+EBU3B.RM-4219..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4219..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4219..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4219..OCC-CMD,zone occupied cmd
+EBU3B.RM-4219..RH-VLV,reheat valve cmd
+EBU3B.RM-4219..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4219..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4219..COMMONSP,zone air temp sp
+EBU3B.RM-4219..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4219..ZN-T,zone air temp sensor
+EBU3B.RM-4220..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4220..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4220..CLGPID-O,zone cooling cmd
+EBU3B.RM-4220..DPR-C,discharge air damper cmd
+EBU3B.RM-4220..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4220..HTGPID-O,zone heating cmd
+EBU3B.RM-4220..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4220..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4220..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4220..OCC-CMD,zone occupied cmd
+EBU3B.RM-4220..RH-VLV,reheat valve cmd
+EBU3B.RM-4220..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4220..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4220..COMMONSP,zone air temp sp
+EBU3B.RM-4220..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4220..ZN-T,zone air temp sensor
+EBU3B.RM-4223..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4223..CLGPID-O,zone cooling cmd
+EBU3B.RM-4223..DPR-C,discharge air damper cmd
+EBU3B.RM-4223..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4223..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4223..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4223..OCC-CMD,zone occupied cmd
+EBU3B.RM-4223..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4223..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4223..COMMONSP,zone air temp sp
+EBU3B.RM-4223..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4223..ZN-T,zone air temp sensor
+EBU3B.RM-4226..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4226..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4226..CLGPID-O,zone cooling cmd
+EBU3B.RM-4226..DPR-C,discharge air damper cmd
+EBU3B.RM-4226..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4226..HTGPID-O,zone heating cmd
+EBU3B.RM-4226..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4226..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4226..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4226..OCC-CMD,zone occupied cmd
+EBU3B.RM-4226..RH-VLV,reheat valve cmd
+EBU3B.RM-4226..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4226..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4226..COMMONSP,zone air temp sp
+EBU3B.RM-4226..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4226..ZN-T,zone air temp sensor
+EBU3B.RM-4230..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4230..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4230..CLGPID-O,zone cooling cmd
+EBU3B.RM-4230..DPR-C,discharge air damper cmd
+EBU3B.RM-4230..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4230..HTGPID-O,zone heating cmd
+EBU3B.RM-4230..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4230..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4230..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4230..OCC-CMD,zone occupied cmd
+EBU3B.RM-4230..RH-VLV,reheat valve cmd
+EBU3B.RM-4230..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4230..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4230..COMMONSP,zone air temp sp
+EBU3B.RM-4230..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4230..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4230..ZN-T,zone air temp sensor
+EBU3B.RM-4231..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4231..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4231..CLGPID-O,zone cooling cmd
+EBU3B.RM-4231..DPR-C,discharge air damper cmd
+EBU3B.RM-4231..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4231..HTGPID-O,zone heating cmd
+EBU3B.RM-4231..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4231..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4231..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4231..OCC-CMD,zone occupied cmd
+EBU3B.RM-4231..RH-VLV,reheat valve cmd
+EBU3B.RM-4231..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4231..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4231..COMMONSP,zone air temp sp
+EBU3B.RM-4231..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4231..ZN-T,zone air temp sensor
+EBU3B.RM-4232..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4232..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4232..CLGPID-O,zone cooling cmd
+EBU3B.RM-4232..DPR-C,discharge air damper cmd
+EBU3B.RM-4232..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4232..HTGPID-O,zone heating cmd
+EBU3B.RM-4232..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4232..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4232..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4232..OCC-CMD,zone occupied cmd
+EBU3B.RM-4232..RH-VLV,reheat valve cmd
+EBU3B.RM-4232..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4232..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4232..COMMONSP,zone air temp sp
+EBU3B.RM-4232..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4232..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4232..ZN-T,zone air temp sensor
+EBU3B.RM-4236..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4236..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4236..CLGPID-O,zone cooling cmd
+EBU3B.RM-4236..DPR-C,discharge air damper cmd
+EBU3B.RM-4236..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4236..HTGPID-O,zone heating cmd
+EBU3B.RM-4236..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4236..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4236..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4236..OCC-CMD,zone occupied cmd
+EBU3B.RM-4236..RH-VLV,reheat valve cmd
+EBU3B.RM-4236..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4236..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4236..COMMONSP,zone air temp sp
+EBU3B.RM-4236..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4236..ZN-T,zone air temp sensor
+EBU3B.RM-4240..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4240..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4240..CLGPID-O,zone cooling cmd
+EBU3B.RM-4240..DPR-C,discharge air damper cmd
+EBU3B.RM-4240..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4240..HTGPID-O,zone heating cmd
+EBU3B.RM-4240..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4240..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4240..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4240..OCC-CMD,zone occupied cmd
+EBU3B.RM-4240..RH-VLV,reheat valve cmd
+EBU3B.RM-4240..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4240..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4240..COMMONSP,zone air temp sp
+EBU3B.RM-4240..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4240..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4240..ZN-T,zone air temp sensor
+EBU3B.RM-4242..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4242..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4242..CLGPID-O,zone cooling cmd
+EBU3B.RM-4242..DPR-C,discharge air damper cmd
+EBU3B.RM-4242..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4242..HTGPID-O,zone heating cmd
+EBU3B.RM-4242..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4242..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4242..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4242..OCC-CMD,zone occupied cmd
+EBU3B.RM-4242..RH-VLV,reheat valve cmd
+EBU3B.RM-4242..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4242..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4242..COMMONSP,zone air temp sp
+EBU3B.RM-4242..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4242..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4242..ZN-T,zone air temp sensor
+EBU3B.RM-4246..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4246..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4246..CLGPID-O,zone cooling cmd
+EBU3B.RM-4246..DPR-C,discharge air damper cmd
+EBU3B.RM-4246..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4246..HTGPID-O,zone heating cmd
+EBU3B.RM-4246..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4246..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4246..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4246..OCC-CMD,zone occupied cmd
+EBU3B.RM-4246..RH-VLV,reheat valve cmd
+EBU3B.RM-4246..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4246..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4246..COMMONSP,zone air temp sp
+EBU3B.RM-4246..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4246..ZN-T,zone air temp sensor
+EBU3B.RM-4250..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4250..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4250..CLGPID-O,zone cooling cmd
+EBU3B.RM-4250..DPR-C,discharge air damper cmd
+EBU3B.RM-4250..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4250..HTGPID-O,zone heating cmd
+EBU3B.RM-4250..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4250..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4250..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4250..OCC-CMD,zone occupied cmd
+EBU3B.RM-4250..RH-VLV,reheat valve cmd
+EBU3B.RM-4250..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4250..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4250..COMMONSP,zone air temp sp
+EBU3B.RM-4250..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4250..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4250..ZN-T,zone air temp sensor
+EBU3B.RM-4252..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4252..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4252..CLGPID-O,zone cooling cmd
+EBU3B.RM-4252..DPR-C,discharge air damper cmd
+EBU3B.RM-4252..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4252..HTGPID-O,zone heating cmd
+EBU3B.RM-4252..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4252..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4252..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4252..OCC-CMD,zone occupied cmd
+EBU3B.RM-4252..RH-VLV,reheat valve cmd
+EBU3B.RM-4252..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4252..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4252..COMMONSP,zone air temp sp
+EBU3B.RM-4252..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4252..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4252..ZN-T,zone air temp sensor
+EBU3B.RM-4254..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4254..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4254..CLGPID-O,zone cooling cmd
+EBU3B.RM-4254..DPR-C,discharge air damper cmd
+EBU3B.RM-4254..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4254..HTGPID-O,zone heating cmd
+EBU3B.RM-4254..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4254..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4254..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4254..OCC-CMD,zone occupied cmd
+EBU3B.RM-4254..RH-VLV,reheat valve cmd
+EBU3B.RM-4254..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4254..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4254..COMMONSP,zone air temp sp
+EBU3B.RM-4254..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4254..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4254..ZN-T,zone air temp sensor
+EBU3B.RM-4256..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4256..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4256..CLGPID-O,zone cooling cmd
+EBU3B.RM-4256..DPR-C,discharge air damper cmd
+EBU3B.RM-4256..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4256..HTGPID-O,zone heating cmd
+EBU3B.RM-4256..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4256..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4256..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4256..OCC-CMD,zone occupied cmd
+EBU3B.RM-4256..RH-VLV,reheat valve cmd
+EBU3B.RM-4256..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4256..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4256..COMMONSP,zone air temp sp
+EBU3B.RM-4256..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4256..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4256..ZN-T,zone air temp sensor
+EBU3B.RM-4258..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4258..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4258..CLGPID-O,zone cooling cmd
+EBU3B.RM-4258..DPR-C,discharge air damper cmd
+EBU3B.RM-4258..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4258..HTGPID-O,zone heating cmd
+EBU3B.RM-4258..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4258..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4258..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4258..OCC-CMD,zone occupied cmd
+EBU3B.RM-4258..RH-VLV,reheat valve cmd
+EBU3B.RM-4258..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4258..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4258..COMMONSP,zone air temp sp
+EBU3B.RM-4258..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4258..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4258..ZN-T,zone air temp sensor
+EBU3B.RM-4262..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-4262..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-4262..CLGPID-O,zone cooling cmd
+EBU3B.RM-4262..DPR-C,discharge air damper cmd
+EBU3B.RM-4262..DMPR-POS,discharge air damper sensor
+EBU3B.RM-4262..HTGPID-O,zone heating cmd
+EBU3B.RM-4262..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-4262..CLGMINFLO,discharge air flow occ cooling min sp
+EBU3B.RM-4262..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-4262..OCC-CMD,zone occupied cmd
+EBU3B.RM-4262..RH-VLV,reheat valve cmd
+EBU3B.RM-4262..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-4262..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-4262..COMMONSP,zone air temp sp
+EBU3B.RM-4262..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-4262..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-4262..ZN-T,zone air temp sensor
+EBU3B.AH1-1.CHWR1-T,return water temp sensor
+EBU3B.AH1-1.CHWR2-T,return water temp sensor
+EBU3B.AH1-1.CHWR3-T,return water temp sensor
+EBU3B.AH1-1.CHWR4-T,return water temp sensor
+EBU3B.AH1-1..OA-CO2,zone air co2 sensor
+EBU3B.AH1-1.CLG-VLV1,discharge cooling water valve cmd
+EBU3B.AH1-1.CLG-VLV2,discharge cooling water valve cmd
+EBU3B.AH1-1.CLG-VLV3,discharge cooling water valve cmd
+EBU3B.AH1-1.CLG-VLV4,discharge cooling water valve cmd
+EBU3B.AH1-1.E-ECON,economizer discharge rate cmd
+EBU3B.AH1-1.W-ECON,economizer discharge rate cmd
+EBU3B.AH1-1..ECON-SP,economizer discharge rate sp
+EBU3B.AH1-1..MA-T,discharge mixed air temp sensor
+EBU3B.AH1-1.RA-LL,max return air flow sp
+EBU3B.AH1-1.RA-T,return air temp sensor
+EBU3B.AH1-1.RF1-SS,return air fan cmd
+EBU3B.AH1-1.RF2-SS,return air fan cmd
+EBU3B.AH1-1.RF3-SS,return air fan cmd
+EBU3B.AH1-1.RF4-SS,return air fan cmd
+EBU3B.AH1-1.SA-HL,max discharge air flow sp
+EBU3B.AH1-1.SF1-SS,discharg air flow cmd
+EBU3B.AH1-1.SF2-SS,discharg air flow cmd
+EBU3B.AH1-1.SF3-SS,discharg air flow cmd
+EBU3B.AH1-1.SF4-SS,discharg air flow cmd
+EBU3B.AH1-1.SF1MAINT,discharge fan maintenance cmd
+EBU3B.AH1-1.SF2MAINT,discharge fan maintenance cmd
+EBU3B.AH1-1.SF3MAINT,discharge fan maintenance cmd
+EBU3B.AH1-1.SF4MAINT,discharge fan maintenance cmd
+EBU3B.AH1-1.SF1-STS,discharge air fan sensor
+EBU3B.AH1-1.SF2-STS,discharge air fan sensor
+EBU3B.AH1-1.SF3-STS,discharge air fan sensor
+EBU3B.AH1-1.SF4-STS,discharge air fan sensor
+EBU3B.CHW-SYS.CHW-DP,discharge cooling water delta pressure sensor
+EBU3B.CHW-SYS.CHWP1-ALM,pump alarm sensor
+EBU3B.CHW-SYS.CHWP2-ALM,pump alarm sensor
+EBU3B.CHWP1.CURRENT,elec current sensor
+EBU3B.CHWP1.CURR-LIM,max elec current cmd
+EBU3B.CHWP1.DO1 CMD,do1 cmd
+EBU3B.CHWP1.DO2 CMD,do2 cmd
+EBU3B.CHWP1.FREQ-OUTPUT,elec frequency sensor
+EBU3B.CHWP1.PID-CTRL,pid control sensor
+EBU3B.CHWP1.PID GAIN,pid gain cmd
+EBU3B.CHWP1.RUN ENABLE,run enable cmd
+EBU3B.CHWP2.CURRENT,elec current sensor
+EBU3B.CHWP2.CURR-LIM,max elec current cmd
+EBU3B.CHWP2.DO1 CMD,do1 cmd
+EBU3B.CHWP2.DO2 CMD,do2 cmd
+EBU3B.CHWP2.FREQ-OUTPUT,elec frequency sensor
+EBU3B.CHWP2.PID-CTRL,pid control sensor
+EBU3B.CHWP2.PID GAIN,pid gain cmd
+EBU3B.CHWP2.RUN ENABLE,run enable cmd
+EBU3B.CHWP3-VFD.CUR-LMT,max elec current cmd
+EBU3B.CHWP3-VFD.DC-BUS,dc elec volt sensor
+EBU3B.CHWP3-VFD.DEC-TIME,deceleration period cmd
+EBU3B.CHWP3-VFD.DRV-TEMP,drive temp sensor
+EBU3B.CHWP3-VFD.K-ENERGY,
+EBU3B.CHWP3-VFD.M-ENERGY,
+EBU3B.CHWP3-VFD.CURRENT,elec current sensor
+EBU3B.CHWP4-VFD.CUR-LMT,max elec current cmd
+EBU3B.CHWP4-VFD.DC-BUS,dc elec volt sensor
+EBU3B.CHWP4-VFD.DEC-TIME,deceleration period cmd
+EBU3B.CHWP4-VFD.DRV-TEMP,drive temp sensor
+EBU3B.CHWP4-VFD.K-ENERGY,
+EBU3B.CHWP4-VFD.M-ENERGY,
+EBU3B.CHWP4-VFD.CURRENT,elec current sensor
+EBU3B.FSCHW.CHW-DP,discharge cooling water delta pressure sensor
+EBU3B.FSCHW.CHWP3-ALM,pump alarm sensor
+EBU3B.FSCHW.CHWP4-ALM,pump alarm sensor
+EBU3B.HW-SYS.HX1A-VLV,heatExchanger valve cmd
+EBU3B.HW-SYS.HX1B-VLV,heatExchanger valve cmd
+EBU3B.HW-SYS.HX2-VLV,heatExchanger valve cmd
+EBU3B.HW-SYS.HWP1-ALM,pump alarm sensor
+EBU3B.HW-SYS.HWP2-ALM,pump alarm sensor
+EBU3B.HWP1.CURRENT,elec current sensor
+EBU3B.HWP1.CURR-LIM,max elec current cmd
+EBU3B.HWP1.DO1 CMD,do1 cmd
+EBU3B.HWP1.DO2 CMD,do2 cmd
+EBU3B.HWP1.FREQ-OUTPUT,elec frequency sensor
+EBU3B.HWP1.PID-CTRL,pid control sensor
+EBU3B.HWP1.PID GAIN,pid gain cmd
+EBU3B.HWP1.RUN ENABLE,run enable cmd
+EBU3B.HWP2.CURRENT,elec current sensor
+EBU3B.HWP2.CURR-LIM,max elec current cmd
+EBU3B.HWP2.DO1 CMD,do1 cmd
+EBU3B.HWP2.DO2 CMD,do2 cmd
+EBU3B.HWP2.FREQ-OUTPUT,elec frequency sensor
+EBU3B.HWP2.PID-CTRL,pid control sensor
+EBU3B.HWP2.PID GAIN,pid gain cmd
+EBU3B.HWP2.RUN ENABLE,run enable cmd
+EBU3B.RF1.CURRENT,elec current sensor
+EBU3B.RF1.CURR-LIM,max elec current cmd
+EBU3B.RF1.DO1 CMD,do1 cmd
+EBU3B.RF1.DO2 CMD,do2 cmd
+EBU3B.RF1.FREQ-OUTPUT,elec frequency sensor
+EBU3B.RF1.PID-CTRL,pid control sensor
+EBU3B.RF1.PID GAIN,pid gain cmd
+EBU3B.RF1.RUN ENABLE,run enable cmd
+EBU3B.RF2.CURRENT,elec current sensor
+EBU3B.RF2.CURR-LIM,max elec current cmd
+EBU3B.RF2.DO1 CMD,do1 cmd
+EBU3B.RF2.DO2 CMD,do2 cmd
+EBU3B.RF2.FREQ-OUTPUT,elec frequency sensor
+EBU3B.RF2.PID-CTRL,pid control sensor
+EBU3B.RF2.PID GAIN,pid gain cmd
+EBU3B.RF2.RUN ENABLE,run enable cmd
+EBU3B.RF3.CURRENT,elec current sensor
+EBU3B.RF3.CURR-LIM,max elec current cmd
+EBU3B.RF3.DO1 CMD,do1 cmd
+EBU3B.RF3.DO2 CMD,do2 cmd
+EBU3B.RF3.FREQ-OUTPUT,elec frequency sensor
+EBU3B.RF3.PID-CTRL,pid control sensor
+EBU3B.RF3.PID GAIN,pid gain cmd
+EBU3B.RF3.RUN ENABLE,run enable cmd
+EBU3B.RF4.CURRENT,elec current sensor
+EBU3B.RF4.CURR-LIM,max elec current cmd
+EBU3B.RF4.DO1 CMD,do1 cmd
+EBU3B.RF4.DO2 CMD,do2 cmd
+EBU3B.RF4.FREQ-OUTPUT,elec frequency sensor
+EBU3B.RF4.PID-CTRL,pid control sensor
+EBU3B.RF4.PID GAIN,pid gain cmd
+EBU3B.RM-B102C..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B102C..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B102C..ZN-T,zone air temp sensor
+EBU3B.RM-B103..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B103..CLGPID-O,zone cooling cmd
+EBU3B.RM-B103..DPR-C,discharge air damper cmd
+EBU3B.RM-B103..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B103..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B103..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B103..OCC-CMD,zone occupied cmd
+EBU3B.RM-B103..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B103..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B103..COMMONSP,zone air temp sp
+EBU3B.RM-B103..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B103..ZN-T,zone air temp sensor
+EBU3B.RM-B103A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B103A..CLGPID-O,zone cooling cmd
+EBU3B.RM-B103A..DPR-C,discharge air damper cmd
+EBU3B.RM-B103A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B103A..EF1-C,exhaust air fan cmd
+EBU3B.RM-B103A..EF1-S,exhaust air fan sensor
+EBU3B.RM-B103A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B103A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B103A..OCC-CMD,zone occupied cmd
+EBU3B.RM-B103A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B103A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B103A..COMMONSP,zone air temp sp
+EBU3B.RM-B103A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B103A..ZN-T,zone air temp sensor
+EBU3B.RM-B109..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B109..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B109..CLGPID-O,zone cooling cmd
+EBU3B.RM-B109..DPR-C,discharge air damper cmd
+EBU3B.RM-B109..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B109..HTGPID-O,zone heating cmd
+EBU3B.RM-B109..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B109..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B109..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B109..OCC-CMD,zone occupied cmd
+EBU3B.RM-B109..RH-VLV,reheat valve cmd
+EBU3B.RM-B109..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B109..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B109..COMMONSP,zone air temp sp
+EBU3B.RM-B109..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B109..ZN-T,zone air temp sensor
+EBU3B.RM-B200B..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B200B..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B200B..CLGPID-O,zone cooling cmd
+EBU3B.RM-B200B..DPR-C,discharge air damper cmd
+EBU3B.RM-B200B..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B200B..HTGPID-O,zone heating cmd
+EBU3B.RM-B200B..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B200B..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B200B..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B200B..OCC-CMD,zone occupied cmd
+EBU3B.RM-B200B..RH-VLV,reheat valve cmd
+EBU3B.RM-B200B..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B200B..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B200B..COMMONSP,zone air temp sp
+EBU3B.RM-B200B..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B200B..ZN-T,zone air temp sensor
+EBU3B.RM-B200C..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B200C..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B200C..CLGPID-O,zone cooling cmd
+EBU3B.RM-B200C..DPR-C,discharge air damper cmd
+EBU3B.RM-B200C..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B200C..HTGPID-O,zone heating cmd
+EBU3B.RM-B200C..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B200C..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B200C..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B200C..OCC-CMD,zone occupied cmd
+EBU3B.RM-B200C..RH-VLV,reheat valve cmd
+EBU3B.RM-B200C..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B200C..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B200C..COMMONSP,zone air temp sp
+EBU3B.RM-B200C..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B200C..ZN-T,zone air temp sensor
+EBU3B.RM-B210..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B210..ACTHTGSP,zone air temp effective max sp
+EBU3B.RMB210..CO2-Level,zone air co2 sensor
+EBU3B.RM-B210..CLGPID-O,zone cooling cmd
+EBU3B.RM-B210..DPR-C,discharge air damper cmd
+EBU3B.RM-B210..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B210..FAN-C,discharge air fan cmd
+EBU3B.RM-B210..HTGPID-O,zone heating cmd
+EBU3B.RM-B210..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B210..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B210..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B210..OCC-CMD,zone occupied cmd
+EBU3B.RM-B210..OCC-Sensor,zone occupied sensor
+EBU3B.RM-B210..RH-VLV,reheat valve cmd
+EBU3B.RM-B210..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B210..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B210..COMMONSP,zone air temp sp
+EBU3B.RM-B210..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B210..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B210..ZN-T,zone air temp sensor
+EBU3B.RM-B215..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B215..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B215..CLGPID-O,zone cooling cmd
+EBU3B.RM-B215..DPR-C,discharge air damper cmd
+EBU3B.RM-B215..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B215..HTGPID-O,zone heating cmd
+EBU3B.RM-B215..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B215..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B215..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B215..OCC-CMD,zone occupied cmd
+EBU3B.RM-B215..RH-VLV,reheat valve cmd
+EBU3B.RM-B215..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B215..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B215..COMMONSP,zone air temp sp
+EBU3B.RM-B215..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B215..ZN-T,zone air temp sensor
+EBU3B.RM-B220..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B220..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B220..FAN-C,discharge air fan cmd
+EBU3B.RM-B220..CO2-Hi Alarm,zone air co2 high alarm
+EBU3B.RM-B220..CO2-Level,zone air co2 sensor
+EBU3B.RM-B220..CLGPID-O,zone cooling cmd
+EBU3B.RM-B220..DPR-C,discharge air damper cmd
+EBU3B.RM-B220..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B220..HTGPID-O,zone heating cmd
+EBU3B.RM-B220..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B220..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B220..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B220..OCC-CMD,zone occupied cmd
+EBU3B.RM-B220..Occ-Sen,zone occupied sensor
+EBU3B.RM-B220..RH-VLV,reheat valve cmd
+EBU3B.RM-B220..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B220..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B220..COMMONSP,zone air temp sp
+EBU3B.RM-B220..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B220..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B220..ZN-T,zone air temp sensor
+EBU3B.RM-B222..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B222..CLGPID-O,zone cooling cmd
+EBU3B.RM-B222..DPR-C,discharge air damper cmd
+EBU3B.RM-B222..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B222..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B222..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B222..OCC-CMD,zone occupied cmd
+EBU3B.RM-B222..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B222..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B222..COMMONSP,zone air temp sp
+EBU3B.RM-B222..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B222..ZN-T,zone air temp sensor
+EBU3B.RM-B224..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B224..CLGPID-O,zone cooling cmd
+EBU3B.RM-B224..DPR-C,discharge air damper cmd
+EBU3B.RM-B224..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B224..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B224..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B224..OCC-CMD,zone occupied cmd
+EBU3B.RM-B224..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B224..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B224..COMMONSP,zone air temp sp
+EBU3B.RM-B224..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B224..ZN-T,zone air temp sensor
+EBU3B.RM-B225..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B225..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B225..CLGPID-O,zone cooling cmd
+EBU3B.RM-B225..DPR-C,discharge air damper cmd
+EBU3B.RM-B225..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B225..HTGPID-O,zone heating cmd
+EBU3B.RM-B225..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B225..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B225..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B225..OCC-CMD,zone occupied cmd
+EBU3B.RM-B225..RH-VLV,reheat valve cmd
+EBU3B.RM-B225..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B225..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B225..COMMONSP,zone air temp sp
+EBU3B.RM-B225..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B225..ZN-T,zone air temp sensor
+EBU3B.RM-B230..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B230..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B230..FAN-C,discharge air fan cmd
+EBU3B.RM-B230..CO2-Level,zone air co2 sensor
+EBU3B.RM-B230..CLGPID-O,zone cooling cmd
+EBU3B.RM-B230..DPR-C,discharge air damper cmd
+EBU3B.RM-B230..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B230..HTGPID-O,zone heating cmd
+EBU3B.RM-B230..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B230..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B230..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B230..OCC-CMD,zone occupied cmd
+EBU3B.RM-B230..Occ-Sen,zone occupied sensor
+EBU3B.RM-B230..RH-VLV,reheat valve cmd
+EBU3B.RM-B230..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B230..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B230..COMMONSP,zone air temp sp
+EBU3B.RM-B230..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B230..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B230..ZN-T,zone air temp sensor
+EBU3B.RM-B230A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B230A..CLGPID-O,zone cooling cmd
+EBU3B.RM-B230A..DPR-C,discharge air damper cmd
+EBU3B.RM-B230A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B230A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B230A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B230A..OCC-CMD,zone occupied cmd
+EBU3B.RM-B230A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B230A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B230A..COMMONSP,zone air temp sp
+EBU3B.RM-B230A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B230A..ZN-T,zone air temp sensor
+EBU3B.RM-B240..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B240..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B240..FAN-C,discharge air fan cmd
+EBU3B.RM-B240..CO2-Hi Alarm,zone air co2 high alarm
+EBU3B.RM-B240..CO2-Level,zone air co2 sensor
+EBU3B.RM-B240..CLGPID-O,zone cooling cmd
+EBU3B.RM-B240..DPR-C,discharge air damper cmd
+EBU3B.RM-B240..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B240..HTGPID-O,zone heating cmd
+EBU3B.RM-B240..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B240..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B240..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B240..OCC-CMD,zone occupied cmd
+EBU3B.RM-B240..Occ-Sen,zone occupied sensor
+EBU3B.RM-B240..RH-VLV,reheat valve cmd
+EBU3B.RM-B240..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B240..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B240..COMMONSP,zone air temp sp
+EBU3B.RM-B240..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B240..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B240..ZN-T,zone air temp sensor
+EBU3B.RM-B240A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B240A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B240A..CLGPID-O,zone cooling cmd
+EBU3B.RM-B240A..DPR-C,discharge air damper cmd
+EBU3B.RM-B240A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B240A..HTGPID-O,zone heating cmd
+EBU3B.RM-B240A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B240A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B240A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B240A..OCC-CMD,zone occupied cmd
+EBU3B.RM-B240A..RH-VLV,reheat valve cmd
+EBU3B.RM-B240A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B240A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B240A..COMMONSP,zone air temp sp
+EBU3B.RM-B240A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B240A..ZN-T,zone air temp sensor
+EBU3B.RM-B250..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B250..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B250..FAN-C,discharge air fan cmd
+EBU3B.RM-B250..CO2-Hi Alarm,zone air co2 high alarm
+EBU3B.RM-B250..CO2-Level,zone air co2 sensor
+EBU3B.RM-B250..CLGPID-O,zone cooling cmd
+EBU3B.RM-B250..DPR-C,discharge air damper cmd
+EBU3B.RM-B250..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B250..HTGPID-O,zone heating cmd
+EBU3B.RM-B250..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B250..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B250..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B250..OCC-CMD,zone occupied cmd
+EBU3B.RM-B250..Occ-Sen,zone occupied sensor
+EBU3B.RM-B250..RH-VLV,reheat valve cmd
+EBU3B.RM-B250..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B250..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B250..COMMONSP,zone air temp sp
+EBU3B.RM-B250..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B250..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B250..ZN-T,zone air temp sensor
+EBU3B.RM-B250A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B250A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B250A..CLGPID-O,zone cooling cmd
+EBU3B.RM-B250A..DPR-C,discharge air damper cmd
+EBU3B.RM-B250A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B250A..HTGPID-O,zone heating cmd
+EBU3B.RM-B250A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B250A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B250A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B250A..OCC-CMD,zone occupied cmd
+EBU3B.RM-B250A..RH-VLV,reheat valve cmd
+EBU3B.RM-B250A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B250A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B250A..COMMONSP,zone air temp sp
+EBU3B.RM-B250A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B250A..ZN-T,zone air temp sensor
+EBU3B.RM-B260..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B260..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B260..FAN-C,discharge air fan cmd
+EBU3B.RM-B260..CO2-Hi Alarm,zone air co2 high alarm
+EBU3B.RM-B260..CO2-Level,zone air co2 sensor
+EBU3B.RM-B260..CLGPID-O,zone cooling cmd
+EBU3B.RM-B260..DPR-C,discharge air damper cmd
+EBU3B.RM-B260..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B260..HTGPID-O,zone heating cmd
+EBU3B.RM-B260..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B260..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B260..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B260..OCC-CMD,zone occupied cmd
+EBU3B.RM-B260..OCCSENS,zone occupied sensor
+EBU3B.RM-B260..RH-VLV,reheat valve cmd
+EBU3B.RM-B260..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B260..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B260..COMMONSP,zone air temp sp
+EBU3B.RM-B260..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B260..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B260..ZN-T,zone air temp sensor
+EBU3B.RM-B260A..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B260A..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B260A..CLGPID-O,zone cooling cmd
+EBU3B.RM-B260A..DPR-C,discharge air damper cmd
+EBU3B.RM-B260A..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B260A..HTGPID-O,zone heating cmd
+EBU3B.RM-B260A..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B260A..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B260A..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B260A..OCC-CMD,zone occupied cmd
+EBU3B.RM-B260A..RH-VLV,reheat valve cmd
+EBU3B.RM-B260A..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B260A..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B260A..COMMONSP,zone air temp sp
+EBU3B.RM-B260A..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B260A..ZN-T,zone air temp sensor
+EBU3B.RM-B270..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B270..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B270..CO2-Hi Alarm,zone air co2 high alarm
+EBU3B.RM-B270..CO2-Level,zone air co2 sensor
+EBU3B.RM-B270..CLGPID-O,zone cooling cmd
+EBU3B.RM-B270..DPR-C,discharge air damper cmd
+EBU3B.RM-B270..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B270..FAN-C,discharge air fan cmd
+EBU3B.RM-B270..HTGPID-O,zone heating cmd
+EBU3B.RM-B270..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B270..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B270..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B270..OCC-CMD,zone occupied cmd
+EBU3B.RM-B270..Occ-Sen,zone occupied sensor
+EBU3B.RM-B270..RH-VLV,reheat valve cmd
+EBU3B.RM-B270..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B270..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B270..COMMONSP,zone air temp sp
+EBU3B.RM-B270..T-OCC,zone thermostat occupied cmd
+EBU3B.RM-B270..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B270..ZN-T,zone air temp sensor
+EBU3B.RM-B275..ACTCLGSP,zone air temp effective min sp
+EBU3B.RM-B275..ACTHTGSP,zone air temp effective max sp
+EBU3B.RM-B275..CLGPID-O,zone cooling cmd
+EBU3B.RM-B275..DPR-C,discharge air damper cmd
+EBU3B.RM-B275..DMPR-POS,discharge air damper sensor
+EBU3B.RM-B275..HTGPID-O,zone heating cmd
+EBU3B.RM-B275..CLGMAXFLO,discharge air flow max sp
+EBU3B.RM-B275..CLGMiNFLO,discharge air flow occ cooling min sp
+EBU3B.RM-B275..HTGFLOW,discharge air flow occ heating min sp
+EBU3B.RM-B275..OCC-CMD,zone occupied cmd
+EBU3B.RM-B275..RH-VLV,reheat valve cmd
+EBU3B.RM-B275..SUP-FLOW,discharge air flow sensor
+EBU3B.RM-B275..SUPFLO-SP,discharge air flow sp
+EBU3B.RM-B275..COMMONSP,zone air temp sp
+EBU3B.RM-B275..W-C-ADJ,zone thermostat temp adjust sp
+EBU3B.RM-B275..ZN-T,zone air temp sensor
+EBU3B.CRAC-1.ALRMPRES,alarm sensor
+EBU3B.CRAC-1.HUMIDITY,zone air humidity sensor
+EBU3B.CRAC-1.TEMPSETF,zone air temp sp
+EBU3B.CRAC-2.ALRMPRES,alarm sensor
+EBU3B.CRAC-2.HUMIDITY,zone air humidity sensor
+EBU3B.CRAC-2.TEMPSETF,zone air temp sp
+EBU3B.CRAC-3.ALRMPRES,alarm sensor
+EBU3B.CRAC-3.HUMIDITY,zone air humidity sensor
+EBU3B.CRAC-3.TEMPSETF,zone air temp sp
+EBU3B.CRAC-4.ALRMPRES,alarm sensor
+EBU3B.CRAC-4.HUMIDITY,zone air humidity sensor
+EBU3B.CRAC-4.TEMPSETF,zone air temp sp
+EBU3B.SF1.CURRENT,elec current sensor
+EBU3B.SF1.CURR-LIM,max elec current cmd
+EBU3B.SF1.DO1 CMD,do1 cmd
+EBU3B.SF1.DO2 CMD,do2 cmd
+EBU3B.SF1.FREQ-OUTPUT,elec frequency sensor
+EBU3B.SF1.PID-CTRL,pid control sensor
+EBU3B.SF1.PID GAIN,pid gain cmd
+EBU3B.SF1.RUN ENABLE,run enable cmd
+EBU3B.SF2.CURRENT,elec current sensor
+EBU3B.SF2.CURR-LIM,max elec current cmd
+EBU3B.SF2.DO1 CMD,do1 cmd
+EBU3B.SF2.DO2 CMD,do2 cmd
+EBU3B.SF2.FREQ-OUTPUT,elec frequency sensor
+EBU3B.SF2.PID-CTRL,pid control sensor
+EBU3B.SF2.PID GAIN,pid gain cmd
+EBU3B.SF2.RUN ENABLE,run enable cmd
+EBU3B.SF3.CURRENT,elec current sensor
+EBU3B.SF3.CURR-LIM,max elec current cmd
+EBU3B.SF3.DO1 CMD,do1 cmd
+EBU3B.SF3.DO2 CMD,do2 cmd
+EBU3B.SF3.FREQ-OUTPUT,elec frequency sensor
+EBU3B.SF3.PID-CTRL,pid control sensor
+EBU3B.SF3.PID GAIN,pid gain cmd
+EBU3B.SF3.RUN ENABLE,run enable cmd
+EBU3B.SF4.CURRENT,elec current sensor
+EBU3B.SF4.CURR-LIM,max elec current cmd
+EBU3B.SF4.DO1 CMD,do1 cmd
+EBU3B.SF4.DO2 CMD,do2 cmd
+EBU3B.SF4.FREQ-OUTPUT,elec frequency sensor
+EBU3B.SF4.PID-CTRL,pid control sensor
+EBU3B.SF4.PID GAIN,pid gain cmd
+EBU3B.SF4.RUN ENABLE,run enable cmd
+EBU3B.Unknown..ZN-T,zone air temp sensor
+EBU3B.CO2 Conrol..Co2 Differiential,building air co2 delta sensor
+EBU3B.RF4.RUN ENABLE,run enable cmd
