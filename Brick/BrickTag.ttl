@@ -727,9 +727,6 @@
  :Preheat  rdfs:subClassOf   :MeasurementProperty_Modifier;
 			 rdfs:label "Preheat"@en .
 
- :Alarm  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdfs:label "Alarm"@en .
-
  :Code  rdfs:subClassOf   :MeasurementProperty_Modifier;
 			 rdfs:label "Code"@en .
 
@@ -819,9 +816,6 @@
 
  :Status  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
 			 rdfs:label "Status"@en .
-
- :Alarm  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdfs:label "Alarm"@en .
 
  :CO2  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
 			 rdfs:label "CO2"@en .
@@ -1017,3 +1011,12 @@
 
  :Dew  rdfs:subClassOf   :MeasurementProperty_Modifier;
 			 rdfs:label "Dew"@en .
+
+ :Response  rdfs:subClassOf   :MeasurementProperty_Modifier;
+			 rdfs:label "Response"@en .
+
+ :Condenser  rdfs:subClassOf   :Equipment_HVAC;
+			 rdfs:label "Condenser"@en .
+
+ :WS  rdfs:subClassOf   :Equipment_Water_System;
+			 rdfs:label "WS"@en .
