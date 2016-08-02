@@ -245,8 +245,26 @@
  :Shutdown_Command  rdfs:subClassOf   :Command;
 			 rdfs:label "Shutdown Command"@en .
 
+ :Status  rdfs:subClassOf   :Point;
+			 rdfs:label "Status"@en .
+
  :VFD_Speed_Command  rdfs:subClassOf   :Command;
 			 rdfs:label "VFD Speed Command"@en .
+
+ :VFD_Speed_Status  rdfs:subClassOf   :Status;
+			 rdfs:label "VFD Speed Status"@en .
+
+ :Setpoint  rdfs:subClassOf   :Point;
+			 rdfs:label "Setpoint"@en .
+
+ :VFD_Speed_Setpoint  rdfs:subClassOf   :Setpoint;
+			 rdfs:label "VFD Speed Setpoint"@en .
+
+ :Sensor  rdfs:subClassOf   :Point;
+			 rdfs:label "Sensor"@en .
+
+ :VFD_Speed_Sensor  rdfs:subClassOf   :Sensor;
+			 rdfs:label "VFD Speed Sensor"@en .
 
  :Booster_Command  rdfs:subClassOf   :Command;
 			 rdfs:label "Booster Command"@en .
@@ -280,9 +298,6 @@
 
  :Water_Meter  rdfs:subClassOf   :Meter;
 			 rdfs:label "Water Meter"@en .
-
- :Sensor  rdfs:subClassOf   :Point;
-			 rdfs:label "Sensor"@en .
 
  :Air_Grains_Sensor  rdfs:subClassOf   :Sensor;
 			 rdfs:label "Air Grains Sensor"@en .
@@ -350,9 +365,6 @@
  :Pressure_Sensor  rdfs:subClassOf   :Sensor;
 			 rdfs:label "Pressure Sensor"@en .
 
- :Status  rdfs:subClassOf   :Point;
-			 rdfs:label "Status"@en .
-
  :Pressure_Status  rdfs:subClassOf   :Status;
 			 rdfs:label "Pressure Status"@en .
 
@@ -415,9 +427,6 @@
 
  :Water_Level_Sensor  rdfs:subClassOf   :Sensor;
 			 rdfs:label "Water Level Sensor"@en .
-
- :Setpoint  rdfs:subClassOf   :Point;
-			 rdfs:label "Setpoint"@en .
 
  :Air_Flow_Setpoint  rdfs:subClassOf   :Setpoint;
 			 rdfs:label "Air Flow Setpoint"@en .
@@ -605,9 +614,6 @@
  :Fan_Speed_Setpoint  rdfs:subClassOf   :Speed_Setpoint;
 			 rdfs:label "Fan Speed Setpoint"@en .
 
- :VFD_Speed_Setpoint  rdfs:subClassOf   :Speed_Setpoint;
-			 rdfs:label "VFD Speed Setpoint"@en .
-
  :Temperature_Setpoint  rdfs:subClassOf   :Setpoint;
 			 rdfs:label "Temperature Setpoint"@en .
 
@@ -778,26 +784,26 @@
 			 bf:usesTag tag:Storage;
 			 rdfs:label "Thermal Energy Storage"@en .
 
+ :FCP  rdfs:subClassOf   :Fire_Safety_System;
+			 bf:usesTag tag:FCP;
+			 rdfs:label "Fire Control Panel"@en .
+
  :Fire_Control_Panel  rdfs:subClassOf   :Fire_Safety_System;
 			 bf:usesTag tag:Fire;
 			 bf:usesTag tag:Control;
 			 bf:usesTag tag:Panel;
+			 owl:equivalentClass :FCP ;
 			 rdfs:label "Fire Control Panel"@en .
 
- :FCP  rdfs:subClassOf   :Fire_Safety_System;
-			 bf:usesTag tag:FCP;
-			 owl:equivalentClass :Fire_Control_Panel ;
-			 rdfs:label "Fire Control Panel"@en .
+ :AHU  rdfs:subClassOf   :HVAC;
+			 bf:usesTag tag:AHU;
+			 rdfs:label "Air Handler Unit"@en .
 
  :Air_Handler_Unit  rdfs:subClassOf   :HVAC;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Handler;
 			 bf:usesTag tag:Unit;
-			 rdfs:label "Air Handler Unit"@en .
-
- :AHU  rdfs:subClassOf   :HVAC;
-			 bf:usesTag tag:AHU;
-			 owl:equivalentClass :Air_Handler_Unit ;
+			 owl:equivalentClass :AHU ;
 			 rdfs:label "Air Handler Unit"@en .
 
  :Coil  rdfs:subClassOf   :HVAC;
@@ -871,15 +877,15 @@
 			 bf:usesTag tag:Valve;
 			 rdfs:label "Valve"@en .
 
- :VFD  rdfs:subClassOf   :HVAC;
-			 bf:usesTag tag:VFD;
-			 rdfs:label "Variable Frequency Drive"@en .
-
  :Variable_Frequency_Drive  rdfs:subClassOf   :HVAC;
 			 bf:usesTag tag:Variable;
 			 bf:usesTag tag:Frequency;
 			 bf:usesTag tag:Drive;
-			 owl:equivalentClass :VFD ;
+			 rdfs:label "Variable Frequency Drive"@en .
+
+ :VFD  rdfs:subClassOf   :HVAC;
+			 bf:usesTag tag:VFD;
+			 owl:equivalentClass :Variable_Frequency_Drive ;
 			 rdfs:label "Variable Frequency Drive"@en .
 
  :Heat_Wheel_VFD  rdfs:subClassOf   :AHU;
@@ -888,18 +894,18 @@
 			 bf:usesTag tag:VFD;
 			 rdfs:label "Heat Wheel VFD"@en .
 
- :Preheat_Hot_Water_Valve  rdfs:subClassOf   :AHU;
-			 bf:usesTag tag:Preheat;
+ :PreHeat_Hot_Water_Valve  rdfs:subClassOf   :AHU;
+			 bf:usesTag tag:PreHeat;
 			 bf:usesTag tag:Hot;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:Valve;
-			 rdfs:label "Preheat Hot Water Valve"@en .
+			 rdfs:label "PreHeat Hot Water Valve"@en .
 
- :Preheat_Valve_VFD  rdfs:subClassOf   :AHU;
-			 bf:usesTag tag:Preheat;
+ :PreHeat_Valve_VFD  rdfs:subClassOf   :AHU;
+			 bf:usesTag tag:PreHeat;
 			 bf:usesTag tag:Valve;
 			 bf:usesTag tag:VFD;
-			 rdfs:label "Preheat Valve VFD"@en .
+			 rdfs:label "PreHeat Valve VFD"@en .
 
  :Cooling_Coil  rdfs:subClassOf   :Coil;
 			 bf:usesTag tag:Cooling;
@@ -1020,15 +1026,15 @@
 			 bf:usesTag tag:Pump;
 			 rdfs:label "Hot Water Pump"@en .
 
- :FCU  rdfs:subClassOf   :Terminal_Unit;
-			 bf:usesTag tag:FCU;
-			 rdfs:label "Fan Coil Unit"@en .
-
  :Fan_Coil_Unit  rdfs:subClassOf   :Terminal_Unit;
 			 bf:usesTag tag:Fan;
 			 bf:usesTag tag:Coil;
 			 bf:usesTag tag:Unit;
-			 owl:equivalentClass :FCU ;
+			 rdfs:label "Fan Coil Unit"@en .
+
+ :FCU  rdfs:subClassOf   :Terminal_Unit;
+			 bf:usesTag tag:FCU;
+			 owl:equivalentClass :Fan_Coil_Unit ;
 			 rdfs:label "Fan Coil Unit"@en .
 
  :VAV  rdfs:subClassOf   :Terminal_Unit;
@@ -1090,27 +1096,27 @@
 			 bf:usesTag tag:Valve;
 			 rdfs:label "Isolation Valve"@en .
 
- :CWS  rdfs:subClassOf   :Water_System;
-			 bf:usesTag tag:CWS;
-			 rdfs:label "Chilled Water System"@en .
-
  :Chilled_Water_System  rdfs:subClassOf   :Water_System;
 			 bf:usesTag tag:Chilled;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:System;
-			 owl:equivalentClass :CWS ;
 			 rdfs:label "Chilled Water System"@en .
+
+ :CWS  rdfs:subClassOf   :Water_System;
+			 bf:usesTag tag:CWS;
+			 owl:equivalentClass :Chilled_Water_System ;
+			 rdfs:label "Chilled Water System"@en .
+
+ :DHWS  rdfs:subClassOf   :Water_System;
+			 bf:usesTag tag:DHWS;
+			 rdfs:label "Domestic Hot Water System"@en .
 
  :Domestic_Hot_Water_System  rdfs:subClassOf   :Water_System;
 			 bf:usesTag tag:Domestic;
 			 bf:usesTag tag:Hot;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:System;
-			 rdfs:label "Domestic Hot Water System"@en .
-
- :DHWS  rdfs:subClassOf   :Water_System;
-			 bf:usesTag tag:DHWS;
-			 owl:equivalentClass :Domestic_Hot_Water_System ;
+			 owl:equivalentClass :DHWS ;
 			 rdfs:label "Domestic Hot Water System"@en .
 
  :Hot_Water_System  rdfs:subClassOf   :Water_System;
@@ -1232,17 +1238,10 @@
 			 owl:equivalentClass :Motor_Current ;
 			 rdfs:label "Motor Current"@en .
 
- :PV_System_Output  rdfs:subClassOf   :Current;
-			 bf:usesTag tag:PV;
-			 bf:usesTag tag:System;
-			 bf:usesTag tag:Output;
-			 rdfs:label "Photovoltaic Current Output"@en .
-
  :Photovoltaic_Current_Output  rdfs:subClassOf   :Current;
 			 bf:usesTag tag:Photovoltaic;
 			 bf:usesTag tag:Current;
 			 bf:usesTag tag:Output;
-			 owl:equivalentClass :PV_System_Output ;
 			 rdfs:label "Photovoltaic Current Output"@en .
 
  :_PV_Current_Output  rdfs:subClassOf   :Current;
@@ -1250,6 +1249,13 @@
 			 bf:usesTag tag:Current;
 			 bf:usesTag tag:Output;
 			 owl:equivalentClass :Photovoltaic_Current_Output ;
+			 rdfs:label "Photovoltaic Current Output"@en .
+
+ :PV_System_Output  rdfs:subClassOf   :Current;
+			 bf:usesTag tag:PV;
+			 bf:usesTag tag:System;
+			 bf:usesTag tag:Output;
+			 owl:equivalentClass :_PV_Current_Output ;
 			 rdfs:label "Photovoltaic Current Output"@en .
 
  :Outside_Air_Dewpoint  rdfs:subClassOf   :Dewpoint;
@@ -1298,17 +1304,17 @@
 			 bf:usesTag tag:Flow;
 			 rdfs:label "Booster Fan Air Flow"@en .
 
- :Supply_Air_Flow  rdfs:subClassOf   :Air_Flow;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 rdfs:label "Discharge Air Flow"@en .
-
  :Discharge_Air_Flow  rdfs:subClassOf   :Air_Flow;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
-			 owl:equivalentClass :Supply_Air_Flow ;
+			 rdfs:label "Discharge Air Flow"@en .
+
+ :Supply_Air_Flow  rdfs:subClassOf   :Air_Flow;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 owl:equivalentClass :Discharge_Air_Flow ;
 			 rdfs:label "Discharge Air Flow"@en .
 
  :Exhaust_Air_Flow  rdfs:subClassOf   :Air_Flow;
@@ -1498,19 +1504,19 @@
 			 bf:usesTag tag:Speed;
 			 rdfs:label "Wind Speed"@en .
 
- :Chilled_Water_Supply_Temperature  rdfs:subClassOf   :Temperature;
-			 bf:usesTag tag:Chilled;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Temperature;
-			 rdfs:label "Chilled Water Discharge Temperature"@en .
-
  :Chilled_Water_Discharge_Temperature  rdfs:subClassOf   :Temperature;
 			 bf:usesTag tag:Chilled;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Temperature;
-			 owl:equivalentClass :Chilled_Water_Supply_Temperature ;
+			 rdfs:label "Chilled Water Discharge Temperature"@en .
+
+ :Chilled_Water_Supply_Temperature  rdfs:subClassOf   :Temperature;
+			 bf:usesTag tag:Chilled;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Temperature;
+			 owl:equivalentClass :Chilled_Water_Discharge_Temperature ;
 			 rdfs:label "Chilled Water Discharge Temperature"@en .
 
  :Chilled_Water_Return_Temperature  rdfs:subClassOf   :Temperature;
@@ -1633,36 +1639,36 @@
 			 bf:usesTag tag:Temperature;
 			 rdfs:label "Chilled Water Supply Return Differential Temperature"@en .
 
- :Heat_Wheel_Discharge_Air_Temperature  rdfs:subClassOf   :Temperature;
-			 bf:usesTag tag:Heat;
-			 bf:usesTag tag:Wheel;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 rdfs:label "Heat Wheel Discharge Air Temperature"@en .
-
  :Heat_Wheel_Supply_Air_Temperature  rdfs:subClassOf   :Temperature;
 			 bf:usesTag tag:Heat;
 			 bf:usesTag tag:Wheel;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
-			 owl:equivalentClass :Heat_Wheel_Discharge_Air_Temperature ;
 			 rdfs:label "Heat Wheel Discharge Air Temperature"@en .
 
- :Preheat_Discharge_Air_Temperature  rdfs:subClassOf   :Temperature;
-			 bf:usesTag tag:Preheat;
+ :Heat_Wheel_Discharge_Air_Temperature  rdfs:subClassOf   :Temperature;
+			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Wheel;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
-			 rdfs:label "Preheat Discharge Air Temperature"@en .
+			 owl:equivalentClass :Heat_Wheel_Supply_Air_Temperature ;
+			 rdfs:label "Heat Wheel Discharge Air Temperature"@en .
 
  :Preheat_Supply_Air_Temperature  rdfs:subClassOf   :Temperature;
 			 bf:usesTag tag:Preheat;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
-			 owl:equivalentClass :Preheat_Discharge_Air_Temperature ;
+			 rdfs:label "Preheat Discharge Air Temperature"@en .
+
+ :Preheat_Discharge_Air_Temperature  rdfs:subClassOf   :Temperature;
+			 bf:usesTag tag:Preheat;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 owl:equivalentClass :Preheat_Supply_Air_Temperature ;
 			 rdfs:label "Preheat Discharge Air Temperature"@en .
 
  :High_Temperature_Hot_Water_Return_Temperature  rdfs:subClassOf   :Hot_Water_Return_Temperature;
@@ -1701,15 +1707,15 @@
 			 bf:usesTag tag:Temperature;
 			 rdfs:label "Medium Temperature Hot Water Supply Temperature"@en .
 
- :Run_Time  rdfs:subClassOf   :Time;
-			 bf:usesTag tag:Run;
-			 bf:usesTag tag:Time;
-			 rdfs:label "Run Time"@en .
-
  :Running_Hour  rdfs:subClassOf   :Time;
 			 bf:usesTag tag:Running;
 			 bf:usesTag tag:Hour;
-			 owl:equivalentClass :Run_Time ;
+			 rdfs:label "Run Time"@en .
+
+ :Run_Time  rdfs:subClassOf   :Time;
+			 bf:usesTag tag:Run;
+			 bf:usesTag tag:Time;
+			 owl:equivalentClass :Running_Hour ;
 			 rdfs:label "Run Time"@en .
 
  :Motor_Torque  rdfs:subClassOf   :Torque;
@@ -1801,31 +1807,22 @@
 			 owl:equivalentClass :DI_Water_Alarm ;
 			 rdfs:label "Deionised Water Alarm"@en .
 
- :Discharge_Air_Smoke_Detected_Alarm  rdfs:subClassOf   :Alarm;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Smoke;
-			 bf:usesTag tag:Detected;
-			 bf:usesTag tag:Alarm;
-			 rdfs:label "Discharge Air Smoke Detected Alarm"@en .
-
  :Supply_Air_Smoke_Detected_Alarm  rdfs:subClassOf   :Alarm;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Smoke;
 			 bf:usesTag tag:Detected;
 			 bf:usesTag tag:Alarm;
-			 owl:equivalentClass :Discharge_Air_Smoke_Detected_Alarm ;
 			 rdfs:label "Discharge Air Smoke Detected Alarm"@en .
 
- :Discharge_Air_Temperature_High_Limit_Alarm  rdfs:subClassOf   :Alarm;
+ :Discharge_Air_Smoke_Detected_Alarm  rdfs:subClassOf   :Alarm;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:High;
-			 bf:usesTag tag:Limit;
+			 bf:usesTag tag:Smoke;
+			 bf:usesTag tag:Detected;
 			 bf:usesTag tag:Alarm;
-			 rdfs:label "Discharge Air Temperature High Limit Alarm"@en .
+			 owl:equivalentClass :Supply_Air_Smoke_Detected_Alarm ;
+			 rdfs:label "Discharge Air Smoke Detected Alarm"@en .
 
  :Supply_Air_Temperature_High_Limit_Alarm  rdfs:subClassOf   :Alarm;
 			 bf:usesTag tag:Supply;
@@ -1834,7 +1831,16 @@
 			 bf:usesTag tag:High;
 			 bf:usesTag tag:Limit;
 			 bf:usesTag tag:Alarm;
-			 owl:equivalentClass :Discharge_Air_Temperature_High_Limit_Alarm ;
+			 rdfs:label "Discharge Air Temperature High Limit Alarm"@en .
+
+ :Discharge_Air_Temperature_High_Limit_Alarm  rdfs:subClassOf   :Alarm;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:High;
+			 bf:usesTag tag:Limit;
+			 bf:usesTag tag:Alarm;
+			 owl:equivalentClass :Supply_Air_Temperature_High_Limit_Alarm ;
 			 rdfs:label "Discharge Air Temperature High Limit Alarm"@en .
 
  :Emergency_Generator_Alarm  rdfs:subClassOf   :Alarm;
@@ -2001,21 +2007,21 @@
 			 bf:usesTag tag:Alarm;
 			 rdfs:label "Chiller Failure Alarm"@en .
 
- :Chiller_Discharge_Water_Temperature_Alarm  rdfs:subClassOf   :Temperature_Alarm;
-			 bf:usesTag tag:Chiller;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Alarm;
-			 rdfs:label "Chiller Supply Water Temperature Alarm"@en .
-
  :Chiller_Supply_Water_Temperature_Alarm  rdfs:subClassOf   :Temperature_Alarm;
 			 bf:usesTag tag:Chiller;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Alarm;
-			 owl:equivalentClass :Chiller_Discharge_Water_Temperature_Alarm ;
+			 rdfs:label "Chiller Supply Water Temperature Alarm"@en .
+
+ :Chiller_Discharge_Water_Temperature_Alarm  rdfs:subClassOf   :Temperature_Alarm;
+			 bf:usesTag tag:Chiller;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Alarm;
+			 owl:equivalentClass :Chiller_Supply_Water_Temperature_Alarm ;
 			 rdfs:label "Chiller Supply Water Temperature Alarm"@en .
 
  :Cooling_Command  rdfs:subClassOf   :Command;
@@ -2034,19 +2040,19 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Damper Command"@en .
 
- :Discharge_Air_Flow_Command  rdfs:subClassOf   :Command;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Command;
-			 rdfs:label "Discharge Air Flow Command"@en .
-
  :Supply_Air_Flow_Command  rdfs:subClassOf   :Command;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Command;
-			 owl:equivalentClass :Discharge_Air_Flow_Command ;
+			 rdfs:label "Discharge Air Flow Command"@en .
+
+ :Discharge_Air_Flow_Command  rdfs:subClassOf   :Command;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Command;
+			 owl:equivalentClass :Supply_Air_Flow_Command ;
 			 rdfs:label "Discharge Air Flow Command"@en .
 
  :Emergency_Power_Off_Command  rdfs:subClassOf   :Command;
@@ -2095,15 +2101,15 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Luminance Command"@en .
 
- :Occupied_Command  rdfs:subClassOf   :Command;
-			 bf:usesTag tag:Occupied;
-			 bf:usesTag tag:Command;
-			 rdfs:label "Occupancy Command"@en .
-
  :Occupancy_Command  rdfs:subClassOf   :Command;
 			 bf:usesTag tag:Occupancy;
 			 bf:usesTag tag:Command;
-			 owl:equivalentClass :Occupied_Command ;
+			 rdfs:label "Occupancy Command"@en .
+
+ :Occupied_Command  rdfs:subClassOf   :Command;
+			 bf:usesTag tag:Occupied;
+			 bf:usesTag tag:Command;
+			 owl:equivalentClass :Occupancy_Command ;
 			 rdfs:label "Occupancy Command"@en .
 
  :Panel_Lockout_Command  rdfs:subClassOf   :Command;
@@ -2237,12 +2243,6 @@
 			 bf:usesTag tag:Enable;
 			 bf:usesTag tag:Command;
 			 rdfs:label "Run Enable Command"@en .
-
- :System_Enable_Command  rdfs:subClassOf   :Enable_Command;
-			 bf:usesTag tag:System;
-			 bf:usesTag tag:Enable;
-			 bf:usesTag tag:Command;
-			 rdfs:label "System Enable Command"@en .
 
  :Building_Exhaust_Fans_Stage_Command  rdfs:subClassOf   :Fans_Stage_Command;
 			 bf:usesTag tag:Building;
@@ -2400,6 +2400,11 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Shutdown Hot Water When Unoccupied Command"@en .
 
+ :System_Status  rdfs:subClassOf   :Status;
+			 bf:usesTag tag:System;
+			 bf:usesTag tag:Status;
+			 rdfs:label "System Status"@en .
+
  :System_Shutdown_Command  rdfs:subClassOf   :Shutdown_Command;
 			 bf:usesTag tag:System;
 			 bf:usesTag tag:Shutdown;
@@ -2430,6 +2435,56 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Hot Water Pump VFD Speed Command"@en .
 
+ :Return_Fan_VFD_Speed_Status  rdfs:subClassOf   :VFD_Speed_Status;
+			 bf:usesTag tag:Return;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Return Fan VFD Speed Status"@en .
+
+ :Discharge_Fan_VFD_Speed_Status  rdfs:subClassOf   :VFD_Speed_Status;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Supply Fan VFD Speed Status"@en .
+
+ :Supply_Fan_VFD_Speed_Status  rdfs:subClassOf   :VFD_Speed_Status;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Status;
+			 owl:equivalentClass :Discharge_Fan_VFD_Speed_Status ;
+			 rdfs:label "Supply Fan VFD Speed Status"@en .
+
+ :Return_Fan_VFD_Speed_Setpoint  rdfs:subClassOf   :VFD_Speed_Setpoint;
+			 bf:usesTag tag:Return;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Return Fan VFD Speed Setpoint"@en .
+
+ :Supply_Fan_VFD_Speed_Setpoint  rdfs:subClassOf   :VFD_Speed_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Supply Fan VFD Speed Setpoint"@en .
+
+ :Discharge_Fan_VFD_Speed_Setpoint  rdfs:subClassOf   :VFD_Speed_Setpoint;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Fan_VFD_Speed_Setpoint ;
+			 rdfs:label "Supply Fan VFD Speed Setpoint"@en .
+
  :Return_Fan_VFD_Speed_Command  rdfs:subClassOf   :VFD_Speed_Command;
 			 bf:usesTag tag:Return;
 			 bf:usesTag tag:Fan;
@@ -2438,22 +2493,47 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Return Fan VFD Speed Command"@en .
 
- :Supply_Fan_VFD_Speed_Command  rdfs:subClassOf   :VFD_Speed_Command;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:VFD;
-			 bf:usesTag tag:Speed;
-			 bf:usesTag tag:Command;
-			 rdfs:label "Supply Fan VFD Speed Command"@en .
-
  :Discharge_Fan_VFD_Speed_Command  rdfs:subClassOf   :VFD_Speed_Command;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Fan;
 			 bf:usesTag tag:VFD;
 			 bf:usesTag tag:Speed;
 			 bf:usesTag tag:Command;
-			 owl:equivalentClass :Supply_Fan_VFD_Speed_Command ;
 			 rdfs:label "Supply Fan VFD Speed Command"@en .
+
+ :Supply_Fan_VFD_Speed_Command  rdfs:subClassOf   :VFD_Speed_Command;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Command;
+			 owl:equivalentClass :Discharge_Fan_VFD_Speed_Command ;
+			 rdfs:label "Supply Fan VFD Speed Command"@en .
+
+ :Return_Fan_VFD_Speed_Sensor  rdfs:subClassOf   :VFD_Speed_Sensor;
+			 bf:usesTag tag:Return;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Sensor;
+			 rdfs:label "Return Fan VFD Speed Sensor"@en .
+
+ :Supply_Fan_VFD_Speed_Sensor  rdfs:subClassOf   :VFD_Speed_Sensor;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Sensor;
+			 rdfs:label "Supply Fan VFD Speed Sensor"@en .
+
+ :Discharge_Fan_VFD_Speed_Sensor  rdfs:subClassOf   :VFD_Speed_Sensor;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Speed;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Supply_Fan_VFD_Speed_Sensor ;
+			 rdfs:label "Supply Fan VFD Speed Sensor"@en .
 
  :Fan_Speed_Reset_Command  rdfs:subClassOf   :Reset_Command;
 			 bf:usesTag tag:Fan;
@@ -2560,17 +2640,17 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Return Fan Start Stop Command"@en .
 
- :Supply_Fan_Command  rdfs:subClassOf   :Fan_Command;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Command;
-			 rdfs:label "Supply Fan Command"@en .
-
  :Discharge_Fan_Command  rdfs:subClassOf   :Fan_Command;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Fan;
 			 bf:usesTag tag:Command;
-			 owl:equivalentClass :Supply_Fan_Command ;
+			 rdfs:label "Supply Fan Command"@en .
+
+ :Supply_Fan_Command  rdfs:subClassOf   :Fan_Command;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Command;
+			 owl:equivalentClass :Discharge_Fan_Command ;
 			 rdfs:label "Supply Fan Command"@en .
 
  :Supply_Fan_Start_Stop_Command  rdfs:subClassOf   :Start_Stop_Command;
@@ -2638,6 +2718,12 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Reheat Valve Command"@en .
 
+ :PreHeat_Valve_Command  rdfs:subClassOf   :Valve_Command;
+			 bf:usesTag tag:PreHeat;
+			 bf:usesTag tag:Valve;
+			 bf:usesTag tag:Command;
+			 rdfs:label "PreHeat Valve Command"@en .
+
  :Return_Air_Preheat_Valve_Command  rdfs:subClassOf   :Valve_Command;
 			 bf:usesTag tag:Return;
 			 bf:usesTag tag:Air;
@@ -2657,6 +2743,11 @@
 			 bf:usesTag tag:Power;
 			 bf:usesTag tag:Meter;
 			 rdfs:label "Power Meter"@en .
+
+ :Gas_Meter  rdfs:subClassOf   :Meter;
+			 bf:usesTag tag:Gas;
+			 bf:usesTag tag:Meter;
+			 rdfs:label "Gas Meter"@en .
 
  :Water_Meter  rdfs:subClassOf   :Meter;
 			 bf:usesTag tag:Water;
@@ -2737,6 +2828,12 @@
 			 bf:usesTag tag:Meter;
 			 rdfs:label "Yearly Steam Usage Meter"@en .
 
+ :Chilled_Water_Meter  rdfs:subClassOf   :Water_Meter;
+			 bf:usesTag tag:Chilled;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Meter;
+			 rdfs:label "Chilled Water Meter"@en .
+
  :Hot_Water_Meter  rdfs:subClassOf   :Water_Meter;
 			 bf:usesTag tag:Hot;
 			 bf:usesTag tag:Water;
@@ -2797,6 +2894,12 @@
 			 bf:usesTag tag:Humidity;
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Humidity Sensor"@en .
+
+ :Outside_Luminance_Sensor  rdfs:subClassOf   :Sensor;
+			 bf:usesTag tag:Outside;
+			 bf:usesTag tag:Luminance;
+			 bf:usesTag tag:Sensor;
+			 rdfs:label "Outside Luminance Sensor"@en .
 
  :Luminance_Sensor  rdfs:subClassOf   :Sensor;
 			 bf:usesTag tag:Luminance;
@@ -3027,19 +3130,19 @@
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Bypass Air Flow Sensor"@en .
 
- :Discharge_Air_Flow_Sensor  rdfs:subClassOf   :Air_Flow_Sensor;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Discharge Air Flow Sensor"@en .
-
  :Supply_Air_Flow_Sensor  rdfs:subClassOf   :Air_Flow_Sensor;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Discharge_Air_Flow_Sensor ;
+			 rdfs:label "Discharge Air Flow Sensor"@en .
+
+ :Discharge_Air_Flow_Sensor  rdfs:subClassOf   :Air_Flow_Sensor;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Supply_Air_Flow_Sensor ;
 			 rdfs:label "Discharge Air Flow Sensor"@en .
 
  :Exhaust_Air_Flow_Sensor  rdfs:subClassOf   :Air_Flow_Sensor;
@@ -3159,19 +3262,19 @@
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Output Frequency Sensor"@en .
 
- :Supply_Air_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Humidity;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Discharge Air Humidity Sensor"@en .
-
  :Discharge_Air_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Humidity;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Supply_Air_Humidity_Sensor ;
+			 rdfs:label "Discharge Air Humidity Sensor"@en .
+
+ :Supply_Air_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Humidity;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Discharge_Air_Humidity_Sensor ;
 			 rdfs:label "Discharge Air Humidity Sensor"@en .
 
  :Exhaust_Air_Humidity_Sensor  rdfs:subClassOf   :Humidity_Sensor;
@@ -3219,19 +3322,19 @@
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Exhaust Fan Piezoelectric Sensor"@en .
 
- :Discharge_Fan_Piezoelectric_Sensor  rdfs:subClassOf   :Piezoelectric_Sensor;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Piezoelectric;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Supply Fan Piezoelectric Sensor"@en .
-
  :Supply_Fan_Piezoelectric_Sensor  rdfs:subClassOf   :Piezoelectric_Sensor;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Fan;
 			 bf:usesTag tag:Piezoelectric;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Discharge_Fan_Piezoelectric_Sensor ;
+			 rdfs:label "Supply Fan Piezoelectric Sensor"@en .
+
+ :Discharge_Fan_Piezoelectric_Sensor  rdfs:subClassOf   :Piezoelectric_Sensor;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Piezoelectric;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Supply_Fan_Piezoelectric_Sensor ;
 			 rdfs:label "Supply Fan Piezoelectric Sensor"@en .
 
  :Cooling_Coil_Valve_Pressure_Sensor  rdfs:subClassOf   :Pressure_Sensor;
@@ -3254,21 +3357,21 @@
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Static Pressure Sensor"@en .
 
- :Supply_Air_Duct_Pressure_Status  rdfs:subClassOf   :Pressure_Status;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Duct;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Supply Air Duct Pressure Status"@en .
-
  :Discharge_Air_Duct_Pressure_Status  rdfs:subClassOf   :Pressure_Status;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Duct;
 			 bf:usesTag tag:Pressure;
 			 bf:usesTag tag:Status;
-			 owl:equivalentClass :Supply_Air_Duct_Pressure_Status ;
+			 rdfs:label "Supply Air Duct Pressure Status"@en .
+
+ :Supply_Air_Duct_Pressure_Status  rdfs:subClassOf   :Pressure_Status;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Duct;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Status;
+			 owl:equivalentClass :Discharge_Air_Duct_Pressure_Status ;
 			 rdfs:label "Supply Air Duct Pressure Status"@en .
 
  :Chilled_Water_Differential_Pressure_Sensor  rdfs:subClassOf   :Differential_Pressure_Sensor;
@@ -3369,21 +3472,21 @@
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Chilled Valve Pressure Sensor"@en .
 
- :Discharge_Air_Velocity_Pressure_Sensor  rdfs:subClassOf   :Velocity_Pressure_Sensor;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Velocity;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Discharge Air Velocity Pressure Sensor"@en .
-
  :Supply_Air_Velocity_Pressure_Sensor  rdfs:subClassOf   :Velocity_Pressure_Sensor;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Velocity;
 			 bf:usesTag tag:Pressure;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Discharge_Air_Velocity_Pressure_Sensor ;
+			 rdfs:label "Discharge Air Velocity Pressure Sensor"@en .
+
+ :Discharge_Air_Velocity_Pressure_Sensor  rdfs:subClassOf   :Velocity_Pressure_Sensor;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Velocity;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Supply_Air_Velocity_Pressure_Sensor ;
 			 rdfs:label "Discharge Air Velocity Pressure Sensor"@en .
 
  :Exhaust_Air_Velocity_Pressure_Sensor  rdfs:subClassOf   :Velocity_Pressure_Sensor;
@@ -3440,19 +3543,19 @@
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "CRAC Temperature Sensor"@en .
 
- :Discharge_Air_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Discharge Air Temperature Sensor"@en .
-
  :Supply_Air_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Discharge_Air_Temperature_Sensor ;
+			 rdfs:label "Discharge Air Temperature Sensor"@en .
+
+ :Discharge_Air_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Supply_Air_Temperature_Sensor ;
 			 rdfs:label "Discharge Air Temperature Sensor"@en .
 
  :Drive_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
@@ -3541,6 +3644,13 @@
 			 bf:usesTag tag:Sensor;
 			 owl:equivalentClass :Water_Supply_Temperature_Sensor ;
 			 rdfs:label "Water Supply Temperature Sensor"@en .
+
+ :Zone_Air_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
+			 bf:usesTag tag:Zone;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Sensor;
+			 rdfs:label "Zone Air Temperature Sensor"@en .
 
  :Zone_Temperature_Sensor  rdfs:subClassOf   :Temperature_Sensor;
 			 bf:usesTag tag:Zone;
@@ -3728,15 +3838,6 @@
 			 owl:equivalentClass :Chilled_Water_Supply_Temperature_Sensor ;
 			 rdfs:label "Chilled Water Supply Temperature Sensor"@en .
 
- :Heat_Exchanger_Supply_Water_Temperature_Sensor  rdfs:subClassOf   :Supply_Water_Temperature_Sensor;
-			 bf:usesTag tag:Heat;
-			 bf:usesTag tag:Exchanger;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Heat Exchanger Supply Water Temperature Sensor"@en .
-
  :Heat_Exchanger_Discharge_Water_Temperature_Sensor  rdfs:subClassOf   :Supply_Water_Temperature_Sensor;
 			 bf:usesTag tag:Heat;
 			 bf:usesTag tag:Exchanger;
@@ -3744,7 +3845,16 @@
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Heat_Exchanger_Supply_Water_Temperature_Sensor ;
+			 rdfs:label "Heat Exchanger Supply Water Temperature Sensor"@en .
+
+ :Heat_Exchanger_Supply_Water_Temperature_Sensor  rdfs:subClassOf   :Supply_Water_Temperature_Sensor;
+			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Exchanger;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Heat_Exchanger_Discharge_Water_Temperature_Sensor ;
 			 rdfs:label "Heat Exchanger Supply Water Temperature Sensor"@en .
 
  :Hot_Water_Discharge_Temperature_Sensor  rdfs:subClassOf   :Supply_Water_Temperature_Sensor;
@@ -3764,15 +3874,6 @@
 			 owl:equivalentClass :Hot_Water_Discharge_Temperature_Sensor ;
 			 rdfs:label "Hot Water Supply Temperature Sensor"@en .
 
- :Domestic_Hot_Water_Supply_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
-			 bf:usesTag tag:Domestic;
-			 bf:usesTag tag:Hot;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Domestic Hot Water Supply Temperature Sensor"@en .
-
  :Domestic_Hot_Water_Discharge_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
 			 bf:usesTag tag:Domestic;
 			 bf:usesTag tag:Hot;
@@ -3780,7 +3881,16 @@
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Domestic_Hot_Water_Supply_Temperature_Sensor ;
+			 rdfs:label "Domestic Hot Water Supply Temperature Sensor"@en .
+
+ :Domestic_Hot_Water_Supply_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
+			 bf:usesTag tag:Domestic;
+			 bf:usesTag tag:Hot;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Domestic_Hot_Water_Discharge_Temperature_Sensor ;
 			 rdfs:label "Domestic Hot Water Supply Temperature Sensor"@en .
 
  :High_Temperature_Hot_Water_Supply_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
@@ -3804,16 +3914,6 @@
 			 owl:equivalentClass :High_Temperature_Hot_Water_Supply_Temperature_Sensor ;
 			 rdfs:label "High Temperature Hot Water Supply Temperature Sensor"@en .
 
- :Medium_Temperature_Hot_Water_Supply_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
-			 bf:usesTag tag:Medium;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Hot;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Sensor;
-			 rdfs:label "Medium Temperature Hot Water Supply Temperature Sensor"@en .
-
  :Medium_Temperature_Hot_Water_Discharge_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
 			 bf:usesTag tag:Medium;
 			 bf:usesTag tag:Temperature;
@@ -3822,7 +3922,17 @@
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Sensor;
-			 owl:equivalentClass :Medium_Temperature_Hot_Water_Supply_Temperature_Sensor ;
+			 rdfs:label "Medium Temperature Hot Water Supply Temperature Sensor"@en .
+
+ :Medium_Temperature_Hot_Water_Supply_Temperature_Sensor  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Sensor;
+			 bf:usesTag tag:Medium;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Hot;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Sensor;
+			 owl:equivalentClass :Medium_Temperature_Hot_Water_Discharge_Temperature_Sensor ;
 			 rdfs:label "Medium Temperature Hot Water Supply Temperature Sensor"@en .
 
  :Average_Zone_Temperature_Sensor  rdfs:subClassOf   :Zone_Temperature_Sensor;
@@ -3921,6 +4031,11 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Acceleration Time Setpoint"@en .
 
+ :Condensator_Setpoint  rdfs:subClassOf   :Setpoint;
+			 bf:usesTag tag:Condensator;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Condensator Setpoint"@en .
+
  :Alarm_Delay_Setpoint  rdfs:subClassOf   :Setpoint;
 			 bf:usesTag tag:Alarm;
 			 bf:usesTag tag:Delay;
@@ -3974,6 +4089,13 @@
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Zone Temperature Setpoint"@en .
+
+ :Minimum_Fresh_Air_Setpoint  rdfs:subClassOf   :Setpoint;
+			 bf:usesTag tag:Minimum;
+			 bf:usesTag tag:Fresh;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Minimum Fresh Air Setpoint"@en .
 
  :Ventilation_Air_Flow_Ratio_Limit_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
 			 bf:usesTag tag:Ventilation;
@@ -4039,15 +4161,6 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Outside Air Damper Min Position Setpoint"@en .
 
- :Supply_Air_Damper_Max_Position_Setpoint  rdfs:subClassOf   :Damper_Position_Setpoint;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Damper;
-			 bf:usesTag tag:Max;
-			 bf:usesTag tag:Position;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Supply Air Damper Max Position Setpoint"@en .
-
  :Discharge_Air_Damper_Max_Position_Setpoint  rdfs:subClassOf   :Damper_Position_Setpoint;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
@@ -4055,7 +4168,16 @@
 			 bf:usesTag tag:Max;
 			 bf:usesTag tag:Position;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Supply_Air_Damper_Max_Position_Setpoint ;
+			 rdfs:label "Supply Air Damper Max Position Setpoint"@en .
+
+ :Supply_Air_Damper_Max_Position_Setpoint  rdfs:subClassOf   :Damper_Position_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Damper;
+			 bf:usesTag tag:Max;
+			 bf:usesTag tag:Position;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Discharge_Air_Damper_Max_Position_Setpoint ;
 			 rdfs:label "Supply Air Damper Max Position Setpoint"@en .
 
  :Chilled_Water_Differential_Pressure_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
@@ -4110,16 +4232,6 @@
 			 owl:equivalentClass :Cooling_Supply_Air_Temperature_Dead_Band_Setpoint ;
 			 rdfs:label "Cooling Discharge Air Temperature Dead Band Setpoint"@en .
 
- :Economizer_Supply_Air_Temperature_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
-			 bf:usesTag tag:Economizer;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Dead;
-			 bf:usesTag tag:Band;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Economizer Discharge Air Temperature Dead Band Setpoint"@en .
-
  :Economizer_Discharge_Air_Temperature_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
 			 bf:usesTag tag:Economizer;
 			 bf:usesTag tag:Discharge;
@@ -4128,7 +4240,17 @@
 			 bf:usesTag tag:Dead;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Economizer_Supply_Air_Temperature_Dead_Band_Setpoint ;
+			 rdfs:label "Economizer Discharge Air Temperature Dead Band Setpoint"@en .
+
+ :Economizer_Supply_Air_Temperature_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
+			 bf:usesTag tag:Economizer;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Dead;
+			 bf:usesTag tag:Band;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Economizer_Discharge_Air_Temperature_Dead_Band_Setpoint ;
 			 rdfs:label "Economizer Discharge Air Temperature Dead Band Setpoint"@en .
 
  :Heating_Supply_Air_Temperature_Dead_Band_Setpoint  rdfs:subClassOf   :Dead_Band_Setpoint;
@@ -4162,16 +4284,6 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Exhaust Air Stack Flow Dead Band Setpoint"@en .
 
- :Discharge_Air_Static_Pressure_Dead_Band_Setpoint  rdfs:subClassOf   :Static_Pressure_Dead_Band_Setpoint;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Static;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Dead;
-			 bf:usesTag tag:Band;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Static Pressure Dead Band Setpoint"@en .
-
  :Supply_Air_Static_Pressure_Dead_Band_Setpoint  rdfs:subClassOf   :Static_Pressure_Dead_Band_Setpoint;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
@@ -4180,7 +4292,17 @@
 			 bf:usesTag tag:Dead;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Discharge_Air_Static_Pressure_Dead_Band_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Dead Band Setpoint"@en .
+
+ :Discharge_Air_Static_Pressure_Dead_Band_Setpoint  rdfs:subClassOf   :Static_Pressure_Dead_Band_Setpoint;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Static;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Dead;
+			 bf:usesTag tag:Band;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Air_Static_Pressure_Dead_Band_Setpoint ;
 			 rdfs:label "Discharge Air Static Pressure Dead Band Setpoint"@en .
 
  :Exhaust_Air_Static_Pressure_Dead_Band_Setpoint  rdfs:subClassOf   :Static_Pressure_Dead_Band_Setpoint;
@@ -4261,17 +4383,17 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Occupied Heating Temperature Dead Band Setpoint"@en .
 
- :Cooling_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
-			 bf:usesTag tag:Cooling;
-			 bf:usesTag tag:Request;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Cooling Demand Setpoint"@en .
-
  :Cooling_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 bf:usesTag tag:Cooling;
 			 bf:usesTag tag:Demand;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Cooling_Request_Setpoint ;
+			 rdfs:label "Cooling Demand Setpoint"@en .
+
+ :Cooling_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 bf:usesTag tag:Cooling;
+			 bf:usesTag tag:Request;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Cooling_Demand_Setpoint ;
 			 rdfs:label "Cooling Demand Setpoint"@en .
 
  :Cooling_Request_Percent_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
@@ -4305,24 +4427,24 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Heat Request Percent Setpoint"@en .
 
- :Heat_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
-			 bf:usesTag tag:Heat;
-			 bf:usesTag tag:Request;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Heating Demand Setpoint"@en .
-
  :Heating_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 bf:usesTag tag:Heating;
 			 bf:usesTag tag:Demand;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Heat_Request_Setpoint ;
 			 rdfs:label "Heating Demand Setpoint"@en .
 
- :Preheat_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
-			 bf:usesTag tag:Preheat;
+ :Heat_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Request;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Heating_Demand_Setpoint ;
+			 rdfs:label "Heating Demand Setpoint"@en .
+
+ :PreHeat_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 bf:usesTag tag:PreHeat;
 			 bf:usesTag tag:Demand;
 			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Preheat Demand Setpoint"@en .
+			 rdfs:label "PreHeat Demand Setpoint"@en .
 
  :Economizer_Disable_Fixed_Dew_Point_Setpoint  rdfs:subClassOf   :Economizer_Dew_Point_Setpoint;
 			 bf:usesTag tag:Economizer;
@@ -4374,19 +4496,19 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Economizer Enable Fixed Enthalpy Setpoint"@en .
 
- :Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Flow Setpoint"@en .
-
  :Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Discharge_Air_Flow_Setpoint ;
+			 rdfs:label "Discharge Air Flow Setpoint"@en .
+
+ :Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Air_Flow_Setpoint ;
 			 rdfs:label "Discharge Air Flow Setpoint"@en .
 
  :Economizer_Outside_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
@@ -4430,15 +4552,6 @@
 			 owl:equivalentClass :Heating_Supply_Air_Flow_Setpoint ;
 			 rdfs:label "Heating Discharge Air Flow Setpoint"@en .
 
- :Cooling_Max_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
-			 bf:usesTag tag:Cooling;
-			 bf:usesTag tag:Max;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Cooling Max Discharge Air Flow Setpoint"@en .
-
  :Cooling_Max_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
 			 bf:usesTag tag:Cooling;
 			 bf:usesTag tag:Max;
@@ -4446,7 +4559,16 @@
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Cooling_Max_Supply_Air_Flow_Setpoint ;
+			 rdfs:label "Cooling Max Discharge Air Flow Setpoint"@en .
+
+ :Cooling_Max_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
+			 bf:usesTag tag:Cooling;
+			 bf:usesTag tag:Max;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Cooling_Max_Discharge_Air_Flow_Setpoint ;
 			 rdfs:label "Cooling Max Discharge Air Flow Setpoint"@en .
 
  :Cooling_Min_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
@@ -4487,15 +4609,6 @@
 			 owl:equivalentClass :Occupied_Cooling_Discharge_Air_Flow_Setpoint ;
 			 rdfs:label "Occupied Cooling Discharge Air Flow Setpoint"@en .
 
- :Unoccupied_Cooling_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
-			 bf:usesTag tag:Unoccupied;
-			 bf:usesTag tag:Cooling;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Unoccupied Cooling Discharge Air Flow Setpoint"@en .
-
  :Unoccupied_Cooling_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
 			 bf:usesTag tag:Unoccupied;
 			 bf:usesTag tag:Cooling;
@@ -4503,7 +4616,16 @@
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Unoccupied_Cooling_Discharge_Air_Flow_Setpoint ;
+			 rdfs:label "Unoccupied Cooling Discharge Air Flow Setpoint"@en .
+
+ :Unoccupied_Cooling_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Cooling_Discharge_Air_Flow_Setpoint;
+			 bf:usesTag tag:Unoccupied;
+			 bf:usesTag tag:Cooling;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Unoccupied_Cooling_Supply_Air_Flow_Setpoint ;
 			 rdfs:label "Unoccupied Cooling Discharge Air Flow Setpoint"@en .
 
  :Occupied_Cooling_Max_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Occupied_Cooling_Discharge_Air_Flow_Setpoint;
@@ -4527,16 +4649,6 @@
 			 owl:equivalentClass :Occupied_Cooling_Max_Supply_Air_Flow_Setpoint ;
 			 rdfs:label "Occupied Cooling Max Discharge Air Flow Setpoint"@en .
 
- :Occupied_Cooling_Min_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Occupied_Cooling_Discharge_Air_Flow_Setpoint;
-			 bf:usesTag tag:Occupied;
-			 bf:usesTag tag:Cooling;
-			 bf:usesTag tag:Min;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Occupied Cooling Min Discharge Air Flow Setpoint"@en .
-
  :Occupied_Cooling_Min_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Occupied_Cooling_Discharge_Air_Flow_Setpoint;
 			 bf:usesTag tag:Occupied;
 			 bf:usesTag tag:Cooling;
@@ -4545,7 +4657,17 @@
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Occupied_Cooling_Min_Supply_Air_Flow_Setpoint ;
+			 rdfs:label "Occupied Cooling Min Discharge Air Flow Setpoint"@en .
+
+ :Occupied_Cooling_Min_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Occupied_Cooling_Discharge_Air_Flow_Setpoint;
+			 bf:usesTag tag:Occupied;
+			 bf:usesTag tag:Cooling;
+			 bf:usesTag tag:Min;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Occupied_Cooling_Min_Discharge_Air_Flow_Setpoint ;
 			 rdfs:label "Occupied Cooling Min Discharge Air Flow Setpoint"@en .
 
  :Heating_Max_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Heating_Discharge_Air_Flow_Setpoint;
@@ -4586,15 +4708,6 @@
 			 owl:equivalentClass :Heating_Min_Discharge_Air_Flow_Setpoint ;
 			 rdfs:label "Heating Min Discharge Air Flow Setpoint"@en .
 
- :Occupied_Heating_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Heating_Discharge_Air_Flow_Setpoint;
-			 bf:usesTag tag:Occupied;
-			 bf:usesTag tag:Heating;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Occupied Heating Discharge Air Flow Setpoint"@en .
-
  :Occupied_Heating_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Heating_Discharge_Air_Flow_Setpoint;
 			 bf:usesTag tag:Occupied;
 			 bf:usesTag tag:Heating;
@@ -4602,7 +4715,16 @@
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Occupied_Heating_Discharge_Air_Flow_Setpoint ;
+			 rdfs:label "Occupied Heating Discharge Air Flow Setpoint"@en .
+
+ :Occupied_Heating_Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Heating_Discharge_Air_Flow_Setpoint;
+			 bf:usesTag tag:Occupied;
+			 bf:usesTag tag:Heating;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Occupied_Heating_Supply_Air_Flow_Setpoint ;
 			 rdfs:label "Occupied Heating Discharge Air Flow Setpoint"@en .
 
  :Occupied_Heating_Max_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Occupied_Heating_Discharge_Air_Flow_Setpoint;
@@ -4673,17 +4795,6 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Chilled Water Differential Pressure Increase Decrease Step Setpoint"@en .
 
- :Discharge_Air_Static_Pressure_Increase_Decrease_Step_Setpoint  rdfs:subClassOf   :Increase_Decrease_Step_Setpoint;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Static;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Increase;
-			 bf:usesTag tag:Decrease;
-			 bf:usesTag tag:Step;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Static Pressure Increase Decrease Step Setpoint"@en .
-
  :Supply_Air_Static_Pressure_Increase_Decrease_Step_Setpoint  rdfs:subClassOf   :Increase_Decrease_Step_Setpoint;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
@@ -4693,18 +4804,19 @@
 			 bf:usesTag tag:Decrease;
 			 bf:usesTag tag:Step;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Discharge_Air_Static_Pressure_Increase_Decrease_Step_Setpoint ;
 			 rdfs:label "Discharge Air Static Pressure Increase Decrease Step Setpoint"@en .
 
- :Supply_Air_Temperature_Setpoint_Increase_Decrease_Step  rdfs:subClassOf   :Increase_Decrease_Step_Setpoint;
-			 bf:usesTag tag:Supply;
+ :Discharge_Air_Static_Pressure_Increase_Decrease_Step_Setpoint  rdfs:subClassOf   :Increase_Decrease_Step_Setpoint;
+			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Setpoint;
+			 bf:usesTag tag:Static;
+			 bf:usesTag tag:Pressure;
 			 bf:usesTag tag:Increase;
 			 bf:usesTag tag:Decrease;
 			 bf:usesTag tag:Step;
-			 rdfs:label "Discharge Air Temperature Setpoint Increase Decrease Step"@en .
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Air_Static_Pressure_Increase_Decrease_Step_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Increase Decrease Step Setpoint"@en .
 
  :Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step  rdfs:subClassOf   :Increase_Decrease_Step_Setpoint;
 			 bf:usesTag tag:Discharge;
@@ -4714,7 +4826,17 @@
 			 bf:usesTag tag:Increase;
 			 bf:usesTag tag:Decrease;
 			 bf:usesTag tag:Step;
-			 owl:equivalentClass :Supply_Air_Temperature_Setpoint_Increase_Decrease_Step ;
+			 rdfs:label "Discharge Air Temperature Setpoint Increase Decrease Step"@en .
+
+ :Supply_Air_Temperature_Setpoint_Increase_Decrease_Step  rdfs:subClassOf   :Increase_Decrease_Step_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Setpoint;
+			 bf:usesTag tag:Increase;
+			 bf:usesTag tag:Decrease;
+			 bf:usesTag tag:Step;
+			 owl:equivalentClass :Discharge_Air_Temperature_Setpoint_Increase_Decrease_Step ;
 			 rdfs:label "Discharge Air Temperature Setpoint Increase Decrease Step"@en .
 
  :Chilled_Water_Differential_Pressure_Integral_Time_Setpoint  rdfs:subClassOf   :Integral_Time_Setpoint;
@@ -4735,16 +4857,6 @@
 			 bf:usesTag tag:Factor;
 			 rdfs:label "Supply Air Integrative Gain Factor"@en .
 
- :Supply_Air_Static_Pressure_Integral_Time_Setpoint  rdfs:subClassOf   :Integral_Time_Setpoint;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Static;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Integral;
-			 bf:usesTag tag:Time;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Static Pressure Integral Time Setpoint"@en .
-
  :Discharge_Air_Static_Pressure_Integral_Time_Setpoint  rdfs:subClassOf   :Integral_Time_Setpoint;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
@@ -4753,7 +4865,17 @@
 			 bf:usesTag tag:Integral;
 			 bf:usesTag tag:Time;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Supply_Air_Static_Pressure_Integral_Time_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Integral Time Setpoint"@en .
+
+ :Supply_Air_Static_Pressure_Integral_Time_Setpoint  rdfs:subClassOf   :Integral_Time_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Static;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Integral;
+			 bf:usesTag tag:Time;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Discharge_Air_Static_Pressure_Integral_Time_Setpoint ;
 			 rdfs:label "Discharge Air Static Pressure Integral Time Setpoint"@en .
 
  :Chilled_Water_Pump_Differential_Pressure_Integration_Time_Setpoint  rdfs:subClassOf   :Differential_Pressure_Integral_Time;
@@ -4866,17 +4988,6 @@
 			 owl:equivalentClass :Thermal_Energy_Storage_Discharge_Water_Differential_Pressure_Integral_Time_Setpoint ;
 			 rdfs:label "Thermal Energy Storage Supply Water Differential Pressure Integral Time Setpoint"@en .
 
- :Heat_Exchanger_Supply_Water_Temperature_Integral_Time_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Integral_Time_Setpoint;
-			 bf:usesTag tag:Heat;
-			 bf:usesTag tag:Exchanger;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Integral;
-			 bf:usesTag tag:Time;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Heat Exchanger Supply Water Temperature Integral Time Setpoint"@en .
-
  :Heat_Exchanger_Discharge_Water_Temperature_Integral_Time_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Integral_Time_Setpoint;
 			 bf:usesTag tag:Heat;
 			 bf:usesTag tag:Exchanger;
@@ -4886,7 +4997,18 @@
 			 bf:usesTag tag:Integral;
 			 bf:usesTag tag:Time;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Heat_Exchanger_Supply_Water_Temperature_Integral_Time_Setpoint ;
+			 rdfs:label "Heat Exchanger Supply Water Temperature Integral Time Setpoint"@en .
+
+ :Heat_Exchanger_Supply_Water_Temperature_Integral_Time_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Integral_Time_Setpoint;
+			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Exchanger;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Integral;
+			 bf:usesTag tag:Time;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Heat_Exchanger_Discharge_Water_Temperature_Integral_Time_Setpoint ;
 			 rdfs:label "Heat Exchanger Supply Water Temperature Integral Time Setpoint"@en .
 
  :Chiller_Max_Load_Setpoint  rdfs:subClassOf   :Max_Load_Setpoint;
@@ -4979,21 +5101,21 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Chilled Water Static Pressure Setpoint"@en .
 
- :Supply_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Static_Pressure_Setpoint;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Static;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Static Pressure Setpoint"@en .
-
  :Discharge_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Static_Pressure_Setpoint;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Static;
 			 bf:usesTag tag:Pressure;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Supply_Air_Static_Pressure_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Setpoint"@en .
+
+ :Supply_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Static_Pressure_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Static;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Discharge_Air_Static_Pressure_Setpoint ;
 			 rdfs:label "Discharge Air Static Pressure Setpoint"@en .
 
  :Exhaust_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Static_Pressure_Setpoint;
@@ -5054,15 +5176,6 @@
 			 owl:equivalentClass :Max_Supply_Air_Static_Pressure_Setpoint ;
 			 rdfs:label "Max Discharge Air Static Pressure Setpoint"@en .
 
- :Min_Supply_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Discharge_Air_Static_Pressure_Setpoint;
-			 bf:usesTag tag:Min;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Static;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Min Discharge Air Static Pressure Setpoint"@en .
-
  :Min_Discharge_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Discharge_Air_Static_Pressure_Setpoint;
 			 bf:usesTag tag:Min;
 			 bf:usesTag tag:Discharge;
@@ -5070,7 +5183,16 @@
 			 bf:usesTag tag:Static;
 			 bf:usesTag tag:Pressure;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Min_Supply_Air_Static_Pressure_Setpoint ;
+			 rdfs:label "Min Discharge Air Static Pressure Setpoint"@en .
+
+ :Min_Supply_Air_Static_Pressure_Setpoint  rdfs:subClassOf   :Discharge_Air_Static_Pressure_Setpoint;
+			 bf:usesTag tag:Min;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Static;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Min_Discharge_Air_Static_Pressure_Setpoint ;
 			 rdfs:label "Min Discharge Air Static Pressure Setpoint"@en .
 
  :Chilled_Water_Differential_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
@@ -5091,16 +5213,6 @@
 			 bf:usesTag tag:Factor;
 			 rdfs:label "Supply Air Proportional Gain Factor"@en .
 
- :Discharge_Air_Static_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Static;
-			 bf:usesTag tag:Pressure;
-			 bf:usesTag tag:Proportional;
-			 bf:usesTag tag:Band;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Static Pressure Proportional Band Setpoint"@en .
-
  :Supply_Air_Static_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
@@ -5109,7 +5221,17 @@
 			 bf:usesTag tag:Proportional;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Discharge_Air_Static_Pressure_Proportional_Band_Setpoint ;
+			 rdfs:label "Discharge Air Static Pressure Proportional Band Setpoint"@en .
+
+ :Discharge_Air_Static_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Static;
+			 bf:usesTag tag:Pressure;
+			 bf:usesTag tag:Proportional;
+			 bf:usesTag tag:Band;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Air_Static_Pressure_Proportional_Band_Setpoint ;
 			 rdfs:label "Discharge Air Static Pressure Proportional Band Setpoint"@en .
 
  :Chilled_Water_Pump_Differential_Pressure_Proportional_Band_Setpoint  rdfs:subClassOf   :Differential_Pressure_Proportional_Band;
@@ -5133,16 +5255,6 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Hot Water Differential Pressure Proportional Band Setpoint"@en .
 
- :Cooling_Supply_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
-			 bf:usesTag tag:Cooling;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Proportional;
-			 bf:usesTag tag:Band;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Cooling Discharge Air Temperature Proportional Band Setpoint"@en .
-
  :Cooling_Discharge_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
 			 bf:usesTag tag:Cooling;
 			 bf:usesTag tag:Discharge;
@@ -5151,18 +5263,18 @@
 			 bf:usesTag tag:Proportional;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Cooling_Supply_Air_Temperature_Proportional_Band_Setpoint ;
 			 rdfs:label "Cooling Discharge Air Temperature Proportional Band Setpoint"@en .
 
- :Economizer_Supply_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
-			 bf:usesTag tag:Economizer;
+ :Cooling_Supply_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
+			 bf:usesTag tag:Cooling;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Proportional;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Economizer Discharge Air Temperature Proportional Band Setpoint"@en .
+			 owl:equivalentClass :Cooling_Discharge_Air_Temperature_Proportional_Band_Setpoint ;
+			 rdfs:label "Cooling Discharge Air Temperature Proportional Band Setpoint"@en .
 
  :Economizer_Discharge_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
 			 bf:usesTag tag:Economizer;
@@ -5172,7 +5284,17 @@
 			 bf:usesTag tag:Proportional;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Economizer_Supply_Air_Temperature_Proportional_Band_Setpoint ;
+			 rdfs:label "Economizer Discharge Air Temperature Proportional Band Setpoint"@en .
+
+ :Economizer_Supply_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
+			 bf:usesTag tag:Economizer;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Proportional;
+			 bf:usesTag tag:Band;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Economizer_Discharge_Air_Temperature_Proportional_Band_Setpoint ;
 			 rdfs:label "Economizer Discharge Air Temperature Proportional Band Setpoint"@en .
 
  :Heating_Supply_Air_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Proportional_Band_Setpoint;
@@ -5243,17 +5365,6 @@
 			 owl:equivalentClass :Thermal_Energy_Storage_Supply_Water_Differential_Pressure_Proportional_Band_Setpoint ;
 			 rdfs:label "Thermal Energy Storage Supply Water Differential Pressure Proportional Band Setpoint"@en .
 
- :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Proportional_Band_Setpoint;
-			 bf:usesTag tag:Heat;
-			 bf:usesTag tag:Exchanger;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Proportional;
-			 bf:usesTag tag:Band;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Heat Exchanger Supply Water Temperature Proportional Band Setpoint"@en .
-
  :Heat_Exchanger_Discharge_Water_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Proportional_Band_Setpoint;
 			 bf:usesTag tag:Heat;
 			 bf:usesTag tag:Exchanger;
@@ -5263,7 +5374,18 @@
 			 bf:usesTag tag:Proportional;
 			 bf:usesTag tag:Band;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band_Setpoint ;
+			 rdfs:label "Heat Exchanger Supply Water Temperature Proportional Band Setpoint"@en .
+
+ :Heat_Exchanger_Supply_Water_Temperature_Proportional_Band_Setpoint  rdfs:subClassOf   :Supply_Water_Temperature_Proportional_Band_Setpoint;
+			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Exchanger;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Proportional;
+			 bf:usesTag tag:Band;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Heat_Exchanger_Discharge_Water_Temperature_Proportional_Band_Setpoint ;
 			 rdfs:label "Heat Exchanger Supply Water Temperature Proportional Band Setpoint"@en .
 
  :Discharge_Air_Temperature_Reset_High_Setpoint  rdfs:subClassOf   :Reset_Setpoint;
@@ -5304,15 +5426,6 @@
 			 owl:equivalentClass :Supply_Air_Temperature_Reset_Low_Setpoint ;
 			 rdfs:label "Discharge Air Temperature Reset Low Setpoint"@en .
 
- :Discharge_Air_Temperature_Reset_Differential_Setpoint  rdfs:subClassOf   :Temperature_Differential_Reset_Setpoint;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Reset;
-			 bf:usesTag tag:Differential;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Temperature Reset Differential Setpoint"@en .
-
  :Supply_Air_Temperature_Reset_Differential_Setpoint  rdfs:subClassOf   :Temperature_Differential_Reset_Setpoint;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
@@ -5320,7 +5433,16 @@
 			 bf:usesTag tag:Reset;
 			 bf:usesTag tag:Differential;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Discharge_Air_Temperature_Reset_Differential_Setpoint ;
+			 rdfs:label "Discharge Air Temperature Reset Differential Setpoint"@en .
+
+ :Discharge_Air_Temperature_Reset_Differential_Setpoint  rdfs:subClassOf   :Temperature_Differential_Reset_Setpoint;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Reset;
+			 bf:usesTag tag:Differential;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Air_Temperature_Reset_Differential_Setpoint ;
 			 rdfs:label "Discharge Air Temperature Reset Differential Setpoint"@en .
 
  :Outside_Air_Temperature_High_Reset_Setpoint  rdfs:subClassOf   :Temperature_High_Reset_Setpoint;
@@ -5451,19 +5573,19 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Disable Hot Water System Outside Air Temperature Setpoint"@en .
 
- :Supply_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Temperature Setpoint"@en .
-
  :Discharge_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Supply_Air_Temperature_Setpoint ;
+			 rdfs:label "Discharge Air Temperature Setpoint"@en .
+
+ :Supply_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Discharge_Air_Temperature_Setpoint ;
 			 rdfs:label "Discharge Air Temperature Setpoint"@en .
 
  :Economizer_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
@@ -5536,19 +5658,19 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Schedule Temperature Setpoint"@en .
 
- :Discharge_Water_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Supply Water Temperature Setpoint"@en .
-
  :Supply_Water_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Discharge_Water_Temperature_Setpoint ;
+			 rdfs:label "Supply Water Temperature Setpoint"@en .
+
+ :Discharge_Water_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Supply_Water_Temperature_Setpoint ;
 			 rdfs:label "Supply Water Temperature Setpoint"@en .
 
  :Auto_Cooling_Temperature_Setpoint  rdfs:subClassOf   :Cooling_Temperature_Setpoint;
@@ -5595,21 +5717,21 @@
 			 owl:equivalentClass :Discharge_Air_Temperature_Cooling_Setpoint ;
 			 rdfs:label "Discharge Air Temperature Cooling Setpoint"@en .
 
- :Supply_Air_Temperature_Heating_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Heating;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Discharge Air Temperature Heating Setpoint"@en .
-
  :Discharge_Air_Temperature_Heating_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Heating;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Supply_Air_Temperature_Heating_Setpoint ;
+			 rdfs:label "Discharge Air Temperature Heating Setpoint"@en .
+
+ :Supply_Air_Temperature_Heating_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Heating;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Discharge_Air_Temperature_Heating_Setpoint ;
 			 rdfs:label "Discharge Air Temperature Heating Setpoint"@en .
 
  :Economizer_Differential_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
@@ -5620,30 +5742,22 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Economizer Differential Air Temperature Setpoint"@en .
 
- :Max_Supply_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
-			 bf:usesTag tag:Max;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Max Discharge Air Temperature Setpoint"@en .
-
  :Max_Discharge_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 bf:usesTag tag:Max;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Max_Supply_Air_Temperature_Setpoint ;
 			 rdfs:label "Max Discharge Air Temperature Setpoint"@en .
 
- :Min_Discharge_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
-			 bf:usesTag tag:Min;
-			 bf:usesTag tag:Discharge;
+ :Max_Supply_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 bf:usesTag tag:Max;
+			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Min Discharge Air Temperature Setpoint"@en .
+			 owl:equivalentClass :Max_Discharge_Air_Temperature_Setpoint ;
+			 rdfs:label "Max Discharge Air Temperature Setpoint"@en .
 
  :Min_Supply_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
 			 bf:usesTag tag:Min;
@@ -5651,7 +5765,15 @@
 			 bf:usesTag tag:Air;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Min_Discharge_Air_Temperature_Setpoint ;
+			 rdfs:label "Min Discharge Air Temperature Setpoint"@en .
+
+ :Min_Discharge_Air_Temperature_Setpoint  rdfs:subClassOf   :Temperature_Setpoint;
+			 bf:usesTag tag:Min;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Min_Supply_Air_Temperature_Setpoint ;
 			 rdfs:label "Min Discharge Air Temperature Setpoint"@en .
 
  :Economizer_Disable_Differential_Temperature_Setpoint  rdfs:subClassOf   :Economizer_Temperature_Setpoint;
@@ -5719,15 +5841,6 @@
 			 owl:equivalentClass :Heat_Exchanger_Supply_Water_Temperature_Setpoint ;
 			 rdfs:label "Heat Exchanger Supply Water Temperature Setpoint"@en .
 
- :Domestic_Hot_Water_Discharge_Temperature_Setpoint  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Setpoint;
-			 bf:usesTag tag:Domestic;
-			 bf:usesTag tag:Hot;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Domestic Hot Water Supply Temperature Setpoint"@en .
-
  :Domestic_Hot_Water_Supply_Temperature_Setpoint  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Setpoint;
 			 bf:usesTag tag:Domestic;
 			 bf:usesTag tag:Hot;
@@ -5735,20 +5848,17 @@
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Domestic_Hot_Water_Discharge_Temperature_Setpoint ;
 			 rdfs:label "Domestic Hot Water Supply Temperature Setpoint"@en .
 
- :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Setpoint  rdfs:subClassOf   :Load_Shed_Supply_Water_Temperature_Setpoint;
-			 bf:usesTag tag:Medium;
-			 bf:usesTag tag:Temperature;
+ :Domestic_Hot_Water_Discharge_Temperature_Setpoint  rdfs:subClassOf   :Hot_Water_Supply_Temperature_Setpoint;
+			 bf:usesTag tag:Domestic;
 			 bf:usesTag tag:Hot;
 			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Load;
-			 bf:usesTag tag:Shed;
 			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Medium Temperature Hot Water Supply Temperature Load Shed Setpoint"@en .
+			 owl:equivalentClass :Domestic_Hot_Water_Supply_Temperature_Setpoint ;
+			 rdfs:label "Domestic Hot Water Supply Temperature Setpoint"@en .
 
  :Medium_Temperature_Hot_Water_Discharge_Temperature_Load_Shed_Setpoint  rdfs:subClassOf   :Load_Shed_Supply_Water_Temperature_Setpoint;
 			 bf:usesTag tag:Medium;
@@ -5760,7 +5870,19 @@
 			 bf:usesTag tag:Load;
 			 bf:usesTag tag:Shed;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Setpoint ;
+			 rdfs:label "Medium Temperature Hot Water Supply Temperature Load Shed Setpoint"@en .
+
+ :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Setpoint  rdfs:subClassOf   :Load_Shed_Supply_Water_Temperature_Setpoint;
+			 bf:usesTag tag:Medium;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Hot;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Load;
+			 bf:usesTag tag:Shed;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Medium_Temperature_Hot_Water_Discharge_Temperature_Load_Shed_Setpoint ;
 			 rdfs:label "Medium Temperature Hot Water Supply Temperature Load Shed Setpoint"@en .
 
  :Thumbwheel_Temperature_High_Limit_Setpoint  rdfs:subClassOf   :Temperature_High_Limit_Setpoint;
@@ -5788,19 +5910,19 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Thumbwheel Temperature Low Limit Setpoint"@en .
 
- :Zone_Temperature_High_Setpoint  rdfs:subClassOf   :Zone_Temperature_Setpoint;
-			 bf:usesTag tag:Zone;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:High;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Zone Cooling Temperature Setpoint"@en .
-
  :Zone_Cooling_Temperature_Setpoint  rdfs:subClassOf   :Zone_Temperature_Setpoint;
 			 bf:usesTag tag:Zone;
 			 bf:usesTag tag:Cooling;
 			 bf:usesTag tag:Temperature;
 			 bf:usesTag tag:Setpoint;
-			 owl:equivalentClass :Zone_Temperature_High_Setpoint ;
+			 rdfs:label "Zone Cooling Temperature Setpoint"@en .
+
+ :Zone_Temperature_High_Setpoint  rdfs:subClassOf   :Zone_Temperature_Setpoint;
+			 bf:usesTag tag:Zone;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:High;
+			 bf:usesTag tag:Setpoint;
+			 owl:equivalentClass :Zone_Cooling_Temperature_Setpoint ;
 			 rdfs:label "Zone Cooling Temperature Setpoint"@en .
 
  :Zone_Heating_Temperature_Setpoint  rdfs:subClassOf   :Zone_Temperature_Setpoint;
@@ -6126,18 +6248,6 @@
 			 bf:usesTag tag:Status;
 			 rdfs:label "Medium Temperature Hot Water Differential Pressure Load Shed Status"@en .
 
- :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Status  rdfs:subClassOf   :Differential_Pressure_Load_Shed_Status;
-			 bf:usesTag tag:Medium;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Hot;
-			 bf:usesTag tag:Water;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Temperature;
-			 bf:usesTag tag:Load;
-			 bf:usesTag tag:Shed;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Medium Temperature Hot Water Supply Temperature Load Shed Status"@en .
-
  :Medium_Temperature_Hot_Water_Discharge_Temperature_Load_Shed_Status  rdfs:subClassOf   :Differential_Pressure_Load_Shed_Status;
 			 bf:usesTag tag:Medium;
 			 bf:usesTag tag:Temperature;
@@ -6148,7 +6258,19 @@
 			 bf:usesTag tag:Load;
 			 bf:usesTag tag:Shed;
 			 bf:usesTag tag:Status;
-			 owl:equivalentClass :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Status ;
+			 rdfs:label "Medium Temperature Hot Water Supply Temperature Load Shed Status"@en .
+
+ :Medium_Temperature_Hot_Water_Supply_Temperature_Load_Shed_Status  rdfs:subClassOf   :Differential_Pressure_Load_Shed_Status;
+			 bf:usesTag tag:Medium;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Hot;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Temperature;
+			 bf:usesTag tag:Load;
+			 bf:usesTag tag:Shed;
+			 bf:usesTag tag:Status;
+			 owl:equivalentClass :Medium_Temperature_Hot_Water_Discharge_Temperature_Load_Shed_Status ;
 			 rdfs:label "Medium Temperature Hot Water Supply Temperature Load Shed Status"@en .
 
  :Economizer_Mode_Status  rdfs:subClassOf   :Mode_Status;
@@ -6343,34 +6465,34 @@
 			 bf:usesTag tag:Status;
 			 rdfs:label "Run Status"@en .
 
- :Supply_Fan_Start_Stop_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Start;
-			 bf:usesTag tag:Stop;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Supply Fan Start Stop Status"@en .
-
  :Discharge_Fan_Start_Stop_Status  rdfs:subClassOf   :Start_Stop_Status;
 			 bf:usesTag tag:Discharge;
 			 bf:usesTag tag:Fan;
 			 bf:usesTag tag:Start;
 			 bf:usesTag tag:Stop;
 			 bf:usesTag tag:Status;
-			 owl:equivalentClass :Supply_Fan_Start_Stop_Status ;
 			 rdfs:label "Supply Fan Start Stop Status"@en .
 
- :Discharge_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 bf:usesTag tag:Discharge;
+ :Supply_Fan_Start_Stop_Status  rdfs:subClassOf   :Start_Stop_Status;
+			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Start;
+			 bf:usesTag tag:Stop;
 			 bf:usesTag tag:Status;
-			 rdfs:label "Supply Fan Status"@en .
+			 owl:equivalentClass :Discharge_Fan_Start_Stop_Status ;
+			 rdfs:label "Supply Fan Start Stop Status"@en .
 
  :Supply_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
 			 bf:usesTag tag:Supply;
 			 bf:usesTag tag:Fan;
 			 bf:usesTag tag:Status;
-			 owl:equivalentClass :Discharge_Fan_Status ;
+			 rdfs:label "Supply Fan Status"@en .
+
+ :Discharge_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 owl:equivalentClass :Supply_Fan_Status ;
 			 rdfs:label "Supply Fan Status"@en .
 
  :Standby_Fan_Status  rdfs:subClassOf   :Fan_Start_Stop_Status;
@@ -6445,15 +6567,15 @@
 			 bf:usesTag tag:Water;
 			 rdfs:label "Chilled Water"@en .
 
- :DI_Water  rdfs:subClassOf   :Water;
-			 bf:usesTag tag:DI;
-			 bf:usesTag tag:Water;
-			 rdfs:label "Deionised Water"@en .
-
  :Deionised_Water  rdfs:subClassOf   :Water;
 			 bf:usesTag tag:Deionised;
 			 bf:usesTag tag:Water;
-			 owl:equivalentClass :DI_Water ;
+			 rdfs:label "Deionised Water"@en .
+
+ :DI_Water  rdfs:subClassOf   :Water;
+			 bf:usesTag tag:DI;
+			 bf:usesTag tag:Water;
+			 owl:equivalentClass :Deionised_Water ;
 			 rdfs:label "Deionised Water"@en .
 
  :Hot_Water  rdfs:subClassOf   :Water;
