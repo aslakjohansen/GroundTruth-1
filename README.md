@@ -13,7 +13,7 @@ This repository contains Brick schema, actual building instances of Brick, appli
 
 /building_instances/: contains actual building instances from multiple campuses.
 
-/etc/instance_generators/: contains codes about how each group generates its building instance with Brick.
+/etc/instance_generators/: contains codes of how each group generates its building instance with Brick.
 
 /etc/haystack_instances/: contains our effort to describe bulidings with Project Haystack
 
