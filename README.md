@@ -1,7 +1,7 @@
 This repository contains Brick schema, actual building instances of Brick, application examples and other auxiliary information.
 
 
-Navigation
+===Navigation===
 
 /Brick/: contains the entire Brick schema.
 
