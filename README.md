@@ -1,6 +1,8 @@
 This repository contains Brick schema, actual building instances of Brick, application examples and other auxiliary information.
 
+
 Navigation
+
 /Brick/: contains the entire Brick schema.
 
 /Brick/Brick.ttl : Tagsets with hierarchy
