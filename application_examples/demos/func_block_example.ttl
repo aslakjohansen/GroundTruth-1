@@ -86,6 +86,9 @@ ex:ValveWaterFunctionBlock
   bf:hasInput ex:Hot_Water_Valve_Inflow ;
   bf:hasOutput ex:Hot_Water_Valve_Outflow ;
 .
+
+##### Below are new things I suggest. #####
+
 bf:ControlFunctionBlock
   rdf:type owl:Class ;
   rdfs:subClassOf bf:FunctionBlock ;
