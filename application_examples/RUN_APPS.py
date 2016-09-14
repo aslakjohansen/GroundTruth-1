@@ -42,9 +42,9 @@ def new_graph():
     g.bind( 'bf', BRICKFRAME)
     g.bind( 'btag', BRICKTAG)
     g.bind( 'owl', OWL)
-    g.parse('../BuildingSchema/Brick.ttl', format='turtle')
-    g.parse('../BuildingSchema/BrickFrame.ttl', format='turtle')
-    g.parse('../BuildingSchema/BrickTag.ttl', format='turtle')
+    g.parse('../Brick/Brick.ttl', format='turtle')
+    g.parse('../Brick/BrickFrame.ttl', format='turtle')
+    g.parse('../Brick/BrickTag.ttl', format='turtle')
     return g
 
 g = new_graph()
