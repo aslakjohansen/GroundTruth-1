@@ -72,10 +72,17 @@ def gen_extensions():
     GTC_Room_Functional_Block = GTC['GTC_Room_Functional_Block']
     g.add( (GTC_Room_Functional_Block, RDF.isSubClassOf, BRICK['Functional_Block']) )
     
-    Celcius_Temperature_Sensor = GTC['Celcius_Temperature_Sensor']
-    g.add( (Celcius_Temperature_Sensor, RDFS.subClassOf, BRICK['Sensor']) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
-    g.add( (Celcius_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
+    Celcius_Room_Temperature_Sensor = GTC['Celcius_Temperature_Sensor']
+    g.add( (Celcius_Room_Temperature_Sensor, RDFS.subClassOf, BRICK['Sensor']) )
+    g.add( (Celcius_Room_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Room']) )
+    g.add( (Celcius_Room_Temperature_Sensor, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
+    g.add( (Celcius_Room_Temperature_Sensor, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
+    
+    Celcius_Room_Temperature_Setpoint = GTC['Celcius_Room_Temperature_Setpoint']
+    g.add( (Celcius_Room_Temperature_Setpoint, RDFS.subClassOf, BRICK['Setpoint']) )
+    g.add( (Celcius_Room_Temperature_Setpoint, BRICKFRAME.hasTag, BRICKTAG['Room']) )
+    g.add( (Celcius_Room_Temperature_Setpoint, BRICKFRAME.hasTag, BRICKTAG['Temperature']) )
+    g.add( (Celcius_Room_Temperature_Setpoint, BRICKFRAME.hasUnit, BRICKTAG['Celcius']) )
     
     LEDGO_Lighting_System = GTC['LEDGO_Lighting_System']
     g.add( (LEDGO_Lighting_System, RDFS.subClassOf, BRICK['Lighting_System']) )
@@ -563,14 +570,64 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
     # hasPoint
     g.add( (room, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
     
-    # temperature sensor
+    # temperature
     if 'tr1' in rooms_data[room_name] and rooms_data[room_name]['tr1']!='':
-        entity = GTC[prefix+'/temperature']
-        g.add( (entity, RDF.type, GTC['Celcius_Temperature_Sensor']) )
+        # sensor
+        entity = GTC[prefix+'/temperature_sensor']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Sensor']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['tr1'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (room  , BRICKFRAME['hasPoint'], entity) )
         g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint: Comfort temperature setpoint 1
+        entity = GTC[prefix+'/temperature_setpoint_comfort1']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Setpoint']) )
+        g.add( (entity, RDFS.label, 'Comfort temperature setpoint 1') )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint: Comfort temperature setpoint 2
+        entity = GTC[prefix+'/temperature_setpoint_comfort2']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Setpoint']) )
+        g.add( (entity, RDFS.label, 'Comfort temperature setpoint 2') )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint: Night temperature setpoint 1
+        entity = GTC[prefix+'/temperature_setpoint_night1']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Setpoint']) )
+        g.add( (entity, RDFS.label, 'Night temperature setpoint 1') )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint: Night temperature setpoint 2
+        entity = GTC[prefix+'/temperature_setpoint_night2']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Setpoint']) )
+        g.add( (entity, RDFS.label, 'Night temperature setpoint 2') )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint: Standby temperature setpoint 1
+        entity = GTC[prefix+'/temperature_setpoint_standby1']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Setpoint']) )
+        g.add( (entity, RDFS.label, 'Standby temperature setpoint 1') )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint: Standby temperature setpoint 2
+        entity = GTC[prefix+'/temperature_setpoint_standby2']
+        g.add( (entity, RDF.type, GTC['Celcius_Room_Temperature_Setpoint']) )
+        g.add( (entity, RDFS.label, 'Standby temperature setpoint 2') )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
     
     # CO2
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
