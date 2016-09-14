@@ -631,6 +631,18 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (room  , BRICKFRAME['hasPoint'], entity) )
         g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
         
+        # heating deadband
+        entity = GTC[prefix+'/temperature_heating_deadband']
+        g.add( (entity, RDF.type, BRICK['Heating_Discharge_Air_Temperature_Dead_Band_setpoint']) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # cooling deadband
+        entity = GTC[prefix+'/temperature_cooling_deadband']
+        g.add( (entity, RDF.type, BRICK['Cooling_Discharge_Air_Temperature_Dead_Band_setpoint']) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
     
     # CO2
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
