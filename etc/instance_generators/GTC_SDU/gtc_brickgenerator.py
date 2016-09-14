@@ -16,7 +16,6 @@ Point count:
 TODO:
 - add media relations
 - find a better name for IJ_Valve_Functional_Block
-- what is the difference between isLocatedIn and partOf?
 - define Celcius_Temperature_Sensor
 - add zone literal?
 """
@@ -573,10 +572,19 @@ def gen_room (prefix, room_name, floors, gtc_data, rooms_data, vav_data, meterma
         g.add( (room  , BRICKFRAME['hasPoint'], entity) )
         g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
     
-    # CO2 sensor
+    # CO2
     if 'co2' in rooms_data[room_name] and rooms_data[room_name]['co2']!='':
-        entity = GTC[prefix+'/co2']
+        # sensor
+        entity = GTC[prefix+'/co2_sensor']
         g.add( (entity, RDF.type, BRICK['CO2_Sensor']) )
+        g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['co2'])) )
+        g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
+        g.add( (room  , BRICKFRAME['hasPoint'], entity) )
+        g.add( (entity, BRICKFRAME['hasPoint'], metermap[rooms_data[room_name]['submeter']]) )
+        
+        # setpoint
+        entity = GTC[prefix+'/co2_setpoint']
+        g.add( (entity, RDF.type, BRICK['CO2_Setpoint']) )
         g.add( (entity, RDFS.label, Literal(rooms_data[room_name]['co2'])) )
         g.add( (entity, BRICKFRAME['isLocatedIn'], room) )
         g.add( (room  , BRICKFRAME['hasPoint'], entity) )
