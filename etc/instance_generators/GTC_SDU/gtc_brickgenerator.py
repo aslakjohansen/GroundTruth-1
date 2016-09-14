@@ -873,6 +873,8 @@ def gen_building (prefix):
     district_return_temp = GTC[prefix+'/district_return_temp']
     district_valve       = GTC[prefix+'/district_valve']
     district_rect        = GTC[prefix+'/district_rectifier']
+    wind_dir             = GTC[prefix+'/wind_direction']
+    wind_spd             = GTC[prefix+'/wind_speed']
     
     # misc
     gen_misc(prefix+'/misc', floors)
@@ -908,6 +910,8 @@ def gen_building (prefix):
     g.add( (district_return_temp, RDF.type,   GTC['Celcius_Temperature_Sensor']) )
     g.add( (district_valve      , RDF.type, BRICK['Valve']) )
     g.add( (district_rect       , RDF.type,   GTC['Rectifier']) )
+    g.add( (wind_dir            , RDF.type,   GTC['Wind_Direction_Sensor']) )
+    g.add( (wind_spd            , RDF.type,   GTC['Wind_Speed_Sensor']) )
     
     # feeds
     g.add( (district_meter['metered_supply'], BRICKFRAME['feeds'], radiator_htb['pi']) )
@@ -1065,6 +1069,8 @@ def gen_building (prefix):
         g.add( (entity , BRICKFRAME['hasPoint'], metermap['-A1']) )
     for entity in entity_points:
         g.add( (ahu , BRICKFRAME['hasPoint'], entity) )
+    g.add( (building , BRICKFRAME['hasPoint'], wind_dir) )
+    g.add( (building , BRICKFRAME['hasPoint'], wind_spd) )
     
 
 ################################################################################
