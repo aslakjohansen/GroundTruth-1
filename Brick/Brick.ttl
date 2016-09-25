@@ -275,6 +275,10 @@
 			 rdf:type   owl:Class ;
 			 rdfs:label "Enable Command"@en .
 
+ :Disable_Command  rdfs:subClassOf   :Command;
+			 rdf:type   owl:Class ;
+			 rdfs:label "Disable Command"@en .
+
  :Fans_Stage_Command  rdfs:subClassOf   :Command;
 			 rdf:type   owl:Class ;
 			 rdfs:label "Fans Stage Command"@en .
@@ -647,6 +651,10 @@
 			 rdf:type   owl:Class ;
 			 rdfs:label "Flow Setpoint"@en .
 
+ :Fan_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
+			 rdf:type   owl:Class ;
+			 rdfs:label "Fan Air Flow Setpoint"@en .
+
  :Discharge_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
 			 rdf:type   owl:Class ;
 			 rdfs:label "Discharge Air Flow Setpoint"@en .
@@ -891,6 +899,10 @@
 			 rdf:type   owl:Class ;
 			 rdfs:label "Enable Status"@en .
 
+ :Fan_Status  rdfs:subClassOf   :Status;
+			 rdf:type   owl:Class ;
+			 rdfs:label "Fan Status"@en .
+
  :Fault_Status  rdfs:subClassOf   :Status;
 			 rdf:type   owl:Class ;
 			 rdfs:label "Fault Status"@en .
@@ -935,13 +947,13 @@
 			 rdf:type   owl:Class ;
 			 rdfs:label "Start Stop Status"@en .
 
- :Fan_Start_Stop_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 rdf:type   owl:Class ;
-			 rdfs:label "Fan Start Stop Status"@en .
-
  :Pump_Start_Stop_Status  rdfs:subClassOf   :Start_Stop_Status;
 			 rdf:type   owl:Class ;
 			 rdfs:label "Pump Start Stop Status"@en .
+
+ :Pump_Status  rdfs:subClassOf   :Start_Stop_Status;
+			 rdf:type   owl:Class ;
+			 rdfs:label "Pump Status"@en .
 
  :Valve_Status  rdfs:subClassOf   :Status;
 			 rdf:type   owl:Class ;
@@ -998,6 +1010,11 @@
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Enable_Command ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Disable_Command ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -1421,6 +1438,11 @@
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Exhaust_Fan_System_Enable_Command ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Exhaust_Fan_Disable_Command ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -1895,6 +1917,11 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Cooling_Request_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Cooling_Request_Percent_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -1905,7 +1932,12 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Heat_Request_Percent_Setpoint ;
+				 owl:someValuesFrom :Heating_Request_Percent_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Heating_Request_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -1915,7 +1947,7 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :PreHeat_Demand_Setpoint ;
+				 owl:someValuesFrom :Preheat_Demand_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -1925,12 +1957,12 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Exhaust_Fan_Air_Flow_Setpoint ;
+				 owl:someValuesFrom :Outside_Min_Air_Flow_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Outside_Min_Air_Flow_Setpoint ;
+				 owl:someValuesFrom :Exhaust_Fan_Air_Flow_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -2070,6 +2102,16 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Outside_Air_Temperature_High_Reset_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Outside_Air_Temperature_Low_Reset_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Discharge_Air_Flow_Reset_Low_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -2175,6 +2217,21 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Exhaust_Fan_Status ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Return_Fan_Status ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Supply_Fan_Status ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Pre_Filter_Status ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -2220,11 +2277,6 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Exhaust_Fan_Status ;
-				 ] ;
-			 rdfs:subClassOf [
-				 rdf:type owl:Restriction ;
-				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Fan_Start_Stop_Status ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -2235,17 +2287,7 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Return_Fan_Status ;
-				 ] ;
-			 rdfs:subClassOf [
-				 rdf:type owl:Restriction ;
-				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Supply_Fan_Start_Stop_Status ;
-				 ] ;
-			 rdfs:subClassOf [
-				 rdf:type owl:Restriction ;
-				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Supply_Fan_Status ;
 				 ] ;
 			 rdfs:label "Air Handler Unit"@en .
 
@@ -2380,6 +2422,11 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Disable_Command ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Humidify_Command ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -2500,6 +2547,11 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Standby_Fan_Status ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Humidifier_Fault_Status ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -2541,11 +2593,6 @@
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Run_Status ;
-				 ] ;
-			 rdfs:subClassOf [
-				 rdf:type owl:Restriction ;
-				 owl:onProperty bf:hasPoint ;
-				 owl:someValuesFrom :Standby_Fan_Status ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -2761,6 +2808,11 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :VFD_Enable_Command ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :System_Enable_Command ;
 				 ] ;
 			 rdfs:subClassOf [
@@ -2832,6 +2884,11 @@
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Running_Hour_Sensor ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Current_Sensor ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -3324,6 +3381,11 @@
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Fault_Status ;
 				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Fan_Status ;
+				 ] ;
 			 rdfs:label "Fan Coil Unit"@en .
 
  :Variable_Air_Volume  rdfs:subClassOf   :Terminal_Unit;
@@ -3500,12 +3562,27 @@
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Cooling_Request_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Heating_Request_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Heating_Demand_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Discharge_Air_Flow_Setpoint ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Booster_Fan_Air_Flow_Setpoint ;
 				 ] ;
 			 rdfs:subClassOf [
 				 rdf:type owl:Restriction ;
@@ -4154,6 +4231,11 @@
 				 rdf:type owl:Restriction ;
 				 owl:onProperty bf:hasPoint ;
 				 owl:someValuesFrom :Heat_Exchanger_System_Enable_Status ;
+				 ] ;
+			 rdfs:subClassOf [
+				 rdf:type owl:Restriction ;
+				 owl:onProperty bf:hasPoint ;
+				 owl:someValuesFrom :Hot_Water_Pump_Status ;
 				 ] ;
 			 rdfs:label "Hot Water System"@en .
 
@@ -5286,6 +5368,12 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Enable Command"@en .
 
+ :Disable_Command  rdfs:subClassOf   :Command;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Disable;
+			 bf:usesTag tag:Command;
+			 rdfs:label "Disable Command"@en .
+
  :Frequency_Command  rdfs:subClassOf   :Command;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Frequency;
@@ -5422,6 +5510,13 @@
 			 bf:usesTag tag:Command;
 			 rdfs:label "Run Direction Command"@en .
 
+ :VFD_Enable_Command  rdfs:subClassOf   :Enable_Command;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:VFD;
+			 bf:usesTag tag:Enable;
+			 bf:usesTag tag:Command;
+			 rdfs:label "VFD Enable Command"@en .
+
  :System_Enable_Command  rdfs:subClassOf   :Enable_Command;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:System;
@@ -5480,6 +5575,14 @@
 			 bf:usesTag tag:Enable;
 			 bf:usesTag tag:Command;
 			 rdfs:label "Run Enable Command"@en .
+
+ :Exhaust_Fan_Disable_Command  rdfs:subClassOf   :Disable_Command;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Exhaust;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Disable;
+			 bf:usesTag tag:Command;
+			 rdfs:label "Exhaust Fan Disable Command"@en .
 
  :Building_Exhaust_Fans_Stage_Command  rdfs:subClassOf   :Fans_Stage_Command;
 			 rdf:type   owl:Class ;
@@ -6322,6 +6425,12 @@
 			 bf:usesTag tag:Adjust;
 			 bf:usesTag tag:Sensor;
 			 rdfs:label "Warm Cool Adjust Sensor"@en .
+
+ :Current_Sensor  rdfs:subClassOf   :Sensor;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Current;
+			 bf:usesTag tag:Sensor;
+			 rdfs:label "Current Sensor"@en .
 
  :Outside_Air_Grains_Sensor  rdfs:subClassOf   :Air_Grains_Sensor;
 			 rdf:type   owl:Class ;
@@ -7925,6 +8034,13 @@
 			 owl:equivalentClass :Cooling_Request_Setpoint ;
 			 rdfs:label "Cooling Demand Setpoint"@en .
 
+ :Cooling_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Cooling;
+			 bf:usesTag tag:Request;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Cooling Request Setpoint"@en .
+
  :Cooling_Request_Percent_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Cooling;
@@ -7952,13 +8068,20 @@
 			 owl:equivalentClass :Discharge_Air_Flow_Demand_Setpoint ;
 			 rdfs:label "Discharge Air Flow Demand Setpoint"@en .
 
- :Heat_Request_Percent_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :Heating_Request_Percent_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Heating;
 			 bf:usesTag tag:Request;
 			 bf:usesTag tag:Percent;
 			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Heat Request Percent Setpoint"@en .
+			 rdfs:label "Heating Request Percent Setpoint"@en .
+
+ :Heating_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Heating;
+			 bf:usesTag tag:Request;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Heating Request Setpoint"@en .
 
  :Heating_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 rdf:type   owl:Class ;
@@ -7967,20 +8090,20 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Heating Demand Setpoint"@en .
 
- :Heat_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :Heating_Request_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Heat;
+			 bf:usesTag tag:Heating;
 			 bf:usesTag tag:Request;
 			 bf:usesTag tag:Setpoint;
 			 owl:equivalentClass :Heating_Demand_Setpoint ;
 			 rdfs:label "Heating Demand Setpoint"@en .
 
- :PreHeat_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
+ :Preheat_Demand_Setpoint  rdfs:subClassOf   :Demand_Setpoint;
 			 rdf:type   owl:Class ;
-			 bf:usesTag tag:PreHeat;
+			 bf:usesTag tag:Preheat;
 			 bf:usesTag tag:Demand;
 			 bf:usesTag tag:Setpoint;
-			 rdfs:label "PreHeat Demand Setpoint"@en .
+			 rdfs:label "Preheat Demand Setpoint"@en .
 
  :Economizer_Disable_Fixed_Dewpoint_Setpoint  rdfs:subClassOf   :Economizer_Dewpoint_Setpoint;
 			 rdf:type   owl:Class ;
@@ -8062,15 +8185,6 @@
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Economizer Outside Air Flow Setpoint"@en .
 
- :Exhaust_Fan_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
-			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Exhaust;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Air;
-			 bf:usesTag tag:Flow;
-			 bf:usesTag tag:Setpoint;
-			 rdfs:label "Exhaust Fan Air Flow Setpoint"@en .
-
  :Outside_Min_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Outside;
@@ -8079,6 +8193,32 @@
 			 bf:usesTag tag:Flow;
 			 bf:usesTag tag:Setpoint;
 			 rdfs:label "Outside Min Air Flow Setpoint"@en .
+
+ :Fan_Air_Flow_Setpoint  rdfs:subClassOf   :Air_Flow_Setpoint;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Fan Air Flow Setpoint"@en .
+
+ :Booster_Fan_Air_Flow_Setpoint  rdfs:subClassOf   :Fan_Air_Flow_Setpoint;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Booster;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Booster Fan Air Flow Setpoint"@en .
+
+ :Exhaust_Fan_Air_Flow_Setpoint  rdfs:subClassOf   :Fan_Air_Flow_Setpoint;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Exhaust;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Air;
+			 bf:usesTag tag:Flow;
+			 bf:usesTag tag:Setpoint;
+			 rdfs:label "Exhaust Fan Air Flow Setpoint"@en .
 
  :Heating_Supply_Air_Flow_Setpoint  rdfs:subClassOf   :Discharge_Air_Flow_Setpoint;
 			 rdf:type   owl:Class ;
@@ -9804,6 +9944,12 @@
 			 bf:usesTag tag:Status;
 			 rdfs:label "System Shutdown Status"@en .
 
+ :Fan_Status  rdfs:subClassOf   :Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Fan Status"@en .
+
  :Turn_Off_Status  rdfs:subClassOf   :Status;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Turn;
@@ -9908,6 +10054,42 @@
 			 bf:usesTag tag:Enable;
 			 bf:usesTag tag:Status;
 			 rdfs:label "Run Enable Status"@en .
+
+ :Exhaust_Fan_Status  rdfs:subClassOf   :Fan_Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Exhaust;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Exhaust Fan Status"@en .
+
+ :Return_Fan_Status  rdfs:subClassOf   :Fan_Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Return;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Return Fan Status"@en .
+
+ :Supply_Fan_Status  rdfs:subClassOf   :Fan_Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Supply;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Supply Fan Status"@en .
+
+ :Discharge_Fan_Status  rdfs:subClassOf   :Fan_Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Discharge;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 owl:equivalentClass :Supply_Fan_Status ;
+			 rdfs:label "Supply Fan Status"@en .
+
+ :Standby_Fan_Status  rdfs:subClassOf   :Fan_Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Standby;
+			 bf:usesTag tag:Fan;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Standby Fan Status"@en .
 
  :Humidifier_Fault_Status  rdfs:subClassOf   :Fault_Status;
 			 rdf:type   owl:Class ;
@@ -10195,13 +10377,6 @@
 			 bf:usesTag tag:Status;
 			 rdfs:label "Exhaust Fan Start Stop Status"@en .
 
- :Exhaust_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Exhaust;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Exhaust Fan Status"@en .
-
  :Fan_Start_Stop_Status  rdfs:subClassOf   :Start_Stop_Status;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Fan;
@@ -10241,13 +10416,6 @@
 			 bf:usesTag tag:Status;
 			 rdfs:label "Return Fan Start Stop Status"@en .
 
- :Return_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Return;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Return Fan Status"@en .
-
  :Run_Status  rdfs:subClassOf   :Start_Stop_Status;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Run;
@@ -10273,28 +10441,6 @@
 			 owl:equivalentClass :Supply_Fan_Start_Stop_Status ;
 			 rdfs:label "Supply Fan Start Stop Status"@en .
 
- :Supply_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Supply;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Supply Fan Status"@en .
-
- :Discharge_Fan_Status  rdfs:subClassOf   :Start_Stop_Status;
-			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Discharge;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Status;
-			 owl:equivalentClass :Supply_Fan_Status ;
-			 rdfs:label "Supply Fan Status"@en .
-
- :Standby_Fan_Status  rdfs:subClassOf   :Fan_Start_Stop_Status;
-			 rdf:type   owl:Class ;
-			 bf:usesTag tag:Standby;
-			 bf:usesTag tag:Fan;
-			 bf:usesTag tag:Status;
-			 rdfs:label "Standby Fan Status"@en .
-
  :Chilled_Water_Pump_Start_Stop_Status  rdfs:subClassOf   :Pump_Start_Stop_Status;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Chilled;
@@ -10305,13 +10451,21 @@
 			 bf:usesTag tag:Status;
 			 rdfs:label "Chilled Water Pump Start Stop Status"@en .
 
- :Chilled_Water_Pump_Status  rdfs:subClassOf   :Pump_Start_Stop_Status;
+ :Chilled_Water_Pump_Status  rdfs:subClassOf   :Pump_Status;
 			 rdf:type   owl:Class ;
 			 bf:usesTag tag:Chilled;
 			 bf:usesTag tag:Water;
 			 bf:usesTag tag:Pump;
 			 bf:usesTag tag:Status;
 			 rdfs:label "Chilled Water Pump Status"@en .
+
+ :Hot_Water_Pump_Status  rdfs:subClassOf   :Pump_Status;
+			 rdf:type   owl:Class ;
+			 bf:usesTag tag:Hot;
+			 bf:usesTag tag:Water;
+			 bf:usesTag tag:Pump;
+			 bf:usesTag tag:Status;
+			 rdfs:label "Hot Water Pump Status"@en .
 
  :Locally_On_Off_Status  rdfs:subClassOf   :On_Off_Status;
 			 rdf:type   owl:Class ;
