@@ -1,1353 +1,1005 @@
+@prefix : <http://buildsys.org/ontologies/BrickTag#> .
+@prefix bf: <http://buildsys.org/ontologies/BrickFrame#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix bf:  <http://buildsys.org/ontologies/BrickFrame#> .
-@prefix : <http://buildsys.org/ontologies/BrickTag#> .
-
-<http://buildsys.org/ontologies/BrickTag>  a owl:Ontology ;
-	owl:imports <http://buildsys.org/ontologies/BrickFrame> ;
-	rdfs:comment "Domain Tag Definition"@en .
-
-
- :Equipment  rdfs:subClassOf   bf:Tag;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Equipment"@en .
-
- :Equipment_HVAC  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "HVAC"@en .
-
- :Equipment_Fire_Safety_System  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Fire Safety System"@en .
-
- :Equipment_Water_System  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Water System"@en .
-
- :MeasurementProperty  rdfs:subClassOf   bf:Tag;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "MeasurementProperty"@en .
-
- :MeasurementProperty_Modifier  rdfs:subClassOf   :MeasurementProperty;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Modifier"@en .
-
- :MeasurementProperty_PhysicalProperties  rdfs:subClassOf   :MeasurementProperty;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "PhysicalProperties"@en .
-
- :Equipment_Energy  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Energy"@en .
-
- :Equipment_Energy_Power  rdfs:subClassOf   :Equipment_Energy;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Power"@en .
-
- :Equipment_HVAC_AHU  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "AHU"@en .
-
- :Equipment_HVAC_Misc  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Misc"@en .
-
- :Equipment_HVAC_VAV  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "VAV"@en .
-
- :Equipment_HVAC_VFD  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "VFD"@en .
-
- :Equipment_HVAC_Water  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Water"@en .
-
- :Equipment_Lighting  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Lighting"@en .
-
- :Location  rdfs:subClassOf   bf:Tag;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Location"@en .
-
- :MeasurementProperty_Unit  rdfs:subClassOf   :MeasurementProperty;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Unit"@en .
-
- :Point  rdfs:subClassOf   bf:Tag;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "Point"@en .
-
- :Equipment_Energy_SolarPanel  rdfs:subClassOf   :Equipment_Energy;
-			 rdf:type  owl:Class ;
-			 bf:isHierarchical  "";
-			 rdfs:label "SolarPanel"@en .
-
- :HX  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "HX"@en .
-
- :FCP  rdfs:subClassOf   :Equipment_Fire_Safety_System;
-			 rdf:type  owl:Class ;
-			 rdfs:label "FCP"@en .
-
- :CWS  rdfs:subClassOf   :Equipment_Water_System;
-			 rdf:type  owl:Class ;
-			 rdfs:label "CWS"@en .
-
- :DHWS  rdfs:subClassOf   :Equipment_Water_System;
-			 rdf:type  owl:Class ;
-			 rdfs:label "DHWS"@en .
-
- :HWS  rdfs:subClassOf   :Equipment_Water_System;
-			 rdf:type  owl:Class ;
-			 rdfs:label "HWS"@en .
-
- :Safety  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Safety"@en .
-
- :PIR  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "PIR"@en .
-
- :Ventilation  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Ventilation"@en .
-
- :HVAC  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 rdfs:label "HVAC"@en .
-
- :Load  rdfs:subClassOf   :Equipment_Energy_Power;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Load"@en .
-
- :Bus  rdfs:subClassOf   :Equipment_Energy_Power;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Bus"@en .
-
- :Battery  rdfs:subClassOf   :Equipment_Energy_Power;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Battery"@en .
-
- :Solar  rdfs:subClassOf   :Equipment_Energy_Power;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Solar"@en .
-
- :PV  rdfs:subClassOf   :Equipment_Energy_Power;
-			 rdf:type  owl:Class ;
-			 rdfs:label "PV"@en .
-
- :AHU  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "AHU"@en .
-
- :CRAC  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "CRAC"@en .
-
- :VFD  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "VFD"@en .
-
- :Compressor  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Compressor"@en .
-
- :VAV  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "VAV"@en .
-
- :FCU  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "FCU"@en .
-
- :Lighting  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Lighting"@en .
-
- :Heating  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Heating"@en .
-
- :Cooling  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cooling"@en .
-
- :Coil  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Coil"@en .
-
- :Hot  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hot"@en .
-
- :Steam  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Steam"@en .
-
- :Exhaust  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Exhaust"@en .
-
- :Return  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Return"@en .
-
- :Mixed  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Mixed"@en .
-
- :Chilled  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Chilled"@en .
-
- :Water  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Water"@en .
-
- :Outside  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Outside"@en .
-
- :Bypass  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Bypass"@en .
-
- :Dehumidification  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Dehumidification"@en .
-
- :Humidification  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Humidification"@en .
-
- :Condensate  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Condensate"@en .
-
- :Head  rdfs:subClassOf   :Equipment_HVAC_Misc;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Head"@en .
-
- :Computer  rdfs:subClassOf   :Equipment_HVAC_Misc;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Computer"@en .
-
- :Humidifier  rdfs:subClassOf   :Equipment_HVAC_Misc;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Humidifier"@en .
-
- :Variable  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Variable"@en .
-
- :Air  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Air"@en .
-
- :Volume  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Volume"@en .
-
- :Box  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Box"@en .
-
- :Reheat  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Reheat"@en .
-
- :Discharge  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Discharge"@en .
-
- :Damper  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Damper"@en .
-
- :Position  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Position"@en .
-
- :Booster  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Booster"@en .
-
- :Fan  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fan"@en .
-
- :Thermostat  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Thermostat"@en .
-
- :Adjustment  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Adjustment"@en .
-
- :Static  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Static"@en .
-
- :Heater  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Heater"@en .
-
- :Mixed  rdfs:subClassOf   :Equipment_HVAC_VAV;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Mixed"@en .
-
- :Drive  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Drive"@en .
-
- :Speed  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Speed"@en .
-
- :Torque  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Torque"@en .
-
- :Acceleration  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Acceleration"@en .
-
- :Deceleration  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Deceleration"@en .
-
- :Limit  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Limit"@en .
-
- :Run  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Run"@en .
-
- :Enable  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Enable"@en .
-
- :Manual  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Manual"@en .
-
- :Auto  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Auto"@en .
-
- :Direction  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Direction"@en .
-
- :Maintenance  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Maintenance"@en .
-
- :Required  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Required"@en .
-
- :Filter  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Filter"@en .
-
- :Panel  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Panel"@en .
-
- :Lockout  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Lockout"@en .
-
- :Output  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Output"@en .
-
- :Economizer  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Economizer"@en .
-
- :Reference  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Reference"@en .
-
- :Motor  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Motor"@en .
-
- :Rated  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Rated"@en .
-
- :Dead  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Dead"@en .
-
- :Band  rdfs:subClassOf   :Equipment_HVAC_VFD;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Band"@en .
-
- :Hot  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hot"@en .
-
- :Medium  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Medium"@en .
-
- :Chilled  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Chilled"@en .
-
- :Water  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Water"@en .
-
- :Pump  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Pump"@en .
-
- :Heat  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Heat"@en .
-
- :Exchanger  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Exchanger"@en .
-
- :Valve  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Valve"@en .
-
- :Stream  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Stream"@en .
-
- :Differential  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Differential"@en .
-
- :Freeze  rdfs:subClassOf   :Equipment_HVAC_Water;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Freeze"@en .
-
- :LED  rdfs:subClassOf   :Equipment_Lighting;
-			 rdf:type  owl:Class ;
-			 rdfs:label "LED"@en .
-
- :Zone  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Zone"@en .
-
- :Room  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Room"@en .
-
- :Floor  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Floor"@en .
-
- :Building  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Building"@en .
-
- :Space  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Space"@en .
-
- :Wing  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Wing"@en .
-
- :Outside  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Outside"@en .
-
- :City  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "City"@en .
-
- :Liquid  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Liquid"@en .
-
- :Smoke  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Smoke"@en .
-
- :Domestic  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Domestic"@en .
-
- :Zenith  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Zenith"@en .
-
- :Azimuth  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Azimuth"@en .
-
- :Request  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Request"@en .
-
- :Indicator  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Indicator"@en .
-
- :Reset  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Reset"@en .
-
- :PID  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "PID"@en .
-
- :Control  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Control"@en .
-
- :High  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "High"@en .
-
- :Low  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Low"@en .
-
- :Disable  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Disable"@en .
-
- :Enable  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Enable"@en .
-
- :Mode  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Mode"@en .
-
- :Start  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Start"@en .
-
- :Stop  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Stop"@en .
-
- :Max  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Max"@en .
-
- :Min  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Min"@en .
-
- :System  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "System"@en .
-
- :Ready  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Ready"@en .
-
- :Emergency  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Emergency"@en .
-
- :Tolerance  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Tolerance"@en .
-
- :Delay  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Delay"@en .
-
- :Input  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Input"@en .
-
- :Output  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Output"@en .
-
- :Leak  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Leak"@en .
-
- :Standby  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Standby"@en .
-
- :Conditioning  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Conditioning"@en .
-
- :Overload  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Overload"@en .
-
- :Detected  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Detected"@en .
-
- :Communication  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Communication"@en .
-
- :Loss  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Loss"@en .
-
- :Suction  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Suction"@en .
-
- :Relative  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Relative"@en .
-
- :Estimation  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Estimation"@en .
-
- :Capacity  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Capacity"@en .
-
- :No  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "No"@en .
-
- :Wind  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Wind"@en .
-
- :Auto  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Auto"@en .
-
- :Storage  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Storage"@en .
-
- :Activated  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Activated"@en .
-
- :Hood  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hood"@en .
-
- :Yearly  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Yearly"@en .
-
- :Off  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Off"@en .
-
- :Generator  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Generator"@en .
-
- :Cold  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cold"@en .
-
- :Underfloor  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Underfloor"@en .
-
- :Supply  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Supply"@en .
-
- :Change  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Change"@en .
-
- :Stage  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Stage"@en .
-
- :Face  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Face"@en .
-
- :Radiance  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Radiance"@en .
-
- :Short  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Short"@en .
-
- :Deionised  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Deionised"@en .
-
- :When  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "When"@en .
-
- :Stack  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Stack"@en .
-
- :Failed  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Failed"@en .
-
- :From  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "From"@en .
-
- :Push  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Push"@en .
-
- :Hold  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hold"@en .
-
- :Increase  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Increase"@en .
-
- :Locally  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Locally"@en .
-
- :Demand  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Demand"@en .
-
- :Humidify  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Humidify"@en .
-
- :DualBand  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "DualBand"@en .
-
- :Dewpoint  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Dewpoint"@en .
-
- :Average  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Average"@en .
-
- :Thermal  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Thermal"@en .
-
- :Tower  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Tower"@en .
-
- :Temporary  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Temporary"@en .
-
- :Lead  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Lead"@en .
-
- :Stages  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Stages"@en .
-
- :Effective  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Effective"@en .
-
- :Fire  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fire"@en .
-
- :Turned  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Turned"@en .
-
- :Velocity  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Velocity"@en .
-
- :Meter  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Meter"@en .
-
- :Grains  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Grains"@en .
-
- :Shutdown  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Shutdown"@en .
-
- :Integration  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Integration"@en .
-
- :Freezer  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Freezer"@en .
-
- :Lag  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Lag"@en .
-
- :Percent  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Percent"@en .
-
- :Fans  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fans"@en .
-
- :Highest  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Highest"@en .
-
- :Conductivity  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Conductivity"@en .
-
- :Sash  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Sash"@en .
-
- :Piezoelectric  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Piezoelectric"@en .
-
- :EconCycle  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "EconCycle"@en .
-
- :Handler  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Handler"@en .
-
- :Lowest  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Lowest"@en .
-
- :Cycle  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cycle"@en .
-
- :Overridden  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Overridden"@en .
-
- :Level  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Level"@en .
-
- :Turn  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Turn"@en .
-
- :Last  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Last"@en .
-
- :Month  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Month"@en .
-
- :Proportional  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Proportional"@en .
-
- :Shed  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Shed"@en .
-
- :Monthly  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Monthly"@en .
-
- :Digital  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Digital"@en .
-
- :Decrease  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Decrease"@en .
-
- :Cooling  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cooling"@en .
-
- :Integral  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Integral"@en .
-
- :Short  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Short"@en .
-
- :Step  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Step"@en .
-
- :Pre  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Pre"@en .
-
- :Even  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Even"@en .
-
- :Detection  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Detection"@en .
-
- :Peak  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Peak"@en .
-
- :To  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "To"@en .
-
- :Fume  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fume"@en .
-
- :Usage  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Usage"@en .
-
- :Date  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Date"@en .
-
- :Today  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Today"@en .
-
- :Preheat  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Preheat"@en .
-
- :Code  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Code"@en .
-
- :Cycle  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cycle"@en .
-
- :Button  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Button"@en .
-
- :Analog  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Analog"@en .
-
- :Open  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Open"@en .
-
- :Wheel  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Wheel"@en .
-
- :On  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "On"@en .
-
- :Perimeter  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Perimeter"@en .
-
- :Remotely  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Remotely"@en .
-
- :Schedule  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Schedule"@en .
-
- :By  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "By"@en .
-
- :Environment  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Environment"@en .
-
- :Enthalpy  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Enthalpy"@en .
-
- :Glycool  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Glycool"@en .
-
- :Current  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Current"@en .
-
- :Time  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Time"@en .
-
- :Voltage  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Voltage"@en .
-
- :Power  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Power"@en .
-
- :Current  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Current"@en .
-
- :Energy  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Energy"@en .
-
- :DC  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "DC"@en .
-
- :Temperature  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Temperature"@en .
-
- :Flow  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Flow"@en .
-
- :Pressure  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Pressure"@en .
-
- :Humidity  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Humidity"@en .
-
- :Enthalpy  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Enthalpy"@en .
-
- :Angle  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Angle"@en .
-
- :Fault  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fault"@en .
-
- :Switch  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Switch"@en .
-
- :Status  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Status"@en .
-
- :CO2  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "CO2"@en .
-
- :Occupancy  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Occupancy"@en .
-
- :Occupied  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Occupied"@en .
-
- :Unoccupied  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Unoccupied"@en .
-
- :Frequency  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Frequency"@en .
-
- :Luminance  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Luminance"@en .
-
- :Fahrenheit  rdfs:subClassOf   :MeasurementProperty_Unit;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fahrenheit"@en .
-
- :CFM  rdfs:subClassOf   :MeasurementProperty_Unit;
-			 rdf:type  owl:Class ;
-			 rdfs:label "CFM"@en .
-
- :Setpoint  rdfs:subClassOf   :Point;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Setpoint"@en .
-
- :Sensor  rdfs:subClassOf   :Point;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Sensor"@en .
-
- :Status  rdfs:subClassOf   :Point;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Status"@en .
-
- :Command  rdfs:subClassOf   :Point;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Command"@en .
-
- :Alarm  rdfs:subClassOf   :Point;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Alarm"@en .
-
- :Meter  rdfs:subClassOf   :Point;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Meter"@en .
-
- :Unit  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Unit"@en .
-
- :Grains  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Grains"@en .
-
- :Photovoltaic  rdfs:subClassOf   :Equipment_Energy_SolarPanel;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Photovoltaic"@en .
-
- :Terminal  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Terminal"@en .
-
- :Laboratory  rdfs:subClassOf   :Location;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Laboratory"@en .
-
- :Adjust  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Adjust"@en .
-
- :Rain  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Rain"@en .
-
- :Hail  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hail"@en .
-
- :Running  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Running"@en .
-
- :Warmest  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Warmest"@en .
-
- :Hand  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hand"@en .
-
- :Cool  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cool"@en .
-
- :Coldest  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Coldest"@en .
-
- :Hour  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Hour"@en .
-
- :Warm  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Warm"@en .
-
- :DI  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "DI"@en .
-
- :Trace  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Trace"@en .
-
- :Frost  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Frost"@en .
-
- :Automatic  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Automatic"@en .
-
- :Duration  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Duration"@en .
-
- :Gain  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Gain"@en .
-
- :Protect  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Protect"@en .
-
- :Condensor  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Condensor"@en .
-
- :Leaving  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Leaving"@en .
-
- :Tank  rdfs:subClassOf   :Equipment_HVAC_AHU;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Tank"@en .
-
- :Fixed  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Fixed"@en .
-
- :Vent  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Vent"@en .
-
- :Entering  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Entering"@en .
-
- :Isolation  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Isolation"@en .
-
- :Dewpoint  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Dewpoint"@en .
-
- :Cutout  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Cutout"@en .
-
- :Failure  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Failure"@en .
-
- :Operating  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Operating"@en .
-
- :Curtailment  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Curtailment"@en .
-
- :Elevator  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Elevator"@en .
-
- :Weather  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Weather"@en .
-
- :Inverter  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Inverter"@en .
-
- :Close  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Close"@en .
-
- :Override  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Override"@en .
-
- :Thumbwheel  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Thumbwheel"@en .
-
- :Chiller  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Chiller"@en .
-
- :Timer  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Timer"@en .
-
- :Electrical  rdfs:subClassOf   :Equipment_Energy;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Electrical"@en .
-
- :PreHeat  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "PreHeat"@en .
-
- :Ice  rdfs:subClassOf   :MeasurementProperty_PhysicalProperties;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Ice"@en .
-
- :Factor  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Factor"@en .
-
- :Ratio  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Ratio"@en .
-
- :Integrative  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Integrative"@en .
-
- :Duct  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Duct"@en .
-
- :Server  rdfs:subClassOf   :Equipment;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Server"@en .
-
- :Dew  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Dew"@en .
-
- :Response  rdfs:subClassOf   :MeasurementProperty_Modifier;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Response"@en .
-
- :Condenser  rdfs:subClassOf   :Equipment_HVAC;
-			 rdf:type  owl:Class ;
-			 rdfs:label "Condenser"@en .
-
- :WS  rdfs:subClassOf   :Equipment_Water_System;
-			 rdf:type  owl:Class ;
-			 rdfs:label "WS"@en .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://buildsys.org/ontologies/BrickTag> a owl:Ontology ;
+    rdfs:comment "Domain Tag Definition"@en ;
+    owl:imports <http://buildsys.org/ontologies/BrickFrame> .
+
+:AHU rdfs:label "AHU"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Acceleration rdfs:label "Acceleration"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Activated rdfs:label "Activated"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Adjust rdfs:label "Adjust"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Adjustment rdfs:label "Adjustment"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Air rdfs:label "Air"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Alarm rdfs:label "Alarm"@en ;
+    rdfs:subClassOf :Point .
+
+:Analog rdfs:label "Analog"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Angle rdfs:label "Angle"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Auto rdfs:label "Auto"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD,
+        :MeasurementProperty_Modifier .
+
+:Automatic rdfs:label "Automatic"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Average rdfs:label "Average"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Azimuth rdfs:label "Azimuth"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Band rdfs:label "Band"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Basement rdfs:label "Basement"@en ;
+    rdfs:subClassOf :Location .
+
+:Battery rdfs:label "Battery"@en ;
+    rdfs:subClassOf :Equipment_Energy_Power .
+
+:Boiler rdfs:label "Boiler"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Booster rdfs:label "Booster"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Box rdfs:label "Box"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Building rdfs:label "Building"@en ;
+    rdfs:subClassOf :Location .
+
+:Bus rdfs:label "Bus"@en ;
+    rdfs:subClassOf :Equipment_Energy_Power .
+
+:Button rdfs:label "Button"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:By rdfs:label "By"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Bypass rdfs:label "Bypass"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:CFM rdfs:label "CFM"@en ;
+    rdfs:subClassOf :MeasurementProperty_Unit .
+
+:CO2 rdfs:label "CO2"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:CRAC rdfs:label "CRAC"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:CWS rdfs:label "CWS"@en ;
+    rdfs:subClassOf :Equipment_Water_System .
+
+:Capacity rdfs:label "Capacity"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Change rdfs:label "Change"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Chilled rdfs:label "Chilled"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU,
+        :Equipment_HVAC_Water .
+
+:Chiller rdfs:label "Chiller"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:City rdfs:label "City"@en ;
+    rdfs:subClassOf :Location .
+
+:Close rdfs:label "Close"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Code rdfs:label "Code"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Coil rdfs:label "Coil"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Cold rdfs:label "Cold"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Coldest rdfs:label "Coldest"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Command rdfs:label "Command"@en ;
+    rdfs:subClassOf :Point .
+
+:Communication rdfs:label "Communication"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Compressor rdfs:label "Compressor"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Computer rdfs:label "Computer"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Misc .
+
+:Condensate rdfs:label "Condensate"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Condenser rdfs:label "Condenser"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Condensor rdfs:label "Condensor"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Conditioning rdfs:label "Conditioning"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Conductivity rdfs:label "Conductivity"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Control rdfs:label "Control"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Cool rdfs:label "Cool"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Cooling rdfs:label "Cooling"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU,
+        :MeasurementProperty_Modifier .
+
+:Current rdfs:label "Current"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier,
+        :MeasurementProperty_PhysicalProperties .
+
+:Curtailment rdfs:label "Curtailment"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Cutout rdfs:label "Cutout"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Cycle rdfs:label "Cycle"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:DC rdfs:label "DC"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:DHWS rdfs:label "DHWS"@en ;
+    rdfs:subClassOf :Equipment_Water_System .
+
+:DI rdfs:label "DI"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Damper rdfs:label "Damper"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Date rdfs:label "Date"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Dead rdfs:label "Dead"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Deceleration rdfs:label "Deceleration"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Decrease rdfs:label "Decrease"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Dehumidification rdfs:label "Dehumidification"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Deionised rdfs:label "Deionised"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Delay rdfs:label "Delay"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Demand rdfs:label "Demand"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Detected rdfs:label "Detected"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Detection rdfs:label "Detection"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Dew rdfs:label "Dew"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Dewpoint rdfs:label "Dewpoint"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier,
+        :MeasurementProperty_PhysicalProperties .
+
+:Differential rdfs:label "Differential"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Digital rdfs:label "Digital"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Direction rdfs:label "Direction"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Disable rdfs:label "Disable"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Discharge rdfs:label "Discharge"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Domestic rdfs:label "Domestic"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Drive rdfs:label "Drive"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:DualBand rdfs:label "DualBand"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Duct rdfs:label "Duct"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Duration rdfs:label "Duration"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:EconCycle rdfs:label "EconCycle"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Economizer rdfs:label "Economizer"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Effective rdfs:label "Effective"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Electrical rdfs:label "Electrical"@en ;
+    rdfs:subClassOf :Equipment_Energy .
+
+:Elevator rdfs:label "Elevator"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Emergency rdfs:label "Emergency"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Enable rdfs:label "Enable"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD,
+        :MeasurementProperty_Modifier .
+
+:Energy rdfs:label "Energy"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Entering rdfs:label "Entering"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Enthalpy rdfs:label "Enthalpy"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier,
+        :MeasurementProperty_PhysicalProperties .
+
+:Environment rdfs:label "Environment"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Estimation rdfs:label "Estimation"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Even rdfs:label "Even"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Exchanger rdfs:label "Exchanger"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Exhaust rdfs:label "Exhaust"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:FCP rdfs:label "FCP"@en ;
+    rdfs:subClassOf :Equipment_Fire_Safety_System .
+
+:FCU rdfs:label "FCU"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Face rdfs:label "Face"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Factor rdfs:label "Factor"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Fahrenheit rdfs:label "Fahrenheit"@en ;
+    rdfs:subClassOf :MeasurementProperty_Unit .
+
+:Failed rdfs:label "Failed"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Failure rdfs:label "Failure"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Fan rdfs:label "Fan"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Fans rdfs:label "Fans"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Fault rdfs:label "Fault"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Filter rdfs:label "Filter"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Fire rdfs:label "Fire"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Fixed rdfs:label "Fixed"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Floor rdfs:label "Floor"@en ;
+    rdfs:subClassOf :Location .
+
+:Flow rdfs:label "Flow"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Freeze rdfs:label "Freeze"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Freezer rdfs:label "Freezer"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Frequency rdfs:label "Frequency"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Fresh rdfs:label "Fresh"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:From rdfs:label "From"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Frost rdfs:label "Frost"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Fume rdfs:label "Fume"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Gain rdfs:label "Gain"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Gas rdfs:label "Gas"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Generator rdfs:label "Generator"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Glycool rdfs:label "Glycool"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Grains rdfs:label "Grains"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:HVAC rdfs:label "HVAC"@en ;
+    rdfs:subClassOf :Equipment .
+
+:HWS rdfs:label "HWS"@en ;
+    rdfs:subClassOf :Equipment_Water_System .
+
+:HX rdfs:label "HX"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Hail rdfs:label "Hail"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Hand rdfs:label "Hand"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Handler rdfs:label "Handler"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Head rdfs:label "Head"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Misc .
+
+:Heat rdfs:label "Heat"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Heater rdfs:label "Heater"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Heating rdfs:label "Heating"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:High rdfs:label "High"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Highest rdfs:label "Highest"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Hold rdfs:label "Hold"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Hood rdfs:label "Hood"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Hot rdfs:label "Hot"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU,
+        :Equipment_HVAC_Water .
+
+:Hour rdfs:label "Hour"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Humidification rdfs:label "Humidification"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Humidifier rdfs:label "Humidifier"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Misc .
+
+:Humidify rdfs:label "Humidify"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Humidity rdfs:label "Humidity"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Ice rdfs:label "Ice"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Increase rdfs:label "Increase"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Indicator rdfs:label "Indicator"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Input rdfs:label "Input"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Integral rdfs:label "Integral"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Integration rdfs:label "Integration"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Integrative rdfs:label "Integrative"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Inverter rdfs:label "Inverter"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Isolation rdfs:label "Isolation"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:LED rdfs:label "LED"@en ;
+    rdfs:subClassOf :Equipment_Lighting .
+
+:Laboratory rdfs:label "Laboratory"@en ;
+    rdfs:subClassOf :Location .
+
+:Lag rdfs:label "Lag"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Last rdfs:label "Last"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Lead rdfs:label "Lead"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Leak rdfs:label "Leak"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Leaving rdfs:label "Leaving"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Level rdfs:label "Level"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Lighting rdfs:label "Lighting"@en ;
+    rdfs:subClassOf :Equipment .
+
+:Limit rdfs:label "Limit"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Liquid rdfs:label "Liquid"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Load rdfs:label "Load"@en ;
+    rdfs:subClassOf :Equipment_Energy_Power .
+
+:Locally rdfs:label "Locally"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Lockout rdfs:label "Lockout"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Loss rdfs:label "Loss"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Low rdfs:label "Low"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Lowest rdfs:label "Lowest"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Luminance rdfs:label "Luminance"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Maintenance rdfs:label "Maintenance"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Manual rdfs:label "Manual"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Max rdfs:label "Max"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Medium rdfs:label "Medium"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Meter rdfs:label "Meter"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier,
+        :Point .
+
+:Min rdfs:label "Min"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Minimum rdfs:label "Minimum"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Mixed rdfs:label "Mixed"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU,
+        :Equipment_HVAC_VAV .
+
+:Mode rdfs:label "Mode"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Month rdfs:label "Month"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Monthly rdfs:label "Monthly"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Motor rdfs:label "Motor"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:No rdfs:label "No"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Occupancy rdfs:label "Occupancy"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Occupied rdfs:label "Occupied"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Off rdfs:label "Off"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:On rdfs:label "On"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Open rdfs:label "Open"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Operating rdfs:label "Operating"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Output rdfs:label "Output"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD,
+        :MeasurementProperty_Modifier .
+
+:Outside rdfs:label "Outside"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU,
+        :Location .
+
+:Overload rdfs:label "Overload"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Overridden rdfs:label "Overridden"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Override rdfs:label "Override"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:PID rdfs:label "PID"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:PIR rdfs:label "PIR"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:PV rdfs:label "PV"@en ;
+    rdfs:subClassOf :Equipment_Energy_Power .
+
+:Panel rdfs:label "Panel"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Peak rdfs:label "Peak"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Percent rdfs:label "Percent"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Perimeter rdfs:label "Perimeter"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Photovoltaic rdfs:label "Photovoltaic"@en ;
+    rdfs:subClassOf :Equipment_Energy_SolarPanel .
+
+:Piezoelectric rdfs:label "Piezoelectric"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Position rdfs:label "Position"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Power rdfs:label "Power"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Pre rdfs:label "Pre"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:PreHeat rdfs:label "PreHeat"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Preheat rdfs:label "Preheat"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Pressure rdfs:label "Pressure"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Proportional rdfs:label "Proportional"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Protect rdfs:label "Protect"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Pump rdfs:label "Pump"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Push rdfs:label "Push"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Radiance rdfs:label "Radiance"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Rain rdfs:label "Rain"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Rated rdfs:label "Rated"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Ratio rdfs:label "Ratio"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Ready rdfs:label "Ready"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Reference rdfs:label "Reference"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Reheat rdfs:label "Reheat"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Relative rdfs:label "Relative"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Remotely rdfs:label "Remotely"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Request rdfs:label "Request"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Required rdfs:label "Required"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Reset rdfs:label "Reset"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Response rdfs:label "Response"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Return rdfs:label "Return"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Roof rdfs:label "Roof"@en ;
+    rdfs:subClassOf :Location .
+
+:Room rdfs:label "Room"@en ;
+    rdfs:subClassOf :Location .
+
+:Run rdfs:label "Run"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Running rdfs:label "Running"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Safety rdfs:label "Safety"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Sash rdfs:label "Sash"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Schedule rdfs:label "Schedule"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Sensor rdfs:label "Sensor"@en ;
+    rdfs:subClassOf :Point .
+
+:Server rdfs:label "Server"@en ;
+    rdfs:subClassOf :Equipment .
+
+:Setpoint rdfs:label "Setpoint"@en ;
+    rdfs:subClassOf :Point .
+
+:Shed rdfs:label "Shed"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Short rdfs:label "Short"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Shutdown rdfs:label "Shutdown"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Smoke rdfs:label "Smoke"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Solar rdfs:label "Solar"@en ;
+    rdfs:subClassOf :Equipment_Energy_Power .
+
+:Space rdfs:label "Space"@en ;
+    rdfs:subClassOf :Location .
+
+:Speed rdfs:label "Speed"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Stack rdfs:label "Stack"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Stage rdfs:label "Stage"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Stages rdfs:label "Stages"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Standby rdfs:label "Standby"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Start rdfs:label "Start"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Static rdfs:label "Static"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Status rdfs:label "Status"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties,
+        :Point .
+
+:Steam rdfs:label "Steam"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Step rdfs:label "Step"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Stop rdfs:label "Stop"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Storage rdfs:label "Storage"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Stream rdfs:label "Stream"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Suction rdfs:label "Suction"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Supply rdfs:label "Supply"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Switch rdfs:label "Switch"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:System rdfs:label "System"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Tank rdfs:label "Tank"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU .
+
+:Temperature rdfs:label "Temperature"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Temporary rdfs:label "Temporary"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Terminal rdfs:label "Terminal"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Thermal rdfs:label "Thermal"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Thermostat rdfs:label "Thermostat"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Thumbwheel rdfs:label "Thumbwheel"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Time rdfs:label "Time"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Timer rdfs:label "Timer"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:To rdfs:label "To"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Today rdfs:label "Today"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Tolerance rdfs:label "Tolerance"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Torque rdfs:label "Torque"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VFD .
+
+:Tower rdfs:label "Tower"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Trace rdfs:label "Trace"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Turn rdfs:label "Turn"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Turned rdfs:label "Turned"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Underfloor rdfs:label "Underfloor"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Unit rdfs:label "Unit"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Unoccupied rdfs:label "Unoccupied"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Usage rdfs:label "Usage"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:VAV rdfs:label "VAV"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:VFD rdfs:label "VFD"@en ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Valve rdfs:label "Valve"@en ;
+    rdfs:subClassOf :Equipment_HVAC_Water .
+
+:Variable rdfs:label "Variable"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:Velocity rdfs:label "Velocity"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Vent rdfs:label "Vent"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Ventilation rdfs:label "Ventilation"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Voltage rdfs:label "Voltage"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Volume rdfs:label "Volume"@en ;
+    rdfs:subClassOf :Equipment_HVAC_VAV .
+
+:WS rdfs:label "WS"@en ;
+    rdfs:subClassOf :Equipment_Water_System .
+
+:Warm rdfs:label "Warm"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Warmest rdfs:label "Warmest"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Water rdfs:label "Water"@en ;
+    rdfs:subClassOf :Equipment_HVAC_AHU,
+        :Equipment_HVAC_Water .
+
+:Weather rdfs:label "Weather"@en ;
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+
+:Wheel rdfs:label "Wheel"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:When rdfs:label "When"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Wind rdfs:label "Wind"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Wing rdfs:label "Wing"@en ;
+    rdfs:subClassOf :Location .
+
+:Yearly rdfs:label "Yearly"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Zenith rdfs:label "Zenith"@en ;
+    rdfs:subClassOf :MeasurementProperty_Modifier .
+
+:Zone rdfs:label "Zone"@en ;
+    rdfs:subClassOf :Location .
+
+:Equipment_Energy_SolarPanel rdfs:label "SolarPanel"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_Energy .
+
+:Equipment_Fire_Safety_System rdfs:label "Fire Safety System"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment .
+
+:Equipment_Lighting rdfs:label "Lighting"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment .
+
+:MeasurementProperty_Unit rdfs:label "Unit"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :MeasurementProperty .
+
+:Equipment_Energy rdfs:label "Energy"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment .
+
+:Equipment_HVAC_Misc rdfs:label "Misc"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:MeasurementProperty rdfs:label "MeasurementProperty"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf bf:Tag .
+
+:Equipment_Water_System rdfs:label "Water System"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment .
+
+:Equipment_Energy_Power rdfs:label "Power"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_Energy .
+
+:Point rdfs:label "Point"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf bf:Tag .
+
+:Equipment rdfs:label "Equipment"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf bf:Tag .
+
+:Equipment_HVAC_Water rdfs:label "Water"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Location rdfs:label "Location"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf bf:Tag .
+
+:Equipment_HVAC_VAV rdfs:label "VAV"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Equipment_HVAC_AHU rdfs:label "AHU"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:Equipment_HVAC rdfs:label "HVAC"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment .
+
+:Equipment_HVAC_VFD rdfs:label "VFD"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :Equipment_HVAC .
+
+:MeasurementProperty_PhysicalProperties rdfs:label "PhysicalProperties"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :MeasurementProperty .
+
+:MeasurementProperty_Modifier rdfs:label "Modifier"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf :MeasurementProperty .
+
