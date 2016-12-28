@@ -15,6 +15,10 @@
 # #################################################################
 # 
 # 
+# http://buildsys.org/ontologies/BrickFrame#equivalentTagSet
+
+:equivalentTagSet a owl:AnnotationProperty .
+# 
 # http://buildsys.org/ontologies/BrickFrame#isHierarchical
 
 :isHierarchical a owl:AnnotationProperty .
@@ -24,6 +28,10 @@
 :similarTagSet a owl:AnnotationProperty ;
 	rdfs:range :TagSet ;
 	rdfs:domain :TagSet .
+# 
+# http://buildsys.org/ontologies/BrickFrame#usedBy
+
+:usedBy a owl:AnnotationProperty .
 # 
 # http://buildsys.org/ontologies/BrickFrame#usesDimension
 
