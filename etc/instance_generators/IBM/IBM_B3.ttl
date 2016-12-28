@@ -15,6 +15,9 @@
 :Room_ExpoSpace a ts:Room ;
     rdfs:label "ExpoSpace"@en .
 
+:AHU_Minimum_Fresh_Air_Setpoint a owl:Class ;
+    rdfs:subClassOf bf:TagSet .
+
 :ATRIUM_AREA_CO2 a ts:CO2_Sensor,
         bf:Label,
         bf:TagSet ;
@@ -1531,9 +1534,9 @@
     bf:isPointOf :AHU_AHU1,
         :Wing_SOR42 .
 
-:AHU1_MIN_FA_SPT a ts:AHU_Minimum_Fresh_Air_Setpoint,
-        bf:Label,
-        bf:TagSet ;
+:AHU1_MIN_FA_SPT a bf:Label,
+        bf:TagSet,
+        :AHU_Minimum_Fresh_Air_Setpoint ;
     rdfs:label "AHU1_MIN_FA_SPT"@en ;
     bf:isLocatedIn :Wing_SOR42 ;
     bf:isPointOf :AHU_AHU1,
@@ -1547,9 +1550,9 @@
     bf:isPointOf :AHU_AHU1,
         :Wing_SOR42 .
 
-:AHU1_PREHT_SPT a ts:AHU_PreHeat_Demand_Setpoint,
-        bf:Label,
-        bf:TagSet ;
+:AHU1_PREHT_SPT a bf:Label,
+        bf:TagSet,
+        :AHU_PreHeat_Demand_Setpoint ;
     rdfs:label "AHU1_PREHT_SPT"@en ;
     bf:isLocatedIn :Wing_SOR42 ;
     bf:isPointOf :AHU_AHU1,
@@ -1755,9 +1758,9 @@
     bf:isPointOf :AHU_AHU3,
         :Wing_SOR44 .
 
-:AHU3_PREHT_SPT a ts:AHU_PreHeat_Demand_Setpoint,
-        bf:Label,
-        bf:TagSet ;
+:AHU3_PREHT_SPT a bf:Label,
+        bf:TagSet,
+        :AHU_PreHeat_Demand_Setpoint ;
     rdfs:label "AHU3_PREHT_SPT"@en ;
     bf:isLocatedIn :Wing_SOR44 ;
     bf:isPointOf :AHU_AHU3,
@@ -1938,6 +1941,9 @@
     bf:isLocatedIn :Room_SOR46_AHU46 ;
     bf:isPointOf :AHU_AHU46,
         :Room_SOR46_AHU46 .
+
+:AHU_PreHeat_Demand_Setpoint a owl:Class ;
+    rdfs:subClassOf bf:TagSet .
 
 :B3_42_1F_Z1_G10_LGHT_FAULT a ts:Luminance_Alarm,
         bf:Label,
@@ -5115,7 +5121,8 @@
     bf:isPointOf :Boiler_Boiler2,
         :Building_B3 .
 
-:Boiler_Condensator_Setpoint rdfs:subClassOf bf:TagSet .
+:Boiler_Condensator_Setpoint a owl:Class ;
+    rdfs:subClassOf bf:TagSet .
 
 :EXPOAHU_CLG_VLV a ts:AHU_Cooling_Valve_Command,
         bf:Label,
@@ -20387,7 +20394,8 @@
     bf:hasPoint :d1F_STH_OPENOFF_CO2 ;
     bf:isPartOf :Room_OpenOffice .
 
-:Boiler_Start_Number_Sensor rdfs:subClassOf bf:TagSet .
+:Boiler_Start_Number_Sensor a owl:Class ;
+    rdfs:subClassOf bf:TagSet .
 
 :FCU_42FCU1242FCU1542FCU1642FCU1742FCU18 a ts:FCU ;
     rdfs:label "42-FCU12;42-FCU15;42-FCU16;42-FCU17;42-FCU18"@en ;
