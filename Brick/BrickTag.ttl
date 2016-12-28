@@ -3,6 +3,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -11,995 +12,1315 @@
     owl:imports <http://buildsys.org/ontologies/BrickFrame> .
 
 :AHU rdfs:label "AHU"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Acceleration rdfs:label "Acceleration"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Activated rdfs:label "Activated"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Adjust rdfs:label "Adjust"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Adjustment rdfs:label "Adjustment"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Air rdfs:label "Air"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Alarm rdfs:label "Alarm"@en ;
-    rdfs:subClassOf :Point .
+    rdfs:subClassOf :Point ;
+    skos:definition ""@en .
 
 :Analog rdfs:label "Analog"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Angle rdfs:label "Angle"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Auto rdfs:label "Auto"@en ;
     rdfs:subClassOf :Equipment_HVAC_VFD,
-        :MeasurementProperty_Modifier .
+        :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Automatic rdfs:label "Automatic"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Average rdfs:label "Average"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Azimuth rdfs:label "Azimuth"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Band rdfs:label "Band"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Basement rdfs:label "Basement"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Battery rdfs:label "Battery"@en ;
-    rdfs:subClassOf :Equipment_Energy_Power .
+    rdfs:subClassOf :Equipment_Energy_Power ;
+    skos:definition ""@en .
 
 :Boiler rdfs:label "Boiler"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Booster rdfs:label "Booster"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Box rdfs:label "Box"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Building rdfs:label "Building"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Bus rdfs:label "Bus"@en ;
-    rdfs:subClassOf :Equipment_Energy_Power .
+    rdfs:subClassOf :Equipment_Energy_Power ;
+    skos:definition ""@en .
 
 :Button rdfs:label "Button"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :By rdfs:label "By"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Bypass rdfs:label "Bypass"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :CFM rdfs:label "CFM"@en ;
-    rdfs:subClassOf :MeasurementProperty_Unit .
+    rdfs:subClassOf :MeasurementProperty_Unit ;
+    skos:definition ""@en .
 
 :CO2 rdfs:label "CO2"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :CRAC rdfs:label "CRAC"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :CWS rdfs:label "CWS"@en ;
-    rdfs:subClassOf :Equipment_Water_System .
+    rdfs:subClassOf :Equipment_Water_System ;
+    skos:definition ""@en .
 
 :Capacity rdfs:label "Capacity"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Change rdfs:label "Change"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Chilled rdfs:label "Chilled"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU,
-        :Equipment_HVAC_Water .
+        :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Chiller rdfs:label "Chiller"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :City rdfs:label "City"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Close rdfs:label "Close"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Code rdfs:label "Code"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Coil rdfs:label "Coil"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Cold rdfs:label "Cold"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Coldest rdfs:label "Coldest"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Command rdfs:label "Command"@en ;
-    rdfs:subClassOf :Point .
+    rdfs:subClassOf :Point ;
+    skos:definition ""@en .
 
 :Communication rdfs:label "Communication"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Compressor rdfs:label "Compressor"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Computer rdfs:label "Computer"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Misc .
+    rdfs:subClassOf :Equipment_HVAC_Misc ;
+    skos:definition ""@en .
 
 :Condensate rdfs:label "Condensate"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Condenser rdfs:label "Condenser"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Condensor rdfs:label "Condensor"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Conditioning rdfs:label "Conditioning"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Conductivity rdfs:label "Conductivity"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Control rdfs:label "Control"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Cool rdfs:label "Cool"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Cooling rdfs:label "Cooling"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU,
-        :MeasurementProperty_Modifier .
+        :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Current rdfs:label "Current"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier,
-        :MeasurementProperty_PhysicalProperties .
+        :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Curtailment rdfs:label "Curtailment"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Cutout rdfs:label "Cutout"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Cycle rdfs:label "Cycle"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :DC rdfs:label "DC"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :DHWS rdfs:label "DHWS"@en ;
-    rdfs:subClassOf :Equipment_Water_System .
+    rdfs:subClassOf :Equipment_Water_System ;
+    skos:definition ""@en .
 
 :DI rdfs:label "DI"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Damper rdfs:label "Damper"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Date rdfs:label "Date"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Dead rdfs:label "Dead"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Deceleration rdfs:label "Deceleration"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Decrease rdfs:label "Decrease"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Dehumidification rdfs:label "Dehumidification"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Deionised rdfs:label "Deionised"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Delay rdfs:label "Delay"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Demand rdfs:label "Demand"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Detected rdfs:label "Detected"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Detection rdfs:label "Detection"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Dew rdfs:label "Dew"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Dewpoint rdfs:label "Dewpoint"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier,
-        :MeasurementProperty_PhysicalProperties .
+        :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Differential rdfs:label "Differential"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Digital rdfs:label "Digital"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Direction rdfs:label "Direction"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Disable rdfs:label "Disable"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Discharge rdfs:label "Discharge"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Domestic rdfs:label "Domestic"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Drive rdfs:label "Drive"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :DualBand rdfs:label "DualBand"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Duct rdfs:label "Duct"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Duration rdfs:label "Duration"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :EconCycle rdfs:label "EconCycle"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Economizer rdfs:label "Economizer"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Effective rdfs:label "Effective"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Electrical rdfs:label "Electrical"@en ;
-    rdfs:subClassOf :Equipment_Energy .
+    rdfs:subClassOf :Equipment_Energy ;
+    skos:definition ""@en .
 
 :Elevator rdfs:label "Elevator"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Emergency rdfs:label "Emergency"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Enable rdfs:label "Enable"@en ;
     rdfs:subClassOf :Equipment_HVAC_VFD,
-        :MeasurementProperty_Modifier .
+        :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Energy rdfs:label "Energy"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Entering rdfs:label "Entering"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Enthalpy rdfs:label "Enthalpy"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier,
-        :MeasurementProperty_PhysicalProperties .
+        :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Environment rdfs:label "Environment"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Estimation rdfs:label "Estimation"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Even rdfs:label "Even"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Exchanger rdfs:label "Exchanger"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Exhaust rdfs:label "Exhaust"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :FCP rdfs:label "FCP"@en ;
-    rdfs:subClassOf :Equipment_Fire_Safety_System .
+    rdfs:subClassOf :Equipment_Fire_Safety_System ;
+    skos:definition ""@en .
 
 :FCU rdfs:label "FCU"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Face rdfs:label "Face"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Factor rdfs:label "Factor"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Fahrenheit rdfs:label "Fahrenheit"@en ;
-    rdfs:subClassOf :MeasurementProperty_Unit .
+    rdfs:subClassOf :MeasurementProperty_Unit ;
+    skos:definition ""@en .
 
 :Failed rdfs:label "Failed"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Failure rdfs:label "Failure"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Fan rdfs:label "Fan"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Fans rdfs:label "Fans"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Fault rdfs:label "Fault"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Filter rdfs:label "Filter"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Fire rdfs:label "Fire"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Fixed rdfs:label "Fixed"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Floor rdfs:label "Floor"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Flow rdfs:label "Flow"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Freeze rdfs:label "Freeze"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Freezer rdfs:label "Freezer"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Frequency rdfs:label "Frequency"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Fresh rdfs:label "Fresh"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :From rdfs:label "From"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Frost rdfs:label "Frost"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Fume rdfs:label "Fume"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Gain rdfs:label "Gain"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Gas rdfs:label "Gas"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Generator rdfs:label "Generator"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Glycool rdfs:label "Glycool"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Grains rdfs:label "Grains"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :HVAC rdfs:label "HVAC"@en ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :HWS rdfs:label "HWS"@en ;
-    rdfs:subClassOf :Equipment_Water_System .
+    rdfs:subClassOf :Equipment_Water_System ;
+    skos:definition ""@en .
 
 :HX rdfs:label "HX"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Hail rdfs:label "Hail"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Hand rdfs:label "Hand"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Handler rdfs:label "Handler"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Head rdfs:label "Head"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Misc .
+    rdfs:subClassOf :Equipment_HVAC_Misc ;
+    skos:definition ""@en .
 
 :Heat rdfs:label "Heat"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Heater rdfs:label "Heater"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Heating rdfs:label "Heating"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :High rdfs:label "High"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Highest rdfs:label "Highest"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Hold rdfs:label "Hold"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Hood rdfs:label "Hood"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Hot rdfs:label "Hot"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU,
-        :Equipment_HVAC_Water .
+        :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Hour rdfs:label "Hour"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Humidification rdfs:label "Humidification"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Humidifier rdfs:label "Humidifier"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Misc .
+    rdfs:subClassOf :Equipment_HVAC_Misc ;
+    skos:definition ""@en .
 
 :Humidify rdfs:label "Humidify"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Humidity rdfs:label "Humidity"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Ice rdfs:label "Ice"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Increase rdfs:label "Increase"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Indicator rdfs:label "Indicator"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Input rdfs:label "Input"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Integral rdfs:label "Integral"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Integration rdfs:label "Integration"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Integrative rdfs:label "Integrative"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Inverter rdfs:label "Inverter"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Isolation rdfs:label "Isolation"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :LED rdfs:label "LED"@en ;
-    rdfs:subClassOf :Equipment_Lighting .
+    rdfs:subClassOf :Equipment_Lighting ;
+    skos:definition ""@en .
 
 :Laboratory rdfs:label "Laboratory"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Lag rdfs:label "Lag"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Last rdfs:label "Last"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Lead rdfs:label "Lead"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Leak rdfs:label "Leak"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Leaving rdfs:label "Leaving"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Level rdfs:label "Level"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Lighting rdfs:label "Lighting"@en ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :Limit rdfs:label "Limit"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Liquid rdfs:label "Liquid"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Load rdfs:label "Load"@en ;
-    rdfs:subClassOf :Equipment_Energy_Power .
+    rdfs:subClassOf :Equipment_Energy_Power ;
+    skos:definition ""@en .
 
 :Locally rdfs:label "Locally"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Lockout rdfs:label "Lockout"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Loss rdfs:label "Loss"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Low rdfs:label "Low"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Lowest rdfs:label "Lowest"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Luminance rdfs:label "Luminance"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Maintenance rdfs:label "Maintenance"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Manual rdfs:label "Manual"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Max rdfs:label "Max"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Medium rdfs:label "Medium"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Meter rdfs:label "Meter"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier,
-        :Point .
+        :Point ;
+    skos:definition ""@en .
 
 :Min rdfs:label "Min"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Minimum rdfs:label "Minimum"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Mixed rdfs:label "Mixed"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU,
-        :Equipment_HVAC_VAV .
+        :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Mode rdfs:label "Mode"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Month rdfs:label "Month"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Monthly rdfs:label "Monthly"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Motor rdfs:label "Motor"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :No rdfs:label "No"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Occupancy rdfs:label "Occupancy"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Occupied rdfs:label "Occupied"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Off rdfs:label "Off"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :On rdfs:label "On"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Open rdfs:label "Open"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Operating rdfs:label "Operating"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Output rdfs:label "Output"@en ;
     rdfs:subClassOf :Equipment_HVAC_VFD,
-        :MeasurementProperty_Modifier .
+        :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Outside rdfs:label "Outside"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU,
-        :Location .
+        :Location ;
+    skos:definition ""@en .
 
 :Overload rdfs:label "Overload"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Overridden rdfs:label "Overridden"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Override rdfs:label "Override"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :PID rdfs:label "PID"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :PIR rdfs:label "PIR"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :PV rdfs:label "PV"@en ;
-    rdfs:subClassOf :Equipment_Energy_Power .
+    rdfs:subClassOf :Equipment_Energy_Power ;
+    skos:definition ""@en .
 
 :Panel rdfs:label "Panel"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Peak rdfs:label "Peak"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Percent rdfs:label "Percent"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Perimeter rdfs:label "Perimeter"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Photovoltaic rdfs:label "Photovoltaic"@en ;
-    rdfs:subClassOf :Equipment_Energy_SolarPanel .
+    rdfs:subClassOf :Equipment_Energy_SolarPanel ;
+    skos:definition ""@en .
 
 :Piezoelectric rdfs:label "Piezoelectric"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Position rdfs:label "Position"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Power rdfs:label "Power"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Pre rdfs:label "Pre"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :PreHeat rdfs:label "PreHeat"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Preheat rdfs:label "Preheat"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Pressure rdfs:label "Pressure"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Proportional rdfs:label "Proportional"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Protect rdfs:label "Protect"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Pump rdfs:label "Pump"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Push rdfs:label "Push"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Radiance rdfs:label "Radiance"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Rain rdfs:label "Rain"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Rated rdfs:label "Rated"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Ratio rdfs:label "Ratio"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Ready rdfs:label "Ready"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Reference rdfs:label "Reference"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Reheat rdfs:label "Reheat"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Relative rdfs:label "Relative"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Remotely rdfs:label "Remotely"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Request rdfs:label "Request"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Required rdfs:label "Required"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Reset rdfs:label "Reset"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Response rdfs:label "Response"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Return rdfs:label "Return"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Roof rdfs:label "Roof"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Room rdfs:label "Room"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Run rdfs:label "Run"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Running rdfs:label "Running"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Safety rdfs:label "Safety"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Sash rdfs:label "Sash"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Schedule rdfs:label "Schedule"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Sensor rdfs:label "Sensor"@en ;
-    rdfs:subClassOf :Point .
+    rdfs:subClassOf :Point ;
+    skos:definition ""@en .
 
 :Server rdfs:label "Server"@en ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :Setpoint rdfs:label "Setpoint"@en ;
-    rdfs:subClassOf :Point .
+    rdfs:subClassOf :Point ;
+    skos:definition ""@en .
 
 :Shed rdfs:label "Shed"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Short rdfs:label "Short"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Shutdown rdfs:label "Shutdown"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Smoke rdfs:label "Smoke"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Solar rdfs:label "Solar"@en ;
-    rdfs:subClassOf :Equipment_Energy_Power .
+    rdfs:subClassOf :Equipment_Energy_Power ;
+    skos:definition ""@en .
 
 :Space rdfs:label "Space"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Speed rdfs:label "Speed"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Stack rdfs:label "Stack"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Stage rdfs:label "Stage"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Stages rdfs:label "Stages"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Standby rdfs:label "Standby"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Start rdfs:label "Start"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Static rdfs:label "Static"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Status rdfs:label "Status"@en ;
     rdfs:subClassOf :MeasurementProperty_PhysicalProperties,
-        :Point .
+        :Point ;
+    skos:definition ""@en .
 
 :Steam rdfs:label "Steam"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Step rdfs:label "Step"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Stop rdfs:label "Stop"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Storage rdfs:label "Storage"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Stream rdfs:label "Stream"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Suction rdfs:label "Suction"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Supply rdfs:label "Supply"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Switch rdfs:label "Switch"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :System rdfs:label "System"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Tank rdfs:label "Tank"@en ;
-    rdfs:subClassOf :Equipment_HVAC_AHU .
+    rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
 
 :Temperature rdfs:label "Temperature"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Temporary rdfs:label "Temporary"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Terminal rdfs:label "Terminal"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Thermal rdfs:label "Thermal"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Thermostat rdfs:label "Thermostat"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Thumbwheel rdfs:label "Thumbwheel"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Time rdfs:label "Time"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Timer rdfs:label "Timer"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :To rdfs:label "To"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Today rdfs:label "Today"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Tolerance rdfs:label "Tolerance"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Torque rdfs:label "Torque"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VFD .
+    rdfs:subClassOf :Equipment_HVAC_VFD ;
+    skos:definition ""@en .
 
 :Tower rdfs:label "Tower"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Trace rdfs:label "Trace"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Turn rdfs:label "Turn"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Turned rdfs:label "Turned"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Underfloor rdfs:label "Underfloor"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Unit rdfs:label "Unit"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Unoccupied rdfs:label "Unoccupied"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Usage rdfs:label "Usage"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :VAV rdfs:label "VAV"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :VFD rdfs:label "VFD"@en ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Valve rdfs:label "Valve"@en ;
-    rdfs:subClassOf :Equipment_HVAC_Water .
+    rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Variable rdfs:label "Variable"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :Velocity rdfs:label "Velocity"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Vent rdfs:label "Vent"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Ventilation rdfs:label "Ventilation"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Voltage rdfs:label "Voltage"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Volume rdfs:label "Volume"@en ;
-    rdfs:subClassOf :Equipment_HVAC_VAV .
+    rdfs:subClassOf :Equipment_HVAC_VAV ;
+    skos:definition ""@en .
 
 :WS rdfs:label "WS"@en ;
-    rdfs:subClassOf :Equipment_Water_System .
+    rdfs:subClassOf :Equipment_Water_System ;
+    skos:definition ""@en .
 
 :Warm rdfs:label "Warm"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Warmest rdfs:label "Warmest"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Water rdfs:label "Water"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU,
-        :Equipment_HVAC_Water .
+        :Equipment_HVAC_Water ;
+    skos:definition ""@en .
 
 :Weather rdfs:label "Weather"@en ;
-    rdfs:subClassOf :MeasurementProperty_PhysicalProperties .
+    rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
+    skos:definition ""@en .
 
 :Wheel rdfs:label "Wheel"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :When rdfs:label "When"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Wind rdfs:label "Wind"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Wing rdfs:label "Wing"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Yearly rdfs:label "Yearly"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Zenith rdfs:label "Zenith"@en ;
-    rdfs:subClassOf :MeasurementProperty_Modifier .
+    rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
 
 :Zone rdfs:label "Zone"@en ;
-    rdfs:subClassOf :Location .
+    rdfs:subClassOf :Location ;
+    skos:definition ""@en .
 
 :Equipment_Energy_SolarPanel rdfs:label "SolarPanel"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_Energy .
+    rdfs:subClassOf :Equipment_Energy ;
+    skos:definition ""@en .
 
 :Equipment_Fire_Safety_System rdfs:label "Fire Safety System"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :Equipment_Lighting rdfs:label "Lighting"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :MeasurementProperty_Unit rdfs:label "Unit"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :MeasurementProperty .
+    rdfs:subClassOf :MeasurementProperty ;
+    skos:definition ""@en .
 
 :Equipment_Energy rdfs:label "Energy"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :Equipment_HVAC_Misc rdfs:label "Misc"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :MeasurementProperty rdfs:label "MeasurementProperty"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf bf:Tag .
+    rdfs:subClassOf bf:Tag ;
+    skos:definition ""@en .
 
 :Equipment_Water_System rdfs:label "Water System"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :Equipment_Energy_Power rdfs:label "Power"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_Energy .
+    rdfs:subClassOf :Equipment_Energy ;
+    skos:definition ""@en .
 
 :Point rdfs:label "Point"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf bf:Tag .
+    rdfs:subClassOf bf:Tag ;
+    skos:definition ""@en .
 
 :Equipment rdfs:label "Equipment"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf bf:Tag .
+    rdfs:subClassOf bf:Tag ;
+    skos:definition ""@en .
 
 :Equipment_HVAC_Water rdfs:label "Water"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Location rdfs:label "Location"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf bf:Tag .
+    rdfs:subClassOf bf:Tag ;
+    skos:definition ""@en .
 
 :Equipment_HVAC_VAV rdfs:label "VAV"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Equipment_HVAC_AHU rdfs:label "AHU"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :Equipment_HVAC rdfs:label "HVAC"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment .
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
 
 :Equipment_HVAC_VFD rdfs:label "VFD"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :Equipment_HVAC .
+    rdfs:subClassOf :Equipment_HVAC ;
+    skos:definition ""@en .
 
 :MeasurementProperty_PhysicalProperties rdfs:label "PhysicalProperties"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :MeasurementProperty .
+    rdfs:subClassOf :MeasurementProperty ;
+    skos:definition ""@en .
 
 :MeasurementProperty_Modifier rdfs:label "Modifier"@en ;
     bf:isHierarchical "" ;
-    rdfs:subClassOf :MeasurementProperty .
+    rdfs:subClassOf :MeasurementProperty ;
+    skos:definition ""@en .
 
