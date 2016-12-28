@@ -7,7 +7,7 @@ This repository contains Brick schema, actual building instances of Brick, appli
 
 /Brick/Brick.ttl : Tagsets with hierarchy
 
-/Brick/BrickTag.ttl : Tags with hierarhcy
+/Brick/BrickTag.ttl : Tags with hierarchy
 
 /Brick/BrickFrame.ttl : The framework to describe how Tagsets and Tags are related between and among them.
 
@@ -16,4 +16,3 @@ This repository contains Brick schema, actual building instances of Brick, appli
 /etc/instance_generators/: contains codes of how each group generates its building instance with Brick.
 
 /etc/haystack_instances/: contains our effort to describe bulidings with Project Haystack
-
