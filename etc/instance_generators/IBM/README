@@ -1,0 +1,36 @@
+Description
+---------------------
+
+The IBM Research building in Dublin was retrofitted as modern 15,000 m2 office
+in 2011 from an old factory. The building serves as living laboratory for IBM's
+Cognitive Building research and is heavily equipped with modern building
+automation technology to provide a rich data source for research.
+
+The building was refurnished in multiple steps and new systems were installed by
+different companies. As a result, the diversity of systems and labels is very
+high in the building. The building contains now about 2,154 datapoints collected
+from 11 different systems. The building is served by 4 AHUs with about 115
+points but has also some old disconnected legacy systems in the point list.
+Unique about the building is that it contains 150 desk temperature sensors and
+250 smart meters. It also has 1,000 points related to 161 FCUs as well as 350
+points on the lighting system including 150 PIR sensors and door people counters.
+
+The diversity of the dataset made the mapping of the datapoints to Brick
+challenging as several types were not covered that are particularly related to
+the unique systems such as the FCU and people counters. The large number of FCUs
+that are connected to different AHU, boilers and chillers are unique for this
+building and show the capability and importance of the relationship modelling.
+Similar is the hierarchy of smart meters that monitor various equipment from FCUs
+to lighting and AHU.
+
+Dataset
+---------------------
+1. IBM_B3_points.csv - The list of datapoints for the building containing:
+    * Label: the unique label of each datapoint
+    * TagSet: the respective Brick TagSet
+    * AssetType, Asset: The asset type and id of the associated equipment
+    * AssetParent, isFedBy: The parent and feeds of the asset
+    * City, Building, Wing, Floor, Room, Zone: The location elements
+    * AssetType, Asset: The asset type and id of the secondary associated equipment
+2. CreateOnt.ipynb: An jupyter notebook to create the ontology
+3. IBM_B3.ttl: The generated ontology
