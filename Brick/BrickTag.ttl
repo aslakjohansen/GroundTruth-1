@@ -345,6 +345,11 @@
     rdfs:subClassOf :MeasurementProperty_Modifier ;
     skos:definition ""@en .
 
+:DemandResponse a owl:Class ;
+    rdfs:label "DemandResponse"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Detected a owl:Class ;
     rdfs:label "Detected"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier ;
@@ -446,6 +451,11 @@
     rdfs:subClassOf :MeasurementProperty_Modifier ;
     skos:definition ""@en .
 
+:EmergencyGenerator a owl:Class ;
+    rdfs:label "EmergencyGenerator"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Enable a owl:Class ;
     rdfs:label "Enable"@en ;
     rdfs:subClassOf :Equipment_HVAC_VFD,
@@ -491,6 +501,16 @@
 :Exhaust a owl:Class ;
     rdfs:label "Exhaust"@en ;
     rdfs:subClassOf :Equipment_HVAC_AHU ;
+    skos:definition ""@en .
+
+:ExhaustFan a owl:Class ;
+    rdfs:label "ExhaustFan"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
+:ExhaustSystem a owl:Class ;
+    rdfs:label "ExhaustSystem"@en ;
+    rdfs:subClassOf :Equipment ;
     skos:definition ""@en .
 
 :FCP a owl:Class ;
@@ -553,6 +573,11 @@
     rdfs:subClassOf :MeasurementProperty_Modifier ;
     skos:definition ""@en .
 
+:FireControlPanel a owl:Class ;
+    rdfs:label "FireControlPanel"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Fixed a owl:Class ;
     rdfs:label "Fixed"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier ;
@@ -601,6 +626,11 @@
 :Fume a owl:Class ;
     rdfs:label "Fume"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
+
+:FumeHood a owl:Class ;
+    rdfs:label "FumeHood"@en ;
+    rdfs:subClassOf :Equipment ;
     skos:definition ""@en .
 
 :Gain a owl:Class ;
@@ -666,6 +696,11 @@
 :Heat a owl:Class ;
     rdfs:label "Heat"@en ;
     rdfs:subClassOf :Equipment_HVAC_Water ;
+    skos:definition ""@en .
+
+:HeatExchanger a owl:Class ;
+    rdfs:label "HeatExchanger"@en ;
+    rdfs:subClassOf :Equipment ;
     skos:definition ""@en .
 
 :Heater a owl:Class ;
@@ -816,6 +851,11 @@
 
 :Lighting a owl:Class ;
     rdfs:label "Lighting"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
+:LightingSystem a owl:Class ;
+    rdfs:label "LightingSystem"@en ;
     rdfs:subClassOf :Equipment ;
     skos:definition ""@en .
 
@@ -1043,6 +1083,11 @@
     rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
     skos:definition ""@en .
 
+:PowerSystem a owl:Class ;
+    rdfs:label "PowerSystem"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Pre a owl:Class ;
     rdfs:label "Pre"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier ;
@@ -1153,6 +1198,11 @@
     rdfs:subClassOf :Equipment_HVAC_AHU ;
     skos:definition ""@en .
 
+:ReturnFan a owl:Class ;
+    rdfs:label "ReturnFan"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Roof a owl:Class ;
     rdfs:label "Roof"@en ;
     rdfs:subClassOf :Location ;
@@ -1226,6 +1276,11 @@
 :Solar a owl:Class ;
     rdfs:label "Solar"@en ;
     rdfs:subClassOf :Equipment_Energy_Power ;
+    skos:definition ""@en .
+
+:SolarPanel a owl:Class ;
+    rdfs:label "SolarPanel"@en ;
+    rdfs:subClassOf :Equipment ;
     skos:definition ""@en .
 
 :Space a owl:Class ;
@@ -1344,6 +1399,11 @@
     rdfs:subClassOf :MeasurementProperty_Modifier ;
     skos:definition ""@en .
 
+:ThermalEnergyStorage a owl:Class ;
+    rdfs:label "ThermalEnergyStorage"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Thermostat a owl:Class ;
     rdfs:label "Thermostat"@en ;
     rdfs:subClassOf :Equipment_HVAC_VAV ;
@@ -1402,6 +1462,11 @@
 :Turned a owl:Class ;
     rdfs:label "Turned"@en ;
     rdfs:subClassOf :MeasurementProperty_Modifier ;
+    skos:definition ""@en .
+
+:UndefinedMeasurement a owl:Class ;
+    rdfs:label "UndefinedMeasurement"@en ;
+    rdfs:subClassOf :SupplyFan ;
     skos:definition ""@en .
 
 :Underfloor a owl:Class ;
@@ -1490,6 +1555,11 @@
         :Equipment_HVAC_Water ;
     skos:definition ""@en .
 
+:WaterSystem a owl:Class ;
+    rdfs:label "WaterSystem"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :Weather a owl:Class ;
     rdfs:label "Weather"@en ;
     rdfs:subClassOf :MeasurementProperty_PhysicalProperties ;
@@ -1548,6 +1618,11 @@
     rdfs:subClassOf :Equipment ;
     skos:definition ""@en .
 
+:SupplyFan a owl:Class ;
+    rdfs:label "SupplyFan"@en ;
+    rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
 :MeasurementProperty_Unit a owl:Class ;
     rdfs:label "Unit"@en ;
     bf:isHierarchical "" ;
@@ -1590,12 +1665,6 @@
     rdfs:subClassOf bf:Tag ;
     skos:definition ""@en .
 
-:Equipment a owl:Class ;
-    rdfs:label "Equipment"@en ;
-    bf:isHierarchical "" ;
-    rdfs:subClassOf bf:Tag ;
-    skos:definition ""@en .
-
 :Equipment_HVAC_Water a owl:Class ;
     rdfs:label "Water"@en ;
     bf:isHierarchical "" ;
@@ -1624,6 +1693,12 @@
     rdfs:label "HVAC"@en ;
     bf:isHierarchical "" ;
     rdfs:subClassOf :Equipment ;
+    skos:definition ""@en .
+
+:Equipment a owl:Class ;
+    rdfs:label "Equipment"@en ;
+    bf:isHierarchical "" ;
+    rdfs:subClassOf bf:Tag ;
     skos:definition ""@en .
 
 :Equipment_HVAC_VFD a owl:Class ;
