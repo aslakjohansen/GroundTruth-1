@@ -1,3 +1,5 @@
+**Note that we have initialized a realease/development repository. Please visit there for actual usage:https://github.com/BuildSysUniformMetadata/Brick**
+
 This repository contains Brick schema, actual building instances of Brick, application examples and other auxiliary information.
 
 
