@@ -16,7 +16,7 @@ building_graph.bind('owl', OWL)
 
 brick_graph = rdflib.Graph()
 brick_graph.bind('brick', BRICK)
-brick_graph.parse('../BuildingSchema/Brick.ttl', format='turtle')
+brick_graph.parse('../../../Brick/Brick.ttl', format='turtle')
 
 building_graph.add((RICE.RICE, RDF.type, BRICK.Building))
 building_graph.add((RICE.Floor_0, RDF.type, BRICK.Floor)) #aka, basememt
