@@ -6,9 +6,9 @@ import json
 
 RDF        = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS       = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK      = Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG   = Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK      = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+BRICKTAG   = Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
 
 g = Graph()
 g.parse('../BuildingSchema/Brick.ttl', format='turtle')
@@ -21,11 +21,11 @@ g.bind('bf'   , BRICKFRAME)
 g.bind('btag' , BRICKTAG)
 
 # building
-BUILDING = Namespace('http://buildsys.org/ontologies/building_example#')
+BUILDING = Namespace('https://brickschema.org/schema/1.0.1/building_example#')
 g.bind('building', BUILDING)
 
 # heat exchanger function block and ports
-HX = Namespace('http://buildsys.org/ontologies/Brick/Heat_Exchanger#')
+HX = Namespace('https://brickschema.org/schema/1.0.1/Brick/Heat_Exchanger#')
 g.bind('hx', HX)
 g.add( (BRICK['Function_Block'], RDF.isSubClassOf, BRICK['Thing']) )
 g.add( (HX['Function_Block']   , RDF.isSubClassOf, BRICK['Function_Block']) )

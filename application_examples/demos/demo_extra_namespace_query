@@ -5,9 +5,9 @@ import rdflib
 
 RDF        = rdflib.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS       = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK      = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG   = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK      = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+BRICKTAG   = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
 
 g = rdflib.Graph()
 g.bind('rdf'  , RDF)
@@ -18,7 +18,7 @@ g.bind('btag' , BRICKTAG)
 g.parse('demo_extra_namespace.ttl', format='n3')
 
 # heat exchanger class
-HX = rdflib.Namespace('http://buildsys.org/ontologies/Brick/Heat_Exchanger#')
+HX = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick/Heat_Exchanger#')
 g.bind('hx', HX)
 
 r = g.query(

@@ -1,9 +1,9 @@
 # baseURI: http://buildsys.org/func_block_example
-# imports: http://buildsys.org/ontologies/Brick
+# imports: https://brickschema.org/schema/1.0.1/Brick
 # prefix: ex
 
-@prefix bf: <http://buildsys.org/ontologies/BrickFrame#> .
-@prefix brick: <http://buildsys.org/ontologies/Brick#> .
+@prefix bf: <https://brickschema.org/schema/1.0.1/BrickFrame#> .
+@prefix brick: <https://brickschema.org/schema/1.0.1/Brick#> .
 @prefix ex: <http://buildsys.org/func_block_example#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -12,7 +12,7 @@
 
 <http://buildsys.org/func_block_example>
   rdf:type owl:Ontology ;
-  owl:imports <http://buildsys.org/ontologies/Brick> ;
+  owl:imports <https://brickschema.org/schema/1.0.1/Brick> ;
   owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
 .
 ex:Heat_Exchanger_1

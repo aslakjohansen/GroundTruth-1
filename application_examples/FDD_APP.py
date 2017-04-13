@@ -39,9 +39,9 @@ g.parse('../CMU-Yuvraj/GHCYuvraj_brick.ttl', format='turtle')
 # g.parse('example_building.ttl', format='turtle')
 # g.parse('../SDU/', format='turtle')
 
-BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
 g.bind( 'bf', BRICKFRAME)
-BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+BRICK = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick#')
 g.bind('brick', BRICK)
 
 
