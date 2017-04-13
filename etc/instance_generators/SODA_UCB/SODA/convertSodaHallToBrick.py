@@ -7,9 +7,9 @@ import re
 # is not pulling anything in from the web, I don't think?
 RDF = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG = Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+BRICKTAG = Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
 
 # This is the graph object that contains all of the schemas. We use this
 # graph to pull out classes and relationships, but any *instances* of these
@@ -29,7 +29,7 @@ g.bind( 'btag', BRICKTAG)
 # We want to add nodes to the graph for our building. The building exists in its
 # own namespace, which we are calling soda
 
-EX = Namespace('http://buildsys.org/ontologies/building_example#')
+EX = Namespace('https://brickschema.org/schema/1.0.1/building_example#')
 g.bind('soda_hall', EX)
 
 tags = {}

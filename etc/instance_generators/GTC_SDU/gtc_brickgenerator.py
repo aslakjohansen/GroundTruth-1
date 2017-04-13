@@ -26,9 +26,9 @@ TODO:
 
 RDF        = Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS       = Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK      = Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = Namespace('http://buildsys.org/ontologies/BrickFrame#')
-BRICKTAG   = Namespace('http://buildsys.org/ontologies/BrickTag#')
+BRICK      = Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+BRICKTAG   = Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
 
 g = Graph()
 brickpath = lambda filename: '../../../Brick/'+filename
@@ -42,7 +42,7 @@ g.bind('bf'   , BRICKFRAME)
 g.bind('btag' , BRICKTAG)
 
 # building
-GTC = Namespace('http://buildsys.org/ontologies/building_example#')
+GTC = Namespace('https://brickschema.org/schema/1.0.1/building_example#')
 g.bind('gtc', GTC)
 
 ################################################################################

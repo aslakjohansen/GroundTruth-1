@@ -4,8 +4,8 @@ import csv
 from rdflib.namespace import OWL, RDF, RDFS
 from rdflib import URIRef
 
-BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
-BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICK = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
 RICE = rdflib.Namespace('http://virginia.edu/building/ontology/rice#')
 
 building_graph = rdflib.Graph()

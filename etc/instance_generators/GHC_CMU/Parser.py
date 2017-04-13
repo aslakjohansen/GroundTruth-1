@@ -16,8 +16,8 @@ def main():
 	TagsetsToTags = dict()
 	Equipment = dict()
 	print "hi"
-	BRICK = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
-	BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+	BRICK = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+	BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
 	GHC = rdflib.Namespace('http://cmu.edu/building/ontology/ghc#')
 	#RDF, RDFS and OWL have already been imported in the library initializations
 	print GHC["test"]
