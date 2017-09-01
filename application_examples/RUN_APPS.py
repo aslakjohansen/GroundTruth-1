@@ -29,9 +29,12 @@ if len(sys.argv) < 2:
 
 RDF = rdflib.Namespace('http://www.w3.org/1999/02/22-rdf-syntax-ns#')
 RDFS = rdflib.Namespace('http://www.w3.org/2000/01/rdf-schema#')
-BRICK = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick#')
-BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
-BRICKTAG = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
+#BRICK      = rdflib.Namespace('https://brickschema.org/schema/1.0.1/Brick#')
+#BRICKFRAME = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickFrame#')
+#BRICKTAG   = rdflib.Namespace('https://brickschema.org/schema/1.0.1/BrickTag#')
+BRICK      = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+BRICKFRAME = rdflib.Namespace('http://buildsys.org/ontologies/BrickFrame#')
+BRICKTAG   = rdflib.Namespace('http://buildsys.org/ontologies/BrickTag#')
 OWL = rdflib.Namespace('http://www.w3.org/2002/07/owl#')
 
 def new_graph():
@@ -123,7 +126,7 @@ WHERE {
     ?zone rdf:type brick:HVAC_Zone .
     ?room rdf:type brick:Room .
 
-    ?vav bf:feeds+ ?zone .
+    ?vav bf:hasPart*/bf:feeds+ ?zone .
     ?zone bf:hasPart ?room .
 
     {?sensor bf:isPointOf ?vav }
@@ -217,7 +220,7 @@ WHERE {
     ?loc bf:hasPoint ?meter .
 }
 """)
-printResults(res)
+printResults(sorted(res))
 
 print
 
@@ -271,7 +274,7 @@ WHERE {
       { ?vlv_cmd rdf:type brick:Cooling_Valve_Command }
     }
     ?vav rdf:type brick:VAV .
-    ?vav bf:hasPoint+ ?vlv_cmd .
+    ?vav bf:hasPart*/bf:hasPoint+ ?vlv_cmd .
 }
 """)
 printResults(res)
@@ -289,7 +292,7 @@ WHERE {
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
     ?zone rdf:type brick:HVAC_Zone .
-    ?vav bf:feeds+ ?zone .
+    ?vav bf:hasPart*/bf:feeds+ ?zone .
     ?room bf:isPartOf ?zone .
 
     ?airflow_sensor bf:isPointOf ?vav .
@@ -298,12 +301,12 @@ printResults(res)
 
 print "Associate VAVs to zones and rooms"
 res = g.query("""
-SELECT ?vav ?room
+SELECT DISTINCT ?vav ?room
 WHERE {
     ?vav rdf:type brick:VAV .
     ?room rdf:type brick:Room .
     ?zone rdf:type brick:HVAC_Zone .
-    ?vav bf:feeds+ ?zone .
+    ?vav bf:hasPart*/bf:feeds+ ?zone .
     ?room bf:isPartOf ?zone .
 }""")
 printResults(res)
@@ -356,13 +359,13 @@ WHERE {
 printResults(res)
 
 print "Grab all VAVs and AHUs and zones"
-res = g.query("""SELECT ?vav ?ahu ?hvac_zone
+res = g.query("""SELECT DISTINCT ?vav ?ahu ?hvac_zone
 WHERE {
     ?vav rdf:type brick:VAV .
     ?ahu rdf:type brick:AHU .
-    ?ahu bf:feeds ?vav .
+    ?ahu bf:hasPart*/bf:feeds*/bf:isPartOf* ?vav .
     ?hvac_zone rdf:type brick:HVAC_Zone .
-    ?vav  bf:feeds ?hvac_zone .
+    ?vav  bf:hasPart*/bf:feeds* ?hvac_zone .
 }""")
 printResults(res)
 
@@ -439,6 +442,10 @@ WHERE {
     { ?sensor rdf:type/rdfs:subClassOf* brick:Return_Air_Temperature_Sensor}
     UNION
     { ?sensor rdf:type/rdfs:subClassOf* brick:Outside_Air_Damper_Position_Sensor }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Command }
+    UNION
+    { ?sensor rdf:type/rdfs:subClassOf* brick:Sensor }
 }""")
 printResults(res)
 
